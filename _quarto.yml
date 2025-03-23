@@ -24,7 +24,7 @@ website:
           - text: "Escritura y publicación académica"
             href: cyt/escrituraypublicacionacademica.qmd
           - text: "Ciencia reproducible"
-            href: cyt/cienciareproducible.qmd
+            href: cyt/cienciareproduc.qmd
           - text: "Docencia y educación"
             href: cyt/docenciaeducacion.qmd
       - section: "Ecología y conservación"
