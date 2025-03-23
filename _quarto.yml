@@ -19,6 +19,16 @@ website:
           href: grd/reducciondelriesgo.qmd
         - text: "Manejo de desastres"
           href: grd/manejodedesastres.qmd
+      - section: "Gestión de proyectos de ciencia y tecnología"
+        contents:
+        - text: "Gestión de proyectos de CTeI"
+          href: gestiondeproyectos/gestionproyectosciencia.qmd
+        - text: "Gestión de proyectos"
+          href: gestiondeproyectos/projectmanagement.qmd
+      - section: "Amazonas"
+        contents:
+          - text: "Amazonas"
+            href: amazonas/amazonas.qmd
       - section: "Ciencia y tecnología"
         contents:
           - text: "Escritura y publicación académica"
@@ -43,10 +53,6 @@ website:
             href: vidalaboral/cafe.qmd
           - text: "Vida laboral"
             href: vidalaboral/vidalaboral.qmd
-      - section: "Amazonas"
-        contents:
-          - text: "Amazonas"
-            href: amazonas/amazonas.qmd
       - section: "Mis publicaciones"
         contents:
           - text: "Mis publicaciones"
