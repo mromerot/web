@@ -9,41 +9,49 @@ website:
   sidebar:
     style: "docked"
     search: true
+    collapse-level: 1
     contents:
-      - text: "Gestión del riesgo de desastres"
+      - section: "Gestión del riesgo de desastres"
         contents:
         - text: "Conocimiento del riesgo"
-          href: docs/grd/conocimientodelriesgo.qmd
+          href: grd/conocimientodelriesgo.qmd
         - text: "Reducción del riesgo"
-          href: docs/grd/reducciondelriesgo.qmd
+          href: grd/reducciondelriesgo.qmd
         - text: "Manejo de desastres"
-          href: docs/grd/manejodedesastres.qmd
-      - text: "Ciencia y tecnología"
+          href: grd/manejodedesastres.qmd
+      - section: "Ciencia y tecnología"
         contents:
           - text: "Escritura y publicación académica"
-            href: docs/escrituraypublicacionacademica.qmd
+            href: cyt/escrituraypublicacionacademica.qmd
           - text: "Ciencia reproducible"
-            href: docs/cienciareproducible.qmd
+            href: cyt/cienciareproducible.qmd
           - text: "Docencia y educación"
-            href: docs/docenciaeducacion.qmd
-      - text: "Ecología y conservación"
+            href: cyt/docenciaeducacion.qmd
+      - section: "Ecología y conservación"
         contents:
           - text: "Ecologia y conservacion"
-            href: docs/ecologiayconservacion.qmd
-      - text: "Matemáticas y ciencia de datos"
+            href: ecolyconserv/ecologiayconservacion.qmd
+      - section: "Matemáticas y ciencia de datos"
         contents:
           - text: "Estadística y matemáticas"
-            href: docs/estadisticaymatematicas.qmd
+            href: matemdatascience/estadisticaymatematicas.qmd
           - text: "Ciencia de datos"
-            href: docs/cienciadedatos.qmd
+            href: matemdatascience/cienciadedatos.qmd
       - section: "Vida laboral"
         contents:
           - text: "Café"
-            href: docs/cafe.qmd
+            href: vidalaboral/cafe.qmd
           - text: "Vida laboral"
-            href: docs/vidalaboral.qmd
+            href: vidalaboral/vidalaboral.qmd
+      - section: "Amazonas"
+        contents:
+          - text: "Amazonas"
+            href: amazonas/amazonas.qmd
+      - section: "Mis publicaciones"
+        contents:
+          - text: "Mis publicaciones"
+            href: mispublicaciones/publicaciones.qmd
 format:
   html:
     font-size: 11pt
     theme: [cosmo, styles.scss]
-

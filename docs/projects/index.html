@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Mauricio Romero Torres – Home</title>
+<title>Projects – Home</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,21 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3051c7978c33d916cc2e74407dbb0606.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-dc8b8344b97678d2b3234624e019af9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -65,11 +68,68 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<meta property="og:title" content="Mauricio Romero Torres – Home">
-<meta property="og:description" content="Gestor de ciencia y tecnología">
-<meta property="og:image" content="profile.jpeg">
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-description','listing-categories','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-image","listing-description","listing-categories","listing-date"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Projects – Home">
+<meta property="og:image" content="images/breno-assis-r3WAWU5Fi5Q-unsplash.jpg">
 <meta property="og:site_name" content="Home">
 </head>
 
@@ -99,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Home</a> 
+      <a href="../">Home</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -120,19 +180,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./grd/conocimientodelriesgo.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../grd/conocimientodelriesgo.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conocimiento del riesgo</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./grd/reducciondelriesgo.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../grd/reducciondelriesgo.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reducción del riesgo</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./grd/manejodedesastres.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../grd/manejodedesastres.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Manejo de desastres</span></a>
   </div>
 </li>
@@ -149,19 +209,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cyt/escrituraypublicacionacademica.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../cyt/escrituraypublicacionacademica.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Escritura y publicación académica</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cyt/cienciareproducible.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../cyt/cienciareproducible.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ciencia reproducible</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cyt/docenciaeducacion.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../cyt/docenciaeducacion.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Docencia y educación</span></a>
   </div>
 </li>
@@ -178,7 +238,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ecolyconserv/ecologiayconservacion.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../ecolyconserv/ecologiayconservacion.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ecologia y conservacion</span></a>
   </div>
 </li>
@@ -195,13 +255,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./matemdatascience/estadisticaymatematicas.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../matemdatascience/estadisticaymatematicas.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Estadística y matemáticas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./matemdatascience/cienciadedatos.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../matemdatascience/cienciadedatos.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ciencia de datos</span></a>
   </div>
 </li>
@@ -218,13 +278,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vidalaboral/cafe.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../vidalaboral/cafe.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Café</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vidalaboral/vidalaboral.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../vidalaboral/vidalaboral.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vida laboral</span></a>
   </div>
 </li>
@@ -241,7 +301,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./amazonas/amazonas.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../amazonas/amazonas.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amazonas</span></a>
   </div>
 </li>
@@ -258,7 +318,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mispublicaciones/publicaciones.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../mispublicaciones/publicaciones.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mis publicaciones</span></a>
   </div>
 </li>
@@ -271,49 +331,140 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="profile.jpeg" class="about-image
-  round " style="height: 20em; width: 20em;">
+<main class="content" id="quarto-document-content">
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Mauricio Romero Torres</h1>
-<p class="subtitle lead">Gestor de ciencia y tecnología</p>
+<h1 class="title">Projects</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
+  
+
+
 </header>
-    <div class="about-links">
-  <a href="https://x.com/mauricioromerot" class="about-link" rel="" target="">
-    <i class="bi bi-X"></i>
-     <span class="about-link-text">X</span>
-  </a>
-  <a href="https://www.linkedin.com/in/mauricio-romero-torres-1b33b95/" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://scholar.google.com/citations?user=n484vskAAAAJ" class="about-link" rel="" target="">
-    <i class="bi bi-Scholar Google"></i>
-     <span class="about-link-text">Scholar Google</span>
-  </a>
-</div>
-  </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
-<p>Doctor en biociencias. Experiencia en formulación, ejecución, gestión, y evaluación de proyectos de ciencia con énfasis en biodiversidad, cambio climático, y desastres para sistemas terrestres y marinos. Experiencia en procesos científicos, técnicos, administrativos enfocados al cumplimiento de proyectos, programas y estrategias en el sector público, académico y no gubernamental, en donde he adquirido una visión inter y transdisciplinar buscando nexos entre la ciencia y los desafíos sociales. Tengo buenas habilidades interpersonales y de comunicación para trabajar en equipos técnicos, o proyectos orientados a cumplir objetivos institucionales.</p>
-<section id="mis-espacios-de-trabajo" class="level2">
-<h2 data-anchor-id="mis-espacios-de-trabajo">Mis espacios de trabajo</h2>
-<p>Gestion del riesgo de desastres | Cambio climático | Gestion de proyectos de ciencia y tecnología | Ecología terrestre y marina | Conservación de la biodiversidad | Escritura y publicación científica | Ciencia reproducible | Café</p>
-</section>
-<section id="curriculum-vitae" class="level2">
-<h2 data-anchor-id="curriculum-vitae">Curriculum vitae</h2>
-<p>Acceda a mi cv <a href="cv.pdf">aquí</a></p>
-<hr>
 
 
-</section>
-</main></div>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="UHl0aG9uJTJDTWFjaGluZSUyMExlYXJuaW5nJTJDRGF0YSUyMENsZWFuaW5n" data-listing-date-sort="1704085200000">
+<a href="https://example.com/house-prices" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/breno-assis-r3WAWU5Fi5Q-unsplash.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Predicting House Prices with Machine Learning
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">
+Python
 </div>
- <!-- /main -->
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">
+Machine Learning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMENsZWFuaW5n'); return false;">
+Data Cleaning
+</div>
+</div>
+<div class="card-text listing-description">
+<p>This project involves using machine learning algorithms to predict house prices based on various features such as location, size, and amenities. It includes data cleaning, feature engineering, and model selection.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jan 1, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="UiUyQ01hY2hpbmUlMjBMZWFybmluZyUyQ0NsdXN0ZXJpbmclMkNTdGF0aXN0aWNhbCUyME1vZGVsbGluZw==" data-listing-date-sort="1711947600000">
+<a href="https://example.com/customer-segmentation" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/adrien-delforge-CrHG_ZYn1Dw-unsplash.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Customer Segmentation Using Clustering Techniques
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">
+Machine Learning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Q2x1c3RlcmluZw=='); return false;">
+Clustering
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljYWwlMjBNb2RlbGxpbmc='); return false;">
+Statistical Modelling
+</div>
+</div>
+<div class="card-text listing-description">
+<p>This project focuses on segmenting customers into different groups based on their purchasing behavior and demographics. It uses clustering algorithms like K-means and hierarchical clustering to identify distinct customer segments.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Apr 1, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="UiUyQ0RhdGElMjBWaXN1YWxpemF0aW9uJTJDRW52aXJvbm1lbnRhbCUyMFNjaWVuY2U=" data-listing-date-sort="1719810000000">
+<a href="https://example.com/co2-visualization" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/anne-nygard-vc-vPgGqAr4-unsplash.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Visualizing Global CO2 Emissions
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMFZpc3VhbGl6YXRpb24='); return false;">
+Data Visualization
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RW52aXJvbm1lbnRhbCUyMFNjaWVuY2U='); return false;">
+Environmental Science
+</div>
+</div>
+<div class="card-text listing-description">
+<p>This project involves creating visualizations to show trends in global CO2 emissions over time. It includes data extraction from public databases, data cleaning, and using visualization libraries to create interactive charts and graphs.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jul 1, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -334,6 +485,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
