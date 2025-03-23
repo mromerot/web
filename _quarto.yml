@@ -1,0 +1,49 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  title: "Home"
+  open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
+  page-footer: "Made with ❤️ and Quarto"
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - text: "Gestión del riesgo de desastres"
+        contents:
+        - text: "Conocimiento del riesgo"
+          href: docs/grd/conocimientodelriesgo.qmd
+        - text: "Reducción del riesgo"
+          href: docs/grd/reducciondelriesgo.qmd
+        - text: "Manejo de desastres"
+          href: docs/grd/manejodedesastres.qmd
+      - text: "Ciencia y tecnología"
+        contents:
+          - text: "Escritura y publicación académica"
+            href: docs/escrituraypublicacionacademica.qmd
+          - text: "Ciencia reproducible"
+            href: docs/cienciareproducible.qmd
+          - text: "Docencia y educación"
+            href: docs/docenciaeducacion.qmd
+      - text: "Ecología y conservación"
+        contents:
+          - text: "Ecologia y conservacion"
+            href: docs/ecologiayconservacion.qmd
+      - text: "Matemáticas y ciencia de datos"
+        contents:
+          - text: "Estadística y matemáticas"
+            href: docs/estadisticaymatematicas.qmd
+          - text: "Ciencia de datos"
+            href: docs/cienciadedatos.qmd
+      - section: "Vida laboral"
+        contents:
+          - text: "Café"
+            href: docs/cafe.qmd
+          - text: "Vida laboral"
+            href: docs/vidalaboral.qmd
+format:
+  html:
+    font-size: 11pt
+    theme: [cosmo, styles.scss]
+
