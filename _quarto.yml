@@ -3,7 +3,7 @@ project:
   output-dir: docs
   
 website:
-  title: "Home"
+  title: "Menú"
   open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
   page-footer: "Made with ❤️ and Quarto"
   sidebar:
@@ -13,18 +13,18 @@ website:
     contents:
       - section: "Gestión del riesgo de desastres"
         contents:
-        - text: "Conocimiento del riesgo"
-          href: grd/conocimientodelriesgo.qmd
-        - text: "Reducción del riesgo"
-          href: grd/reducciondelriesgo.qmd
-        - text: "Manejo de desastres"
-          href: grd/manejodedesastres.qmd
+          - text: "Conocimiento del riesgo"
+            href: grd/conocimientodelriesgo.qmd
+          - text: "Reducción del riesgo"
+            href: grd/reducciondelriesgo.qmd
+          - text: "Manejo de desastres"
+            href: grd/manejodedesastres.qmd
       - section: "Gestión de proyectos de ciencia y tecnología"
         contents:
-        - text: "Gestión de proyectos de CTeI"
-          href: gestiondeproyectos/gestionproyectosciencia.qmd
-        - text: "Gestión de proyectos"
-          href: gestiondeproyectos/projectmanagement.qmd
+          - text: "Gestión de proyectos de CTeI"
+            href: gestiondeproyectos/gestionproyectosciencia.qmd
+          - text: "Gestión de proyectos"
+            href: gestiondeproyectos/projectmanagement.qmd
       - section: "Amazonas"
         contents:
           - text: "Amazonas"
@@ -57,6 +57,7 @@ website:
         contents:
           - text: "Mis publicaciones"
             href: mispublicaciones/publicaciones.qmd
+
 format:
   html:
     font-size: 11pt
