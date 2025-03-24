@@ -1,0 +1,10 @@
+---
+title: "Café"
+format: html
+editor: visual
+---
+
+## Café
+{{< lipsum 1 >}}
+
+---

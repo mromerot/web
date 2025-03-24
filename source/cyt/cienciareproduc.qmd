@@ -1,0 +1,10 @@
+---
+title: "Ciencia reproducible"
+format: html
+editor: visual
+---
+
+## Ciencia reproducible
+{{< lipsum 1 >}}
+
+---

@@ -1,0 +1,8 @@
+---
+titulo: "Ciencia de datos"
+format: html
+editor: visual
+---
+
+## Ciencia de datos 
+{{< lipsum 1 >}}
