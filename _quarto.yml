@@ -62,3 +62,9 @@ format:
   html:
     font-size: 11pt
     theme: [cosmo, styles.scss]
+    toc: true
+    toc-depth: 2
+    toc-title: "Contenidos"
+    toc-back-to-top: true
+    toc-back-to-top-text: "Volver arriba"
+    toc-back-to-top-title: "Volver arriba"
