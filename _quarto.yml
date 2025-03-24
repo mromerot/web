@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Menú"
+  title: "Inicio"
   open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
   page-footer: "Made with ❤️ and Quarto"
   sidebar:
