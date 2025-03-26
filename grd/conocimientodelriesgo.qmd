@@ -7,3 +7,17 @@ editor: visual
 ## Conocimiento del riesgo de desastres
 
 {{< lipsum 1 >}}
+
+<details>
+
+<summary>**Qué es el conocimiento del riesgo de desastres**</summary>
+
+<ul>
+
+<li>markdown list 1</li>
+
+<li>markdown list 2</li>
+
+</ul>
+
+</details>
