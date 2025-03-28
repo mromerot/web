@@ -1,0 +1,24 @@
+---
+title: "Riesgo volcánico"
+format: html
+editor: visual
+---
+
+## 
+
+::: panel-tabset
+## Conocimiento del riesgo
+
+{{< lipsum 1 >}}
+
+## Reducción del riesgo
+
+{{< lipsum 1 >}}
+
+## Manejo de desastres
+
+{{< lipsum 1 >}}
+:::
+
+```         
+```

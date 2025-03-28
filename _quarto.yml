@@ -20,7 +20,7 @@ website:
           - text: "Manejo de desastres"
             href: grd/manejodedesastres.qmd
           - text: "Riesgo volcánico"
-            href: grd/riesgovolcanico.qmd
+            href: grd/volcanes.qmd
       - section: "Gestión de proyectos de ciencia y tecnología"
         contents:
           - text: "Gestión de proyectos de CTeI"
