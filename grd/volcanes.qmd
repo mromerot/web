@@ -7,6 +7,7 @@ editor: visual
 ## Instituciones nacionales
 
 -   Servicio Geológico Colombiano
+
     -   Volcanes de Colombia. [*Link*](https://saeprod.sgc.gov.co/volcanes)
 
     -   Esquema estados de alerta por actividad volcánica en Colombia. [*Link*](https://www2.sgc.gov.co/Paginas/estados-de-alerta-volcanes.aspx). Alerta verde, alerta amarilla, alerta naranja, alerta roja.
@@ -14,7 +15,9 @@ editor: visual
     -   Guía para comunicar sobre volcanes en Colombia. [*Link*](https://www2.sgc.gov.co/Noticias/Paginas/Consulta-aqui-la-guia-para-comunicar-sobre-volcanes-en-Colombia.aspx)
 
     -   Observatorio Vulcanológico y Sismológico de Manizales. [*Link*](https://www2.sgc.gov.co/ProgramasDeInvestigacion/geoamenazas/Paginas/OVS-Manizales.aspx)
+
 -   UNGRD
+
     -   Plan Nacional de Preparación y Respuesta por Actividad del Volcán Puracé. 2025. [*Link*](https://portal.gestiondelriesgo.gov.co/Documents/Planes-respuesta/PLAN-NACIONAL-DE-PREPARACION-Y-RESPUESTA-VOLCAN-PURACE.pdf)
 
     -   Volcán, riesgo y territorio. [*Link*](http://www.volcanriesgoyterritorio.gov.co/)
@@ -39,15 +42,23 @@ editor: visual
 -   Volcano hazards assessments support decision making. USGS. [*Link*](https://www.usgs.gov/programs/VHP/volcano-hazards-assessments-support-decision-making)
 -   Volcano Hazard Assessments are based on the geologic record. USGS. [*Link*](https://www.usgs.gov/programs/VHP/volcano-hazard-assessments-are-based-geologic-record)
 
+::: {layout-ncol="2"}
 {{< video "https://youtu.be/29DoJPNTeao" >}}
 
 {{< video "https://youtu.be/0A_pxOHNQHw?si=MkNattLFYnqh5Eu-" >}}
 
-## **Evaluación del riesgo volcánico**
+Amenaza volcánica
+:::
 
+## Evaluación del riesgo volcánico
+
+::: {layout-ncol="2"}
 {{< video "https://youtu.be/leF4aQXGdjk" >}}
 
 {{< video "https://youtu.be/iB1uiaxScek" >}}
+
+Evaluación del riesgo volcánico
+:::
 
 ## Lecturas
 
