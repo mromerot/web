@@ -1,0 +1,14 @@
+/* Para un elemento específico */
+.texto-compacto {
+    line-height: 1.2; /* valor normal es 1.5 */
+}
+
+/* O para un párrafo específico */
+p {
+    line-height: 1.1;
+}
+
+/* También puedes usar valores exactos en pixeles */
+.texto-ajustado {
+    line-height: 16px;
+}

@@ -4,21 +4,73 @@ format: html
 editor: visual
 ---
 
-## 
+## Instituciones nacionales
 
-::: panel-tabset
-## Conocimiento del riesgo
+-   Servicio Geológico Colombiano
+    -   Volcanes de Colombia. [*Link*](https://saeprod.sgc.gov.co/volcanes)
 
-{{< lipsum 1 >}}
+    -   Esquema estados de alerta por actividad volcánica en Colombia. [*Link*](https://www2.sgc.gov.co/Paginas/estados-de-alerta-volcanes.aspx). Alerta verde, alerta amarilla, alerta naranja, alerta roja.
 
-## Reducción del riesgo
+    -   Guía para comunicar sobre volcanes en Colombia. [*Link*](https://www2.sgc.gov.co/Noticias/Paginas/Consulta-aqui-la-guia-para-comunicar-sobre-volcanes-en-Colombia.aspx)
 
-{{< lipsum 1 >}}
+    -   Observatorio Vulcanológico y Sismológico de Manizales. [*Link*](https://www2.sgc.gov.co/ProgramasDeInvestigacion/geoamenazas/Paginas/OVS-Manizales.aspx)
+-   UNGRD
+    -   Plan Nacional de Preparación y Respuesta por Actividad del Volcán Puracé. 2025. [*Link*](https://portal.gestiondelriesgo.gov.co/Documents/Planes-respuesta/PLAN-NACIONAL-DE-PREPARACION-Y-RESPUESTA-VOLCAN-PURACE.pdf)
 
-## Manejo de desastres
+    -   Volcán, riesgo y territorio. [*Link*](http://www.volcanriesgoyterritorio.gov.co/)
 
-{{< lipsum 1 >}}
-:::
+## Internacionales
 
-```         
-```
+-   USGS. Volcano Hazards Program. [*Link*](https://www.usgs.gov/programs/VHP)
+
+-   Asociación Latinoamericana de Volcanología (ALVO). [*Link*](https://oficialalvo.org/)
+
+-   International Association of Volcanology and Chemistry of the Earth's Interior. [*Link*](https://www.iavceivolcano.org/)
+
+## Visores
+
+-   Visor de emisiones de gases. NOAA. [Link](https://satepsanone.nesdis.noaa.gov/pub/OMI/OMISO2/ecuador.html#End).
+-   Servicio Geológico Colombiano. Estados de alerta por actividad volcánica. [*Link*](https://www2.sgc.gov.co/volcanes2017/index.html)
+
+## Amenaza volcánica
+
+-   Global volcanic hazards and risk: Summary background paper. 2015. UNDRR. [*Link*](https://www.undrr.org/publication/global-volcanic-hazards-and-risk-summary-background-paper#downloads).
+-   Global volcanic hazards and risk: Technical background paper. 2015. UNDRR. [*Link*](https://www.undrr.org/publication/global-volcanic-hazards-and-risk-technical-background-paper).
+-   Volcano hazards assessments support decision making. USGS. [*Link*](https://www.usgs.gov/programs/VHP/volcano-hazards-assessments-support-decision-making)
+-   Volcano Hazard Assessments are based on the geologic record. USGS. [*Link*](https://www.usgs.gov/programs/VHP/volcano-hazard-assessments-are-based-geologic-record)
+
+{{< video "https://youtu.be/29DoJPNTeao" >}}
+
+{{< video "https://youtu.be/0A_pxOHNQHw?si=MkNattLFYnqh5Eu-" >}}
+
+## **Evaluación del riesgo volcánico**
+
+{{< video "https://youtu.be/leF4aQXGdjk" >}}
+
+{{< video "https://youtu.be/iB1uiaxScek" >}}
+
+## Lecturas
+
+-   The Encyclopedia of Volcanoes. Elsevier. 2015. [*Link*](https://www.sciencedirect.com/book/9780123859389/the-encyclopedia-of-volcanoes).
+-   Assessing Volcanic Hazard: A Review. Oxford Handbooks. 2017. [Link](https://link.springer.com/chapter/10.1007/11157_2016_46).
+-   Observing the Volcano World. Springer 2018. [*Link*](https://link.springer.com/book/10.1007/978-3-319-44097-2).
+-   If I Understand, I Am Understood: Experiences of Volcanic Risk Communication in Colombia. [Link](https://link.springer.com/book/10.1007/978-3-319-44097-2).
+-   Chronology of the principal scientific and governmental actions leading up to the November 13, 1985 eruption of Nevado del Ruiz, Colombia. Journal of Volcanology and Geothermal Research. 1990. [Link](https://www.oxfordhandbooks.com/view/10.1093/oxfordhb/9780190699420.001.0001/oxfordhb-9780190699420-e-32).
+-   Risk perception and volcanic hazard mitigation: Individual and social perspectives. Journal of Volcanology and Geothermal Research. 2008. [Link](https://doi.org/10.1016/j.jvolgeores.2007.12.026).
+-   “There’s no Plastic in Our Volcano”: A Story About Losing and Finding a Path to Participatory Volcanic Risk Management in Colombia. 2017. [Link](https://link.springer.com/chapter/10.1007/11157_2017_16).
+-   Worlding resilience in the Doña Juana Volcano-Páramo, Northern Andes (Colombia): A transdisciplinary view. 2021. Natural Hazards. [Link](https://link.springer.com/article/10.1007/s11069-021-04662-4).
+-   Volcanic evolution through geomorphological mapping: A case study of Cerro Bravo volcano (Colombia). 2023, Journal of South American Earth Sciences. [Link](https://doi.org/10.1016/j.jsames.2023.104472)
+-   Estrategias del Servicio Geológico Colombiano en la búsqueda de la apropiación social del conocimiento geocientífico y la gestión del riesgo volcánico del Nevado del Ruiz. 2023. REDER. [Link](https://doi.org/10.55467/reder.v7i2.122)
+-   Riesgo volcánico probabilístico con ejemplo de aplicación. 2024 Editorial Universidad de Nariño. [*Link*](https://editorial.udenar.edu.co).
+-   Implicaciones del Enfoque Metodológico de Evaluación de la Amenaza y el Riesgo de Desastres por Erupciones del Volcán Galeras, Colombia. 2024. REDER. [*Link*](https://www.revistareder.com/ojs/index.php/reder/article/view/137)
+-   Sentencia T-269/15. Corte Constitucional. Volcán Galeras. [*Link*](https://www.corteconstitucional.gov.co/relatoria/2015/T-269-15.htm).
+
+## Videos
+
+{{< video "https://www.youtube.com/embed/3scW4pa8l-c" >}}
+
+{{< video "https://youtu.be/H2Dn_b1Ad3k" >}}
+
+{{< video "https://youtu.be/No7RnYitOTQ" >}}
+
+{{< video "https://www.youtube.com/live/yJJCxhRYqKI" >}}
