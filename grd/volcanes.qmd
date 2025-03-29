@@ -22,7 +22,7 @@ editor: visual
 
     -   Volcán, riesgo y territorio. [*Link*](http://www.volcanriesgoyterritorio.gov.co/)
 
-## Internacionales
+## Instituciones internacionales
 
 -   USGS. Volcano Hazards Program. [*Link*](https://www.usgs.gov/programs/VHP)
 
@@ -52,13 +52,17 @@ Amenaza volcánica
 
 ## Evaluación del riesgo volcánico
 
+-   Volcanic risk assessment: Quantifying physical vulnerability in the built environment. Journal of Volcanology and Geothermal Research. [*Link*](https://doi.org/10.1016/j.jvolgeores.2014.03.002).
+- Open Quake Foundation. Ecenarios de riesgo volcanito. Taller de entrenamiento. [*Link*](https://www.training.openquake.org/volcanic-scenarios?lang=es). Atributos geográficos, atributos estructurales, modelo de exposición. Fragilidad y vulnerabilidad. Calculadora de escenacios de daños, escenarios de evaluación del riesgo.
+
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/leF4aQXGdjk" >}}
 
 {{< video "https://youtu.be/iB1uiaxScek" >}}
 
-Evaluación del riesgo volcánico
+Evaluación del riesgo volcánico. 
 :::
+
 
 ## Lecturas
 
