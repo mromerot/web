@@ -67,10 +67,14 @@ editor: visual
 
 ## Videos
 
+::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/embed/3scW4pa8l-c" >}}
 
 {{< video "https://youtu.be/H2Dn_b1Ad3k" >}}
+:::
 
+::: {layout-ncol="2"}
 {{< video "https://youtu.be/No7RnYitOTQ" >}}
 
 {{< video "https://www.youtube.com/live/yJJCxhRYqKI" >}}
+:::
