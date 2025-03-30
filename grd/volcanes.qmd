@@ -9,25 +9,19 @@ editor: visual
 -   Servicio Geológico Colombiano
 
     -   Volcanes de Colombia. [*Link*](https://saeprod.sgc.gov.co/volcanes)
-
     -   Esquema estados de alerta por actividad volcánica en Colombia. [*Link*](https://www2.sgc.gov.co/Paginas/estados-de-alerta-volcanes.aspx). Alerta verde, alerta amarilla, alerta naranja, alerta roja.
-
-    -   Guía para comunicar sobre volcanes en Colombia. [*Link*](https://www2.sgc.gov.co/Noticias/Paginas/Consulta-aqui-la-guia-para-comunicar-sobre-volcanes-en-Colombia.aspx)
-
     -   Observatorio Vulcanológico y Sismológico de Manizales. [*Link*](https://www2.sgc.gov.co/ProgramasDeInvestigacion/geoamenazas/Paginas/OVS-Manizales.aspx)
 
 -   UNGRD
 
     -   Plan Nacional de Preparación y Respuesta por Actividad del Volcán Puracé. 2025. [*Link*](https://portal.gestiondelriesgo.gov.co/Documents/Planes-respuesta/PLAN-NACIONAL-DE-PREPARACION-Y-RESPUESTA-VOLCAN-PURACE.pdf)
 
-    -   Volcán, riesgo y territorio. [*Link*](http://www.volcanriesgoyterritorio.gov.co/)
+    -   
 
 ## Instituciones internacionales
 
 -   USGS. Volcano Hazards Program. [*Link*](https://www.usgs.gov/programs/VHP)
-
 -   Asociación Latinoamericana de Volcanología (ALVO). [*Link*](https://oficialalvo.org/)
-
 -   International Association of Volcanology and Chemistry of the Earth's Interior. [*Link*](https://www.iavceivolcano.org/)
 
 ## Visores
@@ -50,19 +44,59 @@ editor: visual
 Amenaza volcánica
 :::
 
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/xkZrZqMqHa8" >}}
+
+{{< video "https://youtu.be/N1jnPKIoWCY" >}}
+
+Amenaza volcánica volcanes Nevado del Ruiz y Galeras
+:::
+
 ## Evaluación del riesgo volcánico
 
+-   Riesgo volcánico probabilístico con ejemplo de aplicación. 2024 Editorial Universidad de Nariño. [*Link*](https://editorial.udenar.edu.co).
+-   Implicaciones del Enfoque Metodológico de Evaluación de la Amenaza y el Riesgo de Desastres por Erupciones del Volcán Galeras, Colombia. 2024. REDER. [*Link*](https://www.revistareder.com/ojs/index.php/reder/article/view/137)
 -   Volcanic risk assessment: Quantifying physical vulnerability in the built environment. Journal of Volcanology and Geothermal Research. [*Link*](https://doi.org/10.1016/j.jvolgeores.2014.03.002).
-- Open Quake Foundation. Ecenarios de riesgo volcanito. Taller de entrenamiento. [*Link*](https://www.training.openquake.org/volcanic-scenarios?lang=es). Atributos geográficos, atributos estructurales, modelo de exposición. Fragilidad y vulnerabilidad. Calculadora de escenacios de daños, escenarios de evaluación del riesgo.
+-   Open Quake Foundation. Ecenarios de riesgo volcanito. Taller de entrenamiento. [*Link*](https://www.training.openquake.org/volcanic-scenarios?lang=es). Atributos geográficos, atributos estructurales, modelo de exposición. Fragilidad y vulnerabilidad. Calculadora de escenacios de daños, escenarios de evaluación del riesgo.
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/leF4aQXGdjk" >}}
 
 {{< video "https://youtu.be/iB1uiaxScek" >}}
 
-Evaluación del riesgo volcánico. 
+Evaluación del riesgo volcánico.
 :::
 
+## Comunicación del riesgo volcánico
+
+-   Guía para comunicar sobre volcanes en Colombia. [*Link*](https://www2.sgc.gov.co/Noticias/Paginas/Consulta-aqui-la-guia-para-comunicar-sobre-volcanes-en-Colombia.aspx)
+-   Volcán, riesgo y territorio. [*Link*](http://www.volcanriesgoyterritorio.gov.co/)
+-   Estrategias del Servicio Geológico Colombiano en la búsqueda de la apropiación social del conocimiento geocientífico y la gestión del riesgo volcánico del Nevado del Ruiz. 2023. REDER. [*Link*](https://doi.org/10.55467/reder.v7i2.122)
+-   Communication About Volcanic Hazards. USGS. [*Link*](https://www.usgs.gov/observatories/cvo/communication-about-volcanic-hazards)
+-   Volcano disaster risk management during crisis: implementation of risk communication in Indonesia. 2023. Journal of Applied Volcanology. [*Link*](https://appliedvolc.biomedcentral.com/articles/10.1186/s13617-023-00129-2)
+
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/embed/3scW4pa8l-c" >}}
+
+{{< video "https://youtu.be/H2Dn_b1Ad3k" >}}
+:::
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/-Rve9yreZ3g" >}}
+
+{{< video "https://youtu.be/48F5h4D1hQ8" >}}
+
+Comunicación del riesgo volcánico
+:::
+
+## Reducción del riesgo volcánico
+
+-   Ordenamiento territorial.
+    -   Sentencia T-269/15. Corte Constitucional. Volcán Galeras. [*Link*](https://www.corteconstitucional.gov.co/relatoria/2015/T-269-15.htm).
+
+## Manejo de desastres
+
+-   Plan Nacional de Respuesta del Volcán Nevado del Ruiz, 2021. [*Link*](https://reliefweb.int/report/colombia/plan-nacional-de-respuesta-del-volcan-nevado-del-ruiz-2021)
 
 ## Lecturas
 
@@ -75,18 +109,8 @@ Evaluación del riesgo volcánico.
 -   “There’s no Plastic in Our Volcano”: A Story About Losing and Finding a Path to Participatory Volcanic Risk Management in Colombia. 2017. [Link](https://link.springer.com/chapter/10.1007/11157_2017_16).
 -   Worlding resilience in the Doña Juana Volcano-Páramo, Northern Andes (Colombia): A transdisciplinary view. 2021. Natural Hazards. [Link](https://link.springer.com/article/10.1007/s11069-021-04662-4).
 -   Volcanic evolution through geomorphological mapping: A case study of Cerro Bravo volcano (Colombia). 2023, Journal of South American Earth Sciences. [Link](https://doi.org/10.1016/j.jsames.2023.104472)
--   Estrategias del Servicio Geológico Colombiano en la búsqueda de la apropiación social del conocimiento geocientífico y la gestión del riesgo volcánico del Nevado del Ruiz. 2023. REDER. [Link](https://doi.org/10.55467/reder.v7i2.122)
--   Riesgo volcánico probabilístico con ejemplo de aplicación. 2024 Editorial Universidad de Nariño. [*Link*](https://editorial.udenar.edu.co).
--   Implicaciones del Enfoque Metodológico de Evaluación de la Amenaza y el Riesgo de Desastres por Erupciones del Volcán Galeras, Colombia. 2024. REDER. [*Link*](https://www.revistareder.com/ojs/index.php/reder/article/view/137)
--   Sentencia T-269/15. Corte Constitucional. Volcán Galeras. [*Link*](https://www.corteconstitucional.gov.co/relatoria/2015/T-269-15.htm).
 
 ## Videos
-
-::: {layout-ncol="2"}
-{{< video "https://www.youtube.com/embed/3scW4pa8l-c" >}}
-
-{{< video "https://youtu.be/H2Dn_b1Ad3k" >}}
-:::
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/No7RnYitOTQ" >}}
