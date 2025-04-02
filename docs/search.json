@@ -420,7 +420,7 @@
     "href": "grd/volcanes.html",
     "title": "Riesgo volcánico",
     "section": "",
-    "text": "Servicio Geológico Colombiano\n\nVolcanes de Colombia. Link\nObservatorio Vulcanológico y Sismológico de Manizales. Link\n\nUNGRD\n\nPlan Nacional de Preparación y Respuesta por Actividad del Volcán Puracé. 2025. Link",
+    "text": "Servicio Geológico Colombiano\n\nAtlas Geológico de Colombia 2023: Volcanes 2023. Link.\nObservatorio Vulcanológico y Sismológico de Manizales. Link\nGeoportal - Geoamenazas. Link.\nEstados de alerta por actividad volcánica. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Riesgo volcánico"
@@ -431,7 +431,7 @@
     "href": "grd/volcanes.html#instituciones-nacionales",
     "title": "Riesgo volcánico",
     "section": "",
-    "text": "Servicio Geológico Colombiano\n\nVolcanes de Colombia. Link\nObservatorio Vulcanológico y Sismológico de Manizales. Link\n\nUNGRD\n\nPlan Nacional de Preparación y Respuesta por Actividad del Volcán Puracé. 2025. Link",
+    "text": "Servicio Geológico Colombiano\n\nAtlas Geológico de Colombia 2023: Volcanes 2023. Link.\nObservatorio Vulcanológico y Sismológico de Manizales. Link\nGeoportal - Geoamenazas. Link.\nEstados de alerta por actividad volcánica. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Riesgo volcánico"
@@ -442,7 +442,7 @@
     "href": "grd/volcanes.html#instituciones-internacionales",
     "title": "Riesgo volcánico",
     "section": "Instituciones internacionales",
-    "text": "Instituciones internacionales\n\nUSGS. Volcano Hazards Program. Link\nAsociación Latinoamericana de Volcanología (ALVO). Link\nInternational Association of Volcanology and Chemistry of the Earth’s Interior. Link",
+    "text": "Instituciones internacionales\n\nUSGS. Volcano Hazards Program. Link\nAsociación Latinoamericana de Volcanología (ALVO). Link\nInternational Association of Volcanology and Chemistry of the Earth’s Interior. Link\nVisor de emisiones de gases. NOAA. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Riesgo volcánico"
@@ -464,7 +464,7 @@
     "href": "grd/volcanes.html#amenaza-volcánica",
     "title": "Riesgo volcánico",
     "section": "Amenaza volcánica",
-    "text": "Amenaza volcánica\n\nGlobal volcanic hazards and risk: Summary background paper. 2015. UNDRR. Link.\nGlobal volcanic hazards and risk: Technical background paper. 2015. UNDRR. Link.\nVolcano hazards assessments support decision making. USGS. Link\nVolcano Hazard Assessments are based on the geologic record. USGS. Link\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAmenaza volcánica\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAmenaza volcánica volcanes Nevado del Ruiz y Galeras",
+    "text": "Amenaza volcánica\n\nMapas de amenaza volcánica. Link\nGlobal volcanic hazards and risk: Summary background paper. 2015. UNDRR. Link.\nGlobal volcanic hazards and risk: Technical background paper. 2015. UNDRR. Link.\nVolcano hazards assessments support decision making. USGS. Link\nVolcano Hazard Assessments are based on the geologic record. USGS. Link\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAmenaza volcánica\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAmenaza volcánica volcanes Nevado del Ruiz y Galeras",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Riesgo volcánico"
@@ -508,7 +508,7 @@
     "href": "grd/volcanes.html#manejo-de-desastres",
     "title": "Riesgo volcánico",
     "section": "Manejo de desastres",
-    "text": "Manejo de desastres\n\nPlan Nacional de Respuesta del Volcán Nevado del Ruiz, 2021. Link",
+    "text": "Manejo de desastres\n\nPlan Nacional de Respuesta del Volcán Nevado del Ruiz, 2021. Link\nPlan Nacional de Preparación y Respuesta por Actividad del Volcán Puracé. 2025. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Riesgo volcánico"
@@ -718,6 +718,35 @@
     "crumbs": [
       "Gestión de proyectos de ciencia y tecnología",
       "Gestión de proyectos de CTeI"
+    ]
+  },
+  {
+    "objectID": "grd/volcanes.html#volcanes-de-colombia-sgc",
+    "href": "grd/volcanes.html#volcanes-de-colombia-sgc",
+    "title": "Riesgo volcánico",
+    "section": "Volcanes de Colombia (SGC)",
+    "text": "Volcanes de Colombia (SGC)\n\nCampo volcánico Guamuéz - Sibundoy\nVolcán Azufral\nVolcán Cerro Bravo\nVolcán Cerro Machín\nVolcán Cerro Negro\nVolcán Chiles\nVolcán Cumbal\nVolcán Doña Juana\nVolcán Galeras\nVolcán las Ánimas\nVolcán Nevado de Santa Isabel\nVolcán Nevado del Huila\nVolcán Nevado del Ruiz",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Riesgo volcánico"
+    ]
+  },
+  {
+    "objectID": "volcanes.html",
+    "href": "volcanes.html",
+    "title": "Mapa de volcanes",
+    "section": "",
+    "text": "Mapa de volcanes"
+  },
+  {
+    "objectID": "grd/volcanes.html#mapa-de-volcanes",
+    "href": "grd/volcanes.html#mapa-de-volcanes",
+    "title": "Riesgo volcánico",
+    "section": "Mapa de volcanes",
+    "text": "Mapa de volcanes",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Riesgo volcánico"
     ]
   }
 ]
