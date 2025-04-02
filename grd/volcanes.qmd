@@ -8,26 +8,48 @@ editor: visual
 
 -   **Servicio Geológico Colombiano**
 
-    -   Volcanes de Colombia. [*Link*](https://saeprod.sgc.gov.co/volcanes)
     -   Observatorio Vulcanológico y Sismológico de Manizales. [*Link*](https://www2.sgc.gov.co/ProgramasDeInvestigacion/geoamenazas/Paginas/OVS-Manizales.aspx)
-
--   **UNGRD**
-
-    -   Plan Nacional de Preparación y Respuesta por Actividad del Volcán Puracé. 2025. [*Link*](https://portal.gestiondelriesgo.gov.co/Documents/Planes-respuesta/PLAN-NACIONAL-DE-PREPARACION-Y-RESPUESTA-VOLCAN-PURACE.pdf)
+    -   Geoportal - Geoamenazas. [*Link.*](https://www2.sgc.gov.co/sgc/mapas/Paginas/geoportal.aspx#)
+    -   Estados de alerta por actividad volcánica. [*Link*](https://www2.sgc.gov.co/volcanes2017/index.html)
 
 ## Instituciones internacionales
 
 -   USGS. Volcano Hazards Program. [*Link*](https://www.usgs.gov/programs/VHP)
 -   Asociación Latinoamericana de Volcanología (ALVO). [*Link*](https://oficialalvo.org/)
 -   International Association of Volcanology and Chemistry of the Earth's Interior. [*Link*](https://www.iavceivolcano.org/)
+-   Visor de emisiones de gases. NOAA. [*Link*](https://satepsanone.nesdis.noaa.gov/pub/OMI/OMISO2/ecuador.html#End).
 
-## Visores
+## [Volcanes de Colombia](https://www.sgc.gov.co/volcanes) (SGC)
 
--   Visor de emisiones de gases. NOAA. [Link](https://satepsanone.nesdis.noaa.gov/pub/OMI/OMISO2/ecuador.html#End).
--   Servicio Geológico Colombiano. Estados de alerta por actividad volcánica. [*Link*](https://www2.sgc.gov.co/volcanes2017/index.html)
+-   Campo volcánico Guamuéz - Sibundoy
+
+-   Volcán Azufral
+
+-   Volcán Cerro Bravo
+
+-   Volcán Cerro Machín
+
+-   Volcán Cerro Negro
+
+-   Volcán Chiles
+
+-   Volcán Cumbal
+
+-   Volcán Doña Juana
+
+-   Volcán Galeras
+
+-   Volcán las Ánimas
+
+-   Volcán Nevado de Santa Isabel
+
+-   Volcán Nevado del Huila
+
+-   Volcán Nevado del Ruiz
 
 ## Amenaza volcánica
 
+-   Mapas de amenaza volcánica. [*Link*](https://srvags.sgc.gov.co/JSViewer/Amenaza_volcanica_JS/?itemid=d749a30e99eb46d69b20f908db9ccda9&page=Azufral&views=View-2%2CMachin "Mapas Amenaza Volcanica")
 -   Global volcanic hazards and risk: Summary background paper. 2015. UNDRR. [*Link*](https://www.undrr.org/publication/global-volcanic-hazards-and-risk-summary-background-paper#downloads).
 -   Global volcanic hazards and risk: Technical background paper. 2015. UNDRR. [*Link*](https://www.undrr.org/publication/global-volcanic-hazards-and-risk-technical-background-paper).
 -   Volcano hazards assessments support decision making. USGS. [*Link*](https://www.usgs.gov/programs/VHP/volcano-hazards-assessments-support-decision-making)
@@ -95,6 +117,7 @@ Comunicación del riesgo volcánico
 ## Manejo de desastres
 
 -   Plan Nacional de Respuesta del Volcán Nevado del Ruiz, 2021. [*Link*](https://reliefweb.int/report/colombia/plan-nacional-de-respuesta-del-volcan-nevado-del-ruiz-2021)
+-   Plan Nacional de Preparación y Respuesta por Actividad del Volcán Puracé. 2025. [*Link*](https://portal.gestiondelriesgo.gov.co/Documents/Planes-respuesta/PLAN-NACIONAL-DE-PREPARACION-Y-RESPUESTA-VOLCAN-PURACE.pdf)
 
 ## Lecturas
 
@@ -112,6 +135,4 @@ Comunicación del riesgo volcánico
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/No7RnYitOTQ" >}}
-
-{{< video "https://www.youtube.com/live/yJJCxhRYqKI" >}}
 :::
