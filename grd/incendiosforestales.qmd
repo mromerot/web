@@ -6,23 +6,25 @@ editor: visual
 
 ## Instituciones nacionales
 
--   IDEAM
--   Parques nacionales
--   Bomberos de Colombia
+-   UNGRD. [*Link*](https://portal.gestiondelriesgo.gov.co/)
+-   Minambiente. [*Link*](https://www.minambiente.gov.co/cambio-climatico-y-gestion-del-riesgo/como-orientar-la-gestion-del-riesgo-de-desastres-por-incendios-forestales-a-nivel-municipal/). [*Link*](https://archivo.minambiente.gov.co/index.php/bosques-biodiversidad-y-servicios-ecosistematicos/desarrollo-sostenible-de-bosques/incendios-forestales)
+-   IDEAM. *Link*
+-   Bomberos de Colombia. *Link*
 
 ## Instituciones internacionales
 
--   Fire Information for Resource Management System. NASA. [*Link*](https://firms.modaps.eosdis.nasa.gov/)
+-   ARSET – Observaciones de Satélites y Herramientas para el Riesgo, Detección y Análisis de Incendios. [Link](https://appliedsciences.nasa.gov/join-mission/training/spanish/arset-observaciones-de-satelites-y-herramientas-para-el-riesgo))
+-   Brazil. Programa Queimadas. [*Link*](https://queimadas.dgi.inpe.br/queimadas/portal-static/situacao-atual)
 -   CopernicusLAC, case 6. [*Link*](https://www.copernicuslac-panama.eu/category/eo-services/use-case-6/)*. [Link](https://www.copernicuslac.terradue.com/).* Incendios: cartografía de eventos, peligro y recuperación.
+-   ESA. Long-term dataset to analyse global fire trend. [*Link*](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-3/New_long-term_dataset_to_analyse_global_fire_trends)
+-   Fire Information for Resource Management System. NASA. [*Link*](https://firms.modaps.eosdis.nasa.gov/)
 -   Global Wildfire Information System. [*Link*](https://gwis.jrc.ec.europa.eu/static/gwis_current_situation/public/index.html)
 -   HMS Smoke Explorer. [*Link*](https://globalfires.earthengine.app/view/hms-smoke)
--   ESA. Long-term dataset to analyse global fire trend. [*Link*](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-3/New_long-term_dataset_to_analyse_global_fire_trends)
--   ARSET – Observaciones de Satélites y Herramientas para el Riesgo, Detección y Análisis de Incendios. [Link](https://appliedsciences.nasa.gov/join-mission/training/spanish/arset-observaciones-de-satelites-y-herramientas-para-el-riesgo))
--   10 Years Beyond Bushfires. Community, Resilience and Recovery. Australia. [*Link*](https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/beyond-bushfires)
--   National Indicative Aggregated Fire Extent Datasets. [*Link* ](http://www.environment.gov.au/fed/catalog/search/resource/details.page?uuid=%7B9ACDCB09-0364-4FE8-9459-2A56C792C743%7D)
--   Brazil. Programa Queimadas. [*Link*](https://queimadas.dgi.inpe.br/queimadas/portal-static/situacao-atual)
--   Transcending the disaster paradigm: Understanding persistence of animal populations in fire-prone environments. Global Change Biology, 2021. [*Link* ](https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.15925)
+-   IFRC. [*Link*](https://www.ifrc.org/es/nuestro-trabajo/desastres-clima-y-crisis/que-es-desastre/incendios-forestales)
 -   MODIS fire data in GRASS GIS. [*Link*](https://ecodiv.earth/post/modis_fire_data_in_grassgis)
+-   National Indicative Aggregated Fire Extent Datasets. [*Link*](http://www.environment.gov.au/fed/catalog/search/resource/details.page?uuid=%7B9ACDCB09-0364-4FE8-9459-2A56C792C743%7D)
+-   Transcending the disaster paradigm: Understanding persistence of animal populations in fire-prone environments. Global Change Biology, 2021. [*Link*](https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.15925)
+-   10 Years Beyond Bushfires. Community, Resilience and Recovery. Australia. [*Link*](https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/beyond-bushfires)
 
 ## Amenaza por incendios forestales
 
@@ -31,7 +33,6 @@ editor: visual
 -   PROTOCOLO PARA LA REALIZACIÓN DE MAPAS DE ZONIFICACIÓN DE RIESGOS A INCENDIOS DE LA COBERTURA VEGETAL. IDEAM, 2011. [*Link*](http://www.ideam.gov.co/documents/13257/14369/PROTOCOLO+INCENDIOS+4Oct.pdf)
 
 ::: {layout-ncol="2"}
-
 {{< video "https://youtu.be/QWEXzQaYt9s" >}}
 
 {{< video "https://youtu.be/TbvUegDG5E4" >}}
@@ -43,30 +44,41 @@ Amenaza por incendios forestales
 
 ## Evaluación del riesgo de incendios forestales
 
--   Riesgo volcánico probabilístico con ejemplo de aplicación. 2024 Editorial Universidad de Nariño. [*Link*](https://editorial.udenar.edu.co).
--   
+-   Estrategia E2050. [*Link*](https://www.facebook.com/watch/live/?ref=watch_permalink&v=2636278040002846)
+-   Wildfire hazard and risk assessment. UNDRR. [*Link*](https://www.undrr.org/publication/wildfire-hazard-and-risk-assessment)
+-   A wildfire risk assessment framework for land and resource management. US Forest Service. 2013. [*Link*](https://research.fs.usda.gov/treesearch/56265)
+-   USGS Wildfire Hazard and Risk Assessment Clearinghouse. [*Link*](https://apps.usgs.gov/wildfire_hazard_and_risk_assessment_clearinghouse/).
+-   Wildfire Risk Assessment. Copernicus. [*Link*](https://forest-fire.emergency.copernicus.eu/about-effis/technical-background/wildfire-risk-assesment)
 
 ::: {layout-ncol="2"}
-{{< video "https://youtu.be/leF4aQXGdjk" >}}
+{{< video "https://youtu.be/swr4NlX2bVE" >}}
 
-{{< video "https://youtu.be/iB1uiaxScek" >}}
+{{< video "https://youtu.be/c3u_H5C7NPo" >}}
 
-Evaluación del riesgo volcánico.
+{{< video "https://youtu.be/OS-0GYDniqM" >}}
+
+Evaluación del riesgo por incendios forestales.
 :::
 
 ## Comunicación del riesgo por incendios forestales
 
--   Esquema estados de alerta por actividad volcánica en Colombia. [*Link*](https://www2.sgc.gov.co/Paginas/estados-de-alerta-volcanes.aspx). Alerta verde, alerta amarilla, alerta naranja, alerta roja.
+-   New good practice guide on Wildfire Risk Awareness and Communication. 2024. European Union. [*Link*](https://civil-protection-knowledge-network.europa.eu/news/new-good-practice-guide-wildfire-risk-awareness-and-communication)
+-   Wildfire risk perception and communication in disadvantaged communities: Insights from Eastern Coachella Valley in Southern California. 2025. International Journal of Disaster Risk Reduction. [*Link*](https://www.sciencedirect.com/science/article/pii/S221242092500010X)
+-   Forest fires risk communication. Operational recommendations to improve social prevention. eFIRECOM project. 2016. [*Link*](https://efirecom.ctfc.cat/docs/RECOM%20ENGLISH_final.pdf)
 
 ::: {layout-ncol="2"}
-{{< video "https://www.youtube.com/embed/3scW4pa8l-c" >}}
+{{< video "https://youtu.be/8u3F5f47i_M" >}}
 
-{{< video "https://youtu.be/H2Dn_b1Ad3k" >}}
+{{< video "https://youtu.be/x0ph5r7p2Ao" >}}
+
+{{< video "https://vimeo.com/701418128" >}}
+
+Comunicación del riesgo por incendios forestales.
 :::
 
 ## Reducción del riesgo de incendios forestales
 
--   Propuesta para el manejo integral del fuego en Colombia. 2019. [*Link*](https://www.researchgate.net/publication/337404249_Propuesta_para_el_manejo_integral_del_fuego_en_Colombia_Proposal_for_an_integrated_fire_management_in_Colombia)[.](https://www.researchgate.net/publication/337404249_Propuesta_para_el_manejo_integral_del_fuego_en_Colombia_Proposal_for_an_integrated_fire_management_in_Colombia).)
+-   Propuesta para el manejo integral del fuego en Colombia. 2019. [*Link*.](https://www.researchgate.net/publication/337404249_Propuesta_para_el_manejo_integral_del_fuego_en_Colombia_Proposal_for_an_integrated_fire_management_in_Colombia)
 
 ## Manejo de desastres de incendios forestales
 
@@ -76,7 +88,7 @@ Evaluación del riesgo volcánico.
 
 ## Lecturas
 
--   The Encyclopedia of Volcanoes. Elsevier. 2015. [*Link*](https://www.sciencedirect.com/book/9780123859389/the-encyclopedia-of-volcanoes).
+-   The
 
 ## **Entrenamiento**
 
@@ -88,7 +100,3 @@ Evaluación del riesgo volcánico.
 -   Download wildfire hotspots detected by NASA satellites and the Fire Information for Resource Management System (FIRMS). [*Link*](https://github.com/datadesk/nasa-wildfires)
 
 ## Videos
-
-::: {layout-ncol="2"}
-{{< video "https://youtu.be/No7RnYitOTQ" >}}
-:::
