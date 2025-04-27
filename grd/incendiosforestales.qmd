@@ -1,0 +1,94 @@
+---
+title: "Incendios forestales"
+format: html
+editor: visual
+---
+
+## Instituciones nacionales
+
+-   IDEAM
+-   Parques nacionales
+-   Bomberos de Colombia
+
+## Instituciones internacionales
+
+-   Fire Information for Resource Management System. NASA. [*Link*](https://firms.modaps.eosdis.nasa.gov/)
+-   CopernicusLAC, case 6. [*Link*](https://www.copernicuslac-panama.eu/category/eo-services/use-case-6/)*. [Link](https://www.copernicuslac.terradue.com/).* Incendios: cartografía de eventos, peligro y recuperación.
+-   Global Wildfire Information System. [*Link*](https://gwis.jrc.ec.europa.eu/static/gwis_current_situation/public/index.html)
+-   HMS Smoke Explorer. [*Link*](https://globalfires.earthengine.app/view/hms-smoke)
+-   ESA. Long-term dataset to analyse global fire trend. [*Link*](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-3/New_long-term_dataset_to_analyse_global_fire_trends)
+-   ARSET – Observaciones de Satélites y Herramientas para el Riesgo, Detección y Análisis de Incendios. [Link](https://appliedsciences.nasa.gov/join-mission/training/spanish/arset-observaciones-de-satelites-y-herramientas-para-el-riesgo))
+-   10 Years Beyond Bushfires. Community, Resilience and Recovery. Australia. [*Link*](https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/beyond-bushfires)
+-   National Indicative Aggregated Fire Extent Datasets. [*Link* ](http://www.environment.gov.au/fed/catalog/search/resource/details.page?uuid=%7B9ACDCB09-0364-4FE8-9459-2A56C792C743%7D)
+-   Brazil. Programa Queimadas. [*Link*](https://queimadas.dgi.inpe.br/queimadas/portal-static/situacao-atual)
+-   Transcending the disaster paradigm: Understanding persistence of animal populations in fire-prone environments. Global Change Biology, 2021. [*Link* ](https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.15925)
+-   MODIS fire data in GRASS GIS. [*Link*](https://ecodiv.earth/post/modis_fire_data_in_grassgis)
+
+## Amenaza por incendios forestales
+
+-   Monitoreo de puntos de calor en Colombia. IDEAM. [*link*](https://puntosdecalor.ideam.gov.co/)
+-   Boletines técnicos IDEAM. Boletín de Alertas por Pronóstico de la Amenaza por Incendios de la Cobertura Vegetal (BAICV). [*Link*](https://www.ideam.gov.co/sala-de-prensa/boletines)
+-   PROTOCOLO PARA LA REALIZACIÓN DE MAPAS DE ZONIFICACIÓN DE RIESGOS A INCENDIOS DE LA COBERTURA VEGETAL. IDEAM, 2011. [*Link*](http://www.ideam.gov.co/documents/13257/14369/PROTOCOLO+INCENDIOS+4Oct.pdf)
+
+::: {layout-ncol="2"}
+
+{{< video "https://youtu.be/QWEXzQaYt9s" >}}
+
+{{< video "https://youtu.be/TbvUegDG5E4" >}}
+
+{{< video "https://youtu.be/048w3Z6iFug" >}}
+
+Amenaza por incendios forestales
+:::
+
+## Evaluación del riesgo de incendios forestales
+
+-   Riesgo volcánico probabilístico con ejemplo de aplicación. 2024 Editorial Universidad de Nariño. [*Link*](https://editorial.udenar.edu.co).
+-   
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/leF4aQXGdjk" >}}
+
+{{< video "https://youtu.be/iB1uiaxScek" >}}
+
+Evaluación del riesgo volcánico.
+:::
+
+## Comunicación del riesgo por incendios forestales
+
+-   Esquema estados de alerta por actividad volcánica en Colombia. [*Link*](https://www2.sgc.gov.co/Paginas/estados-de-alerta-volcanes.aspx). Alerta verde, alerta amarilla, alerta naranja, alerta roja.
+
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/embed/3scW4pa8l-c" >}}
+
+{{< video "https://youtu.be/H2Dn_b1Ad3k" >}}
+:::
+
+## Reducción del riesgo de incendios forestales
+
+-   Propuesta para el manejo integral del fuego en Colombia. 2019. [*Link*](https://www.researchgate.net/publication/337404249_Propuesta_para_el_manejo_integral_del_fuego_en_Colombia_Proposal_for_an_integrated_fire_management_in_Colombia)[.](https://www.researchgate.net/publication/337404249_Propuesta_para_el_manejo_integral_del_fuego_en_Colombia_Proposal_for_an_integrated_fire_management_in_Colombia).)
+
+## Manejo de desastres de incendios forestales
+
+-   Red Nacional de Brigadas Forestales Comunitarias. [*Link*](https://storymaps.arcgis.com/stories/94c7a34bfd8b4ae2817eff7b59049faf)
+
+{{< video "https://youtu.be/QRxivg-WbHk" >}}
+
+## Lecturas
+
+-   The Encyclopedia of Volcanoes. Elsevier. 2015. [*Link*](https://www.sciencedirect.com/book/9780123859389/the-encyclopedia-of-volcanoes).
+
+## **Entrenamiento**
+
+-   Copernicus LAC MOOC. [*Link*](https://moodle.copernicuslac-panama.eu/).
+-   ARSET NASA wildfire training. [*LiInk*](https://appliedsciences.nasa.gov/what-we-do/capacity-building/arset/arset-wildland-fire-trainings)
+
+## Repos
+
+-   Download wildfire hotspots detected by NASA satellites and the Fire Information for Resource Management System (FIRMS). [*Link*](https://github.com/datadesk/nasa-wildfires)
+
+## Videos
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/No7RnYitOTQ" >}}
+:::

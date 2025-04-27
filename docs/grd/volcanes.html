@@ -345,6 +345,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Observatorio Vulcanológico y Sismológico de Manizales. <a href="https://www2.sgc.gov.co/ProgramasDeInvestigacion/geoamenazas/Paginas/OVS-Manizales.aspx"><em>Link</em></a></li>
 <li>Geoportal - Geoamenazas. <a href="https://www2.sgc.gov.co/sgc/mapas/Paginas/geoportal.aspx#"><em>Link.</em></a></li>
 <li>Estados de alerta por actividad volcánica. <a href="https://www2.sgc.gov.co/volcanes2017/index.html"><em>Link</em></a></li>
+<li>Portal Datos Abiertos. Atlas Geológico de Colombia 2023: Volcanes 2023. <a href="https://datos.sgc.gov.co/datasets/de7da66446854f559e421ea175e53733_0/explore?location=4.441166%2C-75.250585%2C6.99"><em>Link</em></a></li>
 </ul></li>
 </ul>
 </section>
@@ -377,42 +378,6 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="mapa-de-volcanes" class="level2">
 <h2 class="anchored" data-anchor-id="mapa-de-volcanes">Mapa de volcanes</h2>
-<div id="map" style="height: 600px;">
-
-</div>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" <="" script="">
-<p><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /></p>
-<script>
-  // Initialize the map
-  const map = L.map('map').setView([2.5, -76.5], 7); // Centered in Colombia
-
-  // Add OpenStreetMap tiles
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '© OpenStreetMap contributors'
-  }).addTo(map);
-
-  // Load GeoJSON data
-  fetch('./grd/data/Volcanes2023.geojson')
-    .then(response => response.json())
-    .then(data => {
-      // Add GeoJSON layer to the map
-      L.geoJSON(data, {
-        onEachFeature: (feature, layer) => {
-          const props = feature.properties;
-          const popupContent = `
-            <strong>${props.NombreVolcan || 'Volcán sin nombre'}</strong><br>
-            Altura: ${props.AlturaSobreNivelMar || 'Desconocida'} m<br>
-            Latitud: ${props.Latitud}<br>
-            Longitud: ${props.Longitud}<br>
-            ${props.Comentarios || ''}
-          `;
-          layer.bindPopup(popupContent);
-        }
-      }).addTo(map);
-    })
-    .catch(error => console.error('Error loading GeoJSON:', error));
-</script>
 </section>
 <section id="amenaza-volcánica" class="level2">
 <h2 class="anchored" data-anchor-id="amenaza-volcánica">Amenaza volcánica</h2>
