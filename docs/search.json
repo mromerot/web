@@ -365,7 +365,7 @@
     "href": "grd/conocimientodelriesgo.html",
     "title": "Conocimiento del riesgo",
     "section": "",
-    "text": "Maecenas turpis velit, ultricies non elementum vel, luctus nec nunc. Nulla a diam interdum, faucibus sapien viverra, finibus metus. Donec non tortor diam. In ut elit aliquet, bibendum sem et, aliquam tortor. Donec congue, sem at rhoncus ultrices, nunc augue cursus erat, quis porttitor mauris libero ut ex. Nullam quis leo urna. Donec faucibus ligula eget pellentesque interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus interdum erat ut ultricies. Aenean tempus ex non elit suscipit, quis dignissim enim efficitur. Proin laoreet enim massa, vitae laoreet nulla mollis quis.\n\n\nQué es el conocimiento del riesgo de desastres\n\n\n\nInteger consectetur augue justo. at placerat erat posuere at. Ut elementum urna lectus, vitae bibendum neque pulvinar quis. Suspendisse vulputate cursus eros id maximus. Duis pulvinar facilisis massa, et condimentum est viverra congue. Curabitur ornare convallis nisl. Morbi dictum scelerisque turpis quis pellentesque. Etiam lectus risus, luctus lobortis risus ut, rutrum vulputate justo. Nulla facilisi.",
+    "text": "Aenean placerat luctus tortor vitae molestie. Nulla at aliquet nulla. Sed efficitur tellus orci, sed fringilla lectus laoreet eget. Vivamus maximus quam sit amet arcu dignissim, sed accumsan massa ullamcorper. Sed iaculis tincidunt feugiat. Nulla in est at nunc ultricies dictum ut vitae nunc. Aenean convallis vel diam at malesuada. Suspendisse arcu libero, vehicula tempus ultrices a, placerat sit amet tortor. Sed dictum id nulla commodo mattis. Aliquam mollis, nunc eu tristique faucibus, purus lacus tincidunt nulla, ac pretium lorem nunc ut enim. Curabitur eget mattis nisl, vitae sodales augue. Nam felis massa, bibendum sit amet nulla vel, vulputate rutrum lacus. Aenean convallis odio pharetra nulla mattis consequat.\n\n\nQué es el conocimiento del riesgo de desastres\n\n\n\nInteger consectetur augue justo. at placerat erat posuere at. Ut elementum urna lectus, vitae bibendum neque pulvinar quis. Suspendisse vulputate cursus eros id maximus. Duis pulvinar facilisis massa, et condimentum est viverra congue. Curabitur ornare convallis nisl. Morbi dictum scelerisque turpis quis pellentesque. Etiam lectus risus, luctus lobortis risus ut, rutrum vulputate justo. Nulla facilisi.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Conocimiento del riesgo"
@@ -376,7 +376,7 @@
     "href": "grd/conocimientodelriesgo.html#conocimiento-del-riesgo-de-desastres",
     "title": "Conocimiento del riesgo",
     "section": "",
-    "text": "Maecenas turpis velit, ultricies non elementum vel, luctus nec nunc. Nulla a diam interdum, faucibus sapien viverra, finibus metus. Donec non tortor diam. In ut elit aliquet, bibendum sem et, aliquam tortor. Donec congue, sem at rhoncus ultrices, nunc augue cursus erat, quis porttitor mauris libero ut ex. Nullam quis leo urna. Donec faucibus ligula eget pellentesque interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus interdum erat ut ultricies. Aenean tempus ex non elit suscipit, quis dignissim enim efficitur. Proin laoreet enim massa, vitae laoreet nulla mollis quis.\n\n\nQué es el conocimiento del riesgo de desastres\n\n\n\nInteger consectetur augue justo. at placerat erat posuere at. Ut elementum urna lectus, vitae bibendum neque pulvinar quis. Suspendisse vulputate cursus eros id maximus. Duis pulvinar facilisis massa, et condimentum est viverra congue. Curabitur ornare convallis nisl. Morbi dictum scelerisque turpis quis pellentesque. Etiam lectus risus, luctus lobortis risus ut, rutrum vulputate justo. Nulla facilisi.",
+    "text": "Aenean placerat luctus tortor vitae molestie. Nulla at aliquet nulla. Sed efficitur tellus orci, sed fringilla lectus laoreet eget. Vivamus maximus quam sit amet arcu dignissim, sed accumsan massa ullamcorper. Sed iaculis tincidunt feugiat. Nulla in est at nunc ultricies dictum ut vitae nunc. Aenean convallis vel diam at malesuada. Suspendisse arcu libero, vehicula tempus ultrices a, placerat sit amet tortor. Sed dictum id nulla commodo mattis. Aliquam mollis, nunc eu tristique faucibus, purus lacus tincidunt nulla, ac pretium lorem nunc ut enim. Curabitur eget mattis nisl, vitae sodales augue. Nam felis massa, bibendum sit amet nulla vel, vulputate rutrum lacus. Aenean convallis odio pharetra nulla mattis consequat.\n\n\nQué es el conocimiento del riesgo de desastres\n\n\n\nInteger consectetur augue justo. at placerat erat posuere at. Ut elementum urna lectus, vitae bibendum neque pulvinar quis. Suspendisse vulputate cursus eros id maximus. Duis pulvinar facilisis massa, et condimentum est viverra congue. Curabitur ornare convallis nisl. Morbi dictum scelerisque turpis quis pellentesque. Etiam lectus risus, luctus lobortis risus ut, rutrum vulputate justo. Nulla facilisi.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Conocimiento del riesgo"
@@ -684,11 +684,7 @@
     "href": "grd/inundaciones.html",
     "title": "Inundaciones",
     "section": "",
-    "text": "Instituciones nacionales\n\nUNGRD. Link\nMinambiente. Link. Link\nIDEAM. Link\nBomberos de Colombia. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Inundaciones"
-    ]
+    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link"
   },
   {
     "objectID": "projects/index.html",
@@ -873,5 +869,513 @@
       "Gestión de proyectos de ciencia y tecnología",
       "Gestión de proyectos de CTeI"
     ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#resiliencia",
+    "href": "grd/conocimientodelriesgo.html#resiliencia",
+    "title": "Conocimiento del riesgo",
+    "section": "Resiliencia",
+    "text": "Resiliencia\n\nRevisión sistemática sobre la capacidad de adaptación y resiliencia comunitaria ante desastres socionaturales en América Latina y el Caribe. 2023. REDER. Link\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResiliencia",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/avenidastorrenciales.html",
+    "href": "grd/avenidastorrenciales.html",
+    "title": "Inundaciones",
+    "section": "",
+    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link"
+  },
+  {
+    "objectID": "grd/avenidastorrenciales.html#instituciones-nacionales",
+    "href": "grd/avenidastorrenciales.html#instituciones-nacionales",
+    "title": "Inundaciones",
+    "section": "",
+    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link"
+  },
+  {
+    "objectID": "grd/avenidastorrenciales.html#instituciones-internacionales",
+    "href": "grd/avenidastorrenciales.html#instituciones-internacionales",
+    "title": "Inundaciones",
+    "section": "Instituciones internacionales",
+    "text": "Instituciones internacionales"
+  },
+  {
+    "objectID": "grd/avenidastorrenciales.html#amenaza-por-inundaciones",
+    "href": "grd/avenidastorrenciales.html#amenaza-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Amenaza por inundaciones",
+    "text": "Amenaza por inundaciones\n\n\n\n\n\n\n\n\n\nAmenaza por inundaciones"
+  },
+  {
+    "objectID": "grd/avenidastorrenciales.html#evaluación-del-riesgo-por-inundaciones",
+    "href": "grd/avenidastorrenciales.html#evaluación-del-riesgo-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Evaluación del riesgo por inundaciones",
+    "text": "Evaluación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\nEvaluación del riesgo por incendios forestales."
+  },
+  {
+    "objectID": "grd/avenidastorrenciales.html#comunicación-del-riesgo-por-inundaciones",
+    "href": "grd/avenidastorrenciales.html#comunicación-del-riesgo-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Comunicación del riesgo por inundaciones",
+    "text": "Comunicación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\n\n\n\nComunicación del riesgo por incendios forestales."
+  },
+  {
+    "objectID": "grd/avenidastorrenciales.html#reducción-del-riesgo-de-inundaciones",
+    "href": "grd/avenidastorrenciales.html#reducción-del-riesgo-de-inundaciones",
+    "title": "Inundaciones",
+    "section": "Reducción del riesgo de inundaciones",
+    "text": "Reducción del riesgo de inundaciones\n\nP"
+  },
+  {
+    "objectID": "grd/avenidastorrenciales.html#manejo-de-desastres-por-inundaciones",
+    "href": "grd/avenidastorrenciales.html#manejo-de-desastres-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Manejo de desastres por inundaciones",
+    "text": "Manejo de desastres por inundaciones\n\nRed"
+  },
+  {
+    "objectID": "grd/avenidastorrenciales.html#lecturas",
+    "href": "grd/avenidastorrenciales.html#lecturas",
+    "title": "Inundaciones",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nThe"
+  },
+  {
+    "objectID": "grd/avenidastorrenciales.html#entrenamiento",
+    "href": "grd/avenidastorrenciales.html#entrenamiento",
+    "title": "Inundaciones",
+    "section": "Entrenamiento",
+    "text": "Entrenamiento\n\nCope"
+  },
+  {
+    "objectID": "grd/avenidastorrenciales.html#repositorios",
+    "href": "grd/avenidastorrenciales.html#repositorios",
+    "title": "Inundaciones",
+    "section": "Repositorios",
+    "text": "Repositorios\n\nDownload"
+  },
+  {
+    "objectID": "grd/avenidastorrenciales.html#videos",
+    "href": "grd/avenidastorrenciales.html#videos",
+    "title": "Inundaciones",
+    "section": "Videos",
+    "text": "Videos"
+  },
+  {
+    "objectID": "grd/huracanes.html",
+    "href": "grd/huracanes.html",
+    "title": "Inundaciones",
+    "section": "",
+    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link"
+  },
+  {
+    "objectID": "grd/huracanes.html#instituciones-nacionales",
+    "href": "grd/huracanes.html#instituciones-nacionales",
+    "title": "Inundaciones",
+    "section": "",
+    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link"
+  },
+  {
+    "objectID": "grd/huracanes.html#instituciones-internacionales",
+    "href": "grd/huracanes.html#instituciones-internacionales",
+    "title": "Inundaciones",
+    "section": "Instituciones internacionales",
+    "text": "Instituciones internacionales"
+  },
+  {
+    "objectID": "grd/huracanes.html#amenaza-por-inundaciones",
+    "href": "grd/huracanes.html#amenaza-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Amenaza por inundaciones",
+    "text": "Amenaza por inundaciones\n\n\n\n\n\n\n\n\n\nAmenaza por inundaciones"
+  },
+  {
+    "objectID": "grd/huracanes.html#evaluación-del-riesgo-por-inundaciones",
+    "href": "grd/huracanes.html#evaluación-del-riesgo-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Evaluación del riesgo por inundaciones",
+    "text": "Evaluación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\nEvaluación del riesgo por incendios forestales."
+  },
+  {
+    "objectID": "grd/huracanes.html#comunicación-del-riesgo-por-inundaciones",
+    "href": "grd/huracanes.html#comunicación-del-riesgo-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Comunicación del riesgo por inundaciones",
+    "text": "Comunicación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\n\n\n\nComunicación del riesgo por incendios forestales."
+  },
+  {
+    "objectID": "grd/huracanes.html#reducción-del-riesgo-de-inundaciones",
+    "href": "grd/huracanes.html#reducción-del-riesgo-de-inundaciones",
+    "title": "Inundaciones",
+    "section": "Reducción del riesgo de inundaciones",
+    "text": "Reducción del riesgo de inundaciones\n\nP"
+  },
+  {
+    "objectID": "grd/huracanes.html#manejo-de-desastres-por-inundaciones",
+    "href": "grd/huracanes.html#manejo-de-desastres-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Manejo de desastres por inundaciones",
+    "text": "Manejo de desastres por inundaciones\n\nRed"
+  },
+  {
+    "objectID": "grd/huracanes.html#lecturas",
+    "href": "grd/huracanes.html#lecturas",
+    "title": "Inundaciones",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nThe"
+  },
+  {
+    "objectID": "grd/huracanes.html#entrenamiento",
+    "href": "grd/huracanes.html#entrenamiento",
+    "title": "Inundaciones",
+    "section": "Entrenamiento",
+    "text": "Entrenamiento\n\nCope"
+  },
+  {
+    "objectID": "grd/huracanes.html#repositorios",
+    "href": "grd/huracanes.html#repositorios",
+    "title": "Inundaciones",
+    "section": "Repositorios",
+    "text": "Repositorios\n\nDownload"
+  },
+  {
+    "objectID": "grd/huracanes.html#videos",
+    "href": "grd/huracanes.html#videos",
+    "title": "Inundaciones",
+    "section": "Videos",
+    "text": "Videos"
+  },
+  {
+    "objectID": "grd/inundaciones.html#instituciones-nacionales",
+    "href": "grd/inundaciones.html#instituciones-nacionales",
+    "title": "Inundaciones",
+    "section": "",
+    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link"
+  },
+  {
+    "objectID": "grd/inundaciones.html#instituciones-internacionales",
+    "href": "grd/inundaciones.html#instituciones-internacionales",
+    "title": "Inundaciones",
+    "section": "Instituciones internacionales",
+    "text": "Instituciones internacionales"
+  },
+  {
+    "objectID": "grd/inundaciones.html#amenaza-por-inundaciones",
+    "href": "grd/inundaciones.html#amenaza-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Amenaza por inundaciones",
+    "text": "Amenaza por inundaciones\n\n\n\n\n\n\n\n\n\nAmenaza por inundaciones"
+  },
+  {
+    "objectID": "grd/inundaciones.html#evaluación-del-riesgo-por-inundaciones",
+    "href": "grd/inundaciones.html#evaluación-del-riesgo-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Evaluación del riesgo por inundaciones",
+    "text": "Evaluación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\nEvaluación del riesgo por incendios forestales."
+  },
+  {
+    "objectID": "grd/inundaciones.html#comunicación-del-riesgo-por-inundaciones",
+    "href": "grd/inundaciones.html#comunicación-del-riesgo-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Comunicación del riesgo por inundaciones",
+    "text": "Comunicación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\n\n\n\nComunicación del riesgo por incendios forestales."
+  },
+  {
+    "objectID": "grd/inundaciones.html#reducción-del-riesgo-de-inundaciones",
+    "href": "grd/inundaciones.html#reducción-del-riesgo-de-inundaciones",
+    "title": "Inundaciones",
+    "section": "Reducción del riesgo de inundaciones",
+    "text": "Reducción del riesgo de inundaciones\n\nP"
+  },
+  {
+    "objectID": "grd/inundaciones.html#manejo-de-desastres-por-inundaciones",
+    "href": "grd/inundaciones.html#manejo-de-desastres-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Manejo de desastres por inundaciones",
+    "text": "Manejo de desastres por inundaciones\n\nRed"
+  },
+  {
+    "objectID": "grd/inundaciones.html#lecturas",
+    "href": "grd/inundaciones.html#lecturas",
+    "title": "Inundaciones",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nThe"
+  },
+  {
+    "objectID": "grd/inundaciones.html#entrenamiento",
+    "href": "grd/inundaciones.html#entrenamiento",
+    "title": "Inundaciones",
+    "section": "Entrenamiento",
+    "text": "Entrenamiento\n\nCope"
+  },
+  {
+    "objectID": "grd/inundaciones.html#repositorios",
+    "href": "grd/inundaciones.html#repositorios",
+    "title": "Inundaciones",
+    "section": "Repositorios",
+    "text": "Repositorios\n\nDownload"
+  },
+  {
+    "objectID": "grd/inundaciones.html#videos",
+    "href": "grd/inundaciones.html#videos",
+    "title": "Inundaciones",
+    "section": "Videos",
+    "text": "Videos"
+  },
+  {
+    "objectID": "grd/movimientosenmasa.html",
+    "href": "grd/movimientosenmasa.html",
+    "title": "Inundaciones",
+    "section": "",
+    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link"
+  },
+  {
+    "objectID": "grd/movimientosenmasa.html#instituciones-nacionales",
+    "href": "grd/movimientosenmasa.html#instituciones-nacionales",
+    "title": "Inundaciones",
+    "section": "",
+    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link"
+  },
+  {
+    "objectID": "grd/movimientosenmasa.html#instituciones-internacionales",
+    "href": "grd/movimientosenmasa.html#instituciones-internacionales",
+    "title": "Inundaciones",
+    "section": "Instituciones internacionales",
+    "text": "Instituciones internacionales"
+  },
+  {
+    "objectID": "grd/movimientosenmasa.html#amenaza-por-inundaciones",
+    "href": "grd/movimientosenmasa.html#amenaza-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Amenaza por inundaciones",
+    "text": "Amenaza por inundaciones\n\n\n\n\n\n\n\n\n\nAmenaza por inundaciones"
+  },
+  {
+    "objectID": "grd/movimientosenmasa.html#evaluación-del-riesgo-por-inundaciones",
+    "href": "grd/movimientosenmasa.html#evaluación-del-riesgo-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Evaluación del riesgo por inundaciones",
+    "text": "Evaluación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\nEvaluación del riesgo por incendios forestales."
+  },
+  {
+    "objectID": "grd/movimientosenmasa.html#comunicación-del-riesgo-por-inundaciones",
+    "href": "grd/movimientosenmasa.html#comunicación-del-riesgo-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Comunicación del riesgo por inundaciones",
+    "text": "Comunicación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\n\n\n\nComunicación del riesgo por incendios forestales."
+  },
+  {
+    "objectID": "grd/movimientosenmasa.html#reducción-del-riesgo-de-inundaciones",
+    "href": "grd/movimientosenmasa.html#reducción-del-riesgo-de-inundaciones",
+    "title": "Inundaciones",
+    "section": "Reducción del riesgo de inundaciones",
+    "text": "Reducción del riesgo de inundaciones\n\nP"
+  },
+  {
+    "objectID": "grd/movimientosenmasa.html#manejo-de-desastres-por-inundaciones",
+    "href": "grd/movimientosenmasa.html#manejo-de-desastres-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Manejo de desastres por inundaciones",
+    "text": "Manejo de desastres por inundaciones\n\nRed"
+  },
+  {
+    "objectID": "grd/movimientosenmasa.html#lecturas",
+    "href": "grd/movimientosenmasa.html#lecturas",
+    "title": "Inundaciones",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nThe"
+  },
+  {
+    "objectID": "grd/movimientosenmasa.html#entrenamiento",
+    "href": "grd/movimientosenmasa.html#entrenamiento",
+    "title": "Inundaciones",
+    "section": "Entrenamiento",
+    "text": "Entrenamiento\n\nCope"
+  },
+  {
+    "objectID": "grd/movimientosenmasa.html#repositorios",
+    "href": "grd/movimientosenmasa.html#repositorios",
+    "title": "Inundaciones",
+    "section": "Repositorios",
+    "text": "Repositorios\n\nDownload"
+  },
+  {
+    "objectID": "grd/movimientosenmasa.html#videos",
+    "href": "grd/movimientosenmasa.html#videos",
+    "title": "Inundaciones",
+    "section": "Videos",
+    "text": "Videos"
+  },
+  {
+    "objectID": "grd/riesgosismico.html",
+    "href": "grd/riesgosismico.html",
+    "title": "Inundaciones",
+    "section": "",
+    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link"
+  },
+  {
+    "objectID": "grd/riesgosismico.html#instituciones-nacionales",
+    "href": "grd/riesgosismico.html#instituciones-nacionales",
+    "title": "Inundaciones",
+    "section": "",
+    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link"
+  },
+  {
+    "objectID": "grd/riesgosismico.html#instituciones-internacionales",
+    "href": "grd/riesgosismico.html#instituciones-internacionales",
+    "title": "Inundaciones",
+    "section": "Instituciones internacionales",
+    "text": "Instituciones internacionales"
+  },
+  {
+    "objectID": "grd/riesgosismico.html#amenaza-por-inundaciones",
+    "href": "grd/riesgosismico.html#amenaza-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Amenaza por inundaciones",
+    "text": "Amenaza por inundaciones\n\n\n\n\n\n\n\n\n\nAmenaza por inundaciones"
+  },
+  {
+    "objectID": "grd/riesgosismico.html#evaluación-del-riesgo-por-inundaciones",
+    "href": "grd/riesgosismico.html#evaluación-del-riesgo-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Evaluación del riesgo por inundaciones",
+    "text": "Evaluación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\nEvaluación del riesgo por incendios forestales."
+  },
+  {
+    "objectID": "grd/riesgosismico.html#comunicación-del-riesgo-por-inundaciones",
+    "href": "grd/riesgosismico.html#comunicación-del-riesgo-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Comunicación del riesgo por inundaciones",
+    "text": "Comunicación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\n\n\n\nComunicación del riesgo por incendios forestales."
+  },
+  {
+    "objectID": "grd/riesgosismico.html#reducción-del-riesgo-de-inundaciones",
+    "href": "grd/riesgosismico.html#reducción-del-riesgo-de-inundaciones",
+    "title": "Inundaciones",
+    "section": "Reducción del riesgo de inundaciones",
+    "text": "Reducción del riesgo de inundaciones\n\nP"
+  },
+  {
+    "objectID": "grd/riesgosismico.html#manejo-de-desastres-por-inundaciones",
+    "href": "grd/riesgosismico.html#manejo-de-desastres-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Manejo de desastres por inundaciones",
+    "text": "Manejo de desastres por inundaciones\n\nRed"
+  },
+  {
+    "objectID": "grd/riesgosismico.html#lecturas",
+    "href": "grd/riesgosismico.html#lecturas",
+    "title": "Inundaciones",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nThe"
+  },
+  {
+    "objectID": "grd/riesgosismico.html#entrenamiento",
+    "href": "grd/riesgosismico.html#entrenamiento",
+    "title": "Inundaciones",
+    "section": "Entrenamiento",
+    "text": "Entrenamiento\n\nCope"
+  },
+  {
+    "objectID": "grd/riesgosismico.html#repositorios",
+    "href": "grd/riesgosismico.html#repositorios",
+    "title": "Inundaciones",
+    "section": "Repositorios",
+    "text": "Repositorios\n\nDownload"
+  },
+  {
+    "objectID": "grd/riesgosismico.html#videos",
+    "href": "grd/riesgosismico.html#videos",
+    "title": "Inundaciones",
+    "section": "Videos",
+    "text": "Videos"
+  },
+  {
+    "objectID": "grd/sequia.html",
+    "href": "grd/sequia.html",
+    "title": "Inundaciones",
+    "section": "",
+    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link"
+  },
+  {
+    "objectID": "grd/sequia.html#instituciones-nacionales",
+    "href": "grd/sequia.html#instituciones-nacionales",
+    "title": "Inundaciones",
+    "section": "",
+    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link"
+  },
+  {
+    "objectID": "grd/sequia.html#instituciones-internacionales",
+    "href": "grd/sequia.html#instituciones-internacionales",
+    "title": "Inundaciones",
+    "section": "Instituciones internacionales",
+    "text": "Instituciones internacionales"
+  },
+  {
+    "objectID": "grd/sequia.html#amenaza-por-inundaciones",
+    "href": "grd/sequia.html#amenaza-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Amenaza por inundaciones",
+    "text": "Amenaza por inundaciones\n\n\n\n\n\n\n\n\n\nAmenaza por inundaciones"
+  },
+  {
+    "objectID": "grd/sequia.html#evaluación-del-riesgo-por-inundaciones",
+    "href": "grd/sequia.html#evaluación-del-riesgo-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Evaluación del riesgo por inundaciones",
+    "text": "Evaluación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\nEvaluación del riesgo por incendios forestales."
+  },
+  {
+    "objectID": "grd/sequia.html#comunicación-del-riesgo-por-inundaciones",
+    "href": "grd/sequia.html#comunicación-del-riesgo-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Comunicación del riesgo por inundaciones",
+    "text": "Comunicación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\n\n\n\nComunicación del riesgo por incendios forestales."
+  },
+  {
+    "objectID": "grd/sequia.html#reducción-del-riesgo-de-inundaciones",
+    "href": "grd/sequia.html#reducción-del-riesgo-de-inundaciones",
+    "title": "Inundaciones",
+    "section": "Reducción del riesgo de inundaciones",
+    "text": "Reducción del riesgo de inundaciones\n\nP"
+  },
+  {
+    "objectID": "grd/sequia.html#manejo-de-desastres-por-inundaciones",
+    "href": "grd/sequia.html#manejo-de-desastres-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Manejo de desastres por inundaciones",
+    "text": "Manejo de desastres por inundaciones\n\nRed"
+  },
+  {
+    "objectID": "grd/sequia.html#lecturas",
+    "href": "grd/sequia.html#lecturas",
+    "title": "Inundaciones",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nThe"
+  },
+  {
+    "objectID": "grd/sequia.html#entrenamiento",
+    "href": "grd/sequia.html#entrenamiento",
+    "title": "Inundaciones",
+    "section": "Entrenamiento",
+    "text": "Entrenamiento\n\nCope"
+  },
+  {
+    "objectID": "grd/sequia.html#repositorios",
+    "href": "grd/sequia.html#repositorios",
+    "title": "Inundaciones",
+    "section": "Repositorios",
+    "text": "Repositorios\n\nDownload"
+  },
+  {
+    "objectID": "grd/sequia.html#videos",
+    "href": "grd/sequia.html#videos",
+    "title": "Inundaciones",
+    "section": "Videos",
+    "text": "Videos"
   }
 ]
