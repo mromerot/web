@@ -13,12 +13,16 @@ website:
     contents:
       - section: "Gestión del riesgo de desastres"
         contents:
+          - text: "Gestión del riesgo de desastres"
+            href: grd/gestiondelriesgo.qmd
           - text: "Conocimiento del riesgo"
             href: grd/conocimientodelriesgo.qmd
           - text: "Reducción del riesgo"
             href: grd/reducciondelriesgo.qmd
           - text: "Manejo de desastres"
             href: grd/manejodedesastres.qmd
+          - text: "Ciencia y tecnología"
+            href: grd/cienciaytecnologia.qmd
           - text: "Riesgo volcánico"
             href: grd/volcanes.qmd
           - text: "Incendios forestales"
