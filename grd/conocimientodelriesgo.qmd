@@ -18,9 +18,7 @@ editor: visual
 
 -   [https://www.quindio.gov.co/home/docs/items/item_107/gestion_del_riesgo.jpg)\](https://www.quindio.gov.co/home/docs/items/item_107/gestion_del_riesgo.jpg)](https://www.quindio.gov.co/home/docs/items/item_107/gestion_del_riesgo.jpg)\](https://www.quindio.gov.co/home/docs/items/item_107/gestion_del_riesgo.jpg))
 
-## CONOCIMIENTO DEL RIESGO
-
-Lecturas
+## Lecturas
 
 -   Guidelines for Studying Diverse Types of Compound Weather and Climate Events. 2021. [*Link*](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021EF002340)
 -   High impact compound events in Australia. [*Link*](https://climateextremes.org.au/high-impact-compound-events-in-australia/)
@@ -30,64 +28,61 @@ Lecturas
 
 What do climate scientists mean when they say compound event? [Link](https://climateextremes.org.au/what-is-a-compound-event-in-weather-and-climate/)
 
-`<video controls src="https://emanuele.bevacqua.eu/wp-content/uploads/2021/12/Bevacqua_AGU2021_video.mov"`{=html}
-
-</video>
+{{< video "https://emanuele.bevacqua.eu/wp-content/uploads/2021/12/Bevacqua_AGU2021_video.mov" >}}
 
 [Link](https://emanuele.bevacqua.eu/online-talks/)
 
-**EVALUACIÓN DEL RIESGO**
+## Evaluación del riesgo
 
 -   FEMA
+
     -   National Risk Index Documentation. [*Link*](https://www.google.com/search?q=National+Risk+Index+Technical+Documentation&rlz=1C5OZZY_enCO1132CO1132&oq=National+Risk+Index+Technical+Documentation&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg7MgYIAhBFGDzSAQcxMTJqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8#:~:text=Resultados%20de%20b%C3%BAsqueda-,National%20Risk%20Index%20Technical%20Documentation,https%3A//www.fema.gov%20%E2%80%BA%20default%20%E2%80%BA%20files%20%E2%80%BA%20documents,-PDF).
     -   National Risk Index for Natural Hazards. [*Visor*](https://hazards.fema.gov/nri/map).
     -   [National Risk Index Hazard Info Table](https://www.arcgis.com/home/item.html?id=1cb56c682f6f4ce08a07ff372a7908b0#)
     -   Updating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. [*Link*](https://www.idrimjournal.com/article/11719-updating-the-indicators-of-disaster-risk-and-risk-management-for-the-americas).
     -   Earthquake Hazard Maps. FEMA. [*Link*](https://www.fema.gov/es/emergency-managers/risk-management/earthquake/hazard-maps).
     -   Flood Map. FEMA. [*Link*](https://www.fema.gov/glossary/flood-map).
+
 -   Introduction to DRR. Lista de videos. [*Link*](https://www.youtube.com/playlist?list=PLBDwPnveHho86Fndz-Q2XRiER5IWicESC).
+
 -   WorldRiskIndex. [*Link*](https://data.humdata.org/dataset/worldriskindex?).
+
 -   Inform Risk. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index)
+
 -   **Risk Changes.** An open-source Spatial Decision Support tool for the analysis of Dynamic Multi-Hazard risk. [*Link.*](https://riskchanges.org/app/#/app)
 
-![](https://www.youtube.com/watch?v=TpOX6iZfrnk)
+-   Sun, R., Gao, G., Gong, Z. et al. A review of risk analysis methods for natural disasters. Nat Hazards 100, 571–593 (2020). [*Link*](https://doi.org/10.1007/s11069-019-03826-7)
 
-Mapping Risk: The National Risk Index for Natural Hazards
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=TpOX6iZfrnk" >}} Mapping Risk: The National Risk Index for Natural Hazards
 
-![](https://www.youtube.com/watch?v=xtkGBrkzpFI)
+{{< video "https://www.youtube.com/watch?v=xtkGBrkzpFI" >}} Lesson 2：Six steps of disaster risk assessment
 
-Lesson 2：Six steps of disaster risk assessment
+{{< video "https://www.youtube.com/watch?v=videoseries" >}} Building resilience to compound and cascading disaster risks
 
-![](https://www.youtube.com/watch?v=videoseries)
+{{< video "https://www.youtube.com/watch?v=nVumCbPk5jg" >}} Webinar Modern Technology in Disaster Management: The Challenges
 
-Building resilience to compound and cascading disaster risks
+{{< video "https://www.youtube.com/watch?v=y0NrU2Okn3c" >}} Integrated Risk management in Civil Protection
 
-![](https://www.youtube.com/watch?v=nVumCbPk5jg)
+{{< video "https://www.youtube.com/watch?v=D_y4oKbWdHI" >}} Risk Analysis for Civil Protection
+:::
 
-Webinar Modern Technology in Disaster Management: The Challenges
-
-![](https://www.youtube.com/watch?v=y0NrU2Okn3c)
-
-Integrated Risk management in Civil Protection
-
-![](https://www.youtube.com/watch?v=D_y4oKbWdHI)
-
-Risk Analysis for Civil Protection
-
-**Vulnerablidad**
+## Vulnerablidad
 
 -   Social vulnerability in a multi-hazard context: a systematic review. Environmental Research Letters. 2022. [*Link*](https://iopscience.iop.org/article/10.1088/1748-9326/ac5140).
 -   Cardona, O.D.: The need for rethinking the concepts of vulnerability and risk from a holistic perspective: a necessary review and criticism for effective risk management. In: Indicators of Risk Management and Vulnerability Reduction: Case Studies in Latin American Urban Areas, United Nations University, Institute for Environment and Human Security (2011). [*Link*](https://www.researchgate.net/publication/254267457_The_Need_for_Rethinking_the_Concepts_of_Vulnerability_and_Risk_from_a_Holistic_Perspective_A_Necessary_Review_and_Criticism_for_Effective_Risk_Management1).
 -   Explaining differential vulnerability to climate change: A social science review. Wires Climate Change. 2018. [*Link*](https://wires.onlinelibrary.wiley.com/doi/10.1002/wcc.565).
 -   Understanding human vulnerability to climate change: A global perspective on index validation for adaptation planning. [Science of The Total Environment](https://www.sciencedirect.com/journal/science-of-the-total-environment). 2022. [*Link*](https://www.sciencedirect.com/science/article/pii/S0048969721051408).
 
-![](https://www.youtube.com/watch?v=gRnvx75D0W8)
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=gRnvx75D0W8" >}}
 
-![](https://www.youtube.com/watch?v=IJ821FSOJlI)
+{{< video "https://www.youtube.com/watch?v=IJ821FSOJlI" >}}
 
-![](https://www.youtube.com/watch?v=mcGhyOlxK0g)
+{{< video "https://www.youtube.com/watch?v=mcGhyOlxK0g" >}}
+:::
 
-**Riesgos complejos, en cascada y sistémicos**
+## Riesgos complejos, en cascada y sistémicos
 
 -   Lecturas:
     -   Insurers Are Deserting Homeowners as Climate Shocks Worsen. NYT. 2024. [*Link*](https://www.nytimes.com/interactive/2024/12/18/climate/insurance-non-renewal-climate-crisis.html).

@@ -73,8 +73,7 @@ editor: visual
 -   Understanding Risk. [*Link*](https://understandrisk.org/).
 -   Centro America. [*Link*](https://understandrisk.org/event/ur-centroamerica/).
 
-::: {layout-ncol=2}
-
+::: {layout-ncol="2"}
 {{< video "https://youtu.be/SSYUg7F2MsI" >}}
 
 {{< video "https://youtu.be/TH3LQW8B2Zw" >}}
@@ -84,7 +83,6 @@ editor: visual
 {{< video "https://youtu.be/OS-0GYDniqM" >}}
 
 {{< video "https://youtu.be/q1DTgUIUoX0" >}}
-
 :::
 
 ## **REPORTES**
@@ -314,12 +312,10 @@ Special Session on International Day for Disaster Risk Reduction: Early Warning 
 
 ![](https://www.youtube.com/watch?v=J-5yDWbpwsE)
 
-::: {layout-ncol=2}
-
+::: {layout-ncol="2"}
 {{< video "https://youtu.be/-Rve9yreZ3g" >}}
 
 {{< video "https://youtu.be/48F5h4D1hQ8" >}}
-
 :::
 
 s
