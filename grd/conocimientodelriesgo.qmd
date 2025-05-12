@@ -16,7 +16,7 @@ editor: visual
 
 -   Visor de información territorial para Municipios. UNGRD. [*Link*](https://lookerstudio.google.com/u/0/reporting/80f58632-3355-46d1-8177-a765552fef91/page/mqD7D)
 
--   [https://www.quindio.gov.co/home/docs/items/item_107/gestion_del_riesgo.jpg)\](https://www.quindio.gov.co/home/docs/items/item_107/gestion_del_riesgo.jpg)](https://www.quindio.gov.co/home/docs/items/item_107/gestion_del_riesgo.jpg)\](https://www.quindio.gov.co/home/docs/items/item_107/gestion_del_riesgo.jpg))
+![Procesos de la gestión del riesgo](https://www.quindio.gov.co/home/docs/items/item_107/gestion_del_riesgo.jpg){fig-align="center"}
 
 ## Lecturas
 
@@ -24,7 +24,7 @@ editor: visual
 -   High impact compound events in Australia. [*Link*](https://climateextremes.org.au/high-impact-compound-events-in-australia/)
 -   Significantly wetter or drier future conditions for one to two thirds of the world’s population. 2024. Nature Comm. [*Link*](https://www.nature.com/articles/s41467-023-44513-3)
 
-![](https://climateextremes.org.au/wp-content/uploads/Compound-events-2.png)
+![](https://climateextremes.org.au/wp-content/uploads/Compound-events-2.png){fig-align="center"}
 
 What do climate scientists mean when they say compound event? [Link](https://climateextremes.org.au/what-is-a-compound-event-in-weather-and-climate/)
 
@@ -35,30 +35,20 @@ What do climate scientists mean when they say compound event? [Link](https://cli
 ## Evaluación del riesgo
 
 -   FEMA
-
     -   National Risk Index Documentation. [*Link*](https://www.google.com/search?q=National+Risk+Index+Technical+Documentation&rlz=1C5OZZY_enCO1132CO1132&oq=National+Risk+Index+Technical+Documentation&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg7MgYIAhBFGDzSAQcxMTJqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8#:~:text=Resultados%20de%20b%C3%BAsqueda-,National%20Risk%20Index%20Technical%20Documentation,https%3A//www.fema.gov%20%E2%80%BA%20default%20%E2%80%BA%20files%20%E2%80%BA%20documents,-PDF).
     -   National Risk Index for Natural Hazards. [*Visor*](https://hazards.fema.gov/nri/map).
     -   [National Risk Index Hazard Info Table](https://www.arcgis.com/home/item.html?id=1cb56c682f6f4ce08a07ff372a7908b0#)
     -   Updating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. [*Link*](https://www.idrimjournal.com/article/11719-updating-the-indicators-of-disaster-risk-and-risk-management-for-the-americas).
     -   Earthquake Hazard Maps. FEMA. [*Link*](https://www.fema.gov/es/emergency-managers/risk-management/earthquake/hazard-maps).
     -   Flood Map. FEMA. [*Link*](https://www.fema.gov/glossary/flood-map).
-
 -   Introduction to DRR. Lista de videos. [*Link*](https://www.youtube.com/playlist?list=PLBDwPnveHho86Fndz-Q2XRiER5IWicESC).
-
 -   WorldRiskIndex. [*Link*](https://data.humdata.org/dataset/worldriskindex?).
-
 -   Inform Risk. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index)
-
 -   CLIMAAX CRA Handbook. [*Link*](https://handbook.climaax.eu/intro.html)
-
 -   Risk Data Library - Country Climate & Disaster Risk Screening Tools. [*Link*](https://gfdrr.github.io/CCDR-tools/home.html#).
-
 -   Risk Changes. An open-source Spatial Decision Support tool for the analysis of Dynamic Multi-Hazard risk. [Link.](https://riskchanges.org/app/#/app)
-
 -   Sun, R., Gao, G., Gong, Z. et al. A review of risk analysis methods for natural disasters. Nat Hazards 100, 571–593 (2020). [Link](https://doi.org/10.1007/s11069-019-03826-7)
-
 -   Hybrid loss exceedance curve (HLEC) for disaster risk assessment. Velazquez et al. 2020. [Link](https://link.springer.com/article/10.1007/s11069-013-1017-z)
-
 -   Assessing global exposure and vulnerability towards natural hazards: the Disaster Risk Index. Peduzzi, et al. 2009, Nat. Hazards Earth Syst. [Link](https://nhess.copernicus.org/articles/9/1149/2009/)
 
 ::: {layout-ncol="2"}
