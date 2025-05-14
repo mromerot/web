@@ -28,7 +28,7 @@ website:
           - text: "Incendios forestales"
             href: grd/incendiosforestales.qmd 
           - text: "Inundaciones"
-            href: grd/inundaciones.md
+            href: grd/inundaciones.qmd
       - section: "Gestión de proyectos de ciencia y tecnología"
         contents:
           - text: "Gestión de proyectos de CTeI"
