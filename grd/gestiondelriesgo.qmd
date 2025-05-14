@@ -46,32 +46,53 @@ editor: visual
 ## **MARCO INTERNACIONAL**
 
 -   Marco de Sendai. [*Link*](https://www.preventionweb.net/files/resolutions/N1516720.pdf).
+
 -   Lista Youtube. [*Link*](https://www.youtube.com/playlist?list=PLBDwPnveHho9vSuIDgVqhu1hmWw5v9qQD)
+
     -   Edición especial International Journal of Disaster Risk Science 2015 Vol 6(2)[. Link](https://link.springer.com/journal/13753/6/2/page/1).
     -   The Sendai Framework and the SDGs. [Link](https://www.unisdr.org/we/monitor/indicators/sendai-framework-sdg).
     -   Sendai Monitor. [*Link*](https://sendaimonitor.undrr.org/).
+
 -   Preventionweb. [*Link*](https://www.preventionweb.net/).
+
     -   Themes. [*Link*](https://www.preventionweb.net/english/themes/).
     -   Colombia [*Link*](https://www.preventionweb.net/english/countries/americas/col/).
+
 -   Oficina de las Naciones Unidas para la Reducción del Riesgo de Desastres. UNDRR. [*Link*](https://www.undrr.org/)*. [Link](https://eird.org/americas/we/quienes-somos.html).*
+
     -   UNDRR Americas. [*Link*](https://www.undrr.org/about-undrr-where-we-work/americas).
     -   Science, technology and academia. [*Link*](https://www.undrr.org/implementing-sendai-framework-partners-and-stakeholders/science-and-technology-action-group).
     -   Geoportal. [*Link*](https://geoportal.un.org/arcgis/home/).
+
+    ## **INSTITUCIONES INTERNACIONALES**
+
 -   Australia. Disaster risk reduction and resilience. .
+
     -   Australian Disaster resilience hub. [*Link*](https://knowledge.aidr.org.au/resources/national-disaster-risk-reduction-framework/).
     -   The National Emergency Management Agency. [*Link*](https://nema.gov.au/#/map).
+
 -   EEUU. Federal Emergency Management Agency (FEMA). [*Link*](http://www.fema.gov/).
+
 -   NASA Earth Sciences Disasters Program. [*Link*](https://disasters.nasa.gov/). [*Link.*](https://www.nasa.gov/centers/ames/earthscience/nasa-earth-science-disasters-program)[*Español*](https://disasters.nasa.gov/resources/espanol).
+
     -   Webinars. [*Link*](https://arset.gsfc.nasa.gov/disasters/webinars/19-DRA).
     -   Lance. [Link](https://earthdata.nasa.gov/eosdis/science-system-description/eosdis-components/lance).
     -   Training. [*Link*](https://disasters.nasa.gov/training).
+
 -   Global Facility for Disaster Reduction and Recovery (GFDRR). [*Link*](https://www.gfdrr.org/en).
+
     -   Colombia. [*Link*](https://www.gfdrr.org/en/region/colombia)
     -   CODE FOR RESILIENCE. [*Link*](https://understandrisk.org/initiative/code-for-resilience/)
+
 -   OECD Colombia. [*Link*](https://www.oecd.org/colombia/).
+
 -   OFDA. [*Link*](https://www.gfdrr.org/en/onlineutilities).
+
 -   Understanding Risk. [*Link*](https://understandrisk.org/).
+
 -   Centro America. [*Link*](https://understandrisk.org/event/ur-centroamerica/).
+
+-   Anticipation hub. [*Link*](https://www.anticipation-hub.org/es/)
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/SSYUg7F2MsI" >}}
@@ -219,6 +240,7 @@ editor: visual
     -   UNESCO. Online courses to promote disaster risk reduction awareness. [*Link*](https://en.unesco.org/greencitizens/stories/online-courses-promote-disaster-risk-reduction-awareness). [*Link*](http://elearning.unep.org/moocs/courses).
     -   When Disaster Meets Conflict. [*Link*](https://www.coursera.org/learn/whendisastermeetsconflict).
 -   **En español**
+    -   Gobierno de Santiago e Itrend lanzan plataforma docente para enseñar sobre desastres en la región Metropolitana. [*Link*](https://plataforma.aprendedesastres.cl/)
     -   Gestión integral del riesgo de desastres. [*Link*](https://www.coursera.org/learn/gestion-riesgo/home/welcome)
     -   Género-Diversidad en la reducción del riesgo de desastres y cambio climático. [*Link*](https://es.grripp.net/cursoonline/1-video-introductorio).
     -   Análisis del Riesgo de Desastres y Cambio Climático en Proyectos de Infraestructura. BID. [*Link*](https://cursos.iadb.org/es/temas/infraestructura/analisis-riesgo-desastres-cambio-climatico-proyectos-infraestructura).
@@ -269,8 +291,7 @@ editor: visual
     -   Mensajes que contienen un alto contenido emocional para el individuo.
     -   Mensajes respaldados por experiencias posteriores (medición *ex post facto* ).
 
-::: {layout-ncol=2}
-
+::::::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/watch?v=m-p8kUrUWd4" >}}
 
 Comunicación del riesgo volcánico
@@ -311,8 +332,7 @@ Comunicación del riesgo volcánico
     -   Dashboard. [*Link*](https://earlywarningsforall.org/site/early-warnings-all/early-warnings-all-dashboard)
 -   Institutional Partnerships in Multi-Hazard Early Warning Systems. [*Link*](https://public.wmo.int/en/programmes/disaster-risk-reduction-programme).
 
-::: {layout-ncol=2}
-
+::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/watch?v=dgsoS5oyMPQ" >}} 1er Intercambio de Experiencias sobre Sistemas de Alerta Temprana Comunitaria
 
 {{< video "https://www.youtube.com/watch?v=CG2WHuvXTg0" >}} Early Warning for Early Action \| International Day for Disaster Risk Reduction Virtual Panel
@@ -324,9 +344,9 @@ Comunicación del riesgo volcánico
 {{< video "https://www.youtube.com/watch?v=J-5yDWbpwsE" >}}\
 \
 Sistemas de alerta temprana
-
 :::
 
 <div>
 
 </div>
+:::::::
