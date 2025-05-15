@@ -12,12 +12,18 @@ editor: visual
 
 Guía para la Integración de la Gestión del Riesgo de Desastres en los Planes de Desarrollo Territorial 2020 – 2023. UNGRD. [*Link*](http://portal.gestiondelriesgo.gov.co/Paginas/Slide_home/Guia-para-la-Integracion-de-la-GRD-en-los-PDT-2020-2023.aspx).
 
-{{< video "https://youtu.be/LW5jfQsTcOY" >}}
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/LW5jfQsTcOY" >}} Ordenamiento territorial y gestión de riesgos
+
+{{< video "https://youtu.be/0duVmu2bRDo" >}} Gestión de riesgo y ordenamiento territorial para geólogos
+:::
 
 ## Protección financiera
 
 Guía para la Integración de la Gestión del Riesgo de Desastres en los Planes de Desarrollo Territorial 2020 – 2023. UNGRD. [*Link*](http://portal.gestiondelriesgo.gov.co/Paginas/Slide_home/Guia-para-la-Integracion-de-la-GRD-en-los-PDT-2020-2023.aspx).
 
+::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/live/FVF1L4MlGZU?si=hXsQ3e4CRFM3Y8Q2" >}}
+:::
 
 {{< lipsum 1 >}}
