@@ -7,59 +7,77 @@ editor: visual
 ## Instituciones nacionales
 
 -   UNGRD. [*Link*](https://portal.gestiondelriesgo.gov.co/)
--   Minambiente. 
--   IDEAM. *Link*
--   Fondo Adaptación
--   Bomberos de Colombia. *Link*
+-   Servicio Geológico de Colombia
+-   Semillero de investigación UNalMed – Geohazards. [Link](https://geohazards.com.co/).
 
 ## Instituciones internacionales
 
+-   Global landslides databases
 
-## Amenaza por inundaciones
+    -   Global Fatal Landslide Database. [*Link*](https://www.un-spider.org/links-and-resources/data-sources/global-fatal-landslide-database-gfld-university-sheffield)
 
+    -   Global Landslide Catalog. [*Link*](https://www.un-spider.org/links-and-resources/data-sources/global-landslide-catalog-glc-nasa)
+
+    -   EM-DAT. [*Link*](https://www.emdat.be/)
+
+    -   Desinventar. [*Link*](https://www.desinventar.net/)
+
+    -   Repositorio cooperativo abierto de movimientos en masa (COOLR), NASA. [*Link*](https://gpm.nasa.gov/landslides/index.html)
+
+## Amenaza por movimientos en masa
+
+-   SGC.
+    -   Guía metodológica para estudios de amenaza vulnerabilidad y riesgo por movimientos en masa. SGC. 2015. [*Link*](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/19776).
+    -   Sistema de información de movimientos en masa (SIMA). [*Link*](https://simma.sgc.gov.co/#/public/results/)
+    -   Mapa nacional integrado de amenaza y susceptibilidad por Movimientos en Masa a escala 1:100.000 y 1:500.000. [*Link*](https://www2.sgc.gov.co/sgc/mapas/Paginas/Imagenes-de-amenazas-.aspx)
+-   Lecturas y recursos
+    -   Fatal landslides in Colombia (from historical times to 2020) and their socio-economic impacts. Garcia-Delgado. Landslides, 2022. [*Link*](https://link.springer.com/article/10.1007/s10346-022-01870-2).
+    -   Spatial and temporal landslide distributions using global and open landslide databases. Natural Hazards. 2023. [*Link*](https://link.springer.com/article/10.1007/s11069-023-05848-8)
+    -   International Programme on Landslides. [*Link*](https://www.landslides.org/ipl-info/).
+    -   Seminarios en deslizamientos. 2021. [*Link*](https://www.seminarioriesgosdeslizamientos.com/). [*Link*](https://www.seminarioriesgosdeslizamientos.com/blank).
+
+{{< video "https://www.youtube.com/watch?v=sJP5EnEsX9Y" >}} Geoamenazas: del monitoreo a la evaluación de escenarios de riesgo.
+
+Amenaza por movimientos en masa
+
+## Evaluación del riesgo por movimientos en masa
 
 ::: {layout-ncol="2"}
-{{< video "https://youtu.be/QWEXzQaYt9s" >}}
+{{< video "https://www.youtube.com/watch?v=sJP5EnEsX9Y" >}} Geoamenazas: del monitoreo a la evaluación de escenarios de riesgo
 
-
-Amenaza por inundaciones
+Evaluación del riesgo por movimientos en masa forestales.
 :::
 
-## Evaluación del riesgo por inundaciones
-
-
-::: {layout-ncol="2"}
-{{< video "https://youtu.be/swr4NlX2bVE" >}}
-
-
-Evaluación del riesgo por incendios forestales.
-:::
-
-## Comunicación del riesgo por inundaciones
+## Comunicación del riesgo por movimientos en masa
 
 -   
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/8u3F5f47i_M" >}}
 
-
-Comunicación del riesgo por incendios forestales.
+Comunicación del riesgo por movimientos en masa
 :::
 
-## Reducción del riesgo de inundaciones
+## Reducción del riesgo de movimientos en masa
 
--   P
+-   Implementar sistemas de alerta temprana.
+-   Reforestar áreas vulnerables y proteger la cobertura vegetal.
+-   Controlar el uso del suelo y evitar construcciones en zonas de alto riesgo.
+-   Realizar obras de estabilización de taludes y drenaje.
+-   Capacitar a la comunidad sobre prevención y autoprotección.
 
-## Manejo de desastres por inundaciones
+## Manejo de desastres por movimientos en masa
 
--   Red 
+-   Activar los planes de emergencia y evacuación.
+-   Coordinar con las autoridades locales y organismos de socorro.
+-   Brindar atención médica y apoyo psicológico a los afectados.
+-   Restablecer servicios básicos y vías de acceso.
+-   Evaluar daños y planificar la recuperación de la zona.
 
 ::: {layout-ncol="2"}
-
 {{< video "https://vimeo.com/701418128" >}}
-
-
 :::
+
 ## Lecturas
 
 -   The
@@ -70,13 +88,10 @@ Comunicación del riesgo por incendios forestales.
 
 ## Repositorios
 
--   Download 
+-   Download
 
 ## Videos
 
 ::: {layout-ncol="2"}
-
 {{< video "https://vimeo.com/701418128" >}}
-
-
 :::
