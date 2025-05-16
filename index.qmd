@@ -7,7 +7,7 @@ about: # https://quarto.org/docs/websites/website-about.html
   template: trestles
   image-shape: round
   links:
-    - icon: twitter
+    - icon: twitter)=
       text: X
       href: https://x.com/mauricioromerot
     - icon: linkedin
