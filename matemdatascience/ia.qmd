@@ -1,0 +1,98 @@
+---
+title: "Inteligencia artificial"
+format: html
+editor: visual
+---
+
+## Recursos de IA para el trabajo diario
+
+### Listas
+
+-   [AI Tool Master List](https://share-docs.clickup.com)
+-   [1000 AI collection tools](https://github.com)
+-   [Example applications](https://platform.openai.com)
+-   [AIcyclopedia](https://www.aicyclopedia.com)
+
+### Buscadores
+
+-   [Perplexity](https://www.perplexity.ai)
+-   [Tutor AI (Aprendizaje)](https://www.tutorai.me)
+
+### Texto a imagen
+
+-   [Muse: Text-To-Image Generation](https://muse-model.github.io)
+
+### Voz a texto
+
+-   [My Good Tape](https://www.mygoodtape.com)
+-   [AI Transcription](https://riverside.fm)
+-   [audiopen.ai](https://audiopen.ai)
+-   [Otter (Tomar notas y resumir)](https://otter.ai)
+-   [Parrot AI](https://parrot.ai)
+
+### Voz
+
+-   [Fake You](https://fakeyou.com)
+
+### Resumir videos de YouTube
+
+1.  Copia el enlace largo del video de YouTube.
+2.  Ve a [Summarize.tech](https://www.summarize.tech) y pega el enlace. Resumirá cada sección con marcas de tiempo. Copia el guión resumido.
+3.  Ve a [Eleven Labs](https://beta.elevenlabs.io). Pega tu guión resumido. Eleven Labs leerá en voz alta todo el guión resumido para ti.
+4.  [Jasper](https://beta.jasper.ai)
+
+### Audio
+
+-   [Podcast Adobe (Editar y mejorar audio)](https://podcast.adobe.com)
+
+### Escritura
+
+-   [gptzero (Detector de AI)](https://gptzero.me)
+-   [New AI classifier for indicating AI-written text](https://openai.com)
+-   [Summarize AI (Resumir)](https://sloppyjoe.com)
+-   [Consensus (Resumir papers)](https://consensus.app)
+-   [Natural Language → Knowledge Graph](https://github.com)
+-   [Quillbot (Reescribir)](https://quillbot.com)
+-   [Strut](https://strut.so)
+
+### Traductor
+
+-   [DeepL](https://www.deepl.com)
+
+### Espacios del hogar
+
+-   [Reimagine](https://www.reimaginehome.ai)
+
+### Lecturas diarias
+
+-   [Las IAs como ChatGPT ya crean nuevas profesiones (muy bien pagadas): a qué se dedica esta nueva clase de ‘ingenieros'](https://www.genbeta.com)
+-   [Cookbook](https://github.com)
+-   [Abstracts written by ChatGPT fool scientists. Nature. 2023](https://www.nature.com)
+
+## NotebookLM
+
+{{< video "https://www.youtube.com/embed/Mn9r07wJjbc" >}} 
+
+-   [NotebookLM](https://notebooklm.google)
+    -   Hasta 50 fuentes (PDF, PPT, DOCX, XLSX), también videos de YouTube.
+    -   El modelo se entrena con los documentos cargados, por lo cual baja la posibilidad de alucinar.
+    -   Pueden explorarse conexiones entre documentos.
+    -   Tiene un chat para hacer preguntas con prompts al modelo creado.
+    -   Genera un podcast con el análisis.
+
+## Crear un ChatGPT personal
+
+-   [Paper QA (Hacer preguntas y respuestas desde PDFs o archivos de texto)](https://github.com)
+-   [Cómo usar ChatGPT para resumir un libro, artículo o trabajo de investigación](https://www.zdnet.com)
+
+## Comandos prompts
+
+-   [Prompt engineering](https://platform.openai.com)
+-   [ChatGPT-Prompts](https://github.com)
+-   [OpenAI Cookbook](https://github.com)
+
+## Para escribir código
+
+-   [gpt studio for R](https://github.com)
+
+##

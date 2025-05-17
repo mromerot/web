@@ -29,7 +29,7 @@ website:
             href: grd/incendiosforestales.qmd 
           - text: "Inundaciones"
             href: grd/inundaciones.qmd
-      - section: "Gestión de proyectos de ciencia y tecnología"
+      - section: "Gestión de proyectos"
         contents:
           - text: "Gestión de proyectos de CTeI"
             href: gestiondeproyectos/gestionproyectosciencia.qmd
@@ -57,6 +57,8 @@ website:
             href: matemdatascience/estadisticaymatematicas.qmd
           - text: "Ciencia de datos"
             href: matemdatascience/cienciadedatos.qmd
+          - text: "Inteligencia artificial"
+            href: matemdatascience/ia.qmd
       - section: "Vida laboral"
         contents:
           - text: "Café"
