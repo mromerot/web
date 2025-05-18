@@ -47,6 +47,8 @@ website:
             href: cyt/cienciareproduc.qmd
           - text: "Docencia y educación"
             href: cyt/docenciaeducacion.qmd
+          - text: "Ciencia transdiciplinar"
+            href: cyt/transdisciplina.qmd
       - section: "Ecología y conservación"
         contents:
           - text: "Ecologia y conservacion"

@@ -69,7 +69,7 @@ editor: visual
 -   [Aprendiendo a aprender: Poderosas herramientas mentales con las que podrás dominar temas difíciles - Coursera](https://www.coursera.org)
 -   [The Critical Importance of Retrieval for Learning - Science](https://science.sciencemag.org)
 
-{{< video "https://youtu.be/93-24-TcgJE" >}} Entrevista al [Dr Terrence Sejnowski ](https://scholar.google.com/citations?user=m1qAiOUAAAAJ)Aprendizje y cómo se puede mejorar\
+{{< video "https://youtu.be/93-24-TcgJE" >}} Entrevista al [Dr Terrence Sejnowski](https://scholar.google.com/citations?user=m1qAiOUAAAAJ)Aprendizje y cómo se puede mejorar\
 
 ## Lecturas sobre aprendizaje
 
@@ -91,8 +91,7 @@ editor: visual
 
 -   [Metacognition - Dunlosky](https://books.google.com.co)
 
-::: {layout-ncol=2}
-
+::: {layout-ncol="2"}
 {{< video "https://youtu.be/rRftFZgHmIw" >}} Aprender como funciona algo nos enseña a comprenderlo mejor
 
 {{< video "https://youtu.be/hydCdGLAh00" >}} «Chunking» – Una técnica de aprendizaje
@@ -144,3 +143,4 @@ Foco ciencias de la vida y de la salud
 -   Sin mejoría del coronavirus: los enfermos se autoanalizan en las redes. [*Link*](https://www.technologyreview.es/s/12508/sin-mejoria-del-coronavirus-los-enfermos-se-autoanalizan-en-las-redes). ![](https://www.youtube.com/watch?v=yCm9Ng0bbEQ)
 
 Is the world getting better or worse
+:::
