@@ -524,14 +524,14 @@ ESMARConf2023: Workshop 1 - Test, adjust for and report publication bias
     -   Inkscape. [*Link*](https://inkscape.org/es/).
 -   <https://youtu.be/3IuoK07YDds>
 
-## #Discusión, Conclusiones
+# Discusión, Conclusiones
 
-### #Agradecimientos
+# Agradecimientos
 
 -   Ver manuales de estilo.
 -   Funder registry. [Link](https://www.crossref.org/services/funder-registry/).
 
-### #Selección de revista para publicación
+# Selección de revista para publicación
 
 -   **Herramientas**
     -   Wiley find a journal. .
@@ -561,9 +561,9 @@ ESMARConf2023: Workshop 1 - Test, adjust for and report publication bias
 
 <https://www.youtube.com/watch?v=zAzTR8eq20k>
 
-### #Envío del artículo
+# Envío del artículo
 
-**Cómo escribir un *cover letter***
+## **Cómo escribir un *cover letter***
 
 -   Crafting cover letters. Nature Geoscience. [*Link*](https://www.nature.com/articles/s41561-021-00824-y).
 -   How to write a cover letter. Nature. [*Link*](http://blogs.nature.com/methagora/2013/09/how-to-write-a-cover-letter.html).
@@ -571,7 +571,15 @@ ESMARConf2023: Workshop 1 - Test, adjust for and report publication bias
 -   Writing a winning cover letter. Science. [*Link*](http://www.sciencemag.org/careers/2014/08/writing-winning-cover-letter).
 -   Why has submitting a manuscript to a journal become so difficult? A call to simplify an overly complicated process. [*Link*](http://blogs.lse.ac.uk/impactofsocialsciences/2017/05/10/why-has-submitting-a-manuscript-to-a-journal-become-so-difficult-a-call-to-simplify-an-overly-complicated-process/).
 
-### #Revisión por pares
+# Revisión por pares
+
+::: {.callout-note appearance="simple"}
+## Busqueda de pares
+
+-   Tools for finding reviewers and how to use them. SAGE. [*Link*](https://us.sagepub.com/en-us/sam/tools-for-finding-reviewers-and-how-to-use-them)
+-   How to find peer reviewers - an editor's guide. [*Link*](https://editorresources.taylorandfrancis.com/managing-peer-review-process/how-to-find-peer-reviewers-an-editors-guide/)
+-   Finding Peer Reviewers. BMC. [*Link*](https://www.biomedcentral.com/about/foreditors/manuscript-handling-information/selecting-peer-reviewers)
+:::
 
 -   Búsqueda de pares en Colombia por CvLac. [*Link*](https://scienti.minciencias.gov.co/ciencia-war/jsp/enRecurso/IndexRecursoHumanoBusquedaTematica.jsp).
 -   Editing of reviewer comments: Forum discussion topic March 2020. [*Link*](https://publicationethics.org/editing-reviewer-comments-forum-discussion-topic-march-2020).
@@ -584,10 +592,17 @@ ESMARConf2023: Workshop 1 - Test, adjust for and report publication bias
 -   Ten simple rules for writing a response to reviewers. [*Link*](http://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1005730).
 -   What is the future of peer review in ecology?[*Link*](http://www.britishecologicalsociety.org/video-future-peer-review-ecology/?platform=hootsuite)*.*
 -   What Makes a Good Peer Review: Peer Review Week 2016. [*Link*](https://methodsblog.com/2016/09/20/what-makes-a-good-review/amp/?__twitter_impression=true).
+-   *Cómo realizar una revisión por pares. [Enlace](https://docs.google.com/presentation/d/1z6SFEyqb2-qjMKYR7Z_t6wslYGetKG_LqG0tlyxPjIU/edit?usp=sharing)*
 
-COPE. Artificial intelligence and peer review
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/HJYB1IaS598" >}} COPE. Artificial intelligence and peer review
 
-### #Post-publicación y divulgación
+{{< video "https://youtu.be/x1H3bG-HNX0" >}} Peer Reviewer Training – How to Get Published EURAXESS
+
+Revisión por pares
+:::
+
+# Post-publicación y divulgación
 
 -   **Twitter**
     -   Twitter for Scientists. [*Link*](https://t4scientists.com/)
@@ -644,7 +659,7 @@ COPE. Artificial intelligence and peer review
 
 "Publishing in Academic Journals" - Part of How to Get Published EURAXESS webinar series. [*Enlace*](https://euraxess.ec.europa.eu/worldwide/north-america/publishing-academic-journals-part-how-get-published-euraxess-webinar)
 
-## #Ética en la publicación
+# Ética en la publicación
 
 -   OSTP Advancing New Scientific Integrity Principles. [*Link*](https://www.aip.org/fyi/2022/ostp-advancing-new-scientific-integrity-principles).
 -   Systematic manipulation of the publication process. COPE. [*Link*](https://doi.org/10.24318/cope.2019.2.23)
@@ -761,11 +776,11 @@ Isidro Aguillo - Revistas Académicas Latinoamericanas. Conferencia en Universid
     -   Ten simple rules for writing a response to reviewers. [*Link*](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005730).
     -   Ten simple rules for scientists: Improving your writing productivity. [*Link*](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006379).
 
-## #Diapositivas
+# Diapositivas
 
 -   Slidev. [*Link*](https://www.producthunt.com/posts/slidev).
 
-**##Otras lecturas**
+# **Otras lecturas**
 
 -   Cass Sunstein, el arquitecto de las decisiones. El Pais. 2017. [*Link*](http://elpaissemanal.elpais.com/confidencias/cass-sunstein/)*. [Link](https://scholar.google.com/citations?user=ddq2_gkAAAAJ&hl=es&oi=sra)*.
 -   How Chronic Fatigue Syndrome Affects Your Metabolism. Psmag. [*Link*](https://psmag.com/how-chronic-fatigue-syndrome-affects-your-metabolism-f4682f9d1b67#.nkcbhflls).
@@ -777,41 +792,41 @@ Isidro Aguillo - Revistas Académicas Latinoamericanas. Conferencia en Universid
 -   WORKING LIFE. A retirement ‘hobby’. 2017. Science. [*Link*](http://science.sciencemag.org/content/355/6324/542.full?utm_source=sciencemagazine&utm_medium=facebook-text&utm_campaign=6324workinglife-10896).
 -   The Rise of the Scientist-Bureaucrat. Survival Guide for Researchers in the 21st Century. [*Link*](https://link.springer.com/book/10.1007/978-3-030-12326-0).
 
-**##Cursos de actualización profesional**
+## **Cursos de actualización profesional**
 
 -   George Mason University. Smithsonian Conservation Biology Institute. [*Link*](http://smconservation.gmu.edu/).
 -   IELTS Academic Test Preparation. Edx. [*Link*](https://www.edx.org/course/ielts-academic-test-preparation-uqx-ieltsx-0).
 
-**##Asociaciones profesionales**
+## **Asociaciones profesionales**
 
 -   The National Association of Science Writers. [*Link*](https://www.nasw.org/).
 
-**##Varios** - Utilidades en Word
+## **Varios** - Utilidades en Word
 
 -   Construir tabla de contenido en Word para documento con capítulos. [*Link*.](https://support.office.com/en-us/article/Add-chapter-numbers-to-captions-in-Word-76aa8706-3453-4a72-ad5c-b87d90ce1698)
 -   Creación y actualización de índices. [*Link*](https://support.office.com/es-es/article/creaci%C3%B3n-y-actualizaci%C3%B3n-de-%C3%ADndices-cc502c71-a605-41fd-9a02-cda9d14bf073).
 
-**##Ciencia y política**
+## **Ciencia y política**
 
 -   Cuatro motivos por los que hacen falta más científicos en política. [*Link*](http://www.huffingtonpost.es/manuel-souto/cuatro-motivos-por-los-qu_b_11718424.html).
 -   Expect knowledge. [*Link.*](http://www.nature.com/news/expect-knowledge-1.19771?WT.ec_id=NATURE-20160421&spMailingID=51196306&spUserID=MjA1NjE1MDUwMQS2&spJobID=902556060&spReportId=OTAyNTU2MDYwS0)
 -   If you want to win the game, you must join in. [*Link.*](http://www.nature.com/news/if-you-want-to-win-the-game-you-must-join-in-1.9580)
 -   Ninguna comunidad ancestral y milenaria conoce más sobre cáncer que la medicina moderna. Periódico UNAL. [*Link*](https://unperiodico.unal.edu.co/pages/detail/ninguna-comunidad-ancestral-y-milenaria-conoce-mas-sobre-cancer-que-la-medicina-moderna/).
 
-**##Ciencia en Colombia**
+## **Ciencia en Colombia**
 
 -   Scienti - Colciencias. [*Link*](http://www.colciencias.gov.co/scienti)
 -   Observatorio colombiano de ciencia y tecnología. [*Link*](http://ocyt.org.co/es-es/)
     -   Informe Anual de Indicadores de Ciencia y Tecnología 2018. [*Link*](http://www.ocyt.org.co/proyectos-y-productos/informe-anual-de-indicadores-de-ciencia-y-tecnologia-2018/).
 -   DNP, SGR. Ciencia, Tecnología e Innovación. [Link](https://www.sgr.gov.co/Inversi%C3%B3n/CienciaTecnolog%C3%ADaeInnovaci%C3%B3n.aspx).
 
-**##Podcast en ciencia**
+## **Podcast en ciencia**
 
 -   Hablemos de física. UNradio. [*Link*](http://unradio.unal.edu.co/nc/detalle/cat/hablemos-de-fisica.html).
 -   Hipótesis. UNradio. [*Link*](http://unradio.unal.edu.co/nc/detalle/cat/hipotesis/article/extension-facultad-de-ciencias.html).
 -   Investigación de impacto. U Javeriana. [*Link*](http://www.javeriana.edu.co/javerianaestereo/podcast/index.php?cat=InvestigacindeImpacto).
 -   Metacampus. Universidad Nacional. [*Link*](http://metacampus.unal.edu.co/index.php?id=118&no_cache=1).
 
-**##Cómo funciona la ciencia, el método científico**
+## **Cómo funciona la ciencia, el método científico**
 
 -   *Preguntas, ecuaciones, cálculos, experimento, teoría, leyes y principios*. Boltzmann and the Arrow of Time: A Recent Perspective. [*Link*](https://www.cornell.edu/video/leonard-susskind-1-boltzmann-and-the-arrow-of-time/s417).

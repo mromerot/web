@@ -67,6 +67,8 @@ website:
             href: vidalaboral/cafe.qmd
           - text: "Vida laboral"
             href: vidalaboral/vidalaboral.qmd
+          - text: "Herramientas"
+            href: vidalaboral/herramientas.qmd
       - section: "Mis publicaciones"
         contents:
           - text: "Mis publicaciones"
