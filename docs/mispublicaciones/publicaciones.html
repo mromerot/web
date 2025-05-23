@@ -97,9 +97,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">
-      Inicio
-      </a> 
+      <a href="../">Inicio</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -357,71 +355,12 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="publicaciones" class="level2">
 <h2 class="anchored" data-anchor-id="publicaciones">Publicaciones</h2>
-<script src="https://d3js.org/d3.v7.min.js" <="" script="">
-<div id="chart">
 
-</div>
-<script>
-<p>// Datos de ejemplo const data = { name: “root”, children: [ { name: “parent A”, children: [ { name: “child A1”, value: 10 }, { name: “child A2”, value: 15 } ] }, { name: “parent B”, children: [ { name: “child B1”, value: 20 }, { name: “child B2”, value: 10 } ] } ] };</p>
-<p>chart = { // Specify the chart’s dimensions. const width = 928; const height = width; const radius = width / 6;</p>
-<p>// Create the color scale. const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length + 1));</p>
-<p>// Compute the layout. const hierarchy = d3.hierarchy(data) .sum(d =&gt; d.value) .sort((a, b) =&gt; b.value - a.value); const root = d3.partition() .size([2 * Math.PI, hierarchy.height + 1]) (hierarchy); root.each(d =&gt; d.current = d);</p>
-<p>// Create the arc generator. const arc = d3.arc() .startAngle(d =&gt; d.x0) .endAngle(d =&gt; d.x1) .padAngle(d =&gt; Math.min((d.x1 - d.x0) / 2, 0.005)) .padRadius(radius * 1.5) .innerRadius(d =&gt; d.y0 * radius) .outerRadius(d =&gt; Math.max(d.y0 * radius, d.y1 * radius - 1))</p>
-<p>// Create the SVG container. const svg = d3.create(“svg”) .attr(“viewBox”, [-width / 2, -height / 2, width, width]) .style(“font”, “10px sans-serif”);</p>
-<p>// Append the arcs. const path = svg.append(“g”) .selectAll(“path”) .data(root.descendants().slice(1)) .join(“path”) .attr(“fill”, d =&gt; { while (d.depth &gt; 1) d = d.parent; return color(d.data.name); }) .attr(“fill-opacity”, d =&gt; arcVisible(d.current) ? (d.children ? 0.6 : 0.4) : 0) .attr(“pointer-events”, d =&gt; arcVisible(d.current) ? “auto” : “none”) .attr(“d”, d =&gt; arc(d.current));</p>
-<p>// Make them clickable if they have children. path.filter(d =&gt; d.children) .style(“cursor”, “pointer”) .on(“click”, clicked);</p>
-<p>const format = d3.format(“,d”); path.append(“title”) .text(d =&gt; <code>${d.ancestors().map(d =&gt; d.data.name).reverse().join("/")}\n${format(d.value)}</code>);</p>
-<p>const label = svg.append(“g”) .attr(“pointer-events”, “none”) .attr(“text-anchor”, “middle”) .style(“user-select”, “none”) .selectAll(“text”) .data(root.descendants().slice(1)) .join(“text”) .attr(“dy”, “0.35em”) .attr(“fill-opacity”, d =&gt; +labelVisible(d.current)) .attr(“transform”, d =&gt; labelTransform(d.current)) .text(d =&gt; d.data.name);</p>
-<p>const parent = svg.append(“circle”) .datum(root) .attr(“r”, radius) .attr(“fill”, “none”) .attr(“pointer-events”, “all”) .on(“click”, clicked);</p>
-<p>// Handle zoom on click. function clicked(event, p) { parent.datum(p.parent || root);</p>
-<pre><code>root.each(d =&gt; d.target = {
-  x0: Math.max(0, Math.min(1, (d.x0 - p.x0) / (p.x1 - p.x0))) * 2 * Math.PI,
-  x1: Math.max(0, Math.min(1, (d.x1 - p.x0) / (p.x1 - p.x0))) * 2 * Math.PI,
-  y0: Math.max(0, d.y0 - p.depth),
-  y1: Math.max(0, d.y1 - p.depth)
-});
 
-const t = svg.transition().duration(event.altKey ? 7500 : 750);
-
-// Transition the data on all arcs, even the ones that aren’t visible,
-// so that if this transition is interrupted, entering arcs will start
-// the next transition from the desired position.
-path.transition(t)
-    .tween(&quot;data&quot;, d =&gt; {
-      const i = d3.interpolate(d.current, d.target);
-      return t =&gt; d.current = i(t);
-    })
-  .filter(function(d) {
-    return +this.getAttribute(&quot;fill-opacity&quot;) || arcVisible(d.target);
-  })
-    .attr(&quot;fill-opacity&quot;, d =&gt; arcVisible(d.target) ? (d.children ? 0.6 : 0.4) : 0)
-    .attr(&quot;pointer-events&quot;, d =&gt; arcVisible(d.target) ? &quot;auto&quot; : &quot;none&quot;) 
-
-    .attrTween(&quot;d&quot;, d =&gt; () =&gt; arc(d.current));
-
-label.filter(function(d) {
-    return +this.getAttribute(&quot;fill-opacity&quot;) || labelVisible(d.target);
-  }).transition(t)
-    .attr(&quot;fill-opacity&quot;, d =&gt; +labelVisible(d.target))
-    .attrTween(&quot;transform&quot;, d =&gt; () =&gt; labelTransform(d.current));</code></pre>
-<p>}</p>
-<p>function arcVisible(d) { return d.y1 &lt;= 3 &amp;&amp; d.y0 &gt;= 1 &amp;&amp; d.x1 &gt; d.x0; }</p>
-<p>function labelVisible(d) { return d.y1 &lt;= 3 &amp;&amp; d.y0 &gt;= 1 &amp;&amp; (d.y1 - d.y0) * (d.x1 - d.x0) &gt; 0.03; }</p>
-<p>function labelTransform(d) { const x = (d.x0 + d.x1) / 2 * 180 / Math.PI; const y = (d.y0 + d.y1) / 2 * radius; return <code>rotate(${x - 90}) translate(${y},0) rotate(${x &lt; 180 ? 0 : 180})</code>; }</p>
-<p>return svg.node(); }</p>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl">Inicio</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU=">Inicio</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1wcmV2">Herramientas</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMQ==">Gestión del riesgo de desastres</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ncmQvZ2VzdGlvbmRlbHJpZXNnby5odG1sR2VzdGnDs24tZGVsLXJpZXNnby1kZS1kZXNhc3RyZXM=">Gestión del riesgo de desastres</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ncmQvY29ub2NpbWllbnRvZGVscmllc2dvLmh0bWxDb25vY2ltaWVudG8tZGVsLXJpZXNnbw==">Conocimiento del riesgo</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ncmQvcmVkdWNjaW9uZGVscmllc2dvLmh0bWxSZWR1Y2Npw7NuLWRlbC1yaWVzZ28=">Reducción del riesgo</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ncmQvbWFuZWpvZGVkZXNhc3RyZXMuaHRtbE1hbmVqby1kZS1kZXNhc3RyZXM=">Manejo de desastres</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ncmQvY2llbmNpYXl0ZWNub2xvZ2lhLmh0bWxDaWVuY2lhLXktdGVjbm9sb2fDrWE=">Ciencia y tecnología</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ncmQvdm9sY2FuZXMuaHRtbFJpZXNnby12b2xjw6FuaWNv">Riesgo volcánico</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ncmQvaW5jZW5kaW9zZm9yZXN0YWxlcy5odG1sSW5jZW5kaW9zLWZvcmVzdGFsZXM=">Incendios forestales</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9ncmQvaW51bmRhY2lvbmVzLmh0bWxJbnVuZGFjaW9uZXM=">Inundaciones</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMg==">Gestión de proyectos</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9nZXN0aW9uZGVwcm95ZWN0b3MvZ2VzdGlvbnByb3llY3Rvc2NpZW5jaWEuaHRtbEdlc3Rpw7NuLWRlLXByb3llY3Rvcy1kZS1DVGVJ">Gestión de proyectos de CTeI</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9nZXN0aW9uZGVwcm95ZWN0b3MvcHJvamVjdG1hbmFnZW1lbnQuaHRtbEdlc3Rpw7NuLWRlLXByb3llY3Rvcw==">Gestión de proyectos</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMw==">Amazonas</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9hbWF6b25hcy9hbWF6b25hcy5odG1sQW1hem9uYXM=">Amazonas</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNA==">Ciencia y tecnología</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9jeXQvZXNjcml0dXJheXB1YmxpY2FjaW9uYWNhZGVtaWNhLmh0bWxFc2NyaXR1cmEteS1wdWJsaWNhY2nDs24tYWNhZMOpbWljYQ==">Escritura y publicación académica</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9jeXQvY2llbmNpYXJlcHJvZHVjLmh0bWxDaWVuY2lhLXJlcHJvZHVjaWJsZQ==">Ciencia reproducible</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9jeXQvZG9jZW5jaWFlZHVjYWNpb24uaHRtbERvY2VuY2lhLXktZWR1Y2FjacOzbg==">Docencia y educación</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9jeXQvdHJhbnNkaXNjaXBsaW5hLmh0bWxDaWVuY2lhLXRyYW5zZGljaXBsaW5hcg==">Ciencia transdiciplinar</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNQ==">Ecología y conservación</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9lY29seWNvbnNlcnYvZWNvbG9naWF5Y29uc2VydmFjaW9uLmh0bWxFY29sb2dpYS15LWNvbnNlcnZhY2lvbg==">Ecologia y conservacion</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNg==">Matemáticas y ciencia de datos</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9tYXRlbWRhdGFzY2llbmNlL2VzdGFkaXN0aWNheW1hdGVtYXRpY2FzLmh0bWxFc3RhZMOtc3RpY2EteS1tYXRlbcOhdGljYXM=">Estadística y matemáticas</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9tYXRlbWRhdGFzY2llbmNlL2NpZW5jaWFkZWRhdG9zLmh0bWxDaWVuY2lhLWRlLWRhdG9z">Ciencia de datos</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9tYXRlbWRhdGFzY2llbmNlL2lhLmh0bWxJbnRlbGlnZW5jaWEtYXJ0aWZpY2lhbA==">Inteligencia artificial</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNw==">Vida laboral</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi92aWRhbGFib3JhbC9jYWZlLmh0bWxDYWbDqQ==">Café</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi92aWRhbGFib3JhbC92aWRhbGFib3JhbC5odG1sVmlkYS1sYWJvcmFs">Vida laboral</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi92aWRhbGFib3JhbC9oZXJyYW1pZW50YXMuaHRtbEhlcnJhbWllbnRhcw==">Herramientas</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tOA==">Mis publicaciones</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9taXNwdWJsaWNhY2lvbmVzL3B1YmxpY2FjaW9uZXMuaHRtbE1pcy1wdWJsaWNhY2lvbmVz">Mis publicaciones</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLU1pcy1wdWJsaWNhY2lvbmVz">Mis publicaciones</span></p>
-<div class="hidden quarto-markdown-envelope-contents" data-render-id="Zm9vdGVyLWNlbnRlcg==">
-<p>Made with ❤️ and Quarto</p>
-</div>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGF0aXRsZQ==">Inicio</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU=">Inicio</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZHRpdGxl">Inicio</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGFzaXRlbmFtZQ==">Inicio</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw=="></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZGRkZXNj"></span></p>
-</div>
 </section>
 
 </main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -820,15 +759,15 @@ label.filter(function(d) {
     }
   });
   </script>
-</section></main></div> <!-- /content -->
+</div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-      <div class="footer-contents">Made with ❤️ and Quarto</div>  
-    </div>
+<p>Made with ❤️ and Quarto</p>
+</div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
