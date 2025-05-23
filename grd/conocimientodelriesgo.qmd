@@ -12,18 +12,6 @@ editor: visual
 -   **Visor de desastres y emergencias**. UNGRD. 2023. [*Link*](https://lookerstudio.google.com/reporting/a850fdeb-1229-4623-8a35-13895d4ec484).
 -   Visor de información territorial para Municipios. UNGRD. [*Link*](https://lookerstudio.google.com/u/0/reporting/80f58632-3355-46d1-8177-a765552fef91/page/mqD7D)
 
-## Lecturas
-
--   Guidelines for Studying Diverse Types of Compound Weather and Climate Events. 2021. [*Link*](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021EF002340)
--   High impact compound events in Australia. [*Link*](https://climateextremes.org.au/high-impact-compound-events-in-australia/)
--   Significantly wetter or drier future conditions for one to two thirds of the world’s population. 2024. Nature Comm. [*Link*](https://www.nature.com/articles/s41467-023-44513-3)
-
-::: {layout-ncol="2"}
-{{< video "https://emanuele.bevacqua.eu/wp-content/uploads/2021/12/Bevacqua_AGU2021_video.mov" >}} [*Guidelines for studying diverse types of compound weather and climate events*](https://emanuele.bevacqua.eu/online-talks/)
-
-Eventos compuestos
-:::
-
 ## Evaluación del riesgo
 
 -   Understanding disaster risk: foundational concepts and principles. [*Link*](https://www.preventionweb.net/understanding-disaster-risk#components).
@@ -95,6 +83,18 @@ Evaluación del riesgo
 Compound, cascading and systemic risk
 :::
 
+## Eventos compuestos
+
+-   Guidelines for Studying Diverse Types of Compound Weather and Climate Events. 2021. [*Link*](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021EF002340)
+-   High impact compound events in Australia. [*Link*](https://climateextremes.org.au/high-impact-compound-events-in-australia/)
+-   Significantly wetter or drier future conditions for one to two thirds of the world’s population. 2024. Nature Comm. [*Link*](https://www.nature.com/articles/s41467-023-44513-3)
+
+::: {layout-ncol="2"}
+{{< video "https://emanuele.bevacqua.eu/wp-content/uploads/2021/12/Bevacqua_AGU2021_video.mov" >}} [*Guidelines for studying diverse types of compound weather and climate events*](https://emanuele.bevacqua.eu/online-talks/)
+
+Eventos compuestos
+:::
+
 ## Resiliencia
 
 -   Revisión sistemática sobre la capacidad de adaptación y resiliencia comunitaria ante desastres socionaturales en América Latina y el Caribe. 2023. REDER. [*Link*](https://doi.org/10.55467/reder.v7i2.132)
@@ -109,5 +109,5 @@ Compound, cascading and systemic risk
 
 {{< video "https://youtu.be/M58wCBJ8mkQ" >}}
 
-Resiliencia
+Videos sobre resiliencia
 :::
