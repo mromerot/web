@@ -4,9 +4,23 @@ format: html
 editor: visual
 ---
 
-## Ciencia y tecnología en grd
+## Cursos en ciencia y tecnología en grd
 
-**LECTURAS DE REFERENCIA**
+-   Risk-informed governance and innovative technology for disaster risk reduction and resilience. UNDRR. [*Link*](https://unsec.unssc.org/course/view.php?id=309).
+    -   Unit 1: Risk-Informed Governance for DRR and Resilience
+    -   Unit 2: Science Technology and Government Innovation in Public Governance for DRR and Resilience
+    -   Unit 3: Practical and Planned Application of Emerging Technology and Government Innovation for DRR and Resilience
+    -   Unit 4: Implementation of Emerging Technologies and Government Innovation for DRR and Resilience
+    -   Unit 5: Reflecting on and Planning for Monitoring and Evaluation (optional)
+    -   Unit 6:Case Studies - Application of Technology for Reducing Disaster Risks
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/LnsbKliwaog" >}} eLearning Course: Risk-informed Governance and Innovative Technology for DRR and Resilience
+
+{{< video "https://youtu.be/tiEh5vivKjU" >}} Session 6: Government Innovation and Technologies for DRR and Resilience (22 Sep 2020)
+:::
+
+## **Lecturas de referencia**
 
 -   **Objetivos de desarrollo sostenible y reducción del riesgo de desastres**.
     -   Los ODS. [*Link*](https://www.un.org/sustainabledevelopment/es/).
@@ -65,34 +79,35 @@ editor: visual
     -   Beyond «natural-disasters-are-not-natural»:the work of state and nature after the 2010 earthquake in Chile. JPE. 2016. [*Link*](https://journals.uair.arizona.edu/index.php/JPE/article/view/20181/19809).
     -   <https://nonaturaldisasters.com/>
 
-![](https://www.youtube.com/watch?v=5HG0CHm6M5o)
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=5HG0CHm6M5o" >}} Systemic Disaster Risk Handbook
 
-Systemic Disaster Risk Handbook
+{{< video "https://www.youtube.com/watch?v=5pnQKSV5hn4" >}} Climate change and disaster risk management
 
-![](https://www.youtube.com/watch?v=5pnQKSV5hn4)
+{{< video "https://www.youtube.com/watch?v=9nrPQNHwvCc" >}} Los desastres no son naturales
+:::
 
-Climate change and disaster risk management
-
-![](https://www.youtube.com/watch?v=9nrPQNHwvCc)
-
-Los desastres no son naturales
-
-**EDUCACIÓN**
+## **Educación**
 
 -   **Lecturas educación**
     -   IFRC (Federación Internacional de Sociedades de la Cruz Roja y Media Luna Roja). 2011. Guía: Para la sensibilización y educación pública sobre la reducción de riesgos de desastres. Ginebra, Suiza. [*Link*](https://www.preventionweb.net/files/61592_302200publicawarenessddrguidees.pdf).
     -   Plan nacional de capacitación y formación en gestión del riesgo de desastres 2022-2030. [*Link*](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/38718?fbclid=IwAR18I1UGQjs6QY50qGJiSpHwZSovFTo_q9wL8p4Q0k7jh9bBsOUFgX5aqrk).
     -   Postgraduate modules, University College London. [*Link*](https://www.ucl.ac.uk/risk-disaster-reduction/study/postgraduate-modules).
 
-**ENTRENAMIENTO**
+## **Entrenamiento**
 
--   **TRAINING**
-    -   Disaster Reduction Learning Center (DRLC). [*Link*](https://www.jica.go.jp/english/activities/issues/disaster/disaster.html).
-    -   FEMA. [*Link*](https://training.fema.gov/ndemu/curriculum/)
-    -   Disaster Risk Management Training Center. [*Link*](https://drmkc.jrc.ec.europa.eu/).
-        -   Training Corner. [*Link*](https://drmkc.jrc.ec.europa.eu/science-for-drm/training-corner).
-        -   Disaster Risk Management Training online series 2022. European Commision. [*Link*](https://drmkc.jrc.ec.europa.eu/science-for-drm/training-corner/disaster-risk-management-training-online-series-2022).
--   **MOOCS**
+-   Disaster Reduction Learning Center (DRLC). [*Link*](https://www.jica.go.jp/english/activities/issues/disaster/disaster.html).
+
+-   FEMA. [*Link*](https://training.fema.gov/ndemu/curriculum/)
+
+-   Disaster Risk Management Training Center. [*Link*](https://drmkc.jrc.ec.europa.eu/).
+
+    -   Training Corner. [*Link*](https://drmkc.jrc.ec.europa.eu/science-for-drm/training-corner).
+
+-   Disaster Risk Management Training online series 2022. European Commision. [*Link*](https://drmkc.jrc.ec.europa.eu/science-for-drm/training-corner/disaster-risk-management-training-online-series-2022).
+
+    ## **MOOCS**
+
     -   Bushfires: Response, Relief and Resilience. [*Link*](https://www.futurelearn.com/courses/bushfires).
     -   CONVERGE Training Modules. [*Link*.](https://converge.colorado.edu/resources/training-modules)
     -   Comunicando el cambio climático de manera efectiva. CDKN. [*Link*](https://cdkn.org/comunicando/?loclang=es_es&fbclid=IwAR0sQ3LypFp0Atq5eOtWgPrOisQkKmMeBlaS-woYhp5JvqKFE122-_LIur8).
@@ -111,32 +126,45 @@ Los desastres no son naturales
     -   Tsunamis and Storm Surges: Introduction to Coastal Disasters. [*Link*](https://www.edx.org/es/course/tsunamis-and-storm-surges-introduction-to-coastal).
     -   UNESCO. Online courses to promote disaster risk reduction awareness. [*Link*](https://en.unesco.org/greencitizens/stories/online-courses-promote-disaster-risk-reduction-awareness). [*Link*](http://elearning.unep.org/moocs/courses).
     -   When Disaster Meets Conflict. [*Link*](https://www.coursera.org/learn/whendisastermeetsconflict).
+
 -   **En español**
+
     -   Gestión integral del riesgo de desastres. [*Link*](https://www.coursera.org/learn/gestion-riesgo/home/welcome)
     -   Género-Diversidad en la reducción del riesgo de desastres y cambio climático. [*Link*](https://es.grripp.net/cursoonline/1-video-introductorio).
     -   Análisis del Riesgo de Desastres y Cambio Climático en Proyectos de Infraestructura. BID. [*Link*](https://cursos.iadb.org/es/temas/infraestructura/analisis-riesgo-desastres-cambio-climatico-proyectos-infraestructura).
+
 -   **E-learning**
+
     -   USGS- Spatial Data. [*Link*](https://lpdaac.usgs.gov/resources/e-learning/).
     -   NASA – Earth Science, Applied Science online trainings [*Link*](https://appliedsciences.nasa.gov/join-mission/training?program_area=14).
     -   Teaching climate. Climate Gov. [*Link*](https://www.climate.gov/teaching).
     -   Coastal Aquaculture Planning Portal (CAPP). [*Link*](https://coastalscience.noaa.gov/research/marine-spatial-ecology/coastal-aquaculture-planning-portal-capp/).
     -   UICN. Water. [*Link*](https://learningelc.org/course/index.php?categoryid=6).
+
 -   **Seminarios web**
+
     -   Riesgo por cambio climático en Colombia. Estrategia Climática de Largo Plazo Colombia E2050. [*Link*](https://youtu.be/4v9T0QaI7ZU).
     -   Converge Webinar series. [*Link*](https://converge.colorado.edu/communications/webinar-series).
     -   APRU Multi-Hazards Webinar Series. [*Link*](https://apru.org/event/the-apru-multi-hazards-webinar-series-a-new-approach-for-disaster-risk-management-after-covid-19/).
     -   Knowledge Action Network on Emergent Risks and Extreme Events. [*Link*](https://www.risk-kan.org/webinars/)
+
 -   **Recursos**
+
     -   The Climate Reanalyzer. Climate.gov. [*Link*](https://www.climate.gov/teaching/resources/climate-reanalyzer-0). [*Link*](https://climatereanalyzer.org/).
+
 -   **The Australian Disaster Resilience Knowledge Hub**
+
     -   Emergency planning collection. [*Link*](https://knowledge.aidr.org.au/collections/emergency-planning/).
     -   Disasters. [*Link*](https://knowledge.aidr.org.au/disasters/).
     -   Glossary. [*Link*](https://knowledge.aidr.org.au/glossary/).
     -   Emergency Management Library. [*Link*](https://knowledge.aidr.org.au/collections/emergency-management-library/).
     -   Recovery Matters webinar series. [*Link*](https://knowledge.aidr.org.au/resources/recovery-matters-webinar-series/?utm_source=Updates+from+AIDR&utm_campaign=f666ebcb63-EMAIL_CAMPAIGN_2020_03_10_03_44_COPY_01&utm_medium=email&utm_term=0_a0a8e928c9-f666ebcb63-184368417#story).
+
 -   **The Australian Institute for Disaster Resilience**. [*Link*](https://www.aidr.org.au/)
 
-![](https://www.youtube.com/watch?v=1Aq_2kEL4yo)
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=1Aq_2kEL4yo" >}}
+:::
 
 -   **Museos de ciencia**
 -   **Expertos**:
@@ -157,15 +185,22 @@ Los desastres no son naturales
     -   Mensajes que contienen un alto contenido emocional para el individuo.
     -   Mensajes respaldados por experiencias posteriores (medición *ex post facto* ).
 
-![](https://www.youtube.com/watch?v=m-p8kUrUWd4)
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=m-p8kUrUWd4" >}}
+:::
 
 **CIENCIA, TECNOLOGÍA E INNOVACIÓN** **EN GRD**
 
-![](https://www.youtube.com/watch?v=T4TVVT2_x3M)
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=T4TVVT2_x3M" >}}
 
-![](https://www.youtube.com/watch?v=BNIT8mOdYRE)
+{{< video "https://www.youtube.com/watch?v=BNIT8mOdYRE" >}}
+:::
 
--   **Institutos y organizaciones internacionales**
+-   
+
+    ## **Institutos y organizaciones internacionales**
+
     -   APRU – Association of Pacific Rim Universities. [*Link*](https://apru.org/).
     -   Center for Emergency Management and Homeland Security. ASU. [*Link*](https://cemhs.asu.edu/).
     -   Columbia Climate School. [*Link*](https://climate.columbia.edu/research).
@@ -185,17 +220,25 @@ Los desastres no son naturales
             -   CONVERGE Training Modules. [Link.](https://converge.colorado.edu/resources/training-modules)
     -   NIED, Science for resilience. Japón. [*Link*](https://www.bosai.go.jp/e/index.html).
     -   Resilient America. [*Link*](https://sites.nationalacademies.org/pga/resilientamerica/)
+
 -   **Latinoamerica**
+
     -   CIGIDEN Chile. [*Link*](https://www.cigiden.cl/).
     -   CEPREDENAC. [*Link*](http://www.cepredenac.org/)
     -   La Red. Desenredando. [*Link*](https://www.desenredando.org/).
     -   Senapred. [*Link*](https://senapred.cl/).
+
 -   **Redes UNDRR**
+
     -   PreventionWeb community. [*Link*](https://cc.preventionweb.net/).
+
 -   **Plataformas de análisis de riesgos**
+
     -   Plataforma CAPRA – Uniandes. [*Link*](https://ecapra.org/es).
     -   Riesgos.de. [*Link*](https://www.riesgos.de/de/).
+
 -   **Sistemas de información de Colombia**
+
     -   Consolidados de emergencia y desastres. [*Link*](https://lookerstudio.google.com/u/0/reporting/a850fdeb-1229-4623-8a35-13895d4ec484/page/DyhoD).
     -   Corporación OSSO. [*Link*](https://osso.org.co/).
     -   Sistema de Alerta Temprana de Medellín y el Valle de Aburrá (SIATA). [*Link*](https://siata.gov.co/).
@@ -205,14 +248,20 @@ Los desastres no son naturales
     -   FEWS Colombia. Sistemas de pronósticos hidrológicos y alerta temprana. [*Link*](http://www.ideam.gov.co/web/agua/fews)
     -   DHIME: Consulta y Descarga de Datos Hidrometeorológicos, IDEAM. [*Link*](http://dhime.ideam.gov.co/atencionciudadano/).
     -   Plataforma Observatorio Bahia de Cartagena. [*Link*](https://www.basic-cartagena.org/).
+
 -   **Manejo de desastres**
+
     -   Charter. [*Link*](https://disasterscharter.org/web/guest/about-the-charter). Activation list. [*Link.*](https://disasterscharter.org/web/guest/charter-activations)
         -   Colombia, Providencia. [*Link*](https://disasterscharter.org/web/guest/activations/-/article/storm-hurricane-urban-in-colombia-activation-687-).
--   **Bases de datosde amenazas y eventos de desastre de Colombia**
+
+    ## **Bases de datosde amenazas y eventos de desastre de Colombia**
+
     -   Datos del Consolidado de atención a emergencias. UNGRD. [*Link*](http://portal.gestiondelriesgo.gov.co/Paginas/Consolidado-Atencion-de-Emergencias.aspx).
     -   DESINVENTAR. Base de datos de pérdidas históricas en Colombia (período 1970-2011). [*Link*](http://online.desinventar.org/).
     -   COLOMBIA – Censo Nacional de Población y Vivienda – CNPV – 2018.[*Link*](http://microdatos.dane.gov.co/index.php/catalog/643/get_microdata).
--   \*\*\*\*Bases de datos\*\* **de amenazas y eventos de desastre** **regionales y mundiales**\*\*
+
+    ## Bases de datos **de amenazas y eventos de desastre** **regionales y mundiales**
+
     -   Plataforma para las Am é ricas. [*Link*](https://eird.org/pr18/eng/).
     -   Atlas de Riesgos Climáticos para Chile. [*Link*](https://arclim.mma.gob.cl/).
     -   Mapa digital de amenazas y desastres de Chile. [*Link*](https://chileterritorioenmovimiento.cl/mapa-interactivo/).
@@ -222,30 +271,41 @@ Los desastres no son naturales
     -   SIGMA (Swiss Re). [*Link*](https://www.sigma-explorer.com/).
     -   G Lobal unique disaster IDEntifier (GLIDE). [*Link*](https://glidenumber.net/glide/public/about.jsp).
     -   Metabuscador Climate Adapt. [*Link*](https://climate-adapt.eea.europa.eu/data-and-downloads/?source=%7B%22query%22%3A%7B%22function_score%22%3A%7B%22query%22%3A%7B%22bool%22%3A%7B%22must%22%3A%7B%22bool%22%3A%7B%22must%22%3A%5B%7B%22term%22%3A%7B%22hasWorkflowState%22%3A%22published%22%7D%7D%5D%7D%7D%2C%22filter%22%3A%7B%22bool%22%3A%7B%22should%22%3A%5B%7B%22term%22%3A%7B%22typeOfData%22%3A%22Information%20portals%22%7D%7D%5D%7D%7D%7D%7D%2C%22functions%22%3A%5B%7B%22gauss%22%3A%7B%22issued%22%3A%7B%22scale%22%3A%2214d%22%7D%7D%7D%5D%2C%22score_mode%22%3A%22sum%22%7D%7D%2C%22display_type%22%3A%22list%22%2C%22sort%22%3A%5B%7B%22issued%22%3A%7B%22order%22%3A%22desc%22%7D%7D%5D%2C%22highlight%22%3A%7B%22fields%22%3A%7B%22*%22%3A%7B%7D%7D%7D%7D).
+
 -   **Otros**
+
     -   GDIS, a global dataset of geocoded disaster locations. Scientific Data. 2021. [*Link*](https://www.nature.com/articles/s41597-021-00846-6).
     -   World tectonic plates and boundaries. Github. [*Link*](https://github.com/fraxen/tectonicplates/)
     -   The Lloyd’s Register Foundation World Risk Poll. [*Link*](https://wrp.lrfoundation.org.uk/data-resources/a-world-of-risk-country-overviews/).
+
 -   **Lecturas**:
+
     -   Worldwide disaster loss and damage databases: A systematic review. 2021. [*Link*](https://www.jehp.net/article.asp?issn=2277-9531;year=2021;volume=10;issue=1;spage=329;epage=329;aulast=Mazhin).
+
 -   **Otras bases de datos nacionales**
+
     -   LEILA – Librería de calidad de datos. DNP. [*Link*](https://ucd-dnp.github.io/leila/index.html)
+
 -   **Bases de datos de información técnica**
+
     -   OECD. [*Link*](https://www.oecd.org/).
         -   OECD One. [*Link*](https://one.oecd.org/). [*Link*](https://login.oecd.org/?appId=293718&targetAppId=18060&referer=https%3A%2F%2Fone.oecd.org%2F). [*Tutorials*](https://community.oecd.org/community/one-feedback/tutorials). [Co-creation project](https://community.oecd.org/community/cstp/tip/cocreation)
     -   United Nations Climate Change. [*Link*](https://www4.unfccc.int/sites/nwpstaging/pages/Search.aspx).
 
 **A Decade of the Sendai Framework for Disaster Risk Reduction – Envisioning the Road Ahead» on 26 September at UNESCO Headquarters, in Paris France, 2024**
 
-![](https://www.youtube.com/watch?v=F1fp2aDGth8)
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=F1fp2aDGth8" >}}
 
-![](https://www.youtube.com/watch?v=FfHlOYKoCbY)
+{{< video "https://www.youtube.com/watch?v=FfHlOYKoCbY" >}}
 
-![](https://www.youtube.com/watch?v=Rf8g0sgQ93s)
+{{< video "https://www.youtube.com/watch?v=Rf8g0sgQ93s" >}}
 
-![](https://www.youtube.com/watch?v=Fp_eWW7bDtA)
+{{< video "https://www.youtube.com/watch?v=Fp_eWW7bDtA" >}}
+:::
 
--   **Revistas en gestión de riesgos**
+## **Revistas en gestión de riesgos**
+
 -   **Internacionales**
     -   International Journal of Disaster Risk Reduction. [*Link*](https://www.journals.elsevier.com/international-journal-of-disaster-risk-reduction).
     -   International Journal of Disaster Risk Science. [*Link*](https://www.springer.com/journal/13753).
@@ -283,16 +343,21 @@ Los desastres no son naturales
     -   En SJR
         -   Area Safety research. [*Link*](https://www.scimagojr.com/journalrank.php?category=3311) Latinoamerica. [*Link*](https://www.scimagojr.com/journalrank.php?category=3311&country=Latin%20America).
         -   Area Geography, Planning and Development. [*Link*](https://www.scimagojr.com/journalrank.php?category=3305). Latinoamerica. [*Link*](https://www.scimagojr.com/journalrank.php?category=3305&country=Latin%20America).
--   **Algunos investigadores Internacionales en DRR**
-    -   Irasema Alcántara Ayala. [*Link*](https://scholar.google.co.uk/citations?hl=en&user=bDAzleQAAAAJ&view_op=list_works&sortby=pubdate).
-    -   David E. Alexander. [*Link*](https://scholar.google.co.uk/citations?hl=en&user=F6l81zAAAAAJ).
-    -   Susan L. Cutter. [*Link*](https://scholar.google.com/citations?hl=es&user=BCo8hAwAAAAJ&view_op=list_works&sortby=pubdate).
-    -   Juergen Weichselgartner. [*Link*](https://scholar.google.com/citations?hl=es&user=fES1svQAAAAJ&view_op=list_works&sortby=pubdate).
-    -   Benigno Aguirre. [*Link*](https://scholar.google.com/citations?hl=es&user=i36JlYgAAAAJ&view_op=list_works&sortby=pubdate).
-    -   Douglas Paton (Risk communication). [*Link*](https://scholar.google.com/citations?hl=en&user=3luSZvYAAAAJ&view_op=list_works).
-    -   JC Gaillard. [*Link*](https://jcgaillard.wordpress.com/).
-    -   Gonzalo Lizarralde. [*Link*](https://scholar.google.com/citations?user=T6VcEwUAAAAJ&hl=es&oi=ao).
-    -   Cees Van Westen. [*Link*](https://scholar.google.com/citations?hl=es&user=Y_wCIDYAAAAJ&view_op=list_works&sortby=pubdate)
+
+## Algunos investigadores Internacionales en DRR
+
+```         
+-   Irasema Alcántara Ayala. [*Link*](https://scholar.google.co.uk/citations?hl=en&user=bDAzleQAAAAJ&view_op=list_works&sortby=pubdate).
+-   David E. Alexander. [*Link*](https://scholar.google.co.uk/citations?hl=en&user=F6l81zAAAAAJ).
+-   Susan L. Cutter. [*Link*](https://scholar.google.com/citations?hl=es&user=BCo8hAwAAAAJ&view_op=list_works&sortby=pubdate).
+-   Juergen Weichselgartner. [*Link*](https://scholar.google.com/citations?hl=es&user=fES1svQAAAAJ&view_op=list_works&sortby=pubdate).
+-   Benigno Aguirre. [*Link*](https://scholar.google.com/citations?hl=es&user=i36JlYgAAAAJ&view_op=list_works&sortby=pubdate).
+-   Douglas Paton (Risk communication). [*Link*](https://scholar.google.com/citations?hl=en&user=3luSZvYAAAAJ&view_op=list_works).
+-   JC Gaillard. [*Link*](https://jcgaillard.wordpress.com/).
+-   Gonzalo Lizarralde. [*Link*](https://scholar.google.com/citations?user=T6VcEwUAAAAJ&hl=es&oi=ao).
+-   Cees Van Westen. [*Link*](https://scholar.google.com/citations?hl=es&user=Y_wCIDYAAAAJ&view_op=list_works&sortby=pubdate)
+```
+
 -   **Eventos internacionales**
     -   Annual Natural Hazards Workshop. [*Link*](https://hazards.colorado.edu/workshop).
     -   ICGNH 2020: 14. International Conference on Geography and Natural Hazards. [*Link*](https://waset.org/geography-and-natural-hazards-conference-in-april-2020-in-boston).
@@ -315,15 +380,17 @@ Los desastres no son naturales
 -   **Lecturas**
     -   Harnessing risk-informed data for disaster and climate resilience. 2022. [*Link*](https://www.preventionweb.net/publication/harnessing-risk-informed-data-disaster-and-climate-resilience?utm_source=LinkedIn&utm_campaign=PreventionSavesLives). [*Link*](https://www.sciencedirect.com/science/article/pii/S2590061722000412).
 
-![](https://www.youtube.com/watch?v=-ImINBEeiIs)
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=-ImINBEeiIs" >}}
 
-<iframe title="2021-06-21 CODATA DDI Alliance webinar: Implementing FAIR - What DDI Can Do for You!" src="https://player.vimeo.com/video/565557781?dnt=1&amp;app_id=122963" width="1140" height="641" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media">
+{{< video "https://www.youtube.com/watch?v=kb6OpSIVP7I " >}}
+
+<iframe title="2021-06-21 CODATA DDI Alliance webinar: Implementing FAIR - What DDI Can Do for You!" src="https://player.vimeo.com/video/565557781?dnt=1&amp;app_id=122963" width="570" height="320" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media">
 
 </iframe>
+:::
 
-![](https://www.youtube.com/watch?v=kb6OpSIVP7I)
-
-Mapeo de Asentamientos Informales basado en Inteligencia Artificial
+Mapeo de Asentamientos Informales basado en Inteligencia Artificial. Banco Mundial.[ *Link*](https://www.iadb.org/es/quienes-somos/topicos/desarrollo-urbano-y-vivienda/maiia).
 
 -   **Ciencia, tecnología e innovación en GRD.**
 -   Science, Technology and Academia.
@@ -338,11 +405,17 @@ Mapeo de Asentamientos Informales basado en Inteligencia Artificial
     -   Applications of artificial intelligence for disaster management. *Natural Hazards,* 2020. [*Link*](https://link.springer.com/article/10.1007/s11069-020-04124-3).
 -   **Lecturas**
     -   Exploring the emerging evolution trends of disaster risk reduction research: a global scenario. *International Journal of Environmental Science and Technology,* 2021. [*Link*](https://link.springer.com/article/10.1007/s13762-020-02847-1).
+
     -   Knowledge and Disaster Risk Reduction. *The Routledge Handbook of Hazards and Disaster Risk Reduction*. 2011. [*Link*](https://www.routledgehandbooks.com/doi/10.4324/9780203844236.ch9)
+
     -   Perspectives of Science and Technology in Disaster RiskReduction of Asia. 2016. International Journal of Disaster Risk Science. [*Link*](https://doi.org/10.1007/s13753-016-0104-7).
+
     -   Three innovative approaches for managing disaster risks. [*Link*](https://blogs.worldbank.org/sustainablecities/three-innovative-approaches-managing-disaster-risks).
+
     -   2021 APRU Multi-Hazards Webinar Series: Health, Climate Change and Innovation in Disaster Risk Reduction. [*Link*](https://apru.org/event/2021-apru-multi-hazards-webinar-series-health-climate-change-and-innovation-in-disaster-risk-reduction/), [*link*](https://apru.org/wp-content/uploads/2021/10/MH-webinar_oct-2021.pdf).
+
     -   ADB and OECD. 2020. Leveraging Technology and Innovation for Disaster Risk Management and Financing. [*Link*](https://www.adb.org/sites/default/files/publication/664501/tech-innovation-disaster-risk-mgt-financing.pdf)
+
     -   Success, innovation and challenge: School safety and disaster education in South America and the Caribbean, 2020. [*Link*](https://www.sciencedirect.com/science/article/abs/pii/S2212420919305813).
 
 **IRDR Compilation 2010-2020: A Ten Year Science Quest for Disaster Risk Reduction**. [*Link*](https://www.irdrinternational.org/knowledge_pool/publications/868)
@@ -351,12 +424,14 @@ Mapeo de Asentamientos Informales basado en Inteligencia Artificial
 
 **A framework for global science in support of risk-informed sustainable development and planetary health**. 2021. [*Link*](https://www.undrr.org/publication/framework-global-science-support-risk-informed-sustainable-development-and-planetary).
 
-![](https://www.youtube.com/watch?v=Kv6LUyDTivQ)
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=Kv6LUyDTivQ" >}}
 
-![](https://www.youtube.com/watch?v=SRNPohtu6zo)
+{{< video "https://www.youtube.com/watch?v=SRNPohtu6zo" >}}
 
-![](https://www.youtube.com/watch?v=txi60sxkgjg)
+{{< video "https://www.youtube.com/watch?v=txi60sxkgjg" >}}
 
-![](https://www.youtube.com/watch?v=uZswTWn9nyU)
+{{< video "https://www.youtube.com/watch?v=uZswTWn9nyU" >}}
 
-![](https://www.youtube.com/watch?v=65yMaoofboQ)
+{{< video "https://www.youtube.com/watch?v=65yMaoofboQ" >}}
+:::
