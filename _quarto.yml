@@ -29,6 +29,8 @@ website:
             href: grd/incendiosforestales.qmd 
           - text: "Inundaciones"
             href: grd/inundaciones.qmd
+          - text: "Amenazas extraterrestres"
+            href: grd/amenazasextraterrestres.qmd
       - section: "Gestión de proyectos"
         contents:
           - text: "Gestión de proyectos de CTeI"
