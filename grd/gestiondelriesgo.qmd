@@ -158,7 +158,6 @@ editor: visual
     -   Extreme Natural Hazards, Disaster Risks and Societal Implications. 2014. [*Link*](https://books.google.com.co/books?hl=es&lr=&id=XzE4AwAAQBAJ).
     -   Encyclopedia of Natural Hazards. 2013. [*Link*](https://link.springer.com/referencework/10.1007/978-1-4020-4399-4).
     -   Encyclopedia of Natural Hazard Science. OUP. [*Link*](https://oxfordre.com/naturalhazardscience/).
-    -   Education for Sustainable Development and Disaster Risk Reduction. 2014. [*Link*](https://books.google.com.co/books?id=SCM9BAAAQBAJ).
     -   Sustainable Development and Disaster Risk Reduction. 2016. [*Link*](https://books.google.com.co/books?id=79bjCgAAQBAJ).
     -   Natural Hazards, Second Edition: Explanation and Integration. 2017. [*Link*](https://books.google.com.co/books?hl=es&lr=&id=gw_kDAAAQBAJ&oi=fnd&pg=PP1&dq=Natural+Hazard+risk&ots=DJenfdnkZr&sig=uZnu_qPSrYCKlBryI0KZc6qEdDY&redir_esc=y#v=onepage&q&f=false).
     -   Natural Hazards and Disasters. Fifth Ed. Hyndman. 2017. [*Link*](https://books.google.com.co/books?id=nMgaCgAAQBAJ).
@@ -199,13 +198,6 @@ editor: visual
 </div>
 
 **Los desastres no son naturales**
-
-**EDUCACIÓN**
-
--   **Lecturas educación**
-    -   IFRC (Federación Internacional de Sociedades de la Cruz Roja y Media Luna Roja). 2011. Guía: Para la sensibilización y educación pública sobre la reducción de riesgos de desastres. Ginebra, Suiza. [*Link*](https://www.preventionweb.net/files/61592_302200publicawarenessddrguidees.pdf).
-    -   Plan nacional de capacitación y formación en gestión del riesgo de desastres 2022-2030. [*Link*](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/38718?fbclid=IwAR18I1UGQjs6QY50qGJiSpHwZSovFTo_q9wL8p4Q0k7jh9bBsOUFgX5aqrk).
-    -   Postgraduate modules, University College London. [*Link*](https://www.ucl.ac.uk/risk-disaster-reduction/study/postgraduate-modules).
 
 **ENTRENAMIENTO**
 
@@ -300,18 +292,11 @@ editor: visual
     -   Mensajes que contienen un alto contenido emocional para el individuo.
     -   Mensajes respaldados por experiencias posteriores (medición *ex post facto* ).
 
-::::::: {layout-ncol="2"}
-{{< video "https://www.youtube.com/watch?v=m-p8kUrUWd4" >}}
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=m-p8kUrUWd4" >}} Comunicación del riesgo volcánico
 
-Comunicación del riesgo volcánico
-
-**Global platform for disaster risk reduction, Indonesia 2022**
-
-<div>
-
-{{< video "https://www.youtube.com/watch?v=Mn7EgWsnzUo" >}}
-
-</div>
+{{< video "https://www.youtube.com/watch?v=Mn7EgWsnzUo" >}} Global platform for disaster risk reduction, Indonesia 2022
+:::
 
 **GRD SECTORIAL**
 
@@ -325,13 +310,9 @@ Comunicación del riesgo volcánico
 
 -   Innovación y gestión del riesgo frente a multiamenazas en el campo colombiano. [*Link*](https://nacionesunidas.org.co/noticias/actualidad-colombia/innovacion-y-gestion-del-riesgo-frente-a-multiamenazas-en-el-campo-colombiano/).
 
-<div>
-
 {{< video "https://www.youtube.com/watch?v=fcV7cLzr2CU" >}}
 
-</div>
-
-**SISTEMAS DE ALERTA TEMPRANA**
+# **Sistemas de alerta temprana**
 
 -   Access to early warning systems and disaster risk information and assessments. Naciones Unidas. [*Link*](https://www.un.org/en/observances/disaster-reduction-day).
 -   Sistema de Alerta Temprana de Medellín y el Valle de Aburrá. SIATA. [*Link*](https://siata.gov.co/siata_nuevo/).
@@ -352,8 +333,3 @@ Comunicación del riesgo volcánico
 \
 Sistemas de alerta temprana
 :::
-
-<div>
-
-</div>
-:::::::

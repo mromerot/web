@@ -23,6 +23,8 @@ website:
             href: grd/manejodedesastres.qmd
           - text: "Ciencia y tecnología"
             href: grd/cienciaytecnologia.qmd
+          - text: "Educacion"
+            href: grd/educacion.qmd
           - text: "Riesgo volcánico"
             href: grd/volcanes.qmd
           - text: "Incendios forestales"

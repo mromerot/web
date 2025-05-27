@@ -31,8 +31,8 @@ editor: visual
     -   [Session 1: Key International and Political Developments](https://www.youtube.com/live/yO8coRPnBiI)
     -   [Session 2: Advancements and Progress in NEO Discovery](https://www.youtube.com/live/kI9oeBob4x8?si=qbe0XiVCaOSyQK0C)
 
-::: {layout-ncol="2"}
 
+::: {layout-ncol="2"}
 {{< video "https://youtu.be/vLF4EF2LYVQ" >}} La amenaza del impacto de asteroides cercanos a la Tierra
 
 {{< video "https://youtu.be/543FvG9vIEY" >}} Biografía de un impacto: el meteorito ruso \| Ciencia en Bicicleta \| Planetario Medellín
@@ -42,7 +42,6 @@ editor: visual
 {{< video "https://youtu.be/Q9KwK0izt5c" >}} [NASA \| NPP Sees Aftermath of the Chelyabinsk Meteor](https://youtu.be/Q9KwK0izt5c)
 
 {{< video "https://youtu.be/wkqoUXds26U" >}} 7th IAA Planetary Defense Conference Day 2: Discovery and Characterization
-
 :::
 
 ## Evaluación del riesgo
@@ -59,8 +58,8 @@ editor: visual
     -   [Session 9: Public Education & Communication](https://www.youtube.com/live/99UpnKwcBKI)
 
 ::: {layout-ncol="2"}
-{{< video "https://youtu.be/bYbIPDkcsyQ" >}} 7th IAA Planetary Defense Conference Day 5: Decision to Act and Public Engagement
 
+{{< video "https://youtu.be/bYbIPDkcsyQ" >}} 7th IAA Planetary Defense Conference Day 5: Decision to Act and Public Engagement
 :::
 
 ## Reducción del riesgo
@@ -77,7 +76,6 @@ editor: visual
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/Cj9ikPkjYt8" >}} 7th IAA Planetary Defense Conference Day 4: Impact Effects and Disaster Management
-
 :::
 
 ## Ciencia
