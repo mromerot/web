@@ -33,6 +33,10 @@ website:
             href: grd/inundaciones.qmd
           - text: "Amenazas extraterrestres"
             href: grd/amenazasextraterrestres.qmd
+          - text: "Cursos en GRD"
+            href: grd/cursos.qmd
+          - text: "Repositorios FAIR"
+            href: grd/repositorios.qmd
       - section: "Gestión de proyectos"
         contents:
           - text: "Gestión de proyectos de CTeI"
@@ -87,4 +91,3 @@ format:
     toc-title: "Contenidos"
     toc-back-to-top: true
     toc-back-to-top-text: "Volver arriba"
-    toc-back-to-top-title: "Volver arriba"

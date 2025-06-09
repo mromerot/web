@@ -4,13 +4,13 @@ format: html
 editor: visual
 ---
 
--   Qué es
-
-<!-- -->
+# Qué es la ciencia reproducible
 
 -   Definición de ciencia abierta
 
-## **Recursos para ciencia abierta**
+<!-- -->
+
+# Recursos para ciencia abierta
 
 -   U de Arizona. Training. [*Link*](https://data.library.arizona.edu/data-management/workshops-events/workshop-slides-recordings).
 -   MANTRA, free online course for those who manage digital data as part of their research project. [*Link*](https://mantra.ed.ac.uk/).
@@ -29,7 +29,7 @@ Un plan de gestión de datos (DMP) es un documento que describe cómo tratará s
 
 # Publicación reproducible
 
-**Quarto**
+## **Quarto**
 
 -   What is Quarto. [*Link*](https://ucsb-meds.github.io/creating-quarto-websites/).
 -   Quarto Guide. [*Link*](https://quarto.org/docs/guide/).\*\*\*
@@ -60,7 +60,9 @@ Un plan de gestión de datos (DMP) es un documento que describe cómo tratará s
 Videos sobre Quarto pub
 :::
 
-**Curvenote**. [*Link*](https://curvenote.com/)
+## Curvenote 
+
+-   Curvenote. [*Link*](https://curvenote.com/)
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/1BWYLzQd8Ds" >}}
@@ -68,7 +70,7 @@ Videos sobre Quarto pub
 {{< video "https://youtu.be/LviMD9zE3FM" >}}
 :::
 
-**Shiny**
+## Shiny
 
 -   Shiny assistant. [*Link*](https://gallery.shinyapps.io/assistant).
     -   Info [*Link*](https://shiny.posit.co/blog/posts/shiny-assistant/)
@@ -81,7 +83,7 @@ Videos sobre Quarto pub
 Shiny
 :::
 
-**Markdown**
+## Markdown
 
 Markdown es un lenguaje de marcado ligero que permite añadir elementos de formato a documentos de texto sin formato. Creado por [John Gruber](https://daringfireball.net/projects/markdown/) en 2004, Markdown es actualmente uno de los lenguajes de marcado más populares del mundo. Markdown se puede usar para todo. Se usa para crear sitios web, documentos, notas, libros, presentaciones, correos electrónicos y documentación técnica. Markdown es independiente de la plataforma.
 
@@ -94,3 +96,20 @@ Markdown es un lenguaje de marcado ligero que permite añadir elementos de forma
     -   Dillinger. [*Link*](https://dillinger.io/).
     -   Prosemirror. [*Link*](https://prosemirror.net/).
     -   StackEdit. [*Link*](https://stackedit.io/)
+
+## Static site generators
+
+-   Mkdocs. Project documentation with Markdown. [Link](https://www.mkdocs.org/)
+    -   Materials for Mkdocs. [Link](https://squidfunk.github.io/mkdocs-material/)
+-   Sphinx. [Link](https://www.sphinx-doc.org/en/master/).
+-   Fast Api. [Link](https://fastapi.tiangolo.com/)
+-   MyST. [Link](https://mystmd.org/guide)
+-   Quarto. [Link](https://quartopub.com/)
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/Q-YA_dA8C20?si=mdSeFuqhm2qIOdwu" >}} How To Create STUNNING Code Documentation With MkDocs Material Theme
+
+{{< video "https://youtu.be/xlABhbnNrfI?si=x51H8EMfUC12GjAq" >}} Material for MkDocs: Full Tutorial To Build And Deploy Your Docs Portal
+
+MKDocs
+:::
