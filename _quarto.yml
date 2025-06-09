@@ -25,14 +25,14 @@ website:
             href: grd/cienciaytecnologia.qmd
           - text: "Educacion"
             href: grd/educacion.qmd
-          - text: "Riesgo volcánico"
-            href: grd/volcanes.qmd
           - text: "Incendios forestales"
             href: grd/incendiosforestales.qmd 
           - text: "Inundaciones"
             href: grd/inundaciones.qmd
           - text: "Amenazas extraterrestres"
             href: grd/amenazasextraterrestres.qmd
+          - text: "Volcanes"
+            href: grd/volcanes.qmd
           - text: "Cursos en GRD"
             href: grd/cursos.qmd
           - text: "Repositorios FAIR"
@@ -77,10 +77,12 @@ website:
             href: vidalaboral/vidalaboral.qmd
           - text: "Herramientas"
             href: vidalaboral/herramientas.qmd
-      - section: "Mis publicaciones"
+      - section: "Curriculum vitae" 
         contents:
+          - text: "Curriculum vitae"
+            href: cv/cv.qmd
           - text: "Mis publicaciones"
-            href: mispublicaciones/publicaciones.qmd
+            href: cv/publicaciones.qmd
 
 format:
   html:
