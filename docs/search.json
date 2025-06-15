@@ -281,93 +281,145 @@
   {
     "objectID": "grd/riesgosismico.html",
     "href": "grd/riesgosismico.html",
-    "title": "Riesgo sismico",
+    "title": "Riesgo sísmico",
     "section": "",
-    "text": "UNGRD. Link\nAsociación Colombiana de Ingeniería Sísmica - AIS. Link."
+    "text": "UNGRD. Link\nAsociación Colombiana de Ingeniería Sísmica - AIS. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Riesgo sísmico"
+    ]
   },
   {
     "objectID": "grd/riesgosismico.html#instituciones-nacionales",
     "href": "grd/riesgosismico.html#instituciones-nacionales",
-    "title": "Riesgo sismico",
+    "title": "Riesgo sísmico",
     "section": "",
-    "text": "UNGRD. Link\nAsociación Colombiana de Ingeniería Sísmica - AIS. Link."
+    "text": "UNGRD. Link\nAsociación Colombiana de Ingeniería Sísmica - AIS. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Riesgo sísmico"
+    ]
   },
   {
     "objectID": "grd/riesgosismico.html#instituciones-internacionales",
     "href": "grd/riesgosismico.html#instituciones-internacionales",
-    "title": "Riesgo sismico",
+    "title": "Riesgo sísmico",
     "section": "Instituciones internacionales",
-    "text": "Instituciones internacionales"
+    "text": "Instituciones internacionales\n\nGlobal Earthquake Model Foundation. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Riesgo sísmico"
+    ]
   },
   {
     "objectID": "grd/riesgosismico.html#programas-internacionales",
     "href": "grd/riesgosismico.html#programas-internacionales",
-    "title": "Riesgo sismico",
+    "title": "Riesgo sísmico",
     "section": "Programas internacionales",
-    "text": "Programas internacionales\nInternational Geoscience Programme (IGCP). Link.\nGeopoderes Webinar. Link.\n Presentation of the Geohazards theme of UNESCO’s International Geoscience Programme"
+    "text": "Programas internacionales\n\nOpenQuake - Plataforma. Link.\nCompilation and data manipulation scripts. Link.\nGeopoderes Webinar. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Riesgo sísmico"
+    ]
   },
   {
     "objectID": "grd/riesgosismico.html#amenaza-sísmica",
     "href": "grd/riesgosismico.html#amenaza-sísmica",
-    "title": "Riesgo sismico",
+    "title": "Riesgo sísmico",
     "section": "Amenaza sísmica",
-    "text": "Amenaza sísmica\n\n\n\n Webinar AIS: Presentación de la amenaza sísmica de AIS 300 y plataforma SAGA"
+    "text": "Amenaza sísmica\n\nModelo nacional de amenaza sísmica para Colombia. SGC. Link.\nModelo nacional de amenaza sísmica para Colombia. Bogotá: Servicio Geológico Colombiano y Fundación Global Earthquake Model. Link. Link.\nModelo de Amenaza Sísmica de Colombia. Link.\nWhat is seismic hazard? What is a seismic hazard map? How are they made? How are they used? Why are there different maps, and which one should I use?. USGS. Link.\nEarthquake Hazard Maps. FEMA. Link.\nIris Earthquake Browser. Link.\nGeohazards Europa. Link.\nMapping Global Earthquakes and Hurricane tracks with R. Link.\n\n\n\n\n Modelo Nacional de Riesgo Sísmico\n\n\n Webinar AIS: Presentación de la amenaza sísmica de AIS 300 y plataforma SAGA\n\n\n\n\n Modelo Nacional de Riesgo Sísmico de Colombia: Trabajo en equipo y oportunidades de innovación\n\n\n Plataforma AIS Saga\n\n\n\n\nAmenaza sísmica",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Riesgo sísmico"
+    ]
   },
   {
     "objectID": "grd/riesgosismico.html#evaluación-del-riesgo-por-amenaza-sísmica",
     "href": "grd/riesgosismico.html#evaluación-del-riesgo-por-amenaza-sísmica",
-    "title": "Riesgo sismico",
+    "title": "Riesgo sísmico",
     "section": "Evaluación del riesgo por amenaza sísmica",
-    "text": "Evaluación del riesgo por amenaza sísmica"
+    "text": "Evaluación del riesgo por amenaza sísmica\n\nWhy is Probabilistic Seismic Hazard Analysis (PSHA) still used?. 2017. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Riesgo sísmico"
+    ]
   },
   {
     "objectID": "grd/riesgosismico.html#comunicación-del-riesgo",
     "href": "grd/riesgosismico.html#comunicación-del-riesgo",
-    "title": "Riesgo sismico",
+    "title": "Riesgo sísmico",
     "section": "Comunicación del riesgo",
-    "text": "Comunicación del riesgo"
+    "text": "Comunicación del riesgo",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Riesgo sísmico"
+    ]
   },
   {
     "objectID": "grd/riesgosismico.html#reducción-del-riesgo",
     "href": "grd/riesgosismico.html#reducción-del-riesgo",
-    "title": "Riesgo sismico",
+    "title": "Riesgo sísmico",
     "section": "Reducción del riesgo",
-    "text": "Reducción del riesgo\n\nP"
+    "text": "Reducción del riesgo\n\nReglamento Colombiano de Construcción Sismo Resistente NSR. Link.\n\n\n\n\n Cómo construir edificaciones sismo resistentes",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Riesgo sísmico"
+    ]
   },
   {
     "objectID": "grd/riesgosismico.html#manejo-de-desastres",
     "href": "grd/riesgosismico.html#manejo-de-desastres",
-    "title": "Riesgo sismico",
+    "title": "Riesgo sísmico",
     "section": "Manejo de desastres",
-    "text": "Manejo de desastres"
+    "text": "Manejo de desastres",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Riesgo sísmico"
+    ]
   },
   {
     "objectID": "grd/riesgosismico.html#lecturas",
     "href": "grd/riesgosismico.html#lecturas",
-    "title": "Riesgo sismico",
+    "title": "Riesgo sísmico",
     "section": "Lecturas",
-    "text": "Lecturas"
+    "text": "Lecturas\n\nInternational Geoscience Programme (IGCP). Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Riesgo sísmico"
+    ]
   },
   {
     "objectID": "grd/riesgosismico.html#entrenamiento",
     "href": "grd/riesgosismico.html#entrenamiento",
-    "title": "Riesgo sismico",
+    "title": "Riesgo sísmico",
     "section": "Entrenamiento",
-    "text": "Entrenamiento"
+    "text": "Entrenamiento",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Riesgo sísmico"
+    ]
   },
   {
     "objectID": "grd/riesgosismico.html#repositorios",
     "href": "grd/riesgosismico.html#repositorios",
-    "title": "Riesgo sismico",
+    "title": "Riesgo sísmico",
     "section": "Repositorios",
-    "text": "Repositorios"
+    "text": "Repositorios",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Riesgo sísmico"
+    ]
   },
   {
     "objectID": "grd/riesgosismico.html#videos",
     "href": "grd/riesgosismico.html#videos",
-    "title": "Riesgo sismico",
+    "title": "Riesgo sísmico",
     "section": "Videos",
-    "text": "Videos"
+    "text": "Videos\n\n\n\n Presentation of the Geohazards theme of UNESCO’s International Geoscience Programme",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Riesgo sísmico"
+    ]
   },
   {
     "objectID": "grd/amenazasextraterrestres.html",
