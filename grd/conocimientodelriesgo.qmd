@@ -33,7 +33,7 @@ editor: visual
 -   CLIMAAX CRA Handbook. [*Link*](https://handbook.climaax.eu/intro.html)
 -   Risk Data Library - Country Climate & Disaster Risk Screening Tools. [*Link*](https://gfdrr.github.io/CCDR-tools/home.html#).
 -   Risk Changes. An open-source Spatial Decision Support tool for the analysis of Dynamic Multi-Hazard risk. [Link.](https://riskchanges.org/app/#/app)
--   Sun, R., Gao, G., Gong, Z. et al. A review of risk analysis methods for natural disasters. Nat Hazards 100, 571–593 (2020). [Link](https://doi.org/10.1007/s11069-019-03826-7)
+-   A review of risk analysis methods for natural disasters. Nat Hazards 100, 571–593. Sun, R., Gao, G., Gong, Z. et al. 2020. [Link](https://doi.org/10.1007/s11069-019-03826-7)
 -   Hybrid loss exceedance curve (HLEC) for disaster risk assessment. Velazquez et al. 2020. [Link](https://link.springer.com/article/10.1007/s11069-013-1017-z)
 -   Assessing global exposure and vulnerability towards natural hazards: the Disaster Risk Index. Peduzzi, et al. 2009, Nat. Hazards Earth Syst. [Link](https://nhess.copernicus.org/articles/9/1149/2009/)
 
@@ -53,6 +53,24 @@ editor: visual
 {{< video "https://www.youtube.com/watch?v=D_y4oKbWdHI" >}} Risk Analysis for Civil Protection
 
 Evaluación del riesgo
+:::
+
+# Comunicación del riesgo
+
+![Comunicación del riesgo](https://www.preventionweb.net/sites/default/files/2024-10/RiCA-Pocket-Guide-V7-27.09.24_Page_46_Image_0001.jpg){fig-align="center" width="450"}
+
+-   Disaster Risk Communication Hub. [*Link*](https://www.preventionweb.net/hubs/disaster-risk-communication-hub)
+
+-   Global Platform elevates risk communication as essential for disaster risk reduction. 2025. [*Link*](https://www.undrr.org/news/global-platform-elevates-risk-communication-essential-disaster-risk-reduction).
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/BVBiE7x_yKg" >}} Effective disaster risk communication can save lives and livelihoods \| UNDRR
+
+{{< video "https://youtu.be/gMDhH3B6vFE" >}} Response 1: Effective risk and warning communication during natural hazards
+
+{{< video "https://youtu.be/8guftNAU7Kg" >}} Module 1.2: What is Risk Communication
+
+Risk communication
 :::
 
 ## Vulnerablidad
@@ -124,7 +142,7 @@ Videos sobre resiliencia
 
 {{< video "https://youtu.be/f3Mef5a6VAE >}} Forensic Analysis
 
-## UNDRR. Disaster Forensics.
+## UNDRR. Disaster Forensics
 
 UNDRR. Disaster Forensics. [*Link*](https://www.undrr.org/disaster-forensics). Las siguientes preguntas describen un cuestionario simplificado para realizar un análisis forense de cualquier desastre. Las preguntas siguen los tres pasos clave de la metodología FORIN (Investigaciones Forenses de Desastres).
 

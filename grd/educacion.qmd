@@ -12,11 +12,11 @@ editor: visual
 
 # Recursos
 
--   Disaster risk reduction for children. [*Link*](https://www.undrr.org/implementing-sendai-framework/sendai-framework-action/disaster-risk-reduction-for-children)
--   Ready kids. [*Link*](https://www.ready.gov/es/kids).
--   Education for Young People. AIDR Australia. [*Link*](https://schools.aidr.org.au/).
+-   Disaster risk reduction for children. UNDRR. [*Link*](https://www.undrr.org/implementing-sendai-framework/sendai-framework-action/disaster-risk-reduction-for-children) *\*\*\**
+    -   Child-friendly glossary. UNDRR. [*Link*](https://www.preventionweb.net/publication/child-friendly-glossary)
+-   Ready kids. FEMA. [*Link*](https://www.ready.gov/es/kids). \*\*\*
+-   Education for Young People. AIDR Australia. [*Link*](https://schools.aidr.org.au/). \*\*\*
     -   Education resources. [*Link*](https://schools.aidr.org.au/disaster-resilience-education/teaching-resources/#/)
--   Child-friendly glossary. UNDRR. [*Link*](https://www.preventionweb.net/publication/child-friendly-glossary)
 -   Climate change starter's guidebook: an issues guide for education planners and practitioners. UNESCO. [*Link*](https://unesdoc.unesco.org/ark:/48223/pf0000211136).
 -   Green Vocabulary: Teaching Kids About Climate Change. [*Link*](https://www.performingenglish.net/green-vocabulary-teaching-kids-about-climate-change/).
 -   Vocabulary for a Changing Climate. [*Link*](https://kidsagainstclimatechange.co/vocabulary-for-a-changing-climate/).
@@ -34,6 +34,11 @@ editor: visual
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/kKA23uASxeg?si=LH3YLU-jGk_KaYMK" >}} COPE Disasters Champions
+
+{{< video "https://youtu.be/XfTKBeWELjY" >}} Disaster Resilience Education for Young People Handbook \| [*Link*](https://knowledge.aidr.org.au/resources/handbook-disaster-resilience-education-for-young-people/)
+:::
+
+::: {layout-ncol="2"}
 :::
 
 # Lecturas

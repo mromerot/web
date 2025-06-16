@@ -60,7 +60,7 @@ Un plan de gestión de datos (DMP) es un documento que describe cómo tratará s
 Videos sobre Quarto pub
 :::
 
-## Curvenote 
+## Curvenote
 
 -   Curvenote. [*Link*](https://curvenote.com/)
 
@@ -107,9 +107,28 @@ Markdown es un lenguaje de marcado ligero que permite añadir elementos de forma
 -   Quarto. [Link](https://quartopub.com/)
 
 ::: {layout-ncol="2"}
-{{< video "https://youtu.be/Q-YA_dA8C20?si=mdSeFuqhm2qIOdwu" >}} How To Create STUNNING Code Documentation With MkDocs Material Theme
+{{< video "https://youtu.be/Q-YA_dA8C20" >}} How To Create STUNNING Code Documentation With MkDocs Material Theme
 
-{{< video "https://youtu.be/xlABhbnNrfI?si=x51H8EMfUC12GjAq" >}} Material for MkDocs: Full Tutorial To Build And Deploy Your Docs Portal
+{{< video "https://youtu.be/xlABhbnNrfI" >}} Material for MkDocs: Full Tutorial To Build And Deploy Your Docs Portal
 
 MKDocs
 :::
+
+# Diagramas
+
+-   Mermaid. [*Link*](https://mermaid.js.org/)
+-   Graphviz. [*Link*](https://graphviz.org/)
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/xlABhbnNrfI" >}} Mermaid
+
+{{< video "https://youtu.be/nVEe11Z5HSA" >}} **Graphviz**
+:::
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```

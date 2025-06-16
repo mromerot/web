@@ -67,6 +67,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <meta property="og:title" content="Ciencia reproducible – Inicio">
@@ -391,6 +394,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#markdown" id="toc-markdown" class="nav-link" data-scroll-target="#markdown">Markdown</a></li>
   <li><a href="#static-site-generators" id="toc-static-site-generators" class="nav-link" data-scroll-target="#static-site-generators">Static site generators</a></li>
   </ul></li>
+  <li><a href="#diagramas" id="toc-diagramas" class="nav-link" data-scroll-target="#diagramas">Diagramas</a></li>
   </ul>
 </nav>
     </div>
@@ -570,10 +574,10 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/Q-YA_dA8C20?si=mdSeFuqhm2qIOdwu" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> How To Create STUNNING Code Documentation With MkDocs Material Theme<p></p>
+<p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/Q-YA_dA8C20" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> How To Create STUNNING Code Documentation With MkDocs Material Theme<p></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/xlABhbnNrfI?si=x51H8EMfUC12GjAq" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> Material for MkDocs: Full Tutorial To Build And Deploy Your Docs Portal<p></p>
+<p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/xlABhbnNrfI" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> Material for MkDocs: Full Tutorial To Build And Deploy Your Docs Portal<p></p>
 </div>
 </div>
 <div class="quarto-layout-row">
@@ -582,9 +586,81 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-
-
 </section>
+</section>
+<section id="diagramas" class="level1">
+<h1>Diagramas</h1>
+<ul>
+<li>Mermaid. <a href="https://mermaid.js.org/"><em>Link</em></a></li>
+<li>Graphviz. <a href="https://graphviz.org/"><em>Link</em></a></li>
+</ul>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/xlABhbnNrfI" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> Mermaid<p></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/nVEe11Z5HSA" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> <strong>Graphviz</strong><p></p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Hard edge] --&gt; B(Round edge)
+  B --&gt; C{Decision}
+  C --&gt; D[Result one]
+  C --&gt; E[Result two]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+    A[PRESIDENTE DE LA REPÚBLICA] --&gt; B[CONSEJO NACIONAL PARA LA GESTIÓN DEL RIESGO]
+    B --&gt; C[UNGRD]
+    C --&gt; D1[Comité de Conocimiento]
+    C --&gt; D2[Comité de Reducción del Riesgo]
+    C --&gt; D3[Comité de Manejo de Desastres]
+    C --&gt; FN[FONDO NACIONAL&lt;br/&gt;(5 Subcuentas)]
+    D1 --&gt; E[GOBERNADOR]
+    D2 --&gt; E
+    D3 --&gt; E
+    E --&gt; FD[FONDO DEPARTAMENTAL]
+    E --&gt; F[CONSEJO DEPARTAMENTAL&lt;br/&gt;PARA LA GESTIÓN DEL RIESGO&lt;br/&gt;(Comités para Conocimiento, Reducción y Manejo)]
+    F --&gt; G[ALCALDE]
+    G --&gt; FM[FONDO MUNICIPAL]
+    G --&gt; H[CONSEJO MUNICIPAL&lt;br/&gt;PARA LA GESTIÓN DEL RIESGO&lt;br/&gt;(Comités para Conocimiento, Reducción y Manejo)]
+
+    style C fill:#ccc
+    style FN fill:#ddd
+    style FD fill:#ddd
+    style FM fill:#ddd
+    style D1 fill:#f9c74f
+    style D2 fill:#f9c74f
+    style D3 fill:#f9c74f
+    style E fill:#264653,stroke:#fff,color:#fff
+    style F fill:#264653,stroke:#fff,color:#fff
+    style G fill:#264653,stroke:#fff,color:#fff
+    style H fill:#264653,stroke:#fff,color:#fff
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
