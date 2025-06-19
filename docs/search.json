@@ -15,7 +15,7 @@
     "href": "gestiondeproyectos/gestionproyectosciencia.html",
     "title": "Gestión de proyectos de ciencia",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "text": "European Competence Framework for Research Managers. https://research-and-innovation.ec.europa.eu/system/files/2023-04/ec_rtd_research-competence-presentation.pdf\n\n\nThe European Competence Framework for Research Managers.",
     "crumbs": [
       "Gestión de proyectos",
       "Gestión de proyectos de CTeI"
@@ -26,7 +26,7 @@
     "href": "gestiondeproyectos/gestionproyectosciencia.html#gestión-de-proyectos-de-ciencia",
     "title": "Gestión de proyectos de ciencia",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "text": "European Competence Framework for Research Managers. https://research-and-innovation.ec.europa.eu/system/files/2023-04/ec_rtd_research-competence-presentation.pdf\n\n\nThe European Competence Framework for Research Managers.",
     "crumbs": [
       "Gestión de proyectos",
       "Gestión de proyectos de CTeI"
@@ -1862,6 +1862,17 @@
     "crumbs": [
       "Gestión de proyectos",
       "Gestión de proyectos"
+    ]
+  },
+  {
+    "objectID": "gestiondeproyectos/gestionproyectosciencia.html#construcción-de-capacidades",
+    "href": "gestiondeproyectos/gestionproyectosciencia.html#construcción-de-capacidades",
+    "title": "Gestión de proyectos de ciencia",
+    "section": "13. Construcción de capacidades",
+    "text": "13. Construcción de capacidades\n\nTranslational Research. Link. NSF. Lista Youtube\nConvergence research. NSF. Link\n\nValue Propositions Provide a Roadmap for Convergent Research on Environmental Topics. Link.\n\nAccelerating Research Translation (ART). Link\n\nNSF\nIntroduction to accelerating research translation (ART) program. NSF (Link)",
+    "crumbs": [
+      "Gestión de proyectos",
+      "Gestión de proyectos de CTeI"
     ]
   }
 ]
