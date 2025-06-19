@@ -4,6 +4,56 @@ format: html
 editor: visual
 ---
 
-## Qué es la gestión de proyectos
+# Project management
 
-{{< lipsum 1 >}}
+1.  **Liderazgo**
+
+-   Desarrollar un enfoque "probabilístico" para gestionar la incertidumbre. HBR. 2020. [*Link*](https://hbr.org/2020/02/develop-a-probabilistic-approach-to-managing-uncertainty?tpcc=orgsocial_edit&utm_campaign=hbr&utm_medium=social&utm_source=twitter)
+    -   Para los líderes modernos, el pensamiento bayesiano también se ha vuelto cada vez más influyente. Por ejemplo, en Amazon, uno de los [14 principios de liderazgo](https://www.amazon.jobs/en/principles)  es “Tener columna vertebral; No estar de acuerdo y comprometerse”, que, [como explicó Jeff Bezos](https://www.sec.gov/Archives/edgar/data/1018724/000119312517120198/d373368dex991.htm), es una estrategia para alentar a los líderes a evitar perder el tiempo tratando de lograr un acuerdo universal. Es mejor comprometerse con una decisión controvertida y luego recopilar datos y ajustarlos si es necesario. En X, la fábrica de éxito de Alphabet, [celebran conscientemente los proyectos fallidos](https://www.wired.com/2016/02/the-secret-to-moonshots-killing-our-projects/#.euwa8vwaq)  como un dato que les ayuda a reducir la gama de opciones y, al hacerlo, acelerar la innovación. Del mismo modo, en Spotify han desarrollado un  [marco](https://www.infoq.com/presentations/spotify-engineer-decision-making/) para explorar la relación entre datos e incertidumbre al que llaman DIBB (Data, Insights, Beliefs and Bets). Lo utilizan para identificar explícitamente métricas de éxito para nuevas ideas y oportunidades, y crear un lenguaje común para juzgar el desempeño.
+-   Principios de liderazgo de Amazon. [*Link*](https://www.amazon.jobs/content/en/our-workplace/leadership-principles).
+    -   Obsesión por el cliente.
+    -   Propiedad
+    -   Inventar y simplificar
+    -   Tienen razón, mucho
+    -   Aprenda y sea curioso
+    -   Contrate y desarrolle a los mejores
+    -   Insista en los más altos estándares
+    -   Piensa en grande
+    -   Predisposición a la acción
+    -   Frugalidad
+    -   Gana confianza
+    -   Sumérgete profundamente
+    -   Tener columna vertebral; No estar de acuerdo y comprometerse
+    -   Entregar resultados
+    -   Esfuércese por ser el mejor empleador del planeta
+    -   El éxito y la escala conllevan una amplia responsabilidad
+-   **Lecciones para un presidente que no quiso gobernar**. [*Link*](https://archive.is/JJa7G#selection-2597.0-2673.107)
+    1.  Tenga rápido un plan. Una hoja de ruta que establezca el norte, las metas y, por encima de todo, las prioridades. "Plan malo: gobierno malo".
+
+    2.  Fije sus prioridades: "Si trata de hacer todo, no logra nada".
+
+    3.  Véndale sus prioridades al Gobierno y no solo a su círculo más cercano.
+
+    4.  No les crea a los que le digan que hay que "dejar que los ministros hagan su trabajo". Toca "estar encima".
+
+    5.  La agenda. El tiempo es oro.
+
+    6.  No esté en todas partes ni haga todo.
+
+    7.  Evite que las políticas públicas se basen en la conveniencia política en vez de lo que toca hacer para mejorar la vida de las mayorías.
+
+    8.  Escoja cuidadosamente a sus colaboradores inmediatos.
+
+    9.  El centro del Poder Ejecutivo –la Presidencia– debe ser fuerte y conformarse por cuatro unidades separadas: políticas, estrategia, comunicaciones y resultados ("delivery").
+
+    10. Gaste eficientemente el capital político; aplique sus energías en llevar a la práctica sus prioridades.
+
+# **Estrategia**
+
+# **Metodologías**: 
+
+## PMP
+
+## 
+
+## PRINCE2
