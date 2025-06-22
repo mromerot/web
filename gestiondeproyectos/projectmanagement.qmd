@@ -6,54 +6,99 @@ editor: visual
 
 # Project management
 
-1.  **Liderazgo**
+{{< video "https://youtu.be/5BGJYWfamcY" >}} Qué es PMP y PMI
 
--   Desarrollar un enfoque "probabilístico" para gestionar la incertidumbre. HBR. 2020. [*Link*](https://hbr.org/2020/02/develop-a-probabilistic-approach-to-managing-uncertainty?tpcc=orgsocial_edit&utm_campaign=hbr&utm_medium=social&utm_source=twitter)
-    -   Para los líderes modernos, el pensamiento bayesiano también se ha vuelto cada vez más influyente. Por ejemplo, en Amazon, uno de los [14 principios de liderazgo](https://www.amazon.jobs/en/principles)  es “Tener columna vertebral; No estar de acuerdo y comprometerse”, que, [como explicó Jeff Bezos](https://www.sec.gov/Archives/edgar/data/1018724/000119312517120198/d373368dex991.htm), es una estrategia para alentar a los líderes a evitar perder el tiempo tratando de lograr un acuerdo universal. Es mejor comprometerse con una decisión controvertida y luego recopilar datos y ajustarlos si es necesario. En X, la fábrica de éxito de Alphabet, [celebran conscientemente los proyectos fallidos](https://www.wired.com/2016/02/the-secret-to-moonshots-killing-our-projects/#.euwa8vwaq)  como un dato que les ayuda a reducir la gama de opciones y, al hacerlo, acelerar la innovación. Del mismo modo, en Spotify han desarrollado un  [marco](https://www.infoq.com/presentations/spotify-engineer-decision-making/) para explorar la relación entre datos e incertidumbre al que llaman DIBB (Data, Insights, Beliefs and Bets). Lo utilizan para identificar explícitamente métricas de éxito para nuevas ideas y oportunidades, y crear un lenguaje común para juzgar el desempeño.
--   Principios de liderazgo de Amazon. [*Link*](https://www.amazon.jobs/content/en/our-workplace/leadership-principles).
-    -   Obsesión por el cliente.
-    -   Propiedad
-    -   Inventar y simplificar
-    -   Tienen razón, mucho
-    -   Aprenda y sea curioso
-    -   Contrate y desarrolle a los mejores
-    -   Insista en los más altos estándares
-    -   Piensa en grande
-    -   Predisposición a la acción
-    -   Frugalidad
-    -   Gana confianza
-    -   Sumérgete profundamente
-    -   Tener columna vertebral; No estar de acuerdo y comprometerse
-    -   Entregar resultados
-    -   Esfuércese por ser el mejor empleador del planeta
-    -   El éxito y la escala conllevan una amplia responsabilidad
--   **Lecciones para un presidente que no quiso gobernar**. [*Link*](https://archive.is/JJa7G#selection-2597.0-2673.107)
-    1.  Tenga rápido un plan. Una hoja de ruta que establezca el norte, las metas y, por encima de todo, las prioridades. "Plan malo: gobierno malo".
+# **Liderazgo**
 
-    2.  Fije sus prioridades: "Si trata de hacer todo, no logra nada".
+**Desarrolle un enfoque "probabilístico" para gestionar la incertidumbre**. HBR. 2020. [*Link*](https://hbr.org/2020/02/develop-a-probabilistic-approach-to-managing-uncertainty?tpcc=orgsocial_edit&utm_campaign=hbr&utm_medium=social&utm_source=twitter). Para los líderes modernos, el pensamiento bayesiano se ha vuelto cada vez más influyente. Por ejemplo, en Amazon, uno de los [14 principios de liderazgo](https://www.amazon.jobs/en/principles)  es “Tener columna vertebral; No estar de acuerdo y comprometerse”, que, [como explicó Jeff Bezos](https://www.sec.gov/Archives/edgar/data/1018724/000119312517120198/d373368dex991.htm), es una estrategia para alentar a los líderes a evitar perder el tiempo tratando de lograr un acuerdo universal. Es mejor comprometerse con una decisión controvertida y luego recopilar datos y ajustarlos si es necesario.
 
-    3.  Véndale sus prioridades al Gobierno y no solo a su círculo más cercano.
+En X, la fábrica de éxito de Alphabet, [celebran conscientemente los proyectos fallidos](https://www.wired.com/2016/02/the-secret-to-moonshots-killing-our-projects/#.euwa8vwaq)  como un dato que les ayuda a reducir la gama de opciones y, al hacerlo, acelerar la innovación. Del mismo modo, en Spotify han desarrollado un [marco](https://www.infoq.com/presentations/spotify-engineer-decision-making/) para explorar la relación entre datos e incertidumbre al que llaman DIBB (Data, Insights, Beliefs and Bets). Lo utilizan para identificar explícitamente métricas de éxito para nuevas ideas y oportunidades, y crear un lenguaje común para juzgar el desempeño.
 
-    4.  No les crea a los que le digan que hay que "dejar que los ministros hagan su trabajo". Toca "estar encima".
-
-    5.  La agenda. El tiempo es oro.
-
-    6.  No esté en todas partes ni haga todo.
-
-    7.  Evite que las políticas públicas se basen en la conveniencia política en vez de lo que toca hacer para mejorar la vida de las mayorías.
-
-    8.  Escoja cuidadosamente a sus colaboradores inmediatos.
-
-    9.  El centro del Poder Ejecutivo –la Presidencia– debe ser fuerte y conformarse por cuatro unidades separadas: políticas, estrategia, comunicaciones y resultados ("delivery").
-
-    10. Gaste eficientemente el capital político; aplique sus energías en llevar a la práctica sus prioridades.
+::: {.callout-tip title="Principios de liderazgo de Amazon [*Link*](https://www.amazon.jobs/content/en/our-workplace/leadership-principles)"}
+-   Obsesión por el cliente.
+-   Propiedad
+-   Inventar y simplificar
+-   Tienen razón, mucho
+-   Aprenda y sea curioso
+-   Contrate y desarrolle a los mejores
+-   Insista en los más altos estándares
+-   Piensa en grande
+-   Predisposición a la acción
+-   Frugalidad
+-   Gana confianza
+-   Sumérgete profundamente
+-   Tener columna vertebral
+-   No estar de acuerdo y comprometerse
+-   Entregar resultados
+-   Esfuércese por ser el mejor empleador del planeta
+-   El éxito y la escala conllevan una amplia responsabilidad
+:::
 
 # **Estrategia**
 
-# **Metodologías**: 
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/QesVRyVoV5g" >}} Alejandro Salazar. Rompiendo Paradigmas en Estrategia y el Poder de los Hard Choices
 
-## PMP
+{{< video "https://www.youtube.com/watch?v=iuYlGRnC7J8" >}}
 
-## 
+{{< video "https://www.youtube.com/watch?v=mYF2_FBCvXw" >}}
 
-## PRINCE2
+{{< video "https://www.youtube.com/watch?v=o7Ik1OB4TaE" >}}
+
+{{< video "https://www.youtube.com/watch?v=y7SN4FK8noY" >}}
+
+Estrategia
+:::
+
+Metodologías: Prince, PMP
+
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=mtyFWCs2YUU" >}}
+
+{{< video "https://www.youtube.com/watch?v=bxrFzZ4-fCA" >}} 
+
+{{< video "https://www.youtube.com/watch?v=6SjDZTmQrUE" >}} 
+
+{{< video https://www.youtube.com/watch?v=P56JvgLolLs >}}
+
+{{< video https://www.youtube.com/watch?v=7TbksimbtiE >}}
+
+{{< video https://www.youtube.com/watch?v=rCdEKocayuI >}}
+
+{{< video https://www.youtube.com/watch?v=b9Jdj2Iu7NI >}}
+
+{{< video https://www.youtube.com/watch?v=5KT94veOQ_8 >}}
+
+PRINCE2, PMP
+:::
+
+::: callout-important
+Lecciones para un presidente que no quiso gobernar. [*Link*](https://archive.is/JJa7G#selection-2597.0-2673.107)
+
+1.  Tenga rápido un plan. Una hoja de ruta que establezca el norte, las metas y, por encima de todo, las prioridades. "Plan malo: gobierno malo".
+2.  Fije sus prioridades: "Si trata de hacer todo, no logra nada".
+3.  Véndale sus prioridades al Gobierno y no solo a su círculo más cercano.
+4.  No les crea a los que le digan que hay que "dejar que los ministros hagan su trabajo". Toca "estar encima".
+5.  La agenda. El tiempo es oro.
+6.  No esté en todas partes ni haga todo.
+7.  Evite que las políticas públicas se basen en la conveniencia política en vez de lo que toca hacer para mejorar la vida de las mayorías.
+8.  Escoja cuidadosamente a sus colaboradores inmediatos.
+9.  El centro del Poder Ejecutivo –la Presidencia– debe ser fuerte y conformarse por cuatro unidades separadas: políticas, estrategia, comunicaciones y resultados ("delivery").
+10. Gaste eficientemente el capital político; aplique sus energías en llevar a la práctica sus prioridades
+:::
+
+# Videos
+
+La suerte es donde confluyen la preparación y la oportunidad. El que visualiza lo que quiere es capaz de percibir mejor las oportunidades.
+
+::: {.column width="100%"}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/srgbUPu9Mo4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+:::
+
+::: {.column width="100%"}
+`<iframe width="560" height="315" src="`{=html}https://youtube.com/`embed`{=html}/A-rVVyYyRUM`" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>`{=html}
+
+</iframe>
+:::

@@ -111,8 +111,7 @@ The U.S. National Science Foundation (NSF) identified “convergence research”
 
 -   Integration and Implementation Sciences (i2S). [Link](https://i2s.anu.edu.au/)
 
-::: {layout-ncol=2}
-
+::: {layout-ncol="2"}
 {{< video "https://youtu.be/dI1mdMohBMU" >}} Key issues for convergence research
 
 {{< video "https://youtu.be/-xV2VtgWWxo" >}} The Integration and Implementation Sciences (i2S) 3.0 framework
@@ -120,7 +119,6 @@ The U.S. National Science Foundation (NSF) identified “convergence research”
 {{< video "https://youtu.be/rdW-AvqJpQY" >}} Unlocking the Power Convergence Research for Societal Impact
 
 Ciencia convergente
-
 :::
 
 # Ciencia para la implementación

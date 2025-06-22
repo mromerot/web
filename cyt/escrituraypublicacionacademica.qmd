@@ -6,28 +6,28 @@ editor: visual
 
 # **Lectura y videos de introducción al tema**
 
--   Por qué es importante saber leer y escribir. Mision de sabios 2020 (1:44-1:48). [*Link*](https://youtu.be/7_jkXN8dsaE?t=6246).
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/7_jkXN8dsaE?t=6246" >}} Por qué es importante saber leer y escribir. Mision de sabios 2020 (1:44-1:48). "*Un país que no sabe leer y escribir es un país que no sabe pensar. Un país que no sabe pensar* *es un país que no puede entrar en la innovación*."
 
-    -   " *Un país que no sabe leer y escribir es un país que no sabe pensar. Un país que no sabe pensar* *es un país que no puede entrar en la innovación*."
+{{< video "https://youtu.be/9AN2tbfSGm4?si=Q4CjOY2qbf1lAHG6" >}} Why Do Academics Write So Poorly?
+:::
 
--   **Why Academics Stink at Writing by Steven Pinker. [*Link*](https://stevenpinker.com/files/pinker/files/why_academics_stink_at_writing.pdf)**
+-   Steve Pinker
 
+    -   Why Academics Stink at Writing by Steven Pinker. [*Link*](https://www.google.com/search?q=Why+Academics+Stink+at+Writing+by+Steven+Pinker&rlz=1C5OZZY_enCO1132CO1132&oq=Why+Academics+Stink+at+Writing+by+Steven+Pinker&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzEzNGowajSoAgCwAgE&sourceid=chrome&ie=UTF-8#:~:text=Why%2DAcademics%2DStink,2016/06%20%E2%80%BA%20Wh...)
     -   *Por qué los académicos apestan cuando escriben*. [***Link***](https://davidlabaree-com.translate.goog/2021/07/08/pinker-why-academics-stink-at-writing/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=nui)
-
--   Lingüística, Estilo y Escritura en el Siglo 21. Steven Pinker. [*Link*](https://www.youtube.com/watch?v=OV5J6BfToSw)*.*
-
-    -   Why Do Academics Write So Poorly? [*Link*](https://www.youtube.com/watch?v=9AN2tbfSGm4)
-
-    -   Why academic writing stinks and how to fix it. [*Link*](http://images.results.chronicle.com/Web/TheChronicleofHigherEducation/%7B713da810-66b4-4466-81b0-c03b9978f2f5%7D_AD-CHE-PinkerBooklet3.pdf)
-
+    -   Lingüística, Estilo y Escritura en el Siglo 21. Steven Pinker. [*Link*](https://www.youtube.com/watch?v=OV5J6BfToSw)*.*
+    -   Why academic writing stinks and how to fix it. [*Link*](https://www.chronicle.com/article/why-academics-stink-at-writing-and-how-to-fix-it/)
     -   On bad and good writing. [*Link*](https://www.youtube.com/watch?v=IMVOHeQYCUY)*.*
+
+-   The best way to teach people critical thinking is to teach them to write. [*Link*](https://x.com/ScholarshipfPhd/status/1929240865907618048)
 
     ::: {.callout-tip title="**Mandamientos de la escritura académica** (Algunos basados en [Hugh Kearns](https://twitter.com/ithinkwellHugh))"}
     -   La escritura se realiza oración por oración.
     -   La escritura se realiza oración por oración.
     -   Sin buenas oraciones no hay buenos párrafos. Sin párrafos no hay manuscrito (artículo, artículo científico, capítulo o informe).
     -   Sujeto-verbo-predicado es la estructura más poderosa en redacción.
-    -   KISS (keep it simple, stupid).
+    -   *KISS* (keep it simple, stupid).
     -   Sin lectura, no hay escritura.
     -   ¿Puedo expresarlo en menos palabras?
     -   La mala escritura, precede la buena escritura (para escribir bien, primero hay que escribir mal). No tener miedo a eliminar lo escrito.
@@ -70,18 +70,26 @@ editor: visual
 -   Pinker, S. The Sense of Style: The Thinking Person's Guide to Writing in the 21st Century. New York, NY: Penguin. [*Link*](https://stevenpinker.com/publications/sense-style-thinking-persons-guide-writing-21st-century).
 -   A Writers Reference. Diana Hacker, Nancy Sommers. 2016. [*Link*](https://books.google.com.co/books?id=Hvq6DAAAQBAJ).
 
-<https://www.youtube.com/watch?v=OV5J6BfToSw>
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=OV5J6BfToSw" >}} Lingüística, Estilo y Escritura en el Siglo 21 - con Steven Pinker
+
+{{< video "https://youtu.be/H5JWKbrHOAE" >}} Introducing the 7th Ed. APA Style Publication Manual
+
+Escribiendo con estilo
+:::
 
 -   **Manuales de estilo**
     -   Manual de publicaciones de Ia American Psychological Association
-        -   Tercera edición. [*Link*](https://books.google.com.co/books?id=PQf-CAAAQBAJ).Séptima (inglés) y cuarta edición (español). [*Link*](https://apastyle.apa.org/).APA Style CENTRAL for Students. [*Link*](http://www.apastyle.org/products/asc-for-students.aspx). Scientific Style and Format: The CSE Manual for Authors, Editors, and Publishers. [*Link*](https://books.google.com.co/books?id=aCsjngEACAAJ).The Chicago Manual of Style. [*Link*](https://www.chicagomanualofstyle.org/16/contents.html).
-        -   Chicago Style Workout 62: Dashes. [*Link*](https://cmosshoptalk.com/2022/02/22/chicago-style-workout-62-dashes).When to Capitalize after a Colon. [*Link*](https://cmosshoptalk.com/2022/02/15/when-to-capitalize-after-a-colon/). Manual del estilo del Servicio Geológico Colombiano. [*Link*](https://libros.sgc.gov.co/index.php/editorial/catalog/book/74).
+        -   Tercera edición. [*Link*](https://books.google.com.co/books?id=PQf-CAAAQBAJ).
+        -   Séptima (inglés) y cuarta edición (español). [*Link*](https://apastyle.apa.org/).
+        -   APA Style CENTRAL for Students. [*Link*](http://www.apastyle.org/products/asc-for-students.aspx).
+    -   Scientific Style and Format: The CSE Manual for Authors, Editors, and Publishers. [*Link*](https://books.google.com.co/books?id=aCsjngEACAAJ).
+    -   The Chicago Manual of Style. [*Link*](https://www.chicagomanualofstyle.org/16/contents.html).
+    -   Chicago Style Workout 62: Dashes. [*Link*](https://cmosshoptalk.com/2022/02/22/chicago-style-workout-62-dashes).When to Capitalize after a Colon. [*Link*](https://cmosshoptalk.com/2022/02/15/when-to-capitalize-after-a-colon/). Manual del estilo del Servicio Geológico Colombiano. [*Link*](https://libros.sgc.gov.co/index.php/editorial/catalog/book/74).
     -   **RAE**. Lenguaje inclusivo. [*Link*](https://www.rae.es/espanol-al-dia/los-ciudadanos-y-las-ciudadanas-los-ninos-y-las-ninas)*, [Link](https://www.rae.es/sites/default/files/Informe_lenguaje_inclusivo.pdf).*
 -   Cómo se hace una tesis. Umberto Eco. 2014. [*Link*](https://books.google.com.co/books?id=6i0lBQAAQBAJ&dq=como+escribir+una+tesis+umberto+eco&source=gbs_navlinks_s)
 
-<https://youtu.be/H5JWKbrHOAE>
-
-**#El papel del editor y procesos editoriales**
+# **El papel del editor y procesos editoriales**
 
 -   **El papel del editor**.
 -   Editor Roles and Responsibilities. Council of Science Editors. [*Link*](https://www.councilscienceeditors.org/resource-library/editorial-policies/white-paper-on-publication-ethics/2-1-editor-roles-and-responsibilities/).
@@ -89,7 +97,7 @@ editor: visual
 -   Guía básica de procesos editoriales. Editorial Universidad Nacional de Colombia. [*Link*](https://editorial.unal.edu.co/fileadmin/recursos/editorial/guias/guia-basica-procesos-editoriales.pdf).
 -   How Books and Journals Are Produced. [*Link*](https://www.chicagomanualofstyle.org/help-tools/production-technologies.html).
 
-**#Nuevas formas de publicación de libros**
+# **Nuevas formas de publicación de libros**
 
 -   Quarto. [*Link*](https://quartopub.com/)
     -   Creating a book. [*Link*](https://quarto.org/docs/books/)

@@ -4,37 +4,43 @@ format: html
 editor: visual
 ---
 
-![European Competence Framework for Research Managers. <https://research-and-innovation.ec.europa.eu/system/files/2023-04/ec_rtd_research-competence-presentation.pdf>](https://mauricioromerot.wordpress.com/wp-content/uploads/2019/03/screenshot-2025-03-15-at-5.51.42e280afpm.png?w=928)
+![The European Competence Framework for Research Managers. <https://research-and-innovation.ec.europa.eu/system/files/2023-04/ec_rtd_research-competence-presentation.pdf>.](https://mauricioromerot.wordpress.com/wp-content/uploads/2019/03/screenshot-2025-03-15-at-5.51.42e280afpm.png?w=928)
 
-The European Competence Framework for Research Managers.
+::: {.callout-tip title="Lecturas introductorias"}
+-   The hunt for the lesser-known funding source. Nature 2019.[Link](https://www.nature.com/articles/d41586-019-01734-1).
 
-# Lista de libros, artículos y páginas web útiles para buscar financiación y para gestión de proyectos de investigación.
+-   How to design a winning fellowship proposal. Nature 2018.[Link](https://www.nature.com/articles/d41586-018-07297-x?).
 
-"La real sensación del fracaso sucede cuando no se intenta" <https://youtu.be/nmrRJammHqs>
+-   We’re problem solvers’: research administrators offer guidance to working scientists. Nature.[Link](https://www.nature.com/articles/d41586-021-01829-8). 
 
--   **Lecturas introductorias.**
-    -   **The hunt for the lesser-known funding source**. Nature 2019. [*Link*](https://www.nature.com/articles/d41586-019-01734-1).
-    -   **How to design a winning fellowship proposal**. Nature 2018. [*Link*](https://www.nature.com/articles/d41586-018-07297-x?).
-    -   **We’re problem solvers’: research administrators offer guidance to working scientists**. Nature. [*Link*](https://www.nature.com/articles/d41586-021-01829-8).
-    -   Síntesis rápida. Lista de verificación de: **Proposal Planning and Writing**. Jeremy T. Miner, Lynn E. Miner. Fifth Edition. 2013. [*Link*](https://www.abc-clio.com/ABC-CLIOCorporate/product.aspx?pc=A4100C). [*Link*](https://books.google.com.co/books?id=YVD8AymBwYwC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false)
-    -   Project Management for Researchers (revisar temáticas 🤔). U.-Arizona. [*Link*](https://arizona.infoready4.com/#competitionDetail/1893401). [*Video*](https://youtu.be/ihFvG5m1g14).
+-   Síntesis rápida. Lista de verificación de: Proposal Planning and Writing. Jeremy T. Miner, Lynn E. Miner. Fifth Edition. 2013.[Link](https://www.abc-clio.com/ABC-CLIOCorporate/product.aspx?pc=A4100C).[Link](https://books.google.com.co/books?id=YVD8AymBwYwC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false) 
+
+-   Project Management for Researchers (revisar temáticas 🤔). U.-Arizona.[Link](https://arizona.infoready4.com/#competitionDetail/1893401). [Video](https://youtu.be/ihFvG5m1g14).
+
+-   La vida está al otro lado del miedo \| Miguel Angel Tobías. La real sensación del fracaso sucede cuando no se intenta. <https://youtu.be/nmrRJammHqs>
+:::
 
 # Sistema Nacional de Ciencia y Tecnología
 
--   **Legislación Sistema Nacional de Ciencia, Tecnología e Innovación**
-    -   Ley 2162 de 2021 creación Minciencias. [*Link*](https://dapre.presidencia.gov.co/normativa/normativa/LEY%202162%20DEL%206%20DE%20DICIEMBRE%20DE%202021.pdf).
+## Legislación Sistema Nacional de Ciencia, Tecnología e Innovación
+
+-   Ley 2162 de 2021 creación Minciencias. [*Link*](https://dapre.presidencia.gov.co/normativa/normativa/LEY%202162%20DEL%206%20DE%20DICIEMBRE%20DE%202021.pdf).
     -   Decreto 1666 de 2021. Sistema Nacional de Ciencia, Tecnología e lnnovación. [*Link*](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=173951).
-        -   **Instancias de coordinación del orden nacional.**Consejo Nacional de Política de Ciencia, Tecnología e lnnovación (CONACTI)Consejo Científico Nacional (CCN)Consejo Nacional de Bioética (CNB)Consejo Nacional de Beneficios Tributarios en Ciencia, Tecnología e lnnovación (CNBT)Órgano Colegiado de Administración y Decisión de Ciencia, Tecnología e Innovación (OCAD)
+        -   **Instancias de coordinación del orden nacional:**
+            -   Consejo Nacional de Política de Ciencia, Tecnología e lnnovación (CONACTI)
+            -   Consejo Científico Nacional (CCN)
+            -   Consejo Nacional de Bioética (CNB)
+            -   Consejo Nacional de Beneficios Tributarios en Ciencia, Tecnología e lnnovación (CNBT)
+            -   Órgano Colegiado de Administración y Decisión de Ciencia, Tecnología e Innovación (OCAD)
         -   **De orden regional y departamental:** Los Consejos Departamentales de Ciencia, Tecnología e lnnovación (CODECTI) y otras instancias regionales y departamentales que se creen.
+            -   Decreto 0979 de 2024. [*Link*](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=247916)
+            -   Decreto 584 de 2017. [*Link*](https://minciencias.gov.co/normatividad/decreto-584-2017#:~:text=%22Por%20el%20cual%20se%20reglamenta,Tecnolog%C3%ADa%20e%20Innovaci%C3%B3n%20%2D%20CODECTI%22.).
+            -   Demandas territoriales 2021-2022. [*Link*](https://minciencias.gov.co/sites/default/files/ckeditor_files/V29062021_PC_Asig_CTeI_SGR_2021_2022.pdf).
     -   Normatividad y marco legal Minciencias. [*Link*](https://minciencias.gov.co/quienes_somos/normatividad/marcolegal).
 -   **CONPES 4069: Nueva política de Ciencia, Tecnología e Innovación (2022-2031)**
     -   Documento. [*Link*](https://minciencias.gov.co/conpes-4069-nueva-politica-ciencia-tecnologia-e-innovacion-2022-2031#:~:text=Tama%C3%B1o-,Conpes%204069,-23/05/2022). Diapositivas. [*Link*](https://minciencias.gov.co/sites/default/files/upload/paginas/diapositivas_conpes_4069.pdf)
 -   Sistema General de Regalias
     -   El papel de MinCiencias en la gestión de recursos de Regalías. 2024. [*Link*](https://www.elpais.com.co/amp/informacion-comercial/el-papel-de-minciencias-en-la-gestion-de-recursos-de-regalias-1139.html)
--   **CODECTI**
-    -   Decreto 0979 de 2024. [*Link*](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=247916)
-    -   Decreto 584 de 2017. [*Link*](https://minciencias.gov.co/normatividad/decreto-584-2017#:~:text=%22Por%20el%20cual%20se%20reglamenta,Tecnolog%C3%ADa%20e%20Innovaci%C3%B3n%20%2D%20CODECTI%22.).
-    -   Demandas territoriales 2021-2022. [*Link*](https://minciencias.gov.co/sites/default/files/ckeditor_files/V29062021_PC_Asig_CTeI_SGR_2021_2022.pdf).
 -   **Minciencias**
     -   Buscador Minciencias (HdV, pares, grupos, instituciones, proyectos, productos) [*Link*](https://sba.minciencias.gov.co/Buscador_HojasDeVida/BuscadorIFindIt/).
     -   Búsqueda de pares. *Link*.
@@ -55,12 +61,12 @@ The European Competence Framework for Research Managers.
     -   Bank Pro 2.0 (Banco de proyectos). [*Link*](https://www.agenciaatenea.gov.co/convocatorias/bank-pro-20-banco-de-proyectos-de-ctei/registro).
 -   **CONPES 4069: Nueva política de Ciencia, Tecnología e Innovación (2022-2031)**
 
-<https://www.youtube.com/live/MB9X4yyeMtc>
+<!-- -->
 
 -   **Mincinciencias - Caja de enlaces** **2023**
     -   Plan Anual de Mecanismos 2023. [*Link*](https://minciencias.gov.co/sala_de_prensa/plan-anual-mecanismos-2023).
 
-Políticas públicas en CTI en Colombia, aciertos y desaciertos
+# Políticas públicas en CTI en Colombia, aciertos y desaciertos
 
 -   **Normatividad colombiana para contratación ciencia, tecnología e innovación**
     -   Circular Externa Única de Colombia Compra Eficiente. 13. Contratación de actividades de ciencia, tecnología e innovación. [*Link*](https://colombiacompra.gov.co/sites/cce_public/files/cce_circulares/cce_circular_unica.pdf).
@@ -72,21 +78,29 @@ Políticas públicas en CTI en Colombia, aciertos y desaciertos
     -   Documento CONPES 3582 de 2009. [*Link*](https://colaboracion.dnp.gov.co/CDT/Conpes/Econ%C3%B3micos/3582.pdf).
     -   Ley 1951 de 2019. [*Link*](https://minciencias.gov.co/quienes_somos/normatividad/marcolegal). [*Link*](https://dapre.presidencia.gov.co/normativa/normativa/LEY%201951%20DEL%2024%20DE%20ENERO%20DE%202019.pdf). [*Link*](https://www.secretariajuridica.gov.co/transparencia/marco-legal/normatividad/ley-1951-2019).
 
+::: {layout-ncol="2"}
+{{< video https://youtu.be/89g8wov0KoI >}} Sesión 1
+
+{{< video https://youtu.be/SVMVvn2hqAk >}} Sesión 2
+
+{{< video https://youtu.be/uReJW3BXUHM >}} Sesión 3
+
+{{< video https://youtu.be/XYQL6eZFPB4 >}} Sesión 4
+
+{{< video https://youtu.be/pW-w2vIpO7c >}} Sesión 5
+
+{{< video https://youtu.be/xyLn905QI9c >}} Sesión 6
+
+{{< video https://youtu.be/gyjmISIXqHM >}} Sesión 7
+
+{{< video https://youtu.be/fk4MO3V399g >}} Sesión 8
+
+{{< video https://youtu.be/58_3-OQefJE >}} Sesión 9
+
+{{< video https://youtu.be/YL3AeQZ0Hfs >}} Sesión 10
+
 **Diplomado virtual Política de Ciencia, Tecnología e Innovación: Ciencia para Todos**. [*Link*](https://www.esap.edu.co/portal/index.php/2022/06/02/inscripciones-abiertas-para-el-diplomado-en-politica-de-ciencia-tecnologia-e-innovacion-ciencia-para-todos/). [pdfs](https://drive.google.com/drive/folders/1FewCucIAr-d0JIrZUp6Rf_Gx3TU9HVDF?usp=sharing).
-
-Sesión 1: Diplomado virtual Política de Ciencia, Tecnología e Innovación: Ciencia para Todos
-
-Sesión 2: Diplomado virtual Política de Ciencia, Tecnología e Innovación: Ciencia para Todos
-
-Sesión 3: Diplomado virtual Política de Ciencia, Tecnología e Innovación: Ciencia para Todos
-
-Sesión 4: Diplomado virtual Política de Ciencia, Tecnología e Innovación: Ciencia para Todos
-
-Sesión 5: Diplomado virtual Política de Ciencia, Tecnología e Innovación: Ciencia para Todos
-
-Sesión 9: Diplomado virtual Política de Ciencia, Tecnología e Innovación: Ciencia para Todos
-
-Sesión 10: Diplomado virtual Política de Ciencia, Tecnología e Innovación: Ciencia para Todos
+:::
 
 # Primeros pasos para la formulación
 
@@ -115,7 +129,7 @@ Sesión 10: Diplomado virtual Política de Ciencia, Tecnología e Innovación: C
     -   *Fall outside the mission of public funding agencies*
     -   *Demonstrate that private philanthropy generally, and the W. M. Keck Foundation in particular, is essential to the project’s success*
 
-<https://youtu.be/oY5RSE7m-5k>
+{{< video "https://youtu.be/oY5RSE7m-5k" >}} Distilling Your Message
 
 # Definir el problema
 
@@ -123,9 +137,13 @@ Sesión 10: Diplomado virtual Política de Ciencia, Tecnología e Innovación: C
 -   How To Choose a Good Scientific Problem. 2009. Molecular Cell. [*Link*](https://www.sciencedirect.com/science/article/pii/S1097276509006418).
 -   Participatory problem analysis of crop activities in rural Tanzania with attention to gender and wealth. 2018. *Food security*. [*Link*](https://link.springer.com/article/10.1007/s12571-018-0791-6).
 
-<https://youtu.be/L7yDRYDWaXM>
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/L7yDRYDWaXM" >}}
 
-<https://youtu.be/o_9JGltgW6U>
+{{< video "https://youtu.be/o_9JGltgW6U" >}}
+
+Problema
+:::
 
 -   **Prueba de problema**
     -   Un problema es una situación negativa existente con efectos negativos en la población (o sistema) afectada.
@@ -198,7 +216,7 @@ Sesión 10: Diplomado virtual Política de Ciencia, Tecnología e Innovación: C
         -   Presente la pregunta general del estudio o la declaración de la intención del proyecto. Esta sección debe ser coherente con el propósito y aproximación propuestos. Acercarse. Si se probará una hipótesis, incluya la pregunta de investigación cuantitativa y las hipótesis.
 -   **5.5 Antecedentes y datos preliminares**
 
-<https://youtu.be/_qVXZ0RkQNA>
+{{< video "https://youtu.be/_qVXZ0RkQNA" >}}
 
 # Fuentes de financiación nacionales
 
@@ -245,7 +263,7 @@ En esta sección encontrará estrategias y recursos para buscar fuentes de finan
 -   **Lecturas.**
     -   Chapter 1: Introduction to the Handbook of Public Funding of Research: understanding vertical and horizontal complexities, 2023. [*Link*](https://www.elgaronline.com/display/book/9781800883086/book-part-9781800883086-5.xml).
 
-<https://youtu.be/66_DRDYJz4g>
+{{< video "https://youtu.be/66_DRDYJz4g" >}}
 
 Esta es una lista de ocho estrategias de búsqueda de fuentes de financiación para proyectos de investigación, extensible a proyectos de desarrollo.
 
@@ -276,9 +294,11 @@ Esta es una lista de ocho estrategias de búsqueda de fuentes de financiación p
         -   Foro Belmont. [*Link*](https://www.belmontforum.org/).
         -   International Research Development Funders Forum (IRDFF). [*Link*](https://ukcdr.org.uk/irdff/).
 
-<https://youtu.be/Ko6hpM3L4TU>
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/Ko6hpM3L4TU" >}}
 
-<https://youtu.be/yurMb_4uuV0>
+{{< video "https://youtu.be/yurMb_4uuV0" >}}
+:::
 
 -   **6.2 Búsqueda en bases de datos de referencias bibliográficas**
     -   Dimensions. [*Link*](https://www.dimensions.ai/).
@@ -346,9 +366,11 @@ Esta es una lista de ocho estrategias de búsqueda de fuentes de financiación p
     -   Rufford Small Grants. [*Link*](https://www.rufford.org/). [*Link*](https://apply.ruffordsmallgrants.org/).
     -   The GEF Small Grants Programme. [*Link*](https://sgp.undp.org/about-us-157/how-to-apply.html).
 
-<https://youtu.be/EWZeUJXjfd8>
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/EWZeUJXjfd8" >}}
 
-<https://youtu.be/bTfYyIQYQNg>
+{{< video "https://youtu.be/bTfYyIQYQNg" >}}
+:::
 
 -   **6.7 Listas**
     -   Maestría en Conservación y Uso de la Biodiversidad. [*Link*](http://fear.javeriana.edu.co/estudiantes/posgrados/maestria-biodiversidad)
@@ -499,21 +521,33 @@ NSF
 
 Introduction to accelerating research translation (ART) program. NSF ([*Link*](https://www.youtube.com/watch?v=u8478688NUQ))
 
-# Otros temas y lecturas
+# Otros temas y lecturas 
 
--   **Project Management for Scientists**
-    -   Managing knowledge-intensive workers. Nature Biotechnology. 2012. [*Link*](https://www.nature.com/articles/nbt.2299).
-    -   Project Management for Scientists. Science. 2012. [*Link*](http://www.sciencemag.org/careers/2002/07/project-management-scientists).
-    -   Five attributes of a successful manager in a research organization. Nature Biotechnology. 2006. [*Link*](https://www.nature.com/articles/nbt0906-1171).
-    -   Reinventing the biotech manager.Nature Biotechnology. 2002. [*Link*](https://www.nature.com/articles/nbt0602supp-BE61).
-    -   Coursera. [*Link*](https://www.coursera.org/courses?query=gestion+de+proyectos).
-    -   Fundamentals of Project Planning and Management. [*Link*](https://www.coursera.org/learn/uva-darden-project-management).
-    -   Camino a la Excelencia en Gestión de Proyectos. [*Link*](https://www.coursera.org/learn/camino-excelencia-gestion-proyectos).
-    -   Short Course for Project Directors, ESA. [*Link*](https://esa.org/sbi/courses/).
--   **Vigilancia tecnológica**
+## **Project Management for Scientists**
+
+-   Managing knowledge-intensive workers. Nature Biotechnology. 2012. [*Link*](https://www.nature.com/articles/nbt.2299).
+
+-   Project Management for Scientists. Science. 2012. [*Link*](http://www.sciencemag.org/careers/2002/07/project-management-scientists).
+
+-   Five attributes of a successful manager in a research organization. Nature Biotechnology. 2006. [*Link*](https://www.nature.com/articles/nbt0906-1171).
+
+-   Reinventing the biotech manager.Nature Biotechnology. 2002. [*Link*](https://www.nature.com/articles/nbt0602supp-BE61).
+
+-   Coursera. [*Link*](https://www.coursera.org/courses?query=gestion+de+proyectos).
+
+-   Fundamentals of Project Planning and Management. [*Link*](https://www.coursera.org/learn/uva-darden-project-management).
+
+-   Camino a la Excelencia en Gestión de Proyectos. [*Link*](https://www.coursera.org/learn/camino-excelencia-gestion-proyectos).
+
+-   Short Course for Project Directors, ESA. [*Link*](https://esa.org/sbi/courses/).
+
+    ## **Vigilancia tecnológica**
+
     -   La vigilancia tecnológica en la gestión de proyectos de I+D+i: recursos y herramientas. EPI, 2006. [*Link*](http://eprints.rclis.org/9400/).
     -   UNE 166006:2011 (2011). Norma Española sobre Gestión de la I+D+i Sistemas de Vigilancia Tecnológica e inteligencia competitiva. Madrid, España. [*Link*](https://www.isotools.org/2012/02/14/une-1660062011-ex-gestion-de-la-idi-sistema-de-vigilancia-tecnologica-e-inteligencia-competitiva/).
--   **Cómo transmitir ciencia a políticos - diplomacia de la ciencia**
+
+    ## **Cómo transmitir ciencia a políticos - diplomacia de la ciencia**
+
     -   The art of science advice to government. Nature, 2014. [*Link*](https://www.nature.com/news/policy-the-art-of-science-advice-to-government-1.14838).
     -   Communicating science to policymakers: six strategies for success. Nature, 2019. [*Link*](https://www.nature.com/articles/d41586-019-02372-3).
     -   Science Diplomacy: An Introduction. AAAS. [*Link*](https://www.aaas.org/programs/center-science-diplomacy/introduction)
@@ -545,12 +579,18 @@ Introduction to accelerating research translation (ART) program. NSF ([*Link*](h
     -   At arm's length. Science 2018. [*Link*](http://science.sciencemag.org/content/362/6419/1100).
     -   The Chronicle of Philanthropy[*. Link*](https://www.philanthropy.com/).
 -   **Centros de Excelencia en Colombia** (vigentes y clausurados, [*ver*](https://www.mineducacion.gov.co/1621/w3-printer-235090.html))
-    -   Ceiba. Fundación. [*Link*](https://www.ceiba.org.co/site/).CEMarin. Corporación Centro de Excelencia en Ciencias Marinas. [*Link*](https://www.cemarin.org/es/).CENM. Centro de Excelencia en Nuevos Materiales. [*Link*](http://cenm.univalle.edu.co/).CIEBREG. Centro de Investigación y Estudios en Biodiversidad y Recursos Genéticos. [*Link*](https://ciebreg.utp.edu.co/) CENIVAM. Centro Nacional de Investigación para la Agro industrialización de Especies Vegetales Aromáticas y Medicinales Tropicales. [Link](http://quim.uis.edu.co/eisi/grupo/cenivam/#views/gm1/inicio).CEA-IOT. Centro de Excelencia y Apropiación en Internet de las Cosas. [Link](http://www.cea-iot.org/).Centro de Excelencia y Apropiación en Big Data y Data Analytics. [*Link*](http://alianzacaoba.co/).
+    -   Ceiba. Fundación. [*Link*](https://www.ceiba.org.co/site/).
+    -   CEMarin. Corporación Centro de Excelencia en Ciencias Marinas. [*Link*](https://www.cemarin.org/es/).
+    -   CENM. Centro de Excelencia en Nuevos Materiales. [*Link*](http://cenm.univalle.edu.co/).
+    -   CIEBREG. Centro de Investigación y Estudios en Biodiversidad y Recursos Genéticos. [*Link*](https://ciebreg.utp.edu.co/) CENIVAM.
+    -   Centro Nacional de Investigación para la Agro industrialización de Especies Vegetales Aromáticas y Medicinales Tropicales. [Link](http://quim.uis.edu.co/eisi/grupo/cenivam/#views/gm1/inicio).
+    -   CEA-IOT. Centro de Excelencia y Apropiación en Internet de las Cosas. [Link](http://www.cea-iot.org/).
+    -   Centro de Excelencia y Apropiación en Big Data y Data Analytics. [*Link*](http://alianzacaoba.co/).
     -   GeBiX. Centro Colombiano de Genómica y Bioinformática de Ambientes Extremos. [*Link*](http://www.unicauca.edu.co/bimac/centro-de-excelencia/genomica-y-bioinformatica-de-ambientes-extremos-gebix).
 -   **Gobernanza de la ciencia en Colombia**
     -   Fondo de Ciencia, Tecnología e Innovación se convirtió en una “vena rota” en el manejo de regalías, revela estudio de la Contraloría General. 2017. [*Link*](https://www.contraloria.gov.co/contraloria?p_p_id=101&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&_101_struts_action=%2Fasset_publisher%2Fview_content&_101_returnToFullPageURL=%2F%3Fp_p_id%3D3%26p_p_lifecycle%3D0%26p_p_state%3Dmaximized%26p_p_mode%3Dview%26_3_groupId%3D0&_101_assetEntryId=598678&_101_type=content&_101_urlTitle=fondo-de-ciencia-tecnologia-e-innovacion-se-convirtio-en-una-vena-rota-en-el-manejo-de-regalias-revela-estudio-de-la-contraloria-general&inheritRedirect=true).
 
-**Habilidades para un gestor de ciencia**
+## **Habilidades para un gestor de ciencia**
 
 -   **Habilidades blandas:**
     -   Trabajo en equipo.
