@@ -4,5 +4,6 @@ format: html
 editor: visual
 ---
 
-## Ciencia de datos 
+## Ciencia de datos
+
 {{< lipsum 1 >}}
