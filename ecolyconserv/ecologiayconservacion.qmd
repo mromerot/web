@@ -1,8 +1,452 @@
 ---
-Title: "Ecología y conservación"
+Title: "Ecología y conservación marina"
 format: html
 editor: visual
 ---
-  
-## Ecología y conservación
-{{< lipsum 1 >}}
+
+::: {layout-ncol=2}
+
+{{< video "https://youtu.be/IPqdxcrizoA" >}} Video introductorio
+
+{{< video "https://youtu.be/BVwx12SACM4" >}} El oceáno
+
+:::
+
+### El océano
+
+**Bases de datos oceanografía y geografía**
+
+-   **Información espacial y ArcGis**
+    -   ArcGIS Help Library. 10.2. [*Link*](http://resources.arcgis.com/es/help/main/10.2/).
+    -   Biblioteca de ayuda de ArcGIS. *10.0*. [*Link*](http://help.arcgis.com/es/arcgisdesktop/10.0/help/index.html#/na/00r90000001n000000/).
+    -   Uned.es - GISWEB: Guía de aprendizaje multimedia. [*Link*](http://ocw.innova.uned.es/ocwuniversia/analisis_%20geografico_%20regional/sistemas-de-informacion-geografica/gisweb-guia-de-aprendizaje-multimedia/).
+    -   Acolita. [*Link*](http://acolita.com/).
+    -   Esri's Glossary. [*Link*](http://support.esri.com/en/knowledgebase/Gisdictionary/browse).
+    -   Esri's MOOC. [*Link*](http://www.esri.com/mooc)*.*
+    -   Curso ArcGis Rodolfo Franco. [*Link.*](https://www.youtube.com/playlist?list=PLAEhDYHUarGs3h5oQbWrXSbbb6yLVfhsv)
+        -   Learn GIS. [*Link*](https://blog.gvsig.org/2017/06/16/learn-gis-for-free/).
+    -   Fundamentals of GIS for Conservation. [*Link*](https://www.conservationtraining.org/course/index.php?categoryid=11).
+    -   Esri Training. [*Link*](http://www.esri.com/training/main).
+    -   Esri Blog. [*Link*](http://blogs.esri.com/).
+    -   GIS Dictionary. [*Link*](http://support.esri.com/en/knowledgebase/Gisdictionary/browse).
+    -   Rodolfo Franco Blog SIG, ARCGIS. [*Link*](https://mixdyr.wordpress.com/).
+    -   Google Ocean. *Google Maps & Google Earth as visualization tools for marine data. [Link](http://www.justmagic.com/GM-GE.html).*
+    -   USGS Global Visualization Viewer. [*Link*](http://glovis.usgs.gov/).
+    -   Earth Engine Google. [*Link*](https://code.earthengine.google.com/#)
+    -   Ocean Docs. [*Link*](http://www.oceandocs.org/).
+    -   Remap-app. [*Link*](https://remap-app.org/).
+    -   EarthObservation-Code. [*Link*](https://github.com/acgeospatial/awesome-earthobservation-code).
+-   **Atmosfera**
+    -   European Centre for Medium-Range Weather Forecasts. Online computing training week. [*Link*](https://events.ecmwf.int/event/210/page/114-webinar-recordings).
+-   **Batimetría y lineas de costa**
+    -   GEBCO. [*Link*](https://www.bodc.ac.uk/data/online_delivery/gebco/)
+    -   Natural Earth. [*Link*](http://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-bathymetry/)
+    -   Bathymetry and topography. ETOPO1 integrated topography and bathymetry product. [Link.](http://www.ngdc.noaa.gov/mgg/global/global.html)
+    -   Seafloor topography Scripps Institute, UC San Diego. [Link](http://topex.ucsd.edu/WWW_html/mar_topo.html).
+    -   Shoreline representation GSHHG - A Global Self-consistent, Hierarchical, High-resolution Geography Database. [Link](http://www.ngdc.noaa.gov/mgg/shorelines/gshhs.html).
+-   **Ocean Temperature**
+    -   Ocean temperature The Group for High Resolution Sea Surface Temperature (GHRSST). [*Link.*](https://www.ghrsst.org/)
+    -   Ocean temperature and derivatives NASA Earth Observations (NEO). [*Link*](http://neo.sci.gsfc.nasa.gov/view.php?datasetId=AVHRR_SST_M)*.*
+    -   Ocean temperature World Ocean Atlas 2013 version 2. [*Link*](https://www.nodc.noaa.gov/OC5/woa13/)*.*
+    -   Ocean temperature and derivatives The Coral Reef Temperature Anomaly Database (CoRTAD). [*Link*](http://www.nodc.noaa.gov/sog/cortad/)*.*
+    -   GISS Surface Temperature Analysis (GISTEMP). [*Link*](http://data.giss.nasa.gov/gistemp/).
+    -   NOAA. Monthly, Year-to-date, and Annual Composites of Twice-Weekly 50-km Satellite Coral Bleaching Monitoring Products. [*Link*](https://coralreefwatch.noaa.gov/satellite/composites/index.php).
+    -   The Cross-Isthmus Panamanian Observing System. [*Link*](http://atlantica.whoi.edu/oceancubes/oc_panama).
+    -   18TH INTERNATIONAL GHRSST SCIENCE TEAM MEETING (GHRSST XVIII). [*Link*](https://www.ghrsst.org/agenda/ghrsst-xviii/)*.*
+    -   Eumetsat - Monitoring & Evaluation of Thematic Information from Space (METIS). [*Link*](http://metis.eumetsat.int/sst/index.html#).
+    -   NOAA High-resolution Blended Analysis. Sea Surface Temperature. [*Link*](https://www.esrl.noaa.gov/psd/cgi-bin/db_search/DBSearch.pl?Dataset=NOAA+High-resolution+Blended+Analysis&Variable=Sea+Surface+Temperature&group=0&submit=Search). [*Link*](https://www.esrl.noaa.gov/psd/data/gridded/data.noaa.oisst.v2.html).
+    -   Satellite-based time-series of sea-surface temperature since 1981 for climate applications. Scientific Data, 2019. [*Link*](https://www.nature.com/articles/s41597-019-0236-x).
+-   **Salinity**
+    -   Sea surface salinity NASA Earth Observations (NEO). [*Link*](http://neo.sci.gsfc.nasa.gov/view.php?datasetId=AQUARIUS_SSS_M)*.*
+    -   Sea surface salinity World Ocean Atlas 2013 version 2. [*Link*](https://www.nodc.noaa.gov/OC5/woa13/)*.*
+    -   Surface photosynthetically active radiation (PAR) NASA MODIS satellite. [*Link*](http://modis.gsfc.nasa.gov/data/dataprod/par.php)*.*
+-   **Altimetria del oceano**
+    -   Aviso. [*Link*](https://www.aviso.altimetry.fr/en/my-aviso.html). Applications  [*Link*](https://www.aviso.altimetry.fr/en/applications/ocean.html).
+-   **IDV (**Integrated Data Viewer**)**
+    -   IDV user guide. [*Link*](https://www.unidata.ucar.edu/software/idv/5_3/docs/userguide/toc.html#data/DataSources.html).
+    -   Visualizing Ocean Model Simulations (Rasters or Vectors) in IDV. [*Link*](http://marinedataliteracy.org/ops/circ_mod_direct.htm).
+-   **Visores**
+    -   MyOcean Viewer Copernicus. [*Link*](https://marine.copernicus.eu/access-data/myocean-viewer). [*Link*](https://myocean.marine.copernicus.eu/data). [*Link*](https://myocean.marine.copernicus.eu/data?view=viewer&crs=epsg%3A4326&t=1638100800000&z=0%C2%A2er=0%2C5&zoom=9.55&layers=W3siaWQiOiJjMCIsImxheWVySWQiOiJHTE9CQUxfQU5BTFlTSVNfRk9SRUNBU1RfQklPXzAwMV8wMjgvZ2xvYmFsLWFuYWx5c2lzLWZvcmVjYXN0LWJpby0wMDEtMDI4LWRhaWx5L2NobCIsInpJbmRleCI6MCwiaXNIaWRkZW4iOnRydWUsImxvZ1NjYWxlIjp0cnVlfSx7ImlkIjoiYzEiLCJsYXllcklkIjoiR0xPQkFMX0FOQUxZU0lTX0ZPUkVDQVNUX1BIWV8wMDFfMDI0L2dsb2JhbC1hbmFseXNpcy1mb3JlY2FzdC1waHktMDAxLTAyNC90aGV0YW8iLCJ6SW5kZXgiOjEwLCJsb2dTY2FsZSI6ZmFsc2V9XQ%3D%3D&initial=1).
+    -   Earthdata. [*Link*](https://earthdata.nasa.gov/).
+    -   Live access server. [*Link*](http://podaac-tools.jpl.nasa.gov/las/UI.vm).
+    -   Podaac. [*Link*](https://podaac.jpl.nasa.gov/).
+        -   PO.DAAC 101 – Web Portal Navigation Tutorial. [*Link*](https://www.youtube.com/watch?v=5JIpPKb9UOs&list=LLvWe-v5lcWvrtEODd22lPJA&index=1&t=41s).
+    -   HiTide. [*Link*](http://podaac-uat.jpl.nasa.gov/hitide/).
+    -   PO.DAAC State of the Ocean (SOTO) visualization tool. [*Link.*](https://podaac.jpl.nasa.gov/announcements/2017-04-05_Newly_redesigned_SOTO_Tool)[*Link*](https://podaac-tools.jpl.nasa.gov/soto/#b=BlueMarble_ShadedRelief_Bathymetry&l=GHRSST_L4_MUR_Sea_Surface_Temperature(1)&ve=-136.669921875,-68.115234375,136.669921875,68.115234375&pl=false&pb=false&d=2017-04-08&ao=false&as=2017-04-01&ae=2017-04-08&tlr=days).
+    -   Cwcgom Aoml Noaa Ocean Viewer. [Link](http://cwcgom.aoml.noaa.gov/cgom/OceanViewer/).
+    -   RAMMB. Colorado State U. [*Link*](https://rammb-slider.cira.colostate.edu/?sat=goes-16&z=0&im=12&ts=1&st=0&et=0&speed=130&motion=loop&map=1&lat=0&opacity%5B0%5D=1&hidden%5B0%5D=0&pause=0&slider=-1&hide_controls=0&mouse_draw=0&follow_feature=0&follow_hide=0&s=rammb-slider&sec=full_disk&p%5B0%5D=geocolor&x=10848&y=10848).
+    -   Real Earth. [*Link*](http://realearth.ssec.wisc.edu/). [*Link*](http://www.ssec.wisc.edu/realearth/).
+    -   National Hurricane Center. [*Link*](https://www.nhc.noaa.gov/gtwo.php?basin=atlc&fdays=5).
+    -   Earth System Research Laboratory NOAA. [*Link*](https://www.esrl.noaa.gov/psd/data/).
+        -   Data access. [*Link*](https://www.ncdc.noaa.gov/oisst/data-access).
+-   **Modelos Globales de Circulación oceánica**
+    -   Global ocean currents model. HYCOM. [*Link*](http://hycom.org/dataserver/)*.*
+    -   Boyas. The GDP Drifter Data Assembly Center. DAC. [*Link*](http://www.aoml.noaa.gov/phod/dac/dac_meanvel.php).
+    -   Rsmas. Animations. [Link](http://oceancurrents.rsmas.miami.edu/atlantic/atlantic-videos.html).
+    -   Ocean circulation and tide models. [*Link*](http://www.oc.nps.edu/nom/main.html).
+    -   Marine data literacy. [*Link*](http://marinedataliteracy.org/index.html).
+    -   MITgcm. [*Link*](http://mitgcm.org/).
+
+{{< video "https://youtu.be/t36igiPnJ68" >}}
+
+Clorofila y pesquería
+
+-   Global fishing watch.org/map/. [*Link*](http://globalfishingwatch.org/map/).
+-   The global education project. [*Link*](http://www.theglobaleducationproject.org/earth/fisheries-and-aquaculture.php#1).
+-   Chlorophyll a NASA Earth Observations (NEO). [*Link*](http://neo.sci.gsfc.nasa.gov/view.php?datasetId=MY1DMM_CHLORA)*.*
+-   CHLOROPHYLL CONCENTRATION (1 MONTH - AQUA/MODIS). [*Link*](https://neo.sci.gsfc.nasa.gov/view.php?datasetId=MY1DMM_CHLORA).
+
+Cambio Climatico
+
+-   Future climate scenarios NCAR's GIS Program Climate Change Scenarios GIS data portal. [*Link*](https://gisclimatechange.ucar.edu/)*.*
+
+# Animaciones y videos
+
+-   Animaciones de corrientes. Earth Null School. [*Link*](https://earth.nullschool.net/).
+    -   Scientific Visualization Studio. Nasa
+        -   Climate resources. [*Link*](https://svs.gsfc.nasa.gov/Gallery/ClimateEssentials.html).
+        -   Excerpt from "Dynamic Earth. [*Link*](https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=11003).
+        -   Perpetual Ocean. Nasa. [*Link*](https://svs.gsfc.nasa.gov/3827).
+        -   Global Sea Surface Currents and Temperature. [*Link*](https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=3912).
+        -   Gulf Stream Sea Surface Currents and Temperatures. [*Link*](https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=3913)*.*
+        -   Flat Map Ocean Current Flows with SST. [*Link.*](https://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=3821)
+        -   Ocean Acidification Visualizations. [*Link*](https://www.pmel.noaa.gov/co2/story/OA+Educational+Tools).
+
+# **Herramientas de análisis espacial**
+
+-   Marine Geospatial Ecology Tools. [*Link*](http://mgel2011-kvm.env.duke.edu/mget/documentation/arcgis-tutorial/).
+-   New larval connectivity modeling tools. [*Link*](http://mgel2011-kvm.env.duke.edu/mget/2016/03/31/new-larval-connectivity-modeling-tools/).
+-   Panoply netCDF, HDF and GRIB Data Viewer. NASA. [*Link*](https://www.giss.nasa.gov/tools/panoply/).
+-   GuidosToolbox. [*Link*](http://forest.jrc.ec.europa.eu/download/software/guidos/). [*Link*](http://www.tandfonline.com/doi/full/10.1080/22797254.2017.1330650).
+-   NOAA CoastWatch Utilities. [*Link*](https://eastcoast.coastwatch.noaa.gov/cw_software.php).
+
+# **Políticas públicas e información económica**
+
+-   World Bank Open Learning Campus. [*Link.*](https://olc.worldbank.org/)
+-   Colombia in USDA. [*Link*](https://www.fas.usda.gov/regions/colombia).
+-   Centro de los Objetivos de Desarrollos Sostenible para América Latina y el Caribe. Charla Jeffrey Sachs, septiembre 21 Universidad de los Andes. [*Link*](https://youtu.be/iDVM07z6LWI?t=1h48m47s).
+
+# **Varios**
+
+-   Giovanni The Bridge Between Data and Science. [*Link*](https://giovanni.gsfc.nasa.gov/giovanni/). [*Link*](https://eos.org/project-updates/giovanni-the-bridge-between-data-and-science).
+-   Google Earth Engine. [*Link*](https://earthengine.google.com/)
+-   IRI/LDEO Biblioteca de Datos Climáticos. [*Link*](http://iridl.ldeo.columbia.edu/).
+-   Human population density NASA Socioecomonic Data and Applications Center (SEDAC). [*Link*](http://sedac.ciesin.columbia.edu/data/set/gpw-v3-population-density/)*.*
+-   Latitude & Longitude ESRI ArcGIS Basemaps. [Link](https://www.arcgis.com/home/item.html?id=f11bcdc5d484400fa926dcce68de3df7).
+-   Latitude & Longitude World Geodetic System 1984 (used for the Global Positioning System, GPS, satellite navigation systems). [*Link.*](http://earth-info.nga.mil/GandG/publications/tr8350.2/tr8350_2.html)
+-   Maps NOAA - Geospatial Data and Services. [*Link*](https://maps.ngdc.noaa.gov/)
+-   Ocean Teacher. Curso. Administración de Datos Biogeográficos Marinos (Contribuyendo al Uso de OBIS. [*Link*](http://classroom.oceanteacher.org/course/view.php?id=282).
+-   Sistema de Información del Medio Ambiente. Atmósfera, clima, balance energético, cambio climático, gas, calidad de aire, residuos sólidos, conservación. DANE. [*Link*](https://www.dane.gov.co/index.php/estadisticas-por-tema/ambientales/indicadores-ambientales-iaii/iniciativa-sima).
+-   A survival guide to Landsat preprocessing. Ecology. 2017. [*Link*](http://onlinelibrary.wiley.com/doi/10.1002/ecy.1730/abstract?campaign=wolacceptedarticle).
+-   USGS Home. [*Link*](http://viewer.nationalmap.gov/launch/).
+-   What are the trade winds? [*Link*](https://oceanservice.noaa.gov/facts/tradewinds.html).
+
+{{< video "https://youtu.be/uU6cbKSib7k" >}} Incremento de las temperaturas en le planeta
+
+# Ecología Marina
+
+-   **MOOCS**
+    -   Tropical coastal ecosystems. [*Link*](https://courses.edx.org/courses/course-v1:UQx+Tropic101x+2T2017/course/). [*Videos.*](https://www.youtube.com/channel/UC6cuz91KK0yu9SxpJazvOig/playlists)
+    -   Open Channel. [*Link*](https://www.openchannels.org/webinars).
+    -   Open2U. Marine Data and Science e-lectures. [*Link*](https://open2u.utas.edu.au/Course/4261?fbclid=IwAR2ow-xbXXwoKGwgdGLuZ48ifxk5NXtd0Fi_XDIEY6J1Ofr94HFZ3cJZqpY).
+
+**¿Dónde está la información biológica? Bases de datos de información biológica**
+
+-   AquaMaps. Standarized distribution maps. [Link](http://www.aquamaps.org/).
+-   ARC Centre of Excellence Coral Reef Studies. [*Link*](https://www.coralcoe.org.au/)*.*
+-   CEMarin. [*Link*](http://www.cemarin.org/).
+-   CaMPAM Network and Forum. [*Link*](http://campam.gcfi.org/campam.php).
+-   Coral Trait Database. [*Link*](https://coraltraits.org/).
+-   Corals Fact Sheets. [*Link*](http://coral.aims.gov.au/info/search.jsp).
+-   Current State & Trends Assessment. [*Link*](http://www.millenniumassessment.org/en/Condition.html).
+-   Data in the Classroom. El Niño, Sea level, Water Quality, Ocean Acidification, Coral Bleaching. [*Link*](http://dataintheclassroom.noaa.gov/DataInTheClassRoom/#.Vx_iM6ODGko).
+-   Dryad. [*Link*](https://datadryad.org/).
+-   ECOLEX - Environmental law. [*Link*](http://www.ecolex.org/start.php).
+-   Educational Resources. Climate.gov. [*Link*](https://www.climate.gov/teaching/resources).
+-   Estado y tendencias de la biodiversidad continental de Colombia. [*Link*](http://reporte.humboldt.org.co/biodiversidad/index.html).
+-   Figshare. [*Link*](https://figshare.com/).
+-   Global Change, Resources for Educators. [*Link*](http://www.globalchange.gov/browse/educators)*.*
+-   Glosario. [*Link*](http://oos.soest.hawaii.edu/pacioos/voyager/info/)*.*
+-   Global Biodiversity Information Facility. [*Link.*](http://www.gbif.org/)
+-   International Society for Reef Studies. [*Link*](http://coralreefs.org/).
+-   Millennium Ecosystem Assessment. Current State & Trends Assessment. [*Link*](http://www.millenniumassessment.org/en/Condition.html)*.*
+-   Monitoring Australia's tropical reefs. [*Link*](http://www.aims.gov.au/docs/research/monitoring/reef/reef-monitoring.html).
+-   NOAA Coral Reef Conservation Program. [*Link*](http://coralreef.noaa.gov/).
+-   Sharks! Global Biodiversity, Biology, and Conservation. [*Link*](https://www.edx.org/course/sharks-global-biodiversity-biology-cornellx-uqx-bioee101x?utm_source=sailthru&utm_medium=affiliate_partner&utm_campaign=StudentNewsletter_20160607&utm_term=Active%20Users).
+-   STRI Panama Webcast. [*Link*](http://www.stri.si.edu/english/webcast/index.php).
+-   100 impacts of carbon emissions on oceans and marine ecosystems. Dr. John Bruno #100impacts list on Twitter. [*Link*](https://mauricioromerot.wordpress.com/2017/01/21/100-impacts-of-carbon-emissions-on-oceans-and-marine-ecosystems/)*. [#100impacts](https://twitter.com/hashtag/100impacts?src=hash).*
+-   OBIS - Ocean Biogeographic Information System. [*Link*](http://www.iobis.org/).
+-   Peces.
+    -   Peces Pacífico Oriental. [*Link.*](http://biogeodb.stri.si.edu/sftep/es)
+    -   FishBase. [*Link*](http://www.fishbase.org/search.php).
+    -   Peces de arrecife. STRI. Caribe. [*Link*](http://biogeodb.stri.si.edu/caribbean/en/pages).
+    -   Monitoring Functional Groups of Herbivorous Reef Fishes as Indicators of Coral Reef Resilience - A practical guide for coral reef managers in the Asia Pacific Region. [*Link*](https://cmsdata.iucn.org/downloads/resilience_herbivorous_monitoring.pdf).
+-   Corales
+    -   Guide to Caribbean Coral Identification. [*Link*](https://reefdivers.io/guide-caribbean-coral-identification).
+-   The IUCN Red List. [*Link*](http://www.iucnredlist.org/).
+-   World Register of Marine Species. WoRMS. [*Link*](http://www.marinespecies.org/).
+
+# **Conservation planning**
+
+-   Research frontiers for integrating larval connectivity into conservation planning. Rebecca Weeks. ARC Centre of Excellence for Coral Reef Studies. [Link](https://www.youtube.com/watch?v=-0gL8mwlluo&list=PLO1PEYBjX6ZkXlWXEhjqkHYCQ8S24MRz1&index=18).
+-   The Marine Conservation Planning Database. [*Link*](http://database.conservationplanning.org/).
+
+# **Connectivity and dispersal**
+
+-   Coral 'hitchhiking' on drifting pumice. [*Link*](http://mobile.abc.net.au/news/2016-07-07/hope-for-reef-revealed-by-marine-hitchhikers/7578668)*. [Link](https://eleanormvelasquez.wordpress.com/pumice-rafting/).*
+-   Migratory Connectivity in the Ocean (MiCO). [Link](https://www.migratoryconnectivity.org/).
+-   Southern Caribbean coral reef spawning. CARMABI Research Station. [*Link*](http://www.researchstationcarmabi.org/wp-content/uploads/2018/05/SP-2018.jpg).
+-   **Videos**
+    -   CMAR Pacífico - Corredor Marino del Pacífico Este Tropical. [*Link*](https://www.youtube.com/watch?v=VUF-WG1Uzp8&feature=youtu.be).
+    -   Unraveling the secrets of fish dispersal in coral reef seascapes. Geoff Jones. ARC Centre of Excellence for Coral Reef Studies. [Link](https://www.youtube.com/watch?v=FhSed211NDo&index=17&list=PLO1PEYBjX6ZkXlWXEhjqkHYCQ8S24MRz1).
+    -   Causes and consequences of shifts in larval type: Reconsidering the role of dispersal in evolutionary process. Smithsonian Tropical Research Institute Panama [**Link**](http://www.ustream.tv/recorded/71835647)
+    -   Deep reef refuge hypothesis. [*Link*](https://www.grida.no/publications/88).
+    -   Healthy coral, bleached coral and dead coral. [*Link*](https://media.oregonstate.edu/media/t/0_akh5tea5).
+    -   Larval dispersal and its influence on fisheries management - Glenn Almany. ARC Centre of Excellence for Coral Reef Studies. [***Link.***](https://www.youtube.com/watch?v=45KPAun66sE)
+    -   Larval Retention/Reception: Marine Connectivity Patterns in Hawaii (Kobayashi).\*\*[Link](https://www.youtube.com/watch?v=45KPAun66sE)*.*
+    -   Marine population connectivity- Eric Treml. ARC Centre of Excellence for Coral Reef Studies. [*Link*](https://www.youtube.com/watch?v=3t0FVBr_nQI).
+    -   Marine protected area (MPA) design for both conservation and fisheries. Dr Nils Krueck. [*Link*](https://www.youtube.com/watch?v=TzVcBMG_JRw).
+    -   Physics-biology links determining connectivity at scales of metres to 10,000 km. ARC Centre of Excellence for Coral Reef Studies. [*Link*](https://www.youtube.com/watch?v=lhCo0mUO9ok)
+    -   ¿Qué nos revelan los otolitos? STRI Webcast.Brígida De Gracia Taylor. [*Link*](http://www.ustream.tv/recorded/111985094).
+    -   Retracing long and lonely journeys of reef fish families. Dr Michael Bode. [*Link*](https://www.youtube.com/watch?v=G-OrzKDISlA).
+    -   The emergent geography and geopolitical (mis)alignment of dispersal corridors and barriers across the Indo-West Pacific. Dr Eric Treml. [*Link*](https://vimeo.com/226678259).
+    -   Persistence of a reef fish metapopulation via network connectivity: theory and data. Ecology Letters 2021. [*Link*](https://doi.org/10.1111/ele.13721).
+
+{{< video "https://youtu.be/MZHApQmQcY8" >}} Reef biology, conservation and evolutionary ecology
+
+# **Reef biology, conservation and evolutionary** **ecology**
+
+-   Coral Adaptability, Resilience and Resistance to anthropogenic Impacts in Biodiverse Caribbean Reef Ecosystems, case study of Bocas del Toro. (CARIBE Project) Janina Seeman PhD Student Museum of Natural History, Berlin. STRI. [*Link.*](http://www.stri.si.edu/english/webcast/2011_webcasts.php)
+-   Esponjas Marinas: qué son, qué hacen, y para qué sirven. U-Tadeo. [*Link*](http://original.livestream.com/ujtl/video?clipId=pla_81310748-5679-4a24-b9d9-857b7d1812ec).
+-   Formation of the Isthmus of Panama. Science Advances 17 Aug 2016: Vol. 2, no. 8, e1600883. [*Link*](http://advances.sciencemag.org/content/2/8/e1600883).
+-   Herbivores and nutrients as drivers of community structure on coral reefs: from fishes to microbes. Deron urkepile. STRI. [*Link*](http://www.stri.si.edu/english/webcast/2011_webcasts.php).
+-   Marine ecological and evolutionary processes in the tropics. Oscar Puebla. STRI. [*Link*](http://www.stri.si.edu/english/webcast/2011_webcasts.php).
+-   Mechanisms of thermal tolerance on the Great Barrier Reef. Tracy Ainsworth.ARC Centre of Excellence for Coral Reef Studies. [Link](https://www.youtube.com/watch?v=zi9HSmA7pvQ&list=PLO1PEYBjX6ZkXlWXEhjqkHYCQ8S24MRz1&index=38).
+-   Reefs through time: a history of clonal growth, colony integration and algal symbiosis. Smithsonian Tropical Research Institute Panama. [*Link*](http://www.ustream.tv/recorded/83630207)
+-   Science and Policy Consideration for Caribbean Ocean Governance. John C. Ogden Department of Integrative Biology University of South Florida. STRI. [*Link*](http://www.stri.si.edu/english/webcast/2010_webcasts.php)*.*
+-   The evolutionary diversity and ecological complexity of coral reefs. Nancy Knowlton. STRI.[*Link.*](http://www.stri.si.edu/english/webcast/2012_webcasts.php)
+-   Good governance and regulations increase Caribbean coral reef resilience. Jeremy Jackson. [*Link*](https://www.youtube.com/watch?v=9bLNGKkQNec).
+    -   Status and trends of caribbean coral reefs 1970-2012. [*Link*](https://sustainabledevelopment.un.org/content/documents/1891-Status%20and%20Trends%20of%20Caribbean%20Coral%20Reefs-%201970-2012-2014Caribbean%20Coral%20Reefs%20-%20Status%20Report%201970-2012%20(1).pdf).
+    -   STRI Seminar [Link](http://www.ustream.tv/recorded/71755157).
+-   Unfolding phase shifts and managing for change. Nick Graham. ARC Centre of Excellence for Coral Reef Studies. [Link.](https://www.youtube.com/watch?v=TszrMsCoe0A)
+-   What did a healthy Caribbean reef look like? [*Link*](https://www.youtube.com/watch?v=8RWH6vcb6PY)
+-   Are isolated central Pacific reefs really “healthier”? Theseamonster.net. [*Link*](http://theseamonster.net/2016/04/are-isolated-central-pacific-reefs-really-healthier/).
+-   Ocean warming caused most Caribbean coral loss: a review of the evidence. Theseamonster.net. [*Link*](http://theseamonster.net/2017/04/caribbean-bleaching/).
+-   **Blanquemiento de corales**
+-   A new, high-resolution global mass coral bleaching database. Plos, 2017. [*Link*](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0175490).
+    -   *Bleaching database. [Link](https://simondonner.com/bleachingdatabase/).*
+-   A global analysis of coral bleaching over the past two decades. Nature Comm, 2019. [*Link*](https://www.nature.com/articles/s41467-019-09238-2#Sec7).
+    -   *Github data. [Link](https://github.com/InstituteForGlobalEcology/Coral-bleaching-a-global-analysis-of-the-past-two-decades). Carta de respuesta a revisores. [Link](https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-019-09238-2/MediaObjects/41467_2019_9238_MOESM3_ESM.pdf)*
+-   Warming Trends and Bleaching Stress of the World’s Coral Reefs 1985–2012. Sci Rep, 2016. [*Link*](https://www.nature.com/articles/srep38402).
+-   Spatial and temporal patterns of mass bleaching of corals in the Anthropocene. Science, 2018. [*Link*](https://science.sciencemag.org/content/359/6371/80/tab-figures-data).
+-   Extreme temperature events will drive coral decline in the Coral Triangle. [*Link*](https://onlinelibrary.wiley.com/doi/abs/10.1111/gcb.14972).
+
+# Conservación marino-costera
+
+-   **Métodos para la conservación**
+    -   Open Standards. [*Link*](http://cmp-openstandards.org/).
+        -   Threats Classification. [*Link*](http://cmp-openstandards.org/using-os/tools/threats-taxonomy/).
+    -   Conservation gateway. Action planning. [*Link*](http://www.conservationgateway.org/ConservationPlanning/ActionPlanning/Pages/conservation-action-plann.aspx).
+    -   Conservation Measures Partnership. [*Link*](http://www.conservationmeasures.org/).
+    -   Miradi share. [*Link*](https://www.miradishare.org/)
+    -   Rapid reviews Cochrane. [*Link*](http://training.cochrane.org/rapid-reviews-strengthen-health-policy-and-systems).
+    -   Marxan. [Link](http://www.marxan.org/).
+        -   Marxan Connenct. [*Link*](http://marxanconnect.ca/glossary.html#data_types).
+    -   Conservation Evidence. [*Link*](https://www.conservationevidence.com/).
+-   **MOOCS**
+    -   Conservation training. [*Link.*](https://www.conservationtraining.org/course/index.php)
+-   **Lecturas**
+    -   Decision Point Online. [*Link*](http://decision-point.com.au/).
+-   **Temas en conservación de Colombia**
+    -   La crisis socioambiental de la Ciénaga Grande de Santa Marta. Foro Nacional Ambiental. [*Link*](https://www.youtube.com/watch?v=uVLT_nl5zlY).
+    -   Curso Fondos de Agua. USAID. [*Link*](https://www.youtube.com/playlist?list=PLGXuaZ80H-cC66NwTW4ZA2P92SlANxUwS)*. [Link.](http://campus.cap-net.org/es/curso/fda13-fondos-de-agua/)*
+    -   Pago por servicios ambientales. Foro Nacional Ambiental. [*Link*](http://www.foronacionalambiental.org.co/) [*Link*](https://www.youtube.com/watch?v=GYF9Dfp3sGk).
+    -   Ministerio de Medioambiente. Conservación de la Biodivesidad marina, Costera e Insular y Ecosistémicos. [*Link*](http://www.minambiente.gov.co/index.php/asuntos-marinos-y-costeros-y-recursos-acuaticos/conservacion-de-la-biodivesidad-marina-costera-e-insular-y-ecosistemicos).
+    -   [Reportajes con Mauricio Gómez](https://canal1.com.co/programa/reportajes-con-mauricio-gomez/):
+        -   Cartagena.Capítulos: [uno](https://canal1.com.co/emision/capitulo-1-reportajes-mauricio-gomez/), [dos](https://canal1.com.co/emision/reportajes-mauricio-gomez-cartagena-capitulo-224-octubre-2017-2/), [tres](https://canal1.com.co/emision/reportajes-mauricio-gomez-cartagena-3er-capitulo-25-octubre-2017/), [cuatro](https://canal1.com.co/emision/reportajes-mauricio-gomez-cartagena-ultimo-capitulo-26-octubre-2017/).
+        -   San Andrés. Capítulos: [uno,](https://canal1.com.co/emision/reportajes-con-mauricio-gomez-san-andres-y-providencia-los-paraisos-perdidos-primera-entrega/) [dos](https://canal1.com.co/emision/reportajes-con-mauricio-gomez-san-andres-y-providencia-los-paraisos-perdidos-segunda-entrega/).
+-   **Conferencia Conferencia sobre los océanos 5-9 de junio de 2017 - Naciones Unidas, Nueva York. [*Link*](http://www.un.org/es/conf/ocean/index.shtml?utm_content=bufferb5a32&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer). [*Link*](http://www.un.org/es/conf/ocean/about.shtml). -- [ODS 14](http://www.un.org/es/conf/ocean/background.shtml)**
+    -   **Sustainable Development Goal 14.** Conserve and sustainably use the oceans, seas and marine resources for sustainable development. [*Link*](https://sustainabledevelopment.un.org/sdg14). [*Link*](https://sustainabledevelopment.un.org/partnerships/goal14/).
+    -   **The Potential of the Blue Economy**: Increasing Long-term Benefits of the Sustainable Use of Marine Resources for Small Island Developing States and Coastal Least Developed Countries. [Link](https://openknowledge.worldbank.org/handle/10986/26843?CID=ENV_TT_Environment_EN_EXT).
+    -   Videos conferencia sobre los océanos 5-9 de junio de 2017. [*Link*](https://www.youtube.com/user/unitednations/videos).
+-   A proposed unified framework for biological invasions. TREE. 2011. [*Link*](http://www.cell.com/trends/ecology-evolution/fulltext/S0169-5347(11)00093-0?_returnURL=http%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0169534711000930%3Fshowall%3Dtrue).
+-   What You Can Do to protect the planet. [*Link*](http://www.conservation.org/pages/what-you-can-do-tips.aspx).
+
+# Corals y MPAs
+
+-   Coral Health and Monitoring Program (CHAMP) Portal. [*Link*](http://www.coral.noaa.gov/champportal/).
+-   Coral Reef Watch Satellite Monitoring. NOAA. [*Link*](https://coralreefwatch.noaa.gov/satellite/index.php)
+-   Global distribution of coral reefs. UNEP WCMC.[*Link*](http://data.unep-wcmc.org/datasets/1).
+-   NOAA coral reefs conservation program. [*Link.*](https://coralreef.noaa.gov/welcome.html) Videos [*Link*](https://coralreef.noaa.gov/gallery/videos.html).
+-   NOAA's National Coral Reef Monitoring Program. [*Link*](https://www.coris.noaa.gov/monitoring/).
+-   Distribution of coldwater and tropical coral reefs. [*Link*](http://www.grida.no/resources/7197).
+-   Corals of the World. Biodiversity mapping. [*Link*](http://biodiversitymapping.org/wordpress/index.php/corals/).
+
+# Restoration of Coral reefs
+
+-   Coral Restoration Consortium. Coral Interim Report Release. [*Link*](https://livestream.com/accounts/7036396/events/8470717/videos/184123313?fbclid=IwAR3MMPS3EoUmp4ZTLv1QMH9qJmGaTYEwbjCK7gGkS42rmo4y9KYo3xInxb0).
+-   Motivations, success and cost of coral reef restoration. Restoration Ecology. 2019[. Link.](https://onlinelibrary.wiley.com/doi/abs/10.1111/rec.12977?fbclid=IwAR0RxVzVTke44cp-ZiDJX69mFA23QtBRXtTACt4ZJuRM7egoG4RTj0YS8ak)
+-   Reef resilience Network. [*Link*](http://reefresilience.org/es/).
+-   Ecological Restoration Synthesis. [*Link*](https://emma-ladouceur.github.io/conservation/projects/Restoration-Synthesis/).
+
+# Marine Protected Areas
+
+-   Coral Triangle Center.[*Link*](http://www.coraltrianglecenter.org/). *Short [movie](http://www.screencast.com/t/ZLKJhLWphl).*
+-   How is your MPA doing? A methodology for evaluating the management effectiveness of marine protected areas. [*Link*](http://www.sciencedirect.com/science/article/pii/S0964569105000955).
+-   Marine Protected Areas Atlas. [*Link*](http://www.mpatlas.org/map/mpas/).
+-   Marine Protected Areas Revisited. Peter Jones's evidence to Commons Environmental Audit Committee. [*Link*](http://www.geog.ucl.ac.uk/news-events/news/news-archive/december-2016/2018marine-protected-areas-revisited2019).
+-   National Marine Protected Areas Center. [*Link*](http://marineprotectedareas.noaa.gov/).
+-   UNESCO Global Geoparks (related). [*Link*](http://www.unesco.org/new/en/natural-sciences/environment/earth-sciences/unesco-global-geoparks/).
+-   World Database on Protected Areas. [*Link*](http://protectedplanet.net/).
+-   OECD. 2017. Marine Protected Areas. Economics, Management and Effective Policy Mixes. [*Link*](https://www.oecd.org/env/marine-protected-areas-9789264276208-en.htm).
+-   Ocean conservation boosts climate change mitigation and adaptation. Oneearth. 2022. [*Link*](https://www.cell.com/one-earth/fulltext/S2590-3322(22)00480-8)
+
+{{< video "https://youtu.be/cq3C0_JZlh8" >}} Marine protected areas systems
+
+# **Sistema de áreas marinas protegidas de Colombia**
+
+-   Diseño de una Geografía de la Esperanza. Manual para la planificación de la conservación ecorregional. Craig Groves, Laura Valutis, Diane Vosick, Betsy Neely, Kimberly Wheaton, Jerry Touval, Bruce Runnels. **2000**. [*Link*](https://www.conservationgateway.org/ConservationPlanning/SettingPriorities/EcoregionalReports/Documents/ManualPlanificacionConservacionEcorregional.pdf).
+-   Alonso D, Bustamante G, Rozo D. Análisis de vacios de representatividad de la biodiversidad en las áreas marinas protegidas del Caribe continental colombiano. **2007**. [*Link*](http://aquaticcommons.org/13018/1/gcfi_58-41.pdf).
+-   Alonso D, Ramírez L, Segura-Quintero C, Castillo-Torres P, Diaz JM, Walschburger T. Prioridades de conservación in situ para la biodiversidad marina y costera de la plataforma continental del Caribe y Pacífico colombiano. Santa Marta, Colombia: Instituto de Investigaciones Marinas y Costeras -INVEMAR, The Nature Conservancy -TNC y Unidad Administrativa Especial del Sistema de Parques Nacionales Naturales -UAESPNN, **2008**. [*Link*](http://siam.invemar.org.co/download-alfresco-file/186767).
+-   Alonso D, Ramírez LF, Segura-Quintero C, Castillo-Torres P, Walschburger T, Arango N. Hacia la construcción de un Subsistema Nacional de Áreas Marinas Protegidas en Colombia. Santa Marta, Colombia: Instituto de Investigaciones Marinas y Costeras –INVEMAR, Unidad Administrativa Especial del Sistema de Parques nacionales Naturales –UAESPNN y The Nature Conservancy –TNC, **2008**. [*Link*](http://www.invemar.org.co/redcostera1/invemar/docs/cartillasampcolombia.pdf).
+-   Alonso D, Segura-Quintero C, Castillo-Torres P, Gerhantz-Muro J. Avances en el diseño de una red de áreas marinas protegidas: estrategia de conservación para el norte del Caribe continental colombiano. Bol Invest Mar Cost. **2008**; 37(1):129-56. [*Link*](http://www.scielo.org.co/pdf/mar/v37n1/v37n1a08.pdf).
+-   Gutiérrez-Moreno C, Segura-Quintero C. Diseño de un área marina protegida para Bahía Portete-La Guajira, Caribe colombiano. **2008**. [*Link*](http://www.scielo.org.co/pdf/mar/v37n2/v37n2a10.pdf).
+-   Alonso, D. et al. Planificación ecorregional para la conservación in situ de la biodiversidad marina y costera en el Caribe y Pacífico continental colombiano. **2009**. [*Link*](http://www.invemar.org.co/redcostera1/invemar/docs/121932_LibroInformePLANECO_Vcompleta_2010.pdf).
+-   WWF Colombia. Planificación ecorregional para la conservación de la biodiversidad en los ámbitos costero y oceánico del SIRAP Pacífico. **2014**. [*Link*](http://siam.invemar.org.co/download-alfresco-file/135953).
+-   CARDIQUE, CARSUCRE, CODECHOCO, CORALINA, CORPAMAG, CORPOGUAJIRA, et al. Plan de Acción del Subsistema de Áreas Marinas Protegidas - SAMP 2016-2023: Lineamientos para su consolidación en el marco de los Subsistemas Regionales de Áreas Protegidas del Pacífico y del Caribe. In: Zamora-Bornachera AP, editor. Proyecto COL75241, PIMS \# 3997, Diseño e implementación de un Subsistema Nacional de Áreas Marinas Protegidas (SAMP) en Colombia INVEMAR, MADS, GEF y PNUD. Santa Marta. **2016**. p. 60. [*Link*](http://www.invemar.org.co/documents/10182/14479/plan_de_accion_final_baja.pdf).
+-   Marine protected areas in Colombia: Advances in conservation and barriers for effective governance. [Ocean & Coastal Management](https://www.sciencedirect.com/science/journal/09645691), 2016. [*Link*](https://www.sciencedirect.com/science/article/abs/pii/S0964569116300308).
+-   Planificación Espacial Marina (PEM) en el Pacífico norte colombiano. Costas. 2021. [*Link*](https://hum117.uca.es/wp-content/uploads/2021/06/22.pdf).
+
+# Convention on Biological Diversity
+
+-   Aichi Biodiversity Targets. [*Link*](https://www.cbd.int/sp/targets/).
+
+# Salud del oceano
+
+-   Atlas of Ocean Wealth. [*Link*](https://coast.noaa.gov/digitalcoast/tools/oceanwealth.html?utm_content=buffer6337f&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer).
+
+# Pesca marina
+
+-   Global fishing watch. [*Link*](http://globalfishingwatch.org/).
+    -   Working with our downloadable public data in R. [*Link*](https://globalfishingwatch.org/data-blog/working-with-our-downloadable-public-data-in-r/).
+-   Shadowing the tuna boats. [*Link*](https://earthdata.nasa.gov/user-resources/sensing-our-planet/shadowing-the-tuna-boats).
+-   Fisheries controversies. Most cited fish and fisheries books, papers, and databases. [*Link*](https://sites.google.com/a/uw.edu/most-cited-fisheries/controversies).
+-   Atún de lata con pasaporte para arrinconar la pesca ilegal. [*Link*](http://economia.elpais.com/economia/2017/06/08/actualidad/1496884153_598338.html).
+-   Pesca marina en Colombia. 2017. Cátedra Fulbright. [*Link.*](https://youtu.be/lBWAXT-M2vM)
+-   Actividad pesquera marina en Colombia. Guía de seguimiento. [*Link*](https://www.guiarecursospesqueros.org/).
+-   Registro Nacional de Barcos Pesqueros. [*Link*](http://uvicolombia.org/).
+
+El papel del consumidor en la conservación de los mares CharlasWOK, miércoles 3 de julio de 2019 Jorge Jimenez. Marviva
+
+Cátedra Fulbright, Universidad de los Andes Regiones 2017, pesca marina en Colombia
+
+::: {layout-ncol=2}
+
+{{< video "https://youtu.be/ZQFLUGNIM0w" >}} El papel del consumidor en la conservación de los mares CharlasWOK, miércoles 3 de julio de 2019 Jorge Jimenez. Marviva
+
+{{< video "https://youtu.be/lBWAXT-M2vM" >}} Cátedra Fulbright, Universidad de los Andes Regiones 2017, pesca marina en Colombia
+
+:::
+
+# Population ecology
+
+-   Population Viability Analysis - PVA.[*Link*](http://www.montana.edu/screel/teaching/bioe-440r-521/course-outline/module-5.html).
+-   Out of the jungle of demographic analyses. Methods in Ecol and Evol. [*Link*](https://methodsblog.wordpress.com/2013/05/29/out-of-the-jungle-of-demographic-analyses/).
+-   Alternative Stable States. [*Link*](https://www.nature.com/scitable/knowledge/library/alternative-stable-states-78274277).
+-   Population Ecology in Practice. [*Link*](https://www.wiley.com/en-us/Population+Ecology+in+Practice-p-9780470674147).
+
+# Basura marina y plásticos
+
+-   Curso basura marina. Massive Open Online Course on Marine Litter. [*Link*](https://www.ou.nl/-/unenvironment-mooc-marine-litter).
+-   Beyond plastic waste. Science 2017. [*Link*](http://science.sciencemag.org/content/358/6365/843.full).
+-   Microplastics in seawater: Recommendations from the Marine Strategy Framework Directive implementation process. Frontiers. 2016. [*Link*](http://journal.frontiersin.org/researchtopic/4637/bridging-the-gap-between-policy-and-science-in-assessing-the-health-status-of-marine-ecosystems#articles).
+-   Developing a Remote Sensing System to Track Marine Debris. EOS. 2016. [*Link*](https://eos.org/meeting-reports/developing-a-remote-sensing-system-to-track-marine-debris).
+-   Marine Debris: Garbage Patch Experiment (movie). Nasa. [*Link*](http://sos.noaa.gov/Datasets/dataset.php?id=619).
+-   Microplastics: What we know and discussion of research needs. [*Link*](https://vimeo.com/213122652).
+-   Ocean Atlas - The microplastic problem. [*Link*](https://meeresatlas.org/en/chapter/the-microplastic-problem/).
+-   River plastic emissions to the world’s oceans. Nature communications. 2016. [*Link*](https://www.nature.com/articles/ncomms15611).
+-   Ocean plastic collectors. The Verge. [*Link*](https://www.theverge.com/2017/7/13/15960142/ocean-cleanup-plastic-pollution-silicon-valley-peter-theil-boyan-slat).
+-   Plastic waste inputs from land into the ocean. Science. 2015. [*Link*](http://science.sciencemag.org/content/347/6223/768.full)*.*
+-   Exceptional and rapid accumulation of anthropogenic debris on one of the world’s most remote and pristine islands. PNAS. 2016. [*Link*](http://www.pnas.org/content/114/23/6052.short).
+-   Where does marine debris come from?. NOAA. [*Link*](https://oceantoday.noaa.gov/trashtalk_wheredoesmarinedebriscomefrom/).
+-   Opinion: Why we need an international agreement on marine plastic pollution. PNAS. 2017. [*Link*](http://www.pnas.org/content/114/38/9994.full).
+-   Fundaciones
+    -   Plastic Oceans. [*Link*](https://www.plasticoceans.org/).
+    -   Proyecto Ruta. [*Link*](https://projetoroute.com.br/).
+
+# **Manglares**
+
+-   Mangroves: A Star Player in the Coastal Protection Game. Nature.org. [Link](https://blog.nature.org/conservancy/2017/08/08/mangroves-a-star-player-in-the-coastal-protection-game/).
+-   Mangroves of Colombia revisited in an era of open data, global changes, and socio-political transition: Homage to Heliodoro Sánchez-Páez. 2019. [*Link*](https://www.raccefyn.co/index.php/raccefyn/article/view/780/539).
+-   Herramienta online (mapping tool) para mapear los servicios de ecosistema producidos por manglares. [*Link*](http://maps.oceanwealth.org/mangrove-restoration/?fbclid=IwAR3jkjHP1Sbht0PrnOd1MDb5sbOdjkK4IZvk43OzZnE6KlxeTHvtDUkAAzQ).
+-   A global map of mangrove forest soil carbon at 30 m spatial resolution. [*Link*](https://iopscience.iop.org/article/10.1088/1748-9326/aabe1c/meta?fbclid=IwAR1kVEolvuy9ujq8mKHN7grE6x4LrkqiR-ZABz2AyNa_nPRsdPx0RaeWj9M).
+
+# **Pastos marinos**
+
+-   Open Coast Seagrass Restoration. Can We Do It? Large Scale Seagrass Transplants. 2019 [*Link*](https://www.frontiersin.org/articles/10.3389/fmars.2019.00052/full).
+
+# **Erosión costera y nivel del mar**
+
+-   Plan Maestro de erosión costera. Resumen. 2017. [*Link*](https://www.arcadis.com/media/3/2/1/%7B3218C2E2-50C7-49CB-8A38-2FF72606CB23%7DMasterplan%20kusterosie%20Colombia_PMEC_Informe%20Principal_final_20171103_FINAL_ESENG%20-%20summary.pdf).
+-   Programa nacional de investigación para la prevención, mitigación y control. Invemar. [*Link*](http://www.invemar.org.co/redcostera1/invemar/docs/PNIEC2009/PNIEC_1_42.pdf).
+-   Sea Level Rise - Map Viewer. [*Link*](https://www.climate.gov/maps-data/dataset/sea-level-rise-map-viewer).
+
+# **Prensa**
+
+-   Una nueva esperanza para los arrecifes de coral. [*Link.*](http://elpais.com/elpais/2016/06/28/ciencia/1467114641_149110.html)
+-   Bright spots among the world’s coral reefs. [*Link*](http://www.nature.com/nature/journal/vaop/ncurrent/full/nature18607.html).
+-   Cass Sunstein, el arquitecto de las decisiones. [*Link*](http://elpaissemanal.elpais.com/confidencias/cass-sunstein/). [*GS_Link*](https://scholar.google.com/citations?user=ddq2_gkAAAAJ&hl=es).
+-   Coral bleaching is getting worse... but the biggest problem is pollution. [*Link*](https://www.theguardian.com/environment/2017/dec/27/coral-bleaching-is-getting-worse-but-the-biggest-problem-is-pollution).
+-   **Online lectures y documentales**
+-   ICRS (2016) 13. Hawaii Plenaries. [*Link*](https://vimeo.com/groups/342636).
+-   Winter School Online Lectures. [*Link*](https://vimeo.com/user32596141).
+-   Chasing coral. [*Link*](http://www.chasingcoral.com/).
+-   A plastic ocean. [*Link*](http://www.imdb.com/title/tt5203824/).
+-   Big Pacific. [*Link*](http://www.pbs.org/show/big-pacific/)
+-   Blue Planet. [*Link*](http://www.bbc.co.uk/programmes/b008044n). Blue Planet 2. [*Link*](http://www.bbc.co.uk/programmes/p04tjbtx).
+-   **Field identification and Especies amenazadas**
+-   The IUCN Red List of Threatened Species. [*Link*](http://www.iucnredlist.org/).
+-   Field Identification Guide to the Threatened Corals of the U.S. Pacific Islands. [*Link*](https://www.coris.noaa.gov/activities/Corals_FieldID/).
+-   World fish center. [*Link*](https://www.worldfishcenter.org/).
+-   **Sostenibilidad**
+-   Engage key social concepts for sustainability. Science. 2016 [*Link*](http://science.sciencemag.org/content/352/6281/38).
+
+# **Instituciones y programas en conservación marino-costera y**
+
+-   Conservación internacional
+    -   Eastern Tropical Pacific Seascape. [*Link*](https://www.conservation.org/where/pages/eastern-tropical-pacific-seascape.aspx?_ga=2.117671758.634956751.1520718858-629509342.1520718858). [*Link*](https://blog.conservation.org/2012/11/seascapes-approach-helps-solve-complex-ocean-problems/?_ga=2.117671758.634956751.1520718858-629509342.1520718858).
+-   Corales de paz. [Link](https://www.coralesdepaz.org/).
+-   Fundación Malpelo. [*Link*](http://www.fundacionmalpelo.org/index.php/es/).
+-   Migramar. [*Link*](http://migramar.org/).
+-   NOAA. Programa de conservación de corales. [*Link*](https://coralreef.noaa.gov/welcome.html).
+-   Red Pacífico. [*Link*](http://redpacifico.net/es/sobre-la-iniciativa/).
+-   The Nature Conservancy. [*Link*](https://www.nature.org/). Projects [link](http://projects.tnc.org/).
+-   Seaflower Foundation. [*Link*](http://seaflowerfoundation.org/).
+-   Tepa Conservation. [*Link*](http://www.tepaconservation.org/#).
+-   Australian Government. The Reef 2050 Plan. [*Link*](http://www.environment.gov.au/marine/gbr/long-term-sustainability-plan).
+
+# **Centros de investigación**
+
+-   Marum Center for Marine Environmental Studies. [*Link.*](https://www.marum.de/en/education-career.html)
+
+# **Colombia**
+
+-   Memoria expedicionaria Colombia Antártica. [*Link*](https://www.oceandocs.org/handle/1834/14717).
+
+# **Lecturas de interés y debate**
+
+-   Money for Nothing? A Call for Empirical Evaluation of Biodiversity Conservation Investments. PLOS. 2006. [*Link*](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0040105).
+-   Ecology: The effect of conservation spending. Nature. 2017. [*Link*](https://www.nature.com/articles/nature24158).
+
+# **Buceo Técnico**
+
+-   Scuba. MIT Open Courseware. [*Link*](http://ocw.mit.edu/courses/athletics-physical-education-and-recreation/pe-210-scuba-spring-2007/index.htm).
+-   DECOMPRESSION THEORY – PART 1. [*Link*](https://www.tdisdi.com/decompression-theory-part-1/?utm_source=Hootsuite&utm_campaign=Aug_2016&utm_medium=social_media)
+-   The Beginners Guide To Freediving. [*Link*](https://www.deeperblue.com/beginners-guide-freediving/).
+-   Scientific diving. [*Link*](https://www.youtube.com/user/UCSCDiveSafety/videos).
+
+# **Varios**
+
+-   Ocean opportunities. [*Link*](https://www.oceanoculus.com/news-from-the-sea/ocean-opportunities).
+
+{{< video "https://youtu.be/K7b0X25vPv0" >}} UNAL - Dia mundial de los oceanos 2020

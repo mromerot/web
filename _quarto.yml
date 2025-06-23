@@ -26,7 +26,11 @@ website:
           - text: "Educacion"
             href: grd/educacion.qmd
           - text: "Incendios forestales"
-            href: grd/incendiosforestales.qmd 
+            href: grd/incendiosforestales.qmd
+          - text: "Huracanes"
+            href: grd/huracanes.qmd
+          - text: "El Niño / La Niña"
+            href: grd/elnino.qmd       
           - text: "Inundaciones"
             href: grd/inundaciones.qmd
           - text: "Riesgo sísmico"
@@ -61,7 +65,7 @@ website:
             href: cyt/transdisciplina.qmd
       - section: "Ecología y conservación"
         contents:
-          - text: "Ecologia y conservacion"
+          - text: "Ecologia y conservacion marina"
             href: ecolyconserv/ecologiayconservacion.qmd
       - section: "Matemáticas y ciencia de datos"
         contents:

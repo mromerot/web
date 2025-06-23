@@ -4,6 +4,547 @@ format: html
 editor: visual
 ---
 
-## Ciencia de datos
+# **Lecturas**
 
-{{< lipsum 1 >}}
+-   Lectura introductoria. Curriculum Guidelines for Undergraduate Programs in Data Science. **Annual Review of Statistics and Its Application**. 2017. [*Link*](https://www.annualreviews.org/doi/abs/10.1146/annurev-statistics-060116-053930).
+-   Should Computer Science Be Required?. [*Link*](https://www.insidehighered.com/views/2019/10/28/why-every-student-should-study-computer-science-opinion).
+-   Five reasons why researchers should learn to love the command line. [*Link*](https://www.nature.com/articles/d41586-021-00263-0).
+-   RStudio Webinars. [Link](https://rstudio.com/resources/webinars/).
+
+# **Entornos de desarrollo Integrado - [IDE](https://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado)**
+
+## Python
+
+-   Google Colab. Link.
+
+    -   AI hub. [*Link*](http://aihub.cloud.google.com./).
+    -   Que es. [*Link*](https://colab.research.google.com/drive/1QvTXhvNie2AoS7coC0dyQ_Fh0gH5rrfi#scrollTo=5fCEDCU_qrC0)
+    -   Introduction to Google Colab. [*Link*](https://www.coursera.org/lecture/getting-started-with-tensor-flow2/coding-tutorial-introduction-to-google-colab-qWInB).
+    -   Google Colab 101 Tutorial with Python — Tips, Tricks, and FAQ. [*Link*](https://towardsai.net/p/programming/google-colab-101-tutorial-with-python-tips-tricks-and-faq-7689bd4d24b4).
+
+-   Anaconda. [*Link*](https://www.anaconda.com/).
+
+-   Spyder. [*Link*](https://www.spyder-ide.org/)
+
+## Visual Code
+
+-   Visual Code Studio. [*Link*](https://code.visualstudio.com/). [*Link*](https://code.visualstudio.com/learn).
+
+## **Herramientas y ayuda**
+
+-   Stackblitz. [*Link*](https://stackblitz.com/)
+-   Software carpentry. [*Link*](https://software-carpentry.org/lessons/). [*Link*](https://github.com/swcarpentry/DEPRECATED-bc/tree/master). [*Link*](https://github.com/swcarpentry/DEPRECATED-bc/tree/master/novice).
+-   Kaggle. [*Link*](https://www.kaggle.com/learn).
+-   Freecode camp. [*Link*](https://www.freecodecamp.org/).
+-   Stack Overflow. [*Link*](http://www.stackoverflow.com/)*.\*\*\**
+-   Our coding club. [*Link*](https://ourcodingclub.github.io/tutorials/). [*Link*](https://ourcodingclub.github.io/tutorials/).
+-   How do I? [*Link*](https://smach.github.io/R4JournalismBook/HowDoI.html).
+-   Carpentries para Latinoamérica. [*Link*](https://carpentries.org/latam-tf/).
+    -   Upcomming workshops. [*Link*](https://carpentries.org/upcoming_workshops/).
+-   Unimelbourne
+    -   Resbaz (Git, Matlab, R, Python, Shell, Nltk, Authorea). [*Link*](https://github.com/resbaz/lessons)
+    -   Research Computing Services Training at GitLab. [*Link*](https://gitlab.unimelb.edu.au/rescom-training).
+-   Style guide. [*Link*](http://adv-r.had.co.nz/Style.html). Google Style Guide. [*Link*](https://google.github.io/styleguide/Rguide.xml).
+-   Google’s R Style Guide. [*Link*](https://google.github.io/styleguide/Rguide.html).
+-   R-Universe. [*Link*](https://r-universe.dev/search/).
+-   Ejemplos AI. [*Link*](https://beta.openai.com/examples).
+-   Traductor de lenguajes. [*Link*](https://analytica.shinyapps.io/codelingo/).
+
+::: {layout-ncol="2"}
+{{< video https://www.youtube.com/watch?v=dx_sfmbV-bo&t=2s >}}
+
+{{< video https://www.youtube.com/watch?v=inN8seMm7UI&t=41s >}}
+
+{{< video https://www.youtube.com/watch?v=rNgswRZ2C1Y&t=235s >}}
+
+IDEs
+:::
+
+# Aprender ciencias de la computación
+
+-   Introduction to Computer Science. Edx. [*Link*](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x?source=aw&awc=6798_1490493159_f1307a0441e4c72273db7950993f391d&utm_source=aw&utm_medium=affiliate_partner&utm_content=text-link&utm_term=78888_Skimlinks).
+-   Introduction to Computational Thinking. Math from computation, math with computation. [*Link*](https://computationalthinking.mit.edu/Spring21/).
+-   Introducción a la Programación para Ciencias e Ingeniería. [*Link*](https://miriadax.net/web/introduccion-programacion-ciencias-ingenieria-2edicion).
+-   Programming Basics. EdX. [*Link*](https://courses.edx.org/courses/course-v1:IITBombayX+CS101.1x+1T2016/info).
+-   HarvardX Biomedical Data Science Open Online Training. [*Link*](http://rafalab.github.io/pages/harvardx.html).
+-   Algorithmic Thinking (Part 1). Coursera. [*Link*](https://www.coursera.org/learn/algorithmic-thinking-1)*.*
+-   Blog DataCamp. [*Link*](http://blog.datacamp.com/).
+-   Glossary of Computer Programming Terms. [*Link*](http://cse.csusb.edu/dick/cs202/glossary.html).
+-   Transmittingscience.org. [*Link*](http://www.transmittingscience.org/)
+
+# R
+
+## Buscar ayuda y aprender
+
+-   Cloud. [*Link*](https://rstudio.cloud/).
+-   Teaching R online with RStudio Cloud. [*Link*](https://www.rstudio.com/resources/webinars/teaching-r-online-with-rstudio-cloud/).
+-   Computing in the Cloud with Google and RStudio. [*Link*](https://hydroecology.net//computing-in-the-cloud-with-google-and-rstudio/).
+-   RTutor AI. [*Link*](https://rtutor.ai/).
+-   Crantastic. [*Link*](http://crantastic.org/).Datacamp. [*Link*](https://www.datacamp.com/courses/free-introduction-to-).\*\*\*Elementary Statistics With R. [*Link*](https://www.youtube.com/user/GCstats/videos) Quick-R. [*Link*](http://www.statmethods.net/). \*\*\*R-bloggers. [*Link*](https://www.r-bloggers.com/).Learnr4free. [*Link*](https://www.learnr4free.com/es/index.html).Lista de paquetes. [*Link*](http://cran.r-project.org/web/views/).R Programming Tutorials. [*Link*](http://www.listendata.com/p/r-programming-tutorials.html)*.*Rseek. [*Link*](http://rseek.org/).RStudio Cloud in the Classroom. [*Link*](https://speakerdeck.com/minecr/rstudio-cloud-in-the-classroom?slide=24).RStudio Cheat Sheets. [*Link*](https://www.rstudio.com/resources/cheatsheets/).Tidyverse.org. [*Link*](https://www.tidyverse.org/).Programiz. [*Link*](http://www.programiz.com/r-programming).R documentation. [*Link*](http://www.rdocumentation.org/).
+    -   RTutor. [*Link*](https://github.com/skranz/RTutor).
+    -   Swirl. [*Link*](http://www.swirlstats.com/).
+    -   TryR. [*Link*](http://tryr.codeschool.com/).
+-   **RStudio Cheatsheets**. [*Link*](https://www.rstudio.com/resources/cheatsheets/).
+-   RStudio IDE cheatsheet. [*Link*](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf).
+-   Data import. [*Link*](https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf)
+-   Data visualization with ggplot2 cheatsheet. [*Link*](https://github.com/rstudio/cheatsheets/raw/master/data-visualization.pdf).
+-   **Libros**
+    -   Book down. [*Link*](https://bookdown.org/).Best Coding Practices for R. [*Link*](https://bookdown.org/content/d1e53ac9-28ce-472f-bc2c-f499f18264a3/) Free R Reading Material. [*Link*](https://committedtotape.shinyapps.io/freeR/).
+    -   **L** El arte de programar en R: un lenguaje para la estadística. [*Link*](https://cran.r-project.org/doc/contrib/Santana_El_arte_de_programar_en_R.pdf).
+    -   R Cookbook. Proven Recipes for Data Analysis, Statistics, and Graphics. [*Link*](https://books.google.com.co/books?id=KIHuSXyhawEC).
+    -   R in a Nutshell. [*Link.*](https://books.google.com.co/books?id=O5-fSBScR_4C)
+
+### Básico
+
+-   Materiales de RStudio en Español. [*Link*](https://resources.rstudio.com/espanol).
+    -   R para Ciencia de Datos. [*Link*](https://es.r4ds.hadley.nz/).
+    -   R para profesionales de los datos. [*Link*](https://luisxsuper.github.io/bibroxd/index.html).
+    -   Introduction to R. Datacamp. [*Link*](https://www.datacamp.com/courses/free-introduction-to-r).
+    -   Learning R. Lynda.com. [*Link*](https://www.lynda.com/R-tutorials/Up-Running-R/120612-2.html).
+    -   AprendeR. Miriada X. [*Link*](https://miriadax.net/web/aprende-r-rstudio).
+    -   Introduction to R for Data Science. Edx. [*Link*](https://www.edx.org/course/introduction-r-data-science-microsoft-dat204x-0).
+    -   Introduction to Data Science with R and Tidyverse. [*Link*](https://www.introds.eu/).
+    -   Quick R. [*Link*](http://www.statmethods.net/r-tutorial/index.html).
+    -   Swirl. [*Link*](http://swirlstats.com/).
+    -   Code School. [*Link.*](http://tryr.codeschool.com/)
+    -   Do More with R. [*Link*](https://www.infoworld.com/video/series/8563/do-more-with-r).
+    -   R for Data Science. Grolemund & Wickham. [*Link*](https://r4ds.had.co.nz/)
+    -   R para Ciencia de Datos. [*Link*](https://es.r4ds.hadley.nz/).
+    -   Applied R in the Classroom. [*Link*](https://onlinelibrary.wiley.com/doi/full/10.1111/1467-8462.12362).
+    -   rstudio4edu. A Handbook for Teaching and Learning with R and RStudio. [*Link*](https://rstudio4edu.github.io/rstudio4edu-book/).
+
+### Intermedio
+
+-   Data Science. Lynda.com. [*Link*](https://www.lynda.com/Business-Intelligence-tutorials/Data-Science-Tips/479799-2.html)
+-   Intermediate R. Datacamp. [*Link*](https://www.datacamp.com/courses/intermediate-r).R for Data Science. [*Link*](http://r4ds.had.co.nz/).
+-   R-Statistics-Essential-Training. Lynda.com. [*Link*](https://www.lynda.com/R-tutorials/R-Statistics-Essential-Training/142447-2.html).
+-   R Programming. Coursera. [*Link*](https://www.coursera.org/learn/r-programming).
+-   R Workshop for Social Scientist NOAA. [*Link*](https://emilymarkowitz-noaa.github.io/RWorkshopForSocialScientists/index.html).
+-   RStudio IDE cheatsheet
+-   Harvard WorkShop. [*Link.*](https://dss.iq.harvard.edu/workshop-materials)
+-   R-Bootcamp. [*Link*](https://r-bootcamp.netlify.app/).\*\*
+-   Awesome R Learning Resources. [*Link*](https://github.com/iamericfletcher/awesome-r-learning-resources).
+
+### Avanzado
+
+-   Advanced statistics. Stat tools. [*Link*](http://statstools.com/learn/advanced-statistics/).
+-   Ecological Models and Data in R. [*Link*](http://ms.mcmaster.ca/~bolker/emdbook/index.html).
+-   Advanced R. *Hadley Wickham*. [*Link*](https://adv-r.hadley.nz/index.html).
+-   Mastering Software Development in R. [*Link*](https://bookdown.org/rdpeng/RProgDA/).
+-   Data Science in Education Using R. [*Link*](https://www.routledge.com/Data-Science-in-Education-Using-R/Estrellado-Freer-Mostipak-Rosenberg-Velasquez/p/book/9780367422257).
+
+### Tydiverse
+
+-   Remaster the Tidyverse. [*Link*](https://github.com/rstudio-education/remaster-the-tidyverse/tree/master).
+-   El paquete dplyr. [*Link*](https://rsanchezs.gitbooks.io/rprogramming/content/chapter9/dplyr.html).
+-   Dive into dplyr (tutorial). [*Link*](https://www.kaggle.com/jessemostipak/dive-into-dplyr-tutorial).
+-   TidyTuesday\*\*\*. [*Link*](https://github.com/rfordatascience/tidytuesday/blob/master/README.md).
+-   An educator’s perspective of the tidyverse. 2022. [*Link*](https://escholarship.org/uc/item/7kk4d922).
+
+**RStudio Cheatsheets**. [*Link*](https://www.rstudio.com/resources/cheatsheets/).
+
+-   RStudio IDE cheatsheet. [*Link*](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf).
+-   Base R. [*Link*](http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf)
+-   Data import. [*Link*](https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf)
+-   Data visualization with ggplot2 cheatsheet. [*Link*](https://github.com/rstudio/cheatsheets/raw/master/data-visualization.pdf).
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/jOd65mR1zfw" >}} Data wrangling
+
+{{< video "https://youtu.be/aYRSd4LW39w" >}} How to connect to chatGPT with R
+:::
+
+-   **Ejercicios aplicados**
+    -   Mean trophic levels of a genera from FishBase. Seascape models. [*Link*](http://www.seascapemodels.org/rstats/2017/03/23/summarize-by-genera.html). [*Link*](http://www.seascapemodels.org/Rstats/).
+    -   Coral reef degradation is not correlated with local human population density. Scientific Reports. 2016. [*Link*](https://www.nature.com/articles/srep29778). [*Code*](https://github.com/johnfbruno/Bruno-and-Valdivia-Sci-Reports-2016/blob/master/SREP29778_RCode.R).
+    -   Macro Ecology and Spatial Statistics. [*Link*](http://fabro.github.io/R.html).
+    -   R-packages for oceanographic data visualisation. [*Link*](http://www.rforscience.com/rpackages/visualisation/oceanview/).
+    -   Forecasting El Niño-Southern Oscillation (ENSO). [*Link*](https://blogs.rstudio.com/ai/posts/2021-02-02-enso-prediction/).
+    -   R programming tools for conservation scientists. [*Link*](http://www.seascapemodels.org/research%20rstats/2016/07/08/rstats-for-conservation.html).
+    -   Conservation programming in R. [*Link*](http://www.seascapemodels.org/Rstats/Conservation_R_7Jun2016.html).
+-   **Tablas en R**
+    -   R Data.table. [*Link*](https://github.com/Rdatatable/data.table).
+    -   R gt package. [*Link*](https://gt.rstudio.com/)
+    -   10+ Guidelines for Better Tables in R. [*Link*](https://themockup.blog/posts/2020-09-04-10-table-rules-in-r/).
+    -   Data.Table Tutorial (with 50 Examples). [*Link*](http://www.listendata.com/2016/10/datatable-tutorial.html?m=1).
+    -   Aggregation and Restructuring data (from “R in Action”). [*Link*](https://www.r-statistics.com/2012/01/aggregation-and-restructuring-data-from-r-in-action/).
+-   **Gráficas en R**
+    -   r-graph gallery. [*Link*](http://www.r-graph-gallery.com/).
+    -   A Compendium of Clean Graphs in R. [*Link*](http://shinyapps.org/apps/RGraphCompendium/index.php).
+    -   R Graphics Cookbook, 2nd edition. [*Link*](https://r-graphics.org/index.html).
+    -   [3D ggplots with rayshader - RStudio](https://rstudio.com/resources/rstudioconf-2020/3d-ggplots-with-rayshader/?wvideo=a18qo2kjlo) Rayshader. [*Link*](https://www.rayshader.com/).
+    -   Rayrender. [*Link*](https://www.rayrender.net/).
+    -   Data Visualization. [*Link*](http://r4ds.had.co.nz/data-visualisation.html).
+    -   Data Visualization in R. DataCamp. [*Link*](https://www.datacamp.com/courses/data-visualization-in-r).
+    -   Graphs. QuickR. [*Link*](http://www.statmethods.net/graphs/index.html).
+    -   Creating memorable data visualisations using the R programming language - Chris Brown. Winter School Online Lectures. [*Link*](https://vimeo.com/226836846).
+    -   From data to viz. [*Link*](https://www.data-to-viz.com/).
+    -   Interactive web-based data visualization with R, plotly, and shiny. [*Link*](https://plotly-r.com/).
+    -   dygraphs for R. Time series. [*Link*](https://rstudio.github.io/dygraphs/index.html).
+    -   BBC Visual and Data Journalism cookbook for R graphics. [*Link*](https://bbc.github.io/rcookbook/)
+    -   Graphics Global Warming. IPCC. [*Link*](https://www.ipcc.ch/sr15/graphics/).
+-   **Otros temas**
+    -   For en R. [*Link*](https://r-coder.com/for-en-r/).
+    -   Easy and efficient data manipulation. [*Link*](https://ourcodingclub.github.io/2017/01/16/piping.html).
+-   **ggplot2**
+    -   ggplot2: Elegant Graphics for Data Analysis. 3rd edition. [*Link*](https://ggplot2-book.org/index.html).Overview. [*Link*](https://ggplot2.tidyverse.org/). Reference. [*Link*](https://ggplot2.tidyverse.org/reference/index.html#section-plot-basics).Visualización de Datos usando ggplot2 Guía Rápida. [*Link*](https://rstudio.com/wp-content/uploads/2016/12/ggplot2-cheatsheet-2.1-Spanish.pdf).Elegant Graphics for Data Analysis. [*Link*](https://ggplot2-book.org/).\*\*\*
+    -   Tidyverse Basics. [*Link*](http://docs.ggplot2.org/current/index.html).
+    -   Coursera. [*Link*](https://www.coursera.org/search?query=ggplot2).
+        -   Videos: [*Link*](https://es.coursera.org/learn/exploratory-data-analysis/lecture/UlFGr/ggplot2-part-1). [*Link*](https://www.coursera.org/lecture/exploratory-data-analysis/ggplot2-part-2-qBzHS). [*Link*](https://www.coursera.org/lecture/exploratory-data-analysis/ggplot2-part-3-idcsq). [*Link*](https://www.coursera.org/lecture/exploratory-data-analysis/ggplot2-part-4-cj6RA).
+    -   DataCamp. [*Link (transcrip Link. Link)*](https://rpubs.com/williamsurles/294957).
+    -   Exploring ggplot2 boxplots - Defining limits and adjusting style. [*Link*](https://owi.usgs.gov/blog/boxplots/).
+    -   Otros videos
+        -   [*Link*](https://www.youtube.com/watch?v=h29g21z0a68).
+    -   Animated plots - gganimate. [Link.](https://gganimate.com/)
+    -   A ggplot2 grammar guide. [*Link*](https://evamaerey.github.io/ggplot2_grammar_guide/about).
+    -   Patchwork. To combine separate ggplots. [*Link*](https://patchwork.data-imaginist.com/).
+    -   Simple Gantt charts in R with ggplot2. [*Link*](https://www.molecularecologist.com/2019/01/simple-gantt-charts-in-r-with-ggplot2-and-the-tidyverse/).
+    -   Top 50 ggplot2 Visualizations. [*Link*](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html).
+-   **Shiny**
+    -   a gRadual intRoduction to Shiny. [*Link*](https://laderast.github.io/gradual_shiny/).
+    -   Mastering Shiny. [*Link*](https://mastering-shiny.org/).
+    -   Shiny tutorial. \*\*\* [*Link*](https://shiny.rstudio.com/tutorial/). [*Link*](https://shiny.rstudio.com/tutorial/). [*Link*](https://github.com/rstudio-education/shiny.rstudio.com-tutorial)
+    -   Shiny gallery. [*Link*](https://shiny.rstudio.com/gallery/).
+    -   Shiny widget gallery. [*Link*](https://shiny.rstudio.com/gallery/widget-gallery.html)
+    -   **Ejemplos** Shiny apps
+        -   GCMCompareR. [*Link*](https://ecoinformatica.net/GCMcompareR.html).
+
+Shiny. [*Link*](https://github.com/rstudio/cheatsheets/raw/master/shiny.pdf)
+
+-   **Bayesian Statistics**
+    -   Learning Bayesian Statistics Course. [*Link*](https://learnbayesstats.anvil.app/).
+    -   Bayes Rules! An Introduction to Bayesian Modeling with R. [*Link*](https://www.bayesrulesbook.com/).
+    -   Bayesian Data Analysis course at Aalto. github. [*Link*](https://github.com/avehtari/BDA_course_Aalto).
+    -   Statistical Rethinking: A Bayesian Course (with Code Examples in R/Stan/Python/Julia). [*Link*](https://github.com/rmcelreath/stat_rethinking_2020).
+
+{{< video "https://youtu.be/pb44U3SjeJ4" >}} Learning bayesian statistics
+
+# Phyton
+
+-   2022 Python con Google Colab. Udemi. [*Link*](https://www.udemy.com/course/python-con-google-colab-python-desde-cero-bien-explicado/)
+-   A Whirlwind Tour of Python. [*Link*](https://jakevdp.github.io/WhirlwindTourOfPython/).
+-   Curso Phyton (temario para aprender lenguaje). [*Link*](https://www.transmittingscience.com/courses/statistics-and-bioinformatics/introduction-to-python-for-biology/).
+-   Datacamp. Intro to Python. [*Link*](https://app.datacamp.com/learn/courses/intro-to-python-for-data-science).
+-   Introduction to Computer Science and Programming in Python. MIT. [*Link*](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-videos/).\*\*\*
+-   Getting Started with Cloud-Native HLS Data in Python. [*Link*](https://lpdaac.usgs.gov/resources/e-learning/getting-started-cloud-native-hls-data-python/).
+-   Prácticas de programación con Python. [*Link*](https://drive.google.com/file/d/10WXWnnttbTBtA3A11SnRV4sHKwn5_Ih9/view).
+-   Python para todos. [*Link*](https://www.py4e.com/book). [*Link*](https://es.py4e.com/book). [*Link.*](http://do1.dr-chuck.com/pythonlearn/ES_es/pythonlearn.pdf)
+-   ¿Por qué deberías aprender a escribir programas?. [*Link*](https://github.com/csev-es/py4e/blob/master/book3/01-intro.mkd).
+-   Python Tutor: Visualize code in [Python](https://pythontutor.com/python-debugger.html). [*Link*](https://pythontutor.com/visualize.html#mode=edit).
+-   The three technologies bioinformaticians need to be using right now. [Link](http://www.opiniomics.org/the-three-technologies-bioinformaticians-need-to-be-using-right-now/).
+-   Tiny Python Projects: 21 small fun projects for Python beginners designed to build programming skill. [*Link*](https://www.amazon.com/Tiny-Python-Projects-Ken-Youens-Clark/dp/1617297518?&_encoding=UTF8&tag=kirkdborne-20&linkCode=ur2&linkId=56f1a9cdf365cc1a64c25b596d02593f&camp=1789&creative=9325&ref=d6k_applink_bb_dls&dplnkId=83118a52-266f-437b-94b7-15ee20f23789).
+-   Using Python for Research Videos. [*Link*](https://www.hsph.harvard.edu/onnela-lab/learning/)
+-   Tips
+    -   Installing Packages[. Link¶](https://packaging.python.org/en/latest/tutorials/installing-packages/#installing-packages)
+
+## Julia
+
+-   Julia. [*Link*](https://julialang.org/).
+-   Julia: come for the syntax, stay for the speed. Nature 2019. [*Link*](https://www.nature.com/articles/d41586-019-02310-3).
+
+{{< video "https://youtu.be/4igzy3bGVkQ" >}} Introduction to Julia
+
+## Matlab
+
+-   Matlab online. [*Link*](https://matlab.mathworks.com/).
+-   MATLAB Academy. [*Link*](https://matlabacademy.mathworks.com/es).
+-   Matlab Unimelbourne. [*Link*](https://github.com/resbaz/lessons/tree/master/matlab).
+-   Aprende a programar con Matlab. Tutellus app. [*Link*](https://app.tutellus.com/cuaderno/aprende-a-programar-con-matlab-3185).
+-   Computer Programming with MATLAB. Fitzpatrick and Ledeczi. [*Link*](http://cs103.net/video-lectures/)
+-   Matlab Wiki. [*Link*](http://matlab.wikia.com/wiki/FAQ#How_can_I_process_a_sequence_of_files.3F).
+-   MATLAB and Octave for Beginners. Edx. [*Link*](https://www.edx.org/course/matlab-octave-beginners-epflx-matlabeoctavebeginnersx).
+-   Highlights of Calculus. Prof. Gilbert Strang. [*Link*](https://ocw.mit.edu/resources/res-18-005-highlights-of-calculus-spring-2010/index.htm).
+    -   Gilbert Strang site. [*Link*](http://math.mit.edu/~gs/).
+-   The Climate Data Toolbox for MATLAB. [*Link*](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2019GC008392).
+
+## GIT
+
+-   Git Book (en español). [*Link*](https://git-scm.com/book/es/v2).\*\*\*
+-   GitHub Skills. [*Link*](https://skills.github.com/). \*\*\*
+-   Happy Git and GitHub for the useR. [*Link*](https://happygitwithr.com/).\*\*\*
+-   El Control de Versiones con Git. [*Link*](https://swcarpentry.github.io/git-novice-es/).
+-   Git and GitHub. [*Link*](http://r-pkgs.had.co.nz/git.html).
+-   How to Use Git and GitHub. Class Central. [*Link*](https://www.classcentral.com/course/udacity-how-to-use-git-and-github-2661). Udacity. [*Link*](https://www.udacity.com/course/version-control-with-git--ud123).
+-   Reproducible Analysis With R. [*Link*](https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/).\*\*\*
+-   Github Guides. [*Link*](https://guides.github.com/activities/hello-world/).
+-   GitHub Pages. [*Link*](https://pages.github.com/).
+-   Building a Website with Blogdown, Hugo and Github Pages. [*Link*](https://mvantieghem.github.io/post/hugo_webpage/).
+-   GitHub Learning Lab. [*Link*](https://lab.github.com/).
+-   Otros servicios
+    -   Gitlab. [*Link*](https://gitlab.com/explore).
+    -   ZenHub. [*Link*](https://www.zenhub.com/) (for managing GitHub issues).
+    -   Git Kraken. [*Link*](https://www.gitkraken.com/).
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/HiXLkL42tMU" >}} Git y Github \| Curso Práctico de Git y Github Desde Cero
+
+{{< video "https://youtu.be/LOw0CmhYF00" >}} NOAA Social Science R Workshop. Getting starting with git and GitHub using RStudio NOAA. [*Link*](https://nceas.github.io/training-git-intro/getting-started-with-git-rstudio.html).
+
+{{< video "https://youtu.be/4XpnKHJAok8" >}} Linus Torvalds on Git
+
+{{< video "https://youtu.be/r8jQ9hVA2qs?si=Q7zqPZX8YMCPIkld" >}} Intro to GIT
+
+GIT
+:::
+
+## RECURSOS WEB
+
+-   **Google**
+    -   Document AI. [*Link*](https://cloud.google.com/document-ai).
+-   **Limpieza de datos**
+    -   Data curator. [*Link*](https://github.com/qcif/data-curator) \*\*
+-   **Blogs a seguir**
+    -   From the bottom of the heap. [*Link*](http://www.fromthebottomoftheheap.net/).
+    -   Recology. [*Link*](https://recology.info/).
+    -   Methods in Ecology and Evolution. [*Link*](https://methodsblog.wordpress.com/).
+    -   Sea Scape Models. [*Link*](http://www.seascapemodels.org/code.html).
+    -   Andrew Parnell. Talks. [*Link*](http://statistics.ucd.ie/parnell/presentations.html).
+-   **Eventos académicos**
+    -   The second annual Symposium on Data Science and Statistics. [*Link*](https://github.com/zhiiiyang/SDSS2019).
+    -   Links to slides from rstudio::conf 2019. [*Link*](https://github.com/kbroman/RStudioConf2019Slides).
+    -   RStudio Webinars. [*Link*](https://www.rstudio.com/resources/webinars/).
+        -   RStudio: A Single Home for R & Python. [*Link*](https://www.rstudio.com/resources/webinars/rstudio-a-single-home-for-r-and-python/).
+
+## ANALISIS ESPACIAL
+
+-   NEON code. [*Link*](https://www.neonscience.org/resources/code-hub).
+-   QGIS Tutorials and Tips. [*Link*](https://www.qgistutorials.com/en/index.html).
+-   EarthCube 2021 Notebooks [¶](https://earthcube2021.github.io/ec21_book/docs/index_dup.html#earthcube-2021-notebooks). [*Link*](https://earthcube2021.github.io/ec21_book/docs/index_dup.html).
+-   *Geocomputation with R*. [*Link*](https://geocompr.robinlovelace.net/index.html).
+-   Remote Sensing Image Analysis. [*Link*](https://rspatial.org/raster/rs/index.html).
+-   Spatial Data Science with R. [*Link*](https://www.rspatial.org/).
+-   Geoscripting. Wageningen U. [*Link*](https://geoscripting-wur.github.io/).
+-   Converting HDFs to ArcGIS Rasters. [*Link*](https://code.env.duke.edu/projects/mget/wiki/Converting%20HDFs%20to%20ArcGIS%20rasters).
+-   Earth - Spatial data manipulation software. [*Link*](https://eosweb.larc.nasa.gov/HBDOCS/hdf_data_manipulation.html).
+-   Maps in R. [*Link*](http://geog.uoregon.edu/bartlein/courses/geog495/lec06.html).
+-   Spatial data in R: Using R as a GIS. [*Link*](http://pakillo.github.io/R-GIS-tutorial/).
+-   Spatial data manipulation. [*Link*](http://www.rspatial.org/spatial/index.html).
+-   An Introduction to Spatial Analysis in R. Seascape models. [*Link.*](http://www.seascapemodels.org/rstats/rspatial/2015/06/22/R_Spatial_course.html)
+-   Working with Geospatial Data in R. Data Camp. [*Link*](https://www.datacamp.com/courses/working-with-geospatial-data-in-r?tap_a=5644-dce66f&tap_s=10907-287229).
+-   Spatial ly. [*Link*](http://spatial.ly/).
+-   An Introduction to Spatial Data Analysis and Visualisation in R. [*Link*](https://data.cdrc.ac.uk/tutorial/an-introduction-to-spatial-data-analysis-and-visualisation-in-r).
+-   ARE. Spatial data. [*Link*](http://edrub.in/ARE212/section12.html).
+-   RSToolbox. [*Link*](http://remote-sensing.eu/new-package-r-package-rstoolbox-tools-for-remote-sensing-data-analysis/).
+-   Tidy spatial data analysis. R Studio. [*Link*](https://www.rstudio.com/resources/videos/tidy-spatial-data-analysis/).
+-   Crop mapping with Sentinel-2 focusing on algorithms. [*Link*](https://rus-training.eu/training/crop-mapping-with-sentinel-2-focusing-on-algorithms).
+-   Average seasonal colors of the USA. [*Link*](https://erdavis.com/2021/09/07/average-seasonal-colors-of-the-usa/).
+-   Artificial Intelligence (AI) for Earth Monitoring. [*Link*](https://www.futurelearn.com/courses/artificial-intelligence-for-earth-monitoring/1).
+-   R for Geographic Data Science. [*Link*](https://sdesabbata.github.io/r-for-geographic-data-science/index.html).
+-   Network Common Data Form- NetCDF
+    -   Unidata. [*Link*](https://www.unidata.ucar.edu/).
+    -   NetCDF metadata conventions. [*Link*](http://cfconventions.org/).
+    -   NetCDF and CF: The Basics. [*Link*](https://foundations.projectpythia.org/core/data-formats/netcdf-cf.html).
+    -   NetCDF in R. [*Link*](http://geog.uoregon.edu/bartlein/courses/geog607/Rmd/netCDF_01.htm).
+    -   U Oregon. Geographic Data Analysis and Visualization: Topics and Examples. . NetCDF [*Link*](http://geog.uoregon.edu/bartlein/courses/geog490/week04-netCDF.html).
+    -   An Ecologist’s Guide to Working with Daymet and other NetCDF formatted Data. Video [Link](https://youtu.be/Y_f0L62TleE). Rpubs [Link](http://rpubs.com/boyerag/297592).
+    -   Working with NetCDF files. [*Link*](https://www.unidata.ucar.edu/software/netcdf/docs/netcdf_working_with_netcdf_files.html).
+    -   How to open and work with NetCDF data in R. [Link.](https://rpubs.com/boyerag/297592)
+    -   NetCDF Ninja Software. *Link*.
+    -   Urban Demographics. [*Link*](https://urbandemographics.blogspot.com/2018/08/assorted-r-packages-for-spatial-analysis.html?m=1).
+    -   ARE 202. Spatial data. [*Link*](http://edrub.in/ARE212/section12.html).
+
+## GOOGLE EARTH ENGINE
+
+-   Mapping sugarcane in Thailand using transfer learning, a lightweight convolutional neural network, NICFI high resolution satellite imagery and Google Earth Engine. 2021. [*Link*](https://www.sciencedirect.com/science/article/pii/S266739322100003X).
+
+## ALGEBRA LINEAL
+
+-   MIT Open Courseware.
+    -   Fundamentals of linear algebra. [*Link*](http://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/). Resources. [*Link*](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/related-resources/).
+    -   Matrix Methods in Data Analysis, Signal Processing, and Machine Learning. [*Link*](https://ocw.mit.edu/courses/mathematics/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/).
+    -   A 2020 Vision of Linear Algebra. MIT. [*Link*](https://ocw.mit.edu/resources/res-18-010-a-2020-vision-of-linear-algebra-spring-2020/index.htm).
+-   Differential Equations and Linear Algebra. Matlab. Gilbert Strang. [*Link*](http://www.mathworks.com/videos/series/differential-equations-and-linear-algebra-117657.html). [*Link.*](http://www.mathworks.com/academia/courseware/learn-differential-equations.html)[*Link*](http://math.mit.edu/~gs/dela/)*.*
+-   Eigenvectors and Eigenvalues. [*Link*](http://setosa.io/ev/eigenvectors-and-eigenvalues/).
+-   LAFF: Linear Algebra - Foundations to Frontiers. EdX [*Link*](https://courses.edx.org/courses/UTAustinX/UT.5.01x/1T2014/course/). [Youtube](https://www.youtube.com/watch?v=aTfKDxsjZNU&list=PLSl48-6ESzFZomWVRa0FQpiSpzOQiKsO_).
+-   Computational Linear Algebra for Coders. [*Link*](https://github.com/fastai/numerical-linear-algebra).
+-   The Feyman lectures on physics. [*Link*](https://www.feynmanlectures.caltech.edu/). Algebra. [*Link*](https://www.feynmanlectures.caltech.edu/I_22.html).
+-   **Teoría de redes**
+    -   D# Graph Theory. [*Link*](https://d3gt.com/index.html).
+    -   Networks. MIT. [*Link*](https://ocw.mit.edu/courses/economics/14-15j-networks-spring-2018/index.htm).
+    -   Essential graph theory for biologists. Winter School Online Lectures. [*Link*](https://vimeo.com/130153085).
+    -   MIT Matlab Tools for Network Analysis. [*Link*](http://strategic.mit.edu/downloads.php?page=matlab_networks).
+    -   Networked and Social Systems Engineering (NETS) by Michael Kearns. [*Link*](http://www.cis.upenn.edu/~mkearns/teaching/NetworkedLife/)*.*
+    -   Networked Life by Michael Kearns. Coursera. [*Link*](https://class.coursera.org/networks-2012-001/lecture).
+    -   Social Network Analysis. Coursera. [Link](https://www.coursera.org/course/sna).
+    -   Networks, Crowds, and Markets. [*Link*](http://www.cs.cornell.edu/home/kleinber/networks-book/).
+    -   Network Science by Albert-László Barabási. [*Link*](http://barabasi.com/networksciencebook/).
+    -   Mining Massive Datasets. Coursera. [*Link*](https://www.coursera.org/course/mmds).
+    -   ArcGis. OD cost matrix analysis. [*Link*](http://desktop.arcgis.com/en/arcmap/latest/extensions/network-analyst/od-cost-matrix.htm).
+    -   The Department of Network and Data Science at Central European University. [*Link*](https://cns.ceu.edu/).
+    -   **Código**
+        -   Network visualization. [*Link*](http://kateto.net/network-visualization).
+        -   Network Analysis and Visualization with R and igraph. [**Link.**](http://kateto.net/networks-r-igraph)
+        -   Systems Biology and Evolution Toolbox. Matlab. [*Link*](https://promis.tamu.edu/projects/sbetoolbox/wiki/SBEToolbox_User_Manual)*. [Link](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3767578/).*
+        -   Static and dynamic network visualization with R. [*Link*](https://rpubs.com/kateto/netviz).
+        -   Brain ConnectivityToolbox. Matlab. [*Link*](https://sites.google.com/site/bctnet/measures/list)*.*
+        -   Network visualization with R. [*Link*](https://kateto.net/network-visualization).
+    -   **Lecturas**
+        -   Newman M. 2010. Networks: An Introduction. [*Link.*](https://www.amazon.es/Networks-Introduction-Mark-Newman/dp/0199206651)
+        -   From Graphs to Spatial Graphs. AREES. 2010. [*Link*](https://www.annualreviews.org/abs/doi/10.1146/annurev-ecolsys-102209-144718).
+
+## ESTADÍSTICA
+
+-   Introduction to Modern Statistics, First Edition. [*Link*](https://openintro-ims.netlify.app/index.html).
+-   Graduate Statistics in R. Statstools.com. [*Link*](http://statstools.com/learn/graduate-statistics-in-r/)*.\*\*\**
+-   Online Statistics Education: An Interactive Multimedia Course of Study. [Link](http://onlinestatbook.com/2/index.html).*\*\*\**
+-   Foundations of Data Analysis - Part 2. EdX. [*Link*](https://courses.edx.org/dashboard#)
+-   Explore Statistics with R. EdX.[*Link*](https://courses.edx.org/courses/KIx/KIexploRx/3T2014/info)
+-   Estadística inferencial. Khan Academy. [*Link*](https://es.khanacademy.org/math/probability)
+-   Cálculo poder estadístico alfa y beta. Gpower. [*Link*](http://www.gpower.hhu.de/)
+-   Probability. MIT Open Courseware. [*Link*](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/probability/).
+-   Seeing Theory. Brown University. [*Link*](http://students.brown.edu/seeing-theory/).
+    -   \*\*Probabilidad básica. [*Link*](https://seeing-theory.brown.edu/basic-probability/es.html)
+-   Introduction to Statistical Genomics. Joshua Akey Spring 2008. [*Link*](http://www.gs.washington.edu/academics/courses/akey/56008/lecture/).
+-   Statistics for Biologists, Nature Points of Significance. [*Link*](https://www.nature.com/collections/qghhqm/pointsofsignificance).
+-   Statistics for applications. [*Link*](https://ocw.mit.edu/courses/mathematics/18-650-statistics-for-applications-fall-2016/lecture-videos/).
+-   Statistical Rethinking. [*Link*](http://xcelab.net/rm/statistical-rethinking/).
+-   Statistical rethinking with brms, ggplot2, and the tidyverse. [*Link*](https://bookdown.org/ajkurz/Statistical_Rethinking_recoded/).
+-   Graduate Statistics in R. Statstools.com. [*Link*](http://statstools.com/learn/graduate-statistics-in-r/)*.\*\*\**
+-   JASP Software [*Link,*](https://jasp-stats.org/) and Center for Open Science [*Link*](https://osf.io/).
+-   Online Statistics Education: An Interactive Multimedia Course of Study. [Link](http://onlinestatbook.com/2/index.html).*\*\*\**
+-   Foundations of Data Analysis - Part 2. EdX. [*Link*](https://courses.edx.org/dashboard#)
+-   Explore Statistics with R. EdX.[*Link*](https://courses.edx.org/courses/KIx/KIexploRx/3T2014/info)
+-   Estadística inferencial. Khan Academy. [*Link*](https://es.khanacademy.org/math/probability)
+-   Cálculo poder estadístico alfa y beta. Gpower. [*Link*](http://www.gpower.hhu.de/)
+-   Probability. MIT Open Courseware. [*Link*](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/probability/).
+-   Seeing Theory. Brown University. [*Link*](http://students.brown.edu/seeing-theory/).
+-   Introduction to Statistical Genomics. Joshua Akey Spring 2008. [*Link*](http://www.gs.washington.edu/academics/courses/akey/56008/lecture/).
+-   Statistics for Biologists, Nature Points of Significance. [*Link*](https://www.nature.com/collections/qghhqm/pointsofsignificance).
+-   Statistics for applications. [*Link*](https://ocw.mit.edu/courses/mathematics/18-650-statistics-for-applications-fall-2016/lecture-videos/).
+-   Statistical Rethinking. [*Link*](http://xcelab.net/rm/statistical-rethinking/).
+-   Probabilidad Básica. Introducción a los conceptos básicos de probabilidad. BrownU. [*Link*](https://seeing-theory.brown.edu/basic-probability/es.html).
+-   BIOST561 "Computational Skills for Biostatistics. [*Link*](https://github.com/adw96/biostat561/).
+
+**Varios**
+
+-   Central Limit Theorem. [*Link*](http://mfviz.com/central-limit/)
+-   La potencia y el tamaño del efecto. [*Link*](https://fernandoblancopsy.com/2019/08/31/estadistica-visual-vii-lupas-y-microscopios-la-potencia-y-el-tamano-del-efecto/amp/?__twitter_impression=true).
+
+**Análisis de varianza**
+
+-   ANOVA 1 - Calculando la Suma Total de Cuadrados (STC). [*Link*](https://www.youtube.com/watch?v=tH01ocwZGkQ)*.*
+-   ANOVA 2 - Calculando suma total de cuadrados dentro y entre (SCD y SCE). [*Link*](https://www.youtube.com/watch?v=46CVRPdlKHc&nohtml5=False).
+-   ANOVA 3 -- Prueba de hipótesis con estadístico F. [*Link*](https://www.youtube.com/watch?v=46CVRPdlKHc&nohtml5=False).
+
+**ANOVA medidas repetidas**
+
+-   Análisis de varianza factorial medidas repetidas (ANOVA). [Link](https://www.youtube.com/watch?v=wRZ9rHR9NHc).
+-   R - One Way Repeated Measures ANOVA. [Link](https://www.youtube.com/watch?v=1fvYUMwMZPE).
+-   Learn R One Way Repeated Measures ANOVA Lecture 1. [Link](https://www.youtube.com/watch?v=vl4nPUxhQTk).
+-   Repeated Measures in R. [*Link*](http://www.jason-french.com/tutorials/repeatedmeasures.html).
+-   Repeated Measures and Longitudinal Data. Penn State. [*Link*](https://onlinecourses.science.psu.edu/stat510/node/77).
+-   Notes on the use of R for psychology experiments and questionnaires Jonathan Baron. [*Link*](http://www.psych.upenn.edu/~baron/rpsych/rpsych.html#htoc60).
+
+**Regresión**
+
+-   Regression Modeling in Practice. Coursera. [*Link*](https://www.coursera.org/learn/regression-modeling-practice/home/welcome).
+-   Linear algebra: Projections, least squares and best straight line. \*[Lec 15,](https://www.youtube.com/watch?v=Y_Ac6KiQ1t0)\*\*[Lec 16](https://www.youtube.com/watch?v=osh80YCg_GM&t=6s).\*
+
+**Análisis de componentes principales**
+
+-   What is principal component analysis?. Nature Biotechnology. 2008. [*Link*](https://www.nature.com/articles/nbt0308-303).
+-   A layman's introduction to principal component analysis. Video. [*Link*](https://youtu.be/BfTMmoDFXyE).
+
+**Diseño de experimentos**
+
+-   Designing, Running, and Analyzing Experiments. Coursera. [*Link*](https://www.coursera.org/learn/designexperiments).
+
+**Modelos lineales generalizados (GLM) y modelos mixtos**
+
+-   **Resources:**
+    -   Mixed models. GLMM FAQ Ben Bolker and others. [Link](http://bbolker.github.io/mixedmodels-misc/glmmFAQ.html).
+    -   Introduction to Linear Models with R. [*Link*](https://www.r-bloggers.com/raccoon-ch-1-introduction-to-linear-models-with-r/).
+    -   Linear regression in R. [*Link*](http://www.listendata.com/2015/09/linear-regression-with-r.html).
+    -   Choosing R packages for mixed effects modelling based on the car you drive. [*Link*](http://www.seascapemodels.org/rstats/2017/04/14/glmm-comparison.html).
+    -   Introducción a los modelos mixtos. [*Link*](http://www.uam.es/personal_pdi/ciencias/jspinill/Etologuia/ModelosMixtos_Etologuia.html). [*Link*](https://ourcodingclub.github.io/2017/03/15/mixed-models.html).
+    -   Generalized Linear Models in R. Datacamp. [*Link*](https://www.datacamp.com/courses/generalized-linear-models-in-r).
+    -   Generalized Linear Models: understanding the link function. [*Link*](http://www.seascapemodels.org/rstats/2018/10/16/understanding-the-glm-link.html).
+    -   Generalized Additive Models in R. [*Link*](https://noamross.github.io/gams-in-r-course/).
+    -   Introduction to Generalized Additive Models. [*Link*](https://noamross.github.io/gams-in-r-course/chapter1).
+    -   An Introduction to Hierarchical Modeling. [*Link*](http://mfviz.com/hierarchical-models/)
+-   **Videos:**
+    -   Maximum Likelihood, clearly explained. Videos: [*Link*](https://www.youtube.com/watch?v=XepXtl9YKwc). [*Link*](https://youtu.be/2vh98ful3_M). [*Link*](https://youtu.be/52jlBrAcw9Q).
+    -   Mixed effects models with R. Videos: [*Link*](https://youtu.be/VhMWPkTbXoY). [*Link*](https://youtu.be/P-WYkSZp9lY).
+    -   The Power of Mixed Effects Models. Week 9. Designing, Running, and Analyzing Experiments. Coursera. [*Link*.](https://www.coursera.org/learn/designexperiments/lecture/4kVEo/30-introduction-to-mixed-effects-models)
+-   **Books:**
+    -   Zuur, et al. 2009. Mixed Effects Models and Extensions in Ecology with R. [*Link*](http://www.springer.com/gp/book/9780387874579).
+    -   Correa Morales, Juan Carlos; Salazar Uribe Juan Carlos. Introducción a los modelos mixtos / Medellín: Universidad Nacional de Colombia. [*Link*](http://www.bdigital.unal.edu.co/57330/1/introduccionalosmodelosmixtos.2016.pdf).
+    -   Pinheiro José C.; Bates Douglas M. Mixed-Effects Models in S and S-PLUS. [*Link*](https://link.springer.com/book/10.1007%2Fb98882).
+-   **Readings:**\
+    A brief introduction to mixed effects modelling and multi-model inference in ecology. PeerJ. [*Link*.](https://peerj.com/articles/4794/)
+
+**Generalized additive models (GAMs)**
+
+-   Generalized additive models for large data sets. [*Link*](https://rss.onlinelibrary.wiley.com/doi/full/10.1111/rssc.12068).
+
+{{< video "https://youtu.be/sgw4cu8hrZM" >}} GAMs
+
+**ARTE EN CÓDIGO**
+
+-   aRtsy: Generative Art with `R`  and  `ggplot2`. [*Link*](https://koenderks.github.io/aRtsy/).
+
+**FUN PROJECTS**
+
+-   Deep fakes. [*Link*.](https://github.com/iperov/DeepFaceLab)
+
+**SERIES DE TIEMPO**
+
+-   Time Series for Ecologists and Climatologists: course timetable. [*Link*](https://rawgit.com/andrewcparnell/tsme_course/master/Timetable.html).
+-   Accounting for autocorrelation in R. [*Link*](https://rpubs.com/markpayne/164550).
+-   Manipulating Time Series Data in R: Case Studies. Datacamp. [*Link*](https://www.datacamp.com/courses/manipulating-time-series-data-in-r-case-studies).
+-   Time Series Analysis. MIT. [*Link*](http://ocw.mit.edu/courses/economics/14-384-time-series-analysis-fall-2013/).
+-   Applied Time Series Analysis. Penn State U. [Link](https://onlinecourses.science.psu.edu/stat510/).
+
+**STAN**
+
+-   Introduction to Bayesian Inference with Stan. [Link](http://seantalts.github.io/IntroBayesianPyData.html#1)
+-   Robust Bayesian linear regression with Stan in R. [*Link*](https://baezortega.github.io/2018/08/06/robust_regression/).
+-   StanCon 2018. [*Link*](http://mc-stan.org/events/stancon2018Helsinki/). Materials from StanCon. [*Link*](https://github.com/stan-dev/stancon_talks).
+-   \*\*Statistical Rethinking: A Bayesian Course Using R and Stan. [*Link*](https://github.com/rmcelreath/statrethinking_winter2019).
+
+**Temas varios**
+
+-   Nonparametric Tests of Group Differences. [*Link*](http://www.statmethods.net/stats/nonparametric.html).
+-   The Statistical Bootstrap and Other Resampling Methods. [*Link*](http://www.burns-stat.com/documents/tutorials/the-statistical-bootstrap-and-other-resampling-methods-2/). [*Link*](https://www.youtube.com/watch?v=_nhgHjdLE-I). [*Link*](https://github.com/jtleek/dataanalysis/blob/master/week7/002bootstrap/index.md).
+-   Ten Simple Rules for Effective Statistical Practice. PLOS. 2016 [*Link*](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004961).
+-   Statisticians issue warning over misuse of P values. Nature. 2016. [*Link*](http://www.nature.com/news/statisticians-issue-warning-over-misuse-of-p-values-1.19503)
+
+**Open software for statistical analysis**
+
+-   JASP. [*Link*](https://jasp-stats.org/) and Center for Open Science [*Link*](https://osf.io/).
+-   SAS University Edition. [*Link*](https://www.sas.com/en_us/software/university-edition.html).
+
+**Meta-Analisis and data papers**
+
+-   Introduction to Systematic Review and Meta-Analysis. Coursera. [*Link*](https://www.coursera.org/learn/systematic-review).
+-   Fixed effects vs Random effects. Meta-analysis-workshops.com [Link](https://www.meta-analysis-workshops.com/pages/coursepreview.php?utm_source=iContact&utm_medium=email&utm_campaign=Meta-Analysis&utm_content=Common+mistakes+1).
+-   Software: RevMan.Cochrane. [*Link*](http://community.cochrane.org/tools/review-production-tools/revman-5/revman-5-download).
+-   What are data papers? Data and metadata. Ecology. [*Link*](http://esajournals.onlinelibrary.wiley.com/hub/journal/10.1002/(ISSN)1939-9170/resources/data_paper_inst_ecy.html).
+
+## CIENCIOMETRIA
+
+-   CRExplorer. [*Link*](http://www.crexplorer.net/#).
+-   HistCite. [*Link*](http://ip-science.thomsonreuters.com/thanks/histcite/).
+-   Loet Leydesdorff. [*Link*](http://www.leydesdorff.net/index.htm).
+-   Cited References Explorer. [*Link*](http://andreas-thor.github.io/cre/).
+-   Bibliometrics for Librarians. [*Link*](https://pdoehle.github.io/bibliometrics-for-librarians/).\*\*
+-   Handbook of Graphs and Networks in People Analytics: With Examples in R and Python. [*Link*](https://ona-book.org/viz-graphs.html)
+-   Paquetes de R:
+    -   Package ‘bibliometrix’. [*Link*](https://cran.r-project.org/web/packages/bibliometrix/vignettes/bibliometrix-vignette.html). [*Link*](http://www.bibliometrix.org/).
+
+## VARIOS TEMAS
+
+-   **Datos**
+    -   UN Office on Drugs and Crime. [Link](https://dataunodc.un.org/).
+-   **Imagenes**
+    -   ImageJ. [*Link*](https://imagej.nih.gov/ij/download.html).
+    -   Digitizing data from old figures with ImageJ. [*Link*](http://lukemiller.org/index.php/2011/09/digitizing-data-from-old-figures-with-imagej/).
+    -   WebPlotDigitizer. [*Link*](http://arohatgi.info/WebPlotDigitizer/index.html).
+    -   Tabula. A tool for liberating data tables locked inside PDF files. [*Link*](http://tabula.technology/).
+-   **Ontologías**
+    -   Coral traits data base.
+        -   [Procedures](https://coraltraits.org/procedures). [Nature Paper](https://www.nature.com/articles/sdata201617). [OBOE.](https://github.com/NCEAS/oboe/)
+    -   Semantic Web Applications in Neuromedicine (SWAN) Ontology. [*Link*](https://www.w3.org/TR/hcls-swan/). [*Link*](https://www.w3.org/TR/annotation-vocab/).
+-   **Otras lecturas**
+    -   May, R.M. 2004. **Uses and Abuses of Mathematics in Biology.** Science. (303) 5659: 790-793. [*Link*](http://science.sciencemag.org/content/303/5659/790).
+    -   Oreskes N, *et al.* 1994. **Verification, Validation, and Confirmation of Numerical Models in the Earth Sciences**. Science. [*Link*](http://science.sciencemag.org/content/263/5147/641?sid=b0b353ec-9f88-449f-9e40-c89e15541947).

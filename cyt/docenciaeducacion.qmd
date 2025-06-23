@@ -95,6 +95,7 @@ editor: visual
 {{< video "https://youtu.be/rRftFZgHmIw" >}} Aprender como funciona algo nos enseña a comprenderlo mejor
 
 {{< video "https://youtu.be/hydCdGLAh00" >}} «Chunking» – Una técnica de aprendizaje
+:::
 
 ## Aplicaciones y software para el aula
 
@@ -128,11 +129,14 @@ What is 21st century education (subtítulos en español)
     -   Webinar STEM: ¿qué significa? ¿qué implica?. [*Link*](https://www.compartirpalabramaestra.org/actualidad/noticias/encuentre-el-material-del-primer-webinar-stem-que-significa-que-implica?utm_source=phplist364&utm_medium=email&utm_content=HTML&utm_campaign=Aqu%C3%AD+est%C3%A1+tu+acceso+al+Webinar+3+de+%27Educaci%C3%B3n+STEM%27)*. [Link](https://www.facebook.com/watch/?v=2657615131220128&extid=ZGORmHZEuNDetuvA).*
 -   **Mision de sabios**
     -   Documentos. [*Link*](https://minciencias.gov.co/mision-sabios/documentos).
-    -   Foco oceanos: ![](https://www.youtube.com/watch?v=IOmlU9U_62o)
 
-Foco océanos
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/rRftFZgHmIw" >}}
 
-![](https://www.youtube.com/watch?v=7_jkXN8dsaE)
+{{< video "https://www.youtube.com/watch?v=7_jkXN8dsaE" >}}
+
+{{< video "https://www.youtube.com/watch?v=IOmlU9U_62o" >}} Foco oceanos
+:::
 
 Foco ciencias de la vida y de la salud
 
@@ -142,5 +146,4 @@ Foco ciencias de la vida y de la salud
 -   Citizen science in the social sciences and humanities: the power of interdisciplinarity. 2020. [*Link*](https://www.nature.com/articles/s41599-020-0471-y).
 -   Sin mejoría del coronavirus: los enfermos se autoanalizan en las redes. [*Link*](https://www.technologyreview.es/s/12508/sin-mejoria-del-coronavirus-los-enfermos-se-autoanalizan-en-las-redes). ![](https://www.youtube.com/watch?v=yCm9Ng0bbEQ)
 
-Is the world getting better or worse
-:::
+{{< video "https://www.youtube.com/watch?v=yCm9Ng0bbEQ" >}} Is the world getting better or worse
