@@ -10,9 +10,11 @@ editor: visual
 
 # **Liderazgo**
 
-**Desarrolle un enfoque "probabilístico" para gestionar la incertidumbre**. HBR. 2020. [*Link*](https://hbr.org/2020/02/develop-a-probabilistic-approach-to-managing-uncertainty?tpcc=orgsocial_edit&utm_campaign=hbr&utm_medium=social&utm_source=twitter). Para los líderes modernos, el pensamiento bayesiano se ha vuelto cada vez más influyente. Por ejemplo, en Amazon, uno de los [14 principios de liderazgo](https://www.amazon.jobs/en/principles)  es “Tener columna vertebral; No estar de acuerdo y comprometerse”, que, [como explicó Jeff Bezos](https://www.sec.gov/Archives/edgar/data/1018724/000119312517120198/d373368dex991.htm), es una estrategia para alentar a los líderes a evitar perder el tiempo tratando de lograr un acuerdo universal. Es mejor comprometerse con una decisión controvertida y luego recopilar datos y ajustarlos si es necesario.
+**Desarrolle un enfoque "probabilístico" para gestionar la incertidumbre**. HBR. 2020. [*Link*](https://hbr.org/2020/02/develop-a-probabilistic-approach-to-managing-uncertainty?tpcc=orgsocial_edit&utm_campaign=hbr&utm_medium=social&utm_source=twitter). Para los líderes modernos, el pensamiento bayesiano se ha vuelto cada vez más influyente. Por ejemplo, en Amazon, uno de los [14 principios de liderazgo](https://www.amazon.jobs/en/principles)  es “Tener columna vertebral; no estar de acuerdo y comprometerse”, que, [como explicó Jeff Bezos](https://www.sec.gov/Archives/edgar/data/1018724/000119312517120198/d373368dex991.htm), es una estrategia para alentar a los líderes a evitar perder el tiempo tratando de lograr un acuerdo universal. Es mejor comprometerse con una decisión controvertida y luego recopilar datos y ajustarlos si es necesario.
 
-En X, la fábrica de éxito de Alphabet, [celebran conscientemente los proyectos fallidos](https://www.wired.com/2016/02/the-secret-to-moonshots-killing-our-projects/#.euwa8vwaq)  como un dato que les ayuda a reducir la gama de opciones y, al hacerlo, acelerar la innovación. Del mismo modo, en Spotify han desarrollado un [marco](https://www.infoq.com/presentations/spotify-engineer-decision-making/) para explorar la relación entre datos e incertidumbre al que llaman DIBB (Data, Insights, Beliefs and Bets). Lo utilizan para identificar explícitamente métricas de éxito para nuevas ideas y oportunidades, y crear un lenguaje común para juzgar el desempeño.
+En X, la fábrica de éxito de Alphabet, [celebran conscientemente los proyectos fallidos](https://www.wired.com/2016/02/the-secret-to-moonshots-killing-our-projects/#.euwa8vwaq) como un dato que les ayuda a reducir la gama de opciones y, al hacerlo, acelerar la innovación. Del mismo modo, en Spotify han desarrollado un [marco](https://www.infoq.com/presentations/spotify-engineer-decision-making/) para explorar la relación entre datos e incertidumbre al que llaman DIBB (Data, Insights, Beliefs and Bets). Lo utilizan para identificar explícitamente métricas de éxito para nuevas ideas y oportunidades, y crear un lenguaje común para juzgar el desempeño.
+
+{{< video "https://youtu.be/e4uWhymXPfQ?si=98IvlZu2D_tAMw9r&t=2357" >}} Salvador Alva y Alejandro Salazar: La Estrategia es de Líderes. El líder hace las personas ordinarias, extraordinarias. Tiene la capacidad de inspirar, hacer de las personas normales unas extraordinarias, sabe una cosa que todos quieren y moviliza el corazón y la voluntad. El adminstrador trabaja en mejora continua, responde por el valor agregado. Sabe lo que cada persona puede contribuir.
 
 ::: {.callout-tip title="Principios de liderazgo de Amazon [*Link*](https://www.amazon.jobs/content/en/our-workplace/leadership-principles)"}
 -   Obsesión por el cliente.
@@ -39,8 +41,6 @@ En X, la fábrica de éxito de Alphabet, [celebran conscientemente los proyecto
 ¿Que es estrategia?. Michael Porter. 1996 HBR. [*Link*](https://hbr.org/1996/11/what-is-strategy)
 
 ::: {layout-ncol="2"}
-{{< video "https://youtu.be/QesVRyVoV5g" >}} Alejandro Salazar. Rompiendo Paradigmas en Estrategia y el Poder de los Hard Choices. "Aquel que domina sus principios, domina los métodos"
-
 {{< video "https://www.youtube.com/watch?v=iuYlGRnC7J8" >}}
 
 {{< video "https://www.youtube.com/watch?v=mYF2_FBCvXw" >}}
@@ -52,7 +52,13 @@ En X, la fábrica de éxito de Alphabet, [celebran conscientemente los proyecto
 Estrategia
 :::
 
-Metodologías: Prince, PMP
+# La estrategía emergente, Alejandro Salazar
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/QesVRyVoV5g" >}} Alejandro Salazar. Rompiendo Paradigmas en Estrategia y el Poder de los Hard Choices. "Aquel que domina sus principios, domina los métodos"
+:::
+
+# Metodologías: Prince, PMP
 
 ::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/watch?v=mtyFWCs2YUU" >}}
