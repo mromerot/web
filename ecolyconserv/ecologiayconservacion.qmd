@@ -4,81 +4,86 @@ format: html
 editor: visual
 ---
 
-::: {layout-ncol=2}
-
+::: {layout-ncol="2"}
 {{< video "https://youtu.be/IPqdxcrizoA" >}} Video introductorio
 
 {{< video "https://youtu.be/BVwx12SACM4" >}} El oceáno
-
 :::
 
-### El océano
+# El océano
 
-**Bases de datos oceanografía y geografía**
+# **Información espacial y ArcGis**
 
--   **Información espacial y ArcGis**
-    -   ArcGIS Help Library. 10.2. [*Link*](http://resources.arcgis.com/es/help/main/10.2/).
-    -   Biblioteca de ayuda de ArcGIS. *10.0*. [*Link*](http://help.arcgis.com/es/arcgisdesktop/10.0/help/index.html#/na/00r90000001n000000/).
-    -   Uned.es - GISWEB: Guía de aprendizaje multimedia. [*Link*](http://ocw.innova.uned.es/ocwuniversia/analisis_%20geografico_%20regional/sistemas-de-informacion-geografica/gisweb-guia-de-aprendizaje-multimedia/).
-    -   Acolita. [*Link*](http://acolita.com/).
-    -   Esri's Glossary. [*Link*](http://support.esri.com/en/knowledgebase/Gisdictionary/browse).
-    -   Esri's MOOC. [*Link*](http://www.esri.com/mooc)*.*
-    -   Curso ArcGis Rodolfo Franco. [*Link.*](https://www.youtube.com/playlist?list=PLAEhDYHUarGs3h5oQbWrXSbbb6yLVfhsv)
-        -   Learn GIS. [*Link*](https://blog.gvsig.org/2017/06/16/learn-gis-for-free/).
-    -   Fundamentals of GIS for Conservation. [*Link*](https://www.conservationtraining.org/course/index.php?categoryid=11).
-    -   Esri Training. [*Link*](http://www.esri.com/training/main).
-    -   Esri Blog. [*Link*](http://blogs.esri.com/).
-    -   GIS Dictionary. [*Link*](http://support.esri.com/en/knowledgebase/Gisdictionary/browse).
-    -   Rodolfo Franco Blog SIG, ARCGIS. [*Link*](https://mixdyr.wordpress.com/).
-    -   Google Ocean. *Google Maps & Google Earth as visualization tools for marine data. [Link](http://www.justmagic.com/GM-GE.html).*
-    -   USGS Global Visualization Viewer. [*Link*](http://glovis.usgs.gov/).
-    -   Earth Engine Google. [*Link*](https://code.earthengine.google.com/#)
-    -   Ocean Docs. [*Link*](http://www.oceandocs.org/).
-    -   Remap-app. [*Link*](https://remap-app.org/).
-    -   EarthObservation-Code. [*Link*](https://github.com/acgeospatial/awesome-earthobservation-code).
--   **Atmosfera**
-    -   European Centre for Medium-Range Weather Forecasts. Online computing training week. [*Link*](https://events.ecmwf.int/event/210/page/114-webinar-recordings).
+-   ArcGIS Help Library. 10.2. [*Link*](http://resources.arcgis.com/es/help/main/10.2/).
+-   Biblioteca de ayuda de ArcGIS. *10.0*. [*Link*](http://help.arcgis.com/es/arcgisdesktop/10.0/help/index.html#/na/00r90000001n000000/).
+-   Uned.es - GISWEB: Guía de aprendizaje multimedia. [*Link*](http://ocw.innova.uned.es/ocwuniversia/analisis_%20geografico_%20regional/sistemas-de-informacion-geografica/gisweb-guia-de-aprendizaje-multimedia/).
+-   Acolita. [*Link*](http://acolita.com/).
+-   Esri's Glossary. [*Link*](http://support.esri.com/en/knowledgebase/Gisdictionary/browse).
+-   Esri's MOOC. [*Link*](http://www.esri.com/mooc)*.*
+-   Curso ArcGis Rodolfo Franco. [*Link.*](https://www.youtube.com/playlist?list=PLAEhDYHUarGs3h5oQbWrXSbbb6yLVfhsv)
+    -   Learn GIS. [*Link*](https://blog.gvsig.org/2017/06/16/learn-gis-for-free/).
+-   Fundamentals of GIS for Conservation. [*Link*](https://www.conservationtraining.org/course/index.php?categoryid=11).
+-   Esri Training. [*Link*](http://www.esri.com/training/main).
+-   Esri Blog. [*Link*](http://blogs.esri.com/).
+-   GIS Dictionary. [*Link*](http://support.esri.com/en/knowledgebase/Gisdictionary/browse).
+-   Rodolfo Franco Blog SIG, ARCGIS. [*Link*](https://mixdyr.wordpress.com/).
+-   Google Ocean. *Google Maps & Google Earth as visualization tools for marine data. [Link](http://www.justmagic.com/GM-GE.html).*
+-   USGS Global Visualization Viewer. [*Link*](http://glovis.usgs.gov/).
+-   Earth Engine Google. [*Link*](https://code.earthengine.google.com/#)
+-   Ocean Docs. [*Link*](http://www.oceandocs.org/).
+-   Remap-app. [*Link*](https://remap-app.org/).
+-   EarthObservation-Code. [*Link*](https://github.com/acgeospatial/awesome-earthobservation-code).
+
+# **Atmósfera**
+
+-   European Centre for Medium-Range Weather Forecasts. Online computing training week. [*Link*](https://events.ecmwf.int/event/210/page/114-webinar-recordings).
 -   **Batimetría y lineas de costa**
     -   GEBCO. [*Link*](https://www.bodc.ac.uk/data/online_delivery/gebco/)
     -   Natural Earth. [*Link*](http://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-bathymetry/)
     -   Bathymetry and topography. ETOPO1 integrated topography and bathymetry product. [Link.](http://www.ngdc.noaa.gov/mgg/global/global.html)
     -   Seafloor topography Scripps Institute, UC San Diego. [Link](http://topex.ucsd.edu/WWW_html/mar_topo.html).
     -   Shoreline representation GSHHG - A Global Self-consistent, Hierarchical, High-resolution Geography Database. [Link](http://www.ngdc.noaa.gov/mgg/shorelines/gshhs.html).
--   **Ocean Temperature**
-    -   Ocean temperature The Group for High Resolution Sea Surface Temperature (GHRSST). [*Link.*](https://www.ghrsst.org/)
-    -   Ocean temperature and derivatives NASA Earth Observations (NEO). [*Link*](http://neo.sci.gsfc.nasa.gov/view.php?datasetId=AVHRR_SST_M)*.*
-    -   Ocean temperature World Ocean Atlas 2013 version 2. [*Link*](https://www.nodc.noaa.gov/OC5/woa13/)*.*
-    -   Ocean temperature and derivatives The Coral Reef Temperature Anomaly Database (CoRTAD). [*Link*](http://www.nodc.noaa.gov/sog/cortad/)*.*
-    -   GISS Surface Temperature Analysis (GISTEMP). [*Link*](http://data.giss.nasa.gov/gistemp/).
-    -   NOAA. Monthly, Year-to-date, and Annual Composites of Twice-Weekly 50-km Satellite Coral Bleaching Monitoring Products. [*Link*](https://coralreefwatch.noaa.gov/satellite/composites/index.php).
-    -   The Cross-Isthmus Panamanian Observing System. [*Link*](http://atlantica.whoi.edu/oceancubes/oc_panama).
-    -   18TH INTERNATIONAL GHRSST SCIENCE TEAM MEETING (GHRSST XVIII). [*Link*](https://www.ghrsst.org/agenda/ghrsst-xviii/)*.*
-    -   Eumetsat - Monitoring & Evaluation of Thematic Information from Space (METIS). [*Link*](http://metis.eumetsat.int/sst/index.html#).
-    -   NOAA High-resolution Blended Analysis. Sea Surface Temperature. [*Link*](https://www.esrl.noaa.gov/psd/cgi-bin/db_search/DBSearch.pl?Dataset=NOAA+High-resolution+Blended+Analysis&Variable=Sea+Surface+Temperature&group=0&submit=Search). [*Link*](https://www.esrl.noaa.gov/psd/data/gridded/data.noaa.oisst.v2.html).
-    -   Satellite-based time-series of sea-surface temperature since 1981 for climate applications. Scientific Data, 2019. [*Link*](https://www.nature.com/articles/s41597-019-0236-x).
--   **Salinity**
-    -   Sea surface salinity NASA Earth Observations (NEO). [*Link*](http://neo.sci.gsfc.nasa.gov/view.php?datasetId=AQUARIUS_SSS_M)*.*
-    -   Sea surface salinity World Ocean Atlas 2013 version 2. [*Link*](https://www.nodc.noaa.gov/OC5/woa13/)*.*
-    -   Surface photosynthetically active radiation (PAR) NASA MODIS satellite. [*Link*](http://modis.gsfc.nasa.gov/data/dataprod/par.php)*.*
+
+# **Ocean Temperature**
+
+-   Ocean temperature The Group for High Resolution Sea Surface Temperature (GHRSST). [*Link.*](https://www.ghrsst.org/)
+-   Ocean temperature and derivatives NASA Earth Observations (NEO). [*Link*](http://neo.sci.gsfc.nasa.gov/view.php?datasetId=AVHRR_SST_M)*.*
+-   Ocean temperature World Ocean Atlas 2013 version 2. [*Link*](https://www.nodc.noaa.gov/OC5/woa13/)*.*
+-   Ocean temperature and derivatives The Coral Reef Temperature Anomaly Database (CoRTAD). [*Link*](http://www.nodc.noaa.gov/sog/cortad/)*.*
+-   GISS Surface Temperature Analysis (GISTEMP). [*Link*](http://data.giss.nasa.gov/gistemp/).
+-   NOAA. Monthly, Year-to-date, and Annual Composites of Twice-Weekly 50-km Satellite Coral Bleaching Monitoring Products. [*Link*](https://coralreefwatch.noaa.gov/satellite/composites/index.php).
+-   The Cross-Isthmus Panamanian Observing System. [*Link*](http://atlantica.whoi.edu/oceancubes/oc_panama).
+-   18TH INTERNATIONAL GHRSST SCIENCE TEAM MEETING (GHRSST XVIII). [*Link*](https://www.ghrsst.org/agenda/ghrsst-xviii/)*.*
+-   Eumetsat - Monitoring & Evaluation of Thematic Information from Space (METIS). [*Link*](http://metis.eumetsat.int/sst/index.html#).
+-   NOAA High-resolution Blended Analysis. Sea Surface Temperature. [*Link*](https://www.esrl.noaa.gov/psd/cgi-bin/db_search/DBSearch.pl?Dataset=NOAA+High-resolution+Blended+Analysis&Variable=Sea+Surface+Temperature&group=0&submit=Search). [*Link*](https://www.esrl.noaa.gov/psd/data/gridded/data.noaa.oisst.v2.html).
+-   Satellite-based time-series of sea-surface temperature since 1981 for climate applications. Scientific Data, 2019. [*Link*](https://www.nature.com/articles/s41597-019-0236-x).
+
+# **Salinity**
+
+-   Sea surface salinity NASA Earth Observations (NEO). [*Link*](http://neo.sci.gsfc.nasa.gov/view.php?datasetId=AQUARIUS_SSS_M)*.*
+-   Sea surface salinity World Ocean Atlas 2013 version 2. [*Link*](https://www.nodc.noaa.gov/OC5/woa13/)*.*
+-   Surface photosynthetically active radiation (PAR) NASA MODIS satellite. [*Link*](http://modis.gsfc.nasa.gov/data/dataprod/par.php)*.*
 -   **Altimetria del oceano**
     -   Aviso. [*Link*](https://www.aviso.altimetry.fr/en/my-aviso.html). Applications  [*Link*](https://www.aviso.altimetry.fr/en/applications/ocean.html).
 -   **IDV (**Integrated Data Viewer**)**
     -   IDV user guide. [*Link*](https://www.unidata.ucar.edu/software/idv/5_3/docs/userguide/toc.html#data/DataSources.html).
     -   Visualizing Ocean Model Simulations (Rasters or Vectors) in IDV. [*Link*](http://marinedataliteracy.org/ops/circ_mod_direct.htm).
--   **Visores**
-    -   MyOcean Viewer Copernicus. [*Link*](https://marine.copernicus.eu/access-data/myocean-viewer). [*Link*](https://myocean.marine.copernicus.eu/data). [*Link*](https://myocean.marine.copernicus.eu/data?view=viewer&crs=epsg%3A4326&t=1638100800000&z=0%C2%A2er=0%2C5&zoom=9.55&layers=W3siaWQiOiJjMCIsImxheWVySWQiOiJHTE9CQUxfQU5BTFlTSVNfRk9SRUNBU1RfQklPXzAwMV8wMjgvZ2xvYmFsLWFuYWx5c2lzLWZvcmVjYXN0LWJpby0wMDEtMDI4LWRhaWx5L2NobCIsInpJbmRleCI6MCwiaXNIaWRkZW4iOnRydWUsImxvZ1NjYWxlIjp0cnVlfSx7ImlkIjoiYzEiLCJsYXllcklkIjoiR0xPQkFMX0FOQUxZU0lTX0ZPUkVDQVNUX1BIWV8wMDFfMDI0L2dsb2JhbC1hbmFseXNpcy1mb3JlY2FzdC1waHktMDAxLTAyNC90aGV0YW8iLCJ6SW5kZXgiOjEwLCJsb2dTY2FsZSI6ZmFsc2V9XQ%3D%3D&initial=1).
-    -   Earthdata. [*Link*](https://earthdata.nasa.gov/).
-    -   Live access server. [*Link*](http://podaac-tools.jpl.nasa.gov/las/UI.vm).
-    -   Podaac. [*Link*](https://podaac.jpl.nasa.gov/).
-        -   PO.DAAC 101 – Web Portal Navigation Tutorial. [*Link*](https://www.youtube.com/watch?v=5JIpPKb9UOs&list=LLvWe-v5lcWvrtEODd22lPJA&index=1&t=41s).
-    -   HiTide. [*Link*](http://podaac-uat.jpl.nasa.gov/hitide/).
-    -   PO.DAAC State of the Ocean (SOTO) visualization tool. [*Link.*](https://podaac.jpl.nasa.gov/announcements/2017-04-05_Newly_redesigned_SOTO_Tool)[*Link*](https://podaac-tools.jpl.nasa.gov/soto/#b=BlueMarble_ShadedRelief_Bathymetry&l=GHRSST_L4_MUR_Sea_Surface_Temperature(1)&ve=-136.669921875,-68.115234375,136.669921875,68.115234375&pl=false&pb=false&d=2017-04-08&ao=false&as=2017-04-01&ae=2017-04-08&tlr=days).
-    -   Cwcgom Aoml Noaa Ocean Viewer. [Link](http://cwcgom.aoml.noaa.gov/cgom/OceanViewer/).
-    -   RAMMB. Colorado State U. [*Link*](https://rammb-slider.cira.colostate.edu/?sat=goes-16&z=0&im=12&ts=1&st=0&et=0&speed=130&motion=loop&map=1&lat=0&opacity%5B0%5D=1&hidden%5B0%5D=0&pause=0&slider=-1&hide_controls=0&mouse_draw=0&follow_feature=0&follow_hide=0&s=rammb-slider&sec=full_disk&p%5B0%5D=geocolor&x=10848&y=10848).
-    -   Real Earth. [*Link*](http://realearth.ssec.wisc.edu/). [*Link*](http://www.ssec.wisc.edu/realearth/).
-    -   National Hurricane Center. [*Link*](https://www.nhc.noaa.gov/gtwo.php?basin=atlc&fdays=5).
-    -   Earth System Research Laboratory NOAA. [*Link*](https://www.esrl.noaa.gov/psd/data/).
-        -   Data access. [*Link*](https://www.ncdc.noaa.gov/oisst/data-access).
+
+# **Visores**
+
+-   MyOcean Viewer Copernicus. [*Link*](https://marine.copernicus.eu/access-data/myocean-viewer). [*Link*](https://myocean.marine.copernicus.eu/data). [*Link*](https://myocean.marine.copernicus.eu/data?view=viewer&crs=epsg%3A4326&t=1638100800000&z=0%C2%A2er=0%2C5&zoom=9.55&layers=W3siaWQiOiJjMCIsImxheWVySWQiOiJHTE9CQUxfQU5BTFlTSVNfRk9SRUNBU1RfQklPXzAwMV8wMjgvZ2xvYmFsLWFuYWx5c2lzLWZvcmVjYXN0LWJpby0wMDEtMDI4LWRhaWx5L2NobCIsInpJbmRleCI6MCwiaXNIaWRkZW4iOnRydWUsImxvZ1NjYWxlIjp0cnVlfSx7ImlkIjoiYzEiLCJsYXllcklkIjoiR0xPQkFMX0FOQUxZU0lTX0ZPUkVDQVNUX1BIWV8wMDFfMDI0L2dsb2JhbC1hbmFseXNpcy1mb3JlY2FzdC1waHktMDAxLTAyNC90aGV0YW8iLCJ6SW5kZXgiOjEwLCJsb2dTY2FsZSI6ZmFsc2V9XQ%3D%3D&initial=1).
+-   Earthdata. [*Link*](https://earthdata.nasa.gov/).
+-   Live access server. [*Link*](http://podaac-tools.jpl.nasa.gov/las/UI.vm).
+-   Podaac. [*Link*](https://podaac.jpl.nasa.gov/).
+    -   PO.DAAC 101 – Web Portal Navigation Tutorial. [*Link*](https://www.youtube.com/watch?v=5JIpPKb9UOs&list=LLvWe-v5lcWvrtEODd22lPJA&index=1&t=41s).
+-   HiTide. [*Link*](http://podaac-uat.jpl.nasa.gov/hitide/).
+-   PO.DAAC State of the Ocean (SOTO) visualization tool. [*Link.*](https://podaac.jpl.nasa.gov/announcements/2017-04-05_Newly_redesigned_SOTO_Tool)[*Link*](https://podaac-tools.jpl.nasa.gov/soto/#b=BlueMarble_ShadedRelief_Bathymetry&l=GHRSST_L4_MUR_Sea_Surface_Temperature(1)&ve=-136.669921875,-68.115234375,136.669921875,68.115234375&pl=false&pb=false&d=2017-04-08&ao=false&as=2017-04-01&ae=2017-04-08&tlr=days).
+-   Cwcgom Aoml Noaa Ocean Viewer. [Link](http://cwcgom.aoml.noaa.gov/cgom/OceanViewer/).
+-   RAMMB. Colorado State U. [*Link*](https://rammb-slider.cira.colostate.edu/?sat=goes-16&z=0&im=12&ts=1&st=0&et=0&speed=130&motion=loop&map=1&lat=0&opacity%5B0%5D=1&hidden%5B0%5D=0&pause=0&slider=-1&hide_controls=0&mouse_draw=0&follow_feature=0&follow_hide=0&s=rammb-slider&sec=full_disk&p%5B0%5D=geocolor&x=10848&y=10848).
+-   Real Earth. [*Link*](http://realearth.ssec.wisc.edu/). [*Link*](http://www.ssec.wisc.edu/realearth/).
+-   National Hurricane Center. [*Link*](https://www.nhc.noaa.gov/gtwo.php?basin=atlc&fdays=5).
+-   Earth System Research Laboratory NOAA. [*Link*](https://www.esrl.noaa.gov/psd/data/).
+    -   Data access. [*Link*](https://www.ncdc.noaa.gov/oisst/data-access).
 -   **Modelos Globales de Circulación oceánica**
     -   Global ocean currents model. HYCOM. [*Link*](http://hycom.org/dataserver/)*.*
     -   Boyas. The GDP Drifter Data Assembly Center. DAC. [*Link*](http://www.aoml.noaa.gov/phod/dac/dac_meanvel.php).
@@ -89,14 +94,14 @@ editor: visual
 
 {{< video "https://youtu.be/t36igiPnJ68" >}}
 
-Clorofila y pesquería
+# Clorofila y pesquería
 
 -   Global fishing watch.org/map/. [*Link*](http://globalfishingwatch.org/map/).
 -   The global education project. [*Link*](http://www.theglobaleducationproject.org/earth/fisheries-and-aquaculture.php#1).
 -   Chlorophyll a NASA Earth Observations (NEO). [*Link*](http://neo.sci.gsfc.nasa.gov/view.php?datasetId=MY1DMM_CHLORA)*.*
 -   CHLOROPHYLL CONCENTRATION (1 MONTH - AQUA/MODIS). [*Link*](https://neo.sci.gsfc.nasa.gov/view.php?datasetId=MY1DMM_CHLORA).
 
-Cambio Climatico
+# Cambio Climatico
 
 -   Future climate scenarios NCAR's GIS Program Climate Change Scenarios GIS data portal. [*Link*](https://gisclimatechange.ucar.edu/)*.*
 
@@ -145,12 +150,13 @@ Cambio Climatico
 
 # Ecología Marina
 
--   **MOOCS**
-    -   Tropical coastal ecosystems. [*Link*](https://courses.edx.org/courses/course-v1:UQx+Tropic101x+2T2017/course/). [*Videos.*](https://www.youtube.com/channel/UC6cuz91KK0yu9SxpJazvOig/playlists)
-    -   Open Channel. [*Link*](https://www.openchannels.org/webinars).
-    -   Open2U. Marine Data and Science e-lectures. [*Link*](https://open2u.utas.edu.au/Course/4261?fbclid=IwAR2ow-xbXXwoKGwgdGLuZ48ifxk5NXtd0Fi_XDIEY6J1Ofr94HFZ3cJZqpY).
+## **MOOCS**
 
-**¿Dónde está la información biológica? Bases de datos de información biológica**
+-   Tropical coastal ecosystems. [*Link*](https://courses.edx.org/courses/course-v1:UQx+Tropic101x+2T2017/course/). [*Videos.*](https://www.youtube.com/channel/UC6cuz91KK0yu9SxpJazvOig/playlists)
+-   Open Channel. [*Link*](https://www.openchannels.org/webinars).
+-   Open2U. Marine Data and Science e-lectures. [*Link*](https://open2u.utas.edu.au/Course/4261?fbclid=IwAR2ow-xbXXwoKGwgdGLuZ48ifxk5NXtd0Fi_XDIEY6J1Ofr94HFZ3cJZqpY).
+
+# **¿Dónde está la información biológica? Bases de datos de información biológica**
 
 -   AquaMaps. Standarized distribution maps. [Link](http://www.aquamaps.org/).
 -   ARC Centre of Excellence Coral Reef Studies. [*Link*](https://www.coralcoe.org.au/)*.*
@@ -222,7 +228,7 @@ Cambio Climatico
 -   Herbivores and nutrients as drivers of community structure on coral reefs: from fishes to microbes. Deron urkepile. STRI. [*Link*](http://www.stri.si.edu/english/webcast/2011_webcasts.php).
 -   Marine ecological and evolutionary processes in the tropics. Oscar Puebla. STRI. [*Link*](http://www.stri.si.edu/english/webcast/2011_webcasts.php).
 -   Mechanisms of thermal tolerance on the Great Barrier Reef. Tracy Ainsworth.ARC Centre of Excellence for Coral Reef Studies. [Link](https://www.youtube.com/watch?v=zi9HSmA7pvQ&list=PLO1PEYBjX6ZkXlWXEhjqkHYCQ8S24MRz1&index=38).
--   Reefs through time: a history of clonal growth, colony integration and algal symbiosis. Smithsonian Tropical Research Institute Panama. [*Link*](http://www.ustream.tv/recorded/83630207)
+-   Reefs through time: a history of clonal growth, colony integration and algal symbiosis. Smithsonian Tropical Research Institute Panama. 2016. [*Link*](https://video.ibm.com/recorded/83630207)
 -   Science and Policy Consideration for Caribbean Ocean Governance. John C. Ogden Department of Integrative Biology University of South Florida. STRI. [*Link*](http://www.stri.si.edu/english/webcast/2010_webcasts.php)*.*
 -   The evolutionary diversity and ecological complexity of coral reefs. Nancy Knowlton. STRI.[*Link.*](http://www.stri.si.edu/english/webcast/2012_webcasts.php)
 -   Good governance and regulations increase Caribbean coral reef resilience. Jeremy Jackson. [*Link*](https://www.youtube.com/watch?v=9bLNGKkQNec).
@@ -340,12 +346,10 @@ El papel del consumidor en la conservación de los mares CharlasWOK, miércoles 
 
 Cátedra Fulbright, Universidad de los Andes Regiones 2017, pesca marina en Colombia
 
-::: {layout-ncol=2}
-
+::: {layout-ncol="2"}
 {{< video "https://youtu.be/ZQFLUGNIM0w" >}} El papel del consumidor en la conservación de los mares CharlasWOK, miércoles 3 de julio de 2019 Jorge Jimenez. Marviva
 
 {{< video "https://youtu.be/lBWAXT-M2vM" >}} Cátedra Fulbright, Universidad de los Andes Regiones 2017, pesca marina en Colombia
-
 :::
 
 # Population ecology

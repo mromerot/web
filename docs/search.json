@@ -2017,5 +2017,60 @@
       "Gestión de proyectos",
       "Gestión de proyectos"
     ]
+  },
+  {
+    "objectID": "ecolyconserv/ecologiayconservacion.html#información-espacial-y-arcgis",
+    "href": "ecolyconserv/ecologiayconservacion.html#información-espacial-y-arcgis",
+    "title": "El océano",
+    "section": "Información espacial y ArcGis",
+    "text": "Información espacial y ArcGis\n\nArcGIS Help Library. 10.2. Link.\nBiblioteca de ayuda de ArcGIS. 10.0. Link.\nUned.es - GISWEB: Guía de aprendizaje multimedia. Link.\nAcolita. Link.\nEsri’s Glossary. Link.\nEsri’s MOOC. Link.\nCurso ArcGis Rodolfo Franco. Link.\n\nLearn GIS. Link.\n\nFundamentals of GIS for Conservation. Link.\nEsri Training. Link.\nEsri Blog. Link.\nGIS Dictionary. Link.\nRodolfo Franco Blog SIG, ARCGIS. Link.\nGoogle Ocean. Google Maps & Google Earth as visualization tools for marine data. Link.\nUSGS Global Visualization Viewer. Link.\nEarth Engine Google. Link\nOcean Docs. Link.\nRemap-app. Link.\nEarthObservation-Code. Link.",
+    "crumbs": [
+      "Ecología y conservación",
+      "Ecologia y conservacion marina"
+    ]
+  },
+  {
+    "objectID": "ecolyconserv/ecologiayconservacion.html#atmósfera",
+    "href": "ecolyconserv/ecologiayconservacion.html#atmósfera",
+    "title": "El océano",
+    "section": "Atmósfera",
+    "text": "Atmósfera\n\nEuropean Centre for Medium-Range Weather Forecasts. Online computing training week. Link.\nBatimetría y lineas de costa\n\nGEBCO. Link\nNatural Earth. Link\nBathymetry and topography. ETOPO1 integrated topography and bathymetry product. Link.\nSeafloor topography Scripps Institute, UC San Diego. Link.\nShoreline representation GSHHG - A Global Self-consistent, Hierarchical, High-resolution Geography Database. Link.",
+    "crumbs": [
+      "Ecología y conservación",
+      "Ecologia y conservacion marina"
+    ]
+  },
+  {
+    "objectID": "ecolyconserv/ecologiayconservacion.html#ocean-temperature",
+    "href": "ecolyconserv/ecologiayconservacion.html#ocean-temperature",
+    "title": "El océano",
+    "section": "Ocean Temperature",
+    "text": "Ocean Temperature\n\nOcean temperature The Group for High Resolution Sea Surface Temperature (GHRSST). Link.\nOcean temperature and derivatives NASA Earth Observations (NEO). Link.\nOcean temperature World Ocean Atlas 2013 version 2. Link.\nOcean temperature and derivatives The Coral Reef Temperature Anomaly Database (CoRTAD). Link.\nGISS Surface Temperature Analysis (GISTEMP). Link.\nNOAA. Monthly, Year-to-date, and Annual Composites of Twice-Weekly 50-km Satellite Coral Bleaching Monitoring Products. Link.\nThe Cross-Isthmus Panamanian Observing System. Link.\n18TH INTERNATIONAL GHRSST SCIENCE TEAM MEETING (GHRSST XVIII). Link.\nEumetsat - Monitoring & Evaluation of Thematic Information from Space (METIS). Link.\nNOAA High-resolution Blended Analysis. Sea Surface Temperature. Link. Link.\nSatellite-based time-series of sea-surface temperature since 1981 for climate applications. Scientific Data, 2019. Link.",
+    "crumbs": [
+      "Ecología y conservación",
+      "Ecologia y conservacion marina"
+    ]
+  },
+  {
+    "objectID": "ecolyconserv/ecologiayconservacion.html#salinity",
+    "href": "ecolyconserv/ecologiayconservacion.html#salinity",
+    "title": "El océano",
+    "section": "Salinity",
+    "text": "Salinity\n\nSea surface salinity NASA Earth Observations (NEO). Link.\nSea surface salinity World Ocean Atlas 2013 version 2. Link.\nSurface photosynthetically active radiation (PAR) NASA MODIS satellite. Link.\nAltimetria del oceano\n\nAviso. Link. Applications  Link.\n\nIDV (Integrated Data Viewer)\n\nIDV user guide. Link.\nVisualizing Ocean Model Simulations (Rasters or Vectors) in IDV. Link.",
+    "crumbs": [
+      "Ecología y conservación",
+      "Ecologia y conservacion marina"
+    ]
+  },
+  {
+    "objectID": "ecolyconserv/ecologiayconservacion.html#visores",
+    "href": "ecolyconserv/ecologiayconservacion.html#visores",
+    "title": "El océano",
+    "section": "Visores",
+    "text": "Visores\n\nMyOcean Viewer Copernicus. Link. Link. Link.\nEarthdata. Link.\nLive access server. Link.\nPodaac. Link.\n\nPO.DAAC 101 – Web Portal Navigation Tutorial. Link.\n\nHiTide. Link.\nPO.DAAC State of the Ocean (SOTO) visualization tool. Link.Link.\nCwcgom Aoml Noaa Ocean Viewer. Link.\nRAMMB. Colorado State U. Link.\nReal Earth. Link. Link.\nNational Hurricane Center. Link.\nEarth System Research Laboratory NOAA. Link.\n\nData access. Link.\n\nModelos Globales de Circulación oceánica\n\nGlobal ocean currents model. HYCOM. Link.\nBoyas. The GDP Drifter Data Assembly Center. DAC. Link.\nRsmas. Animations. Link.\nOcean circulation and tide models. Link.\nMarine data literacy. Link.\nMITgcm. Link.",
+    "crumbs": [
+      "Ecología y conservación",
+      "Ecologia y conservacion marina"
+    ]
   }
 ]
