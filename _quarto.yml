@@ -47,6 +47,8 @@ website:
         contents:
           - text: "Gestión de proyectos de CTeI"
             href: gestiondeproyectos/gestionproyectosciencia.qmd
+          - text: "Gestión de tecnología e innovación"
+            href: gestiondeproyectos/gestiontecnoinnov.qmd
           - text: "Gestión de proyectos"
             href: gestiondeproyectos/projectmanagement.qmd
       - section: "Amazonas"
