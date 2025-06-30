@@ -252,7 +252,7 @@
     "href": "grd/gestiondelriesgo.html#marco-legal",
     "title": "Gestión del riesgo de desastres",
     "section": "Marco Legal",
-    "text": "Marco Legal\n\nLey 1523 de 2012. Por la cual se adopta la Política Nacional de Gestión del Riesgo de Desastres y se establece el Sistema Nacional de Gestión del Riesgo de Desastres y se dictan otras disposiciones. Link. Decreto 1807. pdf\nDecreto Ley 4147 de 2011. Link\nDereto 2157 de 2017.Link\nLey 1931 de 2018 (Ley de cambio climático) por la cual se establecen directrices para la Gestión del Cambio Climático. Ver glosario. Link.\nPlan Nacional de Gestión del Riesgo 2015-2025. Sistema Nacional para la Gestión del Riesgo de Desastres Link.",
+    "text": "Marco Legal\n\nLey 1523 de 2012. Por la cual se adopta la Política Nacional de Gestión del Riesgo de Desastres y se establece el Sistema Nacional de Gestión del Riesgo de Desastres y se dictan otras disposiciones. Link. Decreto 1807. pdf\nDecreto Ley 4147 de 2011. Link\nDereto 2157 de 2017. Link\nLey 1931 de 2018 (Ley de cambio climático) por la cual se establecen directrices para la Gestión del Cambio Climático. Ver glosario. Link\nPlan Nacional de Gestión del Riesgo 2015-2025. Sistema Nacional para la Gestión del Riesgo de Desastres. Link\nCONPES 4058 de 2021. Política pública para la reducción de condiciones de riesgo de desastres y adaptación a fenómenos de variabilidad climática. Link\nDecreto 1807 de 2014. Incorporación de la gestión del riesgo en los planes de ordenamiento territorial y se dictan otras disposiciones. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Gestión del riesgo de desastres"
@@ -285,7 +285,7 @@
     "href": "grd/gestiondelriesgo.html#internacional",
     "title": "Gestión del riesgo de desastres",
     "section": "Internacional",
-    "text": "Internacional\n\nTerminology on disaster risk reduction. UNDRR. Link.\nTerminology Prevention Web. Link.\nHazard definition and classification review. UNDRR. Link.\nEm-Dat hazards general classification. Link.\nEncyclopedia of Natural Hazards. 2013. Link.\nThe Australian Disaster Resilience Knowledge Hub. Glossary. Link.\nDisaster Classification. DesInventar. Link.\nGlosario Servicio Geológico Colombiano. Link.\nGlossary of Geology. AGI. Link.\nUSGS. Glossary of Terms. Link\nFEMALink\nPrepare Center, topics. .\nIPCC Glossary. Link.\nUnesco. Glossary of basic terminology on disaster risk reduction. Link",
+    "text": "Internacional\n\nTerminology on disaster risk reduction. UNDRR. Link\nTerminology Prevention Web. Link\nHazard definition and classification review. UNDRR. Link\nEm-Dat hazards general classification. Link\nEncyclopedia of Natural Hazards. 2013. Link\nThe Australian Disaster Resilience Knowledge Hub. Glossary. Link\nDisaster Classification. DesInventar. Link.\nGlosario Servicio Geológico Colombiano. Link\nGlossary of Geology. AGI. Link\nUSGS. Glossary of Terms. Link\nFEMA. Link\nPrepare Center, topics. Link\nIPCC Glossary. Link\nUnesco. Glossary of basic terminology on disaster risk reduction. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Gestión del riesgo de desastres"
@@ -307,7 +307,7 @@
     "href": "grd/gestiondelriesgo.html#reportes-y-plataformas",
     "title": "Gestión del riesgo de desastres",
     "section": "Reportes y plataformas",
-    "text": "Reportes y plataformas\n\nGlobales\n\nGlobal Platform for Disaster Risk Reduction 2025. Link.\nThe Global Risks Report 2021 16th Edition. World Economic Forum. Link\nGlobal Risks Perceptions Reports 2021. Link.\nGlobal Assessment Report (GAR). Link.\n\nGlobal Assessment Report (GAR) 2025. Link.\nGAR Atlas. Link\n\n\nRegionales\n\nUNDRR ROAMC: Informe de evaluación regional sobre el riesgo de desastres en América Latina y el Caribe (RAR 2021). Link.\nWMO. State of the Climate in Latin America and the Caribbean 2023. Link\nUpdating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. Link.\n\nAmerica del Sur\n\nDashboard WMO Clima. Link.\nThe Risk Atlas of Mexico City, Mexico: a tool for decision-making and disaster prevention. Link\n\nNacionales\n\nÍndice Municipal de Riesgo de Desastres ajustado por Capacidades. Link. Link. Link.\nAnálisis de Vulnerabilidad y Riesgo por Cambio Climático en Colombia. Tercera Comunicación Nacional Cambio Climático Colombia. 2017. Link.\n\n\n\n\n\n Global Assessment Report 2025: Virtual launch | UNDRR",
+    "text": "Reportes y plataformas\n\nGlobales\n\nGlobal Platform for Disaster Risk Reduction 2025. Link.\nThe Global Risks Report 2021 16th Edition. World Economic Forum. Link\nGlobal Risks Perceptions Reports 2021. Link.\nGlobal Assessment Report (GAR). Link.\n\nGlobal Assessment Report (GAR) 2025. Link.\nGAR Atlas. Link\n\n\nRegionales\n\nUNDRR ROAMC: Informe de evaluación regional sobre el riesgo de desastres en América Latina y el Caribe (RAR 2021). Link.\nWMO. State of the Climate in Latin America and the Caribbean 2023. Link.\nUpdating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. Link.\n\nAmerica del Sur\n\nDashboard WMO Clima. Link.\nThe Risk Atlas of Mexico City, Mexico: a tool for decision-making and disaster prevention. Link.\n\nNacionales\n\nÍndice Municipal de Riesgo de Desastres ajustado por Capacidades. Link. Link. Link.\nAnálisis de Vulnerabilidad y Riesgo por Cambio Climático en Colombia. Tercera Comunicación Nacional Cambio Climático Colombia. 2017. Link.\n\n\n\n\n\n Global Assessment Report 2025: Virtual launch | UNDRR",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Gestión del riesgo de desastres"
@@ -1025,28 +1025,6 @@
     ]
   },
   {
-    "objectID": "matemdatascience/estadisticaymatematicas.html",
-    "href": "matemdatascience/estadisticaymatematicas.html",
-    "title": "Estadistica y matemáticas",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Estadística y matemáticas"
-    ]
-  },
-  {
-    "objectID": "amazonas/amazonas.html",
-    "href": "amazonas/amazonas.html",
-    "title": "Amazonas",
-    "section": "",
-    "text": "Sistemas de información y redes\n\nMapBiomas. Link.\nObservatorio regional del Amazonas ARO. Link.\nAtlas de Conflictos Socioambientales de la Amazonía colombiana. Link.\n\n\n\nProgramas\n\nAmazonía viva. Banco mundial. Link\nAmazonia Siempre. BID. Link.\nAmazonía +, Unión Europea. Link.\nGEF. Amazon. .\nFulbright Amazonia. Link (Policy brief).\nBuscadores de proyectos\n\nClimate project explorer. Link.\n\n\n\n\nOrganizaciones\n\nOrganización del Tratado de Cooperación Amazónica. OTCA. Link.\n\n\n\nCiencia\n\nPanel Científico para el Amazonas (SPA). Link.\nPrincipios CREA para la Gobernanza de Datos Indigenas. Link.\n\n\n\nFinanciación\n\nMultilateral climate funds. Link\nERC-funded research on the Amazon. Euraxess. Link.\nBelmont Forum. Tropical Forest. Link\nBiodiversa+. Biodiversity and Transformative Change. Link.\n\n\n\nCiencia\n\nIncendios forestales\n\nGlobal burned area increasingly explained by climate change. 2024. Nature. Link\n\nCambio climático\n\n\n\nMercados, cadenas comerciales\n\nLa UE y los países latinoamericanos ponen el foco en la protección de la Amazonia. El Pais. 2023/07. Link.\nEuropa adopta una ley pionera contra la deforestación pese a los recelos de Brasil y el sureste asiático. El Pais. 2023/07. Link.\nBrasil, México, Colombia, Indonesia y otros 13 países reclaman a la UE que reconsidere su ley contra la deforestación. El Pais. 2023/07. Link.\nLa UE y los países latinoamericanos ponen el foco en la protección de la Amazonia. El Pais. 2023/07. Link.\n\n\n\nMercados de carbono\n\nAction needed to make carbon offsets from forest conservation work for climate change mitigation. 2023. Science. Link.\n\n\n\nMOOCS\n\nThe Living Amazon: Science, Cultures and Sustainability in Practice. EDx. Link\n\n\n\nLecturas de ciencia\n\nTrouble in the Amazon. The rainforest is starting to release its carbon. Is it heading towards a tipping point? Nature, 2023. Link.\nAdvancing transdisciplinary research on social-ecological system transformations in the Global South. 2023. Link.\nExploring climate extremes in Brazil’s Legal Amazon. 2023. Link.\nTime to support Indigenous science. Science, 2024. Link\nHow a surge in organized crime threatens the Amazon. Nature, 2024. Link.\nCritical transitions in the Amazon forest system. Nature, 2024. Link.",
-    "crumbs": [
-      "Amazonas",
-      "Amazonas"
-    ]
-  },
-  {
     "objectID": "matemdatascience/cienciadedatos.html",
     "href": "matemdatascience/cienciadedatos.html",
     "title": "Lecturas",
@@ -1209,6 +1187,28 @@
     "crumbs": [
       "Matemáticas y ciencia de datos",
       "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "amazonas/amazonas.html",
+    "href": "amazonas/amazonas.html",
+    "title": "Amazonas",
+    "section": "",
+    "text": "Sistemas de información y redes\n\nMapBiomas. Link.\nObservatorio regional del Amazonas ARO. Link.\nAtlas de Conflictos Socioambientales de la Amazonía colombiana. Link.\n\n\n\nProgramas\n\nAmazonía viva. Banco mundial. Link\nAmazonia Siempre. BID. Link.\nAmazonía +, Unión Europea. Link.\nGEF. Amazon. .\nFulbright Amazonia. Link (Policy brief).\nBuscadores de proyectos\n\nClimate project explorer. Link.\n\n\n\n\nOrganizaciones\n\nOrganización del Tratado de Cooperación Amazónica. OTCA. Link.\n\n\n\nCiencia\n\nPanel Científico para el Amazonas (SPA). Link.\nPrincipios CREA para la Gobernanza de Datos Indigenas. Link.\n\n\n\nFinanciación\n\nMultilateral climate funds. Link\nERC-funded research on the Amazon. Euraxess. Link.\nBelmont Forum. Tropical Forest. Link\nBiodiversa+. Biodiversity and Transformative Change. Link.\n\n\n\nCiencia\n\nIncendios forestales\n\nGlobal burned area increasingly explained by climate change. 2024. Nature. Link\n\nCambio climático\n\n\n\nMercados, cadenas comerciales\n\nLa UE y los países latinoamericanos ponen el foco en la protección de la Amazonia. El Pais. 2023/07. Link.\nEuropa adopta una ley pionera contra la deforestación pese a los recelos de Brasil y el sureste asiático. El Pais. 2023/07. Link.\nBrasil, México, Colombia, Indonesia y otros 13 países reclaman a la UE que reconsidere su ley contra la deforestación. El Pais. 2023/07. Link.\nLa UE y los países latinoamericanos ponen el foco en la protección de la Amazonia. El Pais. 2023/07. Link.\n\n\n\nMercados de carbono\n\nAction needed to make carbon offsets from forest conservation work for climate change mitigation. 2023. Science. Link.\n\n\n\nMOOCS\n\nThe Living Amazon: Science, Cultures and Sustainability in Practice. EDx. Link\n\n\n\nLecturas de ciencia\n\nTrouble in the Amazon. The rainforest is starting to release its carbon. Is it heading towards a tipping point? Nature, 2023. Link.\nAdvancing transdisciplinary research on social-ecological system transformations in the Global South. 2023. Link.\nExploring climate extremes in Brazil’s Legal Amazon. 2023. Link.\nTime to support Indigenous science. Science, 2024. Link\nHow a surge in organized crime threatens the Amazon. Nature, 2024. Link.\nCritical transitions in the Amazon forest system. Nature, 2024. Link.",
+    "crumbs": [
+      "Amazonas",
+      "Amazonas"
+    ]
+  },
+  {
+    "objectID": "matemdatascience/estadisticaymatematicas.html",
+    "href": "matemdatascience/estadisticaymatematicas.html",
+    "title": "Estadistica y matemáticas",
+    "section": "",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "crumbs": [
+      "Matemáticas y ciencia de datos",
+      "Estadística y matemáticas"
     ]
   },
   {
@@ -2067,7 +2067,7 @@
     "href": "gestiondeproyectos/gestiontecnologiainnovacion.html#innovación-colombia",
     "title": "Gestión de tecnología e innovación",
     "section": "Innovación Colombia",
-    "text": "Innovación Colombia\n\nInnovamos. Link.\nCamara de Comercio - Bogota. Link.\nOCAD-DNP. Link.\nOxelerator. Link.\nSecretaria de Planeación - Bogota. Link.\nFondo Emprender. Link.\nFondo Innpulsa. Link.\nDNP. Equipo de Innovación Pública. Link.\nSistema Nacional de Competitividad e Innovación - SNCI. Link.\nCompra pública para la innovación.\n\nCompra Pública para la Innovación –CPI. Link.\n\n\n\n\n\n Socialización de la Política Nacional de Propiedad Intelectual - CONPES 4062. Marzo de 2022\n\n\n\n\n\n\n\n Barreras para la innovación\n\n\n Metodología de Articulación para la Competitividad – ArCo",
+    "text": "Innovación Colombia\n\nÍndice Departamental de Innovación para Colombia - IDIC. Link.\nInnovamos. Link.\nCamara de Comercio - Bogota. Link.\nOCAD-DNP. Link.\nOxelerator. Link.\nSecretaria de Planeación - Bogota. Link.\nFondo Emprender. Link.\nFondo Innpulsa. Link.\nDNP. Equipo de Innovación Pública. Link.\nSistema Nacional de Competitividad e Innovación - SNCI. Link.\nCompra pública para la innovación.\n\nCompra Pública para la Innovación –CPI. Link.\n\n\n\n\n\n Socialización de la Política Nacional de Propiedad Intelectual - CONPES 4062. Marzo de 2022\n\n\n Lanzamiento IDIC 2025\n\n\n\n\n Barreras para la innovación\n\n\n Metodología de Articulación para la Competitividad – ArCo\n\n\n\n\n Retos del emprendimiento\n\n\nVideos innovación",
     "crumbs": [
       "Gestión de proyectos",
       "Gestión de tecnología e innovación"
@@ -2079,6 +2079,17 @@
     "title": "Gestión de tecnología e innovación",
     "section": "Innovación universitaria",
     "text": "Innovación universitaria\n\nUniversidad Nacional de Colombia. Link.\nUniversidad de los Andes. Link.\nDatos y políticas de innovación Colombia\n\nÍndice Departamental de innovación para Colombia 2018. DNP. Link.\nÍndice Departamental de innovación para Colombia 2019. DNP. Link.\nÍndice Global de Innovación 2018. Informe para Colombia. 2018. DNP. Link.\nCONPES 3975. Política Nacional de Transformación Digital e Inteligencia Artificial. Link.\nLineamientos para una política de Ciencia Abierta en Colombia. Minciencias. Link.\nMetodología de Articulación ArCo. DNP. Link.\n\n\n\n\n\n Metodología de Articulación para la Competitividad – ArCo",
+    "crumbs": [
+      "Gestión de proyectos",
+      "Gestión de tecnología e innovación"
+    ]
+  },
+  {
+    "objectID": "gestiondeproyectos/gestiontecnologiainnovacion.html#spin-off",
+    "href": "gestiondeproyectos/gestiontecnologiainnovacion.html#spin-off",
+    "title": "Gestión de tecnología e innovación",
+    "section": "Spin-off",
+    "text": "Spin-off\n\n\n\n Buenas prácticas en el acompañamiento a ‘spin-offs’ universitarios\n\n\n Postdoc para crear empresas. Fernando Gomez.",
     "crumbs": [
       "Gestión de proyectos",
       "Gestión de tecnología e innovación"

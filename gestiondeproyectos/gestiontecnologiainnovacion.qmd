@@ -4,7 +4,7 @@ format: html
 editor: visual
 ---
 
-# Lista de recursos para la gestión de la innovación en Colombia.
+# Lista de recursos para la gestión de la innovación en Colombia
 
 ::: {layout-ncol="2"}
 {{< video https://youtu.be/yCm9Ng0bbEQ >}} Está el mundo mejor o peor
@@ -12,24 +12,31 @@ editor: visual
 
 # **Manuales para la innovación**
 
--   Manual de Bogotá. .
--   Manual de Santiago. .
--   Manual de Oslo. .
+-   Manual de Bogotá. [*Link*](http://www.ricyt.org/category/manuales/).
+-   Manual de Santiago. [*Link*](http://www.ricyt.org/category/manuales/).
+-   Manual de Oslo. [*Link*](http://www.ricyt.org/category/manuales/)
 -   Manual de Frascati. [*Link*](https://www.oecd.org/publications/manual-de-frascati-2015-9789264310681-es.htm).
 
 # **Datos innovación latinoamérica**
 
--   Red de Indicadores de Ciencia y Tecnología Interamericana.
--   **Datos innovación mundiales**
-    -   Organización Mundial de la Propiedad Intelectual (OMPI). [*Link*](https://www.wipo.int/portal/es/).
-    -   Índice Mundial de Innovación. [*Link*](https://www.wipo.int/global_innovation_index/es/).
-    -   The Innovation Policy Platform (IPP). [*Link*](http://www.innovationpolicyplatform.org/www.innovationpolicyplatform.org/frontpage/index.html).
-    -   Innovation Policy: A Guide for Developing Countries. [*Link*](http://www.innovationpolicyplatform.org/www.innovationpolicyplatform.org/document/innovation-policy-guide-developing-countries/index.html).
+-   Red de Indicadores de Ciencia y Tecnología Interamericana. [*Link*](http://www.ricyt.org/category/manuales/)
+
+# **Datos innovación mundiales**
+
+-   Organización Mundial de la Propiedad Intelectual (OMPI). [*Link*](https://www.wipo.int/portal/es/).
+-   Índice Mundial de Innovación. [*Link*](https://www.wipo.int/global_innovation_index/es/).
+-   The Innovation Policy Platform (IPP). [*Link*](http://www.innovationpolicyplatform.org/www.innovationpolicyplatform.org/frontpage/index.html).
+-   Innovation Policy: A Guide for Developing Countries. [*Link*](http://www.innovationpolicyplatform.org/www.innovationpolicyplatform.org/document/innovation-policy-guide-developing-countries/index.html).
+
+::: {layout-ncol="2"}
+{{< video https://youtu.be/kpW9JcWxKq0 >}} La cuarta revolución industrial
+:::
 
 # **Innovación en Colombia**
 
 ## **Innovación Colombia**
 
+-   Índice Departamental de Innovación para Colombia - IDIC. [*Link*](https://www.competitivas.gov.co/comisiones/perfiles-departamentales/indices-departamentales/indice-departamental-innovacion-colombia-idic).
 -   Innovamos. [*Link*](https://www.innovamos.gov.co/).
 -   Camara de Comercio - Bogota. [*Link*](http://www.ccb.org.co/).
 -   OCAD-DNP. [*Link*](https://www.sgr.gov.co/Qui%C3%A9nesSomos/%C3%93rganosdelSGR/%C3%93rganosColegiadosdeAdministraci%C3%B3nyDecisi%C3%B3n.aspx).
@@ -45,13 +52,15 @@ editor: visual
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/LmhdPB66LKs" >}} Socialización de la Política Nacional de Propiedad Intelectual - CONPES 4062. Marzo de 2022
 
-{{< video "https://youtu.be/2YI-QJblf9c" >}}
+{{< video "https://www.youtube.com/embed/RMLMmdNHj2c" >}} Lanzamiento IDIC 2025
 
 {{< video "https://youtu.be/tjP6bnnay8U" >}} Barreras para la innovación
 
 {{< video "https://youtu.be/yOo_uqEU-oY" >}} Metodología de Articulación para la Competitividad – ArCo
 
-{{< video "https://www.youtube.com/live/l4WhvuyflcA" >}}
+{{< video "https://www.youtube.com/embed/l4WhvuyflcA" >}} Retos del emprendimiento
+
+Videos innovación
 :::
 
 ## **Innovación universitaria**
@@ -67,12 +76,18 @@ editor: visual
     -   **Metodología de Articulación ArCo**. DNP. [*Link*](https://www.dnp.gov.co/programas/desarrollo-empresarial/Competitividad/Paginas/Metodologia-de-Articulacion-ArCo.aspx).
 
 ::: {layout-ncol="2"}
-{{< video "https://www.youtube.com/live/l4WhvuyflcA" >}} Metodología de Articulación para la Competitividad – ArCo
+{{< video "https://www.youtube.com/embed/l4WhvuyflcA" >}} Metodología de Articulación para la Competitividad – ArCo
 :::
 
 # **Vigilancia tecnológica e inteligencia competitiva**
 
 -   Vigilancia tecnologíca UTP. [*Link*](https://vicerrectorias.utp.edu.co/viie/herramientas-para-la-vigilancia-estrategica-e-inteligencia-competitiva/)
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/CW4tcs5Ajjg" >}} El concepto de vigilancia tecnológica
+
+{{< video "https://youtu.be/vEnbDaWv3lA" >}} Vigilancia tecnológica e inteligencia competitiva
+:::
 
 # **Curso de innovación pública**
 
@@ -83,15 +98,61 @@ editor: visual
 -   Innovación y Gestión del Conocimiento en la Gestión Pública. [*Link*](https://contenidoseducativospublicos.esap.edu.co/index.php/categorias/categoria/93). \*\*\*
     -   [Parte 1](https://youtu.be/tsMmAg4edvY), [Parte 2](https://youtu.be/rwnzEe_eN7c), [Parte 3](https://youtu.be/e2TN3Bi6l0k)
 
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/tsMmAg4edvY" >}}
+
+{{< video "https://youtu.be/rwnzEe_eN7c" >}}
+
+{{< video "https://youtu.be/e2TN3Bi6l0k" >}}
+:::
+
 # **Innovación social**
 
 -   Pensar, decir, hacer: encuentros de Innovación Social. UNAL 2021. [*Link*](https://investigacion.unal.edu.co/boletin/notas-boletin-un-investiga/news/pensar-decir-hacer-encuentros-de-innovacion-social/).
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/STI113dxetE" >}} ¿Qué es Innovación Social? \| Pensar, decir, hacer: encuentros de Innovación Social
+
+{{< video "https://youtu.be/V42v0LIcAh8" >}}
+
+{{< video "https://youtu.be/V42v0LIcAh8" >}}
+
+{{< video "https://youtu.be/Z09Pa0HwSGo" >}}
+:::
 
 # **Cursos en línea**
 
 -   El valor de la creatividad y la innovación: La Economía Naranja. EdX. Banco Mundial. [*Link*](https://www.edx.org/es/course/el-valor-de-la-creatividad-y-la-innovacion-la-economia-naranja).
 -   **Documental**
     -   El cerebro creativo. [Link.](https://www.netflix.com/us-es/title/81090128)
+
+# **Métodos de innovación**
+
+## **Spin-off**
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/YS3YZVCfPpc" >}} Buenas prácticas en el acompañamiento a 'spin-offs' universitarios
+
+{{< video "https://youtu.be/dCqcWjdxKwU" >}} Postdoc para crear empresas. Fernando Gomez.
+:::
+
+## **Charlas sobre innovación**
+
+Sistema Innovación, Transferencia Conocimiento y Emprendimiento [#UNAL](https://www.youtube.com/hashtag/unal) (Diego Torres)
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/A6icw6SIExg " >}}
+
+{{< video "https://youtu.be/uZswTWn9nyU" >}}
+
+{{< video "https://youtu.be/dIll8Y9ygrI" >}}
+
+{{< video "https://youtu.be/8B0wQ6HD2mA" >}}
+:::
+
+# Aprender a innovar
+
+-   Learning to Learn. [*Link*](https://hbr.org/2016/03/learning-to-learn).
 
 # **Lecturas innovación y emprendimiento**
 
@@ -104,27 +165,6 @@ editor: visual
     -   2003\. A General Theory of Entrepreneurship: The Individual-opportunity Nexus. [*Link*](https://books.google.com.co/books?id=0FxO_Wsh30kC&printsec=frontcover&hl=es&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false).
 -   **Algunos expertos**
     -   Joe Tidd. [*Link*](https://scholar.google.com/citations?hl=es&user=he2j1ugAAAAJ&view_op=list_works&sortby=pubdate).
-
-# **Métodos de innovación**
-
-**Spin-off**
-
-Buenas prácticas en el acompañamiento a 'spin-offs' universitarios
-
-Postdoc para crear empresas. Fernando Gomez.
-
-## **Charlas sobre innovación**
-
-Sistema Innovación, Transferencia Conocimiento y Emprendimiento [#UNAL](https://www.youtube.com/hashtag/unal) (Diego Torres)
-
-# Aprender a innovar
-
--   Learning to Learn. [*Link*](https://hbr.org/2016/03/learning-to-learn).
-
-Lanzamiento del programa Méntor - Spinn-off y Transferencia del Conocimiento
-
-**Lecturas**
-
 -   Linking Entrepreneurship and Economic Growth. 1999. [*Link*](https://link.springer.com/article/10.1023/a:1008063200484).
 -   Innovation intermediaries, knowledge infrastructure and technological opportunities in emerging markets: the case of research and technological centers in the Colombian agricultural sector. Innovation and development. 2023. [*Link*](https://www.tandfonline.com/doi/abs/10.1080/2157930X.2022.2133380?journalCode=riad20).
 -   La innovación se ha estancado y la academia es responsable. Forbes. 2023. [*Link*](https://forbes.co/2023/03/28/red-forbes/la-innovacion-se-ha-estancado-y-la-academia-es-responsable).
