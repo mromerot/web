@@ -4,9 +4,17 @@ format: html
 editor: visual
 ---
 
-## Reducción del riesgo de desastres
+# Planes municipales de gestión del riesgo
 
-{{< lipsum 1 >}}
+-   Guía metodológica para la formulación y actualización de planes municipales de gestión del riesgo de desastres (PMGRD). UNGRD. 2021. [*Link*](https://repositorio.gestiondelriesgo.gov.co:8443/handle/20.500.11762/32750)
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/cbLFVsg5ZQM" >}} Planes Municipales de Gestión del Riesgo
+
+{{< video "https://www.youtube.com/embed/iC8vIM__LLE" >}} Instrumentos de planificación en gestión de riesgo de desastres- Caja de herramientas
+
+{{< video "https://www.youtube.com/embed/UnkIdgYkpYA" >}} Guía técnica para la implementación de los Planes de Gestión del Riesgo de Desastres
+:::
 
 ## Ordenamiento territorial y gestión de riesgos
 
@@ -23,7 +31,5 @@ Guía para la Integración de la Gestión del Riesgo de Desastres en los Planes 
 Guía para la Integración de la Gestión del Riesgo de Desastres en los Planes de Desarrollo Territorial 2020 – 2023. UNGRD. [*Link*](http://portal.gestiondelriesgo.gov.co/Paginas/Slide_home/Guia-para-la-Integracion-de-la-GRD-en-los-PDT-2020-2023.aspx).
 
 ::: {layout-ncol="2"}
-{{< video "https://www.youtube.com/live/FVF1L4MlGZU?si=hXsQ3e4CRFM3Y8Q2" >}}
+{{< video "https://www.youtube.com/embed/FVF1L4MlGZU2" >}}
 :::
-
-{{< lipsum 1 >}}
