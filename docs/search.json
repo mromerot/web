@@ -1047,14 +1047,14 @@
     ]
   },
   {
-    "objectID": "matemdatascience/quarto-sc.html",
-    "href": "matemdatascience/quarto-sc.html",
-    "title": "Atajos para Quarto",
+    "objectID": "matemdatascience/estadisticaymatematicas.html",
+    "href": "matemdatascience/estadisticaymatematicas.html",
+    "title": "Estadistica y matemáticas",
     "section": "",
-    "text": "Callout blocks\nThere are five different types of callouts available: note , warning, important , tip , caution . The color and icon will be different depending upon the type that you select. Here are what the various types look like in HTML output.\n{.callout-note collapse=\"true\"} Note that there are five types of callouts, including: `note` , `warning,` `important` , `tip` , `caution`. \n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nCallouts provide a simple way to attract attention, for example, to this warning.\n\n\n\n\n\n\n\n\nThis is Important\n\n\n\nDanger, callouts will really improve your writing.\n\n\n\n\n\n\n\n\nTip With Title\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse [with minimal atribute]\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user and minimal atributes with {.callout-caution collapse=\"true\" style=\"color: purple\" appearance=\"minimal\"}\n\n\n\n\n\nTexto desplegable\n\n\nTexto desplegable\n\n&lt;details&gt; &lt;summary&gt;Título del texto desplegable&lt;/summary&gt;\n-   Contenido\n-   Contenido\n-   Contenido\n&lt;/details&gt;",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
     "crumbs": [
       "Matemáticas y ciencia de datos",
-      "Quarto atajos"
+      "Estadística y matemáticas"
     ]
   },
   {
@@ -1234,14 +1234,14 @@
     ]
   },
   {
-    "objectID": "matemdatascience/estadisticaymatematicas.html",
-    "href": "matemdatascience/estadisticaymatematicas.html",
-    "title": "Estadistica y matemáticas",
+    "objectID": "matemdatascience/quarto-atajos.html",
+    "href": "matemdatascience/quarto-atajos.html",
+    "title": "Atajos para Quarto",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "text": "Callout blocks\nThere are five different types of callouts available: note , warning, important , tip , caution . The color and icon will be different depending upon the type that you select. Here are what the various types look like in HTML output.\n{.callout-note collapse=\"true\"} Note that there are five types of callouts, including: `note` , `warning,` `important` , `tip` , `caution`. \n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nCallouts provide a simple way to attract attention, for example, to this warning.\n\n\n\n\n\n\n\n\nThis is Important\n\n\n\nDanger, callouts will really improve your writing.\n\n\n\n\n\n\n\n\nTip With Title\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse [with minimal atribute]\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user and minimal atributes with {.callout-caution collapse=\"true\" style=\"color: purple\" appearance=\"minimal\"}\n\n\n\n\n\nTexto desplegable\n\n\nTexto desplegable\n\n&lt;details&gt; &lt;summary&gt;Título del texto desplegable&lt;/summary&gt;\n-   Contenido\n-   Contenido\n-   Contenido\n&lt;/details&gt;",
     "crumbs": [
       "Matemáticas y ciencia de datos",
-      "Estadística y matemáticas"
+      "Quarto atajos"
     ]
   },
   {
