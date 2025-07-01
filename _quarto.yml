@@ -25,6 +25,8 @@ website:
             href: grd/cienciaytecnologia.qmd
           - text: "Educacion"
             href: grd/educacion.qmd
+          - text: "Sistemas de alerta temprana"
+            href: grd/sat.qmd
           - text: "Incendios forestales"
             href: grd/incendiosforestales.qmd
           - text: "Huracanes"
