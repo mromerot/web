@@ -142,18 +142,20 @@ Videos sobre resiliencia
 -   GAR Special Report 2024. Forensic Insights for Future Resilience: Learning from Past Disasters. [*Link*](https://www.undrr.org/gar/gar2024-special-report).
 
 ::: {layout-ncol="2"}
-{{< video "https://youtu.be/f3Mef5a6VAE >}} Forensic Analysis
+{{< video "https://youtu.be/f3Mef5a6VAE" >}} Forensic Analysis
 
 {{< video "https://youtu.be/QKRDeeAYeHk" >}} Forensic insights for future resilience
 :::
 
 ![Root causes of risk. [UNDRR](https://www.undrr.org/gar/gar2024-special-report)](https://www.undrr.org/sites/default/files/2024-09/Tree_Infographic.jpg){fig-align="left" width="350"}
 
-## UNDRR. Disaster Forensics
+## Disaster Forensics - UNDRR
 
-UNDRR. Disaster Forensics. [*Link*](https://www.undrr.org/disaster-forensics). Las siguientes preguntas describen un cuestionario simplificado para realizar un análisis forense de cualquier desastre. Las preguntas siguen los tres pasos clave de la metodología FORIN (Investigaciones Forenses de Desastres).
+Las siguientes preguntas describen un cuestionario simplificado para realizar un análisis forense de cualquier desastre. Las preguntas siguen los tres pasos clave de la metodología FORIN (Investigaciones Forenses de Desastres) (UNDRR. Disaster Forensics. [*Link*](https://www.undrr.org/disaster-forensics))
 
-**PASO UNO – COMPRENDER EL ADN DEL DESASTRE**
+<details>
+
+<summary>**PASO UNO – COMPRENDER EL ADN DEL DESASTRE**</summary>
 
 Analizar los factores específicos de peligro, exposición y vulnerabilidad que hicieron de este desastre un desastre único y significativo. Esto implica un análisis descriptivo del peligro, la exposición, las condiciones inseguras y los patrones subsiguientes de daños, pérdidas e impacto.
 
@@ -207,12 +209,22 @@ Analizar los factores específicos de peligro, exposición y vulnerabilidad que 
 
 **Resultado del Paso 1** = Identificación de las cadenas de ADN clave (puntos de inflexión únicos) que hicieron de este desastre algo único. La inclusión de relatos del desastre y conversaciones con las personas afectadas puede profundizar el análisis y proporcionar una visión realista de las acciones propuestas para la reducción del riesgo.
 
-**PASO 2 – TENDENCIAS FUTURAS**
+</details>
+
+<details>
+
+<summary>**PASO 2 – TENDENCIAS FUTURAS**</summary>
 
 Analice más a fondo las áreas clave identificadas del ADN del desastre y prediga las posibles tendencias futuras hasta 2050. Por ejemplo, si la urbanización y los asentamientos informales fueron los principales contribuyentes a los daños causados ​​por las inundaciones, ¿cuáles son las tendencias actuales y futuras probables para la urbanización y los asentamientos informales?
 
 **Resultado del paso 2 =** Realizar un análisis de previsión futura para identificar qué áreas de riesgo actual es probable que aumenten en el futuro.
 
-**PASO 3 – APRENDIZAJE FORENSE**
+</details>
+
+<details>
+
+<summary>**PASO 3 – APRENDIZAJE FORENSE**</summary>
 
 Facilitar un debate entre múltiples partes interesadas para revisar y refinar el análisis, creando conjuntamente políticas potenciales y acciones prácticas para reducir el riesgo asociado con cada cadena de ADN identificada, considerando los impactos del desastre y los escenarios futuros
+
+</details>

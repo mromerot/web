@@ -77,6 +77,8 @@ website:
             href: matemdatascience/cienciadedatos.qmd
           - text: "Inteligencia artificial"
             href: matemdatascience/ia.qmd
+          - text: "Quarto atajos"
+            href: matemdatascience/quarto-sc.qmd
       - section: "Vida laboral"
         contents:
           - text: "Café"
