@@ -38,12 +38,19 @@ This is an example of a callout with a title.
 This is an example of a 'collapsed' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
 :::
 
-<details>
+::: {.callout-caution collapse="true" style="color: purple" appearance="minimal"}
+## Expand To Learn About Collapse \[with minimal atribute\]
+
+This is an example of a 'collapsed' caution callout that can be expanded by the user and minimal atributes with `{.callout-caution collapse="true" style="color: purple" appearance="minimal"}`
+:::
 
 # Texto desplegable
+
+<details>
+
 <summary>Texto desplegable</summary>
 
-``` {.markdown style="color: gray;"}
+``` {.markdown style="color: gray"}
 <details> <summary>Título del texto desplegable</summary>
 -   Contenido
 -   Contenido
