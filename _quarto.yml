@@ -43,6 +43,8 @@ website:
             href: grd/cursos.qmd
           - text: "Repositorios FAIR"
             href: grd/repositorios.qmd
+          - text: "Amazonas"
+            href: grd/amazonas.qmd
       - section: "Gestión de proyectos"
         contents:
           - text: "Gestión de proyectos de CTeI"
@@ -51,10 +53,6 @@ website:
             href: gestiondeproyectos/gestiontecnologiainnovacion.qmd
           - text: "Gestión de proyectos"
             href: gestiondeproyectos/projectmanagement.qmd
-      - section: "Amazonas"
-        contents:
-          - text: "Amazonas"
-            href: amazonas/amazonas.qmd
       - section: "Ciencia y tecnología"
         contents:
           - text: "Escritura y publicación académica"
