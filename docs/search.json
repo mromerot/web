@@ -1238,7 +1238,7 @@
     "href": "matemdatascience/quarto-atajos.html",
     "title": "Atajos para Quarto",
     "section": "",
-    "text": "Callout blocks\nThere are five different types of callouts available: note , warning, important , tip , caution . The color and icon will be different depending upon the type that you select. Here are what the various types look like in HTML output.\n{.callout-note collapse=\"true\"} Note that there are five types of callouts, including: `note` , `warning,` `important` , `tip` , `caution`. \n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nCallouts provide a simple way to attract attention, for example, to this warning.\n\n\n\n\n\n\n\n\nThis is Important\n\n\n\nDanger, callouts will really improve your writing.\n\n\n\n\n\n\n\n\nTip With Title\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse [with minimal atribute]\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user and minimal atributes with {.callout-caution collapse=\"true\" style=\"color: purple\" appearance=\"minimal\"}\n\n\n\n\n\nTexto desplegable\n\n\nTexto desplegable\n\n&lt;details&gt; &lt;summary&gt;Título del texto desplegable&lt;/summary&gt;\n-   Contenido\n-   Contenido\n-   Contenido\n&lt;/details&gt;",
+    "text": "Insertar videos\nInsertar video en dos columnas\n\n::: {layout-ncol=2} \n\n\nTexto de la caja (opcional)\n:::\nInservar video de un live, cambiar \"live\" por \"embed\"\nhttps://www.youtube.com/embed/srgbUPu9Mo4\n\n\nCallout blocks\nThere are five different types of callouts available: note , warning, important , tip , caution . The color and icon will be different depending upon the type that you select. Here are what the various types look like in HTML output.\n{.callout-note collapse=\"true\"} Note that there are five types of callouts, including: `note` , `warning,` `important` , `tip` , `caution`. \n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nCallouts provide a simple way to attract attention, for example, to this warning.\n\n\n\n\n\n\n\n\nThis is Important\n\n\n\nDanger, callouts will really improve your writing.\n\n\n\n\n\n\n\n\nTip With Title\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse [with minimal atribute]\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user and minimal atributes with {.callout-caution collapse=\"true\" style=\"color: purple\" appearance=\"minimal\"}\n\n\n\n\n\nTexto desplegable\n\n\nTexto desplegable\n\n&lt;details&gt; &lt;summary&gt;Título del texto desplegable&lt;/summary&gt;\n-   Contenido\n-   Contenido\n-   Contenido\n&lt;/details&gt;",
     "crumbs": [
       "Matemáticas y ciencia de datos",
       "Quarto atajos"
@@ -1909,7 +1909,7 @@
     "href": "grd/reducciondelriesgo.html",
     "title": "Reducción del riesgo de desastres",
     "section": "",
-    "text": "Guía metodológica para la formulación y actualización de planes municipales de gestión del riesgo de desastres (PMGRD). UNGRD. 2021. Link\n\n\n\n\n Planes Municipales de Gestión del Riesgo\n\n\n Instrumentos de planificación en gestión de riesgo de desastres- Caja de herramientas\n\n\n\n\n Guía técnica para la implementación de los Planes de Gestión del Riesgo de Desastres\n\n\n\n\n\nGuía para la Integración de la Gestión del Riesgo de Desastres en los Planes de Desarrollo Territorial 2020 – 2023. UNGRD. Link.\n\n\n\n Ordenamiento territorial y gestión de riesgos\n\n\n Gestión de riesgo y ordenamiento territorial para geólogos\n\n\n\n\n\n\nGuía para la Integración de la Gestión del Riesgo de Desastres en los Planes de Desarrollo Territorial 2020 – 2023. UNGRD. Link.",
+    "text": "Guía metodológica para la formulación y actualización de planes municipales de gestión del riesgo de desastres (PMGRD). UNGRD. 2021. Link\n\n\n\n\n Planes Municipales de Gestión del Riesgo\n\n\n Instrumentos de planificación en gestión de riesgo de desastres- Caja de herramientas\n\n\n\n\n Guía técnica para la implementación de los Planes de Gestión del Riesgo de Desastres\n\n\n\n\n\nGuía para la Integración de la Gestión del Riesgo de Desastres en los Planes de Desarrollo Territorial 2020 – 2023. UNGRD. Link.\n\n\n\n Ordenamiento territorial y gestión de riesgos\n\n\n Gestión de riesgo y ordenamiento territorial para geólogos\n\n\n\n\n\n\n\nPlanes Integrales de Gestión del Cambio Climático Territorial (PIGCCT). Link.\nPlanes de Ordenación y Manejo de Cuencas Hidrográficas (POMCA). Link.\n\n\n\n\n Planes integrales de gestión de cambio climático territoriales\n\n\n Lanzamiento de la Guía de Territorios Empoderados para la Acción Climática\n\n\n\n\n Planes de Ordenación y Manejo de Cuencas Hidrográficas -POMCA\n\n\n\n\n\n\nGuía para la Integración de la Gestión del Riesgo de Desastres en los Planes de Desarrollo Territorial 2020 – 2023. UNGRD. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Reducción del riesgo"
@@ -2148,6 +2148,50 @@
     "crumbs": [
       "Gestión de proyectos",
       "Gestión de tecnología e innovación"
+    ]
+  },
+  {
+    "objectID": "grd/gestiondelriesgo.html#marco-legal-colombiano",
+    "href": "grd/gestiondelriesgo.html#marco-legal-colombiano",
+    "title": "Gestión del riesgo de desastres",
+    "section": "Marco Legal colombiano",
+    "text": "Marco Legal colombiano\n\nLey 1523 de 2012. Por la cual se adopta la Política Nacional de Gestión del Riesgo de Desastres y se establece el Sistema Nacional de Gestión del Riesgo de Desastres y se dictan otras disposiciones. Link. Decreto 1807. pdf\nDecreto Ley 4147 de 2011. Link\nDereto 2157 de 2017. Link\nLey 1931 de 2018 (Ley de cambio climático) por la cual se establecen directrices para la Gestión del Cambio Climático. Ver glosario. Link\nPlan Nacional de Gestión del Riesgo 2015-2025. Sistema Nacional para la Gestión del Riesgo de Desastres. Link\nCONPES 4058 de 2021. Política pública para la reducción de condiciones de riesgo de desastres y adaptación a fenómenos de variabilidad climática. Link\nDecreto 1807 de 2014. Incorporación de la gestión del riesgo en los planes de ordenamiento territorial y se dictan otras disposiciones. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Gestión del riesgo de desastres"
+    ]
+  },
+  {
+    "objectID": "grd/gestiondelriesgo.html#marco-de-sendai",
+    "href": "grd/gestiondelriesgo.html#marco-de-sendai",
+    "title": "Gestión del riesgo de desastres",
+    "section": "Marco de Sendai",
+    "text": "Marco de Sendai\n\nMarco de Sendai. Link.\nLista Youtube. Link\n\nEdición especial International Journal of Disaster Risk Science 2015 Vol 6(2). Link.\nThe Sendai Framework and the SDGs. Link.\nSendai Monitor. Link.\n\nPreventionweb. Link.\n\nThemes. Link.\nColombia Link.\n\nOficina de las Naciones Unidas para la Reducción del Riesgo de Desastres. UNDRR. Link. Link.\n\nUNDRR Americas. Link.\nScience, technology and academia. Link.\nGeoportal. Link.\n\n\n\n\n\n The Sendai Framework for Disaster Risk Reduction | UNDRR\n\n\n Sendai Framework Priority 1: Understanding Disaster Risk\n\n\n\n\n Sendai Framework Priority 2: Strengthening disaster risk governance to manage disaster risk\n\n\n Sendai Framework Priority 3: Investing in disaster risk reduction for resilience\n\n\n\n\n Sendai Framework Priority 4: Build Back Better\n\n\n \n\n\n\n\nMarco de Sendai",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Gestión del riesgo de desastres"
+    ]
+  },
+  {
+    "objectID": "grd/gestiondelriesgo.html#instituciones-internacionales",
+    "href": "grd/gestiondelriesgo.html#instituciones-internacionales",
+    "title": "Gestión del riesgo de desastres",
+    "section": "Instituciones Internacionales",
+    "text": "Instituciones Internacionales\n\nAustralia. Disaster risk reduction and resilience.\n\nAustralian Disaster resilience hub. Link.\nThe National Emergency Management Agency. Link.\n\nEEUU. Federal Emergency Management Agency (FEMA). Link.\nNASA Earth Sciences Disasters Program. Link. Link.Español.\n\nWebinars. Link.\nLance. Link.\nTraining. Link.\n\nGlobal Facility for Disaster Reduction and Recovery (GFDRR). Link.\n\nColombia. Link\nCODE FOR RESILIENCE. Link\n\nOECD Colombia. Link.\nOFDA. Link.\nUnderstanding Risk. Link.\nCentro America. Link.\nAnticipation hub. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Gestión del riesgo de desastres"
+    ]
+  },
+  {
+    "objectID": "grd/reducciondelriesgo.html#interacción-de-la-grd-con-otros-instrumentos-de-planificación",
+    "href": "grd/reducciondelriesgo.html#interacción-de-la-grd-con-otros-instrumentos-de-planificación",
+    "title": "Reducción del riesgo de desastres",
+    "section": "",
+    "text": "Planes Integrales de Gestión del Cambio Climático Territorial (PIGCCT). Link.\nPlanes de Ordenación y Manejo de Cuencas Hidrográficas (POMCA). Link.\n\n\n\n\n Planes integrales de gestión de cambio climático territoriales\n\n\n Lanzamiento de la Guía de Territorios Empoderados para la Acción Climática\n\n\n\n\n Planes de Ordenación y Manejo de Cuencas Hidrográficas -POMCA",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Reducción del riesgo"
     ]
   }
 ]

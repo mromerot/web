@@ -4,6 +4,23 @@ format: html
 editor: visual
 ---
 
+# Insertar videos
+
+``` {.Markdown style="color: gray"}
+Insertar video en dos columnas
+
+::: {layout-ncol=2} 
+{{< video "https://youtu.be/BY32QADSuNM" >}}
+{{< video "https://youtu.be/BY32QADSuNM" >}}
+Texto de la caja (opcional)
+:::
+```
+
+``` {.Markdown style="color: gray"}
+Insertar video de un live: cambiar "live" por "embed"
+https://www.youtube.com/embed/srgbUPu9Mo4
+```
+
 # [Callout blocks](https://quarto.org/docs/authoring/callouts.html)
 
 There are five different types of callouts available: `note` , `warning,` `important` , `tip` , `caution` . The color and icon will be different depending upon the type that you select. Here are what the various types look like in HTML output.
