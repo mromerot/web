@@ -10,8 +10,8 @@ editor: visual
 Insertar video en dos columnas
 
 ::: {layout-ncol=2} 
-{{< video "https://youtu.be/BY32QADSuNM" >}}
-{{< video "https://youtu.be/BY32QADSuNM" >}}
+{{< video " " >}}
+{{< video " " >}}
 Texto de la caja (opcional)
 :::
 ```
@@ -26,7 +26,8 @@ https://www.youtube.com/embed/srgbUPu9Mo4
 There are five different types of callouts available: `note` , `warning,` `important` , `tip` , `caution` . The color and icon will be different depending upon the type that you select. Here are what the various types look like in HTML output.
 
 ``` {.Markdown style="color: gray;"}
-{.callout-note collapse="true"} Note that there are five types of callouts, including: `note` , `warning,` `important` , `tip` , `caution`. 
+{.callout-note collapse="true"} Note that there are five types of callouts, including:
+`note` , `warning,` `important` , `tip` , `caution`. 
 ```
 
 ::: callout-note

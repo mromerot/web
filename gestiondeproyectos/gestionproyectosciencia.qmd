@@ -6,19 +6,19 @@ editor: visual
 
 ![The European Competence Framework for Research Managers. <https://research-and-innovation.ec.europa.eu/system/files/2023-04/ec_rtd_research-competence-presentation.pdf>.](https://mauricioromerot.wordpress.com/wp-content/uploads/2019/03/screenshot-2025-03-15-at-5.51.42e280afpm.png?w=928)
 
-::: {.callout-tip title="Lecturas introductorias"}
+
+::: {.callout-caution collapse="true" style="color: purple" appearance="minimal"}
+## Lecturas de introducción
+
 -   The hunt for the lesser-known funding source. Nature 2019.[Link](https://www.nature.com/articles/d41586-019-01734-1).
-
 -   How to design a winning fellowship proposal. Nature 2018.[Link](https://www.nature.com/articles/d41586-018-07297-x?).
-
 -   We’re problem solvers’: research administrators offer guidance to working scientists. Nature.[Link](https://www.nature.com/articles/d41586-021-01829-8). 
-
 -   Síntesis rápida. Lista de verificación de: Proposal Planning and Writing. Jeremy T. Miner, Lynn E. Miner. Fifth Edition. 2013.[Link](https://www.abc-clio.com/ABC-CLIOCorporate/product.aspx?pc=A4100C).[Link](https://books.google.com.co/books?id=YVD8AymBwYwC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false) 
-
 -   Project Management for Researchers (revisar temáticas 🤔). U.-Arizona.[Link](https://arizona.infoready4.com/#competitionDetail/1893401). [Video](https://youtu.be/ihFvG5m1g14).
-
 -   La vida está al otro lado del miedo \| Miguel Angel Tobías. La real sensación del fracaso sucede cuando no se intenta. <https://youtu.be/nmrRJammHqs>
 :::
+
+# 
 
 # Sistema Nacional de Ciencia y Tecnología
 
@@ -110,7 +110,11 @@ editor: visual
 -   **Talleres**. Incluye grupos focales, Doathon, talleres de escritura.
     -   \*\*\*Métodos y herramientas para coproducir conocimiento. SCNAT. [Link](https://naturalsciences.ch/co-producing-knowledge-explained)
 -   Ejemplo de Concept paper. W.M Keck Foundation. [*Link*](http://www.wmkeck.org/grant-programs/research/application-process-14030/214-grantprograms/shared/1482-concept-papers). [*Link*](https://arizona.infoready4.com/#competitionDetail/1838742).
--   **Single-paged concepts for the Research Program should be in 12 point font with 1 inch margins and should include:**
+
+
+::: {.callout-caution collapse="true" style="color: purple" appearance="minimal"}
+## Single-paged concepts for the Research Program should be in 12 point font with 1 inch margins and should include:
+
     -   Organization Name.
     -   Project title.
     -   Full name of Principal Investigator.
@@ -119,15 +123,21 @@ editor: visual
     -   A brief justification of the need for Keck Foundation support.
     -   An estimated budget broken down, if possible, by major areas, e.g., personnel, equipment, consumable supplies, etc. (budgets can be rough approximations at this stage)
     -   If possible, within the 1-page limit, the authors may add other details (e.g., background to put the research into perspective, description of the institution’s prominence in the field). Avoid illustrations in these single-pagers – the researchers will need all the room for text. If a reference is necessary, abbreviate it as (Science, 323, 45, ‘11). DO NOT USE (Jones et al., 2011).
--   **For Research Program concept papers, the program priorities are**
-    -   *Focus on important and emerging areas of research*
+:::
+
+::: {.callout-caution collapse="true" style="color: purple" appearance="minimal"}
+## For Research Program concept papers, the program priorities are:
+
+    -  *Focus on important and emerging areas of research*
     -   *Have the potential to develop breakthrough technologies, instrumentation or methodologies*
     -   *Are innovative, distinctive and interdisciplinary*
     -   *Demonstrate a high level of risk due to unconventional approaches, or by challenging the prevailing paradigm*
     -   *Have the potential for transformative impact, such as the founding of a new field of research, the enabling of observations not previously possible, or the altered perception of a previously intractable problem*
     -   *Does not focus on clinical or translational research, treatment trials or research for the sole purpose of drug development*
     -   *Fall outside the mission of public funding agencies*
-    -   *Demonstrate that private philanthropy generally, and the W. M. Keck Foundation in particular, is essential to the project’s success*
+    -   *Demonstrate that private philanthropy generally, and the W. M. Keck Foundation in particular, is essential to the project’s success* 
+:::
+
 
 {{< video "https://youtu.be/oY5RSE7m-5k" >}} Distilling Your Message
 
