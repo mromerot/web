@@ -436,7 +436,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Contenidos</h2>
    
   <ul class="collapse">
-  <li><a href="#insertar-videos" id="toc-insertar-videos" class="nav-link active" data-scroll-target="#insertar-videos">Insertar videos</a></li>
+  <li><a href="#recursos-de-ayuda" id="toc-recursos-de-ayuda" class="nav-link active" data-scroll-target="#recursos-de-ayuda">Recursos de ayuda</a></li>
+  <li><a href="#publicar" id="toc-publicar" class="nav-link" data-scroll-target="#publicar">Publicar</a></li>
+  <li><a href="#tabsets" id="toc-tabsets" class="nav-link" data-scroll-target="#tabsets"><strong>Tabsets</strong></a></li>
+  <li><a href="#insertar-videos" id="toc-insertar-videos" class="nav-link" data-scroll-target="#insertar-videos">Insertar videos</a></li>
+  <li><a href="#insertar-imagenes" id="toc-insertar-imagenes" class="nav-link" data-scroll-target="#insertar-imagenes">Insertar imagenes</a></li>
   <li><a href="#callout-blocks" id="toc-callout-blocks" class="nav-link" data-scroll-target="#callout-blocks">Callout blocks</a></li>
   <li><a href="#texto-desplegable" id="toc-texto-desplegable" class="nav-link" data-scroll-target="#texto-desplegable">Texto desplegable</a></li>
   </ul>
@@ -464,23 +468,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="insertar-videos" class="level1">
-<h1>Insertar videos</h1>
-<div class="sourceCode" id="cb1" style="color: gray"><pre class="sourceCode Markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Insertar video en dos columnas</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>::: {layout-ncol=2} </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Texto de la caja (opcional)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb2" style="color: gray"><pre class="sourceCode Markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="an">Insertar video de un live:</span><span class="co"> cambiar "live" por "embed"</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>https://www.youtube.com/embed/srgbUPu9Mo4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="recursos-de-ayuda" class="level2">
+<h2 class="anchored" data-anchor-id="recursos-de-ayuda">Recursos de ayuda</h2>
+<ul>
+<li>Reproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. <a href="https://mine-cetinkaya-rundel.github.io/quarto-books-conf24/#/title-slide"><em>Link</em></a></li>
+</ul>
 </section>
-<section id="callout-blocks" class="level1">
-<h1><a href="https://quarto.org/docs/authoring/callouts.html">Callout blocks</a></h1>
+<section id="publicar" class="level2">
+<h2 class="anchored" data-anchor-id="publicar">Publicar</h2>
+<ul>
+<li><p>En Terminal: <code>quarto render</code> para renderizar las páginas</p></li>
+<li><p>Para cargar la página: <code>commit and push</code></p></li>
+<li><p>To validate the YAML, run: <code>quarto check</code></p></li>
+</ul>
+</section>
+<section id="tabsets" class="level2">
+<h2 class="anchored" data-anchor-id="tabsets"><strong>Tabsets</strong></h2>
+<div class="sourceCode" id="cb1" style="color: gray"><pre class="sourceCode Markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tab A</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Content for <span class="in">`Tab A`</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tab B</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Content for <span class="in">`Tab B`</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="insertar-videos" class="level2">
+<h2 class="anchored" data-anchor-id="insertar-videos">Insertar videos</h2>
+<div class="sourceCode" id="cb2" style="color: gray"><pre class="sourceCode Markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Insertar video en dos columnas</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>::: {layout-ncol=2} </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>Texto de la caja (opcional)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3" style="color: gray"><pre class="sourceCode Markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="an">Insertar video de un live:</span><span class="co"> cambiar "live" por "embed"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>https://www.youtube.com/embed/srgbUPu9Mo4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="insertar-imagenes" class="level2">
+<h2 class="anchored" data-anchor-id="insertar-imagenes">Insertar imagenes</h2>
+<div class="sourceCode" id="cb4" style="color: gray"><pre class="sourceCode Markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Insertar imagen</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="al">![](https://mdg.imgix.net/assets/images/markdown-flowchart.png?auto=format&amp;fit=clip&amp;q=40&amp;w=1080)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="callout-blocks" class="level2">
+<h2 class="anchored" data-anchor-id="callout-blocks"><a href="https://quarto.org/docs/authoring/callouts.html">Callout blocks</a></h2>
 <p>There are five different types of callouts available: <code>note</code> , <code>warning,</code> <code>important</code> , <code>tip</code> , <code>caution</code> . The color and icon will be different depending upon the type that you select. Here are what the various types look like in HTML output.</p>
-<div class="sourceCode" id="cb3" style="color: gray;"><pre class="sourceCode Markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>{.callout-note collapse="true"} Note that there are five types of callouts, including:</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="in">`note`</span> , <span class="in">`warning,`</span> <span class="in">`important`</span> , <span class="in">`tip`</span> , <span class="in">`caution`</span>. </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5" style="color: gray;"><pre class="sourceCode Markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>{.callout-note collapse="true"} Note that there are five types of callouts, including:</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="in">`note`</span> , <span class="in">`warning,`</span> <span class="in">`important`</span> , <span class="in">`tip`</span> , <span class="in">`caution`</span>. </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -566,17 +599,17 @@ Expand To Learn About Collapse [with minimal atribute]
 </div>
 </div>
 </section>
-<section id="texto-desplegable" class="level1">
-<h1>Texto desplegable</h1>
+<section id="texto-desplegable" class="level2">
+<h2 class="anchored" data-anchor-id="texto-desplegable">Texto desplegable</h2>
 <details>
 <summary>
 Texto desplegable
 </summary>
-<div class="sourceCode" id="cb4" style="color: gray"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">details</span><span class="dt">&gt;</span> <span class="dt">&lt;</span><span class="kw">summary</span><span class="dt">&gt;</span>Título del texto desplegable<span class="dt">&lt;/</span><span class="kw">summary</span><span class="dt">&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Contenido</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Contenido</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Contenido</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">details</span><span class="dt">&gt;</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6" style="color: gray"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">details</span><span class="dt">&gt;</span> <span class="dt">&lt;</span><span class="kw">summary</span><span class="dt">&gt;</span>Título del texto desplegable<span class="dt">&lt;/</span><span class="kw">summary</span><span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Contenido</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Contenido</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Contenido</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">details</span><span class="dt">&gt;</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 

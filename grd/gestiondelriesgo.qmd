@@ -18,8 +18,21 @@ editor: visual
 
 ## Visores
 
--   **Visor de desastres y emergencias**. UNGRD. 2023. [*Link*](https://lookerstudio.google.com/reporting/a850fdeb-1229-4623-8a35-13895d4ec484).
+-   **Visor de desastres y emergencias**. UNGRD. [*Link*](https://lookerstudio.google.com/reporting/a850fdeb-1229-4623-8a35-13895d4ec484).
 -   **Visor de información territorial para Municipios**. UNGRD. [*Link*](https://lookerstudio.google.com/u/0/reporting/80f58632-3355-46d1-8177-a765552fef91/page/mqD7D)
+-   OCHA. Visor Emergencias. [*Link*](https://response.reliefweb.int/es/colombia/dashboard-datos-oficiales)
+
+## **Afectaciones y respuesta por desastres UNGRD**
+
+En este dashboard se muestra la información correspondiente a emergencias por tipo de eventos de desastres en Colombia que desde la Unidad Nacional de Gestión de Riesgo y Desastres (UNGRD) se hace seguimiento con algunos eventos destacados, al igual que la respuesta que se brinda tanto de UNGRD como de los socios del Equipo Humanitario País (EHP). 
+
+<iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiNjlmYjBlNDUtMzJlOS00OGY3LWI0M2ItOGU3NzU1NzA4OGI4IiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9" frameborder="0" allowFullScreen="true">
+
+</iframe>
+
+<iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiYzA5ZDQzNDUtOTBiOC00YjRiLTg5ZDgtYzdiNjkzMWUzZjZiIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9" frameborder="0" allowFullScreen="true">
+
+</iframe>
 
 {{< video "https://www.youtube.com/watch?v=BvY6tCJEZqw" >}} Foro institucional la gestión del riesgo y la adaptación al cambio climático
 
@@ -100,28 +113,20 @@ Marco de Sendai
 ## **Instituciones Internacionales**
 
 -   Anticipation hub. [*Link*](https://www.anticipation-hub.org/es/)
-
 -   Centro America. [*Link*](https://understandrisk.org/event/ur-centroamerica/).
-
 -   Cruz Roja y Media Luna Roja
-
     -   Disaster Law. [*Link*](https://disasterlaw.ifrc.org/)
-
 -   Global Facility for Disaster Reduction and Recovery (GFDRR). [*Link*](https://www.gfdrr.org/en).
-
     -   Colombia. [*Link*](https://www.gfdrr.org/en/region/colombia)
     -   CODE FOR RESILIENCE. [*Link*](https://understandrisk.org/initiative/code-for-resilience/)
-
 -   NASA Earth Sciences Disasters Program. [*Link*](https://disasters.nasa.gov/). [*Link.*](https://www.nasa.gov/centers/ames/earthscience/nasa-earth-science-disasters-program)[*Español*](https://disasters.nasa.gov/resources/espanol).
-
     -   Webinars. [*Link*](https://arset.gsfc.nasa.gov/disasters/webinars/19-DRA).
     -   Lance. [*Link*](https://earthdata.nasa.gov/eosdis/science-system-description/eosdis-components/lance).
     -   Training. [*Link*](https://disasters.nasa.gov/training).
-
 -   OECD Colombia. [*Link*](https://www.oecd.org/colombia/).
-
 -   OFDA. [*Link*](https://www.gfdrr.org/en/onlineutilities).
-
+-   Relief web. [*Link*](https://reliefweb.int/country/col)
+    -   Power bi. [*Link*](https://app.powerbi.com/view?r=eyJrIjoiYzA5ZDQzNDUtOTBiOC00YjRiLTg5ZDgtYzdiNjkzMWUzZjZiIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9)
 -   Understanding Risk. [*Link*](https://understandrisk.org/).
 
 ## **Agencias de cada país en GRD**

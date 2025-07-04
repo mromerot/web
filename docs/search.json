@@ -263,7 +263,18 @@
     "href": "grd/gestiondelriesgo.html#visores",
     "title": "Gestión del riesgo de desastres",
     "section": "Visores",
-    "text": "Visores\n\nVisor de desastres y emergencias. UNGRD. 2023. Link.\nVisor de información territorial para Municipios. UNGRD. Link\n\n Foro institucional la gestión del riesgo y la adaptación al cambio climático",
+    "text": "Visores\n\nVisor de desastres y emergencias. UNGRD. Link.\nVisor de información territorial para Municipios. UNGRD. Link\nOCHA. Visor Emergencias. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Gestión del riesgo de desastres"
+    ]
+  },
+  {
+    "objectID": "grd/gestiondelriesgo.html#afectaciones-y-respuesta-por-desastres-ungrd",
+    "href": "grd/gestiondelriesgo.html#afectaciones-y-respuesta-por-desastres-ungrd",
+    "title": "Gestión del riesgo de desastres",
+    "section": "Afectaciones y respuesta por desastres UNGRD",
+    "text": "Afectaciones y respuesta por desastres UNGRD\nEn este dashboard se muestra la información correspondiente a emergencias por tipo de eventos de desastres en Colombia que desde la Unidad Nacional de Gestión de Riesgo y Desastres (UNGRD) se hace seguimiento con algunos eventos destacados, al igual que la respuesta que se brinda tanto de UNGRD como de los socios del Equipo Humanitario País (EHP). \n\n\n\n\n Foro institucional la gestión del riesgo y la adaptación al cambio climático",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Gestión del riesgo de desastres"
@@ -307,7 +318,7 @@
     "href": "grd/gestiondelriesgo.html#instituciones-internacionales",
     "title": "Gestión del riesgo de desastres",
     "section": "Instituciones Internacionales",
-    "text": "Instituciones Internacionales\n\nAnticipation hub. Link\nCentro America. Link.\nCruz Roja y Media Luna Roja\n\nDisaster Law. Link\n\nGlobal Facility for Disaster Reduction and Recovery (GFDRR). Link.\n\nColombia. Link\nCODE FOR RESILIENCE. Link\n\nNASA Earth Sciences Disasters Program. Link. Link.Español.\n\nWebinars. Link.\nLance. Link.\nTraining. Link.\n\nOECD Colombia. Link.\nOFDA. Link.\nUnderstanding Risk. Link.",
+    "text": "Instituciones Internacionales\n\nAnticipation hub. Link\nCentro America. Link.\nCruz Roja y Media Luna Roja\n\nDisaster Law. Link\n\nGlobal Facility for Disaster Reduction and Recovery (GFDRR). Link.\n\nColombia. Link\nCODE FOR RESILIENCE. Link\n\nNASA Earth Sciences Disasters Program. Link. Link.Español.\n\nWebinars. Link.\nLance. Link.\nTraining. Link.\n\nOECD Colombia. Link.\nOFDA. Link.\nRelief web. Link\n\nPower bi. Link\n\nUnderstanding Risk. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Gestión del riesgo de desastres"
@@ -362,7 +373,7 @@
     "href": "grd/volcanes.html#instituciones-internacionales",
     "title": "Riesgo volcánico",
     "section": "Instituciones internacionales",
-    "text": "Instituciones internacionales\n\nUSGS. Volcano Hazards Program. Link\nAsociación Latinoamericana de Volcanología (ALVO). Link\nInternational Association of Volcanology and Chemistry of the Earth’s Interior. Link\nVisor de emisiones de gases. NOAA. Link.",
+    "text": "Instituciones internacionales\n\nOSHA. Volcanes de Colombia. Link ****\nUSGS. Volcano Hazards Program. Link\nAsociación Latinoamericana de Volcanología (ALVO). Link\nInternational Association of Volcanology and Chemistry of the Earth’s Interior. Link\nVisor de emisiones de gases. NOAA. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Volcanes"
@@ -831,7 +842,7 @@
     "href": "grd/elnino.html",
     "title": "El Niño/La Niña Oscilación del Sur",
     "section": "",
-    "text": "Extraordinary animation reveals ocean’s role in El Niños\n\nMecanismos y procesos\n\nNOAA El Nino Southern Oscillation. Link.\nEl Niño & La Niña (El Niño-Southern Oscillation) - Climate.gov. Link.\nENSO @ the Australian Bureau of Meteorology. Link.\nMultivariate ENSO Index Version 2 (MEI.v2). Link.\nEl Niño and La Niña Years and Intensities. Link.\nKelvin wave Link.\nRossby wave. Link.\n\n El Nino - What is it?\n\n\nPronóstico\n\nThe El Niño/Southern Oscillation 2015-17: Analysis and Predictions. Steve Paton Physical Monitoring Program. STRI. Link.\nEl Niño and La Niña Years and Intensities. Link.\nForecasting El Niño-Southern Oscillation (ENSO). Link.\n\n\n\nImpactos\n\nInvestigating Coral Bleaching Using Data in the Classroom. Link\nBleaching observations (1963-2010). WRI. Link.\nCoral Reefs Special issue: The 2014-2017 Global Coral Bleaching Event: Drivers, Impacts, and Lessons Learned Volume 38, Issue 4, August 2019. Link.\n\n\n\nOtros\n\nPacific Decadal Oscillation (PDO). Link.\nClimate Indices. Link.\n\n\n\nLecturas\n\nDo you know that El Niño has a little brother?. Link.\n¿La frecuencia de ENOS se incrementará con el cambio climático global?\n\nEl Niño events will intensify under global warming. Nature 2018. Link.\nIncreased variability of eastern Pacific El Niño under greenhouse warming. Nature 2018. Link.",
+    "text": "Extraordinary animation reveals ocean’s role in El Niños\n\nInstituciones nacionales\n\n\nInstituciones internacionales\n\nOSHA. El fenónemo de El Niño. Link\n\n\n\n\n\n\n\nMecanismos y procesos\n\nNOAA El Nino Southern Oscillation. Link.\nEl Niño & La Niña (El Niño-Southern Oscillation) - Climate.gov. Link.\nENSO @ the Australian Bureau of Meteorology. Link.\nMultivariate ENSO Index Version 2 (MEI.v2). Link.\nEl Niño and La Niña Years and Intensities. Link.\nKelvin wave Link.\nRossby wave. Link.\n\n El Nino - What is it?\n\n\nPronóstico\n\nThe El Niño/Southern Oscillation 2015-17: Analysis and Predictions. Steve Paton Physical Monitoring Program. STRI. Link.\nEl Niño and La Niña Years and Intensities. Link.\nForecasting El Niño-Southern Oscillation (ENSO). Link.\n\n\n\nImpactos\n\nInvestigating Coral Bleaching Using Data in the Classroom. Link\nBleaching observations (1963-2010). WRI. Link.\nCoral Reefs Special issue: The 2014-2017 Global Coral Bleaching Event: Drivers, Impacts, and Lessons Learned Volume 38, Issue 4, August 2019. Link.\n\n\n\nOtros\n\nPacific Decadal Oscillation (PDO). Link.\nClimate Indices. Link.\n\n\n\nLecturas\n\nDo you know that El Niño has a little brother?. Link.\n¿La frecuencia de ENOS se incrementará con el cambio climático global?\n\nEl Niño events will intensify under global warming. Nature 2018. Link.\nIncreased variability of eastern Pacific El Niño under greenhouse warming. Nature 2018. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "El Niño / La Niña"
@@ -1172,7 +1183,84 @@
     "href": "matemdatascience/quarto-atajos.html",
     "title": "Atajos para Quarto",
     "section": "",
-    "text": "Insertar videos\nInsertar video en dos columnas\n\n::: {layout-ncol=2} \n\n\nTexto de la caja (opcional)\n:::\nInsertar video de un live: cambiar \"live\" por \"embed\"\nhttps://www.youtube.com/embed/srgbUPu9Mo4\n\n\nCallout blocks\nThere are five different types of callouts available: note , warning, important , tip , caution . The color and icon will be different depending upon the type that you select. Here are what the various types look like in HTML output.\n{.callout-note collapse=\"true\"} Note that there are five types of callouts, including:\n`note` , `warning,` `important` , `tip` , `caution`. \n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nCallouts provide a simple way to attract attention, for example, to this warning.\n\n\n\n\n\n\n\n\nThis is Important\n\n\n\nDanger, callouts will really improve your writing.\n\n\n\n\n\n\n\n\nTip With Title\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse [with minimal atribute]\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user and minimal atributes with {.callout-caution collapse=\"true\" style=\"color: purple\" appearance=\"minimal\"}\n\n\n\n\n\nTexto desplegable\n\n\nTexto desplegable\n\n&lt;details&gt; &lt;summary&gt;Título del texto desplegable&lt;/summary&gt;\n-   Contenido\n-   Contenido\n-   Contenido\n&lt;/details&gt;",
+    "text": "Reproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link",
+    "crumbs": [
+      "Matemáticas y ciencia de datos",
+      "Quarto atajos"
+    ]
+  },
+  {
+    "objectID": "matemdatascience/quarto-atajos.html#recursos-de-ayuda",
+    "href": "matemdatascience/quarto-atajos.html#recursos-de-ayuda",
+    "title": "Atajos para Quarto",
+    "section": "",
+    "text": "Reproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link",
+    "crumbs": [
+      "Matemáticas y ciencia de datos",
+      "Quarto atajos"
+    ]
+  },
+  {
+    "objectID": "matemdatascience/quarto-atajos.html#publicar",
+    "href": "matemdatascience/quarto-atajos.html#publicar",
+    "title": "Atajos para Quarto",
+    "section": "Publicar",
+    "text": "Publicar\n\nEn Terminal: quarto render para renderizar las páginas\nPara cargar la página: commit and push\nTo validate the YAML, run: quarto check",
+    "crumbs": [
+      "Matemáticas y ciencia de datos",
+      "Quarto atajos"
+    ]
+  },
+  {
+    "objectID": "matemdatascience/quarto-atajos.html#tabsets",
+    "href": "matemdatascience/quarto-atajos.html#tabsets",
+    "title": "Atajos para Quarto",
+    "section": "Tabsets",
+    "text": "Tabsets\n::: {.panel-tabset}\n### Tab A\nContent for `Tab A`\n### Tab B\nContent for `Tab B`\n:::",
+    "crumbs": [
+      "Matemáticas y ciencia de datos",
+      "Quarto atajos"
+    ]
+  },
+  {
+    "objectID": "matemdatascience/quarto-atajos.html#insertar-videos",
+    "href": "matemdatascience/quarto-atajos.html#insertar-videos",
+    "title": "Atajos para Quarto",
+    "section": "Insertar videos",
+    "text": "Insertar videos\nInsertar video en dos columnas\n\n::: {layout-ncol=2} \n\n\nTexto de la caja (opcional)\n:::\nInsertar video de un live: cambiar \"live\" por \"embed\"\nhttps://www.youtube.com/embed/srgbUPu9Mo4",
+    "crumbs": [
+      "Matemáticas y ciencia de datos",
+      "Quarto atajos"
+    ]
+  },
+  {
+    "objectID": "matemdatascience/quarto-atajos.html#insertar-imagenes",
+    "href": "matemdatascience/quarto-atajos.html#insertar-imagenes",
+    "title": "Atajos para Quarto",
+    "section": "Insertar imagenes",
+    "text": "Insertar imagenes\nInsertar imagen\n\n![](https://mdg.imgix.net/assets/images/markdown-flowchart.png?auto=format&fit=clip&q=40&w=1080)",
+    "crumbs": [
+      "Matemáticas y ciencia de datos",
+      "Quarto atajos"
+    ]
+  },
+  {
+    "objectID": "matemdatascience/quarto-atajos.html#callout-blocks",
+    "href": "matemdatascience/quarto-atajos.html#callout-blocks",
+    "title": "Atajos para Quarto",
+    "section": "Callout blocks",
+    "text": "Callout blocks\nThere are five different types of callouts available: note , warning, important , tip , caution . The color and icon will be different depending upon the type that you select. Here are what the various types look like in HTML output.\n{.callout-note collapse=\"true\"} Note that there are five types of callouts, including:\n`note` , `warning,` `important` , `tip` , `caution`. \n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nCallouts provide a simple way to attract attention, for example, to this warning.\n\n\n\n\n\n\n\n\nThis is Important\n\n\n\nDanger, callouts will really improve your writing.\n\n\n\n\n\n\n\n\nTip With Title\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse [with minimal atribute]\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user and minimal atributes with {.callout-caution collapse=\"true\" style=\"color: purple\" appearance=\"minimal\"}",
+    "crumbs": [
+      "Matemáticas y ciencia de datos",
+      "Quarto atajos"
+    ]
+  },
+  {
+    "objectID": "matemdatascience/quarto-atajos.html#texto-desplegable",
+    "href": "matemdatascience/quarto-atajos.html#texto-desplegable",
+    "title": "Atajos para Quarto",
+    "section": "Texto desplegable",
+    "text": "Texto desplegable\n\n\nTexto desplegable\n\n&lt;details&gt; &lt;summary&gt;Título del texto desplegable&lt;/summary&gt;\n-   Contenido\n-   Contenido\n-   Contenido\n&lt;/details&gt;",
     "crumbs": [
       "Matemáticas y ciencia de datos",
       "Quarto atajos"
@@ -1370,7 +1458,7 @@
     "href": "cyt/cienciareproduc.html#quarto",
     "title": "Ciencia reproducible",
     "section": "Quarto",
-    "text": "Quarto\n\nWhat is Quarto. Link.\nQuarto Guide. Link.***\nSlides. Reproducible Publications w/ Python and Quarto. Tom Mock. Link\nResources nrennie. Link.\nPosit workshops. Link.\nIsabella Velasquez. Link\nQuartificate is to transform Google Docs into Quarto books. Link.\nAwsome Quarto. The most up to date curated list of Quarto® docs, talks, tools, examples & articles the internet has to offer. Link\n\n\n\n\n Reproducible Manuscripts with Quarto - posit::conf(2023)\n\n\nGet started with Quarto | Mine Çetinkaya-Rundel\n\n\n\n\nBioC 2022 - Hello, Quarto!\n\n\nWelcome to Quarto Workshop! | Led by Tom Mock, RStudio\n\n\n\n\n Introducing Positron, a new data science IDE - posit conf 2024\n\n\n Quarto blogs\n\n\n\n\n Quarto books\n\n\n Citaciones\n\n\n\n\nVideos sobre Quarto pub",
+    "text": "Quarto\n\nWhat is Quarto. Link.\nQuarto Guide. Link.***\nSlides. Reproducible Publications w/ Python and Quarto. Tom Mock. Link\nResources nrennie. Link.\nPosit workshops. Link.\nIsabella Velasquez. Link\nQuartificate is to transform Google Docs into Quarto books. Link.\nAwsome Quarto. The most up to date curated list of Quarto® docs, talks, tools, examples & articles the internet has to offer. Link\nReproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link\n\n\n\n\n Reproducible Manuscripts with Quarto - posit::conf(2023)\n\n\nGet started with Quarto | Mine Çetinkaya-Rundel\n\n\n\n\nBioC 2022 - Hello, Quarto!\n\n\nWelcome to Quarto Workshop! | Led by Tom Mock, RStudio\n\n\n\n\n Introducing Positron, a new data science IDE - posit conf 2024\n\n\n Quarto blogs\n\n\n\n\n Quarto books\n\n\n Citaciones\n\n\n\n\nVideos sobre Quarto pub",
     "crumbs": [
       "Ciencia y tecnología",
       "Ciencia reproducible"
@@ -1850,6 +1938,17 @@
     ]
   },
   {
+    "objectID": "grd/manejodedesastres.html#repositorio-de-evaluación-de-necesidades",
+    "href": "grd/manejodedesastres.html#repositorio-de-evaluación-de-necesidades",
+    "title": "Manejo de desastres",
+    "section": "Repositorio de Evaluación de Necesidades",
+    "text": "Repositorio de Evaluación de Necesidades\nEste espacio se encuentra vinculado a ReliefWeb Colombia desde Cifras Clave | Colombia: Repositorio de evaluaciones de necesidades (gifmm-colombia.site)",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Manejo de desastres"
+    ]
+  },
+  {
     "objectID": "grd/amazonas.html",
     "href": "grd/amazonas.html",
     "title": "Amazonas",
@@ -2043,7 +2142,7 @@
     "href": "vidalaboral/herramientas.html",
     "title": "Vida laboral",
     "section": "",
-    "text": "Herramientas de trabajo\n\nPDF\n\nI Love PDF. Link.\nTinywow. Link.\nOCR. Link\n\nWebinars\n\nAirmeet. Link.\n\nEncuestas\n\nTypeform. Link.\n\nDocumentos compartidos\n\nNotion. Link.\n\nEncontrar agenda compartida\n\nDoodle. Link.\nCalendly. Link.\nWorld time buddy. Link\n\nGenerador de imagenes en AI.\n\nCrayion. Link\n\nTableros de ideas\n\nMiro. Link\n\nLluvia de ideas.\n\nFigma. Link\n\nCarta de presentación\n\nCover letrero AI. Link\n\nImagenes\n\nRemover EXIF data. Link\n\nVoz/video a texto\n\nCon OpenAI y Python. Link, Collab\n\nUTC Time Zone Converter\n\nUTC Time Zone Converter. Link.\n\nOtros\n\nTexto a número. Link",
+    "text": "Herramientas de trabajo\n\nInfografias\n\nNapkin. Link\n\nPDF\n\nI Love PDF. Link.\nTinywow. Link.\nOCR. Link\n\nWebinars\n\nAirmeet. Link.\n\nEncuestas\n\nTypeform. Link.\n\nDocumentos compartidos\n\nNotion. Link.\n\nEncontrar agenda compartida\n\nDoodle. Link.\nCalendly. Link.\nWorld time buddy. Link\n\nGenerador de imagenes en AI.\n\nCrayion. Link\n\nTableros de ideas\n\nMiro. Link\n\nLluvia de ideas.\n\nFigma. Link\n\nCarta de presentación\n\nCover letrero AI. Link\n\nImagenes\n\nRemover EXIF data. Link\n\nVoz/video a texto\n\nCon OpenAI y Python. Link, Collab\n\nUTC Time Zone Converter\n\nUTC Time Zone Converter. Link.\n\nOtros\n\nTexto a número. Link",
     "crumbs": [
       "Vida laboral",
       "Herramientas"
