@@ -11,9 +11,12 @@ editor: visual
 ## Publicar
 
 -   En Terminal: `quarto render` para renderizar las páginas
-
 -   Para cargar la página: `commit and push`
+    -   git add .
 
+    -   git commit -m "descripción actualización"
+
+    -   git push
 -   To validate the YAML, run: `quarto check`
 
 ## **Tabsets**
