@@ -23,10 +23,18 @@ website:
             href: grd/manejodedesastres.qmd
           - text: "Ciencia y tecnología"
             href: grd/cienciaytecnologia.qmd
+          - text: "Cursos en GRD"
+            href: grd/cursos.qmd
           - text: "Educacion"
             href: grd/educacion.qmd
+          - text: "Repositorios FAIR"
+            href: grd/repositorios.qmd
           - text: "Sistemas de alerta temprana"
             href: grd/sat.qmd
+          - text: "Amenazas extraterrestres"
+            href: grd/amenazasextraterrestres.qmd
+          - text: "Erosión costera"
+            href: grd/erosioncostera.qmd
           - text: "Incendios forestales"
             href: grd/incendiosforestales.qmd
           - text: "Huracanes"
@@ -37,14 +45,8 @@ website:
             href: grd/inundaciones.qmd
           - text: "Riesgo sísmico"
             href: grd/riesgosismico.qmd
-          - text: "Amenazas extraterrestres"
-            href: grd/amenazasextraterrestres.qmd
           - text: "Volcanes"
             href: grd/volcanes.qmd
-          - text: "Cursos en GRD"
-            href: grd/cursos.qmd
-          - text: "Repositorios FAIR"
-            href: grd/repositorios.qmd
           - text: "Amazonas"
             href: grd/amazonas.qmd
       - section: "Gestión de proyectos"
