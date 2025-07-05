@@ -1223,11 +1223,22 @@
     ]
   },
   {
+    "objectID": "matemdatascience/quarto-atajos.html#insertar-elementos-en-dos-columnas",
+    "href": "matemdatascience/quarto-atajos.html#insertar-elementos-en-dos-columnas",
+    "title": "Atajos para Quarto",
+    "section": "Insertar elementos en dos columnas",
+    "text": "Insertar elementos en dos columnas\n::: {layout-ncol=2} \n\nInserte algo acá\n\nTexto de la caja (opcional)\n:::",
+    "crumbs": [
+      "Matemáticas y ciencia de datos",
+      "Quarto atajos"
+    ]
+  },
+  {
     "objectID": "matemdatascience/quarto-atajos.html#insertar-videos",
     "href": "matemdatascience/quarto-atajos.html#insertar-videos",
     "title": "Atajos para Quarto",
     "section": "Insertar videos",
-    "text": "Insertar videos\nInsertar video en dos columnas\n\n::: {layout-ncol=2} \n\n\nTexto de la caja (opcional)\n:::\nInsertar video de un live: cambiar \"live\" por \"embed\"\nhttps://www.youtube.com/embed/srgbUPu9Mo4",
+    "text": "Insertar videos\nLlamar con barra / e insertar `Shotcode`\n\nEntre corchetes colocar `video = \"link\"`\n\nInsertar video de un live: cambiar \"live\" por \"embed\"\nhttps://www.youtube.com/embed/srgbUPu9Mo4",
     "crumbs": [
       "Matemáticas y ciencia de datos",
       "Quarto atajos"

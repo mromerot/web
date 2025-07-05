@@ -75,8 +75,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-e49534d478db71fc05104b50d801bd17.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -439,6 +437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#recursos-de-ayuda" id="toc-recursos-de-ayuda" class="nav-link active" data-scroll-target="#recursos-de-ayuda">Recursos de ayuda</a></li>
   <li><a href="#publicar" id="toc-publicar" class="nav-link" data-scroll-target="#publicar">Publicar</a></li>
   <li><a href="#tabsets" id="toc-tabsets" class="nav-link" data-scroll-target="#tabsets"><strong>Tabsets</strong></a></li>
+  <li><a href="#insertar-elementos-en-dos-columnas" id="toc-insertar-elementos-en-dos-columnas" class="nav-link" data-scroll-target="#insertar-elementos-en-dos-columnas">Insertar elementos en dos columnas</a></li>
   <li><a href="#insertar-videos" id="toc-insertar-videos" class="nav-link" data-scroll-target="#insertar-videos">Insertar videos</a></li>
   <li><a href="#insertar-imagenes" id="toc-insertar-imagenes" class="nav-link" data-scroll-target="#insertar-imagenes">Insertar imagenes</a></li>
   <li><a href="#callout-blocks" id="toc-callout-blocks" class="nav-link" data-scroll-target="#callout-blocks">Callout blocks</a></li>
@@ -491,17 +490,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Content for <span class="in">`Tab B`</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
+<section id="insertar-elementos-en-dos-columnas" class="level2">
+<h2 class="anchored" data-anchor-id="insertar-elementos-en-dos-columnas">Insertar elementos en dos columnas</h2>
+<div class="sourceCode" id="cb2" style="color: gray"><pre class="sourceCode Markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>::: {layout-ncol=2} </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Inserte algo acá</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>Texto de la caja (opcional)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="insertar-videos" class="level2">
 <h2 class="anchored" data-anchor-id="insertar-videos">Insertar videos</h2>
-<div class="sourceCode" id="cb2" style="color: gray"><pre class="sourceCode Markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Insertar video en dos columnas</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>::: {layout-ncol=2} </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>Texto de la caja (opcional)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb3" style="color: gray"><pre class="sourceCode Markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="an">Insertar video de un live:</span><span class="co"> cambiar "live" por "embed"</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>https://www.youtube.com/embed/srgbUPu9Mo4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3" style="color: gray"><pre class="sourceCode Markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Llamar con barra / e insertar <span class="in">`Shotcode`</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Entre corchetes colocar <span class="in">`video = "link"`</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Insertar video de un live: cambiar "live" por "embed"</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>https://www.youtube.com/embed/srgbUPu9Mo4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="insertar-imagenes" class="level2">
 <h2 class="anchored" data-anchor-id="insertar-imagenes">Insertar imagenes</h2>
@@ -1029,8 +1034,6 @@ Texto desplegable
     </div>
   </div>
 </footer>
-<script>videojs(video_shortcode_videojs_video1);</script>
-<script>videojs(video_shortcode_videojs_video2);</script>
 
 
 

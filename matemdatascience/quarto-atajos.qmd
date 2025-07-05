@@ -27,19 +27,24 @@ Content for `Tab B`
 :::
 ```
 
-## Insertar videos
+## Insertar elementos en dos columnas
 
 ``` {.Markdown style="color: gray"}
-Insertar video en dos columnas
-
 ::: {layout-ncol=2} 
-{{< video " " >}}
-{{< video " " >}}
+
+Inserte algo acá
+
 Texto de la caja (opcional)
 :::
 ```
 
+## Insertar videos
+
 ``` {.Markdown style="color: gray"}
+Llamar con barra / e insertar `Shotcode`
+
+Entre corchetes colocar `video = "link"`
+
 Insertar video de un live: cambiar "live" por "embed"
 https://www.youtube.com/embed/srgbUPu9Mo4
 ```
