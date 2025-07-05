@@ -44,13 +44,43 @@ editor: visual
     -   Earthquake Hazard Maps. FEMA. [*Link*](https://www.fema.gov/es/emergency-managers/risk-management/earthquake/hazard-maps).
     -   Flood Map. FEMA. [*Link*](https://www.fema.gov/glossary/flood-map).
 
-    ## Indices mundiales
+    # Indices mundiales
 
 -   World Risk Index. [*Link*](https://data.humdata.org/dataset/worldriskindex?). [*Link*](https://www.ireus.uni-stuttgart.de/en/International/WorldRiskIndex/)
 
 -   Inform Risk. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index)
 
     ![World Risk Index](https://weltrisikobericht.de/wp-content/uploads/2024/09/WorldRiskIndex-2024.webp){width="500"}
+
+    Global Disaster Risk Trends.Select a country to view 10-year national trends.
+
+    ::: {#viz1751753004405 .tableauPlaceholder style="position: relative"}
+    <noscript> <a href='#'> <img src="https://public.tableau.com/static/images/GT/GTFZDZ9YR/1_rss.png" alt="Dashboard 1 " style="border: none"/> </a> </noscript> <object class='tableauViz' style='display:none;'> <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared/GTFZDZ9YR' /> <param name='toolbar' value='yes' /> <param name='static_image' value='https://public.tableau.com/static/images/GT/GTFZDZ9YR/1.png' /> <param name='animate_transition' value='yes' /> <param name='display_static_image' value='yes' /> <param name='display_spinner' value='yes' /> <param name='display_overlay' value='yes' /> <param name='display_count' value='yes' /> <param name='language' value='es-ES' /> </object>
+    :::
+
+    ```{=html}
+    <script type='text/javascript'>
+      var divElement = document.getElementById('viz1751753004405');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+      if ( divElement.offsetWidth > 800 ) {
+        vizElement.style.minWidth='1200px';
+        vizElement.style.maxWidth='1920px';
+        vizElement.style.width='100%';
+        vizElement.style.minHeight='1027px';
+        vizElement.style.maxHeight='2627px';
+        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+      } else if ( divElement.offsetWidth > 500 ) {
+        vizElement.style.width='100%';
+        vizElement.style.height='727px';
+      } else {
+        vizElement.style.width='100%';
+        vizElement.style.height='727px';
+      }
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+    ```
 
     ::: {layout-ncol="2"}
     {{< video "https://youtu.be/debgvIuycn4">}} World Risk Index
@@ -117,6 +147,42 @@ Risk communication
 
 # Vulnerablidad
 
+[PDC. Vulnerability Indicators](https://analytics.pdc.org/global-risk-index/). PDC’s vulnerability analysis measures the physical, environmental, social, and economic conditions and processes that increase susceptibility of communities and systems to the damaging effects of hazards. Multiple factors influencing disaster outcomes, including those linked to poverty and development, are considered in the analysis.
+
+::: {#viz1751752470497 .tableauPlaceholder style="position: relative"}
+<noscript><a href='#'> <img src="https://public.tableau.com/static/images/R2/R2D23ZFPD/1_rss.png" alt="Vulnerability " style="border: none"/> </a></noscript>
+
+<object class='tableauViz' style='display:none;'> <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;R2D23ZFPD' /> <param name='toolbar' value='yes' /> <param name='static_image' value='https://public.tableau.com/static/images/R2/R2D23ZFPD/1.png' /> <param name='animate_transition' value='yes' /> <param name='display_static_image' value='yes' /> <param name='display_spinner' value='yes' /> <param name='display_overlay' value='yes' /> <param name='display_count' value='yes' /> <param name='language' value='es-ES' /> </object>
+:::
+
+```{=html}
+<script type='text/javascript'>
+  var divElement = document.getElementById('viz1751752470497');
+  var vizElement = divElement.getElementsByTagName('object')[0];
+  if ( divElement.offsetWidth > 800 ) {
+    vizElement.style.minWidth='1200px';
+    vizElement.style.maxWidth='1920px';
+    vizElement.style.width='100%';
+    vizElement.style.minHeight='1427px';
+    vizElement.style.maxHeight='2627px';
+    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+  } else if ( divElement.offsetWidth > 500 ) {
+    vizElement.style.minWidth='1200px';
+    vizElement.style.maxWidth='1920px';
+    vizElement.style.width='100%';
+    vizElement.style.minHeight='1427px';
+    vizElement.style.maxHeight='2627px';
+    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+  } else {
+    vizElement.style.width='100%';
+    vizElement.style.height='1277px';
+  }
+  var scriptElement = document.createElement('script');
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+```
+
 ## Artículos científicos
 
 -   Social vulnerability in a multi-hazard context: a systematic review. Environmental Research Letters. 2022. [*Link*](https://iopscience.iop.org/article/10.1088/1748-9326/ac5140).
@@ -133,7 +199,7 @@ Risk communication
 {{< video "https://youtu.be/xDrZlxeNt3w" >}}
 :::
 
-## Riesgos complejos, en cascada y sistémicos
+# Riesgos complejos, en cascada y sistémicos
 
 -   Knowledge Action Network on Emergent Risks and Extreme Events. Risk Kan. [*Link*](https://www.risk-kan.org/). [Webinars](https://www.risk-kan.org/webinars/). [Working groups](https://www.risk-kan.org/workinggroups/).
 -   Lecturas:
@@ -149,7 +215,7 @@ Risk communication
 Compound, cascading and systemic risk
 :::
 
-## Eventos compuestos
+# Eventos compuestos
 
 -   Guidelines for Studying Diverse Types of Compound Weather and Climate Events. 2021. [*Link*](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021EF002340)
 -   High impact compound events in Australia. [*Link*](https://climateextremes.org.au/high-impact-compound-events-in-australia/)
@@ -161,10 +227,13 @@ Compound, cascading and systemic risk
 Eventos compuestos
 :::
 
-## Resiliencia
+# Resiliencia
 
 -   Revisión sistemática sobre la capacidad de adaptación y resiliencia comunitaria ante desastres socionaturales en América Latina y el Caribe. 2023. REDER. [*Link*](https://doi.org/10.55467/reder.v7i2.132)
 -   Enhancing social resilience to climate change impacts: progresses, constraints and opportunities. AGU 2025. [*Link*](https://meetingorganizer.copernicus.org/EGU25/session/53207).
+-   Measuring resilience and recovery. 2016. IJDRR. [*Link*](https://www.sciencedirect.com/science/article/abs/pii/S2212420916300309)
+-   A resilience glossary shaped by context: Reviewing resilience-related terms for critical infrastructures. 2023. IJDRR. [*Link*](https://www.sciencedirect.com/science/article/pii/S2212420923003734)
+-   OXFAM. Resilience knowledge hub. The Future is a Choice Absorb, adapt, transform Resilience Capacities. [*Link*](https://oxfamilibrary.openrepository.com/bitstream/handle/10546/620178/gd-resilience-capacities-absorb-adapt-transform-250117-en.pdf)
 
 ::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/watch?v=7U3aWK-Q0Qk" >}}
