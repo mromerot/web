@@ -16,12 +16,30 @@ Este espacio se encuentra vinculado a ReliefWeb Colombia desde [Cifras Clave \| 
 
 </iframe>
 
+# **Afectaciones y respuesta por desastres UNGRD**
+
+En este dashboard se muestra la información correspondiente a emergencias por tipo de eventos de desastres en Colombia que desde la Unidad Nacional de Gestión de Riesgo y Desastres (UNGRD) se hace seguimiento con algunos eventos destacados, al igual que la respuesta que se brinda tanto de UNGRD como de los socios del Equipo Humanitario País (EHP). 
+
+<iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiNjlmYjBlNDUtMzJlOS00OGY3LWI0M2ItOGU3NzU1NzA4OGI4IiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9" frameborder="0" allowFullScreen="true">
+
+</iframe>
+
+<iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiYzA5ZDQzNDUtOTBiOC00YjRiLTg5ZDgtYzdiNjkzMWUzZjZiIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9" frameborder="0" allowFullScreen="true">
+
+</iframe>
+
 # Capacidad de afrontamiento
 
 [**Coping Capacity Indicators.**](https://analytics.pdc.org/global-risk-index/) PDC’s coping capacity analysis measures the systems, means, and abilities of people and societies to absorb and respond to disruptions in normal function. It considers a range of factors that contribute to the ability of an impacted population to limit the likelihood or severity of the damaging effects of hazards and to manage disruptions that do arise.
 
 ::: {#viz1751752842673 .tableauPlaceholder style="position: relative"}
-<noscript> <a href='#'> <img src="https://public.tableau.com/static/images/GR/GRVA_2024_5CopingCapacitySubcomponentsv7/CopingCapacity/1_rss.png" alt="Coping Capacity " style="border: none"/> </a> </noscript> <object class='tableauViz' style='display:none;'> <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /> <param name='name' value='GRVA_2024_5CopingCapacitySubcomponentsv7/CopingCapacity' /> <param name='tabs' value='no' /> <param name='toolbar' value='yes' /> <param name='static_image' value='https://public.tableau.com/static/images/GR/GRVA_2024_5CopingCapacitySubcomponentsv7/CopingCapacity/1.png' /> <param name='animate_transition' value='yes' /> <param name='display_static_image' value='yes' /> <param name='display_spinner' value='yes' /> <param name='display_overlay' value='yes' /> <param name='display_count' value='yes' /> <param name='language' value='es-ES' /> </object>
+<noscript><a href='#'> <img src="https://public.tableau.com/static/images/GR/GRVA_2024_5CopingCapacitySubcomponentsv7/CopingCapacity/1_rss.png" alt="Coping Capacity " style="border: none"/> </a></noscript>
+
+<object class="tableauViz" style="display:none;">
+
+<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /> <param name='name' value='GRVA_2024_5CopingCapacitySubcomponentsv7/CopingCapacity' /> <param name='tabs' value='no' /> <param name='toolbar' value='yes' /> <param name='static_image' value='https://public.tableau.com/static/images/GR/GRVA_2024_5CopingCapacitySubcomponentsv7/CopingCapacity/1.png' /> <param name='animate_transition' value='yes' /> <param name='display_static_image' value='yes' /> <param name='display_spinner' value='yes' /> <param name='display_overlay' value='yes' /> <param name='display_count' value='yes' /> <param name='language' value='es-ES' />
+
+</object>
 :::
 
 ```{=html}

@@ -128,6 +128,26 @@
     ]
   },
   {
+    "objectID": "gcc/gestion-cambio-climatico.html",
+    "href": "gcc/gestion-cambio-climatico.html",
+    "title": "Gestión del cambio climático",
+    "section": "",
+    "text": "Adaptación al cambio climático y gestión del riesgo de desastres",
+    "crumbs": [
+      "Gestión del cambio climático"
+    ]
+  },
+  {
+    "objectID": "gcc/gestion-cambio-climatico.html#section",
+    "href": "gcc/gestion-cambio-climatico.html#section",
+    "title": "Gestión del cambio climático",
+    "section": "",
+    "text": "Adaptación al cambio climático y gestión del riesgo de desastres",
+    "crumbs": [
+      "Gestión del cambio climático"
+    ]
+  },
+  {
     "objectID": "vidalaboral/herramientas.html",
     "href": "vidalaboral/herramientas.html",
     "title": "Vida laboral",
@@ -332,7 +352,18 @@
     "href": "grd/conocimientodelriesgo.html#artículos-científicos",
     "title": "Conocimiento del riesgo de desastres",
     "section": "Artículos científicos",
-    "text": "Artículos científicos\n\nSocial vulnerability in a multi-hazard context: a systematic review. Environmental Research Letters. 2022. Link.\nCardona, O.D.: The need for rethinking the concepts of vulnerability and risk from a holistic perspective: a necessary review and criticism for effective risk management. In: Indicators of Risk Management and Vulnerability Reduction: Case Studies in Latin American Urban Areas, United Nations University, Institute for Environment and Human Security (2011). Link.\nExplaining differential vulnerability to climate change: A social science review. Wires Climate Change. 2018. Link.\nUnderstanding human vulnerability to climate change: A global perspective on index validation for adaptation planning. Science of The Total Environment. 2022. Link.\nThe use of empirical vulnerability functions to assess the response of buildings to tsunami impact: Comparative review and summary of best practice. Tarbotton, et al. Earth Science Reviews. Link",
+    "text": "Artículos científicos\n\nSocial vulnerability in Colombia. 2020. IJDRR. Link\nSocial vulnerability in a multi-hazard context: a systematic review. Environmental Research Letters. 2022. Link.\nCardona, O.D.: The need for rethinking the concepts of vulnerability and risk from a holistic perspective: a necessary review and criticism for effective risk management. In: Indicators of Risk Management and Vulnerability Reduction: Case Studies in Latin American Urban Areas, United Nations University, Institute for Environment and Human Security (2011). Link.\nExplaining differential vulnerability to climate change: A social science review. Wires Climate Change. 2018. Link.\nUnderstanding human vulnerability to climate change: A global perspective on index validation for adaptation planning. Science of The Total Environment. 2022. Link.\nThe use of empirical vulnerability functions to assess the response of buildings to tsunami impact: Comparative review and summary of best practice. Tarbotton, et al. Earth Science Reviews. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#indices-mundiales",
+    "href": "grd/conocimientodelriesgo.html#indices-mundiales",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Indices mundiales",
+    "text": "Indices mundiales\n\nInform Subnational Risk Index. Link\nWorld Risk Index. Link. Link\nPacific Disaster Center Multi Risk index 2024. Link\n\n\n\n\nWorld Risk Index. Link. Link\n\n\nPacific Disaster Center Multi Risk index 2024. Link\n\n \n\n            \n\n\n\nGlobal Disaster Risk Trends. Select a country to view 10-year national trends.\n\n\n  \n\n\n          \n\n\n\n\n\n\n World Risk Index\n\n\n INFORM Subnational Risk Index in Europe & Central Asia\n\n\n\n\n INFORM Subnational Risk Analysis Training - Module 1",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Conocimiento del riesgo"
@@ -344,6 +375,17 @@
     "title": "Conocimiento del riesgo de desastres",
     "section": "Herramientas para el análisis de riesgos",
     "text": "Herramientas para el análisis de riesgos\n\nCuadernos de trabajo (ver repositorios)\nSoftware\n\nRisk Data Library. Country Climate & Disaster Risk Screening Tools. Link.\nRisk Changes. An open-source Spatial Decision Support tool for the analysis of Dynamic Multi-Hazard risk. Link.\n\nArtículos científicos\n\nA review of risk analysis methods for natural disasters. Nat Hazards 100, 571–593. Sun, R., Gao, G., Gong, Z. et al. 2020. Link\nHybrid loss exceedance curve (HLEC) for disaster risk assessment. Velazquez et al. 2020. Link\nAssessing global exposure and vulnerability towards natural hazards: the Disaster Risk Index. Peduzzi, et al. 2009, Nat. Hazards Earth Syst. Link\n\n\n\n\n\n Mapping Risk: The National Risk Index for Natural Hazards\n\n\n Lesson 2：Six steps of disaster risk assessment\n\n\n\n\n Building resilience to compound and cascading disaster risks\n\n\n Webinar Modern Technology in Disaster Management: The Challenges\n\n\n\n\n Integrated Risk management in Civil Protection\n\n\n Modelo mundial de riesgo en la infraestructura\n\n\n\n\n Risk Analysis for Civil Protection\n\n\n Using Exceedance Probabilities for Disaster Management\n\n\n\n\nEvaluación del riesgo",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#eventos-compuestos",
+    "href": "grd/conocimientodelriesgo.html#eventos-compuestos",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Eventos compuestos",
+    "text": "Eventos compuestos\n\nGuidelines for Studying Diverse Types of Compound Weather and Climate Events. 2021. Link\nHigh impact compound events in Australia. Link\nSignificantly wetter or drier future conditions for one to two thirds of the world’s population. 2024. Nature Comm. Link\n\n\n\n\n Guidelines for studying diverse types of compound weather and climate events\n\n\nEventos compuestos",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Conocimiento del riesgo"
@@ -365,7 +407,7 @@
     "href": "grd/cursos.html",
     "title": "Cursos y entrenamiento",
     "section": "",
-    "text": "Centros de entrenamiento\n\nThe Australian Disaster Resilience Knowledge Hub\n\nEmergency planning collection. Link.\nDisasters. Link.\nGlossary. Link.\nEmergency Management Library. Link.\nRecovery Matters webinar series. Link.\nThe Australian Institute for Disaster Resilience. Link\n\nCONVERGE Training Modules. Link.\nDisaster Reduction Learning Center (DRLC). Link.\nRegional DDR e-learning platform. Link.\nThe National Disaster & Emergency Management University. FEMA. Link.\n\nIndependent Study Program. Link.\nCurriculum. Link.\n\nDisaster Risk Management Training Center. Link.\n\nTraining Corner. Link.\nDisaster Risk Management Training online series 2022. European Commision. Link.\n\n\n\n\nCursos en inglés\n\nBuilding resilience to compound and cascading disaster risks.Link. Link\nBushfires: Response, Relief and Resilience. Link.\nDisasters and Ecosystems: Resilience in a Changing Climate. Link.\nDisaster Preparedness. Link.\nDisaster Risk Management and Korean Policies. Link.\nFlood Risk Management. Link.\nNatural Disasters. Link. Link.\nOpen learning campus. World Bank. Link\nA Resilient Future: Science and Technology for Disaster Risk Reduction. Link.\nResilience – The art of coping with disasters. Link.\nSocial Vulnerability and Disasters. Converge. Link.\nTsunamis and Storm Surges: Introduction to Coastal Disasters. Link.\nUNESCO. Online courses to promote disaster risk reduction awareness. Link. Link.\nWhen Disaster Meets Conflict. Link.\n\n Building resilience to compound and cascading disaster risks\n\n\nEl riesgo en la sociedad moderna\n\n\n\n 1.1 The History of Risk\n\n\n 1.2 The Study of Risk: Security Studies\n\n\n\n\n 1.3 The Study of Risk: Safety Science\n\n\n 2.1 Risk Management\n\n\n\n\n 2.6 Risk Management: Strengths and Weaknesses\n\n\n 3.1 Risk Perception\n\n\n\n\nCoursera.\n\n\n\n\n\nCursos en español\n\nAnálisis del Riesgo de Desastres y Cambio Climático en Proyectos de Infraestructura. BID. Link.\nComunicando el cambio climático de manera efectiva. CDKN. Link.\nEvaluación de peligros y riesgos por fenómenos naturales. Link.\nGobierno de Santiago e Itrend lanzan plataforma docente para enseñar sobre desastres en la región Metropolitana. Link.\nGestión integral del riesgo de desastres. Link.\nGénero-Diversidad en la reducción del riesgo de desastres y cambio climático. Link.\n\n\n\nCursos de GRD con enfoque indigena\n\nIntegrating Gender and Indigenous Factors into Locally-Led Adaptation. Link.\nMitigation Planning for Tribal Communities. FEMA. Link.\n\n\n\nOtros temas\n\nFundamentals of Remote Sensing. Link.\nUSGS- Spatial Data. Link.\nNASA – Earth Science, Applied Science online trainings Link.\nTeaching climate. Climate Gov. Link.\nCoastal Aquaculture Planning Portal (CAPP). Link.\nUICN. Water. Link.\n\n\n\nSeminarios y series\n\nRiesgo por cambio climático en Colombia. Estrategia Climática de Largo Plazo Colombia E2050. Link.\nConverge Webinar series. Link.\nAPRU Multi-Hazards Webinar Series. Link.\nKnowledge Action Network on Emergent Risks and Extreme Events. Link\n\n\n\nOtros recursos\n\nThe Climate Reanalyzer. Climate.gov. Link. Link.",
+    "text": "Centros de entrenamiento\n\nThe Australian Disaster Resilience Knowledge Hub\n\nEmergency planning collection. Link.\nDisasters. Link.\nGlossary. Link.\nEmergency Management Library. Link.\nRecovery Matters webinar series. Link.\nThe Australian Institute for Disaster Resilience. Link\n\nCONVERGE Training Modules. Link.\nDisaster Reduction Learning Center (DRLC). Link.\nRegional DDR e-learning platform. Link.\nThe National Disaster & Emergency Management University. FEMA. Link.\n\nIndependent Study Program. Link.\nCurriculum. Link.\n\nPacific Disaster Center. Online Courses. Link.\nDisaster Risk Management Training Center. Link.\n\nTraining Corner. Link.\nDisaster Risk Management Training online series 2022. European Commision. Link.\n\n\n\n\nCursos en inglés\n\nBuilding resilience to compound and cascading disaster risks.Link. Link\nBushfires: Response, Relief and Resilience. Link.\nDisasters and Ecosystems: Resilience in a Changing Climate. Link.\nDisaster Preparedness. Link.\nDisaster Risk Management and Korean Policies. Link.\nFlood Risk Management. Link.\nNatural Disasters. Link. Link.\nOpen learning campus. World Bank. Link\nA Resilient Future: Science and Technology for Disaster Risk Reduction. Link.\nResilience – The art of coping with disasters. Link.\nSocial Vulnerability and Disasters. Converge. Link.\nTsunamis and Storm Surges: Introduction to Coastal Disasters. Link.\nUNESCO. Online courses to promote disaster risk reduction awareness. Link. Link.\nWhen Disaster Meets Conflict. Link.\n\n Building resilience to compound and cascading disaster risks\n\n\nEl riesgo en la sociedad moderna\n\n\n\n 1.1 The History of Risk\n\n\n 1.2 The Study of Risk: Security Studies\n\n\n\n\n 1.3 The Study of Risk: Safety Science\n\n\n 2.1 Risk Management\n\n\n\n\n 2.6 Risk Management: Strengths and Weaknesses\n\n\n 3.1 Risk Perception\n\n\n\n\nCoursera.\n\n\n\n\n\nCursos en español\n\nAnálisis del Riesgo de Desastres y Cambio Climático en Proyectos de Infraestructura. BID. Link.\nComunicando el cambio climático de manera efectiva. CDKN. Link.\nEvaluación de peligros y riesgos por fenómenos naturales. Link.\nGobierno de Santiago e Itrend lanzan plataforma docente para enseñar sobre desastres en la región Metropolitana. Link.\nGestión integral del riesgo de desastres. Link.\nGénero-Diversidad en la reducción del riesgo de desastres y cambio climático. Link.\n\n\n\nCursos de GRD con enfoque indigena\n\nIntegrating Gender and Indigenous Factors into Locally-Led Adaptation. Link.\nMitigation Planning for Tribal Communities. FEMA. Link.\n\n\n\nOtros temas\n\nFundamentals of Remote Sensing. Link.\nUSGS- Spatial Data. Link.\nNASA – Earth Science, Applied Science online trainings Link.\nTeaching climate. Climate Gov. Link.\nCoastal Aquaculture Planning Portal (CAPP). Link.\nUICN. Water. Link.\n\n\n\nSeminarios y series\n\nRiesgo por cambio climático en Colombia. Estrategia Climática de Largo Plazo Colombia E2050. Link.\nConverge Webinar series. Link.\nAPRU Multi-Hazards Webinar Series. Link.\nKnowledge Action Network on Emergent Risks and Extreme Events. Link\n\n\n\nOtros recursos\n\nThe Climate Reanalyzer. Climate.gov. Link. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Cursos en GRD"
@@ -1897,17 +1939,6 @@
     ]
   },
   {
-    "objectID": "grd/gestiondelriesgo.html#afectaciones-y-respuesta-por-desastres-ungrd",
-    "href": "grd/gestiondelriesgo.html#afectaciones-y-respuesta-por-desastres-ungrd",
-    "title": "Gestión del riesgo de desastres",
-    "section": "Afectaciones y respuesta por desastres UNGRD",
-    "text": "Afectaciones y respuesta por desastres UNGRD\nEn este dashboard se muestra la información correspondiente a emergencias por tipo de eventos de desastres en Colombia que desde la Unidad Nacional de Gestión de Riesgo y Desastres (UNGRD) se hace seguimiento con algunos eventos destacados, al igual que la respuesta que se brinda tanto de UNGRD como de los socios del Equipo Humanitario País (EHP). \n\n\n\n\n Foro institucional la gestión del riesgo y la adaptación al cambio climático",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Gestión del riesgo de desastres"
-    ]
-  },
-  {
     "objectID": "grd/gestiondelriesgo.html#agencias-nacionales-para-la-grd",
     "href": "grd/gestiondelriesgo.html#agencias-nacionales-para-la-grd",
     "title": "Gestión del riesgo de desastres",
@@ -2012,6 +2043,50 @@
     "title": "Gestión del riesgo de desastres",
     "section": "Mintransporte",
     "text": "Mintransporte",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Gestión del riesgo de desastres"
+    ]
+  },
+  {
+    "objectID": "grd/gestiondelriesgo.html#objetivos-de-desarrollo-sostenible-y-reducción-del-riesgo-de-desastres.",
+    "href": "grd/gestiondelriesgo.html#objetivos-de-desarrollo-sostenible-y-reducción-del-riesgo-de-desastres.",
+    "title": "Gestión del riesgo de desastres",
+    "section": "Objetivos de desarrollo sostenible y reducción del riesgo de desastres.",
+    "text": "Objetivos de desarrollo sostenible y reducción del riesgo de desastres.\n\nLos ODS. Link.\nComunicado de las Naciones Unidas y relación de la RRD con ODS. .",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Gestión del riesgo de desastres"
+    ]
+  },
+  {
+    "objectID": "grd/gestiondelriesgo.html#documentos-de-referencia-en-gdr-colombia",
+    "href": "grd/gestiondelriesgo.html#documentos-de-referencia-en-gdr-colombia",
+    "title": "Gestión del riesgo de desastres",
+    "section": "Documentos de referencia en GDR Colombia",
+    "text": "Documentos de referencia en GDR Colombia\n\nColombia: National Disaster Preparedness Baseline Assessment - A data-driven tool for assessing risk and building lasting resilience. 2025. Pacific Disaster Center. Link\nInvestigaciones en gestión del riesgo de desastres para Colombia: avances, perspectivas y casos de estudio. UNGRD. 2021. Link.\nDisaster Risk Assessment of Five Colombian Cities. InsuResilience Solutions Fund. 2019. Link\nAtlas de Riesgo de Colombia: revelando los desastres latentes. 2018. Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD). 2018. Link.\nAnálisis de la gestión del riesgo de desastres en Colombia. 2012. GFDRR, BM. Link\nLa gestión del riesgo de desastres. Narváez et al. 2009. Link.\nDesastres de origen natural en Colombia, 1979-2004. Michel Hermelín. 2005. Link.\nDocumentos de GRD de la OCDE\n\nEvaluación de la gobernanza del riesgo en Colombia, OECD. 2019. OECD Publishing, Paris, Link. Link. Link.\nDisaster preparedness and response in Colombia. 2019. Link.\nDisaster risk identification and assessment in Colombia. 2019. Link.\nDisaster recovery and reconstruction in Colombia. 2019. Link.\nDisaster risk reduction in Colombia. 2019. Link.\nColombia’s strategic framework for disaster risk governance. 2019. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Gestión del riesgo de desastres"
+    ]
+  },
+  {
+    "objectID": "grd/gestiondelriesgo.html#otros-documentos-de-política-pública-e-iniciativas-públicas-relacionadas-con-la-grd",
+    "href": "grd/gestiondelriesgo.html#otros-documentos-de-política-pública-e-iniciativas-públicas-relacionadas-con-la-grd",
+    "title": "Gestión del riesgo de desastres",
+    "section": "Otros documentos de política pública e iniciativas públicas relacionadas con la GRD",
+    "text": "Otros documentos de política pública e iniciativas públicas relacionadas con la GRD\n\nCONPES 3920. POLÍTICA NACIONAL DE EXPLOTACIÓN DE DATOS (BIG DATA). Link.\nEquipo de Innovación Pública. DNP. Link.\nEncuesta Nacional de Salud. Link.\nEn medios\n\nThe climate disaster is here. The Guardian. Link\nEl volcán al desnudo. El País. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Gestión del riesgo de desastres"
+    ]
+  },
+  {
+    "objectID": "grd/gestiondelriesgo.html#los-desastres-no-son-naturales",
+    "href": "grd/gestiondelriesgo.html#los-desastres-no-son-naturales",
+    "title": "Gestión del riesgo de desastres",
+    "section": "Los desastres no son naturales",
+    "text": "Los desastres no son naturales\n\nThere is no natural disasters. The elements of disaster. Link.\nLos desastres no son naturales. La Red. 1993. Link.\nBeyond «natural-disasters-are-not-natural»:the work of state and nature after the 2010 earthquake in Chile. JPE. 2016. Link.\n\nhttps://nonaturaldisasters.com/\n\n\n Los desastres no son naturales",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Gestión del riesgo de desastres"
