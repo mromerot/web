@@ -10,7 +10,10 @@ editor: visual
 
 ## Publicar
 
--   En Terminal: `quarto render` para renderizar las páginas
+-   En Terminal:
+    -   `quarto render` para renderizar las páginas
+    -   `quarto preview` vista preliminar
+    -   `quarto check` revisión de configuración
 -   Para cargar la página: `commit and push`
     -   git add .
 

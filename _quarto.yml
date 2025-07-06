@@ -50,9 +50,7 @@ website:
           - text: "Amazonas"
             href: grd/amazonas.qmd
       - section: "Gestión del cambio climático"
-        contents:
-          - text: "Gestión del cambio climático"
-            href: gcc/gestioncambioclimatico.qmd
+        href: gcc/gestion-cambio-climatico.qmd
       - section: "Gestión de proyectos"
         contents:
           - text: "Gestión de proyectos de CTeI"
