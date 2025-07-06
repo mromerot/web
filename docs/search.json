@@ -352,18 +352,40 @@
     "href": "grd/conocimientodelriesgo.html#artículos-científicos",
     "title": "Conocimiento del riesgo de desastres",
     "section": "Artículos científicos",
-    "text": "Artículos científicos\n\nSocial vulnerability in Colombia. 2020. IJDRR. Link\nSocial vulnerability in a multi-hazard context: a systematic review. Environmental Research Letters. 2022. Link.\nCardona, O.D.: The need for rethinking the concepts of vulnerability and risk from a holistic perspective: a necessary review and criticism for effective risk management. In: Indicators of Risk Management and Vulnerability Reduction: Case Studies in Latin American Urban Areas, United Nations University, Institute for Environment and Human Security (2011). Link.\nExplaining differential vulnerability to climate change: A social science review. Wires Climate Change. 2018. Link.\nUnderstanding human vulnerability to climate change: A global perspective on index validation for adaptation planning. Science of The Total Environment. 2022. Link.\nThe use of empirical vulnerability functions to assess the response of buildings to tsunami impact: Comparative review and summary of best practice. Tarbotton, et al. Earth Science Reviews. Link",
+    "text": "Artículos científicos\n\nTerritorial vulnerability assessment frame in Colombia: Disaster risk management. Villegast et al. 2017. IJDRM. Link.\nFraming vulnerability, risk and societal responses: the MOVE framework. Natural Hazards. 2013. Link.\nSocial vulnerability in Colombia. 2020. IJDRR. Link.\nSocial vulnerability in a multi-hazard context: a systematic review. Environmental Research Letters. 2022. Link.\nCardona, O.D.: The need for rethinking the concepts of vulnerability and risk from a holistic perspective: a necessary review and criticism for effective risk management. In: Indicators of Risk Management and Vulnerability Reduction: Case Studies in Latin American Urban Areas, United Nations University, Institute for Environment and Human Security (2011). Link.\nExplaining differential vulnerability to climate change: A social science review. Wires Climate Change. 2018. Link.\nUnderstanding human vulnerability to climate change: A global perspective on index validation for adaptation planning. Science of The Total Environment. 2022. Link.\nThe use of empirical vulnerability functions to assess the response of buildings to tsunami impact: Comparative review and summary of best practice. Tarbotton, et al. Earth Science Reviews. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Conocimiento del riesgo"
     ]
   },
   {
-    "objectID": "grd/conocimientodelriesgo.html#indices-mundiales",
-    "href": "grd/conocimientodelriesgo.html#indices-mundiales",
+    "objectID": "grd/conocimientodelriesgo.html#metodologias",
+    "href": "grd/conocimientodelriesgo.html#metodologias",
     "title": "Conocimiento del riesgo de desastres",
-    "section": "Indices mundiales",
-    "text": "Indices mundiales\n\nInform Subnational Risk Index. Link\nWorld Risk Index. Link. Link\nPacific Disaster Center Multi Risk index 2024. Link\n\n\n\n\nWorld Risk Index. Link. Link\n\n\nPacific Disaster Center Multi Risk index 2024. Link\n\n \n\n            \n\n\n\nGlobal Disaster Risk Trends. Select a country to view 10-year national trends.\n\n\n  \n\n\n          \n\n\n\n\n\n\n World Risk Index\n\n\n INFORM Subnational Risk Index in Europe & Central Asia\n\n\n\n\n INFORM Subnational Risk Analysis Training - Module 1",
+    "section": "Metodologias",
+    "text": "Metodologias\n\nUnderstanding disaster risk: foundational concepts and principles. Link.\n\n\n\nFEMA\n\nNational Risk Index Documentation. Link.\nNational Risk Index for Natural Hazards. Visor.\nNational Risk Index Hazard Info Table\nUpdating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. Link.\nEarthquake Hazard Maps. Link.\nFlood Map. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#índices-de-colombia",
+    "href": "grd/conocimientodelriesgo.html#índices-de-colombia",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Índices de Colombia",
+    "text": "Índices de Colombia\n\nAtlas de Riesgo de Colombia: revelando los desastres latentes. Unidad Nacional para la Gestión del Riesgo de Desastres. 2018. Link.\nInform Risk. 2015. Link.\nPDC. Colombia’s data-driven approach to creating safer, more resilient communities. Link.\n\nNDPBA Colombia Final Report. 2025. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#índices-mundiales",
+    "href": "grd/conocimientodelriesgo.html#índices-mundiales",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Índices mundiales",
+    "text": "Índices mundiales\n\nInform Subnational Risk Index. Link. Link.\n\nLatin America and Caribbean. Link.\n\nWorld Risk Index. Link. Link.\nPacific Disaster Center Multi Risk index 2024. Link.\nThe World Risk report. Link.\n\n\n\n\nColombia World Riesk Report\n\n\n\n\n\nWorld Risk Index. Link. Link\n\n\n\n\n\nINFORM Subnational Risk Index\n\n\n\n\n\nThe World Risk Report\n\n\nPacific Disaster Center Multi Risk index 2024. Link\n\n \n\n            \n\n\n\nGlobal Disaster Risk Trends. Select a country to view 10-year national trends.\n\n\n  \n\n\n          \n\n\n\n\n\n\n World Risk Index\n\n\n INFORM Subnational Risk Index in Europe & Central Asia\n\n\n\n\n INFORM Subnational Risk Analysis Training - Module 1",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Conocimiento del riesgo"
@@ -1041,7 +1063,7 @@
     "href": "matemdatascience/quarto-atajos.html#publicar",
     "title": "Atajos para Quarto",
     "section": "Publicar",
-    "text": "Publicar\n\nEn Terminal:\n\nquarto render para renderizar las páginas\nquarto preview vista preliminar\nquarto check revisión de configuración\n\nPara cargar la página: commit and push\n\ngit add .\ngit commit -m “descripción actualización”\ngit push\n\nTo validate the YAML, run: quarto check",
+    "text": "Publicar\n\nEn Terminal:\n\nquarto render para renderizar las páginas\nquarto preview vista preliminar\nquarto check revisión de configuración\nquarto --help todas las ayudas\n\nPara cargar la página: commit and push\n\ngit add .\ngit commit -m “descripción actualización”\ngit push\n\nTo validate the YAML, run: quarto check",
     "crumbs": [
       "Matemáticas y ciencia de datos",
       "Quarto atajos"
@@ -1778,18 +1800,7 @@
     "href": "grd/manejodedesastres.html",
     "title": "Manejo de desastres",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Manejo de desastres"
-    ]
-  },
-  {
-    "objectID": "grd/manejodedesastres.html#manejo-de-desastres",
-    "href": "grd/manejodedesastres.html#manejo-de-desastres",
-    "title": "Manejo de desastres",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "text": "Instituciones internacionales\n\nReliefweb. Link.\nOXFAM. Link.\n\n\n\nRepositorio de Evaluación de Necesidades\nEste espacio se encuentra vinculado a ReliefWeb Colombia desde Cifras Clave | Colombia: Repositorio de evaluaciones de necesidades (gifmm-colombia.site)\n\n\n\n\nAfectaciones y respuesta por desastres UNGRD\nEn este dashboard se muestra la información correspondiente a emergencias por tipo de eventos de desastres en Colombia que desde la Unidad Nacional de Gestión de Riesgo y Desastres (UNGRD) se hace seguimiento con algunos eventos destacados, al igual que la respuesta que se brinda tanto de UNGRD como de los socios del Equipo Humanitario País (EHP). \n\n\n\n\n\n\nCapacidad de afrontamiento\n\nFraming vulnerability, risk and societal responses: the MOVE framework. Natural Hazards. 2013. Link.\n\n” Vemos el afrontamiento como un aspecto de la resiliencia que significa la capacidad del “aquí y ahora” e incluye un conjunto de acciones disponibles para quienes están en riesgo. El afrontamiento de esta manera es parte de la fórmula que determina la vulnerabilidad en un momento dado. Sin embargo, el afrontamiento se ocupa principalmente de la conservación y protección del sistema actual y los entornos institucionales (véase Birkmann 2011 ). ”\n\n\nCoping Capacity Indicators. PDC’s coping capacity analysis measures the systems, means, and abilities of people and societies to absorb and respond to disruptions in normal function. It considers a range of factors that contribute to the ability of an impacted population to limit the likelihood or severity of the damaging effects of hazards and to manage disruptions that do arise.\n\n\n  \n\n\n            \n\n\n\n\n\nReconstrucción\n What is disaster recovery",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Manejo de desastres"

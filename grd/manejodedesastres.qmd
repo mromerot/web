@@ -4,9 +4,11 @@ format: html
 editor: visual
 ---
 
-## Manejo de desastres
+# **Instituciones internacionales**
 
-{{< lipsum 1 >}}
+-   Reliefweb. [*Link*](https://reliefweb.int/country/col)*.*
+
+-   OXFAM. [*Link*](https://www.oxfamamerica.org/).
 
 # **Repositorio de Evaluación de Necesidades**
 
@@ -29,6 +31,9 @@ En este dashboard se muestra la información correspondiente a emergencias por t
 </iframe>
 
 # Capacidad de afrontamiento
+
+-   Framing vulnerability, risk and societal responses: the MOVE framework. Natural Hazards. 2013. [*Link*](https://link.springer.com/article/10.1007/s11069-013-0558-5).
+    -   " Vemos el afrontamiento como un aspecto de la resiliencia que significa la capacidad del "aquí y ahora" e incluye un conjunto de acciones disponibles para quienes están en riesgo. El afrontamiento de esta manera es parte de la fórmula que determina la vulnerabilidad en un momento dado. Sin embargo, el afrontamiento se ocupa principalmente de la conservación y protección del sistema actual y los entornos institucionales (véase Birkmann 2011 ). "
 
 [**Coping Capacity Indicators.**](https://analytics.pdc.org/global-risk-index/) PDC’s coping capacity analysis measures the systems, means, and abilities of people and societies to absorb and respond to disruptions in normal function. It considers a range of factors that contribute to the ability of an impacted population to limit the likelihood or severity of the damaging effects of hazards and to manage disruptions that do arise.
 
