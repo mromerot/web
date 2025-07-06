@@ -31,66 +31,130 @@ editor: visual
 -   The 2025 update of the UNDRR-ISC Hazard Information Profiles (HIPs). 2025. [*Link*](https://www.preventionweb.net/publication/2025-update-undrr-isc-hazard-information-profiles-hips)
     -   Hazard Information Profiles (HIPs) online reference. [*Link*](https://www.preventionweb.net/drr-glossary/hips).
 
+# Vulnerablidad
+
+[PDC. Vulnerability Indicators](https://analytics.pdc.org/global-risk-index/). PDC’s vulnerability analysis measures the physical, environmental, social, and economic conditions and processes that increase susceptibility of communities and systems to the damaging effects of hazards. Multiple factors influencing disaster outcomes, including those linked to poverty and development, are considered in the analysis.
+
+::: {#viz1751752470497 .tableauPlaceholder style="position: relative"}
+<noscript><a href='#'> ![Vulnerability ](https://public.tableau.com/static/images/R2/R2D23ZFPD/1_rss.png){alt="Vulnerability " style="border: none"} </a></noscript>
+
+<object class="tableauViz" style="display:none;">
+
+<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;R2D23ZFPD' /> <param name='toolbar' value='yes' /> <param name='static_image' value='https://public.tableau.com/static/images/R2/R2D23ZFPD/1.png' /> <param name='animate_transition' value='yes' /> <param name='display_static_image' value='yes' /> <param name='display_spinner' value='yes' /> <param name='display_overlay' value='yes' /> <param name='display_count' value='yes' /> <param name='language' value='es-ES' />
+
+</object>
+:::
+
+```{=html}
+<script type='text/javascript'>
+  var divElement = document.getElementById('viz1751752470497');
+  var vizElement = divElement.getElementsByTagName('object')[0];
+  if ( divElement.offsetWidth > 800 ) {
+    vizElement.style.minWidth='1200px';
+    vizElement.style.maxWidth='1920px';
+    vizElement.style.width='100%';
+    vizElement.style.minHeight='1427px';
+    vizElement.style.maxHeight='2627px';
+    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+  } else if ( divElement.offsetWidth > 500 ) {
+    vizElement.style.minWidth='1200px';
+    vizElement.style.maxWidth='1920px';
+    vizElement.style.width='100%';
+    vizElement.style.minHeight='1427px';
+    vizElement.style.maxHeight='2627px';
+    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+  } else {
+    vizElement.style.width='100%';
+    vizElement.style.height='1277px';
+  }
+  var scriptElement = document.createElement('script');
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+```
+
+## Artículos científicos
+
+-   Social vulnerability in a multi-hazard context: a systematic review. Environmental Research Letters. 2022. [*Link*](https://iopscience.iop.org/article/10.1088/1748-9326/ac5140).
+-   Cardona, O.D.: The need for rethinking the concepts of vulnerability and risk from a holistic perspective: a necessary review and criticism for effective risk management. In: Indicators of Risk Management and Vulnerability Reduction: Case Studies in Latin American Urban Areas, United Nations University, Institute for Environment and Human Security (2011). [*Link*](https://www.researchgate.net/publication/254267457_The_Need_for_Rethinking_the_Concepts_of_Vulnerability_and_Risk_from_a_Holistic_Perspective_A_Necessary_Review_and_Criticism_for_Effective_Risk_Management1).
+-   Explaining differential vulnerability to climate change: A social science review. Wires Climate Change. 2018. [*Link*](https://wires.onlinelibrary.wiley.com/doi/10.1002/wcc.565).
+-   Understanding human vulnerability to climate change: A global perspective on index validation for adaptation planning. [Science of The Total Environment](https://www.sciencedirect.com/journal/science-of-the-total-environment). 2022. [*Link*](https://www.sciencedirect.com/science/article/pii/S0048969721051408).
+-   The use of empirical vulnerability functions to assess the response of buildings to tsunami impact: Comparative review and summary of best practice. Tarbotton, et al. Earth Science Reviews. [*Link*](https://www.sciencedirect.com/science/article/abs/pii/S0012825215000112?via%3Dihub)
+
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=gRnvx75D0W8" >}}
+
+{{< video "https://www.youtube.com/watch?v=IJ821FSOJlI" >}}
+
+{{< video "https://youtu.be/xDrZlxeNt3w" >}}
+:::
+
 # Evaluación del riesgo
 
 -   Understanding disaster risk: foundational concepts and principles. [*Link*](https://www.preventionweb.net/understanding-disaster-risk#components).
 
--   FEMA
+FEMA
 
-    -   National Risk Index Documentation. [*Link*](https://www.google.com/search?q=National+Risk+Index+Technical+Documentation&rlz=1C5OZZY_enCO1132CO1132&oq=National+Risk+Index+Technical+Documentation&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg7MgYIAhBFGDzSAQcxMTJqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8#:~:text=Resultados%20de%20b%C3%BAsqueda-,National%20Risk%20Index%20Technical%20Documentation,https%3A//www.fema.gov%20%E2%80%BA%20default%20%E2%80%BA%20files%20%E2%80%BA%20documents,-PDF).
-    -   National Risk Index for Natural Hazards. [*Visor*](https://hazards.fema.gov/nri/map).
-    -   [National Risk Index Hazard Info Table](https://www.arcgis.com/home/item.html?id=1cb56c682f6f4ce08a07ff372a7908b0#)
-    -   Updating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. [*Link*](https://www.idrimjournal.com/article/11719-updating-the-indicators-of-disaster-risk-and-risk-management-for-the-americas).
-    -   Earthquake Hazard Maps. FEMA. [*Link*](https://www.fema.gov/es/emergency-managers/risk-management/earthquake/hazard-maps).
-    -   Flood Map. FEMA. [*Link*](https://www.fema.gov/glossary/flood-map).
+-   National Risk Index Documentation. [*Link*](https://www.google.com/search?q=National+Risk+Index+Technical+Documentation&rlz=1C5OZZY_enCO1132CO1132&oq=National+Risk+Index+Technical+Documentation&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg7MgYIAhBFGDzSAQcxMTJqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8#:~:text=Resultados%20de%20b%C3%BAsqueda-,National%20Risk%20Index%20Technical%20Documentation,https%3A//www.fema.gov%20%E2%80%BA%20default%20%E2%80%BA%20files%20%E2%80%BA%20documents,-PDF).
+-   National Risk Index for Natural Hazards. [*Visor*](https://hazards.fema.gov/nri/map).
+-   [National Risk Index Hazard Info Table](https://www.arcgis.com/home/item.html?id=1cb56c682f6f4ce08a07ff372a7908b0#)
+-   Updating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. [*Link*](https://www.idrimjournal.com/article/11719-updating-the-indicators-of-disaster-risk-and-risk-management-for-the-americas).
+-   Earthquake Hazard Maps. FEMA. [*Link*](https://www.fema.gov/es/emergency-managers/risk-management/earthquake/hazard-maps).
+-   Flood Map. FEMA. [*Link*](https://www.fema.gov/glossary/flood-map).
 
-    # Indices mundiales
+# Indices mundiales
 
 -   World Risk Index. [*Link*](https://data.humdata.org/dataset/worldriskindex?). [*Link*](https://www.ireus.uni-stuttgart.de/en/International/WorldRiskIndex/)
 
--   Inform Risk. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index)
+Inform Risk. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index)
 
-    ![World Risk Index](https://weltrisikobericht.de/wp-content/uploads/2024/09/WorldRiskIndex-2024.webp){width="500"}
+![World Risk Index](https://weltrisikobericht.de/wp-content/uploads/2024/09/WorldRiskIndex-2024.webp){width="500"}
 
-    Global Disaster Risk Trends.Select a country to view 10-year national trends.
+Global Disaster Risk Trends.Select a country to view 10-year national trends.
 
-    ::: {#viz1751753004405 .tableauPlaceholder style="position: relative"}
-    <noscript> <a href='#'> <img src="https://public.tableau.com/static/images/GT/GTFZDZ9YR/1_rss.png" alt="Dashboard 1 " style="border: none"/> </a> </noscript> <object class='tableauViz' style='display:none;'> <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared/GTFZDZ9YR' /> <param name='toolbar' value='yes' /> <param name='static_image' value='https://public.tableau.com/static/images/GT/GTFZDZ9YR/1.png' /> <param name='animate_transition' value='yes' /> <param name='display_static_image' value='yes' /> <param name='display_spinner' value='yes' /> <param name='display_overlay' value='yes' /> <param name='display_count' value='yes' /> <param name='language' value='es-ES' /> </object>
-    :::
+::: {#viz1751753004405 .tableauPlaceholder style="position: relative"}
+<noscript><a href='#'> <img src="https://public.tableau.com/static/images/GT/GTFZDZ9YR/1_rss.png" alt="Dashboard 1 " style="border: none"/> </a></noscript>
 
-    ```{=html}
-    <script type='text/javascript'>
-      var divElement = document.getElementById('viz1751753004405');
-      var vizElement = divElement.getElementsByTagName('object')[0];
-      if ( divElement.offsetWidth > 800 ) {
-        vizElement.style.minWidth='1200px';
-        vizElement.style.maxWidth='1920px';
-        vizElement.style.width='100%';
-        vizElement.style.minHeight='1027px';
-        vizElement.style.maxHeight='2627px';
-        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-      } else if ( divElement.offsetWidth > 500 ) {
-        vizElement.style.width='100%';
-        vizElement.style.height='727px';
-      } else {
-        vizElement.style.width='100%';
-        vizElement.style.height='727px';
-      }
-      var scriptElement = document.createElement('script');
-      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-      vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
-    ```
+<object class="tableauViz" style="display:none;">
 
-    ::: {layout-ncol="2"}
-    {{< video "https://youtu.be/debgvIuycn4">}} World Risk Index
+<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared/GTFZDZ9YR' /> <param name='toolbar' value='yes' /> <param name='static_image' value='https://public.tableau.com/static/images/GT/GTFZDZ9YR/1.png' /> <param name='animate_transition' value='yes' /> <param name='display_static_image' value='yes' /> <param name='display_spinner' value='yes' /> <param name='display_overlay' value='yes' /> <param name='display_count' value='yes' /> <param name='language' value='es-ES' />
 
-    {{< video "https://youtu.be/AcpFRBk9AO4">}} INFORM Subnational Risk Index in Europe & Central Asia
+</object>
+:::
 
-    {{< video "https://youtu.be/_Q5HrQuvzLA">}} INFORM Subnational Risk Analysis Training - Module 1
-    :::
+```{=html}
+<script type='text/javascript'>
+  var divElement = document.getElementById('viz1751753004405');
+  var vizElement = divElement.getElementsByTagName('object')[0];
+  if ( divElement.offsetWidth > 800 ) {
+    vizElement.style.minWidth='1200px';
+    vizElement.style.maxWidth='1920px';
+    vizElement.style.width='100%';
+    vizElement.style.minHeight='1027px';
+    vizElement.style.maxHeight='2627px';
+    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+  } else if ( divElement.offsetWidth > 500 ) {
+    vizElement.style.width='100%';
+    vizElement.style.height='727px';
+  } else {
+    vizElement.style.width='100%';
+    vizElement.style.height='727px';
+  }
+  var scriptElement = document.createElement('script');
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+```
 
-    ## Herramientas
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/debgvIuycn4">}} World Risk Index
+
+{{< video "https://youtu.be/AcpFRBk9AO4">}} INFORM Subnational Risk Index in Europe & Central Asia
+
+{{< video "https://youtu.be/_Q5HrQuvzLA">}} INFORM Subnational Risk Analysis Training - Module 1
+:::
+
+## Herramientas para el análisis de riesgos
 
 -   **Cuadernos de trabajo** ([ver repositorios](https://mromerot.github.io/web/grd/repositorios.html))
 
@@ -145,61 +209,39 @@ Evaluación del riesgo
 Risk communication
 :::
 
-# Vulnerablidad
+# **Percepción del riesgo**
 
-[PDC. Vulnerability Indicators](https://analytics.pdc.org/global-risk-index/). PDC’s vulnerability analysis measures the physical, environmental, social, and economic conditions and processes that increase susceptibility of communities and systems to the damaging effects of hazards. Multiple factors influencing disaster outcomes, including those linked to poverty and development, are considered in the analysis.
-
-::: {#viz1751752470497 .tableauPlaceholder style="position: relative"}
-<noscript><a href='#'> <img src="https://public.tableau.com/static/images/R2/R2D23ZFPD/1_rss.png" alt="Vulnerability " style="border: none"/> </a></noscript>
-
-<object class='tableauViz' style='display:none;'> <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;R2D23ZFPD' /> <param name='toolbar' value='yes' /> <param name='static_image' value='https://public.tableau.com/static/images/R2/R2D23ZFPD/1.png' /> <param name='animate_transition' value='yes' /> <param name='display_static_image' value='yes' /> <param name='display_spinner' value='yes' /> <param name='display_overlay' value='yes' /> <param name='display_count' value='yes' /> <param name='language' value='es-ES' /> </object>
-:::
-
-```{=html}
-<script type='text/javascript'>
-  var divElement = document.getElementById('viz1751752470497');
-  var vizElement = divElement.getElementsByTagName('object')[0];
-  if ( divElement.offsetWidth > 800 ) {
-    vizElement.style.minWidth='1200px';
-    vizElement.style.maxWidth='1920px';
-    vizElement.style.width='100%';
-    vizElement.style.minHeight='1427px';
-    vizElement.style.maxHeight='2627px';
-    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-  } else if ( divElement.offsetWidth > 500 ) {
-    vizElement.style.minWidth='1200px';
-    vizElement.style.maxWidth='1920px';
-    vizElement.style.width='100%';
-    vizElement.style.minHeight='1427px';
-    vizElement.style.maxHeight='2627px';
-    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-  } else {
-    vizElement.style.width='100%';
-    vizElement.style.height='1277px';
-  }
-  var scriptElement = document.createElement('script');
-  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-  vizElement.parentNode.insertBefore(scriptElement, vizElement);
-</script>
-```
-
-## Artículos científicos
-
--   Social vulnerability in a multi-hazard context: a systematic review. Environmental Research Letters. 2022. [*Link*](https://iopscience.iop.org/article/10.1088/1748-9326/ac5140).
--   Cardona, O.D.: The need for rethinking the concepts of vulnerability and risk from a holistic perspective: a necessary review and criticism for effective risk management. In: Indicators of Risk Management and Vulnerability Reduction: Case Studies in Latin American Urban Areas, United Nations University, Institute for Environment and Human Security (2011). [*Link*](https://www.researchgate.net/publication/254267457_The_Need_for_Rethinking_the_Concepts_of_Vulnerability_and_Risk_from_a_Holistic_Perspective_A_Necessary_Review_and_Criticism_for_Effective_Risk_Management1).
--   Explaining differential vulnerability to climate change: A social science review. Wires Climate Change. 2018. [*Link*](https://wires.onlinelibrary.wiley.com/doi/10.1002/wcc.565).
--   Understanding human vulnerability to climate change: A global perspective on index validation for adaptation planning. [Science of The Total Environment](https://www.sciencedirect.com/journal/science-of-the-total-environment). 2022. [*Link*](https://www.sciencedirect.com/science/article/pii/S0048969721051408).
--   The use of empirical vulnerability functions to assess the response of buildings to tsunami impact: Comparative review and summary of best practice. Tarbotton, et al. Earth Science Reviews. [*Link*](https://www.sciencedirect.com/science/article/abs/pii/S0012825215000112?via%3Dihub)
+-   The social-psychological determinants of climate change risk perceptions: Towards a comprehensive model. 2015. [*Link*](https://www.sciencedirect.com/science/article/abs/pii/S0272494414001170).\*\*\*
+-   Risk perceptions of COVID-19 around the world. *Journal of Risk Research*. 2020. [*Link*](https://www.tandfonline.com/doi/full/10.1080/13669877.2020.1758193).
+-   Determinants and Measurement of Climate Change Risk Perception, Worry, and Concern. *Climate Science.* 2017*. [Link](https://doi.org/10.1093/acrefore/9780190228620.013.318).*
+-   The Feeling of Risk. New Perspectives on Risk Perception. Paul Slovic. 2010. [*Link*](https://www.routledge.com/The-Feeling-of-Risk-New-Perspectives-on-Risk-Perception/Slovic/p/book/9781849711487).
+-   American Risk Perceptions: Is Climate Change Dangerous? 2005. [*Link*](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.2005.00690.x).
+-   Global Warming Risk Perceptions in India. 2020. [*Link*](https://onlinelibrary.wiley.com/doi/full/10.1111/risa.13574).
+-   2021 Global Risks Scientists’ Perceptions survey. [*Link*](https://council.science/current/news/open-call-for-nominations-2021-global-risks-scientists-perceptions-survey/).
+-   Future Earth Risk Perception Report 2020. [*Link*](https://futureearth.org/wp-content/uploads/2020/02/RPR_2020_Report.pdf).
+-   What shapes perceptions of climate change. 2010. [*Link*](https://wires.onlinelibrary.wiley.com/doi/10.1002/wcc.41).
+-   Sentiment analysis. 2022. Text mining for information professionals. [*Link*](https://link.springer.com/chapter/10.1007/978-3-030-85085-2_7).
+-   Lineamientos para el análisis de la vulnerabilidad social en los estudios de la gestión municipal del riesgo de desastres. UNGRD. 2017. [*Link*](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/24756).
+-   **Colombia**
+    -   Modelo de análisis de la vulnerabilidad psicosocial en la gestión del riesgo de desastres. 2017. [*Link*](https://doi.org/10.24857/rgsa.v11i2.1309).
+-   **Investigadores**:
+    -   Anthony Leiserowitz. [*Link*](https://scholar.google.com/citations?hl=en&user=Hom2eGsAAAAJ&view_op=list_works&sortby=pubdate).
+    -   Paul Slovic. [*Link*](https://scholar.google.com/citations?hl=en&user=y8g8WY4AAAAJ&view_op=list_works).
+    -   Douglas Paton. [*Link*](https://scholar.google.com/citations?hl=en&user=3luSZvYAAAAJ&view_op=list_works).
+    -   Lennart Sjöberg. [*Link*](https://scholar.google.com/citations?user=SF8DdSoAAAAJ&hl=en&oi=sra).
+    -   Sander van der Linden. [*Link*](https://scholar.google.com/citations?user=gUnA_QQAAAAJ&hl=en&oi=ao).
+-   **Videos:**
+    -   La percepción del riesgo y diversos abordajes de la gestión integral del riesgo. Coursera. [*Link*](https://www.coursera.org/lecture/gestion-riesgo/la-percepcion-del-riesgo-y-diversos-abordajes-de-la-gestion-integral-del-riesgo-8wR3Q).
 
 ::: {layout-ncol="2"}
-{{< video "https://www.youtube.com/watch?v=gRnvx75D0W8" >}}
+{{< video "https://www.youtube.com/watch?v=dNgrKQo0gMg" >}}
 
-{{< video "https://www.youtube.com/watch?v=IJ821FSOJlI" >}}
+{{< video "https://www.youtube.com/watch?v=HuVZiEdMylk" >}}
 
-{{< video "https://youtu.be/xDrZlxeNt3w" >}}
+{{< video "https://https://youtu.be/xDrZlxeNt3w" >}} Dr. Paul Slovic: How Risk and Emotions Affect Decision Making
 :::
 
-# Riesgos complejos, en cascada y sistémicos
+# Riesgos complejos, en cascada, y sistémicos
 
 -   Knowledge Action Network on Emergent Risks and Extreme Events. Risk Kan. [*Link*](https://www.risk-kan.org/). [Webinars](https://www.risk-kan.org/webinars/). [Working groups](https://www.risk-kan.org/workinggroups/).
 -   Lecturas:
@@ -211,6 +253,8 @@ Risk communication
 {{< video "https://youtu.be/vSq7mV96U4s" >}} Lesson 1：Compound and cascading disaster risks. What are they?
 
 {{< video "https://youtu.be/G3uzP7DOeSs" >}} Multi-(hazard) risks and cascading disasters in the context of climate
+
+{{< video "https://www.youtube.com/watch?v=5HG0CHm6M5o" >}} Systemic Disaster Risk Handbook
 
 Compound, cascading and systemic risk
 :::
@@ -245,38 +289,6 @@ Eventos compuestos
 {{< video "https://youtu.be/M58wCBJ8mkQ" >}}
 
 Videos sobre resiliencia
-:::
-
-# **Percepción del riesgo**
-
--   The social-psychological determinants of climate change risk perceptions: Towards a comprehensive model. 2015. [*Link*](https://www.sciencedirect.com/science/article/abs/pii/S0272494414001170).\*\*\*
--   Risk perceptions of COVID-19 around the world. *Journal of Risk Research*. 2020. [*Link*](https://www.tandfonline.com/doi/full/10.1080/13669877.2020.1758193).
--   Determinants and Measurement of Climate Change Risk Perception, Worry, and Concern. *Climate Science.* 2017*. [Link](https://doi.org/10.1093/acrefore/9780190228620.013.318).*
--   The Feeling of Risk. New Perspectives on Risk Perception. Paul Slovic. 2010. [*Link*](https://www.routledge.com/The-Feeling-of-Risk-New-Perspectives-on-Risk-Perception/Slovic/p/book/9781849711487).
--   American Risk Perceptions: Is Climate Change Dangerous? 2005. [*Link*](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.2005.00690.x).
--   Global Warming Risk Perceptions in India. 2020. [*Link*](https://onlinelibrary.wiley.com/doi/full/10.1111/risa.13574).
--   2021 Global Risks Scientists’ Perceptions survey. [*Link*](https://council.science/current/news/open-call-for-nominations-2021-global-risks-scientists-perceptions-survey/).
--   Future Earth Risk Perception Report 2020. [*Link*](https://futureearth.org/wp-content/uploads/2020/02/RPR_2020_Report.pdf).
--   What shapes perceptions of climate change. 2010. [*Link*](https://wires.onlinelibrary.wiley.com/doi/10.1002/wcc.41).
--   Sentiment analysis. 2022. Text mining for information professionals. [*Link*](https://link.springer.com/chapter/10.1007/978-3-030-85085-2_7).
--   Lineamientos para el análisis de la vulnerabilidad social en los estudios de la gestión municipal del riesgo de desastres. UNGRD. 2017. [*Link*](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/24756).
--   **Colombia**
-    -   Modelo de análisis de la vulnerabilidad psicosocial en la gestión del riesgo de desastres. 2017. [*Link*](https://doi.org/10.24857/rgsa.v11i2.1309).
--   **Investigadores**:
-    -   Anthony Leiserowitz. [*Link*](https://scholar.google.com/citations?hl=en&user=Hom2eGsAAAAJ&view_op=list_works&sortby=pubdate).
-    -   Paul Slovic. [*Link*](https://scholar.google.com/citations?hl=en&user=y8g8WY4AAAAJ&view_op=list_works).
-    -   Douglas Paton. [*Link*](https://scholar.google.com/citations?hl=en&user=3luSZvYAAAAJ&view_op=list_works).
-    -   Lennart Sjöberg. [*Link*](https://scholar.google.com/citations?user=SF8DdSoAAAAJ&hl=en&oi=sra).
-    -   Sander van der Linden. [*Link*](https://scholar.google.com/citations?user=gUnA_QQAAAAJ&hl=en&oi=ao).
--   **Videos:**
-    -   La percepción del riesgo y diversos abordajes de la gestión integral del riesgo. Coursera. [*Link*](https://www.coursera.org/lecture/gestion-riesgo/la-percepcion-del-riesgo-y-diversos-abordajes-de-la-gestion-integral-del-riesgo-8wR3Q).
-
-::: {layout-ncol="2"}
-{{< video "https://www.youtube.com/watch?v=dNgrKQo0gMg" >}}
-
-{{< video "https://www.youtube.com/watch?v=HuVZiEdMylk" >}}
-
-{{< video "https://https://youtu.be/xDrZlxeNt3w" >}} Dr. Paul Slovic: How Risk and Emotions Affect Decision Making
 :::
 
 # **Análisis forense de desastres**

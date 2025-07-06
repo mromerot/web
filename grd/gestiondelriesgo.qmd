@@ -6,7 +6,7 @@ editor: visual
 
 ![](https://www.quindio.gov.co/home/docs/items/item_107/gestion_del_riesgo.jpg){width="500"}
 
-## Marco Legal colombiano
+# Marco Legal colombiano
 
 -   **Ley 1523 de 2012.** Por la cual se adopta la Política Nacional de Gestión del Riesgo de Desastres y se establece el Sistema Nacional de Gestión del Riesgo de Desastres y se dictan otras disposiciones. [*Link*](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=47141)*.* Decreto [1807](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=59488). [pdf](http://portal.gestiondelriesgo.gov.co/Documents/SRR/decrerto_1807_19_%20septiembre_2014.pdf#search=Decreto%201807)
 -   **Decreto Ley 4147 de 2011**. [*Link*](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=44600#:~:text=Enti%C3%A9ndase%20la%20gesti%C3%B3n%20del%20riesgo,desastres%2C%20con%20el%20prop%C3%B3sito%20expl%C3%ADcito)
@@ -16,27 +16,7 @@ editor: visual
 -   CONPES 4058 de 2021. Política pública para la reducción de condiciones de riesgo de desastres y adaptación a fenómenos de variabilidad climática. [*Link*](https://colaboracion.dnp.gov.co/CDT/Conpes/Econ%C3%B3micos/4058.pdf)
 -   Decreto 1807 de 2014. Incorporación de la gestión del riesgo en los planes de ordenamiento territorial y se dictan otras disposiciones. [*Link*](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=59488)
 
-## Visores
-
--   **Visor de desastres y emergencias**. UNGRD. [*Link*](https://lookerstudio.google.com/reporting/a850fdeb-1229-4623-8a35-13895d4ec484).
--   **Visor de información territorial para Municipios**. UNGRD. [*Link*](https://lookerstudio.google.com/u/0/reporting/80f58632-3355-46d1-8177-a765552fef91/page/mqD7D)
--   OCHA. Visor Emergencias. [*Link*](https://response.reliefweb.int/es/colombia/dashboard-datos-oficiales)
-
-## **Afectaciones y respuesta por desastres UNGRD**
-
-En este dashboard se muestra la información correspondiente a emergencias por tipo de eventos de desastres en Colombia que desde la Unidad Nacional de Gestión de Riesgo y Desastres (UNGRD) se hace seguimiento con algunos eventos destacados, al igual que la respuesta que se brinda tanto de UNGRD como de los socios del Equipo Humanitario País (EHP). 
-
-<iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiNjlmYjBlNDUtMzJlOS00OGY3LWI0M2ItOGU3NzU1NzA4OGI4IiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9" frameborder="0" allowFullScreen="true">
-
-</iframe>
-
-<iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiYzA5ZDQzNDUtOTBiOC00YjRiLTg5ZDgtYzdiNjkzMWUzZjZiIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9" frameborder="0" allowFullScreen="true">
-
-</iframe>
-
-{{< video "https://www.youtube.com/watch?v=BvY6tCJEZqw" >}} Foro institucional la gestión del riesgo y la adaptación al cambio climático
-
-## **Marco de Sendai**
+# **Marco de Sendai**
 
 -   Marco de Sendai. [*Link*](https://www.preventionweb.net/files/resolutions/N1516720.pdf)*.*
 -   Lista Youtube. [*Link*](https://www.youtube.com/playlist?list=PLBDwPnveHho9vSuIDgVqhu1hmWw5v9qQD)
@@ -67,6 +47,26 @@ En este dashboard se muestra la información correspondiente a emergencias por t
 Marco de Sendai
 :::
 
+# Visores
+
+-   **Visor de desastres y emergencias**. UNGRD. [*Link*](https://lookerstudio.google.com/reporting/a850fdeb-1229-4623-8a35-13895d4ec484).
+-   **Visor de información territorial para Municipios**. UNGRD. [*Link*](https://lookerstudio.google.com/u/0/reporting/80f58632-3355-46d1-8177-a765552fef91/page/mqD7D)
+-   Visor Emergencias. OCHA. [*Link*](https://response.reliefweb.int/es/colombia/dashboard-datos-oficiales)
+
+## **Afectaciones y respuesta por desastres UNGRD**
+
+En este dashboard se muestra la información correspondiente a emergencias por tipo de eventos de desastres en Colombia que desde la Unidad Nacional de Gestión de Riesgo y Desastres (UNGRD) se hace seguimiento con algunos eventos destacados, al igual que la respuesta que se brinda tanto de UNGRD como de los socios del Equipo Humanitario País (EHP). 
+
+<iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiNjlmYjBlNDUtMzJlOS00OGY3LWI0M2ItOGU3NzU1NzA4OGI4IiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9" frameborder="0" allowFullScreen="true">
+
+</iframe>
+
+<iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiYzA5ZDQzNDUtOTBiOC00YjRiLTg5ZDgtYzdiNjkzMWUzZjZiIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9" frameborder="0" allowFullScreen="true">
+
+</iframe>
+
+{{< video "https://www.youtube.com/watch?v=BvY6tCJEZqw" >}} Foro institucional la gestión del riesgo y la adaptación al cambio climático
+
 # **Instituciones Públicas Colombianas**
 
 -   Unidad Nacional para la Gestión del Riesgo de Desastres. [*Link*](http://portal.gestiondelriesgo.gov.co/).
@@ -80,6 +80,49 @@ Marco de Sendai
 -   Sistema de Información para la Gestión del Riesgo de Desastres de Antioquia. DAGRAN. [*Link*](https://dagran.antioquia.gov.co/). [*Lanzamiento*](https://fb.watch/j0zBLj5_Ej/).
 -   Sistema de Información en Gestión del Riesgo de desastres del Valle de Aburrá. DAPARD. [*Link*](http://www.redriesgos.gov.co/dapard-gobernacion-de-antioquia/).
 -   Sistema Integrado de Monitoreo Ambiental de Caldas. SIMAC. [*Link*](http://cdiac.manizales.unal.edu.co/sistema-alerta-temprana/MapaManizales/).
+
+# **Instituciones Internacionales**
+
+-   Anticipation hub. [*Link*](https://www.anticipation-hub.org/es/)
+-   Centro America. [*Link*](https://understandrisk.org/event/ur-centroamerica/).
+-   Cruz Roja y Media Luna Roja
+    -   Disaster Law. [*Link*](https://disasterlaw.ifrc.org/)
+-   Global Facility for Disaster Reduction and Recovery (GFDRR). [*Link*](https://www.gfdrr.org/en).
+    -   Colombia. [*Link*](https://www.gfdrr.org/en/region/colombia)
+    -   CODE FOR RESILIENCE. [*Link*](https://understandrisk.org/initiative/code-for-resilience/)
+-   NASA Earth Sciences Disasters Program. [*Link*](https://disasters.nasa.gov/). [*Link.*](https://www.nasa.gov/centers/ames/earthscience/nasa-earth-science-disasters-program)[*Español*](https://disasters.nasa.gov/resources/espanol).
+    -   Webinars. [*Link*](https://arset.gsfc.nasa.gov/disasters/webinars/19-DRA).
+    -   Lance. [*Link*](https://earthdata.nasa.gov/eosdis/science-system-description/eosdis-components/lance).
+    -   Training. [*Link*](https://disasters.nasa.gov/training).
+-   OECD Colombia. [*Link*](https://www.oecd.org/colombia/).
+-   OFDA. [*Link*](https://www.gfdrr.org/en/onlineutilities).
+-   Relief web. [*Link*](https://reliefweb.int/country/col)
+    -   Power bi. [*Link*](https://app.powerbi.com/view?r=eyJrIjoiYzA5ZDQzNDUtOTBiOC00YjRiLTg5ZDgtYzdiNjkzMWUzZjZiIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9)
+-   Understanding Risk. [*Link*](https://understandrisk.org/).
+
+## **Agencias nacionales para la GRD**
+
+-   Australia:
+    -   Australian Disaster resilience hub. [*Link*](https://knowledge.aidr.org.au/resources/national-disaster-risk-reduction-framework/).
+    -   The National Emergency Management Agency. [*Link*](https://nema.gov.au/#/map).
+-   Corea del Sur:
+    -   MOIS. [*Link*](https://www.mois.go.kr/eng/sub/a03/disasterAndSafety/screen.do). [*Link*](https://disasterlaw.ifrc.org/dmi/dmi_country/82).
+-   Chile
+    -   SENAPRED. [*Link*](https://senapred.cl/)
+-   EEUU.
+    -   Federal Emergency Management Agency (FEMA). [*Link*](http://www.fema.gov/).
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/SSYUg7F2MsI" >}}
+
+{{< video "https://youtu.be/TH3LQW8B2Zw" >}}
+
+{{< video "https://youtu.be/M9m6mb-blYM" >}}
+
+{{< video "https://youtu.be/OS-0GYDniqM" >}}
+
+{{< video "https://youtu.be/q1DTgUIUoX0" >}}
+:::
 
 # **Terminologia**
 
@@ -110,68 +153,30 @@ Marco de Sendai
 {{< video "https://youtu.be/2Ge2M0hwv14" >}}
 :::
 
-## **Instituciones Internacionales**
+# **Reportes y plataformas**
 
--   Anticipation hub. [*Link*](https://www.anticipation-hub.org/es/)
--   Centro America. [*Link*](https://understandrisk.org/event/ur-centroamerica/).
--   Cruz Roja y Media Luna Roja
-    -   Disaster Law. [*Link*](https://disasterlaw.ifrc.org/)
--   Global Facility for Disaster Reduction and Recovery (GFDRR). [*Link*](https://www.gfdrr.org/en).
-    -   Colombia. [*Link*](https://www.gfdrr.org/en/region/colombia)
-    -   CODE FOR RESILIENCE. [*Link*](https://understandrisk.org/initiative/code-for-resilience/)
--   NASA Earth Sciences Disasters Program. [*Link*](https://disasters.nasa.gov/). [*Link.*](https://www.nasa.gov/centers/ames/earthscience/nasa-earth-science-disasters-program)[*Español*](https://disasters.nasa.gov/resources/espanol).
-    -   Webinars. [*Link*](https://arset.gsfc.nasa.gov/disasters/webinars/19-DRA).
-    -   Lance. [*Link*](https://earthdata.nasa.gov/eosdis/science-system-description/eosdis-components/lance).
-    -   Training. [*Link*](https://disasters.nasa.gov/training).
--   OECD Colombia. [*Link*](https://www.oecd.org/colombia/).
--   OFDA. [*Link*](https://www.gfdrr.org/en/onlineutilities).
--   Relief web. [*Link*](https://reliefweb.int/country/col)
-    -   Power bi. [*Link*](https://app.powerbi.com/view?r=eyJrIjoiYzA5ZDQzNDUtOTBiOC00YjRiLTg5ZDgtYzdiNjkzMWUzZjZiIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9)
--   Understanding Risk. [*Link*](https://understandrisk.org/).
+## **Globales**
 
-## **Agencias de cada país en GRD**
+-   Global Platform for Disaster Risk Reduction 2025. [*Link*](https://globalplatform.undrr.org/programme/agenda).
+-   The Global Risks Report 2021 16th Edition. World Economic Forum. [*Link*](https://www.weforum.org/reports/the-global-risks-report-2021)
+-   Global Risks Perceptions Reports 2021. [*Link*](https://www.preventionweb.net/event/launch-global-risks-perceptions-report-2021).
+-   Global Assessment Report (GAR). [*Link*](https://www.undrr.org/gar).
+    -   Global Assessment Report (GAR) 2025. [*Link*](https://www.undrr.org/gar/gar2025).
+    -   GAR Atlas. [*Link*](https://www.undrr.org/publication/gar-atlas-unveiling-global-disaster-risk)
 
--   Australia:
-    -   Australian Disaster resilience hub. [*Link*](https://knowledge.aidr.org.au/resources/national-disaster-risk-reduction-framework/).
-    -   The National Emergency Management Agency. [*Link*](https://nema.gov.au/#/map).
--   Corea del Sur:
-    -   MOIS. [*Link*](https://www.mois.go.kr/eng/sub/a03/disasterAndSafety/screen.do). [*Link*](https://disasterlaw.ifrc.org/dmi/dmi_country/82).
--   Chile
-    -   SENAPRED. [*Link*](https://senapred.cl/)
--   EEUU.
-    -   Federal Emergency Management Agency (FEMA). [*Link*](http://www.fema.gov/).
+## **Regionales**
 
-::: {layout-ncol="2"}
-{{< video "https://youtu.be/SSYUg7F2MsI" >}}
-
-{{< video "https://youtu.be/TH3LQW8B2Zw" >}}
-
-{{< video "https://youtu.be/M9m6mb-blYM" >}}
-
-{{< video "https://youtu.be/OS-0GYDniqM" >}}
-
-{{< video "https://youtu.be/q1DTgUIUoX0" >}}
-:::
-
-## **Reportes y plataformas**
-
--   **Globales**
-    -   Global Platform for Disaster Risk Reduction 2025. [*Link*](https://globalplatform.undrr.org/programme/agenda).
-    -   The Global Risks Report 2021 16th Edition. World Economic Forum. [*Link*](https://www.weforum.org/reports/the-global-risks-report-2021)
-    -   Global Risks Perceptions Reports 2021. [*Link*](https://www.preventionweb.net/event/launch-global-risks-perceptions-report-2021).
-    -   Global Assessment Report (GAR). [*Link*](https://www.undrr.org/gar).
-        -   Global Assessment Report (GAR) 2025. [*Link*](https://www.undrr.org/gar/gar2025).
-        -   GAR Atlas. [*Link*](https://www.undrr.org/publication/gar-atlas-unveiling-global-disaster-risk)
--   **Regionales**
-    -   UNDRR ROAMC: Informe de evaluación regional sobre el riesgo de desastres en América Latina y el Caribe (RAR 2021). [*Link*](https://www.undrr.org/es/publication/undrr-roamc-informe-de-evaluacion-regional-sobre-el-riesgo-de-desastres-en-america).
-    -   WMO. State of the Climate in Latin America and the Caribbean 2023. [*Link*](https://wmo.int/publication-series/state-of-climate-latin-america-and-caribbean-2023)*.*
-    -   Updating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. [*Link*](https://www.idrimjournal.com/article/11719-updating-the-indicators-of-disaster-risk-and-risk-management-for-the-americas).
+-   UNDRR ROAMC: Informe de evaluación regional sobre el riesgo de desastres en América Latina y el Caribe (RAR 2021). [*Link*](https://www.undrr.org/es/publication/undrr-roamc-informe-de-evaluacion-regional-sobre-el-riesgo-de-desastres-en-america).
+-   WMO. State of the Climate in Latin America and the Caribbean 2023. [*Link*](https://wmo.int/publication-series/state-of-climate-latin-america-and-caribbean-2023)*.*
+-   Updating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. [*Link*](https://www.idrimjournal.com/article/11719-updating-the-indicators-of-disaster-risk-and-risk-management-for-the-americas).
 -   **America del Sur**
     -   Dashboard WMO Clima. [*Link*](https://jjk-code-otter.github.io/demo-dash/RegionalDashboard/wmo_ra_iii.html).
     -   The Risk Atlas of Mexico City, Mexico: a tool for decision-making and disaster prevention. [*Link*](https://link.springer.com/article/10.1007/s11069-021-05059-z)*.*
--   **Nacionales**
-    -   Índice Municipal de Riesgo de Desastres ajustado por Capacidades. [*Link*](https://www.dnp.gov.co/programas/ambiente/gestion-del-riesgo#:~:text=%E2%80%8BEl%20%C3%ADndice%20Municipal%20de,seg%C3%BAn%20sus%20capacidades%20para%20gestionarlo.)*. [Link](https://colaboracion.dnp.gov.co/CDT/Prensa/IndicemunicipalRiesgos.pdf)*. [*Link*](https://portalterritorial.dnp.gov.co/AdmGesRiesgo/iGesRiesgoIndice).
-    -   Análisis de Vulnerabilidad y Riesgo por Cambio Climático en Colombia. Tercera Comunicación Nacional Cambio Climático Colombia. 2017. [*Link*](https://www.researchgate.net/publication/322220463_Analisis_de_Vulnerabilidad_y_Riesgo_por_Cambio_Climatico_en_Colombia_Tercera_Comunicacion_Nacional_Cambio_Climatico_Colombia).
+
+## **Nacionales**
+
+-   Índice Municipal de Riesgo de Desastres ajustado por Capacidades. [*Link*](https://www.dnp.gov.co/programas/ambiente/gestion-del-riesgo#:~:text=%E2%80%8BEl%20%C3%ADndice%20Municipal%20de,seg%C3%BAn%20sus%20capacidades%20para%20gestionarlo.)*. [Link](https://colaboracion.dnp.gov.co/CDT/Prensa/IndicemunicipalRiesgos.pdf)*. [*Link*](https://portalterritorial.dnp.gov.co/AdmGesRiesgo/iGesRiesgoIndice).
+-   Análisis de Vulnerabilidad y Riesgo por Cambio Climático en Colombia. Tercera Comunicación Nacional Cambio Climático Colombia. 2017. [*Link*](https://www.researchgate.net/publication/322220463_Analisis_de_Vulnerabilidad_y_Riesgo_por_Cambio_Climatico_en_Colombia_Tercera_Comunicacion_Nacional_Cambio_Climatico_Colombia).
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/elrHNewq2Xk" >}} Global Assessment Report 2025: Virtual launch \| UNDRR
@@ -212,27 +217,25 @@ Marco de Sendai
 -   Beyond «natural-disasters-are-not-natural»:the work of state and nature after the 2010 earthquake in Chile. JPE. 2016. [*Link*](https://journals.uair.arizona.edu/index.php/JPE/article/view/20181/19809).
     -   <https://nonaturaldisasters.com/>
 
-<div>
-
-{{< video "https://www.youtube.com/watch?v=5HG0CHm6M5o" >}} Los desastres no son naturales
-
-</div>
+{{< video "https://youtu.be/CCfaBr-qi2g" >}} Los desastres no son naturales
 
 # **GRD Sectorial**
 
--   **Minambiente**
--   **Minagricultura**
-    -   Mesas técnicas agroclimáticas. [*Link*](https://ccafs.cgiar.org/es/mesas-tecnicas-agroclimaticas-mta)
-    -   Estrategia Regional para la Gestión del Riesgo de Desastres (GRD) en el Sector Agrícola y la Seguridad Alimentaria y Nutricional (SAN) en América Latina y el Caribe (ALC) 2018 – 2030. [*Link*](http://www.fao.org/3/i8919es/I8919ES.pdf)
--   **Mintransporte**
--   **Minvivienda**
-    -   Lineamientos de Política de Gestión del Riesgo de Desastres en la prestación de los servicios públicos de acueducto, alcantarillado y aseo. Minvivienda 2014. [*Link*](https://www.minvivienda.gov.co/sites/default/files/2020-08/lineamientos-de-politica-de-gestion-del-riesgo-de-desastres.pdf).
-    -   Decreto 1077 de 2015 Sector Vivienda, Ciudad y Territorio. [*Link*](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=77216).
+## **Minambiente** 
 
-# **Proyectos nacionales**
+-   Dirección de Cambio Climático y Gestión del Riesgo*. [Link](https://www.minambiente.gov.co/cambio-climatico-y-gestion-del-riesgo/gestion-del-riesgo-de-desastres/)*.
 
+## **Minagricultura**
+
+-   Mesas técnicas agroclimáticas. [*Link*](https://ccafs.cgiar.org/es/mesas-tecnicas-agroclimaticas-mta)
+-   Estrategia Regional para la Gestión del Riesgo de Desastres (GRD) en el Sector Agrícola y la Seguridad Alimentaria y Nutricional (SAN) en América Latina y el Caribe (ALC) 2018 – 2030. [*Link*](http://www.fao.org/3/i8919es/I8919ES.pdf)
 -   Innovación y gestión del riesgo frente a multiamenazas en el campo colombiano. [*Link*](https://nacionesunidas.org.co/noticias/actualidad-colombia/innovacion-y-gestion-del-riesgo-frente-a-multiamenazas-en-el-campo-colombiano/).
 
 {{< video "https://www.youtube.com/watch?v=fcV7cLzr2CU" >}}
 
-#
+## **Minvivienda**
+
+-   Lineamientos de Política de Gestión del Riesgo de Desastres en la prestación de los servicios públicos de acueducto, alcantarillado y aseo. Minvivienda 2014. [*Link*](https://www.minvivienda.gov.co/sites/default/files/2020-08/lineamientos-de-politica-de-gestion-del-riesgo-de-desastres.pdf).
+-   Decreto 1077 de 2015 Sector Vivienda, Ciudad y Territorio. [*Link*](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=77216).
+
+## **Mintransporte**
