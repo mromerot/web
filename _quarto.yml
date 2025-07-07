@@ -18,7 +18,7 @@ website:
           - section: "Conocimiento del riesgo"
             href: grd/conocimientodelriesgo.qmd
             contents:
-            - text: "Indicadores de riesgo mundiales y nacionales"
+            - text: "Indicadores de riesgo nacionales y mundiales"
               href: grd/indicadoresderiesgo.qmd
           - text: "Reducción del riesgo"
             href: grd/reducciondelriesgo.qmd

@@ -33,6 +33,12 @@ editor: visual
 
 # Vulnerablidad
 
+## Física
+
+-   The use of empirical vulnerability functions to assess the response of buildings to tsunami impact: Comparative review and summary of best practice. Tarbotton, et al. Earth Science Reviews. [*Link*](https://www.sciencedirect.com/science/article/abs/pii/S0012825215000112?via%3Dihub)
+
+## Social
+
 -   Lineamientos para el análisis de la vulnerabilidad social en los estudios de la gestión municipal del riesgo de desastres. UNGRD. 2017. [*Link*](https://repositorio.gestiondelriesgo.gov.co:8443/handle/20.500.11762/24756).
 
 [PDC. Vulnerability Indicators](https://analytics.pdc.org/global-risk-index/). PDC’s vulnerability analysis measures the physical, environmental, social, and economic conditions and processes that increase susceptibility of communities and systems to the damaging effects of hazards. Multiple factors influencing disaster outcomes, including those linked to poverty and development, are considered in the analysis.
@@ -84,7 +90,6 @@ editor: visual
 -   Cardona, O.D.: The need for rethinking the concepts of vulnerability and risk from a holistic perspective: a necessary review and criticism for effective risk management. In: Indicators of Risk Management and Vulnerability Reduction: Case Studies in Latin American Urban Areas, United Nations University, Institute for Environment and Human Security (2011). [*Link*](https://www.researchgate.net/publication/254267457_The_Need_for_Rethinking_the_Concepts_of_Vulnerability_and_Risk_from_a_Holistic_Perspective_A_Necessary_Review_and_Criticism_for_Effective_Risk_Management1).
 -   Explaining differential vulnerability to climate change: A social science review. Wires Climate Change. 2018. [*Link*](https://wires.onlinelibrary.wiley.com/doi/10.1002/wcc.565).
 -   Understanding human vulnerability to climate change: A global perspective on index validation for adaptation planning. [Science of The Total Environment](https://www.sciencedirect.com/journal/science-of-the-total-environment). 2022. [*Link*](https://www.sciencedirect.com/science/article/pii/S0048969721051408).
--   The use of empirical vulnerability functions to assess the response of buildings to tsunami impact: Comparative review and summary of best practice. Tarbotton, et al. Earth Science Reviews. [*Link*](https://www.sciencedirect.com/science/article/abs/pii/S0012825215000112?via%3Dihub)
 
 ::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/watch?v=gRnvx75D0W8" >}}
@@ -116,13 +121,6 @@ editor: visual
 
     -   Flood Map. [*Link*](https://www.fema.gov/glossary/flood-map).
 
-## Índices de Colombia
-
--   Atlas de Riesgo de Colombia: revelando los desastres latentes. Unidad Nacional para la Gestión del Riesgo de Desastres. 2018. [*Link*](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/27179).
--   Inform Risk. 2015. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Subnational-Risk/Colombia).
--   PDC. Colombia’s data-driven approach to creating safer, more resilient communities. [*Link*](https://www.pdc.org/colombias-data-driven-approach-to-safer-resilient-communities/).
-    -   NDPBA Colombia Final Report. 2025. [*Link*](https://www.pdc.org/document/ndpba-colombia-final-report/)*.*
-
 ## Herramientas para el análisis de riesgos
 
 -   **Cuadernos de trabajo** ([ver repositorios](https://mromerot.github.io/web/grd/repositorios.html))
@@ -134,7 +132,7 @@ editor: visual
 
 -   **Artículos científicos**
 
-    -   A review of risk analysis methods for natural disasters. Nat Hazards 100, 571–593. Sun, R., Gao, G., Gong, Z. et al. 2020. [Link](https://doi.org/10.1007/s11069-019-03826-7)
+    -   A review of risk analysis methods for natural disasters. Nat Hazards 100, 571–593. Sun, R. et al. 2020. [Link](https://doi.org/10.1007/s11069-019-03826-7)
     -   Hybrid loss exceedance curve (HLEC) for disaster risk assessment. Velazquez et al. 2020. [Link](https://link.springer.com/article/10.1007/s11069-013-1017-z)
     -   Assessing global exposure and vulnerability towards natural hazards: the Disaster Risk Index. Peduzzi, et al. 2009, Nat. Hazards Earth Syst. [Link](https://nhess.copernicus.org/articles/9/1149/2009/)
 
@@ -160,7 +158,7 @@ Evaluación del riesgo
 
 # Comunicación del riesgo
 
-![Comunicación del riesgo](https://www.preventionweb.net/sites/default/files/2024-10/RiCA-Pocket-Guide-V7-27.09.24_Page_46_Image_0001.jpg){fig-align="center" width="450"}
+![Comunicación del riesgo](https://www.preventionweb.net/sites/default/files/2024-10/RiCA-Pocket-Guide-V7-27.09.24_Page_46_Image_0001.jpg){fig-align="left" width="800"}
 
 -   Disaster Risk Communication Hub. [*Link*](https://www.preventionweb.net/hubs/disaster-risk-communication-hub)
 -   Global Platform elevates risk communication as essential for disaster risk reduction. 2025. [*Link*](https://www.undrr.org/news/global-platform-elevates-risk-communication-essential-disaster-risk-reduction).
@@ -199,16 +197,21 @@ Risk communication
     -   Douglas Paton. [*Link*](https://scholar.google.com/citations?hl=en&user=3luSZvYAAAAJ&view_op=list_works).
     -   Lennart Sjöberg. [*Link*](https://scholar.google.com/citations?user=SF8DdSoAAAAJ&hl=en&oi=sra).
     -   Sander van der Linden. [*Link*](https://scholar.google.com/citations?user=gUnA_QQAAAAJ&hl=en&oi=ao).
--   **Videos:**
-    -   La percepción del riesgo y diversos abordajes de la gestión integral del riesgo. Coursera. [*Link*](https://www.coursera.org/lecture/gestion-riesgo/la-percepcion-del-riesgo-y-diversos-abordajes-de-la-gestion-integral-del-riesgo-8wR3Q).
+
 
 ::: {layout-ncol="2"}
-{{< video "https://www.youtube.com/watch?v=dNgrKQo0gMg" >}}
-
-{{< video "https://www.youtube.com/watch?v=HuVZiEdMylk" >}}
+{{< video "https://www.youtube.com/watch?v=dNgrKQo0gMg" >}} Risk perception in modern society
 
 {{< video "https://https://youtu.be/xDrZlxeNt3w" >}} Dr. Paul Slovic: How Risk and Emotions Affect Decision Making
+
+{{< video "https://www.youtube.com/watch?v=HuVZiEdMylk" >}} Why we disagree
 :::
+
+<video width="640" controls>
+<source src="https://d3c33hcgiwev3.cloudfront.net/7GphbYWUQVOqYW2FlOFTOw.processed/full/720p/index.webm?Expires=1752019200&Signature=gwkC~s6x1RwG5fsjEEMpKtbyqktTzUPkYSM1WZnk-WftZlJNtBxbe-U4gfl1k57JNJq-HVemoHWEDB~vTml6WfUmyTi-VWl-Qu0B2F9lEh3rYXZdLsTXhu5VaXg5ak54XNhCXaF3jbiFP0ilgIJm5RkvvzScCziJMae7rsVPtfs_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A" type="video/webm">
+</video>
+La percepción del riesgo y diversos abordajes de la gestión integral del riesgo. Coursera. [*Link*](https://www.coursera.org/lecture/gestion-riesgo/la-percepcion-del-riesgo-y-diversos-abordajes-de-la-gestion-integral-del-riesgo-8wR3Q).
+
 
 # Riesgos compuestos, en cascada, y sistémicos
 
@@ -228,11 +231,13 @@ Risk communication
 Compound, cascading and systemic risk
 :::
 
+
 ## Eventos compuestos
 
 -   Guidelines for Studying Diverse Types of Compound Weather and Climate Events. 2021. [*Link*](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021EF002340)
 -   High impact compound events in Australia. [*Link*](https://climateextremes.org.au/high-impact-compound-events-in-australia/)
 -   Significantly wetter or drier future conditions for one to two thirds of the world’s population. 2024. Nature Comm. [*Link*](https://www.nature.com/articles/s41467-023-44513-3)
+
 
 ::: {layout-ncol="2"}
 {{< video "https://emanuele.bevacqua.eu/wp-content/uploads/2021/12/Bevacqua_AGU2021_video.mov" >}} [*Guidelines for studying diverse types of compound weather and climate events*](https://emanuele.bevacqua.eu/online-talks/)
@@ -260,6 +265,7 @@ Eventos compuestos
 Videos sobre resiliencia
 :::
 
+
 # **Análisis forense de desastres**
 
 -   UNDRR. Disaster forensics: Learning from the past to build a resilient future. [*Link*](https://www.undrr.org/news/disaster-forensics-learning-past-build-resilient-future)
@@ -274,6 +280,7 @@ Videos sobre resiliencia
 :::
 
 ![Root causes of risk. [UNDRR](https://www.undrr.org/gar/gar2024-special-report)](https://www.undrr.org/sites/default/files/2024-09/Tree_Infographic.jpg){fig-align="left" width="350"}
+
 
 ## Disaster Forensics - UNDRR
 
