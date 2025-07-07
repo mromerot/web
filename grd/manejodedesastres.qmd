@@ -7,8 +7,13 @@ editor: visual
 # **Instituciones internacionales**
 
 -   Reliefweb. [*Link*](https://reliefweb.int/country/col)*.*
-
 -   OXFAM. [*Link*](https://www.oxfamamerica.org/).
+
+# **Sistemas de información**
+
+-   The Global Disaster Alert and Coordination System (GDACS). [*Link*](https://gdacs.org/default.aspx)
+-   The Humanitarian Data Exchange. HDX. [*Link*](https://data.humdata.org/)
+    -   Colombia. [*Link*](https://data.humdata.org/dataset/?sort=last_modified+desc&ext_page_size=25&groups=col)
 
 # **Repositorio de Evaluación de Necesidades**
 
@@ -78,3 +83,9 @@ En este dashboard se muestra la información correspondiente a emergencias por t
 # Reconstrucción
 
 {{< video "https://www.youtube.com/watch?v=1Aq_2kEL4yo" >}} What is disaster recovery
+
+# **Migración**
+
+-   International migration flows. [*Link*](https://data.humdata.org/dataset/international-migration-flows)
+    -   Pnas. Measuring global migration flows using online data. [*Link*](https://www.pnas.org/doi/10.1073/pnas.2409418122)
+-   Internal Displacement Monitoring Centre. [*Link*](https://www.internal-displacement.org/).

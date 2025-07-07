@@ -9,7 +9,7 @@ website:
   sidebar:
     style: "docked"
     search: true
-    collapse-level: 2
+    collapse-level: 1
     contents:
       - section: "Gestión del riesgo de desastres"
         contents:

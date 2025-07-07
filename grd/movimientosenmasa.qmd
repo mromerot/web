@@ -4,13 +4,13 @@ format: html
 editor: visual
 ---
 
-## Instituciones nacionales
+# Instituciones nacionales
 
 -   UNGRD. [*Link*](https://portal.gestiondelriesgo.gov.co/)
 -   Servicio Geológico de Colombia
 -   Semillero de investigación UNalMed – Geohazards. [Link](https://geohazards.com.co/).
 
-## Instituciones y redes internacionales
+# Instituciones y redes internacionales
 
 -   Global landslides databases
     -   Global Fatal Landslide Database. [*Link*](https://www.un-spider.org/links-and-resources/data-sources/global-fatal-landslide-database-gfld-university-sheffield)
@@ -31,33 +31,36 @@ editor: visual
 
     -   ReNDiS - Repertory of mitigation measures for National SoilProtection. [*Link*](https://www.isprambiente.gov.it/en/projects/soil-and-territory/Rendis)
 
-## Amenaza por movimientos en masa
+# Amenaza por movimientos en masa
 
--   SGC.
+-   **SGC**
+
     -   Guía metodológica para estudios de amenaza vulnerabilidad y riesgo por movimientos en masa. SGC. 2015. [*Link*](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/19776).
     -   Sistema de información de movimientos en masa (SIMA). [*Link*](https://simma.sgc.gov.co/#/public/results/)
     -   Mapa nacional integrado de amenaza y susceptibilidad por Movimientos en Masa a escala 1:100.000 y 1:500.000. [*Link*](https://www2.sgc.gov.co/sgc/mapas/Paginas/Imagenes-de-amenazas-.aspx)
+
 -   Lecturas y recursos
+
     -   Fatal landslides in Colombia (from historical times to 2020) and their socio-economic impacts. Garcia-Delgado. Landslides, 2022. [*Link*](https://link.springer.com/article/10.1007/s10346-022-01870-2).
     -   Spatial and temporal landslide distributions using global and open landslide databases. Natural Hazards. 2023. [*Link*](https://link.springer.com/article/10.1007/s11069-023-05848-8)
     -   International Programme on Landslides. [*Link*](https://www.landslides.org/ipl-info/).
     -   Seminarios en deslizamientos. 2021. [*Link*](https://www.seminarioriesgosdeslizamientos.com/). [*Link*](https://www.seminarioriesgosdeslizamientos.com/blank).
 
-{{< video "https://www.youtube.com/watch?v=sJP5EnEsX9Y" >}} Geoamenazas: del monitoreo a la evaluación de escenarios de riesgo.
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/5RvXCx-BJMI" >}} Assessing accuracy of rapid response landslide maps using open-source tools.
 
-Amenaza por movimientos en masa
+{{< video "https://youtu.be/jasmGCWu6Y8?si=i3NeVkLOxY1zbVYW" >}} Stability in motion: Overview of interdisciplinary landslide research at British Geological Survey
+:::
 
-## Evaluación del riesgo por movimientos en masa
+# Evaluación del riesgo por movimientos en masa
 
 ::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/watch?v=sJP5EnEsX9Y" >}} Geoamenazas: del monitoreo a la evaluación de escenarios de riesgo
 
-Evaluación del riesgo por movimientos en masa forestales.
+{{< video "https://youtu.be/Ye1y4L7c3pU?si=NVF4Zl6eS7i1Tdoi" >}} Landslide risk evaluation: tools and tips for risky decisions
 :::
 
-## Comunicación del riesgo por movimientos en masa
-
--   
+# Comunicación del riesgo por movimientos en masa
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/8u3F5f47i_M" >}}
@@ -65,7 +68,7 @@ Evaluación del riesgo por movimientos en masa forestales.
 Comunicación del riesgo por movimientos en masa
 :::
 
-## Reducción del riesgo de movimientos en masa
+# Reducción del riesgo de movimientos en masa
 
 -   Implementar sistemas de alerta temprana.
 -   Reforestar áreas vulnerables y proteger la cobertura vegetal.
@@ -73,7 +76,11 @@ Comunicación del riesgo por movimientos en masa
 -   Realizar obras de estabilización de taludes y drenaje.
 -   Capacitar a la comunidad sobre prevención y autoprotección.
 
-## Manejo de desastres por movimientos en masa
+::: {layout-ncol="2"}
+{{\< video "[https://youtu.be/yllF0xdfFRY"](https://youtu.be/yllF0xdfFRY%22)}} GSI seminar - Engineered and Nature-based Solutions against Flow-type Landslides
+:::
+
+# Manejo de desastres por movimientos en masa
 
 -   Activar los planes de emergencia y evacuación.
 -   Coordinar con las autoridades locales y organismos de socorro.
@@ -87,7 +94,7 @@ Comunicación del riesgo por movimientos en masa
 
 ## Lecturas
 
--   The
+-   Understanding and Reducing Landslide Disaster Risk: Volume 4. [*Link*](https://books.google.com.co/books?id=2pwQEAAAQBAJ)
 
 ## **Entrenamiento**
 
