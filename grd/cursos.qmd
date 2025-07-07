@@ -1,10 +1,10 @@
 ---
-title: "Cursos y entrenamiento"
+title: "Cursos, entrenamiento y redes"
 format: html
 editor: visual
 ---
 
-# **Centros de entrenamiento**
+# **Centros, entrenamiento y redes**
 
 -   **The Australian Disaster Resilience Knowledge Hub**
     -   Emergency planning collection. [*Link*](https://knowledge.aidr.org.au/collections/emergency-planning/).
@@ -42,9 +42,7 @@ editor: visual
 -   UNESCO. Online courses to promote disaster risk reduction awareness. [*Link*](https://en.unesco.org/greencitizens/stories/online-courses-promote-disaster-risk-reduction-awareness). [*Link*](http://elearning.unep.org/moocs/courses).
 -   When Disaster Meets Conflict. [*Link*](https://www.coursera.org/learn/whendisastermeetsconflict).
 
-{{< video "https://www.youtube.com/watch?v=TGH4FMUIEHg&list=PL9jaKxAv72Izbx17XKZhbFLvczH-5t7AV" >}} Building resilience to compound and cascading disaster risks
-
-# El riesgo en la sociedad moderna
+## El riesgo en la sociedad moderna
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/96_I4wEoTjM" >}} 1.1 The History of Risk
@@ -62,6 +60,22 @@ editor: visual
 [Coursera.](https://www.coursera.org/learn/risk-in-modern-society/home/module/1)
 :::
 
+## **Building resilience to compound and cascading disaster risks**
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/TGH4FMUIEHg" >}} Building resilience to compound and cascading disaster risks
+
+{{< video "https://youtu.be/vSq7mV96U4s" >}} Lesson 1：Compound and cascading disaster risks. What are they?
+
+{{< video "https://youtu.be/xtkGBrkzpFI" >}} Lesson 2：Six steps of disaster risk assessment
+
+{{< video "https://youtu.be/R9UrAFUeFIY" >}} Lesson 3：Designing resilience enhancing measures
+
+{{< video "https://youtu.be/B5MqJiRS4Lc" >}} Lesson 4：Adaptive implementation framework
+
+{{< video "https://youtu.be/2mBnTcttTao" >}} Conclusion：Summary of the course
+:::
+
 # Cursos en español
 
 -   Análisis del Riesgo de Desastres y Cambio Climático en Proyectos de Infraestructura. BID. [*Link*](https://cursos.iadb.org/es/temas/infraestructura/analisis-riesgo-desastres-cambio-climatico-proyectos-infraestructura).
@@ -76,6 +90,8 @@ editor: visual
 -   Integrating Gender and Indigenous Factors into Locally-Led Adaptation. [*Link*](https://ap-plat.nies.go.jp/adaptation_literacy/resources/e_learning/ait_lla/index.html)*.*
 -   Mitigation Planning for Tribal Communities. FEMA. [*Link*](https://training.fema.gov/is/courseoverview.aspx?code=IS-350&lang=en)*.*
 
+{{< video "https://youtu.be/V06jgGkSmmM >}} Asia-Pacific Indigenous Studies Seminar Series (April 29) - Indigenous Design and Property Regimes
+
 # Otros temas
 
 -   Fundamentals of Remote Sensing. [*Link*](https://arset.gsfc.nasa.gov/webinars/fundamentals-remote-sensing).
@@ -89,8 +105,16 @@ editor: visual
 
 -   Riesgo por cambio climático en Colombia. Estrategia Climática de Largo Plazo Colombia E2050. [*Link*](https://youtu.be/4v9T0QaI7ZU).
 -   Converge Webinar series. [*Link*](https://converge.colorado.edu/communications/webinar-series).
--   APRU Multi-Hazards Webinar Series. [*Link*](https://apru.org/event/the-apru-multi-hazards-webinar-series-a-new-approach-for-disaster-risk-management-after-covid-19/).
+-   APRU Multi-Hazards. [*Link*](https://www.apru.org/our-work/pacific-rim-challenges/multi-hazards/)*,* Webinar Series. [*Link*](https://apru.org/event/the-apru-multi-hazards-webinar-series-a-new-approach-for-disaster-risk-management-after-covid-19/).
 -   Knowledge Action Network on Emergent Risks and Extreme Events. [*Link*](https://www.risk-kan.org/webinars/)
+
+::: {layout-ncol="2"}
+{{< video"https://youtu.be/RX2H7kacamM" >}} APRU-IRIDeS Multi-Hazards Virtual Summer School 2020 (Part I)
+
+{{< video"https://youtu.be/9725LyLYuc4" >}} APRU-IRIDeS Multi-Hazards Virtual Summer School 2020 (Part II)
+
+APRU Multi-Hazards Webinar Series.
+:::
 
 # **Otros recursos**
 

@@ -1,26 +1,32 @@
 ---
-title: "Indicadores del riesgo de desastres"
+title: "Indicadores de riesgo de desastres"
 format: html
 editor: visual
 ---
 
-## Índices mundiales
+# Índicadores mundiales
 
--   Inform Subnational Risk Index. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index)*. [Link](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Risk/Country-Risk-Profile).*
+## Inform Risk Index
+
+-   Inform Risk Index. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index)*. [Link](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Risk/Country-Risk-Profile).*
     -   Latin America and Caribbean. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Subnational-Risk/Latin-America-and-Caribbean/moduleId/1800/id/368/controller/Admin/action/Results)*.*
--   World Risk Index. [*Link*](https://data.humdata.org/dataset/worldriskindex?). [*Link*](https://www.ireus.uni-stuttgart.de/en/International/WorldRiskIndex/)*.*
--   Pacific Disaster Center Multi Risk index 2024. [*Link*](https://analytics.pdc.org/global-risk-index/)*.*
--   The World Risk report. [*Link*](https://weltrisikobericht.de/worldriskreport/)*.*
-
-![Colombia World Riesk Report](images/Colombia-World-Risk-Report.png){fig-align="left"}
-
-![World Risk Index. [*Link*](https://data.humdata.org/dataset/worldriskindex?). [*Link*](https://www.ireus.uni-stuttgart.de/en/International/WorldRiskIndex/)](https://weltrisikobericht.de/wp-content/uploads/2024/09/WorldRiskIndex-2024.webp){width="500"}
 
 ![INFORM Subnational Risk Index](https://drmkc.jrc.ec.europa.eu/inform-index/portals/0/InfoRM/2016/INFORM%20Graphics%202016/INFORM%20Subnational%20Graphics/Subnational%20Conceptual%20Framework%202016.png){width="600"}
 
+![Colombia World Risk Report](images/Colombia-World-Risk-Report.png){fig-align="left"}
+
+## World Risk Index
+
+-   World Risk Index. [*Link*](https://data.humdata.org/dataset/worldriskindex?). [*Link*](https://www.ireus.uni-stuttgart.de/en/International/WorldRiskIndex/)*.*
+-   The World Risk report. [*Link*](https://weltrisikobericht.de/worldriskreport/)*.*
+
+![World Risk Index. [*Link*](https://data.humdata.org/dataset/worldriskindex?). [*Link*](https://www.ireus.uni-stuttgart.de/en/International/WorldRiskIndex/)](https://weltrisikobericht.de/wp-content/uploads/2024/09/WorldRiskIndex-2024.webp){width="500"}
+
 ![The World Risk Report](https://weltrisikobericht.de/wp-content/uploads/2024/09/The-Structure-of-the-WorldRiskIndex_big.webp){width="800"}
 
-Pacific Disaster Center Multi Risk index 2024. [*Link*](https://analytics.pdc.org/global-risk-index/)
+## Pacific Disaster Center
+
+-   Pacific Disaster Center Multi Risk index 2024. [*Link*](https://analytics.pdc.org/global-risk-index/)*.*
 
 ::: {#viz1751820145622 .tableauPlaceholder style="position: relative"}
 `<noscript><a href='https://analytics.pdc.org/'`{=html} <img src="https://public.tableau.com/static/images/DD/DDB5BHKWH/1_rss.png" alt="GRVA Dashboard Summary " style="border: none"/> </a></noscript>
@@ -100,4 +106,4 @@ Global Disaster Risk Trends. Select a country to view 10-year national trends.
 {{< video "https://youtu.be/_Q5HrQuvzLA">}} INFORM Subnational Risk Analysis Training - Module 1
 :::
 
-##
+#
