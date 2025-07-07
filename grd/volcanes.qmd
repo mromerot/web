@@ -7,6 +7,7 @@ editor: visual
 ## Instituciones nacionales
 
 -   **Servicio Geológico Colombiano**
+    -   Conceptos (ver abajo en la página). [*Link*](https://www2.sgc.gov.co/sgc/volcanes/VolcanNevadoRuiz/Paginas/Mapa-amenaza.aspx)
 
     -   Atlas Geológico de Colombia 2023: Volcanes 2023. [*Link.*](https://datos.sgc.gov.co/datasets/de7da66446854f559e421ea175e53733_0/explore?location=3.253900%2C-75.532621%2C6.96)
 
@@ -26,23 +27,34 @@ editor: visual
 -   International Association of Volcanology and Chemistry of the Earth's Interior. [*Link*](https://www.iavceivolcano.org/)
 -   Visor de emisiones de gases. NOAA. [*Link*](https://satepsanone.nesdis.noaa.gov/pub/OMI/OMISO2/ecuador.html#End).
 
-## [Volcanes de Colombia](https://www.sgc.gov.co/volcanes) (SGC)
+## Volcanes de Colombia (SGC)
 
--   Campo volcánico Guamuéz - Sibundoy
--   Volcán Azufral
--   Volcán Cerro Bravo
--   Volcán Cerro Machín
--   Volcán Cerro Negro
--   Volcán Chiles
--   Volcán Cumbal
--   Volcán Doña Juana
--   Volcán Galeras
--   Volcán las Ánimas
--   Volcán Nevado de Santa Isabel
--   Volcán Nevado del Huila
--   Volcán Nevado del Ruiz
+-   Mapa SGC y alertas. [*Link*](https://www.sgc.gov.co/volcanes)
+    -   Campo volcánico Guamuéz - Sibundoy
 
-## Mapa de volcanes
+    -   Volcán Azufral
+
+    -   Volcán Cerro Bravo
+
+    -   Volcán Cerro Machín
+
+    -   Volcán Cerro Negro
+
+    -   Volcán Chiles
+
+    -   Volcán Cumbal
+
+    -   Volcán Doña Juana
+
+    -   Volcán Galeras
+
+    -   Volcán las Ánimas
+
+    -   Volcán Nevado de Santa Isabel
+
+    -   Volcán Nevado del Huila
+
+    -   Volcán Nevado del Ruiz
 
 ## Amenaza volcánica
 
@@ -85,7 +97,8 @@ Evaluación del riesgo volcánico.
 
 ## Comunicación del riesgo volcánico
 
--   Esquema estados de alerta por actividad volcánica en Colombia. [*Link*](https://www2.sgc.gov.co/Paginas/estados-de-alerta-volcanes.aspx). Alerta verde, alerta amarilla, alerta naranja, alerta roja.
+-   Esquema estados de alerta por actividad volcánica en Colombia. [*Link*](https://www2.sgc.gov.co/Paginas/estados-de-alerta-volcanes.aspx).
+    -   Alerta verde, alerta amarilla, alerta naranja, alerta roja.
 -   Guía para comunicar sobre volcanes en Colombia. [*Link*](https://www2.sgc.gov.co/Noticias/Paginas/Consulta-aqui-la-guia-para-comunicar-sobre-volcanes-en-Colombia.aspx)
 -   Volcán, riesgo y territorio. [*Link*](http://www.volcanriesgoyterritorio.gov.co/)
 -   Estrategias del Servicio Geológico Colombiano en la búsqueda de la apropiación social del conocimiento geocientífico y la gestión del riesgo volcánico del Nevado del Ruiz. 2023. REDER. [*Link*](https://doi.org/10.55467/reder.v7i2.122)
