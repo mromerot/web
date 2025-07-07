@@ -6,45 +6,18 @@ editor: visual
 
 # Índicadores nacionales
 
+-   Pacific Disaster Center.
+    -   Colombia’s data-driven approach to creating safer, more resilient communities. [*Link*](https://www.pdc.org/colombias-data-driven-approach-to-safer-resilient-communities/).
+    -   NDPBA Colombia Final Report. 2025. [*Link*](https://www.pdc.org/document/ndpba-colombia-final-report/)*.*
 -   Atlas de Riesgo de Colombia: revelando los desastres latentes. Unidad Nacional para la Gestión del Riesgo de Desastres. 2018. [*Link*](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/27179).
 -   Inform Risk. 2015. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Subnational-Risk/Colombia).
--   PDC. Colombia’s data-driven approach to creating safer, more resilient communities. [*Link*](https://www.pdc.org/colombias-data-driven-approach-to-safer-resilient-communities/).
-    -   NDPBA Colombia Final Report. 2025. [*Link*](https://www.pdc.org/document/ndpba-colombia-final-report/)*.*
 
-Ejemplos de indicadores departamentales
+![INFORM subnational model of Colombia](https://drmkc.jrc.ec.europa.eu/inform-index/portals/0/InfoRM/2016/INFORM%20Graphics%202016/INFORM%20Subnational%20Graphics/INFORM_Colombia_2015_v2_HAZARDS.png){width="500"}
 
--   Natural Hazard Risk Assessment. Weather.gov. [*Link*](https://www.weather.gov/rlx/HazardRiskAssessment)
-
-# Índicadores mundiales
-
-## Lecturas
-
-Natural hazard risk assessments at the global scale. 2020. NHESS. [*Link*](https://nhess.copernicus.org/articles/20/1069/2020/)
-
-## Inform Risk Index
-
--   Inform Risk Index. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index)*. [Link](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Risk/Country-Risk-Profile).*
-    -   Latin America and Caribbean. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Subnational-Risk/Latin-America-and-Caribbean/moduleId/1800/id/368/controller/Admin/action/Results)*.*
-
-![INFORM Subnational Risk Index](https://drmkc.jrc.ec.europa.eu/inform-index/portals/0/InfoRM/2016/INFORM%20Graphics%202016/INFORM%20Subnational%20Graphics/Subnational%20Conceptual%20Framework%202016.png){width="600"}
-
-![Colombia World Risk Report](images/Colombia-World-Risk-Report.png){fig-align="left"}
-
-## World Risk Index
-
--   World Risk Index. [*Link*](https://data.humdata.org/dataset/worldriskindex?). [*Link*](https://www.ireus.uni-stuttgart.de/en/International/WorldRiskIndex/)*.*
--   The World Risk report. [*Link*](https://weltrisikobericht.de/worldriskreport/)*.*
-
-![World Risk Index. [*Link*](https://data.humdata.org/dataset/worldriskindex?). [*Link*](https://www.ireus.uni-stuttgart.de/en/International/WorldRiskIndex/)](https://weltrisikobericht.de/wp-content/uploads/2024/09/WorldRiskIndex-2024.webp){width="500"}
-
-![The World Risk Report](https://weltrisikobericht.de/wp-content/uploads/2024/09/The-Structure-of-the-WorldRiskIndex_big.webp){width="800"}
-
-## Pacific Disaster Center
-
--   Pacific Disaster Center Multi Risk index 2024. [*Link*](https://analytics.pdc.org/global-risk-index/)*.*
+Pacific Disaster Center Multi Risk index 2024. [*Link*](https://analytics.pdc.org/global-risk-index/)*.*
 
 ::: {#viz1751820145622 .tableauPlaceholder style="position: relative"}
-`<noscript><a href='https://analytics.pdc.org/'`{=html} <img src="https://public.tableau.com/static/images/DD/DDB5BHKWH/1_rss.png" alt="GRVA Dashboard Summary " style="border: none"/> </a></noscript>
+`<noscript><a href='https://analytics.pdc.org/'`{=html} ![GRVA Dashboard Summary](https://public.tableau.com/static/images/DD/DDB5BHKWH/1_rss.png){alt="GRVA Dashboard Summary " style="border: none"} </a></noscript>
 
 <object class="tableauViz" style="display:none;">
 
@@ -76,6 +49,36 @@ Natural hazard risk assessments at the global scale. 2020. NHESS. [*Link*](https
   vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 ```
+
+Ejemplos de indicadores estatales o departamentales
+
+-   Natural Hazard Risk Assessment. Weather.gov. [*Link*](https://www.weather.gov/rlx/HazardRiskAssessment)
+
+# Índicadores mundiales
+
+## Lecturas
+
+-   Natural hazard risk assessments at the global scale. 2020. NHESS. [*Link*](https://nhess.copernicus.org/articles/20/1069/2020/)
+
+## Inform Risk Index
+
+-   Inform Risk Index. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index)*. [Link](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Risk/Country-Risk-Profile).*
+    -   Latin America and Caribbean. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Subnational-Risk/Latin-America-and-Caribbean/moduleId/1800/id/368/controller/Admin/action/Results)*.*
+
+![INFORM Subnational Risk Index](https://drmkc.jrc.ec.europa.eu/inform-index/portals/0/InfoRM/2016/INFORM%20Graphics%202016/INFORM%20Subnational%20Graphics/Subnational%20Conceptual%20Framework%202016.png){width="600"}
+
+![Colombia World Risk Report](images/Colombia-World-Risk-Report.png){fig-align="left"}
+
+## World Risk Index
+
+-   World Risk Index. [*Link*](https://data.humdata.org/dataset/worldriskindex?). [*Link*](https://www.ireus.uni-stuttgart.de/en/International/WorldRiskIndex/)*.*
+-   The World Risk report. [*Link*](https://weltrisikobericht.de/worldriskreport/)*.*
+
+![World Risk Index. [*Link*](https://data.humdata.org/dataset/worldriskindex?). [*Link*](https://www.ireus.uni-stuttgart.de/en/International/WorldRiskIndex/)](https://weltrisikobericht.de/wp-content/uploads/2024/09/WorldRiskIndex-2024.webp){width="500"}
+
+![The World Risk Report](https://weltrisikobericht.de/wp-content/uploads/2024/09/The-Structure-of-the-WorldRiskIndex_big.webp){width="800"}
+
+## Pacific Disaster Center
 
 Global Disaster Risk Trends. Select a country to view 10-year national trends.
 
@@ -112,6 +115,8 @@ Global Disaster Risk Trends. Select a country to view 10-year national trends.
   vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 ```
+
+# Videos
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/debgvIuycn4">}} World Risk Index
