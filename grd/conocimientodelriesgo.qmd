@@ -103,23 +103,35 @@ editor: visual
 
 ## Metodologias
 
--   Understanding disaster risk: foundational concepts and principles. [*Link*](https://www.preventionweb.net/understanding-disaster-risk#components).
+-   Understanding disaster risk: foundational concepts and principles. UNDRR. [*Link*](https://www.preventionweb.net/understanding-disaster-risk#components).
+
+    -   Why reducing risk matters
+    -   Components of risk
+    -   Risk drivers
+    -   Key concepts
+    -   The DRR glossary
+    -   Engage in DRR
+
+-   Disaster, Planning and Development: Managing Natural Hazards to Reduce Loss. OEA. [*Link*](https://www.oas.org/DSD/publications/Unit/oea54e/begin.htm#Contents)*,* [*Link*](https://www.oas.org/DSD/publications/Unit/oea54e/ch13.htm).
+
+-   Oregon Natural Hazards Risk Assessment Upgrade. [*Link*](https://www.oregon.gov/lcd/nh/pages/risk-assessment-upgrade.aspx)*. [Link](https://www.oregon.gov/lcd/NH/Pages/Mitigation-Plan-Update.aspx). [Youtube](https://www.youtube.com/playlist?list=PLtwNVSIg2TZiYZBdo5pRNY7bsx9dp5PF1)*
+
+    ![](images/Oregon.png){width="500"}
 
 <!-- -->
 
--   **FEMA**
+**FEMA**
 
-    -   National Risk Index Documentation. [*Link*](https://www.google.com/search?q=National+Risk+Index+Technical+Documentation&rlz=1C5OZZY_enCO1132CO1132&oq=National+Risk+Index+Technical+Documentation&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg7MgYIAhBFGDzSAQcxMTJqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8#:~:text=Resultados%20de%20b%C3%BAsqueda-,National%20Risk%20Index%20Technical%20Documentation,https%3A//www.fema.gov%20%E2%80%BA%20default%20%E2%80%BA%20files%20%E2%80%BA%20documents,-PDF).
+-   National Risk Index Documentation. [*Link*](https://www.fema.gov/flood-maps/products-tools/national-risk-index).
+-   National Risk Index for Natural Hazards. [*Visor*](https://hazards.fema.gov/nri/map).
+-   [National Risk Index Hazard Info Table](https://www.arcgis.com/home/item.html?id=1cb56c682f6f4ce08a07ff372a7908b0#)
+-   Updating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. [*Link*](https://www.idrimjournal.com/article/11719-updating-the-indicators-of-disaster-risk-and-risk-management-for-the-americas).
+-   Earthquake Hazard Maps. [*Link*](https://www.fema.gov/es/emergency-managers/risk-management/earthquake/hazard-maps).
+-   Flood Map. [*Link*](https://www.fema.gov/glossary/flood-map).
 
-    -   National Risk Index for Natural Hazards. [*Visor*](https://hazards.fema.gov/nri/map).
-
-    -   [National Risk Index Hazard Info Table](https://www.arcgis.com/home/item.html?id=1cb56c682f6f4ce08a07ff372a7908b0#)
-
-    -   Updating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. [*Link*](https://www.idrimjournal.com/article/11719-updating-the-indicators-of-disaster-risk-and-risk-management-for-the-americas).
-
-    -   Earthquake Hazard Maps. [*Link*](https://www.fema.gov/es/emergency-managers/risk-management/earthquake/hazard-maps).
-
-    -   Flood Map. [*Link*](https://www.fema.gov/glossary/flood-map).
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=TpOX6iZfrnk" >}} Mapping Risk: The National Risk Index for Natural Hazards
+:::
 
 ## Herramientas para el análisis de riesgos
 
@@ -137,8 +149,6 @@ editor: visual
     -   Assessing global exposure and vulnerability towards natural hazards: the Disaster Risk Index. Peduzzi, et al. 2009, Nat. Hazards Earth Syst. [Link](https://nhess.copernicus.org/articles/9/1149/2009/)
 
 ::: {layout-ncol="2"}
-{{< video "https://www.youtube.com/watch?v=TpOX6iZfrnk" >}} Mapping Risk: The National Risk Index for Natural Hazards
-
 {{< video "https://www.youtube.com/watch?v=xtkGBrkzpFI" >}} Lesson 2：Six steps of disaster risk assessment
 
 {{< video "https://youtu.be/TGH4FMUIEHg" >}} Building resilience to compound and cascading disaster risks
@@ -198,7 +208,6 @@ Risk communication
     -   Lennart Sjöberg. [*Link*](https://scholar.google.com/citations?user=SF8DdSoAAAAJ&hl=en&oi=sra).
     -   Sander van der Linden. [*Link*](https://scholar.google.com/citations?user=gUnA_QQAAAAJ&hl=en&oi=ao).
 
-
 ::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/watch?v=dNgrKQo0gMg" >}} Risk perception in modern society
 
@@ -208,10 +217,12 @@ Risk communication
 :::
 
 <video width="640" controls>
-<source src="https://d3c33hcgiwev3.cloudfront.net/7GphbYWUQVOqYW2FlOFTOw.processed/full/720p/index.webm?Expires=1752019200&Signature=gwkC~s6x1RwG5fsjEEMpKtbyqktTzUPkYSM1WZnk-WftZlJNtBxbe-U4gfl1k57JNJq-HVemoHWEDB~vTml6WfUmyTi-VWl-Qu0B2F9lEh3rYXZdLsTXhu5VaXg5ak54XNhCXaF3jbiFP0ilgIJm5RkvvzScCziJMae7rsVPtfs_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A" type="video/webm">
-</video>
-La percepción del riesgo y diversos abordajes de la gestión integral del riesgo. Coursera. [*Link*](https://www.coursera.org/lecture/gestion-riesgo/la-percepcion-del-riesgo-y-diversos-abordajes-de-la-gestion-integral-del-riesgo-8wR3Q).
 
+<source src="https://d3c33hcgiwev3.cloudfront.net/7GphbYWUQVOqYW2FlOFTOw.processed/full/720p/index.webm?Expires=1752019200&Signature=gwkC~s6x1RwG5fsjEEMpKtbyqktTzUPkYSM1WZnk-WftZlJNtBxbe-U4gfl1k57JNJq-HVemoHWEDB~vTml6WfUmyTi-VWl-Qu0B2F9lEh3rYXZdLsTXhu5VaXg5ak54XNhCXaF3jbiFP0ilgIJm5RkvvzScCziJMae7rsVPtfs_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A" type="video/webm">
+
+</video>
+
+La percepción del riesgo y diversos abordajes de la gestión integral del riesgo. Coursera. [*Link*](https://www.coursera.org/lecture/gestion-riesgo/la-percepcion-del-riesgo-y-diversos-abordajes-de-la-gestion-integral-del-riesgo-8wR3Q).
 
 # Riesgos compuestos, en cascada, y sistémicos
 
@@ -231,13 +242,11 @@ La percepción del riesgo y diversos abordajes de la gestión integral del riesg
 Compound, cascading and systemic risk
 :::
 
-
 ## Eventos compuestos
 
 -   Guidelines for Studying Diverse Types of Compound Weather and Climate Events. 2021. [*Link*](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021EF002340)
 -   High impact compound events in Australia. [*Link*](https://climateextremes.org.au/high-impact-compound-events-in-australia/)
 -   Significantly wetter or drier future conditions for one to two thirds of the world’s population. 2024. Nature Comm. [*Link*](https://www.nature.com/articles/s41467-023-44513-3)
-
 
 ::: {layout-ncol="2"}
 {{< video "https://emanuele.bevacqua.eu/wp-content/uploads/2021/12/Bevacqua_AGU2021_video.mov" >}} [*Guidelines for studying diverse types of compound weather and climate events*](https://emanuele.bevacqua.eu/online-talks/)
@@ -265,7 +274,6 @@ Eventos compuestos
 Videos sobre resiliencia
 :::
 
-
 # **Análisis forense de desastres**
 
 -   UNDRR. Disaster forensics: Learning from the past to build a resilient future. [*Link*](https://www.undrr.org/news/disaster-forensics-learning-past-build-resilient-future)
@@ -280,7 +288,6 @@ Videos sobre resiliencia
 :::
 
 ![Root causes of risk. [UNDRR](https://www.undrr.org/gar/gar2024-special-report)](https://www.undrr.org/sites/default/files/2024-09/Tree_Infographic.jpg){fig-align="left" width="350"}
-
 
 ## Disaster Forensics - UNDRR
 

@@ -8,9 +8,15 @@ editor: visual
 
 -   **Climate Informed Risk Index.** [Link](https://github.com/fulton-ring/nri-future-risk)**.** This tool is a replica of the National Risk Index (NRI) Future Risk tool, which was removed from the public by the US Government in February, 2025. It references the following datasets which were downloaded before the tool was taken down.
 
+-   **CLIMAAX CRA Handbook**. [Link](https://handbook.climaax.eu/intro.html).[Link](https://github.com/CLIMAAX/crabook). A regional climate risk assessment is often needed to design or update a climate adaptation and/or risk management plan. Regular updates are needed considering changing climate risk profiles
+
+-   **Copernicus Browser.** [Link](https://github.com/eu-cdse/copernicus-browser).
+
 -   **Global Facility for Disaster Reduction and Recovery (GFDRR)**. [Link](https://github.com/GFDRR). GFDRR supports developing countries on disaster risk reduction and climate change adaptation. 
 
     -   **CCDR-tools**. [Link](https://gfdrr.github.io/CCDR-tools/home.html).
+
+-   **Hazus**. FEMA Natural Hazards Risk Assessment Program. [*Link*](https://github.com/nhrap-hazus)*.*
 
 -   **Disaster-Risk-Analysis-Platform**. [Link](https://github.com/invcble/Disaster-Risk-Analysis-Platform). Welcome to our project, "Disaster Risk Analytics Platform," developed with an aim to provide comprehensive disaster risk analysis for investment firms operating within the U.S. markets. Using advanced statistical analysis and deep learning technologies, this platform helps predict potential disasters and their financial impacts on various states, aiding firms in making informed, resilient investment decisions.
 
@@ -19,10 +25,6 @@ editor: visual
 -   **TOMRAP – Tool for Multi-hazard Risk Assessment in Python.** [Link](https://github.com/BritishGeologicalSurvey/TOMRAP). The project builds on outputs from the METEOR project (NEE6423R) to generate a tool that can be used in future projects to assess multi-hazard risk. The METEOR model was initially developed in ArcGIS. By streamlining this code in Python we will make multi-hazard risk analysis faster and more widely applicable. 
 
 -   **Seismic Hazard and Risk Analysis calculations.** [Link](https://github.com/bakerjw/seismic-hazard-and-risk). Supporting calculations for the textbook Seismic Hazard and Risk Analysis.
-
--   **CLIMAAX CRA Handbook**. [Link](https://handbook.climaax.eu/intro.html).[Link](https://github.com/CLIMAAX/crabook). A regional climate risk assessment is often needed to design or update a climate adaptation and/or risk management plan. Regular updates are needed considering changing climate risk profiles
-
--   **Copernicus Browser.** [Link](https://github.com/eu-cdse/copernicus-browser).
 
 -   **Project Pythia**. [Link](https://projectpythia.org/). An education and training hub for the geoscientific Python community
 
