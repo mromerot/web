@@ -26,10 +26,14 @@ website:
             href: grd/manejodedesastres.qmd
           - text: "Ciencia y tecnología"
             href: grd/cienciaytecnologia.qmd
-          - text: "Cursos en GRD"
-            href: grd/cursos.qmd
-          - text: "Educacion"
-            href: grd/educacion.qmd
+          - section: "Educacion y recursos"
+            contents:
+            - text: "Educación"
+              href: grd/educacion.qmd
+            - text: "Cursos en GRD"
+              href: grd/cursos.qmd
+            - text: "Plataformas y redes"
+              href: grd/plataformas-redes.qmd
           - text: "Repositorios FAIR"
             href: grd/repositorios.qmd
           - text: "Sistemas de alerta temprana"
