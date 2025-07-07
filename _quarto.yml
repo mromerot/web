@@ -9,14 +9,17 @@ website:
   sidebar:
     style: "docked"
     search: true
-    collapse-level: 1
+    collapse-level: 2
     contents:
       - section: "Gestión del riesgo de desastres"
         contents:
           - text: "Gestión del riesgo de desastres"
             href: grd/gestiondelriesgo.qmd
-          - text: "Conocimiento del riesgo"
+          - section: "Conocimiento del riesgo"
             href: grd/conocimientodelriesgo.qmd
+            contents:
+            - text: "Indicadores mundiales"
+              href: grd/conocimientodelriesgo-indicadores.qmd
           - text: "Reducción del riesgo"
             href: grd/reducciondelriesgo.qmd
           - text: "Manejo de desastres"
@@ -50,7 +53,9 @@ website:
           - text: "Amazonas"
             href: grd/amazonas.qmd
       - section: "Gestión del cambio climático"
-        href: gcc/gestion-cambio-climatico.qmd
+        contents:
+          - text: "Gestión del cambio climático"
+            href: gcc/gestion-cambio-climatico.qmd
       - section: "Gestión de proyectos"
         contents:
           - text: "Gestión de proyectos de CTeI"

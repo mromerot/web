@@ -14,7 +14,7 @@ editor: visual
     -   `quarto render` para renderizar las páginas
     -   `quarto preview` vista preliminar
     -   `quarto check` revisión de configuración
-    -    `quarto --help` todas las ayudas 
+    -   `quarto --help` todas las ayudas
 -   Para cargar la página: `commit and push`
     -   git add .
     -   git commit -m "descripción actualización"
