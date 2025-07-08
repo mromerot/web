@@ -26,16 +26,16 @@ website:
             href: grd/manejodedesastres.qmd
           - text: "Ciencia y tecnología"
             href: grd/cienciaytecnologia.qmd
-          - section: "Educacion y recursos"
+          - text: "Educación"
+            href: grd/educacion.qmd
+          - section: "Cursos, redes y recursos"
             contents:
-            - text: "Educación"
-              href: grd/educacion.qmd
             - text: "Cursos en GRD"
               href: grd/cursos.qmd
             - text: "Plataformas y redes"
               href: grd/plataformas-redes.qmd
-          - text: "Repositorios FAIR"
-            href: grd/repositorios.qmd
+            - text: "Repositorios FAIR"
+              href: grd/repositorios.qmd
           - text: "Sistemas de alerta temprana"
             href: grd/sat.qmd
           - text: "Amenazas extraterrestres"
@@ -90,8 +90,6 @@ website:
             href: matemdatascience/cienciadedatos.qmd
           - text: "Inteligencia artificial"
             href: matemdatascience/ia.qmd
-          - text: "Quarto atajos"
-            href: matemdatascience/quarto-atajos.qmd
       - section: "Vida laboral"
         contents:
           - text: "Café"
@@ -106,6 +104,8 @@ website:
             href: cv/cv.qmd
           - text: "Mis publicaciones"
             href: cv/publicaciones.qmd
+      - section: "Quarto atajos"
+        href: matemdatascience/quarto-atajos.qmd
 
 format:
   html:
