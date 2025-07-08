@@ -12,13 +12,26 @@ editor: visual
 ## Instituciones internacionales
 
 -   Global Earthquake Model Foundation. [*Link*](https://www.globalquakemodel.org/).
--   
+-   EPI Centre. UK. [*Link*](https://www.ucl.ac.uk/epicentre/)*.*
+    -   UNESCO Chair Online Course Series.[*Link*](https://youtube.com/playlist?list=PLONz_E1ldJZuY_SragFmfd9TYssZOAotW&si=-LoRqEitnWUqI7Ng)
+
+    -   EPICentre Seminars[*Link*](https://youtube.com/playlist?list=PLONz_E1ldJZtC3xDaTbXV26dXe07fydAT&si=5D9NLz8XlZNGlmY_)
+
+::: {layout-ncol="2"}
+{{< video "https://youtube.com/playlist?list=PLONz_E1ldJZtC3xDaTbXV26dXe07fydAT&si=359FfXv-a6QQpWr5" >}} EPI Seminars
+:::
 
 ## Programas internacionales
 
 -   OpenQuake - Plataforma. [*Link*](https://platform.openquake.org/).
 -   Compilation and data manipulation scripts. [*Link*](https://github.com/OpenDRR/model-factory).
 -   Geopoderes Webinar. [*Link*](http://www.geopoderes.com/webinars/).
+
+## Escuelas seguras
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/Z0sDDR24TbE" >}} EPICentre Seminars - A decision-making framework for school infrastructure improvement
+:::
 
 ## Amenaza sísmica
 
@@ -36,7 +49,7 @@ editor: visual
 
 {{< video "https://youtu.be/e5X4baH1jMA" >}} Webinar AIS: Presentación de la amenaza sísmica de AIS 300 y plataforma SAGA
 
-{{< video "https://www.youtube.com/live/vhOXSfuLyN8" >}} Modelo Nacional de Riesgo Sísmico de Colombia: Trabajo en equipo y oportunidades de innovación
+{{< video "https://www.youtube.com/embed/vhOXSfuLyN8" >}} Modelo Nacional de Riesgo Sísmico de Colombia: Trabajo en equipo y oportunidades de innovación
 
 {{< video "https://youtu.be/_9VEYORBAi4" >}} Plataforma AIS Saga
 
@@ -46,6 +59,12 @@ Amenaza sísmica
 ## Evaluación del riesgo por amenaza sísmica
 
 -   Why is Probabilistic Seismic Hazard Analysis (PSHA) still used?. 2017. [*Link*](https://www.sciencedirect.com/science/article/pii/S0031920116303016)
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/bXNtr6lSKQI" >}} Earthquake hazard and risk assessment (Webinar)
+
+{{< video "https://youtu.be/JseNVG8Xp9g" >}} Earthquake Risk Assessment: Current Challenges & Future Trends
+:::
 
 ## Comunicación del riesgo
 
