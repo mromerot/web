@@ -104,8 +104,13 @@ website:
             href: cv/cv.qmd
           - text: "Mis publicaciones"
             href: cv/publicaciones.qmd
-      - section: "Quarto atajos"
-        href: matemdatascience/quarto-atajos.qmd
+      - section: "Quarto"
+        contents:
+          - text: "Atajos de Quarto"
+            href: quarto/quarto-atajos.qmd
+          - text: "Proyectos de Quarto"
+            href: quarto/quarto-proyectos.qmd
+
 
 format:
   html:

@@ -642,6 +642,18 @@
     ]
   },
   {
+    "objectID": "grd/conocimiento-indicadores.html#emdat",
+    "href": "grd/conocimiento-indicadores.html#emdat",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "EmDat",
+    "text": "EmDat\n\nEM-DAT International Disaster Database. Link.\n\nEM-DAT Documentation. Link.\n\n\n\n\n\nEmDat\n\n\n EmDat",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo",
+      "Indicadores de riesgo nacionales y mundiales"
+    ]
+  },
+  {
     "objectID": "grd/conocimiento-indicadores.html#inform-risk-index",
     "href": "grd/conocimiento-indicadores.html#inform-risk-index",
     "title": "Indicadores de riesgo de desastres",
@@ -1204,96 +1216,6 @@
     "crumbs": [
       "Matemáticas y ciencia de datos",
       "Inteligencia artificial"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/quarto-atajos.html",
-    "href": "matemdatascience/quarto-atajos.html",
-    "title": "Atajos para Quarto",
-    "section": "",
-    "text": "Reproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link",
-    "crumbs": [
-      "Quarto atajos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/quarto-atajos.html#recursos-de-ayuda",
-    "href": "matemdatascience/quarto-atajos.html#recursos-de-ayuda",
-    "title": "Atajos para Quarto",
-    "section": "",
-    "text": "Reproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link",
-    "crumbs": [
-      "Quarto atajos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/quarto-atajos.html#publicar",
-    "href": "matemdatascience/quarto-atajos.html#publicar",
-    "title": "Atajos para Quarto",
-    "section": "Publicar",
-    "text": "Publicar\n\nEn Terminal:\n\nquarto render para renderizar las páginas\nquarto preview vista preliminar\nquarto check revisión de configuración\nquarto --help todas las ayudas\n\nPara cargar la página: commit and push\n\ngit add .\ngit commit -m “descripción actualización”\ngit push\n\nTo validate the YAML, run: quarto check",
-    "crumbs": [
-      "Quarto atajos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/quarto-atajos.html#tabsets",
-    "href": "matemdatascience/quarto-atajos.html#tabsets",
-    "title": "Atajos para Quarto",
-    "section": "Tabsets",
-    "text": "Tabsets\n::: {.panel-tabset}\n### Tab A\nContent for `Tab A`\n### Tab B\nContent for `Tab B`\n:::",
-    "crumbs": [
-      "Quarto atajos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/quarto-atajos.html#insertar-elementos-en-dos-columnas",
-    "href": "matemdatascience/quarto-atajos.html#insertar-elementos-en-dos-columnas",
-    "title": "Atajos para Quarto",
-    "section": "Insertar elementos en dos columnas",
-    "text": "Insertar elementos en dos columnas\n::: {layout-ncol=2} \n\nInserte algo acá\n\nTexto de la caja (opcional)\n:::",
-    "crumbs": [
-      "Quarto atajos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/quarto-atajos.html#insertar-videos",
-    "href": "matemdatascience/quarto-atajos.html#insertar-videos",
-    "title": "Atajos para Quarto",
-    "section": "Insertar videos",
-    "text": "Insertar videos\nLlamar con barra / e insertar `Shotcode`\n\nEntre corchetes colocar `video = \"link\"`\n\nInsertar video de un live: cambiar \"live\" por \"embed\"\nhttps://www.youtube.com/embed/srgbUPu9Mo4",
-    "crumbs": [
-      "Quarto atajos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/quarto-atajos.html#insertar-imagenes",
-    "href": "matemdatascience/quarto-atajos.html#insertar-imagenes",
-    "title": "Atajos para Quarto",
-    "section": "Insertar imagenes",
-    "text": "Insertar imagenes\nInsertar imagen\n\n![](https://mdg.imgix.net/assets/images/markdown-flowchart.png?auto=format&fit=clip&q=40&w=1080)",
-    "crumbs": [
-      "Quarto atajos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/quarto-atajos.html#callout-blocks",
-    "href": "matemdatascience/quarto-atajos.html#callout-blocks",
-    "title": "Atajos para Quarto",
-    "section": "Callout blocks",
-    "text": "Callout blocks\nThere are five different types of callouts available: note , warning, important , tip , caution . The color and icon will be different depending upon the type that you select. Here are what the various types look like in HTML output.\n{.callout-note collapse=\"true\"} Note that there are five types of callouts, including:\n`note` , `warning,` `important` , `tip` , `caution`. \n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nCallouts provide a simple way to attract attention, for example, to this warning.\n\n\n\n\n\n\n\n\nThis is Important\n\n\n\nDanger, callouts will really improve your writing.\n\n\n\n\n\n\n\n\nTip With Title\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse [with minimal atribute]\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user and minimal atributes with {.callout-caution collapse=\"true\" style=\"color: purple\" appearance=\"minimal\"}",
-    "crumbs": [
-      "Quarto atajos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/quarto-atajos.html#texto-desplegable",
-    "href": "matemdatascience/quarto-atajos.html#texto-desplegable",
-    "title": "Atajos para Quarto",
-    "section": "Texto desplegable",
-    "text": "Texto desplegable\n\n\nTexto desplegable\n\n&lt;details&gt; &lt;summary&gt;Título del texto desplegable&lt;/summary&gt;\n-   Contenido\n-   Contenido\n-   Contenido\n&lt;/details&gt;",
-    "crumbs": [
-      "Quarto atajos"
     ]
   },
   {
@@ -2471,15 +2393,102 @@
     ]
   },
   {
-    "objectID": "grd/conocimiento-indicadores.html#emdat",
-    "href": "grd/conocimiento-indicadores.html#emdat",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "EmDat",
-    "text": "EmDat\n\nEM-DAT International Disaster Database. Link.\n\nEM-DAT Documentation. Link.\n\n\n\n\n\nEmDat\n\n\n EmDat",
+    "objectID": "quarto/quarto-atajos.html",
+    "href": "quarto/quarto-atajos.html",
+    "title": "Quarto atajos",
+    "section": "",
+    "text": "Reproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link",
     "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo",
-      "Indicadores de riesgo nacionales y mundiales"
+      "Quarto",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "quarto/quarto-atajos.html#recursos-de-ayuda",
+    "href": "quarto/quarto-atajos.html#recursos-de-ayuda",
+    "title": "Quarto atajos",
+    "section": "",
+    "text": "Reproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link",
+    "crumbs": [
+      "Quarto",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "quarto/quarto-atajos.html#publicar",
+    "href": "quarto/quarto-atajos.html#publicar",
+    "title": "Quarto atajos",
+    "section": "Publicar",
+    "text": "Publicar\n\nEn Terminal:\n\nquarto render para renderizar las páginas\nquarto preview vista preliminar\nquarto check revisión de configuración\nquarto --help todas las ayudas\n\nPara cargar la página: commit and push\n\ngit add .\ngit commit -m “descripción actualización”\ngit push\n\nTo validate the YAML, run: quarto check",
+    "crumbs": [
+      "Quarto",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "quarto/quarto-atajos.html#tabsets",
+    "href": "quarto/quarto-atajos.html#tabsets",
+    "title": "Quarto atajos",
+    "section": "Tabsets",
+    "text": "Tabsets\n::: {.panel-tabset}\n### Tab A\nContent for `Tab A`\n### Tab B\nContent for `Tab B`\n:::",
+    "crumbs": [
+      "Quarto",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "quarto/quarto-atajos.html#insertar-elementos-en-dos-columnas",
+    "href": "quarto/quarto-atajos.html#insertar-elementos-en-dos-columnas",
+    "title": "Quarto atajos",
+    "section": "Insertar elementos en dos columnas",
+    "text": "Insertar elementos en dos columnas\n::: {layout-ncol=2} \n\nInserte algo acá\n\nTexto de la caja (opcional)\n:::",
+    "crumbs": [
+      "Quarto",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "quarto/quarto-atajos.html#insertar-videos",
+    "href": "quarto/quarto-atajos.html#insertar-videos",
+    "title": "Quarto atajos",
+    "section": "Insertar videos",
+    "text": "Insertar videos\nLlamar con barra / e insertar `Shotcode`\n\nEntre corchetes colocar `video = \"link\"`\n\nInsertar video de un live: cambiar \"live\" por \"embed\"\nhttps://www.youtube.com/embed/srgbUPu9Mo4",
+    "crumbs": [
+      "Quarto",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "quarto/quarto-atajos.html#insertar-imagenes",
+    "href": "quarto/quarto-atajos.html#insertar-imagenes",
+    "title": "Quarto atajos",
+    "section": "Insertar imagenes",
+    "text": "Insertar imagenes\nInsertar imagen\n\n![](https://mdg.imgix.net/assets/images/markdown-flowchart.png?auto=format&fit=clip&q=40&w=1080)",
+    "crumbs": [
+      "Quarto",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "quarto/quarto-atajos.html#callout-blocks",
+    "href": "quarto/quarto-atajos.html#callout-blocks",
+    "title": "Quarto atajos",
+    "section": "Callout blocks",
+    "text": "Callout blocks\nThere are five different types of callouts available: note , warning, important , tip , caution . The color and icon will be different depending upon the type that you select. Here are what the various types look like in HTML output.\n{.callout-note collapse=\"true\"} Note that there are five types of callouts, including:\n`note` , `warning,` `important` , `tip` , `caution`. \n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nCallouts provide a simple way to attract attention, for example, to this warning.\n\n\n\n\n\n\n\n\nThis is Important\n\n\n\nDanger, callouts will really improve your writing.\n\n\n\n\n\n\n\n\nTip With Title\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse [with minimal atribute]\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user and minimal atributes with {.callout-caution collapse=\"true\" style=\"color: purple\" appearance=\"minimal\"}",
+    "crumbs": [
+      "Quarto",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "quarto/quarto-atajos.html#texto-desplegable",
+    "href": "quarto/quarto-atajos.html#texto-desplegable",
+    "title": "Quarto atajos",
+    "section": "Texto desplegable",
+    "text": "Texto desplegable\n\n\nTexto desplegable\n\n&lt;details&gt; &lt;summary&gt;Título del texto desplegable&lt;/summary&gt;\n-   Contenido\n-   Contenido\n-   Contenido\n&lt;/details&gt;",
+    "crumbs": [
+      "Quarto",
+      "Atajos de Quarto"
     ]
   }
 ]
