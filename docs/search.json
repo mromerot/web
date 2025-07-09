@@ -670,7 +670,7 @@
     "href": "grd/conocimiento-indicadores.html#world-risk-index",
     "title": "Indicadores de riesgo de desastres",
     "section": "World Risk Index",
-    "text": "World Risk Index\n\nWorld Risk Index. Link. Link.\nThe World Risk report. Link.\n\n\n\n\nWorld Risk Index. Link. Link\n\n\n\n\n\nThe World Risk Report",
+    "text": "World Risk Index\n\nWorld Risk Index. Link. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Conocimiento del riesgo",
@@ -2489,6 +2489,18 @@
     "crumbs": [
       "Quarto",
       "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "grd/conocimiento-indicadores.html#the-world-risk-report",
+    "href": "grd/conocimiento-indicadores.html#the-world-risk-report",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "The World Risk report",
+    "text": "The World Risk report\n\nThe World Risk report. Link.\n\n\n\n\n\nThe World Risk Report",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo",
+      "Indicadores de riesgo nacionales y mundiales"
     ]
   }
 ]
