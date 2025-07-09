@@ -12,12 +12,12 @@ editor: visual
 -   Atlas de Riesgo de Colombia: revelando los desastres latentes. Unidad Nacional para la Gestión del Riesgo de Desastres. 2018. [*Link*](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/27179).
 -   Inform Risk. 2015. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Subnational-Risk/Colombia).
 
-![INFORM subnational model of Colombia](https://drmkc.jrc.ec.europa.eu/inform-index/portals/0/InfoRM/2016/INFORM%20Graphics%202016/INFORM%20Subnational%20Graphics/INFORM_Colombia_2015_v2_HAZARDS.png){width="500"}
+![INFORM subnational model of Colombia](https://drmkc.jrc.ec.europa.eu/inform-index/portals/0/InfoRM/2016/INFORM%20Graphics%202016/INFORM%20Subnational%20Graphics/INFORM_Colombia_2015_v2_HAZARDS.png){width="300"}
 
 Pacific Disaster Center Multi Risk index 2024. [*Link*](https://analytics.pdc.org/global-risk-index/)*.*
 
 ::: {#viz1751820145622 .tableauPlaceholder style="position: relative"}
-`<noscript><a href='https://analytics.pdc.org/'`{=html} ![GRVA Dashboard Summary](https://public.tableau.com/static/images/DD/DDB5BHKWH/1_rss.png){alt="GRVA Dashboard Summary " style="border: none"} </a></noscript>
+`<noscript><a href='https://analytics.pdc.org/'`{=html} ![GRVA Dashboard Summary](https://public.tableau.com/static/images/DD/DDB5BHKWH/1_rss.png){alt="GRVA Dashboard Summary " style="border: none" width="500"} </a></noscript>
 
 <object class="tableauViz" style="display:none;">
 
@@ -50,10 +50,6 @@ Pacific Disaster Center Multi Risk index 2024. [*Link*](https://analytics.pdc.or
 </script>
 ```
 
-Ejemplos de indicadores estatales o departamentales
-
--   Natural Hazard Risk Assessment. Weather.gov. [*Link*](https://www.weather.gov/rlx/HazardRiskAssessment)
-
 # Índicadores mundiales
 
 ## Lecturas
@@ -74,9 +70,9 @@ Ejemplos de indicadores estatales o departamentales
 -   Inform Risk Index. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index)*. [Link](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Risk/Country-Risk-Profile).*
     -   Latin America and Caribbean. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Subnational-Risk/Latin-America-and-Caribbean/moduleId/1800/id/368/controller/Admin/action/Results)*.*
 
-![INFORM Subnational Risk Index](https://drmkc.jrc.ec.europa.eu/inform-index/portals/0/InfoRM/2016/INFORM%20Graphics%202016/INFORM%20Subnational%20Graphics/Subnational%20Conceptual%20Framework%202016.png){width="600"}
+![INFORM Subnational Risk Index](https://drmkc.jrc.ec.europa.eu/inform-index/portals/0/InfoRM/2016/INFORM%20Graphics%202016/INFORM%20Subnational%20Graphics/Subnational%20Conceptual%20Framework%202016.png){width="500"}
 
-![Colombia World Risk Report](images/Colombia-World-Risk-Report.png){fig-align="left"}
+![Colombia World Risk Report](images/Colombia-World-Risk-Report.png){fig-align="left" width="500"}
 
 ## World Risk Index
 
@@ -85,14 +81,14 @@ Ejemplos de indicadores estatales o departamentales
 
 ![World Risk Index. [*Link*](https://data.humdata.org/dataset/worldriskindex?). [*Link*](https://www.ireus.uni-stuttgart.de/en/International/WorldRiskIndex/)](https://weltrisikobericht.de/wp-content/uploads/2024/09/WorldRiskIndex-2024.webp){width="500"}
 
-![The World Risk Report](https://weltrisikobericht.de/wp-content/uploads/2024/09/The-Structure-of-the-WorldRiskIndex_big.webp){width="800"}
+![The World Risk Report](https://weltrisikobericht.de/wp-content/uploads/2024/09/The-Structure-of-the-WorldRiskIndex_big.webp){width="500"}
 
 ## Pacific Disaster Center
 
 Global Disaster Risk Trends. Select a country to view 10-year national trends.
 
 ::: {#viz1751753004405 .tableauPlaceholder style="position: relative"}
-<noscript><a href='#'> <img src="https://public.tableau.com/static/images/GT/GTFZDZ9YR/1_rss.png" alt="Dashboard 1 " style="border: none"/> </a></noscript>
+<noscript><a href='#'> <img src="https://public.tableau.com/static/images/GT/GTFZDZ9YR/1_rss.png" alt="Dashboard 1 " style="border: none" width="500"/> </a></noscript>
 
 <object class="tableauViz" style="display:none;">
 
@@ -143,4 +139,8 @@ Global Disaster Risk Trends. Select a country to view 10-year national trends.
 {{< video "https://youtu.be/_Q5HrQuvzLA">}} INFORM Subnational Risk Analysis Training - Module 1
 :::
 
-#
+# Otros
+
+Ejemplos de indicadores estatales o departamentales
+
+-   Natural Hazard Risk Assessment. Weather.gov. [*Link*](https://www.weather.gov/rlx/HazardRiskAssessment)
