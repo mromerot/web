@@ -19,11 +19,9 @@ editor: visual
 # Introducción a la GRD
 
 ::: {layout-ncol="2"}
-
 {{< video "https://youtu.be/GAMzrlqlRis" >}} What is the critical infrastructure that keeps society running? \| UNDRR. [*Lista*](https://www.youtube.com/playlist?list=PLBDwPnveHho86Fndz-Q2XRiER5IWicESC)
 
-{{< video "https://youtu.be/xjlPmSXj24Y">}} Integrated Approach to Disaster Risk Management:Prevent, Residual risk Prepare, Respond, Recover
-Videos introductorios
+{{< video "https://youtu.be/xjlPmSXj24Y">}} Integrated Approach to Disaster Risk Management:Prevent, Residual risk Prepare, Respond, Recover Videos introductorios
 :::
 
 # Amenazas
@@ -31,12 +29,12 @@ Videos introductorios
 -   The 2025 update of the UNDRR-ISC Hazard Information Profiles (HIPs). 2025. [*Link*](https://www.preventionweb.net/publication/2025-update-undrr-isc-hazard-information-profiles-hips)
     -   Hazard Information Profiles (HIPs) online reference. [*Link*](https://www.preventionweb.net/drr-glossary/hips).
 
-## Monitoreo de las amenazas**
+## Monitoreo de las amenazas\*\*
 
-- Remote Sensing Tutorials. Government of Canada. [*Link*](https://www.nrcan.gc.ca/maps-tools-and-publications/satellite-imagery-and-air-photos/tutorial-fundamentals-remote-sensing/9309).
-- Gee-community-catalog. *[Link](https://gee-community-catalog.org/)*.
-- Geemap. [*Link*](https://geemap.org/#introduction).
-- Cloud-Based Remote Sensing with Google Earth Engine: Fundamentals and Applications. *[Link](https://www.eefabook.org/)*
+-   Remote Sensing Tutorials. Government of Canada. [*Link*](https://www.nrcan.gc.ca/maps-tools-and-publications/satellite-imagery-and-air-photos/tutorial-fundamentals-remote-sensing/9309).
+-   Gee-community-catalog. [*Link*](https://gee-community-catalog.org/).
+-   Geemap. [*Link*](https://geemap.org/#introduction).
+-   Cloud-Based Remote Sensing with Google Earth Engine: Fundamentals and Applications. [*Link*](https://www.eefabook.org/)
 
 # Vulnerablidad
 
@@ -121,7 +119,7 @@ Videos introductorios
 
 -   Disaster, Planning and Development: Managing Natural Hazards to Reduce Loss. OEA. [*Link*](https://www.oas.org/DSD/publications/Unit/oea54e/begin.htm#Contents)*,* [*Link*](https://www.oas.org/DSD/publications/Unit/oea54e/ch13.htm).
 
-- Bernal G.A., Cardona OD., Marulanda M.C., Carreño ML. (2021) Dealing with Uncertainty Using Fully Probabilistic Risk Assessment for Decision-Making. In: Eslamian S., Eslamian F. (eds) Handbook of Disaster Risk Reduction for Resilience. Springer, Cham. [https://doi.org/10.1007/978-3-030-61278-8\_14](https://doi.org/10.1007/978-3-030-61278-8_14)
+-   Bernal G.A., Cardona OD., Marulanda M.C., Carreño ML. (2021) Dealing with Uncertainty Using Fully Probabilistic Risk Assessment for Decision-Making. In: Eslamian S., Eslamian F. (eds) Handbook of Disaster Risk Reduction for Resilience. Springer, Cham. <https://doi.org/10.1007/978-3-030-61278-8_14>
 
 -   Oregon Natural Hazards Risk Assessment Upgrade. [*Link*](https://www.oregon.gov/lcd/nh/pages/risk-assessment-upgrade.aspx)*. [Link](https://www.oregon.gov/lcd/NH/Pages/Mitigation-Plan-Update.aspx). [Youtube](https://www.youtube.com/playlist?list=PLtwNVSIg2TZiYZBdo5pRNY7bsx9dp5PF1)*
 
@@ -139,11 +137,9 @@ Videos introductorios
 -   Flood Map. [*Link*](https://www.fema.gov/glossary/flood-map).
 
 ::: {layout-ncol="2"}
-
 {{< video "https://youtu.be/9e0MjJCRmlw">}} Physical and social vulnerability for the multi-hazard risk analysis of components and systems
 
 {{< video "https://www.youtube.com/watch?v=TpOX6iZfrnk" >}} Mapping Risk: The National Risk Index for Natural Hazards
-
 :::
 
 ## Herramientas para el análisis de riesgos
@@ -155,9 +151,7 @@ Videos introductorios
     -   Risk Data Library. Country Climate & Disaster Risk Screening Tools. [*Link*](https://gfdrr.github.io/CCDR-tools/home.html#).
     -   Risk Changes. An open-source Spatial Decision Support tool for the analysis of Dynamic Multi-Hazard risk. [Link.](https://riskchanges.org/app/#/app)
 
-    
 {{< video "https://youtu.be/jalz-bcZjWE" >}} SimCenter: A computational framework to simulate the impacts of natural hazards
-
 
 -   **Artículos científicos**
 
@@ -273,12 +267,12 @@ Eventos compuestos
 
 ## Eventos extremos
 
-- What is detection and attribution? ARC. *[Link](https://climateextremes.org.au/what-is-detection-and-attribution/)*.
-- IPCC AR6. Weather and climate extreme events in changing climate. *[Link](https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-11/)*
-- TOP 10 THINGS TO KNOW ABOUT EXTREME EVENT ATTRIBUTION. Climate Central. *[Link](https://www.climatecentre.org/wp-content/uploads/Top-10-Things-to-know-about-extreme-event-attribution.pdf)*
-- Attribution of Extreme Events to Climate Change. Annual Review of Environment and Resourses. 2023. *[Link](https://www.annualreviews.org/content/journals/10.1146/annurev-environ-112621-083538)*
-- Climate-Informed Risk Assessment for Extreme Events. AGU 24. *[Link](https://agu.confex.com/agu/agu24/meetingapp.cgi/Session/237701)*.
-- Alguna evidencia para Colombia. *[Link](http://https//www.mdpi.com/2076-3417/14/5/1692)*. *[Link](https://link.springer.com/article/10.1007/s41748-022-00337-7)*. *[Link](https://www.sciencedirect.com/science/article/pii/S0022169423013471?via%3Dihub)*. *[Link](https://link.springer.com/article/10.1007/s41748-022-00337-7)*. *[Link](https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2023.1307549/full)*.
+-   What is detection and attribution? ARC. [*Link*](https://climateextremes.org.au/what-is-detection-and-attribution/).
+-   IPCC AR6. Weather and climate extreme events in changing climate. [*Link*](https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-11/)
+-   TOP 10 THINGS TO KNOW ABOUT EXTREME EVENT ATTRIBUTION. Climate Central. [*Link*](https://www.climatecentre.org/wp-content/uploads/Top-10-Things-to-know-about-extreme-event-attribution.pdf)
+-   Attribution of Extreme Events to Climate Change. Annual Review of Environment and Resourses. 2023. [*Link*](https://www.annualreviews.org/content/journals/10.1146/annurev-environ-112621-083538)
+-   Climate-Informed Risk Assessment for Extreme Events. AGU 24. [*Link*](https://agu.confex.com/agu/agu24/meetingapp.cgi/Session/237701).
+-   Alguna evidencia para Colombia. [*Link*](http://https//www.mdpi.com/2076-3417/14/5/1692). [*Link*](https://link.springer.com/article/10.1007/s41748-022-00337-7). [*Link*](https://www.sciencedirect.com/science/article/pii/S0022169423013471?via%3Dihub). [*Link*](https://link.springer.com/article/10.1007/s41748-022-00337-7). [*Link*](https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2023.1307549/full).
 
 # Resiliencia
 
@@ -288,7 +282,6 @@ Eventos compuestos
 -   A resilience glossary shaped by context: Reviewing resilience-related terms for critical infrastructures. 2023. IJDRR. [*Link*](https://www.sciencedirect.com/science/article/pii/S2212420923003734)
 -   OXFAM. Resilience knowledge hub. The Future is a Choice Absorb, adapt, transform Resilience Capacities. [*Link*](https://oxfamilibrary.openrepository.com/bitstream/handle/10546/620178/gd-resilience-capacities-absorb-adapt-transform-250117-en.pdf)
 
-::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/watch?v=7U3aWK-Q0Qk" >}}
 
 {{< video "https://youtu.be/xkc0Qui9V7M" >}}
@@ -301,8 +294,9 @@ Eventos compuestos
 
 {{< video "https://youtu.be/ImG2hwRwqkQ">}} Marco y Desarrollo reciente para la resiliencia ante desastres y la inteligencia de riesgos
 
+{{< video "https://youtu.be/uFTbgKSkTo4">}} IFC's Building Resilience Index: The New Resilience Rating Scale
+
 Videos sobre resiliencia
-:::
 
 # **Análisis forense de desastres**
 
@@ -401,9 +395,9 @@ Facilitar un debate entre múltiples partes interesadas para revisar y refinar e
 
 ## Lecturas varias
 
-- The Hazards Posed by Mesoscale Lightning Megaflashes. *[Link](https://doi.org/10.1175/EI-D-20-0016.1)*.
-- GMT Tutorial is an open source collection of ~65 tools for manipulating geographic and Cartesian data sets. [*Link*](https://www.iris.edu/hq/inclass/lesson/gmt_tutorial)
-- How smartphones are being used to monitor ageing bridges. [*Link*](https://www.weforum.org/agenda/2019/02/smartphone-sensors-keep-an-eye-on-crumbling-bridgesustralia).
-- THE COST OF DOING NOTHING. [*Link*](https://media.ifrc.org/ifrc/the-cost-of-doing-nothing/).
-- 97% de los POT no tiene estudios de amenazas y riesgo urbano. El Nuevo Siglo. *[Link](https://www.elnuevosiglo.com.co/articulos/06-2020-97-delos-pot-no-tiene-estudios-de-amenazas-y-riesgo-urbano)*.
-- Los desastres no son naturales. El País. *[Link](https://elpais.com/economia/2020-07-28/los-desastres-no-son-naturales.html)*.
+-   The Hazards Posed by Mesoscale Lightning Megaflashes. [*Link*](https://doi.org/10.1175/EI-D-20-0016.1).
+-   GMT Tutorial is an open source collection of \~65 tools for manipulating geographic and Cartesian data sets. [*Link*](https://www.iris.edu/hq/inclass/lesson/gmt_tutorial)
+-   How smartphones are being used to monitor ageing bridges. [*Link*](https://www.weforum.org/agenda/2019/02/smartphone-sensors-keep-an-eye-on-crumbling-bridgesustralia).
+-   THE COST OF DOING NOTHING. [*Link*](https://media.ifrc.org/ifrc/the-cost-of-doing-nothing/).
+-   97% de los POT no tiene estudios de amenazas y riesgo urbano. El Nuevo Siglo. [*Link*](https://www.elnuevosiglo.com.co/articulos/06-2020-97-delos-pot-no-tiene-estudios-de-amenazas-y-riesgo-urbano).
+-   Los desastres no son naturales. El País. [*Link*](https://elpais.com/economia/2020-07-28/los-desastres-no-son-naturales.html).

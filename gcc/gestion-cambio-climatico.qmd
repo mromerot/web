@@ -1,6 +1,7 @@
 ---
 title: "Gestión del cambio climático"
 format: html
+editor: visual
 ---
 
 # Instituciones internacionales
@@ -73,8 +74,6 @@ format: html
     -   Contribución nacionalmente determinada - NDC.
     -   Presentación Plan Estratégico Nacional de Investigación Ambiental - PENIA. [*Link*](https://www.minambiente.gov.co/wp-content/uploads/2021/12/PLAN-ESTRATEGICO-NACIONAL-DE-INVESTIGACION-AMBIENTAL-PENIA-2021-2030_12.pdf).
 
-Presentación Plan Estratégico Nacional de Investigación Ambiental - PENIA
-
 **Lecturas**
 
 -   Climate policies that achieved major emission reductions: Global evidence from two decades. Science. 2024. [*Link*](https://www.science.org/doi/10.1126/science.adl6547).
@@ -83,9 +82,9 @@ Presentación Plan Estratégico Nacional de Investigación Ambiental - PENIA
 {{< video "https://youtu.be/GkZlYDxp_WE" >}} Sistema Nacional Ambiental
 
 {{< video "https://youtu.be/ahjKkxVVCVA" >}} Presentación Plan Estratégico Nacional de Investigación Ambiental - PENIA
-:::
 
 {{< video "https://youtu.be/_9MUEtrVVp8" >}}
+:::
 
 # Informes de estado mundiales
 
@@ -95,15 +94,24 @@ Presentación Plan Estratégico Nacional de Investigación Ambiental - PENIA
 -   CMIP6: the next generation of climate models explained. [*Link*](https://www.carbonbrief.org/cmip6-the-next-generation-of-climate-models-explained/)
 
 ::: {layout-ncol="2"}
-{{< video "https://youtu.be/AlAzLlrMXWM?si=u8rrRy8JusiMEb6U" >}}
-
 {{< video "https://youtu.be/dXBzFNEwoj8" >}} Keeling curve
+
+{{< video "https://youtu.be/j3SvG2nBCTM" >}} Jena Experiment
+
+{{< video "https://youtu.be/AlAzLlrMXWM?si=u8rrRy8JusiMEb6U" >}}
 :::
 
 -   **Curva Keeling**. [*Link*](https://scripps.ucsd.edu/programs/keelingcurve/). [Datos](http://scrippsco2.ucsd.edu/data/atmospheric_co2/primary_mlo_co2_record).
+
+<!-- -->
+
 -   The role of methane. [*Link*](https://m.box.com/shared_item/https%3A%2F%2Fcornell.app.box.com%2Fs%2F7j1pds0efeptwtb6wh9erumpn454enlt).
 
-{{< video "https://youtu.be/j3SvG2nBCTM" >}} Jena Experiment
+# Informes de estado nacionales
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/fjJS2kRiQ4Y" >}} Sexto Reporte del IPCC: ¿Qué nos dice para Colombia y LATAM? - Los bosques en el Sistema Tierra
+:::
 
 # Financiamiento de proyectos de adaptación al cambio climático
 

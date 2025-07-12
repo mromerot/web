@@ -56,6 +56,8 @@ website:
             href: grd/volcanes.qmd
           - text: "Amazonas"
             href: grd/amazonas.qmd
+          - text: "Glosario"
+            href: grd/glosario.qmd
       - section: "Gestión del cambio climático"
         contents:
           - text: "Gestión del cambio climático"
