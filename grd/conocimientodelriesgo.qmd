@@ -125,9 +125,7 @@ editor: visual
 
     ![](images/Oregon.png){width="500"}
 
-<!-- -->
-
-**FEMA**
+## **Metodolgias de FEMA**
 
 -   National Risk Index Documentation. [*Link*](https://www.fema.gov/flood-maps/products-tools/national-risk-index).
 -   National Risk Index for Natural Hazards. [*Visor*](https://hazards.fema.gov/nri/map).
@@ -175,6 +173,17 @@ editor: visual
 {{< video "https://youtu.be/928a8sH-NRg" >}} Using Exceedance Probabilities for Disaster Management
 
 Evaluación del riesgo
+:::
+
+## **Evaluación del riesgo en la infraestructura escolar**
+
+-   Webinar 'Community Hazard Risk Tools: Structural Fragility and Vulnerability and System Reliability Mapping' by the UNESCO Chair in DRR & RE, UCL. [*Link*](https://www.ucl.ac.uk/epicentre/news/2025/apr/community-hazard-risk-tools-structural-fragility-and-vulnerability-and-system).
+    -   [Github repository](https://github.com/jieunbyun/mbnpy_tutorial).
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/kco588k24Pw" >}} Community Hazard Risk Tools: Structural Frag. and Vuln. and System Reliability Mapping Day 1
+
+{{< video "https://youtu.be/OG8-fhavhl0" >}} Day 2
 :::
 
 # Comunicación del riesgo
