@@ -2287,7 +2287,7 @@
     "href": "grd/gestiondelriesgo.html#globales",
     "title": "Gestión del riesgo de desastres",
     "section": "Globales",
-    "text": "Globales\n\nGlobal Platform for Disaster Risk Reduction 2025. Link.\nThe Global Risks Report 2021 16th Edition. World Economic Forum. Link\nGlobal Risks Perceptions Reports 2021. Link.\nGlobal Assessment Report (GAR). Link.\n\nGlobal Assessment Report (GAR) 2025. Link.\nGAR Atlas. Link",
+    "text": "Globales\n\nGlobal Platform for Disaster Risk Reduction 2025. Link.\nThe Global Risks Report 2021 16th Edition. World Economic Forum. Link\nGlobal Risks Perceptions Reports 2021. Link.\nGlobal Assessment Report (GAR). Link.\n\nGlobal Assessment Report (GAR) 2025. Link.\nGAR Atlas. Link\n\nUN Global Risk Report. 2025. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Gestión del riesgo de desastres"
@@ -2354,6 +2354,17 @@
     "title": "Gestión del riesgo de desastres",
     "section": "Mintransporte",
     "text": "Mintransporte",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Gestión del riesgo de desastres"
+    ]
+  },
+  {
+    "objectID": "grd/gestiondelriesgo.html#lea-esto",
+    "href": "grd/gestiondelriesgo.html#lea-esto",
+    "title": "Gestión del riesgo de desastres",
+    "section": "Lea esto 👇🏼",
+    "text": "Lea esto 👇🏼\n\nDisaster RiskCLIMAAX\n\n\n\n\n\n\n\nDisaster Risk. By Irasema Alcántara-Ayala, Christopher Gomez, Ksenia Chmutina, Dewald van Niekerk, Emmanuel Raju, Victor Marchezini, Jake Rom Cadag, JC Gaillard\n\n\n\n\n\n\n\nCLIMAAX. A regional climate risk assessment is often needed to design or update a climate adaptation and/or risk management plan. Regular updates are needed considering changing climate risk profiles",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Gestión del riesgo de desastres"
@@ -2662,7 +2673,7 @@
     "href": "quarto/quarto-atajos.html#tabsets",
     "title": "Quarto atajos",
     "section": "Tabsets",
-    "text": "Tabsets\n::: {.panel-tabset}\n### Tab A\nContent for `Tab A`\n### Tab B\nContent for `Tab B`\n:::",
+    "text": "Tabsets\n::: {.panel-tabset}\n### Tab A\nContent for `Tab A`\n\n### Tab B\nContent for `Tab B`\n:::",
     "crumbs": [
       "Quarto",
       "Atajos de Quarto"

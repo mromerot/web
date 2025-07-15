@@ -27,6 +27,7 @@ editor: visual
 ::: {.panel-tabset}
 ### Tab A
 Content for `Tab A`
+
 ### Tab B
 Content for `Tab B`
 :::
