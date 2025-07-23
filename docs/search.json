@@ -1559,7 +1559,7 @@
     "href": "cyt/cienciareproduc.html#static-site-generators",
     "title": "Ciencia reproducible",
     "section": "Static site generators",
-    "text": "Static site generators\n\nMkdocs. Project documentation with Markdown. Link\n\nMaterials for Mkdocs. Link\n\nSphinx. Link.\nFast Api. Link\nMyST. Link\nQuarto. Link\n\n\n\n\n How To Create STUNNING Code Documentation With MkDocs Material Theme\n\n\n Material for MkDocs: Full Tutorial To Build And Deploy Your Docs Portal\n\n\n\n\nMKDocs",
+    "text": "Static site generators\n\nMkdocs. Project documentation with Markdown. Link.\n\nMaterials for Mkdocs. Link.\n\nSphinx. Link.\nJekyll. Link\nFast Api. Link.\nMyST. Link.\nQuarto. Link\n\n\n\n\n How To Create STUNNING Code Documentation With MkDocs Material Theme\n\n\n Material for MkDocs: Full Tutorial To Build And Deploy Your Docs Portal\n\n\n\n\nMKDocs",
     "crumbs": [
       "Ciencia y tecnología",
       "Ciencia reproducible"
@@ -1951,8 +1951,19 @@
     "objectID": "grd/conocimientodelriesgo.html#monitoreo-de-las-amenazas",
     "href": "grd/conocimientodelriesgo.html#monitoreo-de-las-amenazas",
     "title": "Conocimiento del riesgo de desastres",
-    "section": "Monitoreo de las amenazas**",
-    "text": "Monitoreo de las amenazas**\n\nRemote Sensing Tutorials. Government of Canada. Link.\nGee-community-catalog. Link.\nGeemap. Link.\nCloud-Based Remote Sensing with Google Earth Engine: Fundamentals and Applications. Link",
+    "section": "Monitoreo de las amenazas",
+    "text": "Monitoreo de las amenazas\n\nRemote Sensing Tutorials. Government of Canada. Link.\nGee-community-catalog. Link.\nGeemap. Link.\nCloud-Based Remote Sensing with Google Earth Engine: Fundamentals and Applications. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#escenarios-de-riesgo",
+    "href": "grd/conocimientodelriesgo.html#escenarios-de-riesgo",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Escenarios de riesgo",
+    "text": "Escenarios de riesgo\n\nEffectiveness of California earthquake scenarios in motivating mitigation. Earthquake spectra. 2025. Link.\n\n SimCenter: A computational framework to simulate the impacts of natural hazards",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Conocimiento del riesgo"
@@ -2018,7 +2029,7 @@
     "href": "grd/conocimientodelriesgo.html#herramientas-para-el-análisis-de-riesgos",
     "title": "Conocimiento del riesgo de desastres",
     "section": "Herramientas para el análisis de riesgos",
-    "text": "Herramientas para el análisis de riesgos\n\nCuadernos de trabajo (ver repositorios)\nSoftware\n\nRisk Data Library. Country Climate & Disaster Risk Screening Tools. Link.\nRisk Changes. An open-source Spatial Decision Support tool for the analysis of Dynamic Multi-Hazard risk. Link.\n\n\n SimCenter: A computational framework to simulate the impacts of natural hazards\n\nArtículos científicos\n\nA review of risk analysis methods for natural disasters. Nat Hazards 100, 571–593. Sun, R. et al. 2020. Link\nHybrid loss exceedance curve (HLEC) for disaster risk assessment. Velazquez et al. 2020. Link\nAssessing global exposure and vulnerability towards natural hazards: the Disaster Risk Index. Peduzzi, et al. 2009, Nat. Hazards Earth Syst. Link\n\n\n\n\n\n Lesson 2：Six steps of disaster risk assessment\n\n\n Building resilience to compound and cascading disaster risks\n\n\n\n\n Webinar Modern Technology in Disaster Management: The Challenges\n\n\n Integrated Risk management in Civil Protection\n\n\n\n\n Modelo mundial de riesgo en la infraestructura\n\n\n Risk Analysis for Civil Protection\n\n\n\n\n Using Exceedance Probabilities for Disaster Management\n\n\nEvaluación del riesgo",
+    "text": "Herramientas para el análisis de riesgos\n\nCuadernos de trabajo (ver repositorios)\nSoftware\n\nRisk Data Library. Country Climate & Disaster Risk Screening Tools. Link.\nRisk Changes. An open-source Spatial Decision Support tool for the analysis of Dynamic Multi-Hazard risk. Link.\n\nDocumentation. Link.\n\n\n\n\n\n\n Introduction\n\n\n Hazard\n\n\n\n\nArtículos científicos\n\nA review of risk analysis methods for natural disasters. Nat Hazards 100, 571–593. Sun, R. et al. 2020. Link\nHybrid loss exceedance curve (HLEC) for disaster risk assessment. Velazquez et al. 2020. Link\nAssessing global exposure and vulnerability towards natural hazards: the Disaster Risk Index. Peduzzi, et al. 2009, Nat. Hazards Earth Syst. Link\n\n\n\n\n\n Lesson 2：Six steps of disaster risk assessment\n\n\n Building resilience to compound and cascading disaster risks\n\n\n\n\n Webinar Modern Technology in Disaster Management: The Challenges\n\n\n Integrated Risk management in Civil Protection\n\n\n\n\n Modelo mundial de riesgo en la infraestructura\n\n\n Risk Analysis for Civil Protection\n\n\n\n\n Using Exceedance Probabilities for Disaster Management\n\n\nEvaluación del riesgo",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Conocimiento del riesgo"
@@ -2230,7 +2241,19 @@
     "href": "grd/repositorios.html",
     "title": "Repositorios Fair en gestión del riesgo de desastres",
     "section": "",
-    "text": "Climate Informed Risk Index. Link. This tool is a replica of the National Risk Index (NRI) Future Risk tool, which was removed from the public by the US Government in February, 2025. It references the following datasets which were downloaded before the tool was taken down.\nCLIMAAX CRA Handbook. Link.Link. A regional climate risk assessment is often needed to design or update a climate adaptation and/or risk management plan. Regular updates are needed considering changing climate risk profiles\nCopernicus Browser. Link.\nEM-DAT Documentation. Link. Link.\nGlobal Facility for Disaster Reduction and Recovery (GFDRR). Link. GFDRR supports developing countries on disaster risk reduction and climate change adaptation. \n\nCCDR-tools. Link.\n\nHazus. FEMA Natural Hazards Risk Assessment Program. Link.\nDisaster-Risk-Analysis-Platform. Link. Welcome to our project, “Disaster Risk Analytics Platform,” developed with an aim to provide comprehensive disaster risk analysis for investment firms operating within the U.S. markets. Using advanced statistical analysis and deep learning technologies, this platform helps predict potential disasters and their financial impacts on various states, aiding firms in making informed, resilient investment decisions.\nDisaster-Risk-Monitoring-Using-Satellite-Imagery. Link. A suggestion of task provided by NIVIDEA in its course Disaster Risk Monitoring Using Satellite Imagery\nTOMRAP – Tool for Multi-hazard Risk Assessment in Python. Link. The project builds on outputs from the METEOR project (NEE6423R) to generate a tool that can be used in future projects to assess multi-hazard risk. The METEOR model was initially developed in ArcGIS. By streamlining this code in Python we will make multi-hazard risk analysis faster and more widely applicable. \nSeismic Hazard and Risk Analysis calculations. Link. Supporting calculations for the textbook Seismic Hazard and Risk Analysis.\nProject Pythia. Link. An education and training hub for the geoscientific Python community\n\nEntrenamiento en GRD\n\nRisk Profiler (Canada). Link\nFEMA, mapas de inundacion",
+    "text": "Evaluación del riesgo sísmico a nivel urbano Santiago de Cali. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Cursos, redes y recursos",
+      "Repositorios FAIR"
+    ]
+  },
+  {
+    "objectID": "grd/repositorios.html#lista-de-repositorios-en-grd-colombia",
+    "href": "grd/repositorios.html#lista-de-repositorios-en-grd-colombia",
+    "title": "Repositorios Fair en gestión del riesgo de desastres",
+    "section": "",
+    "text": "Evaluación del riesgo sísmico a nivel urbano Santiago de Cali. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Cursos, redes y recursos",
@@ -2241,8 +2264,8 @@
     "objectID": "grd/repositorios.html#lista-de-repositorios-en-grd",
     "href": "grd/repositorios.html#lista-de-repositorios-en-grd",
     "title": "Repositorios Fair en gestión del riesgo de desastres",
-    "section": "",
-    "text": "Climate Informed Risk Index. Link. This tool is a replica of the National Risk Index (NRI) Future Risk tool, which was removed from the public by the US Government in February, 2025. It references the following datasets which were downloaded before the tool was taken down.\nCLIMAAX CRA Handbook. Link.Link. A regional climate risk assessment is often needed to design or update a climate adaptation and/or risk management plan. Regular updates are needed considering changing climate risk profiles\nCopernicus Browser. Link.\nEM-DAT Documentation. Link. Link.\nGlobal Facility for Disaster Reduction and Recovery (GFDRR). Link. GFDRR supports developing countries on disaster risk reduction and climate change adaptation. \n\nCCDR-tools. Link.\n\nHazus. FEMA Natural Hazards Risk Assessment Program. Link.\nDisaster-Risk-Analysis-Platform. Link. Welcome to our project, “Disaster Risk Analytics Platform,” developed with an aim to provide comprehensive disaster risk analysis for investment firms operating within the U.S. markets. Using advanced statistical analysis and deep learning technologies, this platform helps predict potential disasters and their financial impacts on various states, aiding firms in making informed, resilient investment decisions.\nDisaster-Risk-Monitoring-Using-Satellite-Imagery. Link. A suggestion of task provided by NIVIDEA in its course Disaster Risk Monitoring Using Satellite Imagery\nTOMRAP – Tool for Multi-hazard Risk Assessment in Python. Link. The project builds on outputs from the METEOR project (NEE6423R) to generate a tool that can be used in future projects to assess multi-hazard risk. The METEOR model was initially developed in ArcGIS. By streamlining this code in Python we will make multi-hazard risk analysis faster and more widely applicable. \nSeismic Hazard and Risk Analysis calculations. Link. Supporting calculations for the textbook Seismic Hazard and Risk Analysis.\nProject Pythia. Link. An education and training hub for the geoscientific Python community\n\nEntrenamiento en GRD\n\nRisk Profiler (Canada). Link\nFEMA, mapas de inundacion",
+    "section": "Lista de repositorios en GRD",
+    "text": "Lista de repositorios en GRD\n\nClimate Informed Risk Index. Link. This tool is a replica of the National Risk Index (NRI) Future Risk tool, which was removed from the public by the US Government in February, 2025. It references the following datasets which were downloaded before the tool was taken down.\nCLIMAAX CRA Handbook. Link.Link. A regional climate risk assessment is often needed to design or update a climate adaptation and/or risk management plan. Regular updates are needed considering changing climate risk profiles\nCopernicus Browser. Link.\nEM-DAT Documentation. Link. Link.\nGlobal Facility for Disaster Reduction and Recovery (GFDRR). Link. GFDRR supports developing countries on disaster risk reduction and climate change adaptation. \n\nCCDR-tools. Link.\n\nHazus. FEMA Natural Hazards Risk Assessment Program. Link.\nDisaster-Risk-Analysis-Platform. Link. Welcome to our project, “Disaster Risk Analytics Platform,” developed with an aim to provide comprehensive disaster risk analysis for investment firms operating within the U.S. markets. Using advanced statistical analysis and deep learning technologies, this platform helps predict potential disasters and their financial impacts on various states, aiding firms in making informed, resilient investment decisions.\nDisaster-Risk-Monitoring-Using-Satellite-Imagery. Link. A suggestion of task provided by NIVIDEA in its course Disaster Risk Monitoring Using Satellite Imagery\nTOMRAP – Tool for Multi-hazard Risk Assessment in Python. Link. The project builds on outputs from the METEOR project (NEE6423R) to generate a tool that can be used in future projects to assess multi-hazard risk. The METEOR model was initially developed in ArcGIS. By streamlining this code in Python we will make multi-hazard risk analysis faster and more widely applicable. \nSeismic Hazard and Risk Analysis calculations. Link. Supporting calculations for the textbook Seismic Hazard and Risk Analysis.\nProject Pythia. Link. An education and training hub for the geoscientific Python community\n\nEntrenamiento en GRD\n\nRisk Profiler (Canada). Link\nFEMA, mapas de inundacion",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Cursos, redes y recursos",

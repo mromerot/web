@@ -29,12 +29,18 @@ editor: visual
 -   The 2025 update of the UNDRR-ISC Hazard Information Profiles (HIPs). 2025. [*Link*](https://www.preventionweb.net/publication/2025-update-undrr-isc-hazard-information-profiles-hips)
     -   Hazard Information Profiles (HIPs) online reference. [*Link*](https://www.preventionweb.net/drr-glossary/hips).
 
-## Monitoreo de las amenazas\*\*
+## Monitoreo de las amenazas
 
 -   Remote Sensing Tutorials. Government of Canada. [*Link*](https://www.nrcan.gc.ca/maps-tools-and-publications/satellite-imagery-and-air-photos/tutorial-fundamentals-remote-sensing/9309).
 -   Gee-community-catalog. [*Link*](https://gee-community-catalog.org/).
 -   Geemap. [*Link*](https://geemap.org/#introduction).
 -   Cloud-Based Remote Sensing with Google Earth Engine: Fundamentals and Applications. [*Link*](https://www.eefabook.org/)
+
+## Escenarios de riesgo
+
+-   Effectiveness of California earthquake scenarios in motivating mitigation. Earthquake spectra. 2025. [*Link*](https://journals.sagepub.com/doi/abs/10.1177/87552930241312712).
+
+{{< video "https://youtu.be/jalz-bcZjWE" >}} SimCenter: A computational framework to simulate the impacts of natural hazards
 
 # Vulnerablidad
 
@@ -143,13 +149,17 @@ editor: visual
 ## Herramientas para el análisis de riesgos
 
 -   **Cuadernos de trabajo** ([ver repositorios](https://mromerot.github.io/web/grd/repositorios.html))
-
 -   **Software**
-
     -   Risk Data Library. Country Climate & Disaster Risk Screening Tools. [*Link*](https://gfdrr.github.io/CCDR-tools/home.html#).
     -   Risk Changes. An open-source Spatial Decision Support tool for the analysis of Dynamic Multi-Hazard risk. [Link.](https://riskchanges.org/app/#/app)
+        -   Documentation. [*Link*](https://sdss-documentation.readthedocs.io/en/latest/)*.*
 
-{{< video "https://youtu.be/jalz-bcZjWE" >}} SimCenter: A computational framework to simulate the impacts of natural hazards
+::: {layout-ncol="2"}
+
+{{< video "https://youtu.be/xi1CbjxIfNU" >}} Introduction
+
+{{< video "https://youtu.be/Q3bXq9YZN-Q" >}} Hazard
+:::
 
 -   **Artículos científicos**
 

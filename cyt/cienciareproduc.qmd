@@ -100,12 +100,13 @@ Markdown es un lenguaje de marcado ligero que permite añadir elementos de forma
 
 ## Static site generators
 
--   Mkdocs. Project documentation with Markdown. [Link](https://www.mkdocs.org/)
-    -   Materials for Mkdocs. [Link](https://squidfunk.github.io/mkdocs-material/)
+-   Mkdocs. Project documentation with Markdown. [*Link*](https://www.mkdocs.org/)*.*
+    -   Materials for Mkdocs. [*Link*](https://squidfunk.github.io/mkdocs-material/)*.*
 -   Sphinx. [Link](https://www.sphinx-doc.org/en/master/).
--   Fast Api. [Link](https://fastapi.tiangolo.com/)
--   MyST. [Link](https://mystmd.org/guide)
--   Quarto. [Link](https://quartopub.com/)
+-   Jekyll. [*Link*](https://jekyllrb.com/)
+-   Fast Api. [*Link*](https://fastapi.tiangolo.com/)*.*
+-   MyST. [*Link*](https://mystmd.org/guide)*.*
+-   Quarto. [*Link*](https://quartopub.com/)
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/Q-YA_dA8C20" >}} How To Create STUNNING Code Documentation With MkDocs Material Theme

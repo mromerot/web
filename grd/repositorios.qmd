@@ -4,6 +4,10 @@ format: html
 editor: visual
 ---
 
+## **Lista de repositorios en GRD Colombia**
+
+-   **Evaluación del riesgo sísmico a nivel urbano Santiago de Cali**. [*Link*](https://github.com/gem/treq-riesgo-urbano/tree/main/Cali).
+
 ## **Lista de repositorios en GRD**
 
 -   **Climate Informed Risk Index.** [Link](https://github.com/fulton-ring/nri-future-risk)**.** This tool is a replica of the National Risk Index (NRI) Future Risk tool, which was removed from the public by the US Government in February, 2025. It references the following datasets which were downloaded before the tool was taken down.
