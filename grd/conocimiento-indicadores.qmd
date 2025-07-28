@@ -11,6 +11,9 @@ editor: visual
     -   NDPBA Colombia Final Report. 2025. [*Link*](https://www.pdc.org/document/ndpba-colombia-final-report/)*.*
 -   Atlas de Riesgo de Colombia: revelando los desastres latentes. Unidad Nacional para la Gestión del Riesgo de Desastres. 2018. [*Link*](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/27179).
 -   Inform Risk. 2015. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Subnational-Risk/Colombia).
+-   Datos del Consolidado de atención a emergencias. UNGRD. [*Link*](http://portal.gestiondelriesgo.gov.co/Paginas/Consolidado-Atencion-de-Emergencias.aspx).
+-   DESINVENTAR. Base de datos de pérdidas históricas en Colombia (período 1970-2011). [*Link*](http://online.desinventar.org/).
+-   COLOMBIA – Censo Nacional de Población y Vivienda – CNPV – 2018. [*Link*](http://microdatos.dane.gov.co/index.php/catalog/643/get_microdata).
 
 ![INFORM subnational model of Colombia](https://drmkc.jrc.ec.europa.eu/inform-index/portals/0/InfoRM/2016/INFORM%20Graphics%202016/INFORM%20Subnational%20Graphics/INFORM_Colombia_2015_v2_HAZARDS.png){fig-align="left" width="300"}
 
@@ -145,8 +148,23 @@ Global Disaster Risk Trends. Select a country to view 10-year national trends.
 {{< video "https://youtu.be/_Q5HrQuvzLA">}} INFORM Subnational Risk Analysis Training - Module 1
 :::
 
-# Otros
+# Otras bases de datos
 
-Ejemplos de indicadores estatales o departamentales
-
--   Natural Hazard Risk Assessment. Weather.gov. [*Link*](https://www.weather.gov/rlx/HazardRiskAssessment)
+-   Plataforma para las Américas. [*Link*](https://eird.org/pr18/eng/).
+-   Atlas de Riesgos Climáticos para Chile. [*Link*](https://arclim.mma.gob.cl/).
+-   Mapa digital de amenazas y desastres de Chile. [*Link*](https://chileterritorioenmovimiento.cl/mapa-interactivo/).
+-   NatCatSERVICE Database. [*Link*](https://www.munichre.com/en/solutions/for-industry-clients/natcatservice.html).
+-   SIGMA (Swiss Re). [*Link*](https://www.sigma-explorer.com/).
+-   GLobal unique disaster IDEntifier (GLIDE). [*Link*](https://glidenumber.net/glide/public/about.jsp).
+-   Metabuscador Climate Adapt. [*Link*](https://climate-adapt.eea.europa.eu/data-and-downloads/?source=%7B%22query%22%3A%7B%22function_score%22%3A%7B%22query%22%3A%7B%22bool%22%3A%7B%22must%22%3A%7B%22bool%22%3A%7B%22must%22%3A%5B%7B%22term%22%3A%7B%22hasWorkflowState%22%3A%22published%22%7D%7D%5D%7D%7D%2C%22filter%22%3A%7B%22bool%22%3A%7B%22should%22%3A%5B%7B%22term%22%3A%7B%22typeOfData%22%3A%22Information%20portals%22%7D%7D%5D%7D%7D%7D%7D%2C%22functions%22%3A%5B%7B%22gauss%22%3A%7B%22issued%22%3A%7B%22scale%22%3A%2214d%22%7D%7D%7D%5D%2C%22score_mode%22%3A%22sum%22%7D%7D%2C%22display_type%22%3A%22list%22%2C%22sort%22%3A%5B%7B%22issued%22%3A%7B%22order%22%3A%22desc%22%7D%7D%5D%2C%22highlight%22%3A%7B%22fields%22%3A%7B%22*%22%3A%7B%7D%7D%7D%7D).
+-   GDIS, a global dataset of geocoded disaster locations. Scientific Data. 2021. [*Link*](https://www.nature.com/articles/s41597-021-00846-6).
+-   World tectonic plates and boundaries. Github. [*Link*](https://github.com/fraxen/tectonicplates/)
+-   The Lloyd’s Register Foundation World Risk Poll. [*Link*](https://wrp.lrfoundation.org.uk/data-resources/a-world-of-risk-country-overviews/).
+-   LEILA – Librería de calidad de datos. DNP. [*Link*](https://ucd-dnp.github.io/leila/index.html)
+-   OECD. [*Link*](https://www.oecd.org/).
+    -   OECD One. [*Link*](https://one.oecd.org/). [*Link*](https://login.oecd.org/?appId=293718&targetAppId=18060&referer=https%3A%2F%2Fone.oecd.org%2F). [*Tutorials*](https://community.oecd.org/community/one-feedback/tutorials). [Co-creation project](https://community.oecd.org/community/cstp/tip/cocreation)
+-   United Nations Climate Change. [*Link*](https://www4.unfccc.int/sites/nwpstaging/pages/Search.aspx).
+-   **Lecturas**:
+    -   Worldwide disaster loss and damage databases: A systematic review. 2021. [*Link*](https://www.jehp.net/article.asp?issn=2277-9531;year=2021;volume=10;issue=1;spage=329;epage=329;aulast=Mazhin).
+-   Ejemplos de indicadores estatales o departamentales
+    -   Natural Hazard Risk Assessment. Weather.gov. [*Link*](https://www.weather.gov/rlx/HazardRiskAssessment)

@@ -145,44 +145,6 @@ editor: visual
     -   Charter. [*Link*](https://disasterscharter.org/web/guest/about-the-charter). Activation list. [*Link.*](https://disasterscharter.org/web/guest/charter-activations)
         -   Colombia, Providencia. [*Link*](https://disasterscharter.org/web/guest/activations/-/article/storm-hurricane-urban-in-colombia-activation-687-).
 
-    ## **Bases de datosde amenazas y eventos de desastre de Colombia**
-
-    -   Datos del Consolidado de atención a emergencias. UNGRD. [*Link*](http://portal.gestiondelriesgo.gov.co/Paginas/Consolidado-Atencion-de-Emergencias.aspx).
-    -   DESINVENTAR. Base de datos de pérdidas históricas en Colombia (período 1970-2011). [*Link*](http://online.desinventar.org/).
-    -   COLOMBIA – Censo Nacional de Población y Vivienda – CNPV – 2018.[*Link*](http://microdatos.dane.gov.co/index.php/catalog/643/get_microdata).
-
-    ## Bases de datos **de amenazas y eventos de desastre** **regionales y mundiales**
-
-    -   Plataforma para las Am é ricas. [*Link*](https://eird.org/pr18/eng/).
-    -   Atlas de Riesgos Climáticos para Chile. [*Link*](https://arclim.mma.gob.cl/).
-    -   Mapa digital de amenazas y desastres de Chile. [*Link*](https://chileterritorioenmovimiento.cl/mapa-interactivo/).
-    -   Prevention web. .
-    -   NatCatSERVICE Database. [*Link*](https://www.munichre.com/en/solutions/for-industry-clients/natcatservice.html).
-    -   EM-DAT. Centre for Research on the Epidemiology of Disasters (CRED). [*Link*](https://www.emdat.be/). [Git](https://github.com/GFDRR/pyEmdat)
-    -   SIGMA (Swiss Re). [*Link*](https://www.sigma-explorer.com/).
-    -   G Lobal unique disaster IDEntifier (GLIDE). [*Link*](https://glidenumber.net/glide/public/about.jsp).
-    -   Metabuscador Climate Adapt. [*Link*](https://climate-adapt.eea.europa.eu/data-and-downloads/?source=%7B%22query%22%3A%7B%22function_score%22%3A%7B%22query%22%3A%7B%22bool%22%3A%7B%22must%22%3A%7B%22bool%22%3A%7B%22must%22%3A%5B%7B%22term%22%3A%7B%22hasWorkflowState%22%3A%22published%22%7D%7D%5D%7D%7D%2C%22filter%22%3A%7B%22bool%22%3A%7B%22should%22%3A%5B%7B%22term%22%3A%7B%22typeOfData%22%3A%22Information%20portals%22%7D%7D%5D%7D%7D%7D%7D%2C%22functions%22%3A%5B%7B%22gauss%22%3A%7B%22issued%22%3A%7B%22scale%22%3A%2214d%22%7D%7D%7D%5D%2C%22score_mode%22%3A%22sum%22%7D%7D%2C%22display_type%22%3A%22list%22%2C%22sort%22%3A%5B%7B%22issued%22%3A%7B%22order%22%3A%22desc%22%7D%7D%5D%2C%22highlight%22%3A%7B%22fields%22%3A%7B%22*%22%3A%7B%7D%7D%7D%7D).
-
--   **Otros**
-
-    -   GDIS, a global dataset of geocoded disaster locations. Scientific Data. 2021. [*Link*](https://www.nature.com/articles/s41597-021-00846-6).
-    -   World tectonic plates and boundaries. Github. [*Link*](https://github.com/fraxen/tectonicplates/)
-    -   The Lloyd’s Register Foundation World Risk Poll. [*Link*](https://wrp.lrfoundation.org.uk/data-resources/a-world-of-risk-country-overviews/).
-
--   **Lecturas**:
-
-    -   Worldwide disaster loss and damage databases: A systematic review. 2021. [*Link*](https://www.jehp.net/article.asp?issn=2277-9531;year=2021;volume=10;issue=1;spage=329;epage=329;aulast=Mazhin).
-
--   **Otras bases de datos nacionales**
-
-    -   LEILA – Librería de calidad de datos. DNP. [*Link*](https://ucd-dnp.github.io/leila/index.html)
-
--   **Bases de datos de información técnica**
-
-    -   OECD. [*Link*](https://www.oecd.org/).
-        -   OECD One. [*Link*](https://one.oecd.org/). [*Link*](https://login.oecd.org/?appId=293718&targetAppId=18060&referer=https%3A%2F%2Fone.oecd.org%2F). [*Tutorials*](https://community.oecd.org/community/one-feedback/tutorials). [Co-creation project](https://community.oecd.org/community/cstp/tip/cocreation)
-    -   United Nations Climate Change. [*Link*](https://www4.unfccc.int/sites/nwpstaging/pages/Search.aspx).
-
 **A Decade of the Sendai Framework for Disaster Risk Reduction – Envisioning the Road Ahead» on 26 September at UNESCO Headquarters, in Paris France, 2024**
 
 ::: {layout-ncol="2"}
@@ -281,9 +243,14 @@ editor: visual
 </iframe>
 :::
 
-Mapeo de Asentamientos Informales basado en Inteligencia Artificial. Banco Mundial. [*Link*](https://www.iadb.org/es/quienes-somos/topicos/desarrollo-urbano-y-vivienda/maiia).
+# **Inteligencia artificial**
 
--   **Ciencia, tecnología e innovación en GRD.**
+## Lecturas
+
+-   Artificial intelligence for climate prediction of extremes: State of the art, challenges, and future perspectives. 2025. [*Link*](https://wires.onlinelibrary.wiley.com/doi/10.1002/wcc.914).
+
+# **Ciencia, tecnología e innovación en GRD**
+
 -   Science, Technology and Academia.
     -   UNDRR. [*Link*](https://www.undrr.org/implementing-sendai-framework-partners-and-stakeholders/science-and-technology-action-group).
     -   APRU Multi-Hazards. [*Link*](https://apru.org/our-work/pacific-rim-challenges/multi-hazards/).

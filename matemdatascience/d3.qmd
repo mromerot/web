@@ -1,0 +1,25 @@
+---
+title: "D3, Observable y JS"
+format: html
+editor: visual
+---
+
+## D3
+
+-   Observable HQ. [*Link*](https://observablehq.com/)*.*
+-   Quarto and Observable. [*Link*](https://quarto.org/docs/interactive/ojs/index.html).
+
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/embed/CCBTX2pI2fU" >}} Introduction to D3 P1. [Slides](https://docs.google.com/presentation/d/1IrZiaKZ86m0Ll25HsWHesEsEYbtsH_-TFIrBZBLMMfE/edit?slide=id.g282fb476d44_0_108#slide=id.g282fb476d44_0_108).
+
+{{< video "https://www.youtube.com/embed/Crp8UX-eQB0" >}} Introduction to D3 P2. [Slides](https://docs.google.com/presentation/d/1IrZiaKZ86m0Ll25HsWHesEsEYbtsH_-TFIrBZBLMMfE/edit?slide=id.g281f7a52d26_0_298#slide=id.g281f7a52d26_0_298).
+
+{{< video "https://www.youtube.com/embed/30ZVbvVLQck" >}} Introduction to D3 P3.
+
+{{< video "https://www.youtube.com/embed/I3EH4E7s-HQ" >}} Introduction to D3 P4.
+
+{{< video "https://www.youtube.com/embed/DcMX8JiX80Y" >}} Introduction to D3 P5.
+:::
+
+```{}
+```

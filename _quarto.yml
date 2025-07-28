@@ -91,6 +91,12 @@ website:
             href: matemdatascience/cienciadedatos.qmd
           - text: "Inteligencia artificial"
             href: matemdatascience/ia.qmd
+          - text: "D3"
+            href: matemdatascience/d3.qmd
+          - text: "Myst"
+            href: matemdatascience/myst.qmd
+          - text: "Github"
+            href: matemdatascience/github.qmd
       - section: "Vida laboral"
         contents:
           - text: "Café"
