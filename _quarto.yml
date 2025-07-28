@@ -15,7 +15,7 @@ website:
         contents:
           - text: "Gestión del riesgo de desastres"
             href: grd/gestiondelriesgo.qmd
-          - section: "Conocimiento del riesgo"
+          - text: "Conocimiento del riesgo"
             href: grd/conocimientodelriesgo.qmd
           - text: "Indicadores de riesgo nacionales y mundiales"
             href: grd/conocimiento-indicadores.qmd
