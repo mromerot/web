@@ -1,5 +1,5 @@
 ---
-title: "Repositorios Fair en gestión del riesgo de desastres"
+title: "Repositorios Fair y data science en gestión del riesgo de desastres"
 format: html
 editor: visual
 ---
@@ -34,8 +34,21 @@ editor: visual
 
 -   **Project Pythia**. [Link](https://projectpythia.org/). An education and training hub for the geoscientific Python community
 
-**Entrenamiento en GRD**
+-   Github
+
+    -   #DRR. [*Link*](https://github.com/topics/disaster-risk-management)
+
+## **Entrenamiento en GRD**
 
 -   Risk Profiler (Canada). [Link](https://www.riskprofiler.ca/learn-more/training-materials/index.html)
 
 -   FEMA, [mapas de inundacion](https://www.fema.gov/es/flood-maps)
+
+## **Data science para desastres**
+
+-   Risk data library. Risk data is for everyone. [*Link*](https://riskdatalibrary.org/)*.*
+    -   Development Data Hub. [*Link*](https://riskdatalibrary.org/data/)*.*
+
+    -   Risk Data Fellows. [*Link*](https://riskdatalibrary.org/fellows/)*.*
+
+{{< video "https://youtu.be/J3yfu6A-Clc" width = 300 >}}  How data is saving lives in Colombia | UNDRR

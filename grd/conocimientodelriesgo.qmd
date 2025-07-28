@@ -50,6 +50,7 @@ editor: visual
 
 ## Social
 
+-   Indicador de Condiciones de Vulnerabilidad Urbana. 2023. GFDRR. [*Link*](https://www.gfdrr.org/en/publication/urban-vulnerability-index-colombia).
 -   Lineamientos para el análisis de la vulnerabilidad social en los estudios de la gestión municipal del riesgo de desastres. UNGRD. 2017. [*Link*](https://repositorio.gestiondelriesgo.gov.co:8443/handle/20.500.11762/24756).
 
 [PDC. Vulnerability Indicators](https://analytics.pdc.org/global-risk-index/). PDC’s vulnerability analysis measures the physical, environmental, social, and economic conditions and processes that increase susceptibility of communities and systems to the damaging effects of hazards. Multiple factors influencing disaster outcomes, including those linked to poverty and development, are considered in the analysis.
@@ -155,7 +156,6 @@ editor: visual
         -   Documentation. [*Link*](https://sdss-documentation.readthedocs.io/en/latest/)*.*
 
 ::: {layout-ncol="2"}
-
 {{< video "https://youtu.be/xi1CbjxIfNU" >}} Introduction
 
 {{< video "https://youtu.be/Q3bXq9YZN-Q" >}} Hazard
