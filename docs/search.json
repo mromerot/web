@@ -1372,7 +1372,7 @@
     "href": "matemdatascience/myst.html",
     "title": "Myst, Zaar",
     "section": "",
-    "text": "Myst. Link.\n\nGet Started. Your first steps with MyST. Link\n\n\n\n\n\nReflections on MyST-ification. 2025.Link",
+    "text": "Myst. Link.\n\nGet Started. Your first steps with MyST. Link\n\n\n SciPy Proceedings 2025. MyST Markdown and Curvenote\n\n\n\nReflections on MyST-ification. 2025.Link",
     "crumbs": [
       "Matemáticas y ciencia de datos",
       "Myst"
@@ -1636,7 +1636,7 @@
     "href": "cyt/cienciareproduc.html#static-site-generators",
     "title": "Ciencia reproducible",
     "section": "Static site generators",
-    "text": "Static site generators\n\nMkdocs. Project documentation with Markdown. Link.\n\nMaterials for Mkdocs. Link.\n\nSphinx. Link.\nJekyll. Link\nFast Api. Link.\nMyST. Link.\nQuarto. Link\n\n\n\n\n How To Create STUNNING Code Documentation With MkDocs Material Theme\n\n\n Material for MkDocs: Full Tutorial To Build And Deploy Your Docs Portal\n\n\n\n\nMKDocs",
+    "text": "Static site generators\n\nMkdocs. Project documentation with Markdown. Link.\n\nMaterials for Mkdocs. Link.\n\nSphinx. Link.\nJekyll. Link\nFast Api. Link.\nMyST. Link.\nQuarto. Link\n\n\n\n\n How To Create STUNNING Code Documentation With MkDocs Material Theme\n\n\n Material for MkDocs: Full Tutorial To Build And Deploy Your Docs Portal\n\n\n\n\n SciPy Proceedings 2025. MyST Markdown and Curvenote",
     "crumbs": [
       "Ciencia y tecnología",
       "Ciencia reproducible"
@@ -2164,7 +2164,18 @@
     "href": "grd/erosioncostera.html",
     "title": "Erosión costera",
     "section": "",
-    "text": "Amenaza y vulnerabilidad por erosión costera en Colombia: enfoque regional para la gestión del riesgo. 2018. Invemar. Link.\nLanzamiento del libro Erosión costera en el litoral antioqueño, 2022. Link.\nPresent and Future Challenges of Coastal Erosion in Latin America. 2014. Link\nAre We Managing in the Right Way the Coastal Erosion along the Caribbean Coast of Colombia? 2020. Link.\nAlgunos expertos Colombia. * Nelson Rangel. Universidad del Atlantico. Link.\n\nAndrés Osorio. Universidad Nacional sede Medellin. Link.\nConstanza Ricaurte. INVEMAR. Link.\nVladimir Toro. UdeA. Link\n\n\nhttps://www.facebook.com/CorporacionAcademicaAmbiental/videos/482006680659849\n\n\nInstituciones nacionales\n\n\n\n\n\nInstituciones internacionales\n\n\n\n\n\nAmenaza por erosión costera\n\n\nEvaluación del riesgo por erosión costera\n\n\n\n\n\nComunicación del riesgo por erosión costera\n\n\n\n\n\nReducción del riesgo por erosión costera\n\n\n\n\n\nManejo de desastres por erosión costera\n\n\n\n\n\nLecturas\n\nThe\n\n\n\nEntrenamiento\n\nCope\n\n\n\nRepositorios\n\nDownload\n\n\n\nVideos",
+    "text": "Amenaza y vulnerabilidad por erosión costera en Colombia: enfoque regional para la gestión del riesgo. 2018. Invemar. Link.\nLanzamiento del libro Erosión costera en el litoral antioqueño, 2022. Link.\nPresent and Future Challenges of Coastal Erosion in Latin America. 2014. Link\nAre We Managing in the Right Way the Coastal Erosion along the Caribbean Coast of Colombia? 2020. Link.\nAlgunos expertos Colombia. * Nelson Rangel. Universidad del Atlantico. Link.\n\nAndrés Osorio. Universidad Nacional sede Medellin. Link.\nConstanza Ricaurte. INVEMAR. Link.\nVladimir Toro. UdeA. Link\nhttps://www.facebook.com/CorporacionAcademicaAmbiental/videos/482006680659849",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Erosión costera"
+    ]
+  },
+  {
+    "objectID": "grd/erosioncostera.html#redes",
+    "href": "grd/erosioncostera.html#redes",
+    "title": "Erosión costera",
+    "section": "Redes",
+    "text": "Redes\n\nCoastal Hazards.net. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Erosión costera"
@@ -2334,7 +2345,7 @@
     "href": "grd/repositorios.html#lista-de-repositorios-en-grd",
     "title": "Repositorios Fair y data science en gestión del riesgo de desastres",
     "section": "Lista de repositorios en GRD",
-    "text": "Lista de repositorios en GRD\n\nClimate Informed Risk Index. Link. This tool is a replica of the National Risk Index (NRI) Future Risk tool, which was removed from the public by the US Government in February, 2025. It references the following datasets which were downloaded before the tool was taken down.\nCLIMAAX CRA Handbook. Link.Link. A regional climate risk assessment is often needed to design or update a climate adaptation and/or risk management plan. Regular updates are needed considering changing climate risk profiles\nCopernicus Browser. Link.\nEM-DAT Documentation. Link. Link.\nGlobal Facility for Disaster Reduction and Recovery (GFDRR). Link. GFDRR supports developing countries on disaster risk reduction and climate change adaptation. \n\nCCDR-tools. Link.\n\nHazus. FEMA Natural Hazards Risk Assessment Program. Link.\nDisaster-Risk-Analysis-Platform. Link. Welcome to our project, “Disaster Risk Analytics Platform,” developed with an aim to provide comprehensive disaster risk analysis for investment firms operating within the U.S. markets. Using advanced statistical analysis and deep learning technologies, this platform helps predict potential disasters and their financial impacts on various states, aiding firms in making informed, resilient investment decisions.\nDisaster-Risk-Monitoring-Using-Satellite-Imagery. Link. A suggestion of task provided by NIVIDEA in its course Disaster Risk Monitoring Using Satellite Imagery\nTOMRAP – Tool for Multi-hazard Risk Assessment in Python. Link. The project builds on outputs from the METEOR project (NEE6423R) to generate a tool that can be used in future projects to assess multi-hazard risk. The METEOR model was initially developed in ArcGIS. By streamlining this code in Python we will make multi-hazard risk analysis faster and more widely applicable. \nSeismic Hazard and Risk Analysis calculations. Link. Supporting calculations for the textbook Seismic Hazard and Risk Analysis.\nProject Pythia. Link. An education and training hub for the geoscientific Python community\nDisaster Vulnerability Map. Catholic Charities USA Disaster Vulnerability Map. Link\nMapeo de Asentamientos Informales basado en Inteligencia Artificial. Banco Mundial. Link.\nGithub\n\n#DRR. Link",
+    "text": "Lista de repositorios en GRD\n\nClimate Informed Risk Index. Link. This tool is a replica of the National Risk Index (NRI) Future Risk tool, which was removed from the public by the US Government in February, 2025. It references the following datasets which were downloaded before the tool was taken down.\nCLIMAAX CRA Handbook. Link.Link. A regional climate risk assessment is often needed to design or update a climate adaptation and/or risk management plan. Regular updates are needed considering changing climate risk profiles\nCopernicus Browser. Link.\nEM-DAT Documentation. Link. Link.\nGlobal Facility for Disaster Reduction and Recovery (GFDRR). Link. GFDRR supports developing countries on disaster risk reduction and climate change adaptation. \n\nCCDR-tools. Link.\n\nHazus. FEMA Natural Hazards Risk Assessment Program. Link.\nDisaster-Risk-Analysis-Platform. Link. Welcome to our project, “Disaster Risk Analytics Platform,” developed with an aim to provide comprehensive disaster risk analysis for investment firms operating within the U.S. markets. Using advanced statistical analysis and deep learning technologies, this platform helps predict potential disasters and their financial impacts on various states, aiding firms in making informed, resilient investment decisions.\nDisaster-Risk-Monitoring-Using-Satellite-Imagery. Link. A suggestion of task provided by NIVIDEA in its course Disaster Risk Monitoring Using Satellite Imagery\nTOMRAP – Tool for Multi-hazard Risk Assessment in Python. Link. The project builds on outputs from the METEOR project (NEE6423R) to generate a tool that can be used in future projects to assess multi-hazard risk. The METEOR model was initially developed in ArcGIS. By streamlining this code in Python we will make multi-hazard risk analysis faster and more widely applicable. \nSeismic Hazard and Risk Analysis calculations. Link. Supporting calculations for the textbook Seismic Hazard and Risk Analysis.\nProject Pythia. Link. An education and training hub for the geoscientific Python community\nDisaster Vulnerability Map. Catholic Charities USA Disaster Vulnerability Map. Link\nMapeo de Asentamientos Informales basado en Inteligencia Artificial. Banco Mundial. Link.\nClimate change AI. Link.\nGithub\n\n#DRR. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Cursos, redes y recursos",
