@@ -37,22 +37,33 @@ website:
               href: grd/repositorios.qmd
           - text: "Sistemas de alerta temprana"
             href: grd/sat.qmd
-          - text: "Amenazas extraterrestres"
-            href: grd/amenazasextraterrestres.qmd
-          - text: "Erosión costera"
-            href: grd/erosioncostera.qmd
-          - text: "Incendios forestales"
-            href: grd/incendiosforestales.qmd
-          - text: "Huracanes"
-            href: grd/huracanes.qmd
-          - text: "El Niño / La Niña"
-            href: grd/elnino.qmd       
-          - text: "Inundaciones"
-            href: grd/inundaciones.qmd
-          - text: "Riesgo sísmico"
-            href: grd/riesgosismico.qmd
-          - text: "Volcanes"
-            href: grd/volcanes.qmd
+          - section: "Amenazas hidrológicas y meteorológicas"
+            href: grd/hidrol-meteorologicas/index.qmd
+            contents:
+            - text: "El Niño / La Niña"
+              href: grd/hidrol-meteorologicas/elnino.qmd
+            - text: "Huracanes"
+              href: grd/hidrol-meteorologicas/huracanes.qmd
+            - text: "Inundaciones"
+              href: grd/hidrol-meteorologicas/inundaciones.qmd
+          - section: "Amenazas geológicas"
+            contents:
+            - text: "Riesgo sísmico"
+              href: grd/riesgosismico.qmd
+            - text: "Volcanes"
+              href: grd/volcanes.qmd
+          - section: "Amenazas extraterrestres"
+            contents:
+            - text: "Amenazas extraterrestres"
+              href: grd/amenazasextraterrestres.qmd
+          - section: "Amenazas ambientales"
+            contents:
+            - text: "Erosión costera"
+              href: grd/erosioncostera.qmd
+            - text: "Incendios forestales"
+              href: grd/incendiosforestales.qmd
+          - section: "Amenazas sociales"
+            contents:
           - text: "Amazonas"
             href: grd/amazonas.qmd
           - text: "Glosario"

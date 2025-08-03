@@ -28,6 +28,8 @@ editor: visual
 
 -   **Disaster-Risk-Monitoring-Using-Satellite-Imagery**. [Link](https://github.com/Pray-d/Disaster-Risk-Monitoring-Using-Satellite-Imagery). A suggestion of task provided by NIVIDEA in its course Disaster Risk Monitoring Using Satellite Imagery
 
+-   Demostrador RIESGOS. [*Link*](https://github.com/riesgos/dlr-riesgos-frontend)
+
 -   **TOMRAP – Tool for Multi-hazard Risk Assessment in Python.** [Link](https://github.com/BritishGeologicalSurvey/TOMRAP). The project builds on outputs from the METEOR project (NEE6423R) to generate a tool that can be used in future projects to assess multi-hazard risk. The METEOR model was initially developed in ArcGIS. By streamlining this code in Python we will make multi-hazard risk analysis faster and more widely applicable. 
 
 -   **Seismic Hazard and Risk Analysis calculations.** [Link](https://github.com/bakerjw/seismic-hazard-and-risk). Supporting calculations for the textbook Seismic Hazard and Risk Analysis.
@@ -43,6 +45,8 @@ editor: visual
 -   Github
 
     -   #DRR. [*Link*](https://github.com/topics/disaster-risk-management)
+
+{{< video "https://riesgos.de/images/downloads/RIESGOS2.0_Project_Video_Presentation_V1.0_2022.mp4 width = 400">}}
 
 ## **Entrenamiento en GRD**
 
