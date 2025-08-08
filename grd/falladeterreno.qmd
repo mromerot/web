@@ -8,8 +8,8 @@ bibliography: references.bib
 # Instituciones nacionales
 
 -   UNGRD. [*Link*](https://portal.gestiondelriesgo.gov.co/)
--   Servicio Geológico de Colombia
--   Semillero de investigación UNalMed – Geohazards. [*Link*](https://geohazards.com.co/).
+-   Servicio Geológico de Colombia. Dirección de Geoamenazas. [*Link*](https://www2.sgc.gov.co/ProgramasDeInvestigacion/geoamenazas/Paginas/geoamenazas.aspx)*.*
+-   Semillero de investigación UNalMed – Geohazards. [*Link*](https://geohazards.com.co/). [@garcia-delgado2022] [@aristizábal2025]
 
 # Instituciones y redes internacionales
 
@@ -42,20 +42,22 @@ bibliography: references.bib
 
 -   Lecturas y recursos
 
-    -   Fatal landslides in Colombia (from historical times to 2020) and their socio-economic impacts. Garcia-Delgado. Landslides, 2022. [*Link*](https://link.springer.com/article/10.1007/s10346-022-01870-2).
     -   Spatial and temporal landslide distributions using global and open landslide databases. Natural Hazards. 2023. [*Link*](https://link.springer.com/article/10.1007/s11069-023-05848-8)
     -   International Programme on Landslides. [*Link*](https://www.landslides.org/ipl-info/).
     -   Seminarios en deslizamientos. 2021. [*Link*](https://www.seminarioriesgosdeslizamientos.com/). [*Link*](https://www.seminarioriesgosdeslizamientos.com/blank).
 
-## Artículos científicos
+## Sistemas de información
 
----
-nocite: |
-  [@aristizábal2025] 
----
+Servicio Geológico Colombiano. Sistema de información de movimientos en masa - [SIMMA](https://simma.sgc.gov.co./#/)
+
+[![](images/SIMMA.png "Sistema de información de movimientos en masa - SIMMA"){width="500"}](https://simma.sgc.gov.co./#/public/basic/)
+
+## Artículos científicos
 
 ::: {#refs}
 :::
+
+------------------------------------------------------------------------
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/5RvXCx-BJMI" >}} Assessing accuracy of rapid response landslide maps using open-source tools.
@@ -116,8 +118,4 @@ Comunicación del riesgo por movimientos en masa
 
 -   Download
 
-## Videos
-
-::: {layout-ncol="2"}
-{{< video "https://vimeo.com/701418128" >}}
-:::
+## Otros videos y recursos

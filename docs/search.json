@@ -1943,7 +1943,19 @@
     "href": "grd/falladeterreno.html",
     "title": "Falla de terreno",
     "section": "",
-    "text": "UNGRD. Link\nServicio Geológico de Colombia\nSemillero de investigación UNalMed – Geohazards. Link.",
+    "text": "UNGRD. Link\nServicio Geológico de Colombia. Dirección de Geoamenazas. Link.\nSemillero de investigación UNalMed – Geohazards. Link. (Garcia-Delgado et al. 2022) (Aristizábal et al. 2025)",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas geológicas",
+      "Falla de terreno"
+    ]
+  },
+  {
+    "objectID": "grd/falladeterreno.html#sistemas-de-información",
+    "href": "grd/falladeterreno.html#sistemas-de-información",
+    "title": "Falla de terreno",
+    "section": "Sistemas de información",
+    "text": "Sistemas de información",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas geológicas",
@@ -1955,7 +1967,7 @@
     "href": "grd/falladeterreno.html#artículos-científicos",
     "title": "Falla de terreno",
     "section": "Artículos científicos",
-    "text": "Artículos científicos\n\n\nAristizábal, Edier Vicente, Daniel Correa, Carolina García Cadavid, Ana Maria Valencia Londoño, and Erluan Andrés Zabaleta Benavides. 2025. “Geohazard: Base de Datos Por Movimientos En Masa y Avenidas Torrenciales En Colombia y El Departamento de Antioquia.” Ciencia e Ingeniería Neogranadina 35 (1): 131–47. https://doi.org/10.18359/rcin.7786.\n\n\n\n\n\n Assessing accuracy of rapid response landslide maps using open-source tools.\n\n\n Stability in motion: Overview of interdisciplinary landslide research at British Geological Survey",
+    "text": "Artículos científicos\n\n\nAristizábal, Edier Vicente, Daniel Correa, Carolina García Cadavid, Ana Maria Valencia Londoño, and Erluan Andrés Zabaleta Benavides. 2025. “Geohazard: Base de Datos Por Movimientos En Masa y Avenidas Torrenciales En Colombia y El Departamento de Antioquia.” Ciencia e Ingeniería Neogranadina 35 (1): 131–47. https://doi.org/10.18359/rcin.7786.\n\n\nGarcia-Delgado, Helbert, David N. Petley, Mauricio A. Bermúdez, and Sergio A. Sepúlveda. 2022. “Fatal Landslides in Colombia (from Historical Times to 2020) and Their Socio-Economic Impacts.” Landslides 19 (7): 1689–1716. https://doi.org/10.1007/s10346-022-01870-2.\n\n\n\n\n\n\n Assessing accuracy of rapid response landslide maps using open-source tools.\n\n\n Stability in motion: Overview of interdisciplinary landslide research at British Geological Survey",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas geológicas",
@@ -1999,11 +2011,11 @@
     ]
   },
   {
-    "objectID": "grd/falladeterreno.html#videos",
-    "href": "grd/falladeterreno.html#videos",
+    "objectID": "grd/falladeterreno.html#otros-videos-y-recursos",
+    "href": "grd/falladeterreno.html#otros-videos-y-recursos",
     "title": "Falla de terreno",
-    "section": "Videos",
-    "text": "Videos",
+    "section": "Otros videos y recursos",
+    "text": "Otros videos y recursos",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas geológicas",
