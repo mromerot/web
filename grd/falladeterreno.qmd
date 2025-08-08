@@ -2,13 +2,14 @@
 title: "Falla de terreno"
 format: html
 editor: visual
+bibliography: references.bib
 ---
 
 # Instituciones nacionales
 
 -   UNGRD. [*Link*](https://portal.gestiondelriesgo.gov.co/)
 -   Servicio Geológico de Colombia
--   Semillero de investigación UNalMed – Geohazards. [Link](https://geohazards.com.co/).
+-   Semillero de investigación UNalMed – Geohazards. [*Link*](https://geohazards.com.co/).
 
 # Instituciones y redes internacionales
 
@@ -45,6 +46,16 @@ editor: visual
     -   Spatial and temporal landslide distributions using global and open landslide databases. Natural Hazards. 2023. [*Link*](https://link.springer.com/article/10.1007/s11069-023-05848-8)
     -   International Programme on Landslides. [*Link*](https://www.landslides.org/ipl-info/).
     -   Seminarios en deslizamientos. 2021. [*Link*](https://www.seminarioriesgosdeslizamientos.com/). [*Link*](https://www.seminarioriesgosdeslizamientos.com/blank).
+
+## Artículos científicos
+
+---
+nocite: |
+  [@aristizábal2025] 
+---
+
+::: {#refs}
+:::
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/5RvXCx-BJMI" >}} Assessing accuracy of rapid response landslide maps using open-source tools.

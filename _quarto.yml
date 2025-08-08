@@ -48,12 +48,12 @@ website:
               href: grd/hidrol-meteorologicas/inundaciones.qmd
           - section: "Amenazas geológicas"
             contents:
+            - text: "Falla de terreno"
+              href: grd/falladeterreno.qmd
             - text: "Riesgo sísmico"
               href: grd/riesgosismico.qmd
             - text: "Volcanes"
               href: grd/volcanes.qmd
-            - text: "Falla de terreno"
-              href: grd/falladeterreno.qmd
           - section: "Amenazas extraterrestres"
             contents:
             - text: "Amenazas extraterrestres"
