@@ -107,6 +107,12 @@ Markdown es un lenguaje de marcado ligero que permite añadir elementos de forma
 -   Fast Api. [*Link*](https://fastapi.tiangolo.com/)*.*
 -   MyST. [*Link*](https://mystmd.org/guide)*.*
 -   Quarto. [*Link*](https://quartopub.com/)
+-   Books
+    -   Quire. [*Link*](https://quire.getty.edu/)
+-   Awesome Static Web Site Generators. [*Link*](https://github.com/myles/awesome-static-generators).
+-   Introduction to Static Site Generators. [*Link*](https://chrisdaaz.github.io/static-web-scholcomm/tutorials/static-site-generators/)*.*
+-   How to choose the right static site generator. [*Link*](https://about.gitlab.com/blog/comparing-static-site-generators/)*.*
+-   The top five static site generators for 2025. [*Link*](https://cloudcannon.com/blog/the-top-five-static-site-generators-for-2025-and-when-to-use-them/)*.*
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/Q-YA_dA8C20" >}} How To Create STUNNING Code Documentation With MkDocs Material Theme
