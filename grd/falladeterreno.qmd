@@ -13,19 +13,6 @@ bibliography: references.bib
 
 # Instituciones y redes internacionales
 
--   Global landslides databases
-    -   Global Fatal Landslide Database. [*Link*](https://www.un-spider.org/links-and-resources/data-sources/global-fatal-landslide-database-gfld-university-sheffield)
-
-    -   Global Landslide Catalog. [*Link*](https://www.un-spider.org/links-and-resources/data-sources/global-landslide-catalog-glc-nasa)
-
-    -   EM-DAT. [*Link*](https://www.emdat.be/)
-
-    -   Desinventar. [*Link*](https://www.desinventar.net/)
-
-    -   Repositorio cooperativo abierto de movimientos en masa (COOLR), NASA. [*Link*](https://gpm.nasa.gov/landslides/index.html)
-
-<!-- -->
-
 -   Italia.
 
     -   The Italian web platform on landslides and floods. [*Link*](https://idrogeo.isprambiente.it/app/)
@@ -37,7 +24,6 @@ bibliography: references.bib
 -   **SGC**
 
     -   Guía metodológica para estudios de amenaza vulnerabilidad y riesgo por movimientos en masa. SGC. 2015. [*Link*](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/19776).
-    -   Sistema de información de movimientos en masa (SIMA). [*Link*](https://simma.sgc.gov.co/#/public/results/)
     -   Mapa nacional integrado de amenaza y susceptibilidad por Movimientos en Masa a escala 1:100.000 y 1:500.000. [*Link*](https://www2.sgc.gov.co/sgc/mapas/Paginas/Imagenes-de-amenazas-.aspx)
 
 -   Lecturas y recursos
@@ -46,11 +32,23 @@ bibliography: references.bib
     -   International Programme on Landslides. [*Link*](https://www.landslides.org/ipl-info/).
     -   Seminarios en deslizamientos. 2021. [*Link*](https://www.seminarioriesgosdeslizamientos.com/). [*Link*](https://www.seminarioriesgosdeslizamientos.com/blank).
 
-## Sistemas de información
+# Sistemas de información
 
-Servicio Geológico Colombiano. Sistema de información de movimientos en masa - [SIMMA](https://simma.sgc.gov.co./#/)
+-   Global Fatal Landslide Database. [*Link*](https://www.un-spider.org/links-and-resources/data-sources/global-fatal-landslide-database-gfld-university-sheffield)
+-   Global Landslide Catalog. [*Link*](https://www.un-spider.org/links-and-resources/data-sources/global-landslide-catalog-glc-nasa)
+-   EM-DAT. [*Link*](https://www.emdat.be/)
+-   Desinventar. [*Link*](https://www.desinventar.net/)
+-   Repositorio cooperativo abierto de movimientos en masa (COOLR), NASA. [*Link*](https://gpm.nasa.gov/landslides/index.html)
+
+## Colombia
+
+-   Servicio Geológico Colombiano. Sistema de información de movimientos en masa - [SIMMA](https://simma.sgc.gov.co./#/)
 
 [![](images/SIMMA.png "Sistema de información de movimientos en masa - SIMMA"){width="500"}](https://simma.sgc.gov.co./#/public/basic/)
+
+Geohazards. UNAL Medellín. [*Link*](https://geohazards.com.co/visor-geohazard.html)
+
+[![](images/Geohazards.png){width="500"}](https://geohazards.com.co/visor-geohazard.html)
 
 ## Artículos científicos
 
