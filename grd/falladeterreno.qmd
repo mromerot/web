@@ -14,7 +14,6 @@ bibliography: references.bib
 # Instituciones y redes internacionales
 
 -   Italia.
-
     -   The Italian web platform on landslides and floods. [*Link*](https://idrogeo.isprambiente.it/app/)
 
     -   ReNDiS - Repertory of mitigation measures for National SoilProtection. [*Link*](https://www.isprambiente.gov.it/en/projects/soil-and-territory/Rendis)
@@ -22,12 +21,9 @@ bibliography: references.bib
 # Amenaza por movimientos en masa
 
 -   **SGC**
-
     -   Guía metodológica para estudios de amenaza vulnerabilidad y riesgo por movimientos en masa. SGC. 2015. [*Link*](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/19776).
     -   Mapa nacional integrado de amenaza y susceptibilidad por Movimientos en Masa a escala 1:100.000 y 1:500.000. [*Link*](https://www2.sgc.gov.co/sgc/mapas/Paginas/Imagenes-de-amenazas-.aspx)
-
 -   Lecturas y recursos
-
     -   Spatial and temporal landslide distributions using global and open landslide databases. Natural Hazards. 2023. [*Link*](https://link.springer.com/article/10.1007/s11069-023-05848-8)
     -   International Programme on Landslides. [*Link*](https://www.landslides.org/ipl-info/).
     -   Seminarios en deslizamientos. 2021. [*Link*](https://www.seminarioriesgosdeslizamientos.com/). [*Link*](https://www.seminarioriesgosdeslizamientos.com/blank).
@@ -68,7 +64,7 @@ Geohazards. UNAL Medellín. [*Link*](https://geohazards.com.co/visor-geohazard.h
 ::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/watch?v=sJP5EnEsX9Y" >}} Geoamenazas: del monitoreo a la evaluación de escenarios de riesgo
 
-{{< video "https://youtu.be/Ye1y4L7c3pU?si=NVF4Zl6eS7i1Tdoi" >}} Landslide risk evaluation: tools and tips for risky decisions
+{{< video "https://youtu.be/Ye1y4L7c3pU" >}} Landslide risk evaluation: tools and tips for risky decisions
 :::
 
 # Comunicación del riesgo por movimientos en masa
@@ -87,9 +83,7 @@ Comunicación del riesgo por movimientos en masa
 -   Realizar obras de estabilización de taludes y drenaje.
 -   Capacitar a la comunidad sobre prevención y autoprotección.
 
-::: {layout-ncol="2"}
-{{\< video "[https://youtu.be/yllF0xdfFRY"](https://youtu.be/yllF0xdfFRY%22)}} GSI seminar - Engineered and Nature-based Solutions against Flow-type Landslides
-:::
+{{< video "https://youtu.be/yllF0xdfFRY" width="500">}} GSI seminar - Engineered and Nature-based Solutions against Flow-type Landslides
 
 # Manejo de desastres por movimientos en masa
 
@@ -99,11 +93,27 @@ Comunicación del riesgo por movimientos en masa
 -   Restablecer servicios básicos y vías de acceso.
 -   Evaluar daños y planificar la recuperación de la zona.
 
-::: {layout-ncol="2"}
-{{< video "https://vimeo.com/701418128" >}}
+{{< video "https://vimeo.com/701418128">}}
+
+# **Lecturas de referencia**
+
+## Lea esto 👇🏼
+
+::: panel-tabset
+## **Clasificación de movimiento en masa y su distribución en terrenos geológicos de Colombia**
+
+![](images/Clasif-mem-SCG.png){width="200"}
+
+Clasificación de movimiento en masa y su distribución en terrenos geológicos de Colombia. Juan Montero Olarte. <https://doi.org/10.32685/9789585978218>
 :::
 
-## Lecturas
+::: panel-tabset
+### **Landslide Types**
+
+[![](https://media.springernature.com/w316/springer-static/cover-hires/book/978-1-4020-4399-4?as=webp){width="200"}](https://link.springer.com/rwe/10.1007/978-1-4020-4399-4_344)
+
+[Encyclopedia of Natural Hazards](https://link.springer.com/referencework/10.1007/978-1-4020-4399-4). Landslide Types. David Cruden
+:::
 
 -   Understanding and Reducing Landslide Disaster Risk: Volume 4. [*Link*](https://books.google.com.co/books?id=2pwQEAAAQBAJ)
 -   Landslide Hazard and Risk. [*Link*](https://books.google.com.co/books?id=UFQk0I4EUiwC&pg=PA136&dq=risk+Van+Westen&hl=es&newbks=1&newbks_redir=0&sa=X&ved=2ahUKEwiK3cWd0qaOAxXaQzABHaHyAKkQ6AF6BAgGEAM)
