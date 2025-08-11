@@ -72,7 +72,7 @@ Geohazards. UNAL Medellín. [*Link*](https://geohazards.com.co/visor-geohazard.h
 # Comunicación del riesgo por movimientos en masa
 
 ::: {layout-ncol="2"}
-{{< video "https://youtu.be/8u3F5f47i_M" >}}
+{{< video "https://youtu.be/8u3F5f47i_M" width="500">}}
 
 Comunicación del riesgo por movimientos en masa
 :::
@@ -95,24 +95,24 @@ Comunicación del riesgo por movimientos en masa
 -   Restablecer servicios básicos y vías de acceso.
 -   Evaluar daños y planificar la recuperación de la zona.
 
-{{< video "https://vimeo.com/701418128">}}
+{{< video "https://vimeo.com/701418128" width="500">}}
 
 # **Lecturas de referencia**
 
 ## Lea esto 👇🏼
 
 ::: panel-tabset
-## **Clasificación de movimiento en masa y su distribución en terrenos geológicos de Colombia**
+### Clasificación
+
+Clasificación de movimiento en masa y su distribución en terrenos geológicos de Colombia
 
 ![](images/Clasif-mem-SCG.png){width="200"}
 
 Clasificación de movimiento en masa y su distribución en terrenos geológicos de Colombia. Juan Montero Olarte. <https://doi.org/10.32685/9789585978218>
-:::
 
-::: panel-tabset
 ### **Landslide Types**
 
-[![](https://media.springernature.com/w316/springer-static/cover-hires/book/978-1-4020-4399-4?as=webp){width="200"}](https://link.springer.com/rwe/10.1007/978-1-4020-4399-4_344)
+![](https://media.springernature.com/w316/springer-static/cover-hires/book/978-1-4020-4399-4?as=webp){width="200"}
 
 [Encyclopedia of Natural Hazards](https://link.springer.com/referencework/10.1007/978-1-4020-4399-4). Landslide Types. David Cruden
 :::
