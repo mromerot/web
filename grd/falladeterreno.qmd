@@ -9,7 +9,7 @@ bibliography: references.bib
 
 -   UNGRD. [*Link*](https://portal.gestiondelriesgo.gov.co/)
 -   Servicio Geológico de Colombia. Dirección de Geoamenazas. [*Link*](https://www2.sgc.gov.co/ProgramasDeInvestigacion/geoamenazas/Paginas/geoamenazas.aspx)*.*
--   Semillero de investigación UNalMed – Geohazards. [*Link*](https://geohazards.com.co/). [@garcia-delgado2022] [@aristizábal2025]
+-   Semillero de investigación UNalMed – Geohazards. [*Link*](https://geohazards.com.co/).
 
 # Instituciones y redes internacionales
 
@@ -47,6 +47,8 @@ Geohazards. UNAL Medellín. [*Link*](https://geohazards.com.co/visor-geohazard.h
 [![](images/Geohazards.png){width="500"}](https://geohazards.com.co/visor-geohazard.html)
 
 ## Artículos científicos
+
+-   \[\@garcia-delgado2022\] \[\@aristizábal2025\]
 
 ::: {#refs}
 :::
@@ -115,8 +117,35 @@ Clasificación de movimiento en masa y su distribución en terrenos geológicos 
 [Encyclopedia of Natural Hazards](https://link.springer.com/referencework/10.1007/978-1-4020-4399-4). Landslide Types. David Cruden
 :::
 
--   Understanding and Reducing Landslide Disaster Risk: Volume 4. [*Link*](https://books.google.com.co/books?id=2pwQEAAAQBAJ)
--   Landslide Hazard and Risk. [*Link*](https://books.google.com.co/books?id=UFQk0I4EUiwC&pg=PA136&dq=risk+Van+Westen&hl=es&newbks=1&newbks_redir=0&sa=X&ved=2ahUKEwiK3cWd0qaOAxXaQzABHaHyAKkQ6AF6BAgGEAM)
+-   Understanding and Reducing Landslide Disaster Risk: Volume 4. [*Link*](https://books.google.com.co/books?id=2pwQEAAAQBAJ)*.*
+
+-   Landslide Hazard and Risk. [*Link*](https://books.google.com.co/books?id=UFQk0I4EUiwC&pg=PA136&dq=risk+Van+Westen&hl=es&newbks=1&newbks_redir=0&sa=X&ved=2ahUKEwiK3cWd0qaOAxXaQzABHaHyAKkQ6AF6BAgGEAM)*.*
+
+-   The Landslide Handbook— A Guide to Understanding Landslides. USGS. [*Link*](https://pubs.usgs.gov/circ/1325/pdf/C1325_508.pdf)*.*
+
+-   A unified landslide classification system for loess slopes: A critical review. *Geomorphology*. 2019. [*Link*](https://doi.org/10.1016/j.geomorph.2019.04.020)
+
+-   The Varnes classification of landslide types, an update. *Lanslides*. 2013. [*Link*](https://link.springer.com/article/10.1007/s10346-013-0436-y?trk=public_post_comment-text).
+
+-   Using the Working Classification of Landslides to Assess the Danger from a Natural Slope. *Landslide Processes.* 2015*. [Link](https://link.springer.com/chapter/10.1007/978-3-319-09057-3_1)*
+
+-   Deslizamientos fatales en Colombia (desde tiempos históricos hasta 2020) y sus impactos socioeconómicos. 2020. [*Link*](https://link.springer.com/article/10.1007/s10346-022-01870-2#Sec11)
+
+-   Space-time analysis of the relationship between landslides occurrence, rainfall variability and ENSO in the Tropical Andean Mountain region in Colombia. 2024. [*Link*](https://link.springer.com/article/10.1007/s10346-024-02225-9?fromPaywallRec=false).
+
+-   Landslide Travel Distances in Colombia from National Landslide Database Analysis. 2022. [*Link*](https://link.springer.com/chapter/10.1007/978-3-031-16898-7_24?fromPaywallRec=false).
+
+-   Spatial and temporal patterns and the socioeconomic impacts of landslides in the tropical and mountainous Colombian Andes. Disasters. 2020. [*Link*.](https://onlinelibrary.wiley.com/doi/abs/10.1111/disa.12391)
+
+-   Spatial and temporal landslide distributions using global and open landslide databases. Natural Hzards. 2023. [*Link*](https://link.springer.com/article/10.1007/s11069-023-05848-8).
+
+-   An Increasing Trend of Landslides as a Consequence of the Global Change. Earth Systems and Environment. 2025. [*Link*](https://link.springer.com/article/10.1007/s41748-025-00685-0?fromPaywallRec=false)*.*
+
+    ::: callout-important
+    ## An Increasing Trend of Landslides as a Consequence of the Global Change
+
+    ![An Increasing Trend of Landslides as a Consequence of the Global Change](images/paste-2.png){width="500"}
+    :::
 
 ## **Entrenamiento**
 

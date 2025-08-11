@@ -130,10 +130,7 @@ website:
             href: quarto/quarto-atajos.qmd
           - text: "Proyectos de Quarto"
             href: quarto/quarto-proyectos.qmd
-          - text: "Quarto y Jupyter notebooks"
-            href: quarto/Example_Jupyter_Notebook.ipynb # Jupyter notebook
-
-
+          
 
 format:
   html:
