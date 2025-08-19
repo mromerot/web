@@ -64,8 +64,8 @@ website:
               href: grd/erosioncostera.qmd
             - text: "Incendios forestales"
               href: grd/incendiosforestales.qmd
-          - section: "Amenazas sociales"
-            contents:
+          - section: "Amenazas tecnológicas"
+            href: grd/tecnologicas/index.qmd
           - text: "Amazonas"
             href: grd/amazonas.qmd
           - text: "Glosario"
