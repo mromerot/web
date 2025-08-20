@@ -4,11 +4,18 @@ format: html
 editor: visual
 ---
 
-## Github
+# Github
 
-# Github copilot
+## Qué es Github
+
+{{< video "https://youtu.be/r8jQ9hVA2qs">}} A brief introduction to Git for beginners \| GitHub
+
+{{< video "https://youtu.be/dkqWcbe2Ks4" >}} Banco Interamericano de Desarollo Code4Dev: ¿Cómo optimizar tu repositorio de código abierto con Git y GitHub?
+
+## **Introduction to GitHub**
+
+-   Introduction to GitHub. [*Link*](https://github.com/mromerot/skills-introduction-to-github)
+
+## Github copilot
 
 -   What is GitHub Copilot?. [*Link*](https://docs.github.com/en/copilot/get-started/what-is-github-copilot)
-
-```         
-```
