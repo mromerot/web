@@ -106,6 +106,8 @@ website:
             href: matemdatascience/ia.qmd
           - text: "D3"
             href: matemdatascience/d3.qmd
+          - text: "Experimento-D3"
+            href: matemdatascience/d3-experiment.qmd
           - text: "Myst"
             href: matemdatascience/myst.qmd
           - text: "Github"

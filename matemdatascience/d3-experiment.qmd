@@ -1,0 +1,380 @@
+---
+title: "Inversión Global en Investigación y Desarrollo"
+subtitle: "Análisis de Gastos Domésticos en I+D como Porcentaje del PIB"
+author: "Análisis OECD - MSTI Database"
+date: today
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-location: left
+    code-fold: false
+    fig-width: 10
+    fig-height: 6
+execute:
+  echo: true
+  warning: false
+---
+
+## Introducción
+
+La **inversión en Investigación y Desarrollo (I+D)** es un indicador clave de la capacidad innovadora de un país y su compromiso con el crecimiento económico basado en el conocimiento. El indicador **"Gross Domestic Expenditure on Research and Development (GERD) as a percentage of GDP"** mide el total de gastos domésticos en I+D expresados como porcentaje del Producto Interno Bruto.
+
+Según la OECD, este indicador incluye:
+
+-   **Gastos corrientes y de capital** en los cuatro sectores principales
+-   **Empresas privadas**, **Gobierno**, **Educación superior** y **Organizaciones sin fines de lucro**
+-   **Investigación básica**, **investigación aplicada** y **desarrollo experimental**
+
+Los datos presentados provienen de la base de datos **OECD Main Science and Technology Indicators (MSTI)** y reflejan las tendencias más recientes hasta 2023.
+
+## Datos y Preparación
+
+```{ojs}
+// Datos de inversión en I+D como % del PIB (2023)
+rd_data = [
+  {country: "Israel", value: 6.35, region: "Asia-Pacifico"},
+  {country: "Corea del Sur", value: 4.96, region: "Asia-Pacifico"},
+  {country: "Suecia", value: 3.60, region: "Europa"},
+  {country: "Estados Unidos", value: 3.45, region: "America del Norte"},
+  {country: "Japón", value: 3.44, region: "Asia-Pacifico"},
+  {country: "Bélgica", value: 3.32, region: "Europa"},
+  {country: "Austria", value: 3.29, region: "Europa"},
+  {country: "Suiza", value: 3.25, region: "Europa"},
+  {country: "Dinamarca", value: 2.99, region: "Europa"},
+  {country: "Alemania", value: 2.95, region: "Europa"},
+  {country: "Finlandia", value: 2.85, region: "Europa"},
+  {country: "Francia", value: 2.75, region: "Europa"},
+  {country: "Islandia", value: 2.65, region: "Europa"},
+  {country: "China", value: 2.58, region: "Asia-Pacifico"},
+  {country: "Países Bajos", value: 2.35, region: "Europa"},
+  {country: "Reino Unido", value: 2.25, region: "Europa"},
+  {country: "Noruega", value: 2.15, region: "Europa"},
+  {country: "Australia", value: 2.05, region: "Asia-Pacifico"},
+  {country: "Canadá", value: 1.95, region: "America del Norte"},
+  {country: "Italia", value: 1.85, region: "Europa"},
+  {country: "España", value: 1.65, region: "Europa"},
+  {country: "Portugal", value: 1.45, region: "Europa"},
+  {country: "México", value: 0.55, region: "America del Norte"}
+]
+```
+
+```{ojs}
+// Configuración de colores por región
+color_scale = new Map([
+  ["Asia-Pacifico", "#ff6b6b"],
+  ["Europa", "#4ecdc4"], 
+  ["America del Norte", "#45b7d1"]
+])
+```
+
+```{ojs}
+// Estadísticas descriptivas
+stats = {
+  const values = rd_data.map(d => d.value);
+  return {
+    max: d3.max(values),
+    min: d3.min(values),
+    mean: d3.mean(values),
+    median: d3.median(values),
+    countries_above_3: rd_data.filter(d => d.value >= 3.0).length,
+    total_countries: rd_data.length
+  }
+}
+```
+
+## Visualización Principal: Inversión en I+D por País
+
+```{ojs}
+viewof selected_region = Inputs.select(
+  ["Todas las regiones", "Asia-Pacifico", "Europa", "America del Norte"],
+  {label: "Filtrar por región:", value: "Todas las regiones"}
+)
+```
+
+```{ojs}
+// Filtrar datos según selección
+filtered_data = selected_region === "Todas las regiones" 
+  ? rd_data 
+  : rd_data.filter(d => d.region === selected_region)
+```
+
+```{ojs}
+// Gráfico de barras principal
+Plot.plot({
+  title: "Gastos Domésticos en I+D como % del PIB (2023)",
+  subtitle: `Países seleccionados: ${selected_region}`,
+  width: 900,
+  height: 500,
+  marginLeft: 100,
+  marginBottom: 80,
+  x: {
+    domain: [0, 7],
+    label: "Porcentaje del PIB (%)",
+    grid: true
+  },
+  y: {
+    label: null,
+    domain: filtered_data.map(d => d.country)
+  },
+  color: {
+    domain: Array.from(color_scale.keys()),
+    range: Array.from(color_scale.values()),
+    legend: true
+  },
+  marks: [
+    Plot.barX(filtered_data, {
+      x: "value",
+      y: "country",
+      fill: "region",
+      sort: {y: "x", reverse: true},
+      tip: true
+    }),
+    Plot.text(filtered_data, {
+      x: d => d.value + 0.15,
+      y: "country",
+      text: d => `${d.value}%`,
+      fontSize: 11,
+      fill: "#333"
+    }),
+    Plot.ruleX([2.7], {stroke: "#e74c3c", strokeWidth: 2, strokeDasharray: "5,5"})
+  ]
+})
+```
+
+```{ojs}
+html`<p style="margin-top: 10px; font-size: 14px; color: #666;">
+<strong>Línea roja punteada:</strong> Promedio OECD (2.7%)
+</p>`
+```
+
+## Análisis por Regiones
+
+```{ojs}
+// Análisis regional
+regional_summary = d3.rollup(
+  rd_data,
+  v => ({
+    count: v.length,
+    average: d3.mean(v, d => d.value),
+    max: d3.max(v, d => d.value),
+    min: d3.min(v, d => d.value),
+    countries: v.map(d => d.country).join(", ")
+  }),
+  d => d.region
+)
+```
+
+```{ojs}
+// Tabla resumen por región
+Inputs.table(
+  Array.from(regional_summary, ([region, data]) => ({
+    "Región": region,
+    "Países": data.count,
+    "Promedio (%)": data.average.toFixed(2),
+    "Máximo (%)": data.max.toFixed(2),
+    "Mínimo (%)": data.min.toFixed(2)
+  })),
+  {
+    header: {
+      "Región": "Región",
+      "Países": "Número de Países",
+      "Promedio (%)": "Promedio I+D/PIB",
+      "Máximo (%)": "Máximo",
+      "Mínimo (%)": "Mínimo"
+    }
+  }
+)
+```
+
+## Distribución y Percentiles
+
+```{ojs}
+// Histograma de distribución
+Plot.plot({
+  title: "Distribución de la Inversión en I+D",
+  width: 700,
+  height: 300,
+  x: {
+    label: "Porcentaje del PIB (%)",
+    domain: [0, 7]
+  },
+  y: {
+    label: "Número de países"
+  },
+  marks: [
+    Plot.rectY(rd_data, Plot.binX({y: "count"}, {x: "value", thresholds: 20, fill: "#4ecdc4", opacity: 0.7})),
+    Plot.ruleX([stats.mean], {stroke: "#e74c3c", strokeWidth: 2}),
+    Plot.ruleX([stats.median], {stroke: "#f39c12", strokeWidth: 2})
+  ]
+})
+```
+
+```{ojs}
+html`<p style="margin-top: 10px; font-size: 14px; color: #666;">
+<span style="color: #e74c3c;"><strong>Línea roja:</strong> Media (${stats.mean.toFixed(2)}%)</span> | 
+<span style="color: #f39c12;"><strong>Línea naranja:</strong> Mediana (${stats.median.toFixed(2)}%)</span>
+</p>`
+```
+
+## Insights Clave
+
+```{ojs}
+html`
+<div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+<h4 style="color: #2c3e50; margin-top: 0;">📊 Hallazgos Principales</h4>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+  
+<div style="background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #ff6b6b;">
+<strong>🏆 Líderes Globales</strong><br>
+Israel encabeza con <strong>${stats.max}%</strong> del PIB, seguido por Corea del Sur y Suecia
+</div>
+
+<div style="background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #4ecdc4;">
+<strong>🌍 Umbral del 3%</strong><br>
+Solo <strong>${stats.countries_above_3}</strong> de ${stats.total_countries} países superan el 3% del PIB
+</div>
+
+<div style="background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #45b7d1;">
+<strong>📈 Promedio OECD</strong><br>
+El promedio OECD es <strong>2.7%</strong> del PIB en 2023
+</div>
+
+<div style="background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #f39c12;">
+<strong>🌏 Dominancia Asiática</strong><br>
+Asia representa <strong>46%</strong> del gasto global en I+D
+</div>
+
+</div>
+</div>
+`
+```
+
+## Top 10 Países
+
+```{ojs}
+// Top 10 países
+top_10 = rd_data
+  .sort((a, b) => b.value - a.value)
+  .slice(0, 10)
+```
+
+```{ojs}
+Plot.plot({
+  title: "Top 10 Países en Inversión I+D/PIB",
+  width: 600,
+  height: 350,
+  x: {
+    label: null,
+    tickRotate: -45
+  },
+  y: {
+    label: "Porcentaje del PIB (%)",
+    domain: [0, 7]
+  },
+  color: {
+    domain: Array.from(color_scale.keys()),
+    range: Array.from(color_scale.values())
+  },
+  marks: [
+    Plot.barY(top_10, {
+      x: "country",
+      y: "value",
+      fill: "region",
+      tip: true
+    }),
+    Plot.text(top_10, {
+      x: "country",
+      y: d => d.value + 0.15,
+      text: d => `${d.value}%`,
+      fontSize: 10,
+      fill: "#333"
+    })
+  ]
+})
+```
+
+## Explorador Interactivo
+
+```{ojs}
+viewof selected_country = Inputs.select(
+  rd_data.map(d => d.country),
+  {label: "Seleccionar país para detalles:", value: "Israel"}
+)
+```
+
+```{ojs}
+// Detalles del país seleccionado
+country_detail = rd_data.find(d => d.country === selected_country)
+```
+
+```{ojs}
+html`
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; margin: 20px 0;">
+<h3 style="margin-top: 0; font-size: 24px;">${country_detail.country}</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 15px;">
+  
+<div>
+<div style="font-size: 32px; font-weight: bold;">${country_detail.value}%</div>
+<div style="opacity: 0.9;">del PIB en I+D</div>
+</div>
+
+<div>
+<div style="font-size: 18px; font-weight: bold;">${country_detail.region}</div>
+<div style="opacity: 0.9;">Región</div>
+</div>
+
+<div>
+<div style="font-size: 18px; font-weight: bold;">
+${(country_detail.value / stats.mean).toFixed(1)}x
+</div>
+<div style="opacity: 0.9;">vs. promedio OECD</div>
+</div>
+
+<div>
+<div style="font-size: 18px; font-weight: bold;">
+#${rd_data.sort((a, b) => b.value - a.value).findIndex(d => d.country === country_detail.country) + 1}
+</div>
+<div style="opacity: 0.9;">Ranking mundial</div>
+</div>
+
+</div>
+</div>
+`
+```
+
+## Metodología y Fuentes
+
+### Definición del Indicador
+
+El **Gasto Doméstico Bruto en Investigación y Desarrollo (GERD)** como porcentaje del PIB incluye:
+
+1.  **Gastos corrientes y de capital** en I+D
+2.  **Cuatro sectores principales:**
+    -   Empresas comerciales
+    -   Gobierno
+    -   Educación superior\
+    -   Organizaciones privadas sin fines de lucro
+3.  **Tres tipos de investigación:**
+    -   Investigación básica
+    -   Investigación aplicada
+    -   Desarrollo experimental
+
+### Fuentes de Datos
+
+-   **Fuente principal:** OECD Main Science and Technology Indicators (MSTI) Database
+-   **URL:** [https://data-explorer.oecd.org](https://data-explorer.oecd.org/vis?df%5Bds%5D=dsDisseminateFinalDMZ&df%5Bid%5D=DSD_MSTI%40DF_MSTI&df%5Bag%5D=OECD.STI.STP&vw=tb)
+-   **Datos complementarios:** World Bank, UNESCO Institute for Statistics
+-   **Año de referencia:** 2023 (datos más recientes disponibles)
+-   **Metodología:** Paridades de Poder Adquisitivo (PPP), precios constantes base 2015
+
+### Notas Técnicas
+
+-   Los datos incluyen I+D financiada desde el extranjero pero excluyen fondos domésticos para I+D realizada fuera del territorio nacional
+-   Las cifras están expresadas en dólares estadounidenses constantes usando PPP para permitir comparaciones internacionales
+-   Algunos países pueden tener metodologías ligeramente diferentes en la recopilación de datos
+
+------------------------------------------------------------------------
+
+*Documento generado con [Quarto](https://quarto.org/) y [Observable JS](https://observablehq.com/)*
