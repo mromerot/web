@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Análisis OECD - MSTI Database">
-<meta name="dcterms.date" content="2025-08-20">
+<meta name="dcterms.date" content="2025-08-21">
 
 <title>Inversión Global en Investigación y Desarrollo – Inicio</title>
 <style>
@@ -620,7 +620,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 20, 2025</p>
+      <p class="date">August 21, 2025</p>
     </div>
   </div>
   
@@ -646,32 +646,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="datos-y-preparación" class="level2">
 <h2 class="anchored" data-anchor-id="datos-y-preparación">Datos y Preparación</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" data-startfrom="33" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 32;"><span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co">// Datos de inversión en I+D como % del PIB (2023)</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>rd_data <span class="op">=</span> [</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Israel"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">6.35</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Asia-Pacifico"</span>}<span class="op">,</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Corea del Sur"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">4.96</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Asia-Pacifico"</span>}<span class="op">,</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Suecia"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">3.60</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Estados Unidos"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">3.45</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"America del Norte"</span>}<span class="op">,</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Japón"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">3.44</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Asia-Pacifico"</span>}<span class="op">,</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Bélgica"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">3.32</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Austria"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">3.29</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Suiza"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">3.25</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Dinamarca"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.99</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Alemania"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.95</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Finlandia"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.85</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Francia"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.75</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Islandia"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.65</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"China"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.58</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Asia-Pacifico"</span>}<span class="op">,</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Países Bajos"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.35</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Reino Unido"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.25</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Noruega"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.15</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Australia"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.05</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Asia-Pacifico"</span>}<span class="op">,</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Canadá"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">1.95</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"America del Norte"</span>}<span class="op">,</span></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Italia"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">1.85</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"España"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">1.65</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Portugal"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">1.45</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"México"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">0.55</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"America del Norte"</span>}</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1" data-startfrom="34" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 33;"><span id="cb1-34"><a href="#cb1-34"></a><span class="co">// Datos de inversión en I+D como % del PIB (2023)</span></span>
+<span id="cb1-35"><a href="#cb1-35"></a>rd_data <span class="op">=</span> [</span>
+<span id="cb1-36"><a href="#cb1-36"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Israel"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">6.35</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Asia-Pacifico"</span>}<span class="op">,</span></span>
+<span id="cb1-37"><a href="#cb1-37"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Corea del Sur"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">4.96</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Asia-Pacifico"</span>}<span class="op">,</span></span>
+<span id="cb1-38"><a href="#cb1-38"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Suecia"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">3.60</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
+<span id="cb1-39"><a href="#cb1-39"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Estados Unidos"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">3.45</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"America del Norte"</span>}<span class="op">,</span></span>
+<span id="cb1-40"><a href="#cb1-40"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Japón"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">3.44</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Asia-Pacifico"</span>}<span class="op">,</span></span>
+<span id="cb1-41"><a href="#cb1-41"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Bélgica"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">3.32</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
+<span id="cb1-42"><a href="#cb1-42"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Austria"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">3.29</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
+<span id="cb1-43"><a href="#cb1-43"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Suiza"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">3.25</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
+<span id="cb1-44"><a href="#cb1-44"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Dinamarca"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.99</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
+<span id="cb1-45"><a href="#cb1-45"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Alemania"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.95</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
+<span id="cb1-46"><a href="#cb1-46"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Finlandia"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.85</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
+<span id="cb1-47"><a href="#cb1-47"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Francia"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.75</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
+<span id="cb1-48"><a href="#cb1-48"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Islandia"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.65</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
+<span id="cb1-49"><a href="#cb1-49"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"China"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.58</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Asia-Pacifico"</span>}<span class="op">,</span></span>
+<span id="cb1-50"><a href="#cb1-50"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Países Bajos"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.35</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
+<span id="cb1-51"><a href="#cb1-51"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Reino Unido"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.25</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
+<span id="cb1-52"><a href="#cb1-52"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Noruega"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.15</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
+<span id="cb1-53"><a href="#cb1-53"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Australia"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">2.05</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Asia-Pacifico"</span>}<span class="op">,</span></span>
+<span id="cb1-54"><a href="#cb1-54"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Canadá"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">1.95</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"America del Norte"</span>}<span class="op">,</span></span>
+<span id="cb1-55"><a href="#cb1-55"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Italia"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">1.85</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
+<span id="cb1-56"><a href="#cb1-56"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"España"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">1.65</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
+<span id="cb1-57"><a href="#cb1-57"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"Portugal"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">1.45</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"Europa"</span>}<span class="op">,</span></span>
+<span id="cb1-58"><a href="#cb1-58"></a>  {<span class="dt">country</span><span class="op">:</span> <span class="st">"México"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">0.55</span><span class="op">,</span> <span class="dt">region</span><span class="op">:</span> <span class="st">"America del Norte"</span>}</span>
+<span id="cb1-59"><a href="#cb1-59"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -679,12 +682,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" data-startfrom="62" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 61;"><span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="co">// Configuración de colores por región</span></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>color_scale <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>([</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Asia-Pacifico"</span><span class="op">,</span> <span class="st">"#ff6b6b"</span>]<span class="op">,</span></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Europa"</span><span class="op">,</span> <span class="st">"#4ecdc4"</span>]<span class="op">,</span> </span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"America del Norte"</span><span class="op">,</span> <span class="st">"#45b7d1"</span>]</span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2" data-startfrom="63" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 62;"><span id="cb2-63"><a href="#cb2-63"></a><span class="co">// Configuración de colores por región</span></span>
+<span id="cb2-64"><a href="#cb2-64"></a>color_scale <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>([</span>
+<span id="cb2-65"><a href="#cb2-65"></a>  [<span class="st">"Asia-Pacifico"</span><span class="op">,</span> <span class="st">"#ff6b6b"</span>]<span class="op">,</span></span>
+<span id="cb2-66"><a href="#cb2-66"></a>  [<span class="st">"Europa"</span><span class="op">,</span> <span class="st">"#4ecdc4"</span>]<span class="op">,</span> </span>
+<span id="cb2-67"><a href="#cb2-67"></a>  [<span class="st">"America del Norte"</span><span class="op">,</span> <span class="st">"#45b7d1"</span>]</span>
+<span id="cb2-68"><a href="#cb2-68"></a>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="declaration">
 
@@ -692,18 +698,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" data-startfrom="71" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 70;"><span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a><span class="co">// Estadísticas descriptivas</span></span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>stats <span class="op">=</span> {</span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> values <span class="op">=</span> rd_data<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> {</span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>    <span class="dt">max</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">max</span>(values)<span class="op">,</span></span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>    <span class="dt">min</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">min</span>(values)<span class="op">,</span></span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>    <span class="dt">mean</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">mean</span>(values)<span class="op">,</span></span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>    <span class="dt">median</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">median</span>(values)<span class="op">,</span></span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>    <span class="dt">countries_above_3</span><span class="op">:</span> rd_data<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span> <span class="op">&gt;=</span> <span class="fl">3.0</span>)<span class="op">.</span><span class="at">length</span><span class="op">,</span></span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>    <span class="dt">total_countries</span><span class="op">:</span> rd_data<span class="op">.</span><span class="at">length</span></span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3" data-startfrom="72" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 71;"><span id="cb3-72"><a href="#cb3-72"></a><span class="co">// Estadísticas descriptivas</span></span>
+<span id="cb3-73"><a href="#cb3-73"></a>stats <span class="op">=</span> {</span>
+<span id="cb3-74"><a href="#cb3-74"></a>  <span class="kw">const</span> values <span class="op">=</span> rd_data<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
+<span id="cb3-75"><a href="#cb3-75"></a>  <span class="cf">return</span> {</span>
+<span id="cb3-76"><a href="#cb3-76"></a>    <span class="dt">max</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">max</span>(values)<span class="op">,</span></span>
+<span id="cb3-77"><a href="#cb3-77"></a>    <span class="dt">min</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">min</span>(values)<span class="op">,</span></span>
+<span id="cb3-78"><a href="#cb3-78"></a>    <span class="dt">mean</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">mean</span>(values)<span class="op">,</span></span>
+<span id="cb3-79"><a href="#cb3-79"></a>    <span class="dt">median</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">median</span>(values)<span class="op">,</span></span>
+<span id="cb3-80"><a href="#cb3-80"></a>    <span class="dt">countries_above_3</span><span class="op">:</span> rd_data<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span> <span class="op">&gt;=</span> <span class="fl">3.0</span>)<span class="op">.</span><span class="at">length</span><span class="op">,</span></span>
+<span id="cb3-81"><a href="#cb3-81"></a>    <span class="dt">total_countries</span><span class="op">:</span> rd_data<span class="op">.</span><span class="at">length</span></span>
+<span id="cb3-82"><a href="#cb3-82"></a>  }</span>
+<span id="cb3-83"><a href="#cb3-83"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="declaration">
 
@@ -714,10 +723,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="visualización-principal-inversión-en-id-por-país" class="level2">
 <h2 class="anchored" data-anchor-id="visualización-principal-inversión-en-id-por-país">Visualización Principal: Inversión en I+D por País</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" data-startfrom="88" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 87;"><span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>viewof selected_region <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(</span>
-<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Todas las regiones"</span><span class="op">,</span> <span class="st">"Asia-Pacifico"</span><span class="op">,</span> <span class="st">"Europa"</span><span class="op">,</span> <span class="st">"America del Norte"</span>]<span class="op">,</span></span>
-<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">label</span><span class="op">:</span> <span class="st">"Filtrar por región:"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"Todas las regiones"</span>}</span>
-<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4" data-startfrom="89" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 88;"><span id="cb4-89"><a href="#cb4-89"></a>viewof selected_region <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(</span>
+<span id="cb4-90"><a href="#cb4-90"></a>  [<span class="st">"Todas las regiones"</span><span class="op">,</span> <span class="st">"Asia-Pacifico"</span><span class="op">,</span> <span class="st">"Europa"</span><span class="op">,</span> <span class="st">"America del Norte"</span>]<span class="op">,</span></span>
+<span id="cb4-91"><a href="#cb4-91"></a>  {<span class="dt">label</span><span class="op">:</span> <span class="st">"Filtrar por región:"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"Todas las regiones"</span>}</span>
+<span id="cb4-92"><a href="#cb4-92"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-4" data-nodetype="declaration">
 
@@ -725,10 +737,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" data-startfrom="95" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 94;"><span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a><span class="co">// Filtrar datos según selección</span></span>
-<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a>filtered_data <span class="op">=</span> selected_region <span class="op">===</span> <span class="st">"Todas las regiones"</span> </span>
-<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a>  <span class="op">?</span> rd_data </span>
-<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a>  <span class="op">:</span> rd_data<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">region</span> <span class="op">===</span> selected_region)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5" data-startfrom="96" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 95;"><span id="cb5-96"><a href="#cb5-96"></a><span class="co">// Filtrar datos según selección</span></span>
+<span id="cb5-97"><a href="#cb5-97"></a>filtered_data <span class="op">=</span> selected_region <span class="op">===</span> <span class="st">"Todas las regiones"</span> </span>
+<span id="cb5-98"><a href="#cb5-98"></a>  <span class="op">?</span> rd_data </span>
+<span id="cb5-99"><a href="#cb5-99"></a>  <span class="op">:</span> rd_data<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">region</span> <span class="op">===</span> selected_region)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-5" data-nodetype="declaration">
 
@@ -736,46 +751,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" data-startfrom="102" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 101;"><span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a><span class="co">// Gráfico de barras principal</span></span>
-<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">"Gastos Domésticos en I+D como % del PIB (2023)"</span><span class="op">,</span></span>
-<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a>  <span class="dt">subtitle</span><span class="op">:</span> <span class="vs">`Países seleccionados: </span><span class="sc">${</span>selected_region<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
-<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">900</span><span class="op">,</span></span>
-<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span></span>
-<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
-<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">80</span><span class="op">,</span></span>
-<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {</span>
-<span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">7</span>]<span class="op">,</span></span>
-<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Porcentaje del PIB (%)"</span><span class="op">,</span></span>
-<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a>    <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span></span>
-<span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {</span>
-<span id="cb6-116"><a href="#cb6-116" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
-<span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> filtered_data<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">country</span>)</span>
-<span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> {</span>
-<span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(color_scale<span class="op">.</span><span class="fu">keys</span>())<span class="op">,</span></span>
-<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a>    <span class="dt">range</span><span class="op">:</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(color_scale<span class="op">.</span><span class="fu">values</span>())<span class="op">,</span></span>
-<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a>    <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span></span>
-<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">barX</span>(filtered_data<span class="op">,</span> {</span>
-<span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
-<span id="cb6-127"><a href="#cb6-127" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"country"</span><span class="op">,</span></span>
-<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"region"</span><span class="op">,</span></span>
-<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a>      <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"x"</span><span class="op">,</span> <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
-<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a>      <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span></span>
-<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
-<span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">text</span>(filtered_data<span class="op">,</span> {</span>
-<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span> <span class="op">+</span> <span class="fl">0.15</span><span class="op">,</span></span>
-<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"country"</span><span class="op">,</span></span>
-<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a>      <span class="dt">text</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">value</span><span class="sc">}</span><span class="vs">%`</span><span class="op">,</span></span>
-<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">11</span><span class="op">,</span></span>
-<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"#333"</span></span>
-<span id="cb6-138"><a href="#cb6-138" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
-<span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="fl">2.7</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#e74c3c"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"5,5"</span>})</span>
-<span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a>  ]</span>
-<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6" data-startfrom="103" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 102;"><span id="cb6-103"><a href="#cb6-103"></a><span class="co">// Gráfico de barras principal</span></span>
+<span id="cb6-104"><a href="#cb6-104"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb6-105"><a href="#cb6-105"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">"Gastos Domésticos en I+D como % del PIB (2023)"</span><span class="op">,</span></span>
+<span id="cb6-106"><a href="#cb6-106"></a>  <span class="dt">subtitle</span><span class="op">:</span> <span class="vs">`Países seleccionados: </span><span class="sc">${</span>selected_region<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
+<span id="cb6-107"><a href="#cb6-107"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">900</span><span class="op">,</span></span>
+<span id="cb6-108"><a href="#cb6-108"></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span></span>
+<span id="cb6-109"><a href="#cb6-109"></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
+<span id="cb6-110"><a href="#cb6-110"></a>  <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">80</span><span class="op">,</span></span>
+<span id="cb6-111"><a href="#cb6-111"></a>  <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb6-112"><a href="#cb6-112"></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">7</span>]<span class="op">,</span></span>
+<span id="cb6-113"><a href="#cb6-113"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Porcentaje del PIB (%)"</span><span class="op">,</span></span>
+<span id="cb6-114"><a href="#cb6-114"></a>    <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb6-115"><a href="#cb6-115"></a>  }<span class="op">,</span></span>
+<span id="cb6-116"><a href="#cb6-116"></a>  <span class="dt">y</span><span class="op">:</span> {</span>
+<span id="cb6-117"><a href="#cb6-117"></a>    <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb6-118"><a href="#cb6-118"></a>    <span class="dt">domain</span><span class="op">:</span> filtered_data<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">country</span>)</span>
+<span id="cb6-119"><a href="#cb6-119"></a>  }<span class="op">,</span></span>
+<span id="cb6-120"><a href="#cb6-120"></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb6-121"><a href="#cb6-121"></a>    <span class="dt">domain</span><span class="op">:</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(color_scale<span class="op">.</span><span class="fu">keys</span>())<span class="op">,</span></span>
+<span id="cb6-122"><a href="#cb6-122"></a>    <span class="dt">range</span><span class="op">:</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(color_scale<span class="op">.</span><span class="fu">values</span>())<span class="op">,</span></span>
+<span id="cb6-123"><a href="#cb6-123"></a>    <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb6-124"><a href="#cb6-124"></a>  }<span class="op">,</span></span>
+<span id="cb6-125"><a href="#cb6-125"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb6-126"><a href="#cb6-126"></a>    Plot<span class="op">.</span><span class="fu">barX</span>(filtered_data<span class="op">,</span> {</span>
+<span id="cb6-127"><a href="#cb6-127"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb6-128"><a href="#cb6-128"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"country"</span><span class="op">,</span></span>
+<span id="cb6-129"><a href="#cb6-129"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"region"</span><span class="op">,</span></span>
+<span id="cb6-130"><a href="#cb6-130"></a>      <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"x"</span><span class="op">,</span> <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb6-131"><a href="#cb6-131"></a>      <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb6-132"><a href="#cb6-132"></a>    })<span class="op">,</span></span>
+<span id="cb6-133"><a href="#cb6-133"></a>    Plot<span class="op">.</span><span class="fu">text</span>(filtered_data<span class="op">,</span> {</span>
+<span id="cb6-134"><a href="#cb6-134"></a>      <span class="dt">x</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span> <span class="op">+</span> <span class="fl">0.15</span><span class="op">,</span></span>
+<span id="cb6-135"><a href="#cb6-135"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"country"</span><span class="op">,</span></span>
+<span id="cb6-136"><a href="#cb6-136"></a>      <span class="dt">text</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">value</span><span class="sc">}</span><span class="vs">%`</span><span class="op">,</span></span>
+<span id="cb6-137"><a href="#cb6-137"></a>      <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">11</span><span class="op">,</span></span>
+<span id="cb6-138"><a href="#cb6-138"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"#333"</span></span>
+<span id="cb6-139"><a href="#cb6-139"></a>    })<span class="op">,</span></span>
+<span id="cb6-140"><a href="#cb6-140"></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([<span class="fl">2.7</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#e74c3c"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"5,5"</span>})</span>
+<span id="cb6-141"><a href="#cb6-141"></a>  ]</span>
+<span id="cb6-142"><a href="#cb6-142"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-6" data-nodetype="expression">
 
@@ -783,9 +801,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" data-startfrom="145" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 144;"><span id="cb7-145"><a href="#cb7-145" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;p style="margin-top: 10px; font-size: 14px; color: #666;"&gt;</span></span>
-<span id="cb7-146"><a href="#cb7-146" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;strong&gt;Línea roja punteada:&lt;/strong&gt; Promedio OECD (2.7%)</span></span>
-<span id="cb7-147"><a href="#cb7-147" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/p&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7" data-startfrom="146" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 145;"><span id="cb7-146"><a href="#cb7-146"></a><span class="fu">html</span><span class="vs">`&lt;p style="margin-top: 10px; font-size: 14px; color: #666;"&gt;</span></span>
+<span id="cb7-147"><a href="#cb7-147"></a><span class="vs">&lt;strong&gt;Línea roja punteada:&lt;/strong&gt; Promedio OECD (2.7%)</span></span>
+<span id="cb7-148"><a href="#cb7-148"></a><span class="vs">&lt;/p&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-7" data-nodetype="expression">
 
@@ -796,18 +817,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="análisis-por-regiones" class="level2">
 <h2 class="anchored" data-anchor-id="análisis-por-regiones">Análisis por Regiones</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" data-startfrom="153" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 152;"><span id="cb8-153"><a href="#cb8-153" aria-hidden="true" tabindex="-1"></a><span class="co">// Análisis regional</span></span>
-<span id="cb8-154"><a href="#cb8-154" aria-hidden="true" tabindex="-1"></a>regional_summary <span class="op">=</span> d3<span class="op">.</span><span class="fu">rollup</span>(</span>
-<span id="cb8-155"><a href="#cb8-155" aria-hidden="true" tabindex="-1"></a>  rd_data<span class="op">,</span></span>
-<span id="cb8-156"><a href="#cb8-156" aria-hidden="true" tabindex="-1"></a>  v <span class="kw">=&gt;</span> ({</span>
-<span id="cb8-157"><a href="#cb8-157" aria-hidden="true" tabindex="-1"></a>    <span class="dt">count</span><span class="op">:</span> v<span class="op">.</span><span class="at">length</span><span class="op">,</span></span>
-<span id="cb8-158"><a href="#cb8-158" aria-hidden="true" tabindex="-1"></a>    <span class="dt">average</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">mean</span>(v<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span>)<span class="op">,</span></span>
-<span id="cb8-159"><a href="#cb8-159" aria-hidden="true" tabindex="-1"></a>    <span class="dt">max</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">max</span>(v<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span>)<span class="op">,</span></span>
-<span id="cb8-160"><a href="#cb8-160" aria-hidden="true" tabindex="-1"></a>    <span class="dt">min</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">min</span>(v<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span>)<span class="op">,</span></span>
-<span id="cb8-161"><a href="#cb8-161" aria-hidden="true" tabindex="-1"></a>    <span class="dt">countries</span><span class="op">:</span> v<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">country</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">", "</span>)</span>
-<span id="cb8-162"><a href="#cb8-162" aria-hidden="true" tabindex="-1"></a>  })<span class="op">,</span></span>
-<span id="cb8-163"><a href="#cb8-163" aria-hidden="true" tabindex="-1"></a>  d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">region</span></span>
-<span id="cb8-164"><a href="#cb8-164" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8" data-startfrom="154" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 153;"><span id="cb8-154"><a href="#cb8-154"></a><span class="co">// Análisis regional</span></span>
+<span id="cb8-155"><a href="#cb8-155"></a>regional_summary <span class="op">=</span> d3<span class="op">.</span><span class="fu">rollup</span>(</span>
+<span id="cb8-156"><a href="#cb8-156"></a>  rd_data<span class="op">,</span></span>
+<span id="cb8-157"><a href="#cb8-157"></a>  v <span class="kw">=&gt;</span> ({</span>
+<span id="cb8-158"><a href="#cb8-158"></a>    <span class="dt">count</span><span class="op">:</span> v<span class="op">.</span><span class="at">length</span><span class="op">,</span></span>
+<span id="cb8-159"><a href="#cb8-159"></a>    <span class="dt">average</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">mean</span>(v<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span>)<span class="op">,</span></span>
+<span id="cb8-160"><a href="#cb8-160"></a>    <span class="dt">max</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">max</span>(v<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span>)<span class="op">,</span></span>
+<span id="cb8-161"><a href="#cb8-161"></a>    <span class="dt">min</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">min</span>(v<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span>)<span class="op">,</span></span>
+<span id="cb8-162"><a href="#cb8-162"></a>    <span class="dt">countries</span><span class="op">:</span> v<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">country</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">", "</span>)</span>
+<span id="cb8-163"><a href="#cb8-163"></a>  })<span class="op">,</span></span>
+<span id="cb8-164"><a href="#cb8-164"></a>  d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">region</span></span>
+<span id="cb8-165"><a href="#cb8-165"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-8" data-nodetype="declaration">
 
@@ -815,25 +839,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" data-startfrom="168" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 167;"><span id="cb9-168"><a href="#cb9-168" aria-hidden="true" tabindex="-1"></a><span class="co">// Tabla resumen por región</span></span>
-<span id="cb9-169"><a href="#cb9-169" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(</span>
-<span id="cb9-170"><a href="#cb9-170" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(regional_summary<span class="op">,</span> ([region<span class="op">,</span> data]) <span class="kw">=&gt;</span> ({</span>
-<span id="cb9-171"><a href="#cb9-171" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Región"</span><span class="op">:</span> region<span class="op">,</span></span>
-<span id="cb9-172"><a href="#cb9-172" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Países"</span><span class="op">:</span> data<span class="op">.</span><span class="at">count</span><span class="op">,</span></span>
-<span id="cb9-173"><a href="#cb9-173" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Promedio (%)"</span><span class="op">:</span> data<span class="op">.</span><span class="at">average</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">,</span></span>
-<span id="cb9-174"><a href="#cb9-174" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Máximo (%)"</span><span class="op">:</span> data<span class="op">.</span><span class="at">max</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">,</span></span>
-<span id="cb9-175"><a href="#cb9-175" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Mínimo (%)"</span><span class="op">:</span> data<span class="op">.</span><span class="at">min</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)</span>
-<span id="cb9-176"><a href="#cb9-176" aria-hidden="true" tabindex="-1"></a>  }))<span class="op">,</span></span>
-<span id="cb9-177"><a href="#cb9-177" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb9-178"><a href="#cb9-178" aria-hidden="true" tabindex="-1"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
-<span id="cb9-179"><a href="#cb9-179" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Región"</span><span class="op">:</span> <span class="st">"Región"</span><span class="op">,</span></span>
-<span id="cb9-180"><a href="#cb9-180" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Países"</span><span class="op">:</span> <span class="st">"Número de Países"</span><span class="op">,</span></span>
-<span id="cb9-181"><a href="#cb9-181" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Promedio (%)"</span><span class="op">:</span> <span class="st">"Promedio I+D/PIB"</span><span class="op">,</span></span>
-<span id="cb9-182"><a href="#cb9-182" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Máximo (%)"</span><span class="op">:</span> <span class="st">"Máximo"</span><span class="op">,</span></span>
-<span id="cb9-183"><a href="#cb9-183" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Mínimo (%)"</span><span class="op">:</span> <span class="st">"Mínimo"</span></span>
-<span id="cb9-184"><a href="#cb9-184" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb9-185"><a href="#cb9-185" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb9-186"><a href="#cb9-186" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9" data-startfrom="169" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 168;"><span id="cb9-169"><a href="#cb9-169"></a><span class="co">// Tabla resumen por región</span></span>
+<span id="cb9-170"><a href="#cb9-170"></a>Inputs<span class="op">.</span><span class="fu">table</span>(</span>
+<span id="cb9-171"><a href="#cb9-171"></a>  <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(regional_summary<span class="op">,</span> ([region<span class="op">,</span> data]) <span class="kw">=&gt;</span> ({</span>
+<span id="cb9-172"><a href="#cb9-172"></a>    <span class="st">"Región"</span><span class="op">:</span> region<span class="op">,</span></span>
+<span id="cb9-173"><a href="#cb9-173"></a>    <span class="st">"Países"</span><span class="op">:</span> data<span class="op">.</span><span class="at">count</span><span class="op">,</span></span>
+<span id="cb9-174"><a href="#cb9-174"></a>    <span class="st">"Promedio (%)"</span><span class="op">:</span> data<span class="op">.</span><span class="at">average</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">,</span></span>
+<span id="cb9-175"><a href="#cb9-175"></a>    <span class="st">"Máximo (%)"</span><span class="op">:</span> data<span class="op">.</span><span class="at">max</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">,</span></span>
+<span id="cb9-176"><a href="#cb9-176"></a>    <span class="st">"Mínimo (%)"</span><span class="op">:</span> data<span class="op">.</span><span class="at">min</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)</span>
+<span id="cb9-177"><a href="#cb9-177"></a>  }))<span class="op">,</span></span>
+<span id="cb9-178"><a href="#cb9-178"></a>  {</span>
+<span id="cb9-179"><a href="#cb9-179"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
+<span id="cb9-180"><a href="#cb9-180"></a>      <span class="st">"Región"</span><span class="op">:</span> <span class="st">"Región"</span><span class="op">,</span></span>
+<span id="cb9-181"><a href="#cb9-181"></a>      <span class="st">"Países"</span><span class="op">:</span> <span class="st">"Número de Países"</span><span class="op">,</span></span>
+<span id="cb9-182"><a href="#cb9-182"></a>      <span class="st">"Promedio (%)"</span><span class="op">:</span> <span class="st">"Promedio I+D/PIB"</span><span class="op">,</span></span>
+<span id="cb9-183"><a href="#cb9-183"></a>      <span class="st">"Máximo (%)"</span><span class="op">:</span> <span class="st">"Máximo"</span><span class="op">,</span></span>
+<span id="cb9-184"><a href="#cb9-184"></a>      <span class="st">"Mínimo (%)"</span><span class="op">:</span> <span class="st">"Mínimo"</span></span>
+<span id="cb9-185"><a href="#cb9-185"></a>    }</span>
+<span id="cb9-186"><a href="#cb9-186"></a>  }</span>
+<span id="cb9-187"><a href="#cb9-187"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-9" data-nodetype="expression">
 
@@ -844,24 +871,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="distribución-y-percentiles" class="level2">
 <h2 class="anchored" data-anchor-id="distribución-y-percentiles">Distribución y Percentiles</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" data-startfrom="192" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 191;"><span id="cb10-192"><a href="#cb10-192" aria-hidden="true" tabindex="-1"></a><span class="co">// Histograma de distribución</span></span>
-<span id="cb10-193"><a href="#cb10-193" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb10-194"><a href="#cb10-194" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">"Distribución de la Inversión en I+D"</span><span class="op">,</span></span>
-<span id="cb10-195"><a href="#cb10-195" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">700</span><span class="op">,</span></span>
-<span id="cb10-196"><a href="#cb10-196" aria-hidden="true" tabindex="-1"></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
-<span id="cb10-197"><a href="#cb10-197" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {</span>
-<span id="cb10-198"><a href="#cb10-198" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Porcentaje del PIB (%)"</span><span class="op">,</span></span>
-<span id="cb10-199"><a href="#cb10-199" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">7</span>]</span>
-<span id="cb10-200"><a href="#cb10-200" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb10-201"><a href="#cb10-201" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {</span>
-<span id="cb10-202"><a href="#cb10-202" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Número de países"</span></span>
-<span id="cb10-203"><a href="#cb10-203" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb10-204"><a href="#cb10-204" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb10-205"><a href="#cb10-205" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">rectY</span>(rd_data<span class="op">,</span> Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#4ecdc4"</span><span class="op">,</span> <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.7</span>}))<span class="op">,</span></span>
-<span id="cb10-206"><a href="#cb10-206" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([stats<span class="op">.</span><span class="at">mean</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#e74c3c"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span></span>
-<span id="cb10-207"><a href="#cb10-207" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([stats<span class="op">.</span><span class="at">median</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#f39c12"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})</span>
-<span id="cb10-208"><a href="#cb10-208" aria-hidden="true" tabindex="-1"></a>  ]</span>
-<span id="cb10-209"><a href="#cb10-209" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10" data-startfrom="193" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 192;"><span id="cb10-193"><a href="#cb10-193"></a><span class="co">// Histograma de distribución</span></span>
+<span id="cb10-194"><a href="#cb10-194"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb10-195"><a href="#cb10-195"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">"Distribución de la Inversión en I+D"</span><span class="op">,</span></span>
+<span id="cb10-196"><a href="#cb10-196"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">700</span><span class="op">,</span></span>
+<span id="cb10-197"><a href="#cb10-197"></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
+<span id="cb10-198"><a href="#cb10-198"></a>  <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb10-199"><a href="#cb10-199"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Porcentaje del PIB (%)"</span><span class="op">,</span></span>
+<span id="cb10-200"><a href="#cb10-200"></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">7</span>]</span>
+<span id="cb10-201"><a href="#cb10-201"></a>  }<span class="op">,</span></span>
+<span id="cb10-202"><a href="#cb10-202"></a>  <span class="dt">y</span><span class="op">:</span> {</span>
+<span id="cb10-203"><a href="#cb10-203"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Número de países"</span></span>
+<span id="cb10-204"><a href="#cb10-204"></a>  }<span class="op">,</span></span>
+<span id="cb10-205"><a href="#cb10-205"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb10-206"><a href="#cb10-206"></a>    Plot<span class="op">.</span><span class="fu">rectY</span>(rd_data<span class="op">,</span> Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#4ecdc4"</span><span class="op">,</span> <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.7</span>}))<span class="op">,</span></span>
+<span id="cb10-207"><a href="#cb10-207"></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([stats<span class="op">.</span><span class="at">mean</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#e74c3c"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span></span>
+<span id="cb10-208"><a href="#cb10-208"></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([stats<span class="op">.</span><span class="at">median</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#f39c12"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})</span>
+<span id="cb10-209"><a href="#cb10-209"></a>  ]</span>
+<span id="cb10-210"><a href="#cb10-210"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-10" data-nodetype="expression">
 
@@ -869,10 +899,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" data-startfrom="213" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 212;"><span id="cb11-213"><a href="#cb11-213" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;p style="margin-top: 10px; font-size: 14px; color: #666;"&gt;</span></span>
-<span id="cb11-214"><a href="#cb11-214" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;span style="color: #e74c3c;"&gt;&lt;strong&gt;Línea roja:&lt;/strong&gt; Media (</span><span class="sc">${</span>stats<span class="op">.</span><span class="at">mean</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">%)&lt;/span&gt; | </span></span>
-<span id="cb11-215"><a href="#cb11-215" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;span style="color: #f39c12;"&gt;&lt;strong&gt;Línea naranja:&lt;/strong&gt; Mediana (</span><span class="sc">${</span>stats<span class="op">.</span><span class="at">median</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">%)&lt;/span&gt;</span></span>
-<span id="cb11-216"><a href="#cb11-216" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/p&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11" data-startfrom="214" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 213;"><span id="cb11-214"><a href="#cb11-214"></a><span class="fu">html</span><span class="vs">`&lt;p style="margin-top: 10px; font-size: 14px; color: #666;"&gt;</span></span>
+<span id="cb11-215"><a href="#cb11-215"></a><span class="vs">&lt;span style="color: #e74c3c;"&gt;&lt;strong&gt;Línea roja:&lt;/strong&gt; Media (</span><span class="sc">${</span>stats<span class="op">.</span><span class="at">mean</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">%)&lt;/span&gt; | </span></span>
+<span id="cb11-216"><a href="#cb11-216"></a><span class="vs">&lt;span style="color: #f39c12;"&gt;&lt;strong&gt;Línea naranja:&lt;/strong&gt; Mediana (</span><span class="sc">${</span>stats<span class="op">.</span><span class="at">median</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">%)&lt;/span&gt;</span></span>
+<span id="cb11-217"><a href="#cb11-217"></a><span class="vs">&lt;/p&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-11" data-nodetype="expression">
 
@@ -883,35 +916,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="insights-clave" class="level2">
 <h2 class="anchored" data-anchor-id="insights-clave">Insights Clave</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12" data-startfrom="222" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 221;"><span id="cb12-222"><a href="#cb12-222" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`</span></span>
-<span id="cb12-223"><a href="#cb12-223" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;"&gt;</span></span>
-<span id="cb12-224"><a href="#cb12-224" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;h4 style="color: #2c3e50; margin-top: 0;"&gt;📊 Hallazgos Principales&lt;/h4&gt;</span></span>
-<span id="cb12-225"><a href="#cb12-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-226"><a href="#cb12-226" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;"&gt;</span></span>
-<span id="cb12-227"><a href="#cb12-227" aria-hidden="true" tabindex="-1"></a><span class="vs">  </span></span>
-<span id="cb12-228"><a href="#cb12-228" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #ff6b6b;"&gt;</span></span>
-<span id="cb12-229"><a href="#cb12-229" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;strong&gt;🏆 Líderes Globales&lt;/strong&gt;&lt;br&gt;</span></span>
-<span id="cb12-230"><a href="#cb12-230" aria-hidden="true" tabindex="-1"></a><span class="vs">Israel encabeza con &lt;strong&gt;</span><span class="sc">${</span>stats<span class="op">.</span><span class="at">max</span><span class="sc">}</span><span class="vs">%&lt;/strong&gt; del PIB, seguido por Corea del Sur y Suecia</span></span>
-<span id="cb12-231"><a href="#cb12-231" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb12-232"><a href="#cb12-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-233"><a href="#cb12-233" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #4ecdc4;"&gt;</span></span>
-<span id="cb12-234"><a href="#cb12-234" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;strong&gt;🌍 Umbral del 3%&lt;/strong&gt;&lt;br&gt;</span></span>
-<span id="cb12-235"><a href="#cb12-235" aria-hidden="true" tabindex="-1"></a><span class="vs">Solo &lt;strong&gt;</span><span class="sc">${</span>stats<span class="op">.</span><span class="at">countries_above_3</span><span class="sc">}</span><span class="vs">&lt;/strong&gt; de </span><span class="sc">${</span>stats<span class="op">.</span><span class="at">total_countries</span><span class="sc">}</span><span class="vs"> países superan el 3% del PIB</span></span>
-<span id="cb12-236"><a href="#cb12-236" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb12-237"><a href="#cb12-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-238"><a href="#cb12-238" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #45b7d1;"&gt;</span></span>
-<span id="cb12-239"><a href="#cb12-239" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;strong&gt;📈 Promedio OECD&lt;/strong&gt;&lt;br&gt;</span></span>
-<span id="cb12-240"><a href="#cb12-240" aria-hidden="true" tabindex="-1"></a><span class="vs">El promedio OECD es &lt;strong&gt;2.7%&lt;/strong&gt; del PIB en 2023</span></span>
-<span id="cb12-241"><a href="#cb12-241" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb12-242"><a href="#cb12-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-243"><a href="#cb12-243" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #f39c12;"&gt;</span></span>
-<span id="cb12-244"><a href="#cb12-244" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;strong&gt;🌏 Dominancia Asiática&lt;/strong&gt;&lt;br&gt;</span></span>
-<span id="cb12-245"><a href="#cb12-245" aria-hidden="true" tabindex="-1"></a><span class="vs">Asia representa &lt;strong&gt;46%&lt;/strong&gt; del gasto global en I+D</span></span>
-<span id="cb12-246"><a href="#cb12-246" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb12-247"><a href="#cb12-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-248"><a href="#cb12-248" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb12-249"><a href="#cb12-249" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb12-250"><a href="#cb12-250" aria-hidden="true" tabindex="-1"></a><span class="vs">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12" data-startfrom="223" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 222;"><span id="cb12-223"><a href="#cb12-223"></a><span class="fu">html</span><span class="vs">`</span></span>
+<span id="cb12-224"><a href="#cb12-224"></a><span class="vs">&lt;div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;"&gt;</span></span>
+<span id="cb12-225"><a href="#cb12-225"></a><span class="vs">&lt;h4 style="color: #2c3e50; margin-top: 0;"&gt;📊 Hallazgos Principales&lt;/h4&gt;</span></span>
+<span id="cb12-226"><a href="#cb12-226"></a></span>
+<span id="cb12-227"><a href="#cb12-227"></a><span class="vs">&lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;"&gt;</span></span>
+<span id="cb12-228"><a href="#cb12-228"></a><span class="vs">  </span></span>
+<span id="cb12-229"><a href="#cb12-229"></a><span class="vs">&lt;div style="background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #ff6b6b;"&gt;</span></span>
+<span id="cb12-230"><a href="#cb12-230"></a><span class="vs">&lt;strong&gt;🏆 Líderes Globales&lt;/strong&gt;&lt;br&gt;</span></span>
+<span id="cb12-231"><a href="#cb12-231"></a><span class="vs">Israel encabeza con &lt;strong&gt;</span><span class="sc">${</span>stats<span class="op">.</span><span class="at">max</span><span class="sc">}</span><span class="vs">%&lt;/strong&gt; del PIB, seguido por Corea del Sur y Suecia</span></span>
+<span id="cb12-232"><a href="#cb12-232"></a><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb12-233"><a href="#cb12-233"></a></span>
+<span id="cb12-234"><a href="#cb12-234"></a><span class="vs">&lt;div style="background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #4ecdc4;"&gt;</span></span>
+<span id="cb12-235"><a href="#cb12-235"></a><span class="vs">&lt;strong&gt;🌍 Umbral del 3%&lt;/strong&gt;&lt;br&gt;</span></span>
+<span id="cb12-236"><a href="#cb12-236"></a><span class="vs">Solo &lt;strong&gt;</span><span class="sc">${</span>stats<span class="op">.</span><span class="at">countries_above_3</span><span class="sc">}</span><span class="vs">&lt;/strong&gt; de </span><span class="sc">${</span>stats<span class="op">.</span><span class="at">total_countries</span><span class="sc">}</span><span class="vs"> países superan el 3% del PIB</span></span>
+<span id="cb12-237"><a href="#cb12-237"></a><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb12-238"><a href="#cb12-238"></a></span>
+<span id="cb12-239"><a href="#cb12-239"></a><span class="vs">&lt;div style="background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #45b7d1;"&gt;</span></span>
+<span id="cb12-240"><a href="#cb12-240"></a><span class="vs">&lt;strong&gt;📈 Promedio OECD&lt;/strong&gt;&lt;br&gt;</span></span>
+<span id="cb12-241"><a href="#cb12-241"></a><span class="vs">El promedio OECD es &lt;strong&gt;2.7%&lt;/strong&gt; del PIB en 2023</span></span>
+<span id="cb12-242"><a href="#cb12-242"></a><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb12-243"><a href="#cb12-243"></a></span>
+<span id="cb12-244"><a href="#cb12-244"></a><span class="vs">&lt;div style="background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #f39c12;"&gt;</span></span>
+<span id="cb12-245"><a href="#cb12-245"></a><span class="vs">&lt;strong&gt;🌏 Dominancia Asiática&lt;/strong&gt;&lt;br&gt;</span></span>
+<span id="cb12-246"><a href="#cb12-246"></a><span class="vs">Asia representa &lt;strong&gt;46%&lt;/strong&gt; del gasto global en I+D</span></span>
+<span id="cb12-247"><a href="#cb12-247"></a><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb12-248"><a href="#cb12-248"></a></span>
+<span id="cb12-249"><a href="#cb12-249"></a><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb12-250"><a href="#cb12-250"></a><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb12-251"><a href="#cb12-251"></a><span class="vs">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-12" data-nodetype="expression">
 
@@ -922,10 +958,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="top-10-países" class="level2">
 <h2 class="anchored" data-anchor-id="top-10-países">Top 10 Países</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13" data-startfrom="256" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 255;"><span id="cb13-256"><a href="#cb13-256" aria-hidden="true" tabindex="-1"></a><span class="co">// Top 10 países</span></span>
-<span id="cb13-257"><a href="#cb13-257" aria-hidden="true" tabindex="-1"></a>top_10 <span class="op">=</span> rd_data</span>
-<span id="cb13-258"><a href="#cb13-258" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> b<span class="op">.</span><span class="at">value</span> <span class="op">-</span> a<span class="op">.</span><span class="at">value</span>)</span>
-<span id="cb13-259"><a href="#cb13-259" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13" data-startfrom="257" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 256;"><span id="cb13-257"><a href="#cb13-257"></a><span class="co">// Top 10 países</span></span>
+<span id="cb13-258"><a href="#cb13-258"></a>top_10 <span class="op">=</span> rd_data</span>
+<span id="cb13-259"><a href="#cb13-259"></a>  <span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> b<span class="op">.</span><span class="at">value</span> <span class="op">-</span> a<span class="op">.</span><span class="at">value</span>)</span>
+<span id="cb13-260"><a href="#cb13-260"></a>  <span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-13" data-nodetype="declaration">
 
@@ -933,38 +972,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14" data-startfrom="263" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 262;"><span id="cb14-263"><a href="#cb14-263" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb14-264"><a href="#cb14-264" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">"Top 10 Países en Inversión I+D/PIB"</span><span class="op">,</span></span>
-<span id="cb14-265"><a href="#cb14-265" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
-<span id="cb14-266"><a href="#cb14-266" aria-hidden="true" tabindex="-1"></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">350</span><span class="op">,</span></span>
-<span id="cb14-267"><a href="#cb14-267" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {</span>
-<span id="cb14-268"><a href="#cb14-268" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
-<span id="cb14-269"><a href="#cb14-269" aria-hidden="true" tabindex="-1"></a>    <span class="dt">tickRotate</span><span class="op">:</span> <span class="op">-</span><span class="dv">45</span></span>
-<span id="cb14-270"><a href="#cb14-270" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb14-271"><a href="#cb14-271" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {</span>
-<span id="cb14-272"><a href="#cb14-272" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Porcentaje del PIB (%)"</span><span class="op">,</span></span>
-<span id="cb14-273"><a href="#cb14-273" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">7</span>]</span>
-<span id="cb14-274"><a href="#cb14-274" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb14-275"><a href="#cb14-275" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> {</span>
-<span id="cb14-276"><a href="#cb14-276" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(color_scale<span class="op">.</span><span class="fu">keys</span>())<span class="op">,</span></span>
-<span id="cb14-277"><a href="#cb14-277" aria-hidden="true" tabindex="-1"></a>    <span class="dt">range</span><span class="op">:</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(color_scale<span class="op">.</span><span class="fu">values</span>())</span>
-<span id="cb14-278"><a href="#cb14-278" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb14-279"><a href="#cb14-279" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb14-280"><a href="#cb14-280" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">barY</span>(top_10<span class="op">,</span> {</span>
-<span id="cb14-281"><a href="#cb14-281" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"country"</span><span class="op">,</span></span>
-<span id="cb14-282"><a href="#cb14-282" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
-<span id="cb14-283"><a href="#cb14-283" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"region"</span><span class="op">,</span></span>
-<span id="cb14-284"><a href="#cb14-284" aria-hidden="true" tabindex="-1"></a>      <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span></span>
-<span id="cb14-285"><a href="#cb14-285" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
-<span id="cb14-286"><a href="#cb14-286" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">text</span>(top_10<span class="op">,</span> {</span>
-<span id="cb14-287"><a href="#cb14-287" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"country"</span><span class="op">,</span></span>
-<span id="cb14-288"><a href="#cb14-288" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span> <span class="op">+</span> <span class="fl">0.15</span><span class="op">,</span></span>
-<span id="cb14-289"><a href="#cb14-289" aria-hidden="true" tabindex="-1"></a>      <span class="dt">text</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">value</span><span class="sc">}</span><span class="vs">%`</span><span class="op">,</span></span>
-<span id="cb14-290"><a href="#cb14-290" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
-<span id="cb14-291"><a href="#cb14-291" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"#333"</span></span>
-<span id="cb14-292"><a href="#cb14-292" aria-hidden="true" tabindex="-1"></a>    })</span>
-<span id="cb14-293"><a href="#cb14-293" aria-hidden="true" tabindex="-1"></a>  ]</span>
-<span id="cb14-294"><a href="#cb14-294" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14" data-startfrom="264" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 263;"><span id="cb14-264"><a href="#cb14-264"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb14-265"><a href="#cb14-265"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">"Top 10 Países en Inversión I+D/PIB"</span><span class="op">,</span></span>
+<span id="cb14-266"><a href="#cb14-266"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb14-267"><a href="#cb14-267"></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">350</span><span class="op">,</span></span>
+<span id="cb14-268"><a href="#cb14-268"></a>  <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb14-269"><a href="#cb14-269"></a>    <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb14-270"><a href="#cb14-270"></a>    <span class="dt">tickRotate</span><span class="op">:</span> <span class="op">-</span><span class="dv">45</span></span>
+<span id="cb14-271"><a href="#cb14-271"></a>  }<span class="op">,</span></span>
+<span id="cb14-272"><a href="#cb14-272"></a>  <span class="dt">y</span><span class="op">:</span> {</span>
+<span id="cb14-273"><a href="#cb14-273"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Porcentaje del PIB (%)"</span><span class="op">,</span></span>
+<span id="cb14-274"><a href="#cb14-274"></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">7</span>]</span>
+<span id="cb14-275"><a href="#cb14-275"></a>  }<span class="op">,</span></span>
+<span id="cb14-276"><a href="#cb14-276"></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb14-277"><a href="#cb14-277"></a>    <span class="dt">domain</span><span class="op">:</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(color_scale<span class="op">.</span><span class="fu">keys</span>())<span class="op">,</span></span>
+<span id="cb14-278"><a href="#cb14-278"></a>    <span class="dt">range</span><span class="op">:</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(color_scale<span class="op">.</span><span class="fu">values</span>())</span>
+<span id="cb14-279"><a href="#cb14-279"></a>  }<span class="op">,</span></span>
+<span id="cb14-280"><a href="#cb14-280"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb14-281"><a href="#cb14-281"></a>    Plot<span class="op">.</span><span class="fu">barY</span>(top_10<span class="op">,</span> {</span>
+<span id="cb14-282"><a href="#cb14-282"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"country"</span><span class="op">,</span></span>
+<span id="cb14-283"><a href="#cb14-283"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb14-284"><a href="#cb14-284"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"region"</span><span class="op">,</span></span>
+<span id="cb14-285"><a href="#cb14-285"></a>      <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb14-286"><a href="#cb14-286"></a>    })<span class="op">,</span></span>
+<span id="cb14-287"><a href="#cb14-287"></a>    Plot<span class="op">.</span><span class="fu">text</span>(top_10<span class="op">,</span> {</span>
+<span id="cb14-288"><a href="#cb14-288"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"country"</span><span class="op">,</span></span>
+<span id="cb14-289"><a href="#cb14-289"></a>      <span class="dt">y</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span> <span class="op">+</span> <span class="fl">0.15</span><span class="op">,</span></span>
+<span id="cb14-290"><a href="#cb14-290"></a>      <span class="dt">text</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">value</span><span class="sc">}</span><span class="vs">%`</span><span class="op">,</span></span>
+<span id="cb14-291"><a href="#cb14-291"></a>      <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
+<span id="cb14-292"><a href="#cb14-292"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"#333"</span></span>
+<span id="cb14-293"><a href="#cb14-293"></a>    })</span>
+<span id="cb14-294"><a href="#cb14-294"></a>  ]</span>
+<span id="cb14-295"><a href="#cb14-295"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-14" data-nodetype="expression">
 
@@ -975,10 +1017,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="explorador-interactivo" class="level2">
 <h2 class="anchored" data-anchor-id="explorador-interactivo">Explorador Interactivo</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15" data-startfrom="300" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 299;"><span id="cb15-300"><a href="#cb15-300" aria-hidden="true" tabindex="-1"></a>viewof selected_country <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(</span>
-<span id="cb15-301"><a href="#cb15-301" aria-hidden="true" tabindex="-1"></a>  rd_data<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">country</span>)<span class="op">,</span></span>
-<span id="cb15-302"><a href="#cb15-302" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">label</span><span class="op">:</span> <span class="st">"Seleccionar país para detalles:"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"Israel"</span>}</span>
-<span id="cb15-303"><a href="#cb15-303" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15" data-startfrom="301" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 300;"><span id="cb15-301"><a href="#cb15-301"></a>viewof selected_country <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(</span>
+<span id="cb15-302"><a href="#cb15-302"></a>  rd_data<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">country</span>)<span class="op">,</span></span>
+<span id="cb15-303"><a href="#cb15-303"></a>  {<span class="dt">label</span><span class="op">:</span> <span class="st">"Seleccionar país para detalles:"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"Israel"</span>}</span>
+<span id="cb15-304"><a href="#cb15-304"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-15" data-nodetype="declaration">
 
@@ -986,8 +1031,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16" data-startfrom="307" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 306;"><span id="cb16-307"><a href="#cb16-307" aria-hidden="true" tabindex="-1"></a><span class="co">// Detalles del país seleccionado</span></span>
-<span id="cb16-308"><a href="#cb16-308" aria-hidden="true" tabindex="-1"></a>country_detail <span class="op">=</span> rd_data<span class="op">.</span><span class="fu">find</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">country</span> <span class="op">===</span> selected_country)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16" data-startfrom="308" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 307;"><span id="cb16-308"><a href="#cb16-308"></a><span class="co">// Detalles del país seleccionado</span></span>
+<span id="cb16-309"><a href="#cb16-309"></a>country_detail <span class="op">=</span> rd_data<span class="op">.</span><span class="fu">find</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">country</span> <span class="op">===</span> selected_country)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-16" data-nodetype="declaration">
 
@@ -995,38 +1043,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17" data-startfrom="312" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 311;"><span id="cb17-312"><a href="#cb17-312" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`</span></span>
-<span id="cb17-313"><a href="#cb17-313" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; margin: 20px 0;"&gt;</span></span>
-<span id="cb17-314"><a href="#cb17-314" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;h3 style="margin-top: 0; font-size: 24px;"&gt;</span><span class="sc">${</span>country_detail<span class="op">.</span><span class="at">country</span><span class="sc">}</span><span class="vs">&lt;/h3&gt;</span></span>
-<span id="cb17-315"><a href="#cb17-315" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 15px;"&gt;</span></span>
-<span id="cb17-316"><a href="#cb17-316" aria-hidden="true" tabindex="-1"></a><span class="vs">  </span></span>
-<span id="cb17-317"><a href="#cb17-317" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div&gt;</span></span>
-<span id="cb17-318"><a href="#cb17-318" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="font-size: 32px; font-weight: bold;"&gt;</span><span class="sc">${</span>country_detail<span class="op">.</span><span class="at">value</span><span class="sc">}</span><span class="vs">%&lt;/div&gt;</span></span>
-<span id="cb17-319"><a href="#cb17-319" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="opacity: 0.9;"&gt;del PIB en I+D&lt;/div&gt;</span></span>
-<span id="cb17-320"><a href="#cb17-320" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb17-321"><a href="#cb17-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-322"><a href="#cb17-322" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div&gt;</span></span>
-<span id="cb17-323"><a href="#cb17-323" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="font-size: 18px; font-weight: bold;"&gt;</span><span class="sc">${</span>country_detail<span class="op">.</span><span class="at">region</span><span class="sc">}</span><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb17-324"><a href="#cb17-324" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="opacity: 0.9;"&gt;Región&lt;/div&gt;</span></span>
-<span id="cb17-325"><a href="#cb17-325" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb17-326"><a href="#cb17-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-327"><a href="#cb17-327" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div&gt;</span></span>
-<span id="cb17-328"><a href="#cb17-328" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="font-size: 18px; font-weight: bold;"&gt;</span></span>
-<span id="cb17-329"><a href="#cb17-329" aria-hidden="true" tabindex="-1"></a><span class="sc">${</span>(country_detail<span class="op">.</span><span class="at">value</span> <span class="op">/</span> stats<span class="op">.</span><span class="at">mean</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">x</span></span>
-<span id="cb17-330"><a href="#cb17-330" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb17-331"><a href="#cb17-331" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="opacity: 0.9;"&gt;vs. promedio OECD&lt;/div&gt;</span></span>
-<span id="cb17-332"><a href="#cb17-332" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb17-333"><a href="#cb17-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-334"><a href="#cb17-334" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div&gt;</span></span>
-<span id="cb17-335"><a href="#cb17-335" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="font-size: 18px; font-weight: bold;"&gt;</span></span>
-<span id="cb17-336"><a href="#cb17-336" aria-hidden="true" tabindex="-1"></a><span class="vs">#</span><span class="sc">${</span>rd_data<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> b<span class="op">.</span><span class="at">value</span> <span class="op">-</span> a<span class="op">.</span><span class="at">value</span>)<span class="op">.</span><span class="fu">findIndex</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">country</span> <span class="op">===</span> country_detail<span class="op">.</span><span class="at">country</span>) <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span></span>
-<span id="cb17-337"><a href="#cb17-337" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb17-338"><a href="#cb17-338" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div style="opacity: 0.9;"&gt;Ranking mundial&lt;/div&gt;</span></span>
-<span id="cb17-339"><a href="#cb17-339" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb17-340"><a href="#cb17-340" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-341"><a href="#cb17-341" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb17-342"><a href="#cb17-342" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb17-343"><a href="#cb17-343" aria-hidden="true" tabindex="-1"></a><span class="vs">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17" data-startfrom="313" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 312;"><span id="cb17-313"><a href="#cb17-313"></a><span class="fu">html</span><span class="vs">`</span></span>
+<span id="cb17-314"><a href="#cb17-314"></a><span class="vs">&lt;div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; margin: 20px 0;"&gt;</span></span>
+<span id="cb17-315"><a href="#cb17-315"></a><span class="vs">&lt;h3 style="margin-top: 0; font-size: 24px;"&gt;</span><span class="sc">${</span>country_detail<span class="op">.</span><span class="at">country</span><span class="sc">}</span><span class="vs">&lt;/h3&gt;</span></span>
+<span id="cb17-316"><a href="#cb17-316"></a><span class="vs">&lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 15px;"&gt;</span></span>
+<span id="cb17-317"><a href="#cb17-317"></a><span class="vs">  </span></span>
+<span id="cb17-318"><a href="#cb17-318"></a><span class="vs">&lt;div&gt;</span></span>
+<span id="cb17-319"><a href="#cb17-319"></a><span class="vs">&lt;div style="font-size: 32px; font-weight: bold;"&gt;</span><span class="sc">${</span>country_detail<span class="op">.</span><span class="at">value</span><span class="sc">}</span><span class="vs">%&lt;/div&gt;</span></span>
+<span id="cb17-320"><a href="#cb17-320"></a><span class="vs">&lt;div style="opacity: 0.9;"&gt;del PIB en I+D&lt;/div&gt;</span></span>
+<span id="cb17-321"><a href="#cb17-321"></a><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb17-322"><a href="#cb17-322"></a></span>
+<span id="cb17-323"><a href="#cb17-323"></a><span class="vs">&lt;div&gt;</span></span>
+<span id="cb17-324"><a href="#cb17-324"></a><span class="vs">&lt;div style="font-size: 18px; font-weight: bold;"&gt;</span><span class="sc">${</span>country_detail<span class="op">.</span><span class="at">region</span><span class="sc">}</span><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb17-325"><a href="#cb17-325"></a><span class="vs">&lt;div style="opacity: 0.9;"&gt;Región&lt;/div&gt;</span></span>
+<span id="cb17-326"><a href="#cb17-326"></a><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb17-327"><a href="#cb17-327"></a></span>
+<span id="cb17-328"><a href="#cb17-328"></a><span class="vs">&lt;div&gt;</span></span>
+<span id="cb17-329"><a href="#cb17-329"></a><span class="vs">&lt;div style="font-size: 18px; font-weight: bold;"&gt;</span></span>
+<span id="cb17-330"><a href="#cb17-330"></a><span class="sc">${</span>(country_detail<span class="op">.</span><span class="at">value</span> <span class="op">/</span> stats<span class="op">.</span><span class="at">mean</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">x</span></span>
+<span id="cb17-331"><a href="#cb17-331"></a><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb17-332"><a href="#cb17-332"></a><span class="vs">&lt;div style="opacity: 0.9;"&gt;vs. promedio OECD&lt;/div&gt;</span></span>
+<span id="cb17-333"><a href="#cb17-333"></a><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb17-334"><a href="#cb17-334"></a></span>
+<span id="cb17-335"><a href="#cb17-335"></a><span class="vs">&lt;div&gt;</span></span>
+<span id="cb17-336"><a href="#cb17-336"></a><span class="vs">&lt;div style="font-size: 18px; font-weight: bold;"&gt;</span></span>
+<span id="cb17-337"><a href="#cb17-337"></a><span class="vs">#</span><span class="sc">${</span>rd_data<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> b<span class="op">.</span><span class="at">value</span> <span class="op">-</span> a<span class="op">.</span><span class="at">value</span>)<span class="op">.</span><span class="fu">findIndex</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">country</span> <span class="op">===</span> country_detail<span class="op">.</span><span class="at">country</span>) <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span></span>
+<span id="cb17-338"><a href="#cb17-338"></a><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb17-339"><a href="#cb17-339"></a><span class="vs">&lt;div style="opacity: 0.9;"&gt;Ranking mundial&lt;/div&gt;</span></span>
+<span id="cb17-340"><a href="#cb17-340"></a><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb17-341"><a href="#cb17-341"></a></span>
+<span id="cb17-342"><a href="#cb17-342"></a><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb17-343"><a href="#cb17-343"></a><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb17-344"><a href="#cb17-344"></a><span class="vs">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-17" data-nodetype="expression">
 

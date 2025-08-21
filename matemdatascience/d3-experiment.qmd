@@ -8,7 +8,8 @@ format:
     theme: cosmo
     toc: true
     toc-location: left
-    code-fold: false
+    code-fold: true
+    code-line-numbers: true
     fig-width: 10
     fig-height: 6
 execute:

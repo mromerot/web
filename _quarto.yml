@@ -1,10 +1,11 @@
+---
 project:
   type: website
   output-dir: docs
 
 website:
   title: "Inicio"
-  open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
+  open-graph: true  # Open graph for social media sharing
   page-footer: "Made with ❤️ and Quarto"
   sidebar:
     style: "docked"
@@ -29,43 +30,43 @@ website:
             href: grd/educacion.qmd
           - section: "Cursos, redes y recursos"
             contents:
-            - text: "Cursos en GRD"
-              href: grd/cursos.qmd
-            - text: "Plataformas y redes"
-              href: grd/plataformas-redes.qmd
-            - text: "Repositorios FAIR"
-              href: grd/repositorios.qmd
+              - text: "Cursos en GRD"
+                href: grd/cursos.qmd
+              - text: "Plataformas y redes"
+                href: grd/plataformas-redes.qmd
+              - text: "Repositorios FAIR"
+                href: grd/repositorios.qmd
           - text: "Sistemas de alerta temprana"
             href: grd/sat.qmd
           - section: "Amenazas hidrológicas y meteorológicas"
             href: grd/hidrol-meteorologicas/index.qmd
             contents:
-            - text: "El Niño / La Niña"
-              href: grd/hidrol-meteorologicas/elnino.qmd
-            - text: "Huracanes"
-              href: grd/hidrol-meteorologicas/huracanes.qmd
-            - text: "Inundaciones"
-              href: grd/hidrol-meteorologicas/inundaciones.qmd
+              - text: "El Niño / La Niña"
+                href: grd/hidrol-meteorologicas/elnino.qmd
+              - text: "Huracanes"
+                href: grd/hidrol-meteorologicas/huracanes.qmd
+              - text: "Inundaciones"
+                href: grd/hidrol-meteorologicas/inundaciones.qmd
           - section: "Amenazas geológicas"
             contents:
-            - text: "Falla de terreno"
-              href: grd/falladeterreno.qmd
-            - text: "Riesgo sísmico"
-              href: grd/riesgosismico.qmd
-            - text: "Volcanes"
-              href: grd/volcanes.qmd
+              - text: "Falla de terreno"
+                href: grd/falladeterreno.qmd
+              - text: "Riesgo sísmico"
+                href: grd/riesgosismico.qmd
+              - text: "Volcanes"
+                href: grd/volcanes.qmd
           - section: "Amenazas extraterrestres"
             contents:
-            - text: "Amenazas extraterrestres"
-              href: grd/amenazasextraterrestres.qmd
+              - text: "Amenazas extraterrestres"
+                href: grd/amenazasextraterrestres.qmd
           - section: "Amenazas ambientales"
             contents:
-            - text: "Erosión costera"
-              href: grd/erosioncostera.qmd
-            - text: "Incendios forestales"
-              href: grd/incendiosforestales.qmd
+              - text: "Erosión costera"
+                href: grd/erosioncostera.qmd
+              - text: "Incendios forestales"
+                href: grd/incendiosforestales.qmd
           - section: "Amenazas tecnológicas"
-            href: grd/tecnologicas/index.qmd
+            text: grd/tecnologicas/amenazastecnol.qmd
           - text: "Amazonas"
             href: grd/amazonas.qmd
           - text: "Glosario"
@@ -120,7 +121,7 @@ website:
             href: vidalaboral/vidalaboral.qmd
           - text: "Herramientas"
             href: vidalaboral/herramientas.qmd
-      - section: "Curriculum vitae" 
+      - section: "Curriculum vitae"
         contents:
           - text: "Curriculum vitae"
             href: cv/cv.qmd
@@ -132,7 +133,6 @@ website:
             href: quarto/quarto-atajos.qmd
           - text: "Proyectos de Quarto"
             href: quarto/quarto-proyectos.qmd
-          
 
 format:
   html:
