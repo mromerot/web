@@ -97,22 +97,26 @@ website:
         contents:
           - text: "Ecologia y conservacion marina"
             href: ecolyconserv/ecologiayconservacion.qmd
-      - section: "Matemáticas y ciencia de datos"
+      - section: "Ciencia de datos"
         contents:
-          - text: "Estadística y matemáticas"
-            href: matemdatascience/estadisticaymatematicas.qmd
           - text: "Ciencia de datos"
-            href: matemdatascience/cienciadedatos.qmd
+            href: datascience/cienciadedatos.qmd
           - text: "Inteligencia artificial"
-            href: matemdatascience/ia.qmd
+            href: datascience/ia.qmd
           - text: "D3"
-            href: matemdatascience/d3.qmd
+            href: datascience/d3.qmd
           - text: "Experimento-D3"
-            href: matemdatascience/d3-experiment.qmd
-          - text: "Myst"
-            href: matemdatascience/myst.qmd
+            href: datascience/myst.qmd
           - text: "Github"
-            href: matemdatascience/github.qmd
+            href: datascience/github.qmd
+          - text: "Atajos de Quarto"
+            href: datascience/quarto-atajos.qmd
+          - text: "Myst"
+            href: datascience/myst.qmd
+      - section: "Matemáticas y estadística"
+        contents:
+          - text: "Matemáticas y estadística"
+            href: math-stats/math-stats.qmd
       - section: "Vida laboral"
         contents:
           - text: "Café"
@@ -127,12 +131,6 @@ website:
             href: cv/cv.qmd
           - text: "Mis publicaciones"
             href: cv/publicaciones.qmd
-      - section: "Quarto"
-        contents:
-          - text: "Atajos de Quarto"
-            href: quarto/quarto-atajos.qmd
-          - text: "Proyectos de Quarto"
-            href: quarto/quarto-proyectos.qmd
 
 format:
   html:

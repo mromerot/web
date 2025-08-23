@@ -1,35 +1,281 @@
 [
   {
-    "objectID": "quarto/quarto-proyectos.html",
-    "href": "quarto/quarto-proyectos.html",
-    "title": "Proyectos de Quarto",
+    "objectID": "datascience/ia.html",
+    "href": "datascience/ia.html",
+    "title": "Inteligencia artificial",
     "section": "",
-    "text": "CRISIS EN REPRODUCIBILIDADhttps://www.nature.com/collections/prbfkwmwvz/content/all-articlesReflexiónLa importancia de métodos claros y reproducibles nunca ha sido más crítica¡Gracias!FINAL DE SECCIÓNMauricio Romero Torres Ph.D.📧 mauricio.romero.t@gmail.com🏛️ Universidad Pedagógica y Tecnológica de ColombiaPreguntas)",
+    "text": "AI Tool Master List\n1000 AI collection tools\nExample applications\nAIcyclopedia\n\n\n\n\n\nPerplexity\nTutor AI (Aprendizaje)\n\n\n\n\n\nMuse: Text-To-Image Generation\n\n\n\n\n\nMy Good Tape\nAI Transcription\naudiopen.ai\nOtter (Tomar notas y resumir)\nParrot AI\n\n\n\n\n\nFake You\n\n\n\n\n\nCopia el enlace largo del video de YouTube.\nVe a Summarize.tech y pega el enlace. Resumirá cada sección con marcas de tiempo. Copia el guión resumido.\nVe a Eleven Labs. Pega tu guión resumido. Eleven Labs leerá en voz alta todo el guión resumido para ti.\nJasper\n\n\n\n\n\nPodcast Adobe (Editar y mejorar audio)\n\n\n\n\n\ngptzero (Detector de AI)\nNew AI classifier for indicating AI-written text\nSummarize AI (Resumir)\nConsensus (Resumir papers)\nNatural Language → Knowledge Graph\nQuillbot (Reescribir)\nStrut\n\n\n\n\n\nDeepL\n\n\n\n\n\nReimagine\n\n\n\n\n\nLas IAs como ChatGPT ya crean nuevas profesiones (muy bien pagadas): a qué se dedica esta nueva clase de ‘ingenieros’\nCookbook\nAbstracts written by ChatGPT fool scientists. Nature. 2023",
     "crumbs": [
-      "Quarto",
-      "Proyectos de Quarto"
+      "Ciencia de datos",
+      "Inteligencia artificial"
     ]
   },
   {
-    "objectID": "quarto/quarto-proyectos.html#proyectos",
-    "href": "quarto/quarto-proyectos.html#proyectos",
-    "title": "Proyectos de Quarto",
+    "objectID": "datascience/ia.html#recursos-de-ia-para-el-trabajo-diario",
+    "href": "datascience/ia.html#recursos-de-ia-para-el-trabajo-diario",
+    "title": "Inteligencia artificial",
     "section": "",
-    "text": "CRISIS EN REPRODUCIBILIDADhttps://www.nature.com/collections/prbfkwmwvz/content/all-articlesReflexiónLa importancia de métodos claros y reproducibles nunca ha sido más crítica¡Gracias!FINAL DE SECCIÓNMauricio Romero Torres Ph.D.📧 mauricio.romero.t@gmail.com🏛️ Universidad Pedagógica y Tecnológica de ColombiaPreguntas)",
+    "text": "AI Tool Master List\n1000 AI collection tools\nExample applications\nAIcyclopedia\n\n\n\n\n\nPerplexity\nTutor AI (Aprendizaje)\n\n\n\n\n\nMuse: Text-To-Image Generation\n\n\n\n\n\nMy Good Tape\nAI Transcription\naudiopen.ai\nOtter (Tomar notas y resumir)\nParrot AI\n\n\n\n\n\nFake You\n\n\n\n\n\nCopia el enlace largo del video de YouTube.\nVe a Summarize.tech y pega el enlace. Resumirá cada sección con marcas de tiempo. Copia el guión resumido.\nVe a Eleven Labs. Pega tu guión resumido. Eleven Labs leerá en voz alta todo el guión resumido para ti.\nJasper\n\n\n\n\n\nPodcast Adobe (Editar y mejorar audio)\n\n\n\n\n\ngptzero (Detector de AI)\nNew AI classifier for indicating AI-written text\nSummarize AI (Resumir)\nConsensus (Resumir papers)\nNatural Language → Knowledge Graph\nQuillbot (Reescribir)\nStrut\n\n\n\n\n\nDeepL\n\n\n\n\n\nReimagine\n\n\n\n\n\nLas IAs como ChatGPT ya crean nuevas profesiones (muy bien pagadas): a qué se dedica esta nueva clase de ‘ingenieros’\nCookbook\nAbstracts written by ChatGPT fool scientists. Nature. 2023",
     "crumbs": [
-      "Quarto",
-      "Proyectos de Quarto"
+      "Ciencia de datos",
+      "Inteligencia artificial"
     ]
   },
   {
-    "objectID": "cv/cv.html",
-    "href": "cv/cv.html",
-    "title": "Curriculum vitae",
-    "section": "",
-    "text": "Curriculum vitae\n\n\nDescargar CV en PDF",
+    "objectID": "datascience/ia.html#notebooklm",
+    "href": "datascience/ia.html#notebooklm",
+    "title": "Inteligencia artificial",
+    "section": "NotebookLM",
+    "text": "NotebookLM\n\n\nNotebookLM\n\nHasta 50 fuentes (PDF, PPT, DOCX, XLSX), también videos de YouTube.\nEl modelo se entrena con los documentos cargados, por lo cual baja la posibilidad de alucinar.\nPueden explorarse conexiones entre documentos.\nTiene un chat para hacer preguntas con prompts al modelo creado.\nGenera un podcast con el análisis.",
     "crumbs": [
-      "Curriculum vitae",
-      "Curriculum vitae"
+      "Ciencia de datos",
+      "Inteligencia artificial"
+    ]
+  },
+  {
+    "objectID": "datascience/ia.html#crear-un-chatgpt-personal",
+    "href": "datascience/ia.html#crear-un-chatgpt-personal",
+    "title": "Inteligencia artificial",
+    "section": "Crear un ChatGPT personal",
+    "text": "Crear un ChatGPT personal\n\nPaper QA (Hacer preguntas y respuestas desde PDFs o archivos de texto)\nCómo usar ChatGPT para resumir un libro, artículo o trabajo de investigación",
+    "crumbs": [
+      "Ciencia de datos",
+      "Inteligencia artificial"
+    ]
+  },
+  {
+    "objectID": "datascience/ia.html#comandos-prompts",
+    "href": "datascience/ia.html#comandos-prompts",
+    "title": "Inteligencia artificial",
+    "section": "Comandos prompts",
+    "text": "Comandos prompts\n\nPrompt engineering\nChatGPT-Prompts\nOpenAI Cookbook",
+    "crumbs": [
+      "Ciencia de datos",
+      "Inteligencia artificial"
+    ]
+  },
+  {
+    "objectID": "datascience/ia.html#para-escribir-código",
+    "href": "datascience/ia.html#para-escribir-código",
+    "title": "Inteligencia artificial",
+    "section": "Para escribir código",
+    "text": "Para escribir código\n\ngpt studio for R",
+    "crumbs": [
+      "Ciencia de datos",
+      "Inteligencia artificial"
+    ]
+  },
+  {
+    "objectID": "datascience/d3-experiment.html",
+    "href": "datascience/d3-experiment.html",
+    "title": "Inversión Global en Investigación y Desarrollo",
+    "section": "",
+    "text": "La inversión en Investigación y Desarrollo (I+D) es un indicador clave de la capacidad innovadora de un país y su compromiso con el crecimiento económico basado en el conocimiento. El indicador “Gross Domestic Expenditure on Research and Development (GERD) as a percentage of GDP” mide el total de gastos domésticos en I+D expresados como porcentaje del Producto Interno Bruto.\nSegún la OECD, este indicador incluye:\n\nGastos corrientes y de capital en los cuatro sectores principales\nEmpresas privadas, Gobierno, Educación superior y Organizaciones sin fines de lucro\nInvestigación básica, investigación aplicada y desarrollo experimental\n\nLos datos presentados provienen de la base de datos OECD Main Science and Technology Indicators (MSTI) y reflejan las tendencias más recientes hasta 2023."
+  },
+  {
+    "objectID": "datascience/d3-experiment.html#introducción",
+    "href": "datascience/d3-experiment.html#introducción",
+    "title": "Inversión Global en Investigación y Desarrollo",
+    "section": "",
+    "text": "La inversión en Investigación y Desarrollo (I+D) es un indicador clave de la capacidad innovadora de un país y su compromiso con el crecimiento económico basado en el conocimiento. El indicador “Gross Domestic Expenditure on Research and Development (GERD) as a percentage of GDP” mide el total de gastos domésticos en I+D expresados como porcentaje del Producto Interno Bruto.\nSegún la OECD, este indicador incluye:\n\nGastos corrientes y de capital en los cuatro sectores principales\nEmpresas privadas, Gobierno, Educación superior y Organizaciones sin fines de lucro\nInvestigación básica, investigación aplicada y desarrollo experimental\n\nLos datos presentados provienen de la base de datos OECD Main Science and Technology Indicators (MSTI) y reflejan las tendencias más recientes hasta 2023."
+  },
+  {
+    "objectID": "datascience/d3-experiment.html#datos-y-preparación",
+    "href": "datascience/d3-experiment.html#datos-y-preparación",
+    "title": "Inversión Global en Investigación y Desarrollo",
+    "section": "Datos y Preparación",
+    "text": "Datos y Preparación\n\n\nCode\n// Datos de inversión en I+D como % del PIB (2023)\nrd_data = [\n  {country: \"Israel\", value: 6.35, region: \"Asia-Pacifico\"},\n  {country: \"Corea del Sur\", value: 4.96, region: \"Asia-Pacifico\"},\n  {country: \"Suecia\", value: 3.60, region: \"Europa\"},\n  {country: \"Estados Unidos\", value: 3.45, region: \"America del Norte\"},\n  {country: \"Japón\", value: 3.44, region: \"Asia-Pacifico\"},\n  {country: \"Bélgica\", value: 3.32, region: \"Europa\"},\n  {country: \"Austria\", value: 3.29, region: \"Europa\"},\n  {country: \"Suiza\", value: 3.25, region: \"Europa\"},\n  {country: \"Dinamarca\", value: 2.99, region: \"Europa\"},\n  {country: \"Alemania\", value: 2.95, region: \"Europa\"},\n  {country: \"Finlandia\", value: 2.85, region: \"Europa\"},\n  {country: \"Francia\", value: 2.75, region: \"Europa\"},\n  {country: \"Islandia\", value: 2.65, region: \"Europa\"},\n  {country: \"China\", value: 2.58, region: \"Asia-Pacifico\"},\n  {country: \"Países Bajos\", value: 2.35, region: \"Europa\"},\n  {country: \"Reino Unido\", value: 2.25, region: \"Europa\"},\n  {country: \"Noruega\", value: 2.15, region: \"Europa\"},\n  {country: \"Australia\", value: 2.05, region: \"Asia-Pacifico\"},\n  {country: \"Canadá\", value: 1.95, region: \"America del Norte\"},\n  {country: \"Italia\", value: 1.85, region: \"Europa\"},\n  {country: \"España\", value: 1.65, region: \"Europa\"},\n  {country: \"Portugal\", value: 1.45, region: \"Europa\"},\n  {country: \"México\", value: 0.55, region: \"America del Norte\"}\n]\n\n\n\n\n\n\n\n\n\nCode\n// Configuración de colores por región\ncolor_scale = new Map([\n  [\"Asia-Pacifico\", \"#ff6b6b\"],\n  [\"Europa\", \"#4ecdc4\"], \n  [\"America del Norte\", \"#45b7d1\"]\n])\n\n\n\n\n\n\n\n\n\nCode\n// Estadísticas descriptivas\nstats = {\n  const values = rd_data.map(d =&gt; d.value);\n  return {\n    max: d3.max(values),\n    min: d3.min(values),\n    mean: d3.mean(values),\n    median: d3.median(values),\n    countries_above_3: rd_data.filter(d =&gt; d.value &gt;= 3.0).length,\n    total_countries: rd_data.length\n  }\n}"
+  },
+  {
+    "objectID": "datascience/d3-experiment.html#visualización-principal-inversión-en-id-por-país",
+    "href": "datascience/d3-experiment.html#visualización-principal-inversión-en-id-por-país",
+    "title": "Inversión Global en Investigación y Desarrollo",
+    "section": "Visualización Principal: Inversión en I+D por País",
+    "text": "Visualización Principal: Inversión en I+D por País\n\n\nCode\nviewof selected_region = Inputs.select(\n  [\"Todas las regiones\", \"Asia-Pacifico\", \"Europa\", \"America del Norte\"],\n  {label: \"Filtrar por región:\", value: \"Todas las regiones\"}\n)\n\n\n\n\n\n\n\n\n\nCode\n// Filtrar datos según selección\nfiltered_data = selected_region === \"Todas las regiones\" \n  ? rd_data \n  : rd_data.filter(d =&gt; d.region === selected_region)\n\n\n\n\n\n\n\n\n\nCode\n// Gráfico de barras principal\nPlot.plot({\n  title: \"Gastos Domésticos en I+D como % del PIB (2023)\",\n  subtitle: `Países seleccionados: ${selected_region}`,\n  width: 900,\n  height: 500,\n  marginLeft: 100,\n  marginBottom: 80,\n  x: {\n    domain: [0, 7],\n    label: \"Porcentaje del PIB (%)\",\n    grid: true\n  },\n  y: {\n    label: null,\n    domain: filtered_data.map(d =&gt; d.country)\n  },\n  color: {\n    domain: Array.from(color_scale.keys()),\n    range: Array.from(color_scale.values()),\n    legend: true\n  },\n  marks: [\n    Plot.barX(filtered_data, {\n      x: \"value\",\n      y: \"country\",\n      fill: \"region\",\n      sort: {y: \"x\", reverse: true},\n      tip: true\n    }),\n    Plot.text(filtered_data, {\n      x: d =&gt; d.value + 0.15,\n      y: \"country\",\n      text: d =&gt; `${d.value}%`,\n      fontSize: 11,\n      fill: \"#333\"\n    }),\n    Plot.ruleX([2.7], {stroke: \"#e74c3c\", strokeWidth: 2, strokeDasharray: \"5,5\"})\n  ]\n})\n\n\n\n\n\n\n\n\n\nCode\nhtml`&lt;p style=\"margin-top: 10px; font-size: 14px; color: #666;\"&gt;\n&lt;strong&gt;Línea roja punteada:&lt;/strong&gt; Promedio OECD (2.7%)\n&lt;/p&gt;`"
+  },
+  {
+    "objectID": "datascience/d3-experiment.html#análisis-por-regiones",
+    "href": "datascience/d3-experiment.html#análisis-por-regiones",
+    "title": "Inversión Global en Investigación y Desarrollo",
+    "section": "Análisis por Regiones",
+    "text": "Análisis por Regiones\n\n\nCode\n// Análisis regional\nregional_summary = d3.rollup(\n  rd_data,\n  v =&gt; ({\n    count: v.length,\n    average: d3.mean(v, d =&gt; d.value),\n    max: d3.max(v, d =&gt; d.value),\n    min: d3.min(v, d =&gt; d.value),\n    countries: v.map(d =&gt; d.country).join(\", \")\n  }),\n  d =&gt; d.region\n)\n\n\n\n\n\n\n\n\n\nCode\n// Tabla resumen por región\nInputs.table(\n  Array.from(regional_summary, ([region, data]) =&gt; ({\n    \"Región\": region,\n    \"Países\": data.count,\n    \"Promedio (%)\": data.average.toFixed(2),\n    \"Máximo (%)\": data.max.toFixed(2),\n    \"Mínimo (%)\": data.min.toFixed(2)\n  })),\n  {\n    header: {\n      \"Región\": \"Región\",\n      \"Países\": \"Número de Países\",\n      \"Promedio (%)\": \"Promedio I+D/PIB\",\n      \"Máximo (%)\": \"Máximo\",\n      \"Mínimo (%)\": \"Mínimo\"\n    }\n  }\n)"
+  },
+  {
+    "objectID": "datascience/d3-experiment.html#distribución-y-percentiles",
+    "href": "datascience/d3-experiment.html#distribución-y-percentiles",
+    "title": "Inversión Global en Investigación y Desarrollo",
+    "section": "Distribución y Percentiles",
+    "text": "Distribución y Percentiles\n\n\nCode\n// Histograma de distribución\nPlot.plot({\n  title: \"Distribución de la Inversión en I+D\",\n  width: 700,\n  height: 300,\n  x: {\n    label: \"Porcentaje del PIB (%)\",\n    domain: [0, 7]\n  },\n  y: {\n    label: \"Número de países\"\n  },\n  marks: [\n    Plot.rectY(rd_data, Plot.binX({y: \"count\"}, {x: \"value\", thresholds: 20, fill: \"#4ecdc4\", opacity: 0.7})),\n    Plot.ruleX([stats.mean], {stroke: \"#e74c3c\", strokeWidth: 2}),\n    Plot.ruleX([stats.median], {stroke: \"#f39c12\", strokeWidth: 2})\n  ]\n})\n\n\n\n\n\n\n\n\n\nCode\nhtml`&lt;p style=\"margin-top: 10px; font-size: 14px; color: #666;\"&gt;\n&lt;span style=\"color: #e74c3c;\"&gt;&lt;strong&gt;Línea roja:&lt;/strong&gt; Media (${stats.mean.toFixed(2)}%)&lt;/span&gt; | \n&lt;span style=\"color: #f39c12;\"&gt;&lt;strong&gt;Línea naranja:&lt;/strong&gt; Mediana (${stats.median.toFixed(2)}%)&lt;/span&gt;\n&lt;/p&gt;`"
+  },
+  {
+    "objectID": "datascience/d3-experiment.html#insights-clave",
+    "href": "datascience/d3-experiment.html#insights-clave",
+    "title": "Inversión Global en Investigación y Desarrollo",
+    "section": "Insights Clave",
+    "text": "Insights Clave\n\n\nCode\nhtml`\n&lt;div style=\"background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;\"&gt;\n&lt;h4 style=\"color: #2c3e50; margin-top: 0;\"&gt;📊 Hallazgos Principales&lt;/h4&gt;\n\n&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;\"&gt;\n  \n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #ff6b6b;\"&gt;\n&lt;strong&gt;🏆 Líderes Globales&lt;/strong&gt;&lt;br&gt;\nIsrael encabeza con &lt;strong&gt;${stats.max}%&lt;/strong&gt; del PIB, seguido por Corea del Sur y Suecia\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #4ecdc4;\"&gt;\n&lt;strong&gt;🌍 Umbral del 3%&lt;/strong&gt;&lt;br&gt;\nSolo &lt;strong&gt;${stats.countries_above_3}&lt;/strong&gt; de ${stats.total_countries} países superan el 3% del PIB\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #45b7d1;\"&gt;\n&lt;strong&gt;📈 Promedio OECD&lt;/strong&gt;&lt;br&gt;\nEl promedio OECD es &lt;strong&gt;2.7%&lt;/strong&gt; del PIB en 2023\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #f39c12;\"&gt;\n&lt;strong&gt;🌏 Dominancia Asiática&lt;/strong&gt;&lt;br&gt;\nAsia representa &lt;strong&gt;46%&lt;/strong&gt; del gasto global en I+D\n&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;\n`"
+  },
+  {
+    "objectID": "datascience/d3-experiment.html#top-10-países",
+    "href": "datascience/d3-experiment.html#top-10-países",
+    "title": "Inversión Global en Investigación y Desarrollo",
+    "section": "Top 10 Países",
+    "text": "Top 10 Países\n\n\nCode\n// Top 10 países\ntop_10 = rd_data\n  .sort((a, b) =&gt; b.value - a.value)\n  .slice(0, 10)\n\n\n\n\n\n\n\n\n\nCode\nPlot.plot({\n  title: \"Top 10 Países en Inversión I+D/PIB\",\n  width: 600,\n  height: 350,\n  x: {\n    label: null,\n    tickRotate: -45\n  },\n  y: {\n    label: \"Porcentaje del PIB (%)\",\n    domain: [0, 7]\n  },\n  color: {\n    domain: Array.from(color_scale.keys()),\n    range: Array.from(color_scale.values())\n  },\n  marks: [\n    Plot.barY(top_10, {\n      x: \"country\",\n      y: \"value\",\n      fill: \"region\",\n      tip: true\n    }),\n    Plot.text(top_10, {\n      x: \"country\",\n      y: d =&gt; d.value + 0.15,\n      text: d =&gt; `${d.value}%`,\n      fontSize: 10,\n      fill: \"#333\"\n    })\n  ]\n})"
+  },
+  {
+    "objectID": "datascience/d3-experiment.html#explorador-interactivo",
+    "href": "datascience/d3-experiment.html#explorador-interactivo",
+    "title": "Inversión Global en Investigación y Desarrollo",
+    "section": "Explorador Interactivo",
+    "text": "Explorador Interactivo\n\n\nCode\nviewof selected_country = Inputs.select(\n  rd_data.map(d =&gt; d.country),\n  {label: \"Seleccionar país para detalles:\", value: \"Israel\"}\n)\n\n\n\n\n\n\n\n\n\nCode\n// Detalles del país seleccionado\ncountry_detail = rd_data.find(d =&gt; d.country === selected_country)\n\n\n\n\n\n\n\n\n\nCode\nhtml`\n&lt;div style=\"background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; margin: 20px 0;\"&gt;\n&lt;h3 style=\"margin-top: 0; font-size: 24px;\"&gt;${country_detail.country}&lt;/h3&gt;\n&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 15px;\"&gt;\n  \n&lt;div&gt;\n&lt;div style=\"font-size: 32px; font-weight: bold;\"&gt;${country_detail.value}%&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;del PIB en I+D&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;${country_detail.region}&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;Región&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;\n${(country_detail.value / stats.mean).toFixed(1)}x\n&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;vs. promedio OECD&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;\n#${rd_data.sort((a, b) =&gt; b.value - a.value).findIndex(d =&gt; d.country === country_detail.country) + 1}\n&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;Ranking mundial&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;\n`"
+  },
+  {
+    "objectID": "datascience/d3-experiment.html#metodología-y-fuentes",
+    "href": "datascience/d3-experiment.html#metodología-y-fuentes",
+    "title": "Inversión Global en Investigación y Desarrollo",
+    "section": "Metodología y Fuentes",
+    "text": "Metodología y Fuentes\n\nDefinición del Indicador\nEl Gasto Doméstico Bruto en Investigación y Desarrollo (GERD) como porcentaje del PIB incluye:\n\nGastos corrientes y de capital en I+D\nCuatro sectores principales:\n\nEmpresas comerciales\nGobierno\nEducación superior\n\nOrganizaciones privadas sin fines de lucro\n\nTres tipos de investigación:\n\nInvestigación básica\nInvestigación aplicada\nDesarrollo experimental\n\n\n\n\nFuentes de Datos\n\nFuente principal: OECD Main Science and Technology Indicators (MSTI) Database\nURL: https://data-explorer.oecd.org\nDatos complementarios: World Bank, UNESCO Institute for Statistics\nAño de referencia: 2023 (datos más recientes disponibles)\nMetodología: Paridades de Poder Adquisitivo (PPP), precios constantes base 2015\n\n\n\nNotas Técnicas\n\nLos datos incluyen I+D financiada desde el extranjero pero excluyen fondos domésticos para I+D realizada fuera del territorio nacional\nLas cifras están expresadas en dólares estadounidenses constantes usando PPP para permitir comparaciones internacionales\nAlgunos países pueden tener metodologías ligeramente diferentes en la recopilación de datos\n\n\nDocumento generado con Quarto y Observable JS"
+  },
+  {
+    "objectID": "datascience/quarto-atajos.html",
+    "href": "datascience/quarto-atajos.html",
+    "title": "Quarto atajos",
+    "section": "",
+    "text": "Reproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link",
+    "crumbs": [
+      "Ciencia de datos",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "datascience/quarto-atajos.html#recursos-de-ayuda",
+    "href": "datascience/quarto-atajos.html#recursos-de-ayuda",
+    "title": "Quarto atajos",
+    "section": "",
+    "text": "Reproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link",
+    "crumbs": [
+      "Ciencia de datos",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "datascience/quarto-atajos.html#publicar",
+    "href": "datascience/quarto-atajos.html#publicar",
+    "title": "Quarto atajos",
+    "section": "Publicar",
+    "text": "Publicar\n\nEn Terminal:\n\nquarto render para renderizar las páginas\nquarto preview vista preliminar\nquarto check revisión de configuración\nquarto --help todas las ayudas\n\nPara cargar la página: commit and push\n\ngit add .\ngit commit -m “descripción actualización”\ngit push\n\nTo validate the YAML, run: quarto check",
+    "crumbs": [
+      "Ciencia de datos",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "datascience/quarto-atajos.html#tabsets",
+    "href": "datascience/quarto-atajos.html#tabsets",
+    "title": "Quarto atajos",
+    "section": "Tabsets",
+    "text": "Tabsets\n::: {.panel-tabset}\n### Tab A\nContent for `Tab A`\n\n### Tab B\nContent for `Tab B`\n:::",
+    "crumbs": [
+      "Ciencia de datos",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "datascience/quarto-atajos.html#insertar-elementos-en-dos-columnas",
+    "href": "datascience/quarto-atajos.html#insertar-elementos-en-dos-columnas",
+    "title": "Quarto atajos",
+    "section": "Insertar elementos en dos columnas",
+    "text": "Insertar elementos en dos columnas\n::: {layout-ncol=2} \n\nInserte algo acá\n\nTexto de la caja (opcional)\n:::",
+    "crumbs": [
+      "Ciencia de datos",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "datascience/quarto-atajos.html#insertar-videos",
+    "href": "datascience/quarto-atajos.html#insertar-videos",
+    "title": "Quarto atajos",
+    "section": "Insertar videos",
+    "text": "Insertar videos\nLlamar con barra / e insertar `Shotcode`\n\nEntre corchetes colocar `video = \"link\"`\n\nInsertar video de un live: cambiar \"live\" por \"embed\"\nhttps://www.youtube.com/embed/srgbUPu9Mo4",
+    "crumbs": [
+      "Ciencia de datos",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "datascience/quarto-atajos.html#insertar-imagenes",
+    "href": "datascience/quarto-atajos.html#insertar-imagenes",
+    "title": "Quarto atajos",
+    "section": "Insertar imagenes",
+    "text": "Insertar imagenes\nInsertar imagen\n\n![](https://mdg.imgix.net/assets/images/markdown-flowchart.png?auto=format&fit=clip&q=40&w=1080)",
+    "crumbs": [
+      "Ciencia de datos",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "datascience/quarto-atajos.html#callout-blocks",
+    "href": "datascience/quarto-atajos.html#callout-blocks",
+    "title": "Quarto atajos",
+    "section": "Callout blocks",
+    "text": "Callout blocks\nThere are five different types of callouts available: note , warning, important , tip , caution . The color and icon will be different depending upon the type that you select. Here are what the various types look like in HTML output.\n{.callout-note collapse=\"true\"} Note that there are five types of callouts, including:\n`note` , `warning,` `important` , `tip` , `caution`. \n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nCallouts provide a simple way to attract attention, for example, to this warning.\n\n\n\n\n\n\n\n\nThis is Important\n\n\n\nDanger, callouts will really improve your writing.\n\n\n\n\n\n\n\n\nTip With Title\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse [with minimal atribute]\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user and minimal atributes with {.callout-caution collapse=\"true\" style=\"color: purple\" appearance=\"minimal\"}",
+    "crumbs": [
+      "Ciencia de datos",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "datascience/quarto-atajos.html#texto-desplegable",
+    "href": "datascience/quarto-atajos.html#texto-desplegable",
+    "title": "Quarto atajos",
+    "section": "Texto desplegable",
+    "text": "Texto desplegable\n\n\nTexto desplegable\n\n&lt;details&gt; &lt;summary&gt;Título del texto desplegable&lt;/summary&gt;\n-   Contenido\n-   Contenido\n-   Contenido\n&lt;/details&gt;",
+    "crumbs": [
+      "Ciencia de datos",
+      "Atajos de Quarto"
+    ]
+  },
+  {
+    "objectID": "datascience/github.html",
+    "href": "datascience/github.html",
+    "title": "Github",
+    "section": "",
+    "text": "A brief introduction to Git for beginners | GitHub\n Banco Interamericano de Desarollo Code4Dev: ¿Cómo optimizar tu repositorio de código abierto con Git y GitHub?\n\n\n\n\nIntroduction to GitHub. Link\n\n\n\n\n\nWhat is GitHub Copilot?. Link",
+    "crumbs": [
+      "Ciencia de datos",
+      "Github"
+    ]
+  },
+  {
+    "objectID": "datascience/github.html#qué-es-github",
+    "href": "datascience/github.html#qué-es-github",
+    "title": "Github",
+    "section": "",
+    "text": "A brief introduction to Git for beginners | GitHub\n Banco Interamericano de Desarollo Code4Dev: ¿Cómo optimizar tu repositorio de código abierto con Git y GitHub?",
+    "crumbs": [
+      "Ciencia de datos",
+      "Github"
+    ]
+  },
+  {
+    "objectID": "datascience/github.html#introduction-to-github",
+    "href": "datascience/github.html#introduction-to-github",
+    "title": "Github",
+    "section": "",
+    "text": "Introduction to GitHub. Link",
+    "crumbs": [
+      "Ciencia de datos",
+      "Github"
+    ]
+  },
+  {
+    "objectID": "datascience/github.html#github-copilot",
+    "href": "datascience/github.html#github-copilot",
+    "title": "Github",
+    "section": "",
+    "text": "What is GitHub Copilot?. Link",
+    "crumbs": [
+      "Ciencia de datos",
+      "Github"
     ]
   },
   {
@@ -1494,457 +1740,6 @@
     ]
   },
   {
-    "objectID": "matemdatascience/d3.html",
-    "href": "matemdatascience/d3.html",
-    "title": "D3, Observable y JS",
-    "section": "",
-    "text": "Observable HQ. Link.\nQuarto and Observable. Link.\n\n\n\n\n Introduction to D3 P1. Slides.\n\n\n Introduction to D3 P2. Slides.\n\n\n\n\n Introduction to D3 P3.\n\n\n Introduction to D3 P4.\n\n\n\n\n Introduction to D3 P5.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "D3"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/d3.html#d3",
-    "href": "matemdatascience/d3.html#d3",
-    "title": "D3, Observable y JS",
-    "section": "",
-    "text": "Observable HQ. Link.\nQuarto and Observable. Link.\n\n\n\n\n Introduction to D3 P1. Slides.\n\n\n Introduction to D3 P2. Slides.\n\n\n\n\n Introduction to D3 P3.\n\n\n Introduction to D3 P4.\n\n\n\n\n Introduction to D3 P5.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "D3"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/myst.html",
-    "href": "matemdatascience/myst.html",
-    "title": "Myst, Zaar",
-    "section": "",
-    "text": "Myst. Link.\n\nGet Started. Your first steps with MyST. Link\n\n\n SciPy Proceedings 2025. MyST Markdown and Curvenote\n\n\n\nReflections on MyST-ification. 2025. Link\nAGU. About Notebooks Now!. Link.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Myst"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/myst.html#lecturas",
-    "href": "matemdatascience/myst.html#lecturas",
-    "title": "Myst, Zaar",
-    "section": "",
-    "text": "Reflections on MyST-ification. 2025. Link\nAGU. About Notebooks Now!. Link.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Myst"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/myst.html#lecturas-1",
-    "href": "matemdatascience/myst.html#lecturas-1",
-    "title": "Myst, Zaar",
-    "section": "Lecturas",
-    "text": "Lecturas\n\nZarr in the Browser — Fast, Flexible, and Surprisingly Powerful for Big Geo Data. 2025. Link.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Myst"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/cienciadedatos.html",
-    "href": "matemdatascience/cienciadedatos.html",
-    "title": "Lecturas",
-    "section": "",
-    "text": "Lectura introductoria. Curriculum Guidelines for Undergraduate Programs in Data Science. Annual Review of Statistics and Its Application. 2017. Link.\nShould Computer Science Be Required?. Link.\nFive reasons why researchers should learn to love the command line. Link.\nRStudio Webinars. Link.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/cienciadedatos.html#python",
-    "href": "matemdatascience/cienciadedatos.html#python",
-    "title": "Lecturas",
-    "section": "Python",
-    "text": "Python\n\nGoogle Colab. Link.\n\nAI hub. Link.\nQue es. Link\nIntroduction to Google Colab. Link.\nGoogle Colab 101 Tutorial with Python — Tips, Tricks, and FAQ. Link.\n\nAnaconda. Link.\nSpyder. Link",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/cienciadedatos.html#visual-code",
-    "href": "matemdatascience/cienciadedatos.html#visual-code",
-    "title": "Lecturas",
-    "section": "Visual Code",
-    "text": "Visual Code\n\nVisual Code Studio. Link. Link.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/cienciadedatos.html#herramientas-y-ayuda",
-    "href": "matemdatascience/cienciadedatos.html#herramientas-y-ayuda",
-    "title": "Lecturas",
-    "section": "Herramientas y ayuda",
-    "text": "Herramientas y ayuda\n\nStackblitz. Link\nSoftware carpentry. Link. Link. Link.\nKaggle. Link.\nFreecode camp. Link.\nStack Overflow. Link.***\nOur coding club. Link. Link.\nHow do I? Link.\nCarpentries para Latinoamérica. Link.\n\nUpcomming workshops. Link.\n\nUnimelbourne\n\nResbaz (Git, Matlab, R, Python, Shell, Nltk, Authorea). Link\nResearch Computing Services Training at GitLab. Link.\n\nStyle guide. Link. Google Style Guide. Link.\nGoogle’s R Style Guide. Link.\nR-Universe. Link.\nEjemplos AI. Link.\nTraductor de lenguajes. Link.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIDEs",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/cienciadedatos.html#buscar-ayuda-y-aprender",
-    "href": "matemdatascience/cienciadedatos.html#buscar-ayuda-y-aprender",
-    "title": "Lecturas",
-    "section": "Buscar ayuda y aprender",
-    "text": "Buscar ayuda y aprender\n\nCloud. Link.\nTeaching R online with RStudio Cloud. Link.\nComputing in the Cloud with Google and RStudio. Link.\nRTutor AI. Link.\nCrantastic. Link.Datacamp. Link.***Elementary Statistics With R. Link Quick-R. Link. ***R-bloggers. Link.Learnr4free. Link.Lista de paquetes. Link.R Programming Tutorials. Link.Rseek. Link.RStudio Cloud in the Classroom. Link.RStudio Cheat Sheets. Link.Tidyverse.org. Link.Programiz. Link.R documentation. Link.\n\nRTutor. Link.\nSwirl. Link.\nTryR. Link.\n\nRStudio Cheatsheets. Link.\nRStudio IDE cheatsheet. Link.\nData import. Link\nData visualization with ggplot2 cheatsheet. Link.\nLibros\n\nBook down. Link.Best Coding Practices for R. Link Free R Reading Material. Link.\nL El arte de programar en R: un lenguaje para la estadística. Link.\nR Cookbook. Proven Recipes for Data Analysis, Statistics, and Graphics. Link.\nR in a Nutshell. Link.\n\n\n\nBásico\n\nMateriales de RStudio en Español. Link.\n\nR para Ciencia de Datos. Link.\nR para profesionales de los datos. Link.\nIntroduction to R. Datacamp. Link.\nLearning R. Lynda.com. Link.\nAprendeR. Miriada X. Link.\nIntroduction to R for Data Science. Edx. Link.\nIntroduction to Data Science with R and Tidyverse. Link.\nQuick R. Link.\nSwirl. Link.\nCode School. Link.\nDo More with R. Link.\nR for Data Science. Grolemund & Wickham. Link\nR para Ciencia de Datos. Link.\nApplied R in the Classroom. Link.\nrstudio4edu. A Handbook for Teaching and Learning with R and RStudio. Link.\n\n\n\n\nIntermedio\n\nData Science. Lynda.com. Link\nIntermediate R. Datacamp. Link.R for Data Science. Link.\nR-Statistics-Essential-Training. Lynda.com. Link.\nR Programming. Coursera. Link.\nR Workshop for Social Scientist NOAA. Link.\nRStudio IDE cheatsheet\nHarvard WorkShop. Link.\nR-Bootcamp. Link.**\nAwesome R Learning Resources. Link.\n\n\n\nAvanzado\n\nAdvanced statistics. Stat tools. Link.\nEcological Models and Data in R. Link.\nAdvanced R. Hadley Wickham. Link.\nMastering Software Development in R. Link.\nData Science in Education Using R. Link.\n\n\n\nTydiverse\n\nRemaster the Tidyverse. Link.\nEl paquete dplyr. Link.\nDive into dplyr (tutorial). Link.\nTidyTuesday***. Link.\nAn educator’s perspective of the tidyverse. 2022. Link.\n\nRStudio Cheatsheets. Link.\n\nRStudio IDE cheatsheet. Link.\nBase R. Link\nData import. Link\nData visualization with ggplot2 cheatsheet. Link.\n\n\n\n\n Data wrangling\n\n\n How to connect to chatGPT with R\n\n\n\n\nEjercicios aplicados\n\nMean trophic levels of a genera from FishBase. Seascape models. Link. Link.\nCoral reef degradation is not correlated with local human population density. Scientific Reports. 2016. Link. Code.\nMacro Ecology and Spatial Statistics. Link.\nR-packages for oceanographic data visualisation. Link.\nForecasting El Niño-Southern Oscillation (ENSO). Link.\nR programming tools for conservation scientists. Link.\nConservation programming in R. Link.\n\nTablas en R\n\nR Data.table. Link.\nR gt package. Link\n10+ Guidelines for Better Tables in R. Link.\nData.Table Tutorial (with 50 Examples). Link.\nAggregation and Restructuring data (from “R in Action”). Link.\n\nGráficas en R\n\nr-graph gallery. Link.\nA Compendium of Clean Graphs in R. Link.\nR Graphics Cookbook, 2nd edition. Link.\n3D ggplots with rayshader - RStudio Rayshader. Link.\nRayrender. Link.\nData Visualization. Link.\nData Visualization in R. DataCamp. Link.\nGraphs. QuickR. Link.\nCreating memorable data visualisations using the R programming language - Chris Brown. Winter School Online Lectures. Link.\nFrom data to viz. Link.\nInteractive web-based data visualization with R, plotly, and shiny. Link.\ndygraphs for R. Time series. Link.\nBBC Visual and Data Journalism cookbook for R graphics. Link\nGraphics Global Warming. IPCC. Link.\n\nOtros temas\n\nFor en R. Link.\nEasy and efficient data manipulation. Link.\n\nggplot2\n\nggplot2: Elegant Graphics for Data Analysis. 3rd edition. Link.Overview. Link. Reference. Link.Visualización de Datos usando ggplot2 Guía Rápida. Link.Elegant Graphics for Data Analysis. Link.***\nTidyverse Basics. Link.\nCoursera. Link.\n\nVideos: Link. Link. Link. Link.\n\nDataCamp. Link (transcrip Link. Link).\nExploring ggplot2 boxplots - Defining limits and adjusting style. Link.\nOtros videos\n\nLink.\n\nAnimated plots - gganimate. Link.\nA ggplot2 grammar guide. Link.\nPatchwork. To combine separate ggplots. Link.\nSimple Gantt charts in R with ggplot2. Link.\nTop 50 ggplot2 Visualizations. Link.\n\nShiny\n\na gRadual intRoduction to Shiny. Link.\nMastering Shiny. Link.\nShiny tutorial. *** Link. Link. Link\nShiny gallery. Link.\nShiny widget gallery. Link\nEjemplos Shiny apps\n\nGCMCompareR. Link.\n\n\n\nShiny. Link\n\nBayesian Statistics\n\nLearning Bayesian Statistics Course. Link.\nBayes Rules! An Introduction to Bayesian Modeling with R. Link.\nBayesian Data Analysis course at Aalto. github. Link.\nStatistical Rethinking: A Bayesian Course (with Code Examples in R/Stan/Python/Julia). Link.\n\n\n Learning bayesian statistics",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/cienciadedatos.html#julia",
-    "href": "matemdatascience/cienciadedatos.html#julia",
-    "title": "Lecturas",
-    "section": "Julia",
-    "text": "Julia\n\nJulia. Link.\nJulia: come for the syntax, stay for the speed. Nature 2019. Link.\n\n Introduction to Julia",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/cienciadedatos.html#matlab",
-    "href": "matemdatascience/cienciadedatos.html#matlab",
-    "title": "Lecturas",
-    "section": "Matlab",
-    "text": "Matlab\n\nMatlab online. Link.\nMATLAB Academy. Link.\nMatlab Unimelbourne. Link.\nAprende a programar con Matlab. Tutellus app. Link.\nComputer Programming with MATLAB. Fitzpatrick and Ledeczi. Link\nMatlab Wiki. Link.\nMATLAB and Octave for Beginners. Edx. Link.\nHighlights of Calculus. Prof. Gilbert Strang. Link.\n\nGilbert Strang site. Link.\n\nThe Climate Data Toolbox for MATLAB. Link.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/cienciadedatos.html#git",
-    "href": "matemdatascience/cienciadedatos.html#git",
-    "title": "Lecturas",
-    "section": "GIT",
-    "text": "GIT\n\nGit Book (en español). Link.***\nGitHub Skills. Link. ***\nHappy Git and GitHub for the useR. Link.***\nEl Control de Versiones con Git. Link.\nGit and GitHub. Link.\nHow to Use Git and GitHub. Class Central. Link. Udacity. Link.\nReproducible Analysis With R. Link.***\nGithub Guides. Link.\nGitHub Pages. Link.\nBuilding a Website with Blogdown, Hugo and Github Pages. Link.\nGitHub Learning Lab. Link.\nOtros servicios\n\nGitlab. Link.\nZenHub. Link (for managing GitHub issues).\nGit Kraken. Link.\n\n\n\n\n\n Git y Github | Curso Práctico de Git y Github Desde Cero\n\n\n NOAA Social Science R Workshop. Getting starting with git and GitHub using RStudio NOAA. Link.\n\n\n\n\n Linus Torvalds on Git\n\n\n Intro to GIT\n\n\n\n\nGIT",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/cienciadedatos.html#recursos-web",
-    "href": "matemdatascience/cienciadedatos.html#recursos-web",
-    "title": "Lecturas",
-    "section": "RECURSOS WEB",
-    "text": "RECURSOS WEB\n\nGoogle\n\nDocument AI. Link.\n\nLimpieza de datos\n\nData curator. Link **\n\nBlogs a seguir\n\nFrom the bottom of the heap. Link.\nRecology. Link.\nMethods in Ecology and Evolution. Link.\nSea Scape Models. Link.\nAndrew Parnell. Talks. Link.\n\nEventos académicos\n\nThe second annual Symposium on Data Science and Statistics. Link.\nLinks to slides from rstudio::conf 2019. Link.\nRStudio Webinars. Link.\n\nRStudio: A Single Home for R & Python. Link.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/cienciadedatos.html#analisis-espacial",
-    "href": "matemdatascience/cienciadedatos.html#analisis-espacial",
-    "title": "Lecturas",
-    "section": "ANALISIS ESPACIAL",
-    "text": "ANALISIS ESPACIAL\n\nNEON code. Link.\nQGIS Tutorials and Tips. Link.\nEarthCube 2021 Notebooks ¶. Link.\nGeocomputation with R. Link.\nRemote Sensing Image Analysis. Link.\nSpatial Data Science with R. Link.\nGeoscripting. Wageningen U. Link.\nConverting HDFs to ArcGIS Rasters. Link.\nEarth - Spatial data manipulation software. Link.\nMaps in R. Link.\nSpatial data in R: Using R as a GIS. Link.\nSpatial data manipulation. Link.\nAn Introduction to Spatial Analysis in R. Seascape models. Link.\nWorking with Geospatial Data in R. Data Camp. Link.\nSpatial ly. Link.\nAn Introduction to Spatial Data Analysis and Visualisation in R. Link.\nARE. Spatial data. Link.\nRSToolbox. Link.\nTidy spatial data analysis. R Studio. Link.\nCrop mapping with Sentinel-2 focusing on algorithms. Link.\nAverage seasonal colors of the USA. Link.\nArtificial Intelligence (AI) for Earth Monitoring. Link.\nR for Geographic Data Science. Link.\nNetwork Common Data Form- NetCDF\n\nUnidata. Link.\nNetCDF metadata conventions. Link.\nNetCDF and CF: The Basics. Link.\nNetCDF in R. Link.\nU Oregon. Geographic Data Analysis and Visualization: Topics and Examples. . NetCDF Link.\nAn Ecologist’s Guide to Working with Daymet and other NetCDF formatted Data. Video Link. Rpubs Link.\nWorking with NetCDF files. Link.\nHow to open and work with NetCDF data in R. Link.\nNetCDF Ninja Software. Link.\nUrban Demographics. Link.\nARE 202. Spatial data. Link.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/cienciadedatos.html#google-earth-engine",
-    "href": "matemdatascience/cienciadedatos.html#google-earth-engine",
-    "title": "Lecturas",
-    "section": "GOOGLE EARTH ENGINE",
-    "text": "GOOGLE EARTH ENGINE\n\nMapping sugarcane in Thailand using transfer learning, a lightweight convolutional neural network, NICFI high resolution satellite imagery and Google Earth Engine. 2021. Link.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/cienciadedatos.html#algebra-lineal",
-    "href": "matemdatascience/cienciadedatos.html#algebra-lineal",
-    "title": "Lecturas",
-    "section": "ALGEBRA LINEAL",
-    "text": "ALGEBRA LINEAL\n\nMIT Open Courseware.\n\nFundamentals of linear algebra. Link. Resources. Link.\nMatrix Methods in Data Analysis, Signal Processing, and Machine Learning. Link.\nA 2020 Vision of Linear Algebra. MIT. Link.\n\nDifferential Equations and Linear Algebra. Matlab. Gilbert Strang. Link. Link.Link.\nEigenvectors and Eigenvalues. Link.\nLAFF: Linear Algebra - Foundations to Frontiers. EdX Link. Youtube.\nComputational Linear Algebra for Coders. Link.\nThe Feyman lectures on physics. Link. Algebra. Link.\nTeoría de redes\n\nD# Graph Theory. Link.\nNetworks. MIT. Link.\nEssential graph theory for biologists. Winter School Online Lectures. Link.\nMIT Matlab Tools for Network Analysis. Link.\nNetworked and Social Systems Engineering (NETS) by Michael Kearns. Link.\nNetworked Life by Michael Kearns. Coursera. Link.\nSocial Network Analysis. Coursera. Link.\nNetworks, Crowds, and Markets. Link.\nNetwork Science by Albert-László Barabási. Link.\nMining Massive Datasets. Coursera. Link.\nArcGis. OD cost matrix analysis. Link.\nThe Department of Network and Data Science at Central European University. Link.\nCódigo\n\nNetwork visualization. Link.\nNetwork Analysis and Visualization with R and igraph. Link.\nSystems Biology and Evolution Toolbox. Matlab. Link. Link.\nStatic and dynamic network visualization with R. Link.\nBrain ConnectivityToolbox. Matlab. Link.\nNetwork visualization with R. Link.\n\nLecturas\n\nNewman M. 2010. Networks: An Introduction. Link.\nFrom Graphs to Spatial Graphs. AREES. 2010. Link.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/cienciadedatos.html#estadística",
-    "href": "matemdatascience/cienciadedatos.html#estadística",
-    "title": "Lecturas",
-    "section": "ESTADÍSTICA",
-    "text": "ESTADÍSTICA\n\nIntroduction to Modern Statistics, First Edition. Link.\nGraduate Statistics in R. Statstools.com. Link.***\nOnline Statistics Education: An Interactive Multimedia Course of Study. Link.***\nFoundations of Data Analysis - Part 2. EdX. Link\nExplore Statistics with R. EdX.Link\nEstadística inferencial. Khan Academy. Link\nCálculo poder estadístico alfa y beta. Gpower. Link\nProbability. MIT Open Courseware. Link.\nSeeing Theory. Brown University. Link.\n\n**Probabilidad básica. Link\n\nIntroduction to Statistical Genomics. Joshua Akey Spring 2008. Link.\nStatistics for Biologists, Nature Points of Significance. Link.\nStatistics for applications. Link.\nStatistical Rethinking. Link.\nStatistical rethinking with brms, ggplot2, and the tidyverse. Link.\nGraduate Statistics in R. Statstools.com. Link.***\nJASP Software Link, and Center for Open Science Link.\nOnline Statistics Education: An Interactive Multimedia Course of Study. Link.***\nFoundations of Data Analysis - Part 2. EdX. Link\nExplore Statistics with R. EdX.Link\nEstadística inferencial. Khan Academy. Link\nCálculo poder estadístico alfa y beta. Gpower. Link\nProbability. MIT Open Courseware. Link.\nSeeing Theory. Brown University. Link.\nIntroduction to Statistical Genomics. Joshua Akey Spring 2008. Link.\nStatistics for Biologists, Nature Points of Significance. Link.\nStatistics for applications. Link.\nStatistical Rethinking. Link.\nProbabilidad Básica. Introducción a los conceptos básicos de probabilidad. BrownU. Link.\nBIOST561 “Computational Skills for Biostatistics. Link.\n\nVarios\n\nCentral Limit Theorem. Link\nLa potencia y el tamaño del efecto. Link.\n\nAnálisis de varianza\n\nANOVA 1 - Calculando la Suma Total de Cuadrados (STC). Link.\nANOVA 2 - Calculando suma total de cuadrados dentro y entre (SCD y SCE). Link.\nANOVA 3 – Prueba de hipótesis con estadístico F. Link.\n\nANOVA medidas repetidas\n\nAnálisis de varianza factorial medidas repetidas (ANOVA). Link.\nR - One Way Repeated Measures ANOVA. Link.\nLearn R One Way Repeated Measures ANOVA Lecture 1. Link.\nRepeated Measures in R. Link.\nRepeated Measures and Longitudinal Data. Penn State. Link.\nNotes on the use of R for psychology experiments and questionnaires Jonathan Baron. Link.\n\nRegresión\n\nRegression Modeling in Practice. Coursera. Link.\nLinear algebra: Projections, least squares and best straight line. *Lec 15,**Lec 16.*\n\nAnálisis de componentes principales\n\nWhat is principal component analysis?. Nature Biotechnology. 2008. Link.\nA layman’s introduction to principal component analysis. Video. Link.\n\nDiseño de experimentos\n\nDesigning, Running, and Analyzing Experiments. Coursera. Link.\n\nModelos lineales generalizados (GLM) y modelos mixtos\n\nResources:\n\nMixed models. GLMM FAQ Ben Bolker and others. Link.\nIntroduction to Linear Models with R. Link.\nLinear regression in R. Link.\nChoosing R packages for mixed effects modelling based on the car you drive. Link.\nIntroducción a los modelos mixtos. Link. Link.\nGeneralized Linear Models in R. Datacamp. Link.\nGeneralized Linear Models: understanding the link function. Link.\nGeneralized Additive Models in R. Link.\nIntroduction to Generalized Additive Models. Link.\nAn Introduction to Hierarchical Modeling. Link\n\nVideos:\n\nMaximum Likelihood, clearly explained. Videos: Link. Link. Link.\nMixed effects models with R. Videos: Link. Link.\nThe Power of Mixed Effects Models. Week 9. Designing, Running, and Analyzing Experiments. Coursera. Link.\n\nBooks:\n\nZuur, et al. 2009. Mixed Effects Models and Extensions in Ecology with R. Link.\nCorrea Morales, Juan Carlos; Salazar Uribe Juan Carlos. Introducción a los modelos mixtos / Medellín: Universidad Nacional de Colombia. Link.\nPinheiro José C.; Bates Douglas M. Mixed-Effects Models in S and S-PLUS. Link.\n\nReadings:\nA brief introduction to mixed effects modelling and multi-model inference in ecology. PeerJ. Link.\n\nGeneralized additive models (GAMs)\n\nGeneralized additive models for large data sets. Link.\n\n GAMs\nARTE EN CÓDIGO\n\naRtsy: Generative Art with R  and  ggplot2. Link.\n\nFUN PROJECTS\n\nDeep fakes. Link.\n\nSERIES DE TIEMPO\n\nTime Series for Ecologists and Climatologists: course timetable. Link.\nAccounting for autocorrelation in R. Link.\nManipulating Time Series Data in R: Case Studies. Datacamp. Link.\nTime Series Analysis. MIT. Link.\nApplied Time Series Analysis. Penn State U. Link.\n\nSTAN\n\nIntroduction to Bayesian Inference with Stan. Link\nRobust Bayesian linear regression with Stan in R. Link.\nStanCon 2018. Link. Materials from StanCon. Link.\n**Statistical Rethinking: A Bayesian Course Using R and Stan. Link.\n\nTemas varios\n\nNonparametric Tests of Group Differences. Link.\nThe Statistical Bootstrap and Other Resampling Methods. Link. Link. Link.\nTen Simple Rules for Effective Statistical Practice. PLOS. 2016 Link.\nStatisticians issue warning over misuse of P values. Nature. 2016. Link\n\nOpen software for statistical analysis\n\nJASP. Link and Center for Open Science Link.\nSAS University Edition. Link.\n\nMeta-Analisis and data papers\n\nIntroduction to Systematic Review and Meta-Analysis. Coursera. Link.\nFixed effects vs Random effects. Meta-analysis-workshops.com Link.\nSoftware: RevMan.Cochrane. Link.\nWhat are data papers? Data and metadata. Ecology. Link.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/cienciadedatos.html#cienciometria",
-    "href": "matemdatascience/cienciadedatos.html#cienciometria",
-    "title": "Lecturas",
-    "section": "CIENCIOMETRIA",
-    "text": "CIENCIOMETRIA\n\nCRExplorer. Link.\nHistCite. Link.\nLoet Leydesdorff. Link.\nCited References Explorer. Link.\nBibliometrics for Librarians. Link.**\nHandbook of Graphs and Networks in People Analytics: With Examples in R and Python. Link\nPaquetes de R:\n\nPackage ‘bibliometrix’. Link. Link.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/cienciadedatos.html#varios-temas",
-    "href": "matemdatascience/cienciadedatos.html#varios-temas",
-    "title": "Lecturas",
-    "section": "VARIOS TEMAS",
-    "text": "VARIOS TEMAS\n\nDatos\n\nUN Office on Drugs and Crime. Link.\n\nImagenes\n\nImageJ. Link.\nDigitizing data from old figures with ImageJ. Link.\nWebPlotDigitizer. Link.\nTabula. A tool for liberating data tables locked inside PDF files. Link.\n\nOntologías\n\nCoral traits data base.\n\nProcedures. Nature Paper. OBOE.\n\nSemantic Web Applications in Neuromedicine (SWAN) Ontology. Link. Link.\n\nOtras lecturas\n\nMay, R.M. 2004. Uses and Abuses of Mathematics in Biology. Science. (303) 5659: 790-793. Link.\nOreskes N, et al. 1994. Verification, Validation, and Confirmation of Numerical Models in the Earth Sciences. Science. Link.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/github.html",
-    "href": "matemdatascience/github.html",
-    "title": "Github",
-    "section": "",
-    "text": "A brief introduction to Git for beginners | GitHub\n Banco Interamericano de Desarollo Code4Dev: ¿Cómo optimizar tu repositorio de código abierto con Git y GitHub?\n\n\n\n\nIntroduction to GitHub. Link\n\n\n\n\n\nWhat is GitHub Copilot?. Link",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Github"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/github.html#qué-es-github",
-    "href": "matemdatascience/github.html#qué-es-github",
-    "title": "Github",
-    "section": "",
-    "text": "A brief introduction to Git for beginners | GitHub\n Banco Interamericano de Desarollo Code4Dev: ¿Cómo optimizar tu repositorio de código abierto con Git y GitHub?",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Github"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/github.html#introduction-to-github",
-    "href": "matemdatascience/github.html#introduction-to-github",
-    "title": "Github",
-    "section": "",
-    "text": "Introduction to GitHub. Link",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Github"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/github.html#github-copilot",
-    "href": "matemdatascience/github.html#github-copilot",
-    "title": "Github",
-    "section": "",
-    "text": "What is GitHub Copilot?. Link",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Github"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/estadisticaymatematicas.html",
-    "href": "matemdatascience/estadisticaymatematicas.html",
-    "title": "Estadistica y matemáticas",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Estadística y matemáticas"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/d3-experiment.html",
-    "href": "matemdatascience/d3-experiment.html",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "",
-    "text": "La inversión en Investigación y Desarrollo (I+D) es un indicador clave de la capacidad innovadora de un país y su compromiso con el crecimiento económico basado en el conocimiento. El indicador “Gross Domestic Expenditure on Research and Development (GERD) as a percentage of GDP” mide el total de gastos domésticos en I+D expresados como porcentaje del Producto Interno Bruto.\nSegún la OECD, este indicador incluye:\n\nGastos corrientes y de capital en los cuatro sectores principales\nEmpresas privadas, Gobierno, Educación superior y Organizaciones sin fines de lucro\nInvestigación básica, investigación aplicada y desarrollo experimental\n\nLos datos presentados provienen de la base de datos OECD Main Science and Technology Indicators (MSTI) y reflejan las tendencias más recientes hasta 2023.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Experimento-D3"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/d3-experiment.html#introducción",
-    "href": "matemdatascience/d3-experiment.html#introducción",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "",
-    "text": "La inversión en Investigación y Desarrollo (I+D) es un indicador clave de la capacidad innovadora de un país y su compromiso con el crecimiento económico basado en el conocimiento. El indicador “Gross Domestic Expenditure on Research and Development (GERD) as a percentage of GDP” mide el total de gastos domésticos en I+D expresados como porcentaje del Producto Interno Bruto.\nSegún la OECD, este indicador incluye:\n\nGastos corrientes y de capital en los cuatro sectores principales\nEmpresas privadas, Gobierno, Educación superior y Organizaciones sin fines de lucro\nInvestigación básica, investigación aplicada y desarrollo experimental\n\nLos datos presentados provienen de la base de datos OECD Main Science and Technology Indicators (MSTI) y reflejan las tendencias más recientes hasta 2023.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Experimento-D3"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/d3-experiment.html#datos-y-preparación",
-    "href": "matemdatascience/d3-experiment.html#datos-y-preparación",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Datos y Preparación",
-    "text": "Datos y Preparación\n\n\nCode\n// Datos de inversión en I+D como % del PIB (2023)\nrd_data = [\n  {country: \"Israel\", value: 6.35, region: \"Asia-Pacifico\"},\n  {country: \"Corea del Sur\", value: 4.96, region: \"Asia-Pacifico\"},\n  {country: \"Suecia\", value: 3.60, region: \"Europa\"},\n  {country: \"Estados Unidos\", value: 3.45, region: \"America del Norte\"},\n  {country: \"Japón\", value: 3.44, region: \"Asia-Pacifico\"},\n  {country: \"Bélgica\", value: 3.32, region: \"Europa\"},\n  {country: \"Austria\", value: 3.29, region: \"Europa\"},\n  {country: \"Suiza\", value: 3.25, region: \"Europa\"},\n  {country: \"Dinamarca\", value: 2.99, region: \"Europa\"},\n  {country: \"Alemania\", value: 2.95, region: \"Europa\"},\n  {country: \"Finlandia\", value: 2.85, region: \"Europa\"},\n  {country: \"Francia\", value: 2.75, region: \"Europa\"},\n  {country: \"Islandia\", value: 2.65, region: \"Europa\"},\n  {country: \"China\", value: 2.58, region: \"Asia-Pacifico\"},\n  {country: \"Países Bajos\", value: 2.35, region: \"Europa\"},\n  {country: \"Reino Unido\", value: 2.25, region: \"Europa\"},\n  {country: \"Noruega\", value: 2.15, region: \"Europa\"},\n  {country: \"Australia\", value: 2.05, region: \"Asia-Pacifico\"},\n  {country: \"Canadá\", value: 1.95, region: \"America del Norte\"},\n  {country: \"Italia\", value: 1.85, region: \"Europa\"},\n  {country: \"España\", value: 1.65, region: \"Europa\"},\n  {country: \"Portugal\", value: 1.45, region: \"Europa\"},\n  {country: \"México\", value: 0.55, region: \"America del Norte\"}\n]\n\n\n\n\n\n\n\n\n\nCode\n// Configuración de colores por región\ncolor_scale = new Map([\n  [\"Asia-Pacifico\", \"#ff6b6b\"],\n  [\"Europa\", \"#4ecdc4\"], \n  [\"America del Norte\", \"#45b7d1\"]\n])\n\n\n\n\n\n\n\n\n\nCode\n// Estadísticas descriptivas\nstats = {\n  const values = rd_data.map(d =&gt; d.value);\n  return {\n    max: d3.max(values),\n    min: d3.min(values),\n    mean: d3.mean(values),\n    median: d3.median(values),\n    countries_above_3: rd_data.filter(d =&gt; d.value &gt;= 3.0).length,\n    total_countries: rd_data.length\n  }\n}",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Experimento-D3"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/d3-experiment.html#visualización-principal-inversión-en-id-por-país",
-    "href": "matemdatascience/d3-experiment.html#visualización-principal-inversión-en-id-por-país",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Visualización Principal: Inversión en I+D por País",
-    "text": "Visualización Principal: Inversión en I+D por País\n\n\nCode\nviewof selected_region = Inputs.select(\n  [\"Todas las regiones\", \"Asia-Pacifico\", \"Europa\", \"America del Norte\"],\n  {label: \"Filtrar por región:\", value: \"Todas las regiones\"}\n)\n\n\n\n\n\n\n\n\n\nCode\n// Filtrar datos según selección\nfiltered_data = selected_region === \"Todas las regiones\" \n  ? rd_data \n  : rd_data.filter(d =&gt; d.region === selected_region)\n\n\n\n\n\n\n\n\n\nCode\n// Gráfico de barras principal\nPlot.plot({\n  title: \"Gastos Domésticos en I+D como % del PIB (2023)\",\n  subtitle: `Países seleccionados: ${selected_region}`,\n  width: 900,\n  height: 500,\n  marginLeft: 100,\n  marginBottom: 80,\n  x: {\n    domain: [0, 7],\n    label: \"Porcentaje del PIB (%)\",\n    grid: true\n  },\n  y: {\n    label: null,\n    domain: filtered_data.map(d =&gt; d.country)\n  },\n  color: {\n    domain: Array.from(color_scale.keys()),\n    range: Array.from(color_scale.values()),\n    legend: true\n  },\n  marks: [\n    Plot.barX(filtered_data, {\n      x: \"value\",\n      y: \"country\",\n      fill: \"region\",\n      sort: {y: \"x\", reverse: true},\n      tip: true\n    }),\n    Plot.text(filtered_data, {\n      x: d =&gt; d.value + 0.15,\n      y: \"country\",\n      text: d =&gt; `${d.value}%`,\n      fontSize: 11,\n      fill: \"#333\"\n    }),\n    Plot.ruleX([2.7], {stroke: \"#e74c3c\", strokeWidth: 2, strokeDasharray: \"5,5\"})\n  ]\n})\n\n\n\n\n\n\n\n\n\nCode\nhtml`&lt;p style=\"margin-top: 10px; font-size: 14px; color: #666;\"&gt;\n&lt;strong&gt;Línea roja punteada:&lt;/strong&gt; Promedio OECD (2.7%)\n&lt;/p&gt;`",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Experimento-D3"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/d3-experiment.html#análisis-por-regiones",
-    "href": "matemdatascience/d3-experiment.html#análisis-por-regiones",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Análisis por Regiones",
-    "text": "Análisis por Regiones\n\n\nCode\n// Análisis regional\nregional_summary = d3.rollup(\n  rd_data,\n  v =&gt; ({\n    count: v.length,\n    average: d3.mean(v, d =&gt; d.value),\n    max: d3.max(v, d =&gt; d.value),\n    min: d3.min(v, d =&gt; d.value),\n    countries: v.map(d =&gt; d.country).join(\", \")\n  }),\n  d =&gt; d.region\n)\n\n\n\n\n\n\n\n\n\nCode\n// Tabla resumen por región\nInputs.table(\n  Array.from(regional_summary, ([region, data]) =&gt; ({\n    \"Región\": region,\n    \"Países\": data.count,\n    \"Promedio (%)\": data.average.toFixed(2),\n    \"Máximo (%)\": data.max.toFixed(2),\n    \"Mínimo (%)\": data.min.toFixed(2)\n  })),\n  {\n    header: {\n      \"Región\": \"Región\",\n      \"Países\": \"Número de Países\",\n      \"Promedio (%)\": \"Promedio I+D/PIB\",\n      \"Máximo (%)\": \"Máximo\",\n      \"Mínimo (%)\": \"Mínimo\"\n    }\n  }\n)",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Experimento-D3"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/d3-experiment.html#distribución-y-percentiles",
-    "href": "matemdatascience/d3-experiment.html#distribución-y-percentiles",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Distribución y Percentiles",
-    "text": "Distribución y Percentiles\n\n\nCode\n// Histograma de distribución\nPlot.plot({\n  title: \"Distribución de la Inversión en I+D\",\n  width: 700,\n  height: 300,\n  x: {\n    label: \"Porcentaje del PIB (%)\",\n    domain: [0, 7]\n  },\n  y: {\n    label: \"Número de países\"\n  },\n  marks: [\n    Plot.rectY(rd_data, Plot.binX({y: \"count\"}, {x: \"value\", thresholds: 20, fill: \"#4ecdc4\", opacity: 0.7})),\n    Plot.ruleX([stats.mean], {stroke: \"#e74c3c\", strokeWidth: 2}),\n    Plot.ruleX([stats.median], {stroke: \"#f39c12\", strokeWidth: 2})\n  ]\n})\n\n\n\n\n\n\n\n\n\nCode\nhtml`&lt;p style=\"margin-top: 10px; font-size: 14px; color: #666;\"&gt;\n&lt;span style=\"color: #e74c3c;\"&gt;&lt;strong&gt;Línea roja:&lt;/strong&gt; Media (${stats.mean.toFixed(2)}%)&lt;/span&gt; | \n&lt;span style=\"color: #f39c12;\"&gt;&lt;strong&gt;Línea naranja:&lt;/strong&gt; Mediana (${stats.median.toFixed(2)}%)&lt;/span&gt;\n&lt;/p&gt;`",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Experimento-D3"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/d3-experiment.html#insights-clave",
-    "href": "matemdatascience/d3-experiment.html#insights-clave",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Insights Clave",
-    "text": "Insights Clave\n\n\nCode\nhtml`\n&lt;div style=\"background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;\"&gt;\n&lt;h4 style=\"color: #2c3e50; margin-top: 0;\"&gt;📊 Hallazgos Principales&lt;/h4&gt;\n\n&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;\"&gt;\n  \n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #ff6b6b;\"&gt;\n&lt;strong&gt;🏆 Líderes Globales&lt;/strong&gt;&lt;br&gt;\nIsrael encabeza con &lt;strong&gt;${stats.max}%&lt;/strong&gt; del PIB, seguido por Corea del Sur y Suecia\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #4ecdc4;\"&gt;\n&lt;strong&gt;🌍 Umbral del 3%&lt;/strong&gt;&lt;br&gt;\nSolo &lt;strong&gt;${stats.countries_above_3}&lt;/strong&gt; de ${stats.total_countries} países superan el 3% del PIB\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #45b7d1;\"&gt;\n&lt;strong&gt;📈 Promedio OECD&lt;/strong&gt;&lt;br&gt;\nEl promedio OECD es &lt;strong&gt;2.7%&lt;/strong&gt; del PIB en 2023\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #f39c12;\"&gt;\n&lt;strong&gt;🌏 Dominancia Asiática&lt;/strong&gt;&lt;br&gt;\nAsia representa &lt;strong&gt;46%&lt;/strong&gt; del gasto global en I+D\n&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;\n`",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Experimento-D3"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/d3-experiment.html#top-10-países",
-    "href": "matemdatascience/d3-experiment.html#top-10-países",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Top 10 Países",
-    "text": "Top 10 Países\n\n\nCode\n// Top 10 países\ntop_10 = rd_data\n  .sort((a, b) =&gt; b.value - a.value)\n  .slice(0, 10)\n\n\n\n\n\n\n\n\n\nCode\nPlot.plot({\n  title: \"Top 10 Países en Inversión I+D/PIB\",\n  width: 600,\n  height: 350,\n  x: {\n    label: null,\n    tickRotate: -45\n  },\n  y: {\n    label: \"Porcentaje del PIB (%)\",\n    domain: [0, 7]\n  },\n  color: {\n    domain: Array.from(color_scale.keys()),\n    range: Array.from(color_scale.values())\n  },\n  marks: [\n    Plot.barY(top_10, {\n      x: \"country\",\n      y: \"value\",\n      fill: \"region\",\n      tip: true\n    }),\n    Plot.text(top_10, {\n      x: \"country\",\n      y: d =&gt; d.value + 0.15,\n      text: d =&gt; `${d.value}%`,\n      fontSize: 10,\n      fill: \"#333\"\n    })\n  ]\n})",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Experimento-D3"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/d3-experiment.html#explorador-interactivo",
-    "href": "matemdatascience/d3-experiment.html#explorador-interactivo",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Explorador Interactivo",
-    "text": "Explorador Interactivo\n\n\nCode\nviewof selected_country = Inputs.select(\n  rd_data.map(d =&gt; d.country),\n  {label: \"Seleccionar país para detalles:\", value: \"Israel\"}\n)\n\n\n\n\n\n\n\n\n\nCode\n// Detalles del país seleccionado\ncountry_detail = rd_data.find(d =&gt; d.country === selected_country)\n\n\n\n\n\n\n\n\n\nCode\nhtml`\n&lt;div style=\"background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; margin: 20px 0;\"&gt;\n&lt;h3 style=\"margin-top: 0; font-size: 24px;\"&gt;${country_detail.country}&lt;/h3&gt;\n&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 15px;\"&gt;\n  \n&lt;div&gt;\n&lt;div style=\"font-size: 32px; font-weight: bold;\"&gt;${country_detail.value}%&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;del PIB en I+D&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;${country_detail.region}&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;Región&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;\n${(country_detail.value / stats.mean).toFixed(1)}x\n&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;vs. promedio OECD&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;\n#${rd_data.sort((a, b) =&gt; b.value - a.value).findIndex(d =&gt; d.country === country_detail.country) + 1}\n&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;Ranking mundial&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;\n`",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Experimento-D3"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/d3-experiment.html#metodología-y-fuentes",
-    "href": "matemdatascience/d3-experiment.html#metodología-y-fuentes",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Metodología y Fuentes",
-    "text": "Metodología y Fuentes\n\nDefinición del Indicador\nEl Gasto Doméstico Bruto en Investigación y Desarrollo (GERD) como porcentaje del PIB incluye:\n\nGastos corrientes y de capital en I+D\nCuatro sectores principales:\n\nEmpresas comerciales\nGobierno\nEducación superior\n\nOrganizaciones privadas sin fines de lucro\n\nTres tipos de investigación:\n\nInvestigación básica\nInvestigación aplicada\nDesarrollo experimental\n\n\n\n\nFuentes de Datos\n\nFuente principal: OECD Main Science and Technology Indicators (MSTI) Database\nURL: https://data-explorer.oecd.org\nDatos complementarios: World Bank, UNESCO Institute for Statistics\nAño de referencia: 2023 (datos más recientes disponibles)\nMetodología: Paridades de Poder Adquisitivo (PPP), precios constantes base 2015\n\n\n\nNotas Técnicas\n\nLos datos incluyen I+D financiada desde el extranjero pero excluyen fondos domésticos para I+D realizada fuera del territorio nacional\nLas cifras están expresadas en dólares estadounidenses constantes usando PPP para permitir comparaciones internacionales\nAlgunos países pueden tener metodologías ligeramente diferentes en la recopilación de datos\n\n\nDocumento generado con Quarto y Observable JS",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Experimento-D3"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/ia.html",
-    "href": "matemdatascience/ia.html",
-    "title": "Inteligencia artificial",
-    "section": "",
-    "text": "AI Tool Master List\n1000 AI collection tools\nExample applications\nAIcyclopedia\n\n\n\n\n\nPerplexity\nTutor AI (Aprendizaje)\n\n\n\n\n\nMuse: Text-To-Image Generation\n\n\n\n\n\nMy Good Tape\nAI Transcription\naudiopen.ai\nOtter (Tomar notas y resumir)\nParrot AI\n\n\n\n\n\nFake You\n\n\n\n\n\nCopia el enlace largo del video de YouTube.\nVe a Summarize.tech y pega el enlace. Resumirá cada sección con marcas de tiempo. Copia el guión resumido.\nVe a Eleven Labs. Pega tu guión resumido. Eleven Labs leerá en voz alta todo el guión resumido para ti.\nJasper\n\n\n\n\n\nPodcast Adobe (Editar y mejorar audio)\n\n\n\n\n\ngptzero (Detector de AI)\nNew AI classifier for indicating AI-written text\nSummarize AI (Resumir)\nConsensus (Resumir papers)\nNatural Language → Knowledge Graph\nQuillbot (Reescribir)\nStrut\n\n\n\n\n\nDeepL\n\n\n\n\n\nReimagine\n\n\n\n\n\nLas IAs como ChatGPT ya crean nuevas profesiones (muy bien pagadas): a qué se dedica esta nueva clase de ‘ingenieros’\nCookbook\nAbstracts written by ChatGPT fool scientists. Nature. 2023",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Inteligencia artificial"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/ia.html#recursos-de-ia-para-el-trabajo-diario",
-    "href": "matemdatascience/ia.html#recursos-de-ia-para-el-trabajo-diario",
-    "title": "Inteligencia artificial",
-    "section": "",
-    "text": "AI Tool Master List\n1000 AI collection tools\nExample applications\nAIcyclopedia\n\n\n\n\n\nPerplexity\nTutor AI (Aprendizaje)\n\n\n\n\n\nMuse: Text-To-Image Generation\n\n\n\n\n\nMy Good Tape\nAI Transcription\naudiopen.ai\nOtter (Tomar notas y resumir)\nParrot AI\n\n\n\n\n\nFake You\n\n\n\n\n\nCopia el enlace largo del video de YouTube.\nVe a Summarize.tech y pega el enlace. Resumirá cada sección con marcas de tiempo. Copia el guión resumido.\nVe a Eleven Labs. Pega tu guión resumido. Eleven Labs leerá en voz alta todo el guión resumido para ti.\nJasper\n\n\n\n\n\nPodcast Adobe (Editar y mejorar audio)\n\n\n\n\n\ngptzero (Detector de AI)\nNew AI classifier for indicating AI-written text\nSummarize AI (Resumir)\nConsensus (Resumir papers)\nNatural Language → Knowledge Graph\nQuillbot (Reescribir)\nStrut\n\n\n\n\n\nDeepL\n\n\n\n\n\nReimagine\n\n\n\n\n\nLas IAs como ChatGPT ya crean nuevas profesiones (muy bien pagadas): a qué se dedica esta nueva clase de ‘ingenieros’\nCookbook\nAbstracts written by ChatGPT fool scientists. Nature. 2023",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Inteligencia artificial"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/ia.html#notebooklm",
-    "href": "matemdatascience/ia.html#notebooklm",
-    "title": "Inteligencia artificial",
-    "section": "NotebookLM",
-    "text": "NotebookLM\n\n\nNotebookLM\n\nHasta 50 fuentes (PDF, PPT, DOCX, XLSX), también videos de YouTube.\nEl modelo se entrena con los documentos cargados, por lo cual baja la posibilidad de alucinar.\nPueden explorarse conexiones entre documentos.\nTiene un chat para hacer preguntas con prompts al modelo creado.\nGenera un podcast con el análisis.",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Inteligencia artificial"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/ia.html#crear-un-chatgpt-personal",
-    "href": "matemdatascience/ia.html#crear-un-chatgpt-personal",
-    "title": "Inteligencia artificial",
-    "section": "Crear un ChatGPT personal",
-    "text": "Crear un ChatGPT personal\n\nPaper QA (Hacer preguntas y respuestas desde PDFs o archivos de texto)\nCómo usar ChatGPT para resumir un libro, artículo o trabajo de investigación",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Inteligencia artificial"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/ia.html#comandos-prompts",
-    "href": "matemdatascience/ia.html#comandos-prompts",
-    "title": "Inteligencia artificial",
-    "section": "Comandos prompts",
-    "text": "Comandos prompts\n\nPrompt engineering\nChatGPT-Prompts\nOpenAI Cookbook",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Inteligencia artificial"
-    ]
-  },
-  {
-    "objectID": "matemdatascience/ia.html#para-escribir-código",
-    "href": "matemdatascience/ia.html#para-escribir-código",
-    "title": "Inteligencia artificial",
-    "section": "Para escribir código",
-    "text": "Para escribir código\n\ngpt studio for R",
-    "crumbs": [
-      "Matemáticas y ciencia de datos",
-      "Inteligencia artificial"
-    ]
-  },
-  {
     "objectID": "cyt/escrituraypublicacionacademica.html",
     "href": "cyt/escrituraypublicacionacademica.html",
     "title": "Escritura y publicación académica",
@@ -3135,102 +2930,245 @@
     ]
   },
   {
-    "objectID": "quarto/quarto-atajos.html",
-    "href": "quarto/quarto-atajos.html",
-    "title": "Quarto atajos",
+    "objectID": "math-stats/math-stats.html",
+    "href": "math-stats/math-stats.html",
+    "title": "Estadistica y matemáticas",
     "section": "",
-    "text": "Reproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
     "crumbs": [
-      "Quarto",
-      "Atajos de Quarto"
+      "Matemáticas y estadística",
+      "Matemáticas y estadística"
     ]
   },
   {
-    "objectID": "quarto/quarto-atajos.html#recursos-de-ayuda",
-    "href": "quarto/quarto-atajos.html#recursos-de-ayuda",
-    "title": "Quarto atajos",
+    "objectID": "cv/cv.html",
+    "href": "cv/cv.html",
+    "title": "Curriculum vitae",
     "section": "",
-    "text": "Reproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link",
+    "text": "Curriculum vitae\n\n\nDescargar CV en PDF",
     "crumbs": [
-      "Quarto",
-      "Atajos de Quarto"
+      "Curriculum vitae",
+      "Curriculum vitae"
     ]
   },
   {
-    "objectID": "quarto/quarto-atajos.html#publicar",
-    "href": "quarto/quarto-atajos.html#publicar",
-    "title": "Quarto atajos",
-    "section": "Publicar",
-    "text": "Publicar\n\nEn Terminal:\n\nquarto render para renderizar las páginas\nquarto preview vista preliminar\nquarto check revisión de configuración\nquarto --help todas las ayudas\n\nPara cargar la página: commit and push\n\ngit add .\ngit commit -m “descripción actualización”\ngit push\n\nTo validate the YAML, run: quarto check",
+    "objectID": "datascience/cienciadedatos.html",
+    "href": "datascience/cienciadedatos.html",
+    "title": "Lecturas",
+    "section": "",
+    "text": "Lectura introductoria. Curriculum Guidelines for Undergraduate Programs in Data Science. Annual Review of Statistics and Its Application. 2017. Link.\nShould Computer Science Be Required?. Link.\nFive reasons why researchers should learn to love the command line. Link.\nRStudio Webinars. Link.",
     "crumbs": [
-      "Quarto",
-      "Atajos de Quarto"
+      "Ciencia de datos",
+      "Ciencia de datos"
     ]
   },
   {
-    "objectID": "quarto/quarto-atajos.html#tabsets",
-    "href": "quarto/quarto-atajos.html#tabsets",
-    "title": "Quarto atajos",
-    "section": "Tabsets",
-    "text": "Tabsets\n::: {.panel-tabset}\n### Tab A\nContent for `Tab A`\n\n### Tab B\nContent for `Tab B`\n:::",
+    "objectID": "datascience/cienciadedatos.html#python",
+    "href": "datascience/cienciadedatos.html#python",
+    "title": "Lecturas",
+    "section": "Python",
+    "text": "Python\n\nGoogle Colab. Link.\n\nAI hub. Link.\nQue es. Link\nIntroduction to Google Colab. Link.\nGoogle Colab 101 Tutorial with Python — Tips, Tricks, and FAQ. Link.\n\nAnaconda. Link.\nSpyder. Link",
     "crumbs": [
-      "Quarto",
-      "Atajos de Quarto"
+      "Ciencia de datos",
+      "Ciencia de datos"
     ]
   },
   {
-    "objectID": "quarto/quarto-atajos.html#insertar-elementos-en-dos-columnas",
-    "href": "quarto/quarto-atajos.html#insertar-elementos-en-dos-columnas",
-    "title": "Quarto atajos",
-    "section": "Insertar elementos en dos columnas",
-    "text": "Insertar elementos en dos columnas\n::: {layout-ncol=2} \n\nInserte algo acá\n\nTexto de la caja (opcional)\n:::",
+    "objectID": "datascience/cienciadedatos.html#visual-code",
+    "href": "datascience/cienciadedatos.html#visual-code",
+    "title": "Lecturas",
+    "section": "Visual Code",
+    "text": "Visual Code\n\nVisual Code Studio. Link. Link.",
     "crumbs": [
-      "Quarto",
-      "Atajos de Quarto"
+      "Ciencia de datos",
+      "Ciencia de datos"
     ]
   },
   {
-    "objectID": "quarto/quarto-atajos.html#insertar-videos",
-    "href": "quarto/quarto-atajos.html#insertar-videos",
-    "title": "Quarto atajos",
-    "section": "Insertar videos",
-    "text": "Insertar videos\nLlamar con barra / e insertar `Shotcode`\n\nEntre corchetes colocar `video = \"link\"`\n\nInsertar video de un live: cambiar \"live\" por \"embed\"\nhttps://www.youtube.com/embed/srgbUPu9Mo4",
+    "objectID": "datascience/cienciadedatos.html#herramientas-y-ayuda",
+    "href": "datascience/cienciadedatos.html#herramientas-y-ayuda",
+    "title": "Lecturas",
+    "section": "Herramientas y ayuda",
+    "text": "Herramientas y ayuda\n\nStackblitz. Link\nSoftware carpentry. Link. Link. Link.\nKaggle. Link.\nFreecode camp. Link.\nStack Overflow. Link.***\nOur coding club. Link. Link.\nHow do I? Link.\nCarpentries para Latinoamérica. Link.\n\nUpcomming workshops. Link.\n\nUnimelbourne\n\nResbaz (Git, Matlab, R, Python, Shell, Nltk, Authorea). Link\nResearch Computing Services Training at GitLab. Link.\n\nStyle guide. Link. Google Style Guide. Link.\nGoogle’s R Style Guide. Link.\nR-Universe. Link.\nEjemplos AI. Link.\nTraductor de lenguajes. Link.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIDEs",
     "crumbs": [
-      "Quarto",
-      "Atajos de Quarto"
+      "Ciencia de datos",
+      "Ciencia de datos"
     ]
   },
   {
-    "objectID": "quarto/quarto-atajos.html#insertar-imagenes",
-    "href": "quarto/quarto-atajos.html#insertar-imagenes",
-    "title": "Quarto atajos",
-    "section": "Insertar imagenes",
-    "text": "Insertar imagenes\nInsertar imagen\n\n![](https://mdg.imgix.net/assets/images/markdown-flowchart.png?auto=format&fit=clip&q=40&w=1080)",
+    "objectID": "datascience/cienciadedatos.html#buscar-ayuda-y-aprender",
+    "href": "datascience/cienciadedatos.html#buscar-ayuda-y-aprender",
+    "title": "Lecturas",
+    "section": "Buscar ayuda y aprender",
+    "text": "Buscar ayuda y aprender\n\nCloud. Link.\nTeaching R online with RStudio Cloud. Link.\nComputing in the Cloud with Google and RStudio. Link.\nRTutor AI. Link.\nCrantastic. Link.Datacamp. Link.***Elementary Statistics With R. Link Quick-R. Link. ***R-bloggers. Link.Learnr4free. Link.Lista de paquetes. Link.R Programming Tutorials. Link.Rseek. Link.RStudio Cloud in the Classroom. Link.RStudio Cheat Sheets. Link.Tidyverse.org. Link.Programiz. Link.R documentation. Link.\n\nRTutor. Link.\nSwirl. Link.\nTryR. Link.\n\nRStudio Cheatsheets. Link.\nRStudio IDE cheatsheet. Link.\nData import. Link\nData visualization with ggplot2 cheatsheet. Link.\nLibros\n\nBook down. Link.Best Coding Practices for R. Link Free R Reading Material. Link.\nL El arte de programar en R: un lenguaje para la estadística. Link.\nR Cookbook. Proven Recipes for Data Analysis, Statistics, and Graphics. Link.\nR in a Nutshell. Link.\n\n\n\nBásico\n\nMateriales de RStudio en Español. Link.\n\nR para Ciencia de Datos. Link.\nR para profesionales de los datos. Link.\nIntroduction to R. Datacamp. Link.\nLearning R. Lynda.com. Link.\nAprendeR. Miriada X. Link.\nIntroduction to R for Data Science. Edx. Link.\nIntroduction to Data Science with R and Tidyverse. Link.\nQuick R. Link.\nSwirl. Link.\nCode School. Link.\nDo More with R. Link.\nR for Data Science. Grolemund & Wickham. Link\nR para Ciencia de Datos. Link.\nApplied R in the Classroom. Link.\nrstudio4edu. A Handbook for Teaching and Learning with R and RStudio. Link.\n\n\n\n\nIntermedio\n\nData Science. Lynda.com. Link\nIntermediate R. Datacamp. Link.R for Data Science. Link.\nR-Statistics-Essential-Training. Lynda.com. Link.\nR Programming. Coursera. Link.\nR Workshop for Social Scientist NOAA. Link.\nRStudio IDE cheatsheet\nHarvard WorkShop. Link.\nR-Bootcamp. Link.**\nAwesome R Learning Resources. Link.\n\n\n\nAvanzado\n\nAdvanced statistics. Stat tools. Link.\nEcological Models and Data in R. Link.\nAdvanced R. Hadley Wickham. Link.\nMastering Software Development in R. Link.\nData Science in Education Using R. Link.\n\n\n\nTydiverse\n\nRemaster the Tidyverse. Link.\nEl paquete dplyr. Link.\nDive into dplyr (tutorial). Link.\nTidyTuesday***. Link.\nAn educator’s perspective of the tidyverse. 2022. Link.\n\nRStudio Cheatsheets. Link.\n\nRStudio IDE cheatsheet. Link.\nBase R. Link\nData import. Link\nData visualization with ggplot2 cheatsheet. Link.\n\n\n\n\n Data wrangling\n\n\n How to connect to chatGPT with R\n\n\n\n\nEjercicios aplicados\n\nMean trophic levels of a genera from FishBase. Seascape models. Link. Link.\nCoral reef degradation is not correlated with local human population density. Scientific Reports. 2016. Link. Code.\nMacro Ecology and Spatial Statistics. Link.\nR-packages for oceanographic data visualisation. Link.\nForecasting El Niño-Southern Oscillation (ENSO). Link.\nR programming tools for conservation scientists. Link.\nConservation programming in R. Link.\n\nTablas en R\n\nR Data.table. Link.\nR gt package. Link\n10+ Guidelines for Better Tables in R. Link.\nData.Table Tutorial (with 50 Examples). Link.\nAggregation and Restructuring data (from “R in Action”). Link.\n\nGráficas en R\n\nr-graph gallery. Link.\nA Compendium of Clean Graphs in R. Link.\nR Graphics Cookbook, 2nd edition. Link.\n3D ggplots with rayshader - RStudio Rayshader. Link.\nRayrender. Link.\nData Visualization. Link.\nData Visualization in R. DataCamp. Link.\nGraphs. QuickR. Link.\nCreating memorable data visualisations using the R programming language - Chris Brown. Winter School Online Lectures. Link.\nFrom data to viz. Link.\nInteractive web-based data visualization with R, plotly, and shiny. Link.\ndygraphs for R. Time series. Link.\nBBC Visual and Data Journalism cookbook for R graphics. Link\nGraphics Global Warming. IPCC. Link.\n\nOtros temas\n\nFor en R. Link.\nEasy and efficient data manipulation. Link.\n\nggplot2\n\nggplot2: Elegant Graphics for Data Analysis. 3rd edition. Link.Overview. Link. Reference. Link.Visualización de Datos usando ggplot2 Guía Rápida. Link.Elegant Graphics for Data Analysis. Link.***\nTidyverse Basics. Link.\nCoursera. Link.\n\nVideos: Link. Link. Link. Link.\n\nDataCamp. Link (transcrip Link. Link).\nExploring ggplot2 boxplots - Defining limits and adjusting style. Link.\nOtros videos\n\nLink.\n\nAnimated plots - gganimate. Link.\nA ggplot2 grammar guide. Link.\nPatchwork. To combine separate ggplots. Link.\nSimple Gantt charts in R with ggplot2. Link.\nTop 50 ggplot2 Visualizations. Link.\n\nShiny\n\na gRadual intRoduction to Shiny. Link.\nMastering Shiny. Link.\nShiny tutorial. *** Link. Link. Link\nShiny gallery. Link.\nShiny widget gallery. Link\nEjemplos Shiny apps\n\nGCMCompareR. Link.\n\n\n\nShiny. Link\n\nBayesian Statistics\n\nLearning Bayesian Statistics Course. Link.\nBayes Rules! An Introduction to Bayesian Modeling with R. Link.\nBayesian Data Analysis course at Aalto. github. Link.\nStatistical Rethinking: A Bayesian Course (with Code Examples in R/Stan/Python/Julia). Link.\n\n\n Learning bayesian statistics",
     "crumbs": [
-      "Quarto",
-      "Atajos de Quarto"
+      "Ciencia de datos",
+      "Ciencia de datos"
     ]
   },
   {
-    "objectID": "quarto/quarto-atajos.html#callout-blocks",
-    "href": "quarto/quarto-atajos.html#callout-blocks",
-    "title": "Quarto atajos",
-    "section": "Callout blocks",
-    "text": "Callout blocks\nThere are five different types of callouts available: note , warning, important , tip , caution . The color and icon will be different depending upon the type that you select. Here are what the various types look like in HTML output.\n{.callout-note collapse=\"true\"} Note that there are five types of callouts, including:\n`note` , `warning,` `important` , `tip` , `caution`. \n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nCallouts provide a simple way to attract attention, for example, to this warning.\n\n\n\n\n\n\n\n\nThis is Important\n\n\n\nDanger, callouts will really improve your writing.\n\n\n\n\n\n\n\n\nTip With Title\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse [with minimal atribute]\n\n\n\n\n\nThis is an example of a ‘collapsed’ caution callout that can be expanded by the user and minimal atributes with {.callout-caution collapse=\"true\" style=\"color: purple\" appearance=\"minimal\"}",
+    "objectID": "datascience/cienciadedatos.html#julia",
+    "href": "datascience/cienciadedatos.html#julia",
+    "title": "Lecturas",
+    "section": "Julia",
+    "text": "Julia\n\nJulia. Link.\nJulia: come for the syntax, stay for the speed. Nature 2019. Link.\n\n Introduction to Julia",
     "crumbs": [
-      "Quarto",
-      "Atajos de Quarto"
+      "Ciencia de datos",
+      "Ciencia de datos"
     ]
   },
   {
-    "objectID": "quarto/quarto-atajos.html#texto-desplegable",
-    "href": "quarto/quarto-atajos.html#texto-desplegable",
-    "title": "Quarto atajos",
-    "section": "Texto desplegable",
-    "text": "Texto desplegable\n\n\nTexto desplegable\n\n&lt;details&gt; &lt;summary&gt;Título del texto desplegable&lt;/summary&gt;\n-   Contenido\n-   Contenido\n-   Contenido\n&lt;/details&gt;",
+    "objectID": "datascience/cienciadedatos.html#matlab",
+    "href": "datascience/cienciadedatos.html#matlab",
+    "title": "Lecturas",
+    "section": "Matlab",
+    "text": "Matlab\n\nMatlab online. Link.\nMATLAB Academy. Link.\nMatlab Unimelbourne. Link.\nAprende a programar con Matlab. Tutellus app. Link.\nComputer Programming with MATLAB. Fitzpatrick and Ledeczi. Link\nMatlab Wiki. Link.\nMATLAB and Octave for Beginners. Edx. Link.\nHighlights of Calculus. Prof. Gilbert Strang. Link.\n\nGilbert Strang site. Link.\n\nThe Climate Data Toolbox for MATLAB. Link.",
     "crumbs": [
-      "Quarto",
-      "Atajos de Quarto"
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#git",
+    "href": "datascience/cienciadedatos.html#git",
+    "title": "Lecturas",
+    "section": "GIT",
+    "text": "GIT\n\nGit Book (en español). Link.***\nGitHub Skills. Link. ***\nHappy Git and GitHub for the useR. Link.***\nEl Control de Versiones con Git. Link.\nGit and GitHub. Link.\nHow to Use Git and GitHub. Class Central. Link. Udacity. Link.\nReproducible Analysis With R. Link.***\nGithub Guides. Link.\nGitHub Pages. Link.\nBuilding a Website with Blogdown, Hugo and Github Pages. Link.\nGitHub Learning Lab. Link.\nOtros servicios\n\nGitlab. Link.\nZenHub. Link (for managing GitHub issues).\nGit Kraken. Link.\n\n\n\n\n\n Git y Github | Curso Práctico de Git y Github Desde Cero\n\n\n NOAA Social Science R Workshop. Getting starting with git and GitHub using RStudio NOAA. Link.\n\n\n\n\n Linus Torvalds on Git\n\n\n Intro to GIT\n\n\n\n\nGIT",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#recursos-web",
+    "href": "datascience/cienciadedatos.html#recursos-web",
+    "title": "Lecturas",
+    "section": "RECURSOS WEB",
+    "text": "RECURSOS WEB\n\nGoogle\n\nDocument AI. Link.\n\nLimpieza de datos\n\nData curator. Link **\n\nBlogs a seguir\n\nFrom the bottom of the heap. Link.\nRecology. Link.\nMethods in Ecology and Evolution. Link.\nSea Scape Models. Link.\nAndrew Parnell. Talks. Link.\n\nEventos académicos\n\nThe second annual Symposium on Data Science and Statistics. Link.\nLinks to slides from rstudio::conf 2019. Link.\nRStudio Webinars. Link.\n\nRStudio: A Single Home for R & Python. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#analisis-espacial",
+    "href": "datascience/cienciadedatos.html#analisis-espacial",
+    "title": "Lecturas",
+    "section": "ANALISIS ESPACIAL",
+    "text": "ANALISIS ESPACIAL\n\nNEON code. Link.\nQGIS Tutorials and Tips. Link.\nEarthCube 2021 Notebooks ¶. Link.\nGeocomputation with R. Link.\nRemote Sensing Image Analysis. Link.\nSpatial Data Science with R. Link.\nGeoscripting. Wageningen U. Link.\nConverting HDFs to ArcGIS Rasters. Link.\nEarth - Spatial data manipulation software. Link.\nMaps in R. Link.\nSpatial data in R: Using R as a GIS. Link.\nSpatial data manipulation. Link.\nAn Introduction to Spatial Analysis in R. Seascape models. Link.\nWorking with Geospatial Data in R. Data Camp. Link.\nSpatial ly. Link.\nAn Introduction to Spatial Data Analysis and Visualisation in R. Link.\nARE. Spatial data. Link.\nRSToolbox. Link.\nTidy spatial data analysis. R Studio. Link.\nCrop mapping with Sentinel-2 focusing on algorithms. Link.\nAverage seasonal colors of the USA. Link.\nArtificial Intelligence (AI) for Earth Monitoring. Link.\nR for Geographic Data Science. Link.\nNetwork Common Data Form- NetCDF\n\nUnidata. Link.\nNetCDF metadata conventions. Link.\nNetCDF and CF: The Basics. Link.\nNetCDF in R. Link.\nU Oregon. Geographic Data Analysis and Visualization: Topics and Examples. . NetCDF Link.\nAn Ecologist’s Guide to Working with Daymet and other NetCDF formatted Data. Video Link. Rpubs Link.\nWorking with NetCDF files. Link.\nHow to open and work with NetCDF data in R. Link.\nNetCDF Ninja Software. Link.\nUrban Demographics. Link.\nARE 202. Spatial data. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#google-earth-engine",
+    "href": "datascience/cienciadedatos.html#google-earth-engine",
+    "title": "Lecturas",
+    "section": "GOOGLE EARTH ENGINE",
+    "text": "GOOGLE EARTH ENGINE\n\nMapping sugarcane in Thailand using transfer learning, a lightweight convolutional neural network, NICFI high resolution satellite imagery and Google Earth Engine. 2021. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#algebra-lineal",
+    "href": "datascience/cienciadedatos.html#algebra-lineal",
+    "title": "Lecturas",
+    "section": "ALGEBRA LINEAL",
+    "text": "ALGEBRA LINEAL\n\nMIT Open Courseware.\n\nFundamentals of linear algebra. Link. Resources. Link.\nMatrix Methods in Data Analysis, Signal Processing, and Machine Learning. Link.\nA 2020 Vision of Linear Algebra. MIT. Link.\n\nDifferential Equations and Linear Algebra. Matlab. Gilbert Strang. Link. Link.Link.\nEigenvectors and Eigenvalues. Link.\nLAFF: Linear Algebra - Foundations to Frontiers. EdX Link. Youtube.\nComputational Linear Algebra for Coders. Link.\nThe Feyman lectures on physics. Link. Algebra. Link.\nTeoría de redes\n\nD# Graph Theory. Link.\nNetworks. MIT. Link.\nEssential graph theory for biologists. Winter School Online Lectures. Link.\nMIT Matlab Tools for Network Analysis. Link.\nNetworked and Social Systems Engineering (NETS) by Michael Kearns. Link.\nNetworked Life by Michael Kearns. Coursera. Link.\nSocial Network Analysis. Coursera. Link.\nNetworks, Crowds, and Markets. Link.\nNetwork Science by Albert-László Barabási. Link.\nMining Massive Datasets. Coursera. Link.\nArcGis. OD cost matrix analysis. Link.\nThe Department of Network and Data Science at Central European University. Link.\nCódigo\n\nNetwork visualization. Link.\nNetwork Analysis and Visualization with R and igraph. Link.\nSystems Biology and Evolution Toolbox. Matlab. Link. Link.\nStatic and dynamic network visualization with R. Link.\nBrain ConnectivityToolbox. Matlab. Link.\nNetwork visualization with R. Link.\n\nLecturas\n\nNewman M. 2010. Networks: An Introduction. Link.\nFrom Graphs to Spatial Graphs. AREES. 2010. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#estadística",
+    "href": "datascience/cienciadedatos.html#estadística",
+    "title": "Lecturas",
+    "section": "ESTADÍSTICA",
+    "text": "ESTADÍSTICA\n\nIntroduction to Modern Statistics, First Edition. Link.\nGraduate Statistics in R. Statstools.com. Link.***\nOnline Statistics Education: An Interactive Multimedia Course of Study. Link.***\nFoundations of Data Analysis - Part 2. EdX. Link\nExplore Statistics with R. EdX.Link\nEstadística inferencial. Khan Academy. Link\nCálculo poder estadístico alfa y beta. Gpower. Link\nProbability. MIT Open Courseware. Link.\nSeeing Theory. Brown University. Link.\n\n**Probabilidad básica. Link\n\nIntroduction to Statistical Genomics. Joshua Akey Spring 2008. Link.\nStatistics for Biologists, Nature Points of Significance. Link.\nStatistics for applications. Link.\nStatistical Rethinking. Link.\nStatistical rethinking with brms, ggplot2, and the tidyverse. Link.\nGraduate Statistics in R. Statstools.com. Link.***\nJASP Software Link, and Center for Open Science Link.\nOnline Statistics Education: An Interactive Multimedia Course of Study. Link.***\nFoundations of Data Analysis - Part 2. EdX. Link\nExplore Statistics with R. EdX.Link\nEstadística inferencial. Khan Academy. Link\nCálculo poder estadístico alfa y beta. Gpower. Link\nProbability. MIT Open Courseware. Link.\nSeeing Theory. Brown University. Link.\nIntroduction to Statistical Genomics. Joshua Akey Spring 2008. Link.\nStatistics for Biologists, Nature Points of Significance. Link.\nStatistics for applications. Link.\nStatistical Rethinking. Link.\nProbabilidad Básica. Introducción a los conceptos básicos de probabilidad. BrownU. Link.\nBIOST561 “Computational Skills for Biostatistics. Link.\n\nVarios\n\nCentral Limit Theorem. Link\nLa potencia y el tamaño del efecto. Link.\n\nAnálisis de varianza\n\nANOVA 1 - Calculando la Suma Total de Cuadrados (STC). Link.\nANOVA 2 - Calculando suma total de cuadrados dentro y entre (SCD y SCE). Link.\nANOVA 3 – Prueba de hipótesis con estadístico F. Link.\n\nANOVA medidas repetidas\n\nAnálisis de varianza factorial medidas repetidas (ANOVA). Link.\nR - One Way Repeated Measures ANOVA. Link.\nLearn R One Way Repeated Measures ANOVA Lecture 1. Link.\nRepeated Measures in R. Link.\nRepeated Measures and Longitudinal Data. Penn State. Link.\nNotes on the use of R for psychology experiments and questionnaires Jonathan Baron. Link.\n\nRegresión\n\nRegression Modeling in Practice. Coursera. Link.\nLinear algebra: Projections, least squares and best straight line. *Lec 15,**Lec 16.*\n\nAnálisis de componentes principales\n\nWhat is principal component analysis?. Nature Biotechnology. 2008. Link.\nA layman’s introduction to principal component analysis. Video. Link.\n\nDiseño de experimentos\n\nDesigning, Running, and Analyzing Experiments. Coursera. Link.\n\nModelos lineales generalizados (GLM) y modelos mixtos\n\nResources:\n\nMixed models. GLMM FAQ Ben Bolker and others. Link.\nIntroduction to Linear Models with R. Link.\nLinear regression in R. Link.\nChoosing R packages for mixed effects modelling based on the car you drive. Link.\nIntroducción a los modelos mixtos. Link. Link.\nGeneralized Linear Models in R. Datacamp. Link.\nGeneralized Linear Models: understanding the link function. Link.\nGeneralized Additive Models in R. Link.\nIntroduction to Generalized Additive Models. Link.\nAn Introduction to Hierarchical Modeling. Link\n\nVideos:\n\nMaximum Likelihood, clearly explained. Videos: Link. Link. Link.\nMixed effects models with R. Videos: Link. Link.\nThe Power of Mixed Effects Models. Week 9. Designing, Running, and Analyzing Experiments. Coursera. Link.\n\nBooks:\n\nZuur, et al. 2009. Mixed Effects Models and Extensions in Ecology with R. Link.\nCorrea Morales, Juan Carlos; Salazar Uribe Juan Carlos. Introducción a los modelos mixtos / Medellín: Universidad Nacional de Colombia. Link.\nPinheiro José C.; Bates Douglas M. Mixed-Effects Models in S and S-PLUS. Link.\n\nReadings:\nA brief introduction to mixed effects modelling and multi-model inference in ecology. PeerJ. Link.\n\nGeneralized additive models (GAMs)\n\nGeneralized additive models for large data sets. Link.\n\n GAMs\nARTE EN CÓDIGO\n\naRtsy: Generative Art with R  and  ggplot2. Link.\n\nFUN PROJECTS\n\nDeep fakes. Link.\n\nSERIES DE TIEMPO\n\nTime Series for Ecologists and Climatologists: course timetable. Link.\nAccounting for autocorrelation in R. Link.\nManipulating Time Series Data in R: Case Studies. Datacamp. Link.\nTime Series Analysis. MIT. Link.\nApplied Time Series Analysis. Penn State U. Link.\n\nSTAN\n\nIntroduction to Bayesian Inference with Stan. Link\nRobust Bayesian linear regression with Stan in R. Link.\nStanCon 2018. Link. Materials from StanCon. Link.\n**Statistical Rethinking: A Bayesian Course Using R and Stan. Link.\n\nTemas varios\n\nNonparametric Tests of Group Differences. Link.\nThe Statistical Bootstrap and Other Resampling Methods. Link. Link. Link.\nTen Simple Rules for Effective Statistical Practice. PLOS. 2016 Link.\nStatisticians issue warning over misuse of P values. Nature. 2016. Link\n\nOpen software for statistical analysis\n\nJASP. Link and Center for Open Science Link.\nSAS University Edition. Link.\n\nMeta-Analisis and data papers\n\nIntroduction to Systematic Review and Meta-Analysis. Coursera. Link.\nFixed effects vs Random effects. Meta-analysis-workshops.com Link.\nSoftware: RevMan.Cochrane. Link.\nWhat are data papers? Data and metadata. Ecology. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#cienciometria",
+    "href": "datascience/cienciadedatos.html#cienciometria",
+    "title": "Lecturas",
+    "section": "CIENCIOMETRIA",
+    "text": "CIENCIOMETRIA\n\nCRExplorer. Link.\nHistCite. Link.\nLoet Leydesdorff. Link.\nCited References Explorer. Link.\nBibliometrics for Librarians. Link.**\nHandbook of Graphs and Networks in People Analytics: With Examples in R and Python. Link\nPaquetes de R:\n\nPackage ‘bibliometrix’. Link. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#varios-temas",
+    "href": "datascience/cienciadedatos.html#varios-temas",
+    "title": "Lecturas",
+    "section": "VARIOS TEMAS",
+    "text": "VARIOS TEMAS\n\nDatos\n\nUN Office on Drugs and Crime. Link.\n\nImagenes\n\nImageJ. Link.\nDigitizing data from old figures with ImageJ. Link.\nWebPlotDigitizer. Link.\nTabula. A tool for liberating data tables locked inside PDF files. Link.\n\nOntologías\n\nCoral traits data base.\n\nProcedures. Nature Paper. OBOE.\n\nSemantic Web Applications in Neuromedicine (SWAN) Ontology. Link. Link.\n\nOtras lecturas\n\nMay, R.M. 2004. Uses and Abuses of Mathematics in Biology. Science. (303) 5659: 790-793. Link.\nOreskes N, et al. 1994. Verification, Validation, and Confirmation of Numerical Models in the Earth Sciences. Science. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/myst.html",
+    "href": "datascience/myst.html",
+    "title": "Myst, Zaar",
+    "section": "",
+    "text": "Myst. Link.\n\nGet Started. Your first steps with MyST. Link\n\n\n SciPy Proceedings 2025. MyST Markdown and Curvenote\n Rowan Cockett- SciPy Proceedings: An Exemplar for Publishing Computational Open Science | SciPy 2025\n\n\n\nReflections on MyST-ification. 2025. Link\nAGU. About Notebooks Now!. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Experimento-D3"
+    ]
+  },
+  {
+    "objectID": "datascience/myst.html#lecturas",
+    "href": "datascience/myst.html#lecturas",
+    "title": "Myst, Zaar",
+    "section": "",
+    "text": "Reflections on MyST-ification. 2025. Link\nAGU. About Notebooks Now!. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Experimento-D3"
+    ]
+  },
+  {
+    "objectID": "datascience/myst.html#lecturas-1",
+    "href": "datascience/myst.html#lecturas-1",
+    "title": "Myst, Zaar",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nZarr in the Browser — Fast, Flexible, and Surprisingly Powerful for Big Geo Data. 2025. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Experimento-D3"
+    ]
+  },
+  {
+    "objectID": "datascience/d3.html",
+    "href": "datascience/d3.html",
+    "title": "D3, Observable y JS",
+    "section": "",
+    "text": "Observable HQ. Link.\nQuarto and Observable. Link.\n\n\n\n\n Introduction to D3 P1. Slides.\n\n\n Introduction to D3 P2. Slides.\n\n\n\n\n Introduction to D3 P3.\n\n\n Introduction to D3 P4.\n\n\n\n\n Introduction to D3 P5.",
+    "crumbs": [
+      "Ciencia de datos",
+      "D3"
+    ]
+  },
+  {
+    "objectID": "datascience/d3.html#d3",
+    "href": "datascience/d3.html#d3",
+    "title": "D3, Observable y JS",
+    "section": "",
+    "text": "Observable HQ. Link.\nQuarto and Observable. Link.\n\n\n\n\n Introduction to D3 P1. Slides.\n\n\n Introduction to D3 P2. Slides.\n\n\n\n\n Introduction to D3 P3.\n\n\n Introduction to D3 P4.\n\n\n\n\n Introduction to D3 P5.",
+    "crumbs": [
+      "Ciencia de datos",
+      "D3"
     ]
   }
 ]
