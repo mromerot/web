@@ -1755,7 +1755,7 @@
     "href": "cyt/escrituraypublicacionacademica.html#textos-de-referecia",
     "title": "Escritura y publicación académica",
     "section": "Textos de referecia",
-    "text": "Textos de referecia\n\nSimon & Schuster Handbook for Writers, 10th Edition. By Lynn Quitman Troyka, Doug Hesse. Pearson. 2013. Link.\nPinker, S. The Sense of Style: The Thinking Person’s Guide to Writing in the 21st Century. New York, NY: Penguin. Link.\nA Writers Reference. Diana Hacker, Nancy Sommers. 2016. Link.\n\n\n\n\n Lingüística, Estilo y Escritura en el Siglo 21 - con Steven Pinker\n\n\n Introducing the 7th Ed. APA Style Publication Manual\n\n\n\n\nEscribiendo con estilo\n\n\n\n\nManuales de estilo\n\nManual de publicaciones de Ia American Psychological Association\n\nTercera edición. Link.\nSéptima (inglés) y cuarta edición (español). Link.\nAPA Style CENTRAL for Students. Link.\n\nScientific Style and Format: The CSE Manual for Authors, Editors, and Publishers. Link.\nThe Chicago Manual of Style. Link.\n\nChicago Style Workout 62: Dashes. Link.\nWhen to Capitalize after a Colon. Link.\n\nManual del estilo del Servicio Geológico Colombiano. Link.\nRAE. Lenguaje inclusivo. Link, Link.\n\nCómo se hace una tesis. Umberto Eco. 2014. Link\n\n\n\n\n\n\n\nElementos de estilo\n\n\n\n\nRunning-heads. CMS. Link.",
+    "text": "Textos de referecia\n\nSimon & Schuster Handbook for Writers, 10th Edition. By Lynn Quitman Troyka, Doug Hesse. Pearson. 2013. Link.\nPinker, S. The Sense of Style: The Thinking Person’s Guide to Writing in the 21st Century. New York, NY: Penguin. Link.\nA Writers Reference. Diana Hacker, Nancy Sommers. 2016. Link.\n\n\n\n\n Lingüística, Estilo y Escritura en el Siglo 21 - con Steven Pinker\n\n\n Introducing the 7th Ed. APA Style Publication Manual\n\n\n\n\nEscribiendo con estilo",
     "crumbs": [
       "Ciencia y tecnología",
       "Escritura y publicación académica"
@@ -1865,7 +1865,7 @@
     "href": "cyt/cienciareproduc.html#quarto",
     "title": "Ciencia reproducible",
     "section": "Quarto",
-    "text": "Quarto\n\nWhat is Quarto. Link.\nQuarto Guide. Link.***\nSlides. Reproducible Publications w/ Python and Quarto. Tom Mock. Link\nResources nrennie. Link.\nPosit workshops. Link.\nIsabella Velasquez. Link\nQuartificate is to transform Google Docs into Quarto books. Link.\nAwsome Quarto. The most up to date curated list of Quarto® docs, talks, tools, examples & articles the internet has to offer. Link\nReproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link\n\n\n\n\n Reproducible Manuscripts with Quarto - posit::conf(2023)\n\n\nGet started with Quarto | Mine Çetinkaya-Rundel\n\n\n\n\nBioC 2022 - Hello, Quarto!\n\n\nWelcome to Quarto Workshop! | Led by Tom Mock, RStudio\n\n\n\n\n Introducing Positron, a new data science IDE - posit conf 2024\n\n\n Quarto blogs\n\n\n\n\n Quarto books\n\n\n Citaciones\n\n\n\n\nVideos sobre Quarto pub",
+    "text": "Quarto\n\nWhat is Quarto. Link.\nQuarto Guide. Link.***\nSlides. Reproducible Publications w/ Python and Quarto. Tom Mock. Link\nResources nrennie. Link.\nPosit workshops. Link.\nIsabella Velasquez. Link\nQuartificate is to transform Google Docs into Quarto books. Link.\nAwsome Quarto. The most up to date curated list of Quarto® docs, talks, tools, examples & articles the internet has to offer. Link\nReproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link\n\n Reproducible Manuscripts with Quarto - posit::conf(2023)\nGet started with Quarto | Mine Çetinkaya-Rundel\n Publishing a Quarto website through GitHub Pages (updated)\nBioC 2022 - Hello, Quarto!\nWelcome to Quarto Workshop! | Led by Tom Mock, RStudio\n Introducing Positron, a new data science IDE - posit conf 2024\n Quarto blogs\n Quarto books\n Citaciones\nVideos sobre Quarto pub",
     "crumbs": [
       "Ciencia y tecnología",
       "Ciencia reproducible"
@@ -3169,6 +3169,39 @@
     "crumbs": [
       "Ciencia de datos",
       "D3"
+    ]
+  },
+  {
+    "objectID": "cyt/escrituraypublicacionacademica.html#lea-esto",
+    "href": "cyt/escrituraypublicacionacademica.html#lea-esto",
+    "title": "Escritura y publicación académica",
+    "section": "Lea esto 👇🏼",
+    "text": "Lea esto 👇🏼\n\nStrategies for Successful WritingSteps to Writing Well\n\n\n\nStrategies for Successful Writing A Rhetoric, Research Guide, Reader and Handbook. 2015. James A. Reinking, Robert A. von der Osten. Link. Link.\n\n\n\nSteps to Writing Well with Additional Readings. Jean Wyrick. Cengage Learning. 2021. Link, link.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica"
+    ]
+  },
+  {
+    "objectID": "cyt/escrituraypublicacionacademica.html#argumentación",
+    "href": "cyt/escrituraypublicacionacademica.html#argumentación",
+    "title": "Escritura y publicación académica",
+    "section": "Argumentación",
+    "text": "Argumentación\n\nLa estructura de la ciencia. Nagel, E., Editorial Paidós, 2006. Link.\n10 Ideas Clave. Competencias en argumentación y uso de pruebas. Jimenez, 2010. Link.\nKey concepts for making informed choices. Nature 2019. Link.\nA Practical Study of Argument, Cengage Learning. Govier, T. 2009. Link.\nThe Uses of Argument, Cambridge University Press. Toulmin, S. E. 2003. Link.\nArgumentation in Science Education: Perspectives from Classroom-Based Research, Springer. Erduran, S. and M. Aleixandre. 2007. Link.\nNatural Language → Knowledge Graph. Link.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica"
+    ]
+  },
+  {
+    "objectID": "cyt/escrituraypublicacionacademica.html#manuales-de-estilo",
+    "href": "cyt/escrituraypublicacionacademica.html#manuales-de-estilo",
+    "title": "Escritura y publicación académica",
+    "section": "Manuales de estilo",
+    "text": "Manuales de estilo\n\nManual de publicaciones de Ia American Psychological Association\n\nTercera edición. Link.\nSéptima (inglés) y cuarta edición (español). Link.\nAPA Style CENTRAL for Students. Link.\n\nScientific Style and Format: The CSE Manual for Authors, Editors, and Publishers. Link.\nThe Chicago Manual of Style. Link.\n\nChicago Style Workout 62: Dashes. Link.\nWhen to Capitalize after a Colon. Link.\n\nManual del estilo del Servicio Geológico Colombiano. Link.\nRAE. Lenguaje inclusivo. Link, Link.\nCómo se hace una tesis. Umberto Eco. 2014. Link\n\n\n\n\n\n\n\nElementos de estilo\n\n\n\n\nRunning-heads. CMS. Link.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica"
     ]
   }
 ]
