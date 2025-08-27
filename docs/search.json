@@ -70,70 +70,110 @@
     "href": "datascience/d3-experiment.html",
     "title": "Inversión Global en Investigación y Desarrollo",
     "section": "",
-    "text": "La inversión en Investigación y Desarrollo (I+D) es un indicador clave de la capacidad innovadora de un país y su compromiso con el crecimiento económico basado en el conocimiento. El indicador “Gross Domestic Expenditure on Research and Development (GERD) as a percentage of GDP” mide el total de gastos domésticos en I+D expresados como porcentaje del Producto Interno Bruto.\nSegún la OECD, este indicador incluye:\n\nGastos corrientes y de capital en los cuatro sectores principales\nEmpresas privadas, Gobierno, Educación superior y Organizaciones sin fines de lucro\nInvestigación básica, investigación aplicada y desarrollo experimental\n\nLos datos presentados provienen de la base de datos OECD Main Science and Technology Indicators (MSTI) y reflejan las tendencias más recientes hasta 2023."
+    "text": "La inversión en Investigación y Desarrollo (I+D) es un indicador clave de la capacidad innovadora de un país y su compromiso con el crecimiento económico basado en el conocimiento. El indicador “Gross Domestic Expenditure on Research and Development (GERD) as a percentage of GDP” mide el total de gastos domésticos en I+D expresados como porcentaje del Producto Interno Bruto.\nSegún la OECD, este indicador incluye:\n\nGastos corrientes y de capital en los cuatro sectores principales\nEmpresas privadas, Gobierno, Educación superior y Organizaciones sin fines de lucro\nInvestigación básica, investigación aplicada y desarrollo experimental\n\nLos datos presentados provienen de la base de datos OECD Main Science and Technology Indicators (MSTI) y reflejan las tendencias más recientes hasta 2023.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Experimento-D3"
+    ]
   },
   {
     "objectID": "datascience/d3-experiment.html#introducción",
     "href": "datascience/d3-experiment.html#introducción",
     "title": "Inversión Global en Investigación y Desarrollo",
     "section": "",
-    "text": "La inversión en Investigación y Desarrollo (I+D) es un indicador clave de la capacidad innovadora de un país y su compromiso con el crecimiento económico basado en el conocimiento. El indicador “Gross Domestic Expenditure on Research and Development (GERD) as a percentage of GDP” mide el total de gastos domésticos en I+D expresados como porcentaje del Producto Interno Bruto.\nSegún la OECD, este indicador incluye:\n\nGastos corrientes y de capital en los cuatro sectores principales\nEmpresas privadas, Gobierno, Educación superior y Organizaciones sin fines de lucro\nInvestigación básica, investigación aplicada y desarrollo experimental\n\nLos datos presentados provienen de la base de datos OECD Main Science and Technology Indicators (MSTI) y reflejan las tendencias más recientes hasta 2023."
+    "text": "La inversión en Investigación y Desarrollo (I+D) es un indicador clave de la capacidad innovadora de un país y su compromiso con el crecimiento económico basado en el conocimiento. El indicador “Gross Domestic Expenditure on Research and Development (GERD) as a percentage of GDP” mide el total de gastos domésticos en I+D expresados como porcentaje del Producto Interno Bruto.\nSegún la OECD, este indicador incluye:\n\nGastos corrientes y de capital en los cuatro sectores principales\nEmpresas privadas, Gobierno, Educación superior y Organizaciones sin fines de lucro\nInvestigación básica, investigación aplicada y desarrollo experimental\n\nLos datos presentados provienen de la base de datos OECD Main Science and Technology Indicators (MSTI) y reflejan las tendencias más recientes hasta 2023.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Experimento-D3"
+    ]
   },
   {
     "objectID": "datascience/d3-experiment.html#datos-y-preparación",
     "href": "datascience/d3-experiment.html#datos-y-preparación",
     "title": "Inversión Global en Investigación y Desarrollo",
     "section": "Datos y Preparación",
-    "text": "Datos y Preparación\n\n\nCode\n// Datos de inversión en I+D como % del PIB (2023)\nrd_data = [\n  {country: \"Israel\", value: 6.35, region: \"Asia-Pacifico\"},\n  {country: \"Corea del Sur\", value: 4.96, region: \"Asia-Pacifico\"},\n  {country: \"Suecia\", value: 3.60, region: \"Europa\"},\n  {country: \"Estados Unidos\", value: 3.45, region: \"America del Norte\"},\n  {country: \"Japón\", value: 3.44, region: \"Asia-Pacifico\"},\n  {country: \"Bélgica\", value: 3.32, region: \"Europa\"},\n  {country: \"Austria\", value: 3.29, region: \"Europa\"},\n  {country: \"Suiza\", value: 3.25, region: \"Europa\"},\n  {country: \"Dinamarca\", value: 2.99, region: \"Europa\"},\n  {country: \"Alemania\", value: 2.95, region: \"Europa\"},\n  {country: \"Finlandia\", value: 2.85, region: \"Europa\"},\n  {country: \"Francia\", value: 2.75, region: \"Europa\"},\n  {country: \"Islandia\", value: 2.65, region: \"Europa\"},\n  {country: \"China\", value: 2.58, region: \"Asia-Pacifico\"},\n  {country: \"Países Bajos\", value: 2.35, region: \"Europa\"},\n  {country: \"Reino Unido\", value: 2.25, region: \"Europa\"},\n  {country: \"Noruega\", value: 2.15, region: \"Europa\"},\n  {country: \"Australia\", value: 2.05, region: \"Asia-Pacifico\"},\n  {country: \"Canadá\", value: 1.95, region: \"America del Norte\"},\n  {country: \"Italia\", value: 1.85, region: \"Europa\"},\n  {country: \"España\", value: 1.65, region: \"Europa\"},\n  {country: \"Portugal\", value: 1.45, region: \"Europa\"},\n  {country: \"México\", value: 0.55, region: \"America del Norte\"}\n]\n\n\n\n\n\n\n\n\n\nCode\n// Configuración de colores por región\ncolor_scale = new Map([\n  [\"Asia-Pacifico\", \"#ff6b6b\"],\n  [\"Europa\", \"#4ecdc4\"], \n  [\"America del Norte\", \"#45b7d1\"]\n])\n\n\n\n\n\n\n\n\n\nCode\n// Estadísticas descriptivas\nstats = {\n  const values = rd_data.map(d =&gt; d.value);\n  return {\n    max: d3.max(values),\n    min: d3.min(values),\n    mean: d3.mean(values),\n    median: d3.median(values),\n    countries_above_3: rd_data.filter(d =&gt; d.value &gt;= 3.0).length,\n    total_countries: rd_data.length\n  }\n}"
+    "text": "Datos y Preparación\n\n\nCode\n// Datos de inversión en I+D como % del PIB (2023)\nrd_data = [\n  {country: \"Israel\", value: 6.35, region: \"Asia-Pacifico\"},\n  {country: \"Corea del Sur\", value: 4.96, region: \"Asia-Pacifico\"},\n  {country: \"Suecia\", value: 3.60, region: \"Europa\"},\n  {country: \"Estados Unidos\", value: 3.45, region: \"America del Norte\"},\n  {country: \"Japón\", value: 3.44, region: \"Asia-Pacifico\"},\n  {country: \"Bélgica\", value: 3.32, region: \"Europa\"},\n  {country: \"Austria\", value: 3.29, region: \"Europa\"},\n  {country: \"Suiza\", value: 3.25, region: \"Europa\"},\n  {country: \"Dinamarca\", value: 2.99, region: \"Europa\"},\n  {country: \"Alemania\", value: 2.95, region: \"Europa\"},\n  {country: \"Finlandia\", value: 2.85, region: \"Europa\"},\n  {country: \"Francia\", value: 2.75, region: \"Europa\"},\n  {country: \"Islandia\", value: 2.65, region: \"Europa\"},\n  {country: \"China\", value: 2.58, region: \"Asia-Pacifico\"},\n  {country: \"Países Bajos\", value: 2.35, region: \"Europa\"},\n  {country: \"Reino Unido\", value: 2.25, region: \"Europa\"},\n  {country: \"Noruega\", value: 2.15, region: \"Europa\"},\n  {country: \"Australia\", value: 2.05, region: \"Asia-Pacifico\"},\n  {country: \"Canadá\", value: 1.95, region: \"America del Norte\"},\n  {country: \"Italia\", value: 1.85, region: \"Europa\"},\n  {country: \"España\", value: 1.65, region: \"Europa\"},\n  {country: \"Portugal\", value: 1.45, region: \"Europa\"},\n  {country: \"México\", value: 0.55, region: \"America del Norte\"}\n]\n\n\n\n\n\n\n\n\n\nCode\n// Configuración de colores por región\ncolor_scale = new Map([\n  [\"Asia-Pacifico\", \"#ff6b6b\"],\n  [\"Europa\", \"#4ecdc4\"], \n  [\"America del Norte\", \"#45b7d1\"]\n])\n\n\n\n\n\n\n\n\n\nCode\n// Estadísticas descriptivas\nstats = {\n  const values = rd_data.map(d =&gt; d.value);\n  return {\n    max: d3.max(values),\n    min: d3.min(values),\n    mean: d3.mean(values),\n    median: d3.median(values),\n    countries_above_3: rd_data.filter(d =&gt; d.value &gt;= 3.0).length,\n    total_countries: rd_data.length\n  }\n}",
+    "crumbs": [
+      "Ciencia de datos",
+      "Experimento-D3"
+    ]
   },
   {
     "objectID": "datascience/d3-experiment.html#visualización-principal-inversión-en-id-por-país",
     "href": "datascience/d3-experiment.html#visualización-principal-inversión-en-id-por-país",
     "title": "Inversión Global en Investigación y Desarrollo",
     "section": "Visualización Principal: Inversión en I+D por País",
-    "text": "Visualización Principal: Inversión en I+D por País\n\n\nCode\nviewof selected_region = Inputs.select(\n  [\"Todas las regiones\", \"Asia-Pacifico\", \"Europa\", \"America del Norte\"],\n  {label: \"Filtrar por región:\", value: \"Todas las regiones\"}\n)\n\n\n\n\n\n\n\n\n\nCode\n// Filtrar datos según selección\nfiltered_data = selected_region === \"Todas las regiones\" \n  ? rd_data \n  : rd_data.filter(d =&gt; d.region === selected_region)\n\n\n\n\n\n\n\n\n\nCode\n// Gráfico de barras principal\nPlot.plot({\n  title: \"Gastos Domésticos en I+D como % del PIB (2023)\",\n  subtitle: `Países seleccionados: ${selected_region}`,\n  width: 900,\n  height: 500,\n  marginLeft: 100,\n  marginBottom: 80,\n  x: {\n    domain: [0, 7],\n    label: \"Porcentaje del PIB (%)\",\n    grid: true\n  },\n  y: {\n    label: null,\n    domain: filtered_data.map(d =&gt; d.country)\n  },\n  color: {\n    domain: Array.from(color_scale.keys()),\n    range: Array.from(color_scale.values()),\n    legend: true\n  },\n  marks: [\n    Plot.barX(filtered_data, {\n      x: \"value\",\n      y: \"country\",\n      fill: \"region\",\n      sort: {y: \"x\", reverse: true},\n      tip: true\n    }),\n    Plot.text(filtered_data, {\n      x: d =&gt; d.value + 0.15,\n      y: \"country\",\n      text: d =&gt; `${d.value}%`,\n      fontSize: 11,\n      fill: \"#333\"\n    }),\n    Plot.ruleX([2.7], {stroke: \"#e74c3c\", strokeWidth: 2, strokeDasharray: \"5,5\"})\n  ]\n})\n\n\n\n\n\n\n\n\n\nCode\nhtml`&lt;p style=\"margin-top: 10px; font-size: 14px; color: #666;\"&gt;\n&lt;strong&gt;Línea roja punteada:&lt;/strong&gt; Promedio OECD (2.7%)\n&lt;/p&gt;`"
+    "text": "Visualización Principal: Inversión en I+D por País\n\n\nCode\nviewof selected_region = Inputs.select(\n  [\"Todas las regiones\", \"Asia-Pacifico\", \"Europa\", \"America del Norte\"],\n  {label: \"Filtrar por región:\", value: \"Todas las regiones\"}\n)\n\n\n\n\n\n\n\n\n\nCode\n// Filtrar datos según selección\nfiltered_data = selected_region === \"Todas las regiones\" \n  ? rd_data \n  : rd_data.filter(d =&gt; d.region === selected_region)\n\n\n\n\n\n\n\n\n\nCode\n// Gráfico de barras principal\nPlot.plot({\n  title: \"Gastos Domésticos en I+D como % del PIB (2023)\",\n  subtitle: `Países seleccionados: ${selected_region}`,\n  width: 900,\n  height: 500,\n  marginLeft: 100,\n  marginBottom: 80,\n  x: {\n    domain: [0, 7],\n    label: \"Porcentaje del PIB (%)\",\n    grid: true\n  },\n  y: {\n    label: null,\n    domain: filtered_data.map(d =&gt; d.country)\n  },\n  color: {\n    domain: Array.from(color_scale.keys()),\n    range: Array.from(color_scale.values()),\n    legend: true\n  },\n  marks: [\n    Plot.barX(filtered_data, {\n      x: \"value\",\n      y: \"country\",\n      fill: \"region\",\n      sort: {y: \"x\", reverse: true},\n      tip: true\n    }),\n    Plot.text(filtered_data, {\n      x: d =&gt; d.value + 0.15,\n      y: \"country\",\n      text: d =&gt; `${d.value}%`,\n      fontSize: 11,\n      fill: \"#333\"\n    }),\n    Plot.ruleX([2.7], {stroke: \"#e74c3c\", strokeWidth: 2, strokeDasharray: \"5,5\"})\n  ]\n})\n\n\n\n\n\n\n\n\n\nCode\nhtml`&lt;p style=\"margin-top: 10px; font-size: 14px; color: #666;\"&gt;\n&lt;strong&gt;Línea roja punteada:&lt;/strong&gt; Promedio OECD (2.7%)\n&lt;/p&gt;`",
+    "crumbs": [
+      "Ciencia de datos",
+      "Experimento-D3"
+    ]
   },
   {
     "objectID": "datascience/d3-experiment.html#análisis-por-regiones",
     "href": "datascience/d3-experiment.html#análisis-por-regiones",
     "title": "Inversión Global en Investigación y Desarrollo",
     "section": "Análisis por Regiones",
-    "text": "Análisis por Regiones\n\n\nCode\n// Análisis regional\nregional_summary = d3.rollup(\n  rd_data,\n  v =&gt; ({\n    count: v.length,\n    average: d3.mean(v, d =&gt; d.value),\n    max: d3.max(v, d =&gt; d.value),\n    min: d3.min(v, d =&gt; d.value),\n    countries: v.map(d =&gt; d.country).join(\", \")\n  }),\n  d =&gt; d.region\n)\n\n\n\n\n\n\n\n\n\nCode\n// Tabla resumen por región\nInputs.table(\n  Array.from(regional_summary, ([region, data]) =&gt; ({\n    \"Región\": region,\n    \"Países\": data.count,\n    \"Promedio (%)\": data.average.toFixed(2),\n    \"Máximo (%)\": data.max.toFixed(2),\n    \"Mínimo (%)\": data.min.toFixed(2)\n  })),\n  {\n    header: {\n      \"Región\": \"Región\",\n      \"Países\": \"Número de Países\",\n      \"Promedio (%)\": \"Promedio I+D/PIB\",\n      \"Máximo (%)\": \"Máximo\",\n      \"Mínimo (%)\": \"Mínimo\"\n    }\n  }\n)"
+    "text": "Análisis por Regiones\n\n\nCode\n// Análisis regional\nregional_summary = d3.rollup(\n  rd_data,\n  v =&gt; ({\n    count: v.length,\n    average: d3.mean(v, d =&gt; d.value),\n    max: d3.max(v, d =&gt; d.value),\n    min: d3.min(v, d =&gt; d.value),\n    countries: v.map(d =&gt; d.country).join(\", \")\n  }),\n  d =&gt; d.region\n)\n\n\n\n\n\n\n\n\n\nCode\n// Tabla resumen por región\nInputs.table(\n  Array.from(regional_summary, ([region, data]) =&gt; ({\n    \"Región\": region,\n    \"Países\": data.count,\n    \"Promedio (%)\": data.average.toFixed(2),\n    \"Máximo (%)\": data.max.toFixed(2),\n    \"Mínimo (%)\": data.min.toFixed(2)\n  })),\n  {\n    header: {\n      \"Región\": \"Región\",\n      \"Países\": \"Número de Países\",\n      \"Promedio (%)\": \"Promedio I+D/PIB\",\n      \"Máximo (%)\": \"Máximo\",\n      \"Mínimo (%)\": \"Mínimo\"\n    }\n  }\n)",
+    "crumbs": [
+      "Ciencia de datos",
+      "Experimento-D3"
+    ]
   },
   {
     "objectID": "datascience/d3-experiment.html#distribución-y-percentiles",
     "href": "datascience/d3-experiment.html#distribución-y-percentiles",
     "title": "Inversión Global en Investigación y Desarrollo",
     "section": "Distribución y Percentiles",
-    "text": "Distribución y Percentiles\n\n\nCode\n// Histograma de distribución\nPlot.plot({\n  title: \"Distribución de la Inversión en I+D\",\n  width: 700,\n  height: 300,\n  x: {\n    label: \"Porcentaje del PIB (%)\",\n    domain: [0, 7]\n  },\n  y: {\n    label: \"Número de países\"\n  },\n  marks: [\n    Plot.rectY(rd_data, Plot.binX({y: \"count\"}, {x: \"value\", thresholds: 20, fill: \"#4ecdc4\", opacity: 0.7})),\n    Plot.ruleX([stats.mean], {stroke: \"#e74c3c\", strokeWidth: 2}),\n    Plot.ruleX([stats.median], {stroke: \"#f39c12\", strokeWidth: 2})\n  ]\n})\n\n\n\n\n\n\n\n\n\nCode\nhtml`&lt;p style=\"margin-top: 10px; font-size: 14px; color: #666;\"&gt;\n&lt;span style=\"color: #e74c3c;\"&gt;&lt;strong&gt;Línea roja:&lt;/strong&gt; Media (${stats.mean.toFixed(2)}%)&lt;/span&gt; | \n&lt;span style=\"color: #f39c12;\"&gt;&lt;strong&gt;Línea naranja:&lt;/strong&gt; Mediana (${stats.median.toFixed(2)}%)&lt;/span&gt;\n&lt;/p&gt;`"
+    "text": "Distribución y Percentiles\n\n\nCode\n// Histograma de distribución\nPlot.plot({\n  title: \"Distribución de la Inversión en I+D\",\n  width: 700,\n  height: 300,\n  x: {\n    label: \"Porcentaje del PIB (%)\",\n    domain: [0, 7]\n  },\n  y: {\n    label: \"Número de países\"\n  },\n  marks: [\n    Plot.rectY(rd_data, Plot.binX({y: \"count\"}, {x: \"value\", thresholds: 20, fill: \"#4ecdc4\", opacity: 0.7})),\n    Plot.ruleX([stats.mean], {stroke: \"#e74c3c\", strokeWidth: 2}),\n    Plot.ruleX([stats.median], {stroke: \"#f39c12\", strokeWidth: 2})\n  ]\n})\n\n\n\n\n\n\n\n\n\nCode\nhtml`&lt;p style=\"margin-top: 10px; font-size: 14px; color: #666;\"&gt;\n&lt;span style=\"color: #e74c3c;\"&gt;&lt;strong&gt;Línea roja:&lt;/strong&gt; Media (${stats.mean.toFixed(2)}%)&lt;/span&gt; | \n&lt;span style=\"color: #f39c12;\"&gt;&lt;strong&gt;Línea naranja:&lt;/strong&gt; Mediana (${stats.median.toFixed(2)}%)&lt;/span&gt;\n&lt;/p&gt;`",
+    "crumbs": [
+      "Ciencia de datos",
+      "Experimento-D3"
+    ]
   },
   {
     "objectID": "datascience/d3-experiment.html#insights-clave",
     "href": "datascience/d3-experiment.html#insights-clave",
     "title": "Inversión Global en Investigación y Desarrollo",
     "section": "Insights Clave",
-    "text": "Insights Clave\n\n\nCode\nhtml`\n&lt;div style=\"background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;\"&gt;\n&lt;h4 style=\"color: #2c3e50; margin-top: 0;\"&gt;📊 Hallazgos Principales&lt;/h4&gt;\n\n&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;\"&gt;\n  \n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #ff6b6b;\"&gt;\n&lt;strong&gt;🏆 Líderes Globales&lt;/strong&gt;&lt;br&gt;\nIsrael encabeza con &lt;strong&gt;${stats.max}%&lt;/strong&gt; del PIB, seguido por Corea del Sur y Suecia\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #4ecdc4;\"&gt;\n&lt;strong&gt;🌍 Umbral del 3%&lt;/strong&gt;&lt;br&gt;\nSolo &lt;strong&gt;${stats.countries_above_3}&lt;/strong&gt; de ${stats.total_countries} países superan el 3% del PIB\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #45b7d1;\"&gt;\n&lt;strong&gt;📈 Promedio OECD&lt;/strong&gt;&lt;br&gt;\nEl promedio OECD es &lt;strong&gt;2.7%&lt;/strong&gt; del PIB en 2023\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #f39c12;\"&gt;\n&lt;strong&gt;🌏 Dominancia Asiática&lt;/strong&gt;&lt;br&gt;\nAsia representa &lt;strong&gt;46%&lt;/strong&gt; del gasto global en I+D\n&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;\n`"
+    "text": "Insights Clave\n\n\nCode\nhtml`\n&lt;div style=\"background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;\"&gt;\n&lt;h4 style=\"color: #2c3e50; margin-top: 0;\"&gt;📊 Hallazgos Principales&lt;/h4&gt;\n\n&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;\"&gt;\n  \n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #ff6b6b;\"&gt;\n&lt;strong&gt;🏆 Líderes Globales&lt;/strong&gt;&lt;br&gt;\nIsrael encabeza con &lt;strong&gt;${stats.max}%&lt;/strong&gt; del PIB, seguido por Corea del Sur y Suecia\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #4ecdc4;\"&gt;\n&lt;strong&gt;🌍 Umbral del 3%&lt;/strong&gt;&lt;br&gt;\nSolo &lt;strong&gt;${stats.countries_above_3}&lt;/strong&gt; de ${stats.total_countries} países superan el 3% del PIB\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #45b7d1;\"&gt;\n&lt;strong&gt;📈 Promedio OECD&lt;/strong&gt;&lt;br&gt;\nEl promedio OECD es &lt;strong&gt;2.7%&lt;/strong&gt; del PIB en 2023\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #f39c12;\"&gt;\n&lt;strong&gt;🌏 Dominancia Asiática&lt;/strong&gt;&lt;br&gt;\nAsia representa &lt;strong&gt;46%&lt;/strong&gt; del gasto global en I+D\n&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;\n`",
+    "crumbs": [
+      "Ciencia de datos",
+      "Experimento-D3"
+    ]
   },
   {
     "objectID": "datascience/d3-experiment.html#top-10-países",
     "href": "datascience/d3-experiment.html#top-10-países",
     "title": "Inversión Global en Investigación y Desarrollo",
     "section": "Top 10 Países",
-    "text": "Top 10 Países\n\n\nCode\n// Top 10 países\ntop_10 = rd_data\n  .sort((a, b) =&gt; b.value - a.value)\n  .slice(0, 10)\n\n\n\n\n\n\n\n\n\nCode\nPlot.plot({\n  title: \"Top 10 Países en Inversión I+D/PIB\",\n  width: 600,\n  height: 350,\n  x: {\n    label: null,\n    tickRotate: -45\n  },\n  y: {\n    label: \"Porcentaje del PIB (%)\",\n    domain: [0, 7]\n  },\n  color: {\n    domain: Array.from(color_scale.keys()),\n    range: Array.from(color_scale.values())\n  },\n  marks: [\n    Plot.barY(top_10, {\n      x: \"country\",\n      y: \"value\",\n      fill: \"region\",\n      tip: true\n    }),\n    Plot.text(top_10, {\n      x: \"country\",\n      y: d =&gt; d.value + 0.15,\n      text: d =&gt; `${d.value}%`,\n      fontSize: 10,\n      fill: \"#333\"\n    })\n  ]\n})"
+    "text": "Top 10 Países\n\n\nCode\n// Top 10 países\ntop_10 = rd_data\n  .sort((a, b) =&gt; b.value - a.value)\n  .slice(0, 10)\n\n\n\n\n\n\n\n\n\nCode\nPlot.plot({\n  title: \"Top 10 Países en Inversión I+D/PIB\",\n  width: 600,\n  height: 350,\n  x: {\n    label: null,\n    tickRotate: -45\n  },\n  y: {\n    label: \"Porcentaje del PIB (%)\",\n    domain: [0, 7]\n  },\n  color: {\n    domain: Array.from(color_scale.keys()),\n    range: Array.from(color_scale.values())\n  },\n  marks: [\n    Plot.barY(top_10, {\n      x: \"country\",\n      y: \"value\",\n      fill: \"region\",\n      tip: true\n    }),\n    Plot.text(top_10, {\n      x: \"country\",\n      y: d =&gt; d.value + 0.15,\n      text: d =&gt; `${d.value}%`,\n      fontSize: 10,\n      fill: \"#333\"\n    })\n  ]\n})",
+    "crumbs": [
+      "Ciencia de datos",
+      "Experimento-D3"
+    ]
   },
   {
     "objectID": "datascience/d3-experiment.html#explorador-interactivo",
     "href": "datascience/d3-experiment.html#explorador-interactivo",
     "title": "Inversión Global en Investigación y Desarrollo",
     "section": "Explorador Interactivo",
-    "text": "Explorador Interactivo\n\n\nCode\nviewof selected_country = Inputs.select(\n  rd_data.map(d =&gt; d.country),\n  {label: \"Seleccionar país para detalles:\", value: \"Israel\"}\n)\n\n\n\n\n\n\n\n\n\nCode\n// Detalles del país seleccionado\ncountry_detail = rd_data.find(d =&gt; d.country === selected_country)\n\n\n\n\n\n\n\n\n\nCode\nhtml`\n&lt;div style=\"background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; margin: 20px 0;\"&gt;\n&lt;h3 style=\"margin-top: 0; font-size: 24px;\"&gt;${country_detail.country}&lt;/h3&gt;\n&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 15px;\"&gt;\n  \n&lt;div&gt;\n&lt;div style=\"font-size: 32px; font-weight: bold;\"&gt;${country_detail.value}%&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;del PIB en I+D&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;${country_detail.region}&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;Región&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;\n${(country_detail.value / stats.mean).toFixed(1)}x\n&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;vs. promedio OECD&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;\n#${rd_data.sort((a, b) =&gt; b.value - a.value).findIndex(d =&gt; d.country === country_detail.country) + 1}\n&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;Ranking mundial&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;\n`"
+    "text": "Explorador Interactivo\n\n\nCode\nviewof selected_country = Inputs.select(\n  rd_data.map(d =&gt; d.country),\n  {label: \"Seleccionar país para detalles:\", value: \"Israel\"}\n)\n\n\n\n\n\n\n\n\n\nCode\n// Detalles del país seleccionado\ncountry_detail = rd_data.find(d =&gt; d.country === selected_country)\n\n\n\n\n\n\n\n\n\nCode\nhtml`\n&lt;div style=\"background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; margin: 20px 0;\"&gt;\n&lt;h3 style=\"margin-top: 0; font-size: 24px;\"&gt;${country_detail.country}&lt;/h3&gt;\n&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 15px;\"&gt;\n  \n&lt;div&gt;\n&lt;div style=\"font-size: 32px; font-weight: bold;\"&gt;${country_detail.value}%&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;del PIB en I+D&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;${country_detail.region}&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;Región&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;\n${(country_detail.value / stats.mean).toFixed(1)}x\n&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;vs. promedio OECD&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;\n#${rd_data.sort((a, b) =&gt; b.value - a.value).findIndex(d =&gt; d.country === country_detail.country) + 1}\n&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;Ranking mundial&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;\n`",
+    "crumbs": [
+      "Ciencia de datos",
+      "Experimento-D3"
+    ]
   },
   {
     "objectID": "datascience/d3-experiment.html#metodología-y-fuentes",
     "href": "datascience/d3-experiment.html#metodología-y-fuentes",
     "title": "Inversión Global en Investigación y Desarrollo",
     "section": "Metodología y Fuentes",
-    "text": "Metodología y Fuentes\n\nDefinición del Indicador\nEl Gasto Doméstico Bruto en Investigación y Desarrollo (GERD) como porcentaje del PIB incluye:\n\nGastos corrientes y de capital en I+D\nCuatro sectores principales:\n\nEmpresas comerciales\nGobierno\nEducación superior\n\nOrganizaciones privadas sin fines de lucro\n\nTres tipos de investigación:\n\nInvestigación básica\nInvestigación aplicada\nDesarrollo experimental\n\n\n\n\nFuentes de Datos\n\nFuente principal: OECD Main Science and Technology Indicators (MSTI) Database\nURL: https://data-explorer.oecd.org\nDatos complementarios: World Bank, UNESCO Institute for Statistics\nAño de referencia: 2023 (datos más recientes disponibles)\nMetodología: Paridades de Poder Adquisitivo (PPP), precios constantes base 2015\n\n\n\nNotas Técnicas\n\nLos datos incluyen I+D financiada desde el extranjero pero excluyen fondos domésticos para I+D realizada fuera del territorio nacional\nLas cifras están expresadas en dólares estadounidenses constantes usando PPP para permitir comparaciones internacionales\nAlgunos países pueden tener metodologías ligeramente diferentes en la recopilación de datos\n\n\nDocumento generado con Quarto y Observable JS"
+    "text": "Metodología y Fuentes\n\nDefinición del Indicador\nEl Gasto Doméstico Bruto en Investigación y Desarrollo (GERD) como porcentaje del PIB incluye:\n\nGastos corrientes y de capital en I+D\nCuatro sectores principales:\n\nEmpresas comerciales\nGobierno\nEducación superior\n\nOrganizaciones privadas sin fines de lucro\n\nTres tipos de investigación:\n\nInvestigación básica\nInvestigación aplicada\nDesarrollo experimental\n\n\n\n\nFuentes de Datos\n\nFuente principal: OECD Main Science and Technology Indicators (MSTI) Database\nURL: https://data-explorer.oecd.org\nDatos complementarios: World Bank, UNESCO Institute for Statistics\nAño de referencia: 2023 (datos más recientes disponibles)\nMetodología: Paridades de Poder Adquisitivo (PPP), precios constantes base 2015\n\n\n\nNotas Técnicas\n\nLos datos incluyen I+D financiada desde el extranjero pero excluyen fondos domésticos para I+D realizada fuera del territorio nacional\nLas cifras están expresadas en dólares estadounidenses constantes usando PPP para permitir comparaciones internacionales\nAlgunos países pueden tener metodologías ligeramente diferentes en la recopilación de datos\n\n\nDocumento generado con Quarto y Observable JS",
+    "crumbs": [
+      "Ciencia de datos",
+      "Experimento-D3"
+    ]
   },
   {
     "objectID": "datascience/quarto-atajos.html",
@@ -1751,11 +1791,44 @@
     ]
   },
   {
+    "objectID": "cyt/escrituraypublicacionacademica.html#lea-esto",
+    "href": "cyt/escrituraypublicacionacademica.html#lea-esto",
+    "title": "Escritura y publicación académica",
+    "section": "Lea esto 👇🏼",
+    "text": "Lea esto 👇🏼\n\nStrategies for Successful WritingSteps to Writing Well\n\n\n\nStrategies for Successful Writing A Rhetoric, Research Guide, Reader and Handbook. 2015. James A. Reinking, Robert A. von der Osten. Link. Link.\n\n\n\nSteps to Writing Well with Additional Readings. Jean Wyrick. Cengage Learning. 2021. Link, link.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica"
+    ]
+  },
+  {
+    "objectID": "cyt/escrituraypublicacionacademica.html#argumentación",
+    "href": "cyt/escrituraypublicacionacademica.html#argumentación",
+    "title": "Escritura y publicación académica",
+    "section": "Argumentación",
+    "text": "Argumentación\n\nLa estructura de la ciencia. Nagel, E., Editorial Paidós, 2006. Link.\n10 Ideas Clave. Competencias en argumentación y uso de pruebas. Jimenez, 2010. Link.\nKey concepts for making informed choices. Nature 2019. Link.\nA Practical Study of Argument, Cengage Learning. Govier, T. 2009. Link.\nThe Uses of Argument, Cambridge University Press. Toulmin, S. E. 2003. Link.\nArgumentation in Science Education: Perspectives from Classroom-Based Research, Springer. Erduran, S. and M. Aleixandre. 2007. Link.\nNatural Language → Knowledge Graph. Link.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica"
+    ]
+  },
+  {
     "objectID": "cyt/escrituraypublicacionacademica.html#textos-de-referecia",
     "href": "cyt/escrituraypublicacionacademica.html#textos-de-referecia",
     "title": "Escritura y publicación académica",
     "section": "Textos de referecia",
     "text": "Textos de referecia\n\nSimon & Schuster Handbook for Writers, 10th Edition. By Lynn Quitman Troyka, Doug Hesse. Pearson. 2013. Link.\nPinker, S. The Sense of Style: The Thinking Person’s Guide to Writing in the 21st Century. New York, NY: Penguin. Link.\nA Writers Reference. Diana Hacker, Nancy Sommers. 2016. Link.\n\n\n\n\n Lingüística, Estilo y Escritura en el Siglo 21 - con Steven Pinker\n\n\n Introducing the 7th Ed. APA Style Publication Manual\n\n\n\n\nEscribiendo con estilo",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica"
+    ]
+  },
+  {
+    "objectID": "cyt/escrituraypublicacionacademica.html#manuales-de-estilo",
+    "href": "cyt/escrituraypublicacionacademica.html#manuales-de-estilo",
+    "title": "Escritura y publicación académica",
+    "section": "Manuales de estilo",
+    "text": "Manuales de estilo\n\nManual de publicaciones de Ia American Psychological Association\n\nTercera edición. Link.\nSéptima (inglés) y cuarta edición (español). Link.\nAPA Style CENTRAL for Students. Link.\n\nScientific Style and Format: The CSE Manual for Authors, Editors, and Publishers. Link.\nThe Chicago Manual of Style. Link.\n\nChicago Style Workout 62: Dashes. Link.\nWhen to Capitalize after a Colon. Link.\n\nManual del estilo del Servicio Geológico Colombiano. Link.\nRAE. Lenguaje inclusivo. Link, Link.\nCómo se hace una tesis. Umberto Eco. 2014. Link\n\n\n\n\n\n\n\nElementos de estilo\n\n\n\n\nRunning-heads. CMS. Link.",
     "crumbs": [
       "Ciencia y tecnología",
       "Escritura y publicación académica"
@@ -3124,7 +3197,7 @@
     "text": "Myst. Link.\n\nGet Started. Your first steps with MyST. Link\n\n\n SciPy Proceedings 2025. MyST Markdown and Curvenote\n Rowan Cockett- SciPy Proceedings: An Exemplar for Publishing Computational Open Science | SciPy 2025\n\n\n\nReflections on MyST-ification. 2025. Link\nAGU. About Notebooks Now!. Link.",
     "crumbs": [
       "Ciencia de datos",
-      "Experimento-D3"
+      "Myst"
     ]
   },
   {
@@ -3135,7 +3208,7 @@
     "text": "Reflections on MyST-ification. 2025. Link\nAGU. About Notebooks Now!. Link.",
     "crumbs": [
       "Ciencia de datos",
-      "Experimento-D3"
+      "Myst"
     ]
   },
   {
@@ -3146,7 +3219,7 @@
     "text": "Lecturas\n\nZarr in the Browser — Fast, Flexible, and Surprisingly Powerful for Big Geo Data. 2025. Link.",
     "crumbs": [
       "Ciencia de datos",
-      "Experimento-D3"
+      "Myst"
     ]
   },
   {
@@ -3169,39 +3242,6 @@
     "crumbs": [
       "Ciencia de datos",
       "D3"
-    ]
-  },
-  {
-    "objectID": "cyt/escrituraypublicacionacademica.html#lea-esto",
-    "href": "cyt/escrituraypublicacionacademica.html#lea-esto",
-    "title": "Escritura y publicación académica",
-    "section": "Lea esto 👇🏼",
-    "text": "Lea esto 👇🏼\n\nStrategies for Successful WritingSteps to Writing Well\n\n\n\nStrategies for Successful Writing A Rhetoric, Research Guide, Reader and Handbook. 2015. James A. Reinking, Robert A. von der Osten. Link. Link.\n\n\n\nSteps to Writing Well with Additional Readings. Jean Wyrick. Cengage Learning. 2021. Link, link.",
-    "crumbs": [
-      "Ciencia y tecnología",
-      "Escritura y publicación académica"
-    ]
-  },
-  {
-    "objectID": "cyt/escrituraypublicacionacademica.html#argumentación",
-    "href": "cyt/escrituraypublicacionacademica.html#argumentación",
-    "title": "Escritura y publicación académica",
-    "section": "Argumentación",
-    "text": "Argumentación\n\nLa estructura de la ciencia. Nagel, E., Editorial Paidós, 2006. Link.\n10 Ideas Clave. Competencias en argumentación y uso de pruebas. Jimenez, 2010. Link.\nKey concepts for making informed choices. Nature 2019. Link.\nA Practical Study of Argument, Cengage Learning. Govier, T. 2009. Link.\nThe Uses of Argument, Cambridge University Press. Toulmin, S. E. 2003. Link.\nArgumentation in Science Education: Perspectives from Classroom-Based Research, Springer. Erduran, S. and M. Aleixandre. 2007. Link.\nNatural Language → Knowledge Graph. Link.",
-    "crumbs": [
-      "Ciencia y tecnología",
-      "Escritura y publicación académica"
-    ]
-  },
-  {
-    "objectID": "cyt/escrituraypublicacionacademica.html#manuales-de-estilo",
-    "href": "cyt/escrituraypublicacionacademica.html#manuales-de-estilo",
-    "title": "Escritura y publicación académica",
-    "section": "Manuales de estilo",
-    "text": "Manuales de estilo\n\nManual de publicaciones de Ia American Psychological Association\n\nTercera edición. Link.\nSéptima (inglés) y cuarta edición (español). Link.\nAPA Style CENTRAL for Students. Link.\n\nScientific Style and Format: The CSE Manual for Authors, Editors, and Publishers. Link.\nThe Chicago Manual of Style. Link.\n\nChicago Style Workout 62: Dashes. Link.\nWhen to Capitalize after a Colon. Link.\n\nManual del estilo del Servicio Geológico Colombiano. Link.\nRAE. Lenguaje inclusivo. Link, Link.\nCómo se hace una tesis. Umberto Eco. 2014. Link\n\n\n\n\n\n\n\nElementos de estilo\n\n\n\n\nRunning-heads. CMS. Link.",
-    "crumbs": [
-      "Ciencia y tecnología",
-      "Escritura y publicación académica"
     ]
   }
 ]
