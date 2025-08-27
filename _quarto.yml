@@ -101,7 +101,7 @@ website:
             href: datascience/ia.qmd
           - text: "D3"
             href: datascience/d3.qmd
-          - text: "Experimento-D3"
+          - text: "Experimento con D3"
             href: datascience/d3-experiment.qmd
           - text: "Github"
             href: datascience/github.qmd
