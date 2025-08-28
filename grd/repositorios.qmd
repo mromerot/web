@@ -11,39 +11,24 @@ editor: visual
 ## **Lista de repositorios en GRD**
 
 -   **Climate Informed Risk Index.** [Link](https://github.com/fulton-ring/nri-future-risk)**.** This tool is a replica of the National Risk Index (NRI) Future Risk tool, which was removed from the public by the US Government in February, 2025. It references the following datasets which were downloaded before the tool was taken down.
-
 -   **CLIMAAX CRA Handbook**. [Link](https://handbook.climaax.eu/intro.html).[Link](https://github.com/CLIMAAX/crabook). A regional climate risk assessment is often needed to design or update a climate adaptation and/or risk management plan. Regular updates are needed considering changing climate risk profiles
-
+-   **Global Earthquake Model**. [*Link*](https://github.com/gem)
+    -   Perfil Colombia. *Link*
 -   **Copernicus Browser.** [Link](https://github.com/eu-cdse/copernicus-browser).
-
 -   EM-DAT Documentation. [*Link*](https://doc.emdat.be/docs/)*. [Link](https://github.com/em-dat/).*
-
 -   **Global Facility for Disaster Reduction and Recovery (GFDRR)**. [Link](https://github.com/GFDRR). GFDRR supports developing countries on disaster risk reduction and climate change adaptation. 
-
     -   **CCDR-tools**. [Link](https://gfdrr.github.io/CCDR-tools/home.html).
-
 -   **Hazus**. FEMA Natural Hazards Risk Assessment Program. [*Link*](https://github.com/nhrap-hazus)*.*
-
 -   **Disaster-Risk-Analysis-Platform**. [Link](https://github.com/invcble/Disaster-Risk-Analysis-Platform). Welcome to our project, "Disaster Risk Analytics Platform," developed with an aim to provide comprehensive disaster risk analysis for investment firms operating within the U.S. markets. Using advanced statistical analysis and deep learning technologies, this platform helps predict potential disasters and their financial impacts on various states, aiding firms in making informed, resilient investment decisions.
-
 -   **Disaster-Risk-Monitoring-Using-Satellite-Imagery**. [Link](https://github.com/Pray-d/Disaster-Risk-Monitoring-Using-Satellite-Imagery). A suggestion of task provided by NIVIDEA in its course Disaster Risk Monitoring Using Satellite Imagery
-
 -   Demostrador RIESGOS. [*Link*](https://github.com/riesgos/dlr-riesgos-frontend)
-
 -   **TOMRAP – Tool for Multi-hazard Risk Assessment in Python.** [Link](https://github.com/BritishGeologicalSurvey/TOMRAP). The project builds on outputs from the METEOR project (NEE6423R) to generate a tool that can be used in future projects to assess multi-hazard risk. The METEOR model was initially developed in ArcGIS. By streamlining this code in Python we will make multi-hazard risk analysis faster and more widely applicable. 
-
 -   **Seismic Hazard and Risk Analysis calculations.** [Link](https://github.com/bakerjw/seismic-hazard-and-risk). Supporting calculations for the textbook Seismic Hazard and Risk Analysis.
-
 -   **Project Pythia**. [Link](https://projectpythia.org/). An education and training hub for the geoscientific Python community
-
 -   Disaster Vulnerability Map. Catholic Charities USA Disaster Vulnerability Map. [*Link*](https://github.com/ccusa/Disaster_Vulnerability_Map)
-
 -   Mapeo de Asentamientos Informales basado en Inteligencia Artificial. Banco Mundial. [*Link*](https://www.iadb.org/es/quienes-somos/topicos/desarrollo-urbano-y-vivienda/maiia).
-
 -   Climate change AI. [*Link*](https://www.climatechange.ai/tutorials?).
-
 -   Github
-
     -   #DRR. [*Link*](https://github.com/topics/disaster-risk-management)
 
 {{< video "https://riesgos.de/images/downloads/RIESGOS2.0_Project_Video_Presentation_V1.0_2022.mp4 width = 400">}}

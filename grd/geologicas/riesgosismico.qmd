@@ -37,9 +37,10 @@ editor: visual
 
 -   Modelo nacional de amenaza sísmica para Colombia. SGC. [*Link*](https://libros.sgc.gov.co/index.php/editorial/catalog/book/38#:~:text=En%20el%20modelo%2C%20la%20sismicidad,procedimiento%20propuesto%20por%20los%20autores.).
 -   Modelo nacional de amenaza sísmica para Colombia. Bogotá: Servicio Geológico Colombiano y Fundación Global Earthquake Model. [*Link*](https://libros.sgc.gov.co/index.php/editorial/catalog/book/38). [*Link*](https://amenazasismica.sgc.gov.co/).
+    -   Perfil Colombia GEM. [*Link*](https://github.com/gem/risk-profiles/tree/master/South_America/Colombia)
 -   Modelo de Amenaza Sísmica de Colombia. [*Link*](https://amenazasismica.sgc.gov.co/).
 -   What is seismic hazard? What is a seismic hazard map? How are they made? How are they used? Why are there different maps, and which one should I use?. USGS. [*Link*](https://www.usgs.gov/faqs/what-seismic-hazard-what-seismic-hazard-map-how-are-they-made-how-are-they-used-why-are-there).
--   Earthquake Hazard Maps. FEMA. [Link](https://www.fema.gov/es/emergency-managers/risk-management/earthquake/hazard-maps).
+-   Earthquake Hazard Maps. FEMA. [*Link*](https://www.fema.gov/es/emergency-managers/risk-management/earthquake/hazard-maps).
 -   Iris Earthquake Browser. [*Link*](http://ds.iris.edu/ieb/index.html?).
 -   Geohazards Europa. [*Link*](https://geohazards-tep.eu/#!).
 -   Mapping Global Earthquakes and Hurricane tracks with R. [*Link*](http://david-lallemant.com/mapping-global-earthquakes-and-hurricane-tracks-with-r-2/).
@@ -55,6 +56,8 @@ editor: visual
 
 Amenaza sísmica
 :::
+
+![](https://github.com/gem/risk-profiles/raw/master/South_America/Colombia/seismic_risk_profile_Colombia.png){fig-align="center" width="500"}
 
 ## Evaluación del riesgo por amenaza sísmica
 

@@ -50,11 +50,13 @@ website:
           - section: "Amenazas geológicas"
             contents:
               - text: "Falla de terreno"
-                href: grd/falladeterreno.qmd
+                href: grd/geologicas/falladeterreno.qmd
               - text: "Riesgo sísmico"
-                href: grd/riesgosismico.qmd
+                href: grd/geologicas/riesgosismico.qmd
+              - text: "Tsunami"
+                href: grd/geologicas/tsunami.qmd
               - text: "Volcanes"
-                href: grd/volcanes.qmd
+                href: grd/geologicas/volcanes.qmd
           - text: "Amenazas extraterrestres"
           - href: grd/amenazasextraterrestres.qmd
           - section: "Amenazas ambientales"
