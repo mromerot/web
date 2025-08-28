@@ -58,7 +58,7 @@ website:
               - text: "Volcanes"
                 href: grd/geologicas/volcanes.qmd
           - text: "Amenazas extraterrestres"
-          - href: grd/amenazasextraterrestres.qmd
+            href: grd/amenazasextraterrestres.qmd
           - section: "Amenazas ambientales"
             contents:
               - text: "Erosión costera"
@@ -94,7 +94,7 @@ website:
           - text: "Ciencia transdiciplinar"
             href: cyt/transdisciplina.qmd
       - text: "Ecología y conservación"
-      - href: ecolyconserv/ecologiayconservacion.qmd
+        href: ecolyconserv/ecologiayconservacion.qmd
       - section: "Ciencia de datos"
         contents:
           - text: "Ciencia de datos"
