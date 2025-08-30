@@ -3202,7 +3202,7 @@
     "href": "datascience/myst.html",
     "title": "Myst, Zaar",
     "section": "",
-    "text": "Myst. Link.\n\nGet Started. Your first steps with MyST. Link\n\n\n SciPy Proceedings 2025. MyST Markdown and Curvenote\n Rowan Cockett- SciPy Proceedings: An Exemplar for Publishing Computational Open Science | SciPy 2025\n\n\n\nReflections on MyST-ification. 2025. Link\nAGU. About Notebooks Now!. Link.",
+    "text": "Myst. Link.\n\nGet Started. Your first steps with MyST. Link\n\n\n\n\n\n\n\n\nComo instalar Myst\n\n\n\nRevise el tutorial por extenso aquí: link\n\nInstale Python, MyST Markdown CLI, y VS-Code\nRevise en consola si Myst se instaló correctamente: myst -v\nDescargue el contenido de ejemplo y navegue hasta la carpeta\n\ngit clone https://github.com/jupyter-book/mystmd-quickstart.git\ncd mystmd-quickstart\n`myst` aparecera este mensaje ” 💾 Writing new project and site config file: myst.yml — ? Would you like to run myst start now? (Y/n)”\nLuego podrá abrir el nuevo proyecto en su navegador.\n\n\n\n\n SciPy Proceedings 2025. MyST Markdown and Curvenote\n Rowan Cockett- SciPy Proceedings: An Exemplar for Publishing Computational Open Science | SciPy 2025\n\n\n\nReflections on MyST-ification. 2025. Link\nAGU. About Notebooks Now!. Link.",
     "crumbs": [
       "Ciencia de datos",
       "Myst"

@@ -9,6 +9,23 @@ editor: visual
 -   Myst. [*Link*](https://mystmd.org/guide).
     -   Get Started. Your first steps with MyST. [*Link*](https://mystmd.org/guide/quickstart)
 
+::: {.callout-tip appearance="minimal"}
+## Como instalar Myst
+
+Revise el tutorial por extenso aquí: [*link*](https://mystmd.org/guide/quickstart)
+
+-   Instale Python, MyST Markdown CLI, y VS-Code
+
+-   Revise en consola si Myst se instaló correctamente: `myst -v`
+
+-   Descargue el contenido de ejemplo y navegue hasta la carpeta
+
+    -   `git clone https://github.com/jupyter-book/mystmd-quickstart.git`
+    -   `cd mystmd-quickstart`
+    -   \`myst\` aparecera este mensaje " 💾 Writing new project and site config file: myst.yml — ? Would you like to run myst start now? (Y/n)"
+    -   Luego podrá abrir el nuevo proyecto en su navegador.
+:::
+
 {{< video "https://youtu.be/YGzBF-2wAWU" width = "400" >}} SciPy Proceedings 2025. MyST Markdown and Curvenote
 
 {{< video "https://youtu.be/gGPizw_URxM" width = "400" >}} Rowan Cockett- SciPy Proceedings: An Exemplar for Publishing Computational Open Science \| SciPy 2025
