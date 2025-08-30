@@ -275,6 +275,17 @@
     ]
   },
   {
+    "objectID": "datascience/quarto-atajos.html#qué-es-un-archivo-yml",
+    "href": "datascience/quarto-atajos.html#qué-es-un-archivo-yml",
+    "title": "Quarto atajos",
+    "section": "Qué es un archivo yml",
+    "text": "Qué es un archivo yml\n YAML Tutorial | Learn YAML in 10 Minutes",
+    "crumbs": [
+      "Ciencia de datos",
+      "Atajos de Quarto"
+    ]
+  },
+  {
     "objectID": "datascience/github.html",
     "href": "datascience/github.html",
     "title": "Github",
@@ -431,7 +442,7 @@
     "section": "",
     "text": "Video introductorio\n\n\n El oceáno",
     "crumbs": [
-      "El océano"
+      "Ecología y conservación"
     ]
   },
   {
@@ -441,7 +452,7 @@
     "section": "Cursos",
     "text": "Cursos\n\nPrinciples of Evolution, Ecology and Behavior. Stearns, S. Yale. Link.\nBioinformatic Methods I. Coursera. Link.\nBioinformatics: Life Sciences on Your Computer. Coursera. Link.\nCommunity structure and dispersal. Bio-570. Oregon State University. Link.\nIntroduction to Genetics and Evolution. Coursera. Link.\nShort Course on Species Distribution Modeling in Conservation Using R: From Start to Finish. Link.\nData Analysis for Life Sciences. Link. Link.",
     "crumbs": [
-      "El océano"
+      "Ecología y conservación"
     ]
   },
   {
@@ -451,7 +462,7 @@
     "section": "Charlas",
     "text": "Charlas\n\nIn the Light of Evolution X: Comparative Phylogeography. Colloqia. National Academy of Sciences. Link.\nEvolutionary games. MIT opencourseware. Link\nEcological Neutral Theory: is it Madness or Misunderstood? (James Rosindell October 2013). Link\nThe neutral theory of biodiversity and other competitors to maximum entropy. Link\nPhylogenetic trees. NIMbioS. Link\nQuantitative genetic variance in metapopulations. NIMbioS. Link\nBrownian motion models, multiple characters and phylogenies. NIMbioS. Link.\nGeometric approaches to phylogenetic tree reconstruction. NIMbioS. Link\nBiodiversity measures and the role of species similarity. NIMbioS. Link.\nVideos for teaching ecology. Link.",
     "crumbs": [
-      "El océano"
+      "Ecología y conservación"
     ]
   },
   {
@@ -461,7 +472,7 @@
     "section": "Lecturas",
     "text": "Lecturas\n\nThe ecologist’s field guide to sequence-based identification of biodiversity. Ecology and Evolution. 2016. Link.\nProcess, Mechanism, and Modeling in Macroecology. TREE. 2017. Link.\nKnowledge of Colombian biodiversity: published and indexed. Biodiversity and Conservation. 2013. Link.\nEssential Biodiversity Variables. Pereira, et al. Science, 2013. Link.",
     "crumbs": [
-      "El océano"
+      "Ecología y conservación"
     ]
   },
   {
@@ -471,7 +482,7 @@
     "section": "Teorias en ecología",
     "text": "Teorias en ecología\n\nShou et. al. 2015. Research: Theory, models and biology. eLife 2015;4:e07158. Link.",
     "crumbs": [
-      "El océano"
+      "Ecología y conservación"
     ]
   },
   {
@@ -481,7 +492,7 @@
     "section": "MOOCS",
     "text": "MOOCS\n\nTropical coastal ecosystems. Link. Videos.\nOpen Channel. Link.\nOpen2U. Marine Data and Science e-lectures. Link.",
     "crumbs": [
-      "El océano"
+      "Ecología y conservación"
     ]
   },
   {
@@ -3239,17 +3250,6 @@
     "crumbs": [
       "Ciencia de datos",
       "D3"
-    ]
-  },
-  {
-    "objectID": "datascience/quarto-atajos.html#qué-es-un-archivo-yml",
-    "href": "datascience/quarto-atajos.html#qué-es-un-archivo-yml",
-    "title": "Quarto atajos",
-    "section": "Qué es un archivo yml",
-    "text": "Qué es un archivo yml\n YAML Tutorial | Learn YAML in 10 Minutes",
-    "crumbs": [
-      "Ciencia de datos",
-      "Atajos de Quarto"
     ]
   }
 ]
