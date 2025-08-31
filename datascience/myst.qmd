@@ -26,6 +26,16 @@ Revise el tutorial por extenso aquí: [*link*](https://mystmd.org/guide/quicksta
     -   Luego podrá abrir el nuevo proyecto en su navegador.
 :::
 
+::: {.callout-tip appearance="minimal"}
+## Como configurar Myst
+
+-   Debe existir al meno un archivo en el proyecto ¨El archivo index.md servirá como página principal del sitio.¨
+-   `myst start` para ver el sitio web localmente
+-   Agregar contenido: Crear más archivos .md o notebooks .ipynb
+-   Configurar: Editar `myst.yml` para personalizar título, descripción, etc. 4. Estructura: Crear subcarpetas y organizar tu contenido
+-   Estructura: Crear subcarpetas y organizar tu contenido
+:::
+
 {{< video "https://youtu.be/YGzBF-2wAWU" width = "400" >}} SciPy Proceedings 2025. MyST Markdown and Curvenote
 
 {{< video "https://youtu.be/gGPizw_URxM" width = "400" >}} Rowan Cockett- SciPy Proceedings: An Exemplar for Publishing Computational Open Science \| SciPy 2025
