@@ -1,7 +1,12 @@
 /*-- scss:defaults --*/
 
+<<<<<<< HEAD
 // Import Roboto font from Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+=======
+// Import Lora font from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+>>>>>>> 1d4db7b0d7913e828b019f20c7442af1e690d48c
 
 // Sass Variables
 // https://quarto.org/docs/output-formats/html-themes.html#sass-variables
@@ -12,5 +17,9 @@ $body-color: rgb(55, 58, 60);
 $link-color: rgb(39, 128, 227);
 
 /* Fonts */
+<<<<<<< HEAD
 $font-family-sans-serif: "Roboto", -apple-system, "system-ui", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+=======
+$font-family-sans-serif: "Lora", -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+>>>>>>> 1d4db7b0d7913e828b019f20c7442af1e690d48c
 $font-size-root: 15px;
