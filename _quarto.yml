@@ -12,6 +12,7 @@ website:
     search: true
     collapse-level: 1
     contents:
+# Esto es la seccion mas grande, GRD
       - section: "Gestión del riesgo de desastres"
         contents:
           - text: "Gestión del riesgo de desastres"
@@ -38,6 +39,7 @@ website:
                 href: grd/repositorios.qmd
           - text: "Sistemas de alerta temprana"
             href: grd/sat.qmd
+# aqui viene la seccion de amenazas
           - section: "Amenazas hidrológicas y meteorológicas"
             href: grd/hidrol-meteorologicas/index.qmd
             contents:
@@ -62,15 +64,16 @@ website:
           - section: "Amenazas ambientales"
             contents:
               - text: "Erosión costera"
-                href: grd/erosioncostera.qmd
+                href: grd/ambientales/erosioncostera.qmd
               - text: "Incendios forestales"
-                href: grd/incendiosforestales.qmd
+                href: grd/ambientales/incendiosforestales.qmd
           - text: "Amenazas tecnológicas"
             href: grd/tecnologicas/amenazastecnol.qmd
           - text: "Amazonas"
             href: grd/amazonas.qmd
           - text: "Glosario"
             href: grd/glosario.qmd
+# aqui viene la seccion de cambio climatico
       - section: "Gestión del cambio climático"
         contents:
           - text: "Gestión del cambio climático"

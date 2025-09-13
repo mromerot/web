@@ -4,4 +4,63 @@ format: html
 editor: visual
 ---
 
-## ![Hazard information profiles 2025](images/hips2025.png)
+## [![Hazard information profiles 2025](images/hips2025.png)](https://www.preventionweb.net/drr-glossary/hips)
+
+## [**2025 Hazard Information Profiles (HIPs) online reference**](https://www.preventionweb.net/drr-glossary/hips#meteorological)
+
+8 hazards clusters and 53 specific hazards
+
+| [Specific hazardSort descending](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type&order=title&sort=desc "sort by Specific hazard") | [Identifier](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type&order=field_hip_notation&sort=asc "sort by Identifier") | [Cluster](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type&order=field_hip_cluster_type&sort=asc "sort by Cluster") |
+|----|----|----|
+| [Avalanche](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0801) | MH0801 | Terrestrial |
+| [Blizzard](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0403) | MH0403 | Precipitation Related |
+| [Cold Wave](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0502) | MH0502 | Temperature Related |
+| [Depression or Cyclone (Low Pressure Area)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0306) | MH0306 | Pressure Related |
+| [Derecho](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0302) | MH0302 | Wind Related |
+| [Downburst](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0101) | MH0101 | Convective Related |
+| [Drought](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0401) | MH0401 | Precipitation Related |
+| [Dust storm or Sandstorm](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0201) | MH0201 | Lithometeors |
+| [Dzud](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0503) | MH0503 | Temperature Related |
+| [Estuarine (Coastal) Flooding](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0602) | MH0602 | Flood |
+| [Extra-tropical Cyclone](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0307) | MH0307 | Pressure Related |
+| [Flash Flood](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0603) | MH0603 | Flood |
+| [Flooding](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0600) | MH0600 | Flood |
+| [Fluvial (Riverine) Flooding](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0604) | MH0604 | Flood |
+| [Fog](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0202) | MH0202 | Lithometeors |
+| [Freeze](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0504) | MH0504 | Temperature Related |
+| [Freezing Rain (Ice storm)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0506) | MH0506 | Temperature Related |
+| [Frost (Hoar Frost)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0505) | MH0505 | Temperature Related |
+| [Gale (Strong Gale)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0303) | MH0303 | Wind Related |
+| [Glacial Lake Outburst Flood](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0607) | MH0607 | Flood |
+| [Glaze](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0507) | MH0507 | Temperature Related |
+| [Ground Frost](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0508) | MH0508 | Temperature Related |
+| [Groundwater Flooding](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0605) | MH0605 | Flood |
+| [Hail](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0404) | MH0404 | Precipitation Related |
+| [Haze](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0203) | MH0203 | Lithometeors |
+| [Heatwave](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0501) | MH0501 | Temperature Related |
+| [Ice Flow](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0707) | MH0707 | Marine |
+| [Ice-Jam Flood Including Debris](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0608) | MH0608 | Flood |
+| [Icing (Including Ice)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0509) | MH0509 | Temperature Related |
+| [Lightning (Electrical Storm)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0102) | MH0102 | Convective Related |
+| [Marine Heatwave](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0708) | MH0708 | Marine |
+| [Ponding (Drainage) Flood](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0609) | MH0609 | Flood |
+| [Rain](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0402) | MH0402 | Precipitation Related |
+| [Rogue Wave](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0701) | MH0701 | Marine |
+| [Sand haze](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0204) | MH0204 | Lithometeors |
+| [Sea Ice (Icebergs)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0706) | MH0706 | Marine |
+| [Seiche](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0702) | MH0702 | Marine |
+| [Smoke](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0205) | MH0205 | Lithometeors |
+| [Snow](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0405) | MH0405 | Precipitation Related |
+| [Snow Storm](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0406) | MH0406 | Precipitation Related |
+| [Snowmelt Flood](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0610) | MH0610 | Flood |
+| [Squall](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0304) | MH0304 | Wind Related |
+| [Storm Surge](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0703) | MH0703 | Marine |
+| [Storm Tides](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0704) | MH0704 | Marine |
+| [Sub-Tropical Cyclone](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0308) | MH0308 | Pressure Related |
+| [Surface Water Flooding](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0606) | MH0606 | Flood |
+| [Thaw](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0510) | MH0510 | Temperature Related |
+| [Thunderstorm](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0103) | MH0103 | Convective Related |
+| [Tornado](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0305) | MH0305 | Wind Related |
+| [Tropical Cyclone](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0309) | MH0309 | Wind Related |
+| [Tsunami](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0705) | MH0705 | Marine |
+| [Wind](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0301) | MH0301 | Wind Related |

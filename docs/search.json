@@ -884,6 +884,30 @@
     ]
   },
   {
+    "objectID": "grd/ambientales/erosioncostera.html",
+    "href": "grd/ambientales/erosioncostera.html",
+    "title": "Erosión costera",
+    "section": "",
+    "text": "Amenaza y vulnerabilidad por erosión costera en Colombia: enfoque regional para la gestión del riesgo. 2018. Invemar. Link.\nLanzamiento del libro Erosión costera en el litoral antioqueño, 2022. Link.\nPresent and Future Challenges of Coastal Erosion in Latin America. 2014. Link\nAre We Managing in the Right Way the Coastal Erosion along the Caribbean Coast of Colombia? 2020. Link.\nAlgunos expertos Colombia. * Nelson Rangel. Universidad del Atlantico. Link.\n\nAndrés Osorio. Universidad Nacional sede Medellin. Link.\nConstanza Ricaurte. INVEMAR. Link.\nVladimir Toro. UdeA. Link\nhttps://www.facebook.com/CorporacionAcademicaAmbiental/videos/482006680659849",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas ambientales",
+      "Erosión costera"
+    ]
+  },
+  {
+    "objectID": "grd/ambientales/erosioncostera.html#redes",
+    "href": "grd/ambientales/erosioncostera.html#redes",
+    "title": "Erosión costera",
+    "section": "Redes",
+    "text": "Redes\n\nCoastal Hazards.net. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas ambientales",
+      "Erosión costera"
+    ]
+  },
+  {
     "objectID": "grd/hidrol-meteorologicas/huracanes.html",
     "href": "grd/hidrol-meteorologicas/huracanes.html",
     "title": "Huracanes",
@@ -924,7 +948,7 @@
     "href": "grd/hidrol-meteorologicas/inundaciones.html#instituciones-internacionales",
     "title": "Inundaciones",
     "section": "Instituciones internacionales",
-    "text": "Instituciones internacionales",
+    "text": "Instituciones internacionales\n\nEmergency Copernicus. Link\nEuropean Commission. River Flood Hazard Maps at European and Global Scale. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas hidrológicas y meteorológicas",
@@ -936,7 +960,7 @@
     "href": "grd/hidrol-meteorologicas/inundaciones.html#amenaza-por-inundaciones",
     "title": "Inundaciones",
     "section": "Amenaza por inundaciones",
-    "text": "Amenaza por inundaciones\nEurope floods: new tool to estimate water depth and extent. 2024. Link.\nSatellite imaging reveals increased proportion of population exposed to floods. Nature, 2021. Link. - The fraction of the global population at risk of floods is growing. Nature News. 2021. Link. - ARSET – Monitoring and Modeling Floods using Earth Observations. NASA. Link. - Global Floods. Link - What’s in Floodwaters? Link.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Part 1: Overview of Flood Monitoring Tools based on Remote Sensing Observations\n\n\n\n\n\n\n\nAmenaza por inundaciones",
+    "text": "Amenaza por inundaciones\n\nEurope floods: new tool to estimate water depth and extent. 2024. Link.\nSatellite imaging reveals increased proportion of population exposed to floods. Nature, 2021. Link.\nThe fraction of the global population at risk of floods is growing. Nature News. 2021. Link.\nARSET – Monitoring and Modeling Floods using Earth Observations. NASA. Link.\nGlobal Floods. Link - What’s in Floodwaters? Link.\n\n\n\n\nThe share of people living in high-risk flood zones. Source: Rentschler, J, Salhab, M and Jafino, B. 2022. Flood Exposure and Poverty in 188 Countries. Nature Communications. Link.\n\n\n\n\n\nThe share of population that is flood-exposed and living und $5.50 per day. Source: Rentschler, J, Salhab, M and Jafino, B. 2022. Flood Exposure and Poverty in 188 Countries. Nature Communications.\n\n\n\n\n\nPercentage of the population in each sub-national administrative region that live on floodplains, which is defined as the 1000-year flood extent. The proportion of the reaches that are in each of the floodplain categories for each region is shown by the top pie charts in each box. The proportion of the population settled on the different types of floodplains is shown by the bottom pie chart in each box. Link\n\n\n\n\n\n\n\n\n\n\n\n\n\n Part 1: Overview of Flood Monitoring Tools based on Remote Sensing Observations\n\n\n\n\n\n\n\n Introduction to Flood Risk Management",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas hidrológicas y meteorológicas",
@@ -948,7 +972,7 @@
     "href": "grd/hidrol-meteorologicas/inundaciones.html#evaluación-del-riesgo-por-inundaciones",
     "title": "Inundaciones",
     "section": "Evaluación del riesgo por inundaciones",
-    "text": "Evaluación del riesgo por inundaciones\n\n\n\n\n\n\nEvaluación del riesgo por incendios forestales.",
+    "text": "Evaluación del riesgo por inundaciones",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas hidrológicas y meteorológicas",
@@ -960,7 +984,7 @@
     "href": "grd/hidrol-meteorologicas/inundaciones.html#comunicación-del-riesgo-por-inundaciones",
     "title": "Inundaciones",
     "section": "Comunicación del riesgo por inundaciones",
-    "text": "Comunicación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\nComunicación del riesgo por incendios forestales.",
+    "text": "Comunicación del riesgo por inundaciones\n\nFlood risk communication: a fundamental tool for disaster risk management. Prevention web. Link\nFlood Risk Communication Toolbox. US Army Corps of Engineers. Link.\nBridging the gap in flood risk communication: a comparative study of community and organizational social media posts using natural language processing. 2025. Link\n\n\n\n\n How to Communicate Flood Risk to the Public",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas hidrológicas y meteorológicas",
@@ -984,7 +1008,7 @@
     "href": "grd/hidrol-meteorologicas/inundaciones.html#manejo-de-desastres-por-inundaciones",
     "title": "Inundaciones",
     "section": "Manejo de desastres por inundaciones",
-    "text": "Manejo de desastres por inundaciones\n\nRed",
+    "text": "Manejo de desastres por inundaciones",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas hidrológicas y meteorológicas",
@@ -996,7 +1020,7 @@
     "href": "grd/hidrol-meteorologicas/inundaciones.html#lecturas",
     "title": "Inundaciones",
     "section": "Lecturas",
-    "text": "Lecturas\n\nHow to Know Your Flood Risk. NYT. 2025. Link.",
+    "text": "Lecturas\n\nHow to Know Your Flood Risk. NYT. 2025. Link.\nFlood hazard potential reveals global floodplain settlement patterns. Nature Comms. 2023. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas hidrológicas y meteorológicas",
@@ -1040,394 +1064,333 @@
     ]
   },
   {
-    "objectID": "grd/erosioncostera.html",
-    "href": "grd/erosioncostera.html",
-    "title": "Erosión costera",
+    "objectID": "grd/manejodedesastres.html",
+    "href": "grd/manejodedesastres.html",
+    "title": "Manejo de desastres",
     "section": "",
-    "text": "Amenaza y vulnerabilidad por erosión costera en Colombia: enfoque regional para la gestión del riesgo. 2018. Invemar. Link.\nLanzamiento del libro Erosión costera en el litoral antioqueño, 2022. Link.\nPresent and Future Challenges of Coastal Erosion in Latin America. 2014. Link\nAre We Managing in the Right Way the Coastal Erosion along the Caribbean Coast of Colombia? 2020. Link.\nAlgunos expertos Colombia. * Nelson Rangel. Universidad del Atlantico. Link.\n\nAndrés Osorio. Universidad Nacional sede Medellin. Link.\nConstanza Ricaurte. INVEMAR. Link.\nVladimir Toro. UdeA. Link\nhttps://www.facebook.com/CorporacionAcademicaAmbiental/videos/482006680659849",
+    "text": "Reliefweb. Link.\nOXFAM. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Amenazas ambientales",
-      "Erosión costera"
+      "Manejo de desastres"
     ]
   },
   {
-    "objectID": "grd/erosioncostera.html#redes",
-    "href": "grd/erosioncostera.html#redes",
-    "title": "Erosión costera",
-    "section": "Redes",
-    "text": "Redes\n\nCoastal Hazards.net. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas ambientales",
-      "Erosión costera"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html",
-    "href": "grd/conocimientodelriesgo.html",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "",
-    "text": "Procesos de la gestión del riesgo de desastres acorde con la ley 1523 de 2012",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#monitoreo-de-las-amenazas",
-    "href": "grd/conocimientodelriesgo.html#monitoreo-de-las-amenazas",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Monitoreo de las amenazas",
-    "text": "Monitoreo de las amenazas\n\nVisores Colombia\n\nSAMA Antioquía. DAGRAN. Link.\nSIATA. Valle de Aburrá. Link.\n\n\n\nRecursos\n\nRemote Sensing Tutorials. Government of Canada. Link.\nGee-community-catalog. Link.\nGeemap. Link.\nCloud-Based Remote Sensing with Google Earth Engine: Fundamentals and Applications. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#escenarios-de-riesgo",
-    "href": "grd/conocimientodelriesgo.html#escenarios-de-riesgo",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Escenarios de riesgo",
-    "text": "Escenarios de riesgo\n\nEffectiveness of California earthquake scenarios in motivating mitigation. Earthquake spectra. 2025. Link.\n\n SimCenter: A computational framework to simulate the impacts of natural hazards",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#física",
-    "href": "grd/conocimientodelriesgo.html#física",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Física",
-    "text": "Física\n\nThe use of empirical vulnerability functions to assess the response of buildings to tsunami impact: Comparative review and summary of best practice. Tarbotton, et al. Earth Science Reviews. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#social",
-    "href": "grd/conocimientodelriesgo.html#social",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Social",
-    "text": "Social\n\nIndicador de Condiciones de Vulnerabilidad Urbana. 2023. GFDRR. Link.\nLineamientos para el análisis de la vulnerabilidad social en los estudios de la gestión municipal del riesgo de desastres. UNGRD. 2017. Link.\n\nPDC. Vulnerability Indicators. PDC’s vulnerability analysis measures the physical, environmental, social, and economic conditions and processes that increase susceptibility of communities and systems to the damaging effects of hazards. Multiple factors influencing disaster outcomes, including those linked to poverty and development, are considered in the analysis.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#artículos-científicos",
-    "href": "grd/conocimientodelriesgo.html#artículos-científicos",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Artículos científicos",
-    "text": "Artículos científicos\n\nWe need to predict the people disasters will hit, not just the places. Nature 2025. Link.\nTerritorial vulnerability assessment frame in Colombia: Disaster risk management. Villegast et al. 2017. IJDRM. Link.\nFraming vulnerability, risk and societal responses: the MOVE framework. Natural Hazards. 2013. Link.\nSocial vulnerability in Colombia. 2020. IJDRR. Link.\nSocial vulnerability in a multi-hazard context: a systematic review. Environmental Research Letters. 2022. Link.\nCardona, O.D.: The need for rethinking the concepts of vulnerability and risk from a holistic perspective: a necessary review and criticism for effective risk management. In: Indicators of Risk Management and Vulnerability Reduction: Case Studies in Latin American Urban Areas, United Nations University, Institute for Environment and Human Security (2011). Link.\nExplaining differential vulnerability to climate change: A social science review. Wires Climate Change. 2018. Link.\nUnderstanding human vulnerability to climate change: A global perspective on index validation for adaptation planning. Science of The Total Environment. 2022. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#metodologias",
-    "href": "grd/conocimientodelriesgo.html#metodologias",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Metodologias",
-    "text": "Metodologias\n\nUnderstanding disaster risk: foundational concepts and principles. UNDRR. Link.\n\nWhy reducing risk matters\nComponents of risk\nRisk drivers\nKey concepts\nThe DRR glossary\nEngage in DRR\n\nDisaster, Planning and Development: Managing Natural Hazards to Reduce Loss. OEA. Link, Link.\nBernal G.A., Cardona OD., Marulanda M.C., Carreño ML. (2021) Dealing with Uncertainty Using Fully Probabilistic Risk Assessment for Decision-Making. In: Eslamian S., Eslamian F. (eds) Handbook of Disaster Risk Reduction for Resilience. Springer, Cham. https://doi.org/10.1007/978-3-030-61278-8_14\nOregon Natural Hazards Risk Assessment Upgrade. Link. Link. Youtube",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#metodolgias-de-fema",
-    "href": "grd/conocimientodelriesgo.html#metodolgias-de-fema",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Metodolgias de FEMA",
-    "text": "Metodolgias de FEMA\n\nNational Risk Index Documentation. Link.\nNational Risk Index for Natural Hazards. Visor.\nNational Risk Index Hazard Info Table\nUpdating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. Link.\nEarthquake Hazard Maps. Link.\nFlood Map. Link.\n\n\n\n\n Physical and social vulnerability for the multi-hazard risk analysis of components and systems\n\n\n Mapping Risk: The National Risk Index for Natural Hazards",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#herramientas-para-el-análisis-de-riesgos",
-    "href": "grd/conocimientodelriesgo.html#herramientas-para-el-análisis-de-riesgos",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Herramientas para el análisis de riesgos",
-    "text": "Herramientas para el análisis de riesgos\n\nThe CAPRA (Probabilistic Risk Assessment) Platform. Link.\nCuadernos de trabajo (ver repositorios)\nSoftware\n\nWORLD BANK CLIMATE AND DISASTER RISK SCREENING TOOLS. Link\nRisk Data Library. Country Climate & Disaster Risk Screening Tools. Link.\nRisk Changes. An open-source Spatial Decision Support tool for the analysis of Dynamic Multi-Hazard risk. Link.\n\nDocumentation. Link.\n\n\n\n\n\n\n Introduction\n\n\n Hazard\n\n\n\n\nArtículos científicos\n\nA review of risk analysis methods for natural disasters. Nat Hazards 100, 571–593. Sun, R. et al. 2020. Link\nHybrid loss exceedance curve (HLEC) for disaster risk assessment. Velazquez et al. 2020. Link\nAssessing global exposure and vulnerability towards natural hazards: the Disaster Risk Index. Peduzzi, et al. 2009, Nat. Hazards Earth Syst. Link\n\n\n\n\n\n Lesson 2：Six steps of disaster risk assessment\n\n\n Building resilience to compound and cascading disaster risks\n\n\n\n\n Webinar Modern Technology in Disaster Management: The Challenges\n\n\n Integrated Risk management in Civil Protection\n\n\n\n\n Modelo mundial de riesgo en la infraestructura\n\n\n Risk Analysis for Civil Protection\n\n\n\n\n Using Exceedance Probabilities for Disaster Management\n\n\nEvaluación del riesgo",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#evaluación-del-riesgo-en-la-infraestructura-escolar",
-    "href": "grd/conocimientodelriesgo.html#evaluación-del-riesgo-en-la-infraestructura-escolar",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Evaluación del riesgo en la infraestructura escolar",
-    "text": "Evaluación del riesgo en la infraestructura escolar\n\nWebinar ‘Community Hazard Risk Tools: Structural Fragility and Vulnerability and System Reliability Mapping’ by the UNESCO Chair in DRR & RE, UCL. Link.\n\nGithub repository.\n\n\n\n\n\n Community Hazard Risk Tools: Structural Frag. and Vuln. and System Reliability Mapping Day 1\n\n\n Day 2",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#eventos-compuestos",
-    "href": "grd/conocimientodelriesgo.html#eventos-compuestos",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Eventos compuestos",
-    "text": "Eventos compuestos\n\nGuidelines for Studying Diverse Types of Compound Weather and Climate Events. 2021. Link\nHigh impact compound events in Australia. Link\nSignificantly wetter or drier future conditions for one to two thirds of the world’s population. 2024. Nature Comm. Link\n\n\n\n\n Guidelines for studying diverse types of compound weather and climate events\n\n\nEventos compuestos",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#eventos-extremos",
-    "href": "grd/conocimientodelriesgo.html#eventos-extremos",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Eventos extremos",
-    "text": "Eventos extremos\n\nWhat is detection and attribution? ARC. Link.\nIPCC AR6. Weather and climate extreme events in changing climate. Link\nTOP 10 THINGS TO KNOW ABOUT EXTREME EVENT ATTRIBUTION. Climate Central. Link\nAttribution of Extreme Events to Climate Change. Annual Review of Environment and Resourses. 2023. Link\nClimate-Informed Risk Assessment for Extreme Events. AGU 24. Link.\nAlguna evidencia para Colombia. Link. Link. Link. Link. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#disaster-forensics---undrr",
-    "href": "grd/conocimientodelriesgo.html#disaster-forensics---undrr",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Disaster Forensics - UNDRR",
-    "text": "Disaster Forensics - UNDRR\nLas siguientes preguntas describen un cuestionario simplificado para realizar un análisis forense de cualquier desastre. Las preguntas siguen los tres pasos clave de la metodología FORIN (Investigaciones Forenses de Desastres) (UNDRR. Disaster Forensics. Link)\n\n\nPASO 1 – COMPRENDER EL ADN DEL DESASTRE\n\nAnalizar los factores específicos de peligro, exposición y vulnerabilidad que hicieron de este desastre un desastre único y significativo. Esto implica un análisis descriptivo del peligro, la exposición, las condiciones inseguras y los patrones subsiguientes de daños, pérdidas e impacto.\n¿Qué pasó? (Peligro)\n\n¿Qué desencadenó el acontecimiento?\n¿El evento principal condujo a eventos secundarios relacionados? Por ejemplo, ¿causó el terremoto deslizamientos de tierra o roturas de presas que provocaron inundaciones?\n\n¿Dónde se concentró el daño? (Exposición)\n\n¿Cómo se expusieron los elementos sociales y ambientales?\n¿Cómo ha evolucionado la exposición a lo largo del tiempo y el espacio en relación con el desarrollo planificado o no planificado y las amenazas físicas?\n¿Las regulaciones de zonificación, los controles de uso del suelo y los códigos de infraestructura eran adecuados para los niveles de riesgo existentes en diferentes áreas?\n¿Los cambios en los niveles de exposición se debieron a decisiones sociales sobre la ubicación o a cambios en el entorno físico? ¿Cuál fue el papel de la deforestación, el diseño y la construcción urbana, o incluso el cambio climático?\n\n\n\n¿Cuál era la estructura social y económica de las comunidades expuestas?\n¿Cómo se distribuyeron las pérdidas y los daños entre diferentes áreas, grupos sociales y tipos de infraestructura?\n¿Qué factores influyeron en la expansión territorial? ¿Se ocuparon las zonas más seguras antes que las más vulnerables?\n¿Las leyes y normas ambientales abordaron las preocupaciones sobre peligros y vulnerabilidad?\n¿Existió una relación clara entre la exposición a peligros y los niveles de pobreza? ¿Cómo aumentaron los factores de riesgo crónicos (desempleo, mala salud, drogadicción o violencia personal y social) el riesgo y el impacto de los desastres?\n¿Existe una legislación adecuada a nivel nacional y local, incluidos códigos de construcción, aplicación y especificidad en cuestiones de gestión de riesgos?\n¿Existe un seguro contra pérdidas o responsabilidad civil? ¿Es obligatorio?\n¿Se integró la gestión del riesgo de desastres en otras áreas de políticas como la planificación urbana, la gestión ambiental y los seguros?\n¿Existen capacidades de investigación y educación centradas en la concientización sobre los riesgos y la cobertura de seguros?\n\n¿Quién sufrió más y por qué? (vulnerabilidad)\n\n¿Cómo contribuyeron el crecimiento y la distribución de la población en el pasado al desastre?\n¿Qué papel desempeñaron la degradación ambiental y el agotamiento de los servicios ecosistémicos?\n¿Cuáles fueron los impactos de la pobreza y la distribución del ingreso?\n\n¿Qué fue resiliente?\n¿Cuáles fueron los elementos institucionales y de gobernanza que contribuyeron a la resiliencia?\nResultado del Paso 1 = Identificación de las cadenas de ADN clave (puntos de inflexión únicos) que hicieron de este desastre algo único. La inclusión de relatos del desastre y conversaciones con las personas afectadas puede profundizar el análisis y proporcionar una visión realista de las acciones propuestas para la reducción del riesgo.\n\n\n\nPASO 2 – TENDENCIAS FUTURAS\n\nAnalice más a fondo las áreas clave identificadas del ADN del desastre y prediga las posibles tendencias futuras hasta 2050. Por ejemplo, si la urbanización y los asentamientos informales fueron los principales contribuyentes a los daños causados ​​por las inundaciones, ¿cuáles son las tendencias actuales y futuras probables para la urbanización y los asentamientos informales?\nResultado del paso 2 = Realizar un análisis de previsión futura para identificar qué áreas de riesgo actual es probable que aumenten en el futuro.\n\n\n\nPASO 3 – APRENDIZAJE FORENSE\n\nFacilitar un debate entre múltiples partes interesadas para revisar y refinar el análisis, creando conjuntamente políticas potenciales y acciones prácticas para reducir el riesgo asociado con cada cadena de ADN identificada, considerando los impactos del desastre y los escenarios futuros",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#lecturas-varias",
-    "href": "grd/conocimientodelriesgo.html#lecturas-varias",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Lecturas varias",
-    "text": "Lecturas varias\n\nThe Hazards Posed by Mesoscale Lightning Megaflashes. Link.\nGMT Tutorial is an open source collection of ~65 tools for manipulating geographic and Cartesian data sets. Link\nHow smartphones are being used to monitor ageing bridges. Link.\nTHE COST OF DOING NOTHING. Link.\n97% de los POT no tiene estudios de amenazas y riesgo urbano. El Nuevo Siglo. Link.\nLos desastres no son naturales. El País. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/cursos.html",
-    "href": "grd/cursos.html",
-    "title": "Cursos, entrenamiento y redes",
-    "section": "",
-    "text": "The Australian Disaster Resilience Knowledge Hub\n\nEmergency planning collection. Link.\nDisasters. Link.\nGlossary. Link.\nEmergency Management Library. Link.\nRecovery Matters webinar series. Link.\nThe Australian Institute for Disaster Resilience. Link\n\nCONVERGE Training Modules. Link.\nDisaster Reduction Learning Center (DRLC). Link.\nRegional DDR e-learning platform. Link.\nThe National Disaster & Emergency Management University. FEMA. Link.\n\nIndependent Study Program. Link.\nCurriculum. Link.\n\nPacific Disaster Center. Online Courses. Link.\nDisaster Risk Management Training Center. Link.\n\nTraining Corner. Link.\nDisaster Risk Management Training online series 2022. European Commision. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Cursos, redes y recursos",
-      "Cursos en GRD"
-    ]
-  },
-  {
-    "objectID": "grd/cursos.html#el-riesgo-en-la-sociedad-moderna",
-    "href": "grd/cursos.html#el-riesgo-en-la-sociedad-moderna",
-    "title": "Cursos, entrenamiento y redes",
-    "section": "El riesgo en la sociedad moderna",
-    "text": "El riesgo en la sociedad moderna\n\n\n\n 1.1 The History of Risk\n\n\n 1.2 The Study of Risk: Security Studies\n\n\n\n\n 1.3 The Study of Risk: Safety Science\n\n\n 2.1 Risk Management\n\n\n\n\n 2.6 Risk Management: Strengths and Weaknesses\n\n\n 3.1 Risk Perception\n\n\n\n\nCoursera.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Cursos, redes y recursos",
-      "Cursos en GRD"
-    ]
-  },
-  {
-    "objectID": "grd/cursos.html#building-resilience-to-compound-and-cascading-disaster-risks",
-    "href": "grd/cursos.html#building-resilience-to-compound-and-cascading-disaster-risks",
-    "title": "Cursos, entrenamiento y redes",
-    "section": "Building resilience to compound and cascading disaster risks",
-    "text": "Building resilience to compound and cascading disaster risks\n\n\n\n Building resilience to compound and cascading disaster risks\n\n\n Lesson 1：Compound and cascading disaster risks. What are they?\n\n\n\n\n Lesson 2：Six steps of disaster risk assessment\n\n\n Lesson 3：Designing resilience enhancing measures\n\n\n\n\n Lesson 4：Adaptive implementation framework\n\n\n Conclusion：Summary of the course",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Cursos, redes y recursos",
-      "Cursos en GRD"
-    ]
-  },
-  {
-    "objectID": "grd/tecnologicas/amenazastecnol.html",
-    "href": "grd/tecnologicas/amenazastecnol.html",
-    "title": "Amenazas tecnológicas",
-    "section": "",
-    "text": "Emerging Natech risk management in Colombia: A survey of governmental organizations. Safety Science, 128. Link. - The effects of extreme winds on atmospheric storage tanks. Reliability Engineering & System Safety, 195, 106686. Link\n\n\nSimposio Natech 2022\n\n Natech 22 – 1\nSala paralela: día 1, día 2.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas tecnológicas"
-    ]
-  },
-  {
-    "objectID": "grd/educacion.html",
-    "href": "grd/educacion.html",
-    "title": "Educación en Gestión del Riesgo de Desastres",
-    "section": "",
-    "text": "Ley 2272 de 2022 Servicio Social para la Paz\nDecreto 1079 de 2024. para reglamentar el Servicio Social para la Paz creado mediante la Ley 2272 de 2022. Link\nLey 2427 de 2024. Por medio de la cual se establece la capacitación, la profundización y la enseñanza para la sostenibilldad ambiental, cambio climático y gestión del riesgo de desastres. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Educación"
-    ]
-  },
-  {
-    "objectID": "grd/educacion.html#lista-de-expertos-y-lecturas",
-    "href": "grd/educacion.html#lista-de-expertos-y-lecturas",
-    "title": "Educación en Gestión del Riesgo de Desastres",
-    "section": "Lista de expertos y lecturas",
-    "text": "Lista de expertos y lecturas\n\nJohn Falk. Link\n\nFalk, J. H., & Dierking, L. D. (2013). The Museum Experience Revisited. Link.\n\n\n\n\nExpertos:\n\nJohn Falk. Link\nFalk, J. H., & Dierking, L. D. (2013). The Museum Experience Revisited. Link.\n\nLecturas\n\nBarriault, C., & Pearson, D. (2010). Assessing exhibits for learning in science centers: A practical tool. Visitor Studies, 13(1), 90–106. Link.\nMa, J., Shahar, E., Eliceiri, K., Mehta, G., & Yu, K. (2019). Shedding light: Integrating bioimaging technologies into the design of an interactive museum exhibit. DIS 2019 – Proceedings of the 2019 ACM Designing Interactive Systems Conference. Link.\nKing, D., Ma, J., Armendariz, A., & Yu, K. (2018). Developing Interactive Exhibits with Scientists: Three Example Collaborations from the Life Sciences Collection at the Exploratorium. Integrative and Comparative Biology, 58(1), 94–102. Link.\nKratz, S. & Merritt E. (2011). Museums and the future of education. On the Horizon, 19 (3), 188-195\nMacDonald, E., Johnson, V., Gillies, M., & Johnston, D. (2017). The impact of a museum-based hazard education program on students, teachers and parents. International Journal of Disaster Risk Reduction, 21, 360–366. Link.\nMartin, A. J., Durksen, T. L., Williamson, D., Kiss, J., & Ginns, P. (2016). The role of a museum-based science education program in promoting content knowledge and science motivation. Journal of Research in Science Teaching, 53 (9), 1364–1384. Link.\nMotschnig, R. & Cornelius-White J. (2012). Experiential/Significant Learning. Encyclopedia of the Sciences of Learning. Springer US. pp: 1219-1223. Link\nMuseums and the future of education. 2011. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Educación"
-    ]
-  },
-  {
-    "objectID": "grd/incendiosforestales.html",
-    "href": "grd/incendiosforestales.html",
-    "title": "Incendios forestales",
-    "section": "",
-    "text": "UNGRD. Link\nMinambiente. Link. Link\nIDEAM. Link\nBomberos de Colombia. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas ambientales",
-      "Incendios forestales"
-    ]
-  },
-  {
-    "objectID": "grd/incendiosforestales.html#instituciones-nacionales",
-    "href": "grd/incendiosforestales.html#instituciones-nacionales",
-    "title": "Incendios forestales",
-    "section": "",
-    "text": "UNGRD. Link\nMinambiente. Link. Link\nIDEAM. Link\nBomberos de Colombia. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas ambientales",
-      "Incendios forestales"
-    ]
-  },
-  {
-    "objectID": "grd/incendiosforestales.html#instituciones-internacionales",
-    "href": "grd/incendiosforestales.html#instituciones-internacionales",
-    "title": "Incendios forestales",
-    "section": "Instituciones internacionales",
-    "text": "Instituciones internacionales\n\nARSET – Observaciones de Satélites y Herramientas para el Riesgo, Detección y Análisis de Incendios. Link)\nBrazil. Programa Queimadas. Link\nCopernicusLAC, case 6. Link. Link. Incendios: cartografía de eventos, peligro y recuperación.\nESA. Long-term dataset to analyse global fire trend. Link\nFire Information for Resource Management System. NASA. Link\nGlobal Wildfire Information System. Link\nHMS Smoke Explorer. Link\nIFRC. Link\nMODIS fire data in GRASS GIS. Link\nNational Indicative Aggregated Fire Extent Datasets. Link\nTranscending the disaster paradigm: Understanding persistence of animal populations in fire-prone environments. Global Change Biology, 2021. Link\n10 Years Beyond Bushfires. Community, Resilience and Recovery. Australia. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas ambientales",
-      "Incendios forestales"
-    ]
-  },
-  {
-    "objectID": "grd/incendiosforestales.html#amenaza-por-incendios-forestales",
-    "href": "grd/incendiosforestales.html#amenaza-por-incendios-forestales",
-    "title": "Incendios forestales",
-    "section": "Amenaza por incendios forestales",
-    "text": "Amenaza por incendios forestales\n\nMonitoreo de puntos de calor en Colombia. IDEAM. link\nBoletines técnicos IDEAM. Boletín de Alertas por Pronóstico de la Amenaza por Incendios de la Cobertura Vegetal (BAICV). Link\nPROTOCOLO PARA LA REALIZACIÓN DE MAPAS DE ZONIFICACIÓN DE RIESGOS A INCENDIOS DE LA COBERTURA VEGETAL. IDEAM, 2011. Link\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAmenaza por incendios forestales",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas ambientales",
-      "Incendios forestales"
-    ]
-  },
-  {
-    "objectID": "grd/incendiosforestales.html#evaluación-del-riesgo-de-incendios-forestales",
-    "href": "grd/incendiosforestales.html#evaluación-del-riesgo-de-incendios-forestales",
-    "title": "Incendios forestales",
-    "section": "Evaluación del riesgo de incendios forestales",
-    "text": "Evaluación del riesgo de incendios forestales\n\nEstrategia E2050. Link\nWildfire hazard and risk assessment. UNDRR. Link\nA wildfire risk assessment framework for land and resource management. US Forest Service. 2013. Link\nUSGS Wildfire Hazard and Risk Assessment Clearinghouse. Link.\nWildfire Risk Assessment. Copernicus. Link\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvaluación del riesgo por incendios forestales.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas ambientales",
-      "Incendios forestales"
-    ]
-  },
-  {
-    "objectID": "grd/incendiosforestales.html#comunicación-del-riesgo-por-incendios-forestales",
-    "href": "grd/incendiosforestales.html#comunicación-del-riesgo-por-incendios-forestales",
-    "title": "Incendios forestales",
-    "section": "Comunicación del riesgo por incendios forestales",
-    "text": "Comunicación del riesgo por incendios forestales\n\nNew good practice guide on Wildfire Risk Awareness and Communication. 2024. European Union. Link\nWildfire risk perception and communication in disadvantaged communities: Insights from Eastern Coachella Valley in Southern California. 2025. International Journal of Disaster Risk Reduction. Link\nForest fires risk communication. Operational recommendations to improve social prevention. eFIRECOM project. 2016. Link\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicación del riesgo por incendios forestales.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas ambientales",
-      "Incendios forestales"
-    ]
-  },
-  {
-    "objectID": "grd/incendiosforestales.html#reducción-del-riesgo-de-incendios-forestales",
-    "href": "grd/incendiosforestales.html#reducción-del-riesgo-de-incendios-forestales",
-    "title": "Incendios forestales",
-    "section": "Reducción del riesgo de incendios forestales",
-    "text": "Reducción del riesgo de incendios forestales\n\nPropuesta para el manejo integral del fuego en Colombia. 2019. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas ambientales",
-      "Incendios forestales"
-    ]
-  },
-  {
-    "objectID": "grd/incendiosforestales.html#manejo-de-desastres-de-incendios-forestales",
-    "href": "grd/incendiosforestales.html#manejo-de-desastres-de-incendios-forestales",
-    "title": "Incendios forestales",
-    "section": "Manejo de desastres de incendios forestales",
-    "text": "Manejo de desastres de incendios forestales\n\nRed Nacional de Brigadas Forestales Comunitarias. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas ambientales",
-      "Incendios forestales"
-    ]
-  },
-  {
-    "objectID": "grd/incendiosforestales.html#lecturas",
-    "href": "grd/incendiosforestales.html#lecturas",
-    "title": "Incendios forestales",
+    "objectID": "grd/manejodedesastres.html#lecturas",
+    "href": "grd/manejodedesastres.html#lecturas",
+    "title": "Manejo de desastres",
     "section": "Lecturas",
-    "text": "Lecturas\n\nClimate change is increasingly affecting fires worldwide. Nature. 2024. Link",
+    "text": "Lecturas\n\nWe need to predict the people disasters will hit, not just the places. Nature 2025. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Amenazas ambientales",
-      "Incendios forestales"
+      "Manejo de desastres"
     ]
   },
   {
-    "objectID": "grd/incendiosforestales.html#entrenamiento",
-    "href": "grd/incendiosforestales.html#entrenamiento",
-    "title": "Incendios forestales",
-    "section": "Entrenamiento",
-    "text": "Entrenamiento\n\nCopernicus LAC MOOC. Link.\nARSET NASA wildfire training. LiInk",
+    "objectID": "grd/conocimiento-indicadores.html",
+    "href": "grd/conocimiento-indicadores.html",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "",
+    "text": "Pacific Disaster Center.\n\nColombia’s data-driven approach to creating safer, more resilient communities. Link.\nNDPBA Colombia Final Report. 2025. Link.\n\nAtlas de Riesgo de Colombia: revelando los desastres latentes. Unidad Nacional para la Gestión del Riesgo de Desastres. 2018. Link.\nInform Risk. 2015. Link.\nDatos del Consolidado de atención a emergencias. UNGRD. Link.\nDESINVENTAR. Base de datos de pérdidas históricas en Colombia (período 1970-2011). Link.\nCOLOMBIA – Censo Nacional de Población y Vivienda – CNPV – 2018. Link.\nOtros riesgos.\n\nCIPE. Colombia Risk Analysis: Subnational and Regional Risk Indices.Link. Link.\n\n\n\n\n\nINFORM subnational model of Colombia\n\n\nPacific Disaster Center Multi Risk index 2024. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Amenazas ambientales",
-      "Incendios forestales"
+      "Indicadores de riesgo nacionales y mundiales"
     ]
   },
   {
-    "objectID": "grd/incendiosforestales.html#repos",
-    "href": "grd/incendiosforestales.html#repos",
-    "title": "Incendios forestales",
-    "section": "Repos",
-    "text": "Repos\n\nDownload wildfire hotspots detected by NASA satellites and the Fire Information for Resource Management System (FIRMS). Link",
+    "objectID": "grd/conocimiento-indicadores.html#lecturas",
+    "href": "grd/conocimiento-indicadores.html#lecturas",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nNatural hazard risk assessments at the global scale. 2020. NHESS. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Amenazas ambientales",
-      "Incendios forestales"
+      "Indicadores de riesgo nacionales y mundiales"
     ]
   },
   {
-    "objectID": "grd/incendiosforestales.html#videos",
-    "href": "grd/incendiosforestales.html#videos",
-    "title": "Incendios forestales",
-    "section": "Videos",
-    "text": "Videos",
+    "objectID": "grd/conocimiento-indicadores.html#emdat",
+    "href": "grd/conocimiento-indicadores.html#emdat",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "EmDat",
+    "text": "EmDat\n\nEM-DAT International Disaster Database. Link.\n\nEM-DAT Documentation. Link.\nEM-DAT: the Emergency Events Database. Link\n\n\n\n\n\nEmDat\n\n\n EmDat",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Amenazas ambientales",
-      "Incendios forestales"
+      "Indicadores de riesgo nacionales y mundiales"
+    ]
+  },
+  {
+    "objectID": "grd/conocimiento-indicadores.html#inform-risk-index",
+    "href": "grd/conocimiento-indicadores.html#inform-risk-index",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "Inform Risk Index",
+    "text": "Inform Risk Index\n\nInform Risk Index. Link. Link.\n\nLatin America and Caribbean. Link.\n\n\n\n\n\nINFORM Subnational Risk Index\n\n\n\n\n\nColombia World Risk Report",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Indicadores de riesgo nacionales y mundiales"
+    ]
+  },
+  {
+    "objectID": "grd/conocimiento-indicadores.html#world-risk-index",
+    "href": "grd/conocimiento-indicadores.html#world-risk-index",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "World Risk Index",
+    "text": "World Risk Index\n\nWorld Risk Index. Link. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Indicadores de riesgo nacionales y mundiales"
+    ]
+  },
+  {
+    "objectID": "grd/conocimiento-indicadores.html#the-world-risk-report",
+    "href": "grd/conocimiento-indicadores.html#the-world-risk-report",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "The World Risk report",
+    "text": "The World Risk report\n\nThe World Risk report. Link.\n\n\n\n\n\nThe World Risk Report",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Indicadores de riesgo nacionales y mundiales"
+    ]
+  },
+  {
+    "objectID": "grd/conocimiento-indicadores.html#pacific-disaster-center",
+    "href": "grd/conocimiento-indicadores.html#pacific-disaster-center",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "Pacific Disaster Center",
+    "text": "Pacific Disaster Center\nGlobal Disaster Risk Trends. Select a country to view 10-year national trends.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Indicadores de riesgo nacionales y mundiales"
+    ]
+  },
+  {
+    "objectID": "grd/conocimiento-indicadores.html#world-economic-forum",
+    "href": "grd/conocimiento-indicadores.html#world-economic-forum",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "World Economic Forum",
+    "text": "World Economic Forum\n\nGlobal Risks Report 2024. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Indicadores de riesgo nacionales y mundiales"
+    ]
+  },
+  {
+    "objectID": "grd/amenazasextraterrestres.html",
+    "href": "grd/amenazasextraterrestres.html",
+    "title": "Amenazas extraterrestres",
+    "section": "",
+    "text": "Comisión Colombiana del Espacio. Link\nFuerza Aerospacial\nIGAC.\n\nOffice for Outer Space Affairs UN-SPIDER Knowledge Portal. Link , Link\n\nAstroCo. Link).\n\nPlan de Acción para Colombia ante la amenaza de asteroides (el caso del Asteroide 2024 YR4). 2025. Link\n\nCONPES Desarrollo Espacial. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas extraterrestres"
+    ]
+  },
+  {
+    "objectID": "grd/amenazasextraterrestres.html#instituciones-nacionales",
+    "href": "grd/amenazasextraterrestres.html#instituciones-nacionales",
+    "title": "Amenazas extraterrestres",
+    "section": "",
+    "text": "Comisión Colombiana del Espacio. Link\nFuerza Aerospacial\nIGAC.\n\nOffice for Outer Space Affairs UN-SPIDER Knowledge Portal. Link , Link\n\nAstroCo. Link).\n\nPlan de Acción para Colombia ante la amenaza de asteroides (el caso del Asteroide 2024 YR4). 2025. Link\n\nCONPES Desarrollo Espacial. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas extraterrestres"
+    ]
+  },
+  {
+    "objectID": "grd/amenazasextraterrestres.html#instituciones-internacionales",
+    "href": "grd/amenazasextraterrestres.html#instituciones-internacionales",
+    "title": "Amenazas extraterrestres",
+    "section": "Instituciones internacionales",
+    "text": "Instituciones internacionales\n\nONU. Oficina para Asuntos del Espacio Ultraterrestre. Link. Link.\nOficina Regional de Apoyo en Colombia. Link.\nONU, Near-Earth Objects (NEOs). Link\nInternational Asteroid Warning Network (IAWN). Link\nNASA, Saving earth form asteroids. Link. Link.\nThe risk from space. Prevention web. Link.\nFireballs Nasa. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas extraterrestres"
+    ]
+  },
+  {
+    "objectID": "grd/amenazasextraterrestres.html#amenazas-extraterrestres",
+    "href": "grd/amenazasextraterrestres.html#amenazas-extraterrestres",
+    "title": "Amenazas extraterrestres",
+    "section": "Amenazas extraterrestres",
+    "text": "Amenazas extraterrestres\n\nEM-DAT Classification System. Link.\n7th IAA Planetary Defense Conference and 2017 IAA Planetary Defense Conference\n\nSession 1: Key International and Political Developments\nSession 2: Advancements and Progress in NEO Discovery\n\n\n\n\n\n La amenaza del impacto de asteroides cercanos a la Tierra\n\n\n Biografía de un impacto: el meteorito ruso | Ciencia en Bicicleta | Planetario Medellín\n\n\n\n\n Meteor Hits Russia Feb 15, 2013\n\n\n NASA | NPP Sees Aftermath of the Chelyabinsk Meteor\n\n\n\n\n 7th IAA Planetary Defense Conference Day 2: Discovery and Characterization",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas extraterrestres"
+    ]
+  },
+  {
+    "objectID": "grd/amenazasextraterrestres.html#evaluación-del-riesgo",
+    "href": "grd/amenazasextraterrestres.html#evaluación-del-riesgo",
+    "title": "Amenazas extraterrestres",
+    "section": "Evaluación del riesgo",
+    "text": "Evaluación del riesgo\n\nRisk assessment for asteroid impact threat scenarios. 2024. Link\nIntroduction to Asteroid Impact Risk Assessment. NASA. Link\nA probabilistic asteroid impact risk model: assessment of sub-300 m impacts. 2027. Link\n7th IAA Planetary Defense Conference Day 2: Discovery and Characterization\n\nSession 8 Impact Risk Assessment & Decision to Act",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas extraterrestres"
+    ]
+  },
+  {
+    "objectID": "grd/amenazasextraterrestres.html#comunicación-del-riesgo",
+    "href": "grd/amenazasextraterrestres.html#comunicación-del-riesgo",
+    "title": "Amenazas extraterrestres",
+    "section": "Comunicación del riesgo",
+    "text": "Comunicación del riesgo\n\n7th IAA Planetary Defense Conference Day 2: Discovery and Characterization\n\nSession 9: Public Education & Communication\n\n\n\n\n\n 7th IAA Planetary Defense Conference Day 5: Decision to Act and Public Engagement",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas extraterrestres"
+    ]
+  },
+  {
+    "objectID": "grd/amenazasextraterrestres.html#reducción-del-riesgo",
+    "href": "grd/amenazasextraterrestres.html#reducción-del-riesgo",
+    "title": "Amenazas extraterrestres",
+    "section": "Reducción del riesgo",
+    "text": "Reducción del riesgo\n\n7th IAA Planetary Defense Conference Day 2: Discovery and Characterization\n\nSession 4: Deflection and Disruption Models & Testing",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas extraterrestres"
+    ]
+  },
+  {
+    "objectID": "grd/amenazasextraterrestres.html#manejo-de-desastres",
+    "href": "grd/amenazasextraterrestres.html#manejo-de-desastres",
+    "title": "Amenazas extraterrestres",
+    "section": "Manejo de desastres",
+    "text": "Manejo de desastres\n\n7th IAA Planetary Defense Conference Day 2: Discovery and Characterization\n\nSession 6: Impact Consequences\nSession 7: Disaster Response\nSession 10: Threat Response Exercise\n\n\n\n\n\n 7th IAA Planetary Defense Conference Day 4: Impact Effects and Disaster Management",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas extraterrestres"
+    ]
+  },
+  {
+    "objectID": "grd/amenazasextraterrestres.html#ciencia",
+    "href": "grd/amenazasextraterrestres.html#ciencia",
+    "title": "Amenazas extraterrestres",
+    "section": "Ciencia",
+    "text": "Ciencia\n\n9th IAA Planetary Defense Conference. Link Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas extraterrestres"
+    ]
+  },
+  {
+    "objectID": "grd/amenazasextraterrestres.html#lecturas",
+    "href": "grd/amenazasextraterrestres.html#lecturas",
+    "title": "Amenazas extraterrestres",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nWebinar - ¿Por qué desviar asteroides y estudiar sus meteoritos? Link.\nPodcast. Desafíos y soluciones en la detección de asteroides. UNAL, 2025. Link.\nEl impacto de pequeños asteroides sobre la Tierra. 2015. Revista Investigación y Ciencia. Link.\nMeteorite impacts in the ocean: the danger of tsunamis on the coast of Buenos Aires Province, Argentina. 2020. Link\nCan we predict the impact conditions of metre-sized meteoroids? 2019. Link.\nSegundo festival colombiano del asteroide. Link -\nAlgunos expertos\n\nJosep M. Trigo-Rodriguez. España. Link. Link.\nJorge Zuluaga. Colombia. Link.\nPablo Restrepo. Colombia. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas extraterrestres"
+    ]
+  },
+  {
+    "objectID": "grd/sat.html#inform-risk",
+    "href": "grd/sat.html#inform-risk",
+    "title": "Sistemas de Alerta Temprana",
+    "section": "Inform Risk",
+    "text": "Inform Risk\n\nInform@Risk Sistema Participativo de Alertas Tempranas en Bello Oriente. Facebook, link.\n\n\n\n\n Entrevista con Carolina García Londoño, coordinadora Inform@risk Urbam, Eafit\n\n\n Ecuador. Fortalecimiento de Capacidades en Gestión de Riesgos con la metodología INFORM Index For Risk",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Sistemas de alerta temprana"
+    ]
+  },
+  {
+    "objectID": "grd/cienciaytecnologia.html#ciencia-y-tecnología",
+    "href": "grd/cienciaytecnologia.html#ciencia-y-tecnología",
+    "title": "Ciencia y tecnología",
+    "section": "Ciencia y tecnología",
+    "text": "Ciencia y tecnología\n\nDisaster Risk Science: A Geographical Perspective and a Research Framework. 2020. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciencia y tecnología"
+    ]
+  },
+  {
+    "objectID": "grd/cienciaytecnologia.html#libros-de-referencia-nacionales",
+    "href": "grd/cienciaytecnologia.html#libros-de-referencia-nacionales",
+    "title": "Ciencia y tecnología",
+    "section": "Libros de referencia nacionales",
+    "text": "Libros de referencia nacionales\n\nLos habitantes en la gestión del riesgo : acciones cotidianas, gobernanza adaptativa y cambio climático. UNAL. 2023. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciencia y tecnología"
+    ]
+  },
+  {
+    "objectID": "grd/cienciaytecnologia.html#libros-de-referencia-internacionales",
+    "href": "grd/cienciaytecnologia.html#libros-de-referencia-internacionales",
+    "title": "Ciencia y tecnología",
+    "section": "Libros de referencia internacionales",
+    "text": "Libros de referencia internacionales\n\nThe Routledge Handbook of Hazards and Disaster Risk Reduction. 2012. Link.\nThe Routledge Handbook of Disaster Risk Reduction Including Climate Change Adaptation. 2017. Link.\nCrisis and Emergency Management: Theory and Practice, Second Edition. 2017. Link.\nExtreme Natural Hazards, Disaster Risks and Societal Implications. 2014. Link.\nEncyclopedia of Natural Hazards. 2013. Link.\nEncyclopedia of Natural Hazard Science. OUP. Link.\nEducation for Sustainable Development and Disaster Risk Reduction. 2014. Link.\nIntegrated Research on Disaster Risks. Springer. 2021. Link.\nIntroduction to Catastrophe Risk Modelling. A Physics-based Approach. 2025. Link. Link\nNatural Hazards, Second Edition: Explanation and Integration. 2017. Link.\nNatural Hazards and Disasters. Fifth Ed. Hyndman. 2017. Link.\nNatural Catastrophe Risk Management and Modelling: A Practitioner’s Guide. Link\nThe Role of Ecosystems in Disaster Risk Reduction. 2013. Link. ***\nSocial Vulnerability to Disasters, Second Edition. 2013. Link.\nSystemic Risk: History, Measurement and Regulation. 2019. Link.\nSystemic Disaster Risk Handbook. 2021\nSustainable Development and Disaster Risk Reduction. 2016. Link.\nNatural Climate Solutions Handbook: A Technical Guide for Assessing NatureBased Mitigation Opportunities in Countries. 2021. Link.\nThe Invention of Disaster. Power and Knowledge in Discourses on Hazard and Vulnerability. Routledge. 2022. Link.\nCreating Resilient Futures. Integrating Disaster Risk Reduction, Sustainable Development Goals and Climate Change Adaptation Agendas. 2022. Springer. Link.\nHandbook on Climate Change and Disasters. 2023. Link.\nDisaster Risk Reduction for Resilience. Climate Change and Disaster Risk Adaptation. 2023. Link\nFísica del caos en la predicción meteorológica. 2023. AEMET España. Link.\nLecturas sobre conceptos\n\nManaging the Risks of Extreme Events and Disasters to Advance Climate Change Adaptation. IPCC. 2012. Link.\n\nChapter 2. Determinants of risk: exposure and vulnerability. Link.\nGestión de los riesgos de fenómenos meteorológicos extremos y desastres para mejorar la adaptación al cambio climático. IPCC, 2012. Link. Link.\n\nBriefing note on systemic risk. UNDRR, 2022. Link.\nA framework for complex climate change risk assessment. One Earth. 2021. Link.\n\n\n\n\n\n Systemic Disaster Risk Handbook\n\n\n Climate change and disaster risk management\n\n\n\n\n Los desastres no son naturales",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciencia y tecnología"
+    ]
+  },
+  {
+    "objectID": "grd/cienciaytecnologia.html#revistas-en-gestión-de-riesgos",
+    "href": "grd/cienciaytecnologia.html#revistas-en-gestión-de-riesgos",
+    "title": "Ciencia y tecnología",
+    "section": "Revistas en gestión de riesgos",
+    "text": "Revistas en gestión de riesgos\n\nInternacionales\n\nInternational Journal of Disaster Risk Reduction. Link.\nInternational Journal of Disaster Risk Science. Link.\nNatural Hazards. Link.\nNatural Hazards Review. Link.\nNatural Hazards and Earth System Sciences. Link.\nEnvironmental Science and Policy. Link.\nEnvironment: Science and Policy for Sustainable Development. Link.\nProgress in Disaster Science. Link.\nSafety Science. Link.\nRisk Analysis. Link.\nRisk, Hazards, & Crisis in Public Policy. Link.\nAdvances in Natural and Technological Hazards Research. Link.\nNature, Collection Natural Hazards. Link.\n\nNatural Hazard Center.\n\nList of Hazards and Disaster Journals. Link.\nResearch Check Sheets Series. Link\n\nLatinoamericanas\n\nRevista de Estudios Latinoamericanos sobre Reducción del Riesgo de Desastres REDER. Link.\n\nColombianas\n\nCuadernos de Geografía: Revista Colombiana de Geografía. Link.\nBoletín de Geología. Link.\nEarth Sciences Research Journal. Link.\nCT y F – Ciencia, Tecnologia y Futuro. Link.\nGeología Colombiana. Link.\nIngenieria e Investigacion. Link.\nRevista Facultad de Ingenieria. Link.\nRevistas de divulgación Seguros Sura. Link.\nRevista DYNA. Link.\nPerspectiva Geográfica. Link.\nLegislación prospectiva. Link.\n\nRanking de Revistas en GRD\n\nEn google académico\n\nArea Emergency management. Link.\n\nEn SJR\n\nArea Safety research. Link Latinoamerica. Link.\nArea Geography, Planning and Development. Link. Latinoamerica. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciencia y tecnología"
+    ]
+  },
+  {
+    "objectID": "grd/cienciaytecnologia.html#algunos-investigadores-internacionales-en-drr",
+    "href": "grd/cienciaytecnologia.html#algunos-investigadores-internacionales-en-drr",
+    "title": "Ciencia y tecnología",
+    "section": "Algunos investigadores Internacionales en DRR",
+    "text": "Algunos investigadores Internacionales en DRR\n-   Irasema Alcántara Ayala. [*Link*](https://scholar.google.co.uk/citations?hl=en&user=bDAzleQAAAAJ&view_op=list_works&sortby=pubdate).\n-   David E. Alexander. [*Link*](https://scholar.google.co.uk/citations?hl=en&user=F6l81zAAAAAJ).\n-   Susan L. Cutter. [*Link*](https://scholar.google.com/citations?hl=es&user=BCo8hAwAAAAJ&view_op=list_works&sortby=pubdate).\n-   Juergen Weichselgartner. [*Link*](https://scholar.google.com/citations?hl=es&user=fES1svQAAAAJ&view_op=list_works&sortby=pubdate).\n-   Benigno Aguirre. [*Link*](https://scholar.google.com/citations?hl=es&user=i36JlYgAAAAJ&view_op=list_works&sortby=pubdate).\n-   Douglas Paton (Risk communication). [*Link*](https://scholar.google.com/citations?hl=en&user=3luSZvYAAAAJ&view_op=list_works).\n-   JC Gaillard. [*Link*](https://jcgaillard.wordpress.com/).\n-   Gonzalo Lizarralde. [*Link*](https://scholar.google.com/citations?user=T6VcEwUAAAAJ&hl=es&oi=ao).\n-   Cees Van Westen. [*Link*](https://scholar.google.com/citations?hl=es&user=Y_wCIDYAAAAJ&view_op=list_works&sortby=pubdate)\n\nEventos internacionales\n\nAnnual Natural Hazards Workshop. Link.\nICGNH 2020: 14. International Conference on Geography and Natural Hazards. Link.\n\nRiesgos y salud pública\n\nThe Lancet Countdown: tracking progress on health and climate change. Link.\n\nProgramas institucionales asociados a la ciencia de los desastres\n\nServicio Geológico Colombiano. Plan Estratégico del Conocimiento Geocientífico del Territorio Colombiano 2022 – 2032.Link.\nPlan Estratégico Nacional de Investigación Ambiental – PENIA. Link.\n\nCiencia y datos abiertos para DRR\n\nOpenDRI Open data for resilience. Link.\nDigital Public Goods for Disaster Risk Reduction in a Changing Climate. Banco Mundial. 2023. Link.\nOpen Data for Resilient Urban Planning. Link. Github. Link.\nGFDRR open-risk-data-dashboard. Link.\nCODATA.\n\nFAIR Data for Disaster Risk Research. Link.\nWebinars. Link.\nCODATA-RDA Schools of Research Data Science. Link.\n\n\nInaSAFE is free software that produces realistic natural hazard impact scenarios for better planning. Link.\nUNESCO. Multistakeholder Consultations on Open Science. Link.\nLecturas\n\nHarnessing risk-informed data for disaster and climate resilience. 2022. Link. Link.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n&lt;/div&gt;\n&lt;div class=\"quarto-layout-cell\" style=\"flex-basis: 50.0%;justify-content: flex-start;\"&gt;",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciencia y tecnología"
+    ]
+  },
+  {
+    "objectID": "grd/cienciaytecnologia.html#lecturas",
+    "href": "grd/cienciaytecnologia.html#lecturas",
+    "title": "Ciencia y tecnología",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nArtificial intelligence for climate prediction of extremes: State of the art, challenges, and future perspectives. 2025. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciencia y tecnología"
+    ]
+  },
+  {
+    "objectID": "grd/cienciaytecnologia.html#science-technology-and-academia.",
+    "href": "grd/cienciaytecnologia.html#science-technology-and-academia.",
+    "title": "Ciencia y tecnología",
+    "section": "Science, Technology and Academia.",
+    "text": "Science, Technology and Academia.\n\nUNDRR. Link.\nGFDRR Innovation. Link\nAPRU Multi-Hazards. Link.\nThe science and technology roadmap to support the implementation of the Sendai Framework for Disaster Risk Reduction 2015-2030. Link.\nPrevention Web Science and Technology. Link.\n30 innovations\n\nDisaster risk reduction and innovations. Progress in Disaster Science, 2019. Link.\n30 Innovations linking disaster risk reduction with sustainable development goals. Link.\n30 innovations for disaster risk reduction. Link.\nApplications of artificial intelligence for disaster management. Natural Hazards, 2020. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciencia y tecnología"
+    ]
+  },
+  {
+    "objectID": "grd/cienciaytecnologia.html#google",
+    "href": "grd/cienciaytecnologia.html#google",
+    "title": "Ciencia y tecnología",
+    "section": "Google",
+    "text": "Google\n This is how Google’s Flood Hub uses AI forecasting to power local-level flood warnings | UNDRR",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciencia y tecnología"
+    ]
+  },
+  {
+    "objectID": "grd/cienciaytecnologia.html#lecturas-1",
+    "href": "grd/cienciaytecnologia.html#lecturas-1",
+    "title": "Ciencia y tecnología",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nExploring the emerging evolution trends of disaster risk reduction research: a global scenario. International Journal of Environmental Science and Technology, 2021. Link.\nKnowledge and Disaster Risk Reduction. The Routledge Handbook of Hazards and Disaster Risk Reduction. 2011. Link\nPerspectives of Science and Technology in Disaster RiskReduction of Asia. 2016. International Journal of Disaster Risk Science. Link.\nThree innovative approaches for managing disaster risks. Link.\n2021 APRU Multi-Hazards Webinar Series: Health, Climate Change and Innovation in Disaster Risk Reduction. Link, link.\nADB and OECD. 2020. Leveraging Technology and Innovation for Disaster Risk Management and Financing. Link\nSuccess, innovation and challenge: School safety and disaster education in South America and the Caribbean, 2020. Link.\n\nIRDR Compilation 2010-2020: A Ten Year Science Quest for Disaster Risk Reduction. Link\nThe Integrated Research on Disaster Risk 2021 International Conference.Link.\nA framework for global science in support of risk-informed sustainable development and planetary health. 2021. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciencia y tecnología"
     ]
   },
   {
@@ -2202,333 +2165,226 @@
     ]
   },
   {
-    "objectID": "grd/cienciaytecnologia.html#ciencia-y-tecnología",
-    "href": "grd/cienciaytecnologia.html#ciencia-y-tecnología",
-    "title": "Ciencia y tecnología",
-    "section": "Ciencia y tecnología",
-    "text": "Ciencia y tecnología\n\nDisaster Risk Science: A Geographical Perspective and a Research Framework. 2020. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/cienciaytecnologia.html#libros-de-referencia-nacionales",
-    "href": "grd/cienciaytecnologia.html#libros-de-referencia-nacionales",
-    "title": "Ciencia y tecnología",
-    "section": "Libros de referencia nacionales",
-    "text": "Libros de referencia nacionales\n\nLos habitantes en la gestión del riesgo : acciones cotidianas, gobernanza adaptativa y cambio climático. UNAL. 2023. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/cienciaytecnologia.html#libros-de-referencia-internacionales",
-    "href": "grd/cienciaytecnologia.html#libros-de-referencia-internacionales",
-    "title": "Ciencia y tecnología",
-    "section": "Libros de referencia internacionales",
-    "text": "Libros de referencia internacionales\n\nThe Routledge Handbook of Hazards and Disaster Risk Reduction. 2012. Link.\nThe Routledge Handbook of Disaster Risk Reduction Including Climate Change Adaptation. 2017. Link.\nCrisis and Emergency Management: Theory and Practice, Second Edition. 2017. Link.\nExtreme Natural Hazards, Disaster Risks and Societal Implications. 2014. Link.\nEncyclopedia of Natural Hazards. 2013. Link.\nEncyclopedia of Natural Hazard Science. OUP. Link.\nEducation for Sustainable Development and Disaster Risk Reduction. 2014. Link.\nIntegrated Research on Disaster Risks. Springer. 2021. Link.\nIntroduction to Catastrophe Risk Modelling. A Physics-based Approach. 2025. Link. Link\nNatural Hazards, Second Edition: Explanation and Integration. 2017. Link.\nNatural Hazards and Disasters. Fifth Ed. Hyndman. 2017. Link.\nNatural Catastrophe Risk Management and Modelling: A Practitioner’s Guide. Link\nThe Role of Ecosystems in Disaster Risk Reduction. 2013. Link. ***\nSocial Vulnerability to Disasters, Second Edition. 2013. Link.\nSystemic Risk: History, Measurement and Regulation. 2019. Link.\nSystemic Disaster Risk Handbook. 2021\nSustainable Development and Disaster Risk Reduction. 2016. Link.\nNatural Climate Solutions Handbook: A Technical Guide for Assessing NatureBased Mitigation Opportunities in Countries. 2021. Link.\nThe Invention of Disaster. Power and Knowledge in Discourses on Hazard and Vulnerability. Routledge. 2022. Link.\nCreating Resilient Futures. Integrating Disaster Risk Reduction, Sustainable Development Goals and Climate Change Adaptation Agendas. 2022. Springer. Link.\nHandbook on Climate Change and Disasters. 2023. Link.\nDisaster Risk Reduction for Resilience. Climate Change and Disaster Risk Adaptation. 2023. Link\nFísica del caos en la predicción meteorológica. 2023. AEMET España. Link.\nLecturas sobre conceptos\n\nManaging the Risks of Extreme Events and Disasters to Advance Climate Change Adaptation. IPCC. 2012. Link.\n\nChapter 2. Determinants of risk: exposure and vulnerability. Link.\nGestión de los riesgos de fenómenos meteorológicos extremos y desastres para mejorar la adaptación al cambio climático. IPCC, 2012. Link. Link.\n\nBriefing note on systemic risk. UNDRR, 2022. Link.\nA framework for complex climate change risk assessment. One Earth. 2021. Link.\n\n\n\n\n\n Systemic Disaster Risk Handbook\n\n\n Climate change and disaster risk management\n\n\n\n\n Los desastres no son naturales",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/cienciaytecnologia.html#revistas-en-gestión-de-riesgos",
-    "href": "grd/cienciaytecnologia.html#revistas-en-gestión-de-riesgos",
-    "title": "Ciencia y tecnología",
-    "section": "Revistas en gestión de riesgos",
-    "text": "Revistas en gestión de riesgos\n\nInternacionales\n\nInternational Journal of Disaster Risk Reduction. Link.\nInternational Journal of Disaster Risk Science. Link.\nNatural Hazards. Link.\nNatural Hazards Review. Link.\nNatural Hazards and Earth System Sciences. Link.\nEnvironmental Science and Policy. Link.\nEnvironment: Science and Policy for Sustainable Development. Link.\nProgress in Disaster Science. Link.\nSafety Science. Link.\nRisk Analysis. Link.\nRisk, Hazards, & Crisis in Public Policy. Link.\nAdvances in Natural and Technological Hazards Research. Link.\nNature, Collection Natural Hazards. Link.\n\nNatural Hazard Center.\n\nList of Hazards and Disaster Journals. Link.\nResearch Check Sheets Series. Link\n\nLatinoamericanas\n\nRevista de Estudios Latinoamericanos sobre Reducción del Riesgo de Desastres REDER. Link.\n\nColombianas\n\nCuadernos de Geografía: Revista Colombiana de Geografía. Link.\nBoletín de Geología. Link.\nEarth Sciences Research Journal. Link.\nCT y F – Ciencia, Tecnologia y Futuro. Link.\nGeología Colombiana. Link.\nIngenieria e Investigacion. Link.\nRevista Facultad de Ingenieria. Link.\nRevistas de divulgación Seguros Sura. Link.\nRevista DYNA. Link.\nPerspectiva Geográfica. Link.\nLegislación prospectiva. Link.\n\nRanking de Revistas en GRD\n\nEn google académico\n\nArea Emergency management. Link.\n\nEn SJR\n\nArea Safety research. Link Latinoamerica. Link.\nArea Geography, Planning and Development. Link. Latinoamerica. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/cienciaytecnologia.html#algunos-investigadores-internacionales-en-drr",
-    "href": "grd/cienciaytecnologia.html#algunos-investigadores-internacionales-en-drr",
-    "title": "Ciencia y tecnología",
-    "section": "Algunos investigadores Internacionales en DRR",
-    "text": "Algunos investigadores Internacionales en DRR\n-   Irasema Alcántara Ayala. [*Link*](https://scholar.google.co.uk/citations?hl=en&user=bDAzleQAAAAJ&view_op=list_works&sortby=pubdate).\n-   David E. Alexander. [*Link*](https://scholar.google.co.uk/citations?hl=en&user=F6l81zAAAAAJ).\n-   Susan L. Cutter. [*Link*](https://scholar.google.com/citations?hl=es&user=BCo8hAwAAAAJ&view_op=list_works&sortby=pubdate).\n-   Juergen Weichselgartner. [*Link*](https://scholar.google.com/citations?hl=es&user=fES1svQAAAAJ&view_op=list_works&sortby=pubdate).\n-   Benigno Aguirre. [*Link*](https://scholar.google.com/citations?hl=es&user=i36JlYgAAAAJ&view_op=list_works&sortby=pubdate).\n-   Douglas Paton (Risk communication). [*Link*](https://scholar.google.com/citations?hl=en&user=3luSZvYAAAAJ&view_op=list_works).\n-   JC Gaillard. [*Link*](https://jcgaillard.wordpress.com/).\n-   Gonzalo Lizarralde. [*Link*](https://scholar.google.com/citations?user=T6VcEwUAAAAJ&hl=es&oi=ao).\n-   Cees Van Westen. [*Link*](https://scholar.google.com/citations?hl=es&user=Y_wCIDYAAAAJ&view_op=list_works&sortby=pubdate)\n\nEventos internacionales\n\nAnnual Natural Hazards Workshop. Link.\nICGNH 2020: 14. International Conference on Geography and Natural Hazards. Link.\n\nRiesgos y salud pública\n\nThe Lancet Countdown: tracking progress on health and climate change. Link.\n\nProgramas institucionales asociados a la ciencia de los desastres\n\nServicio Geológico Colombiano. Plan Estratégico del Conocimiento Geocientífico del Territorio Colombiano 2022 – 2032.Link.\nPlan Estratégico Nacional de Investigación Ambiental – PENIA. Link.\n\nCiencia y datos abiertos para DRR\n\nOpenDRI Open data for resilience. Link.\nDigital Public Goods for Disaster Risk Reduction in a Changing Climate. Banco Mundial. 2023. Link.\nOpen Data for Resilient Urban Planning. Link. Github. Link.\nGFDRR open-risk-data-dashboard. Link.\nCODATA.\n\nFAIR Data for Disaster Risk Research. Link.\nWebinars. Link.\nCODATA-RDA Schools of Research Data Science. Link.\n\n\nInaSAFE is free software that produces realistic natural hazard impact scenarios for better planning. Link.\nUNESCO. Multistakeholder Consultations on Open Science. Link.\nLecturas\n\nHarnessing risk-informed data for disaster and climate resilience. 2022. Link. Link.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n&lt;/div&gt;\n&lt;div class=\"quarto-layout-cell\" style=\"flex-basis: 50.0%;justify-content: flex-start;\"&gt;",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/cienciaytecnologia.html#lecturas",
-    "href": "grd/cienciaytecnologia.html#lecturas",
-    "title": "Ciencia y tecnología",
-    "section": "Lecturas",
-    "text": "Lecturas\n\nArtificial intelligence for climate prediction of extremes: State of the art, challenges, and future perspectives. 2025. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/cienciaytecnologia.html#science-technology-and-academia.",
-    "href": "grd/cienciaytecnologia.html#science-technology-and-academia.",
-    "title": "Ciencia y tecnología",
-    "section": "Science, Technology and Academia.",
-    "text": "Science, Technology and Academia.\n\nUNDRR. Link.\nGFDRR Innovation. Link\nAPRU Multi-Hazards. Link.\nThe science and technology roadmap to support the implementation of the Sendai Framework for Disaster Risk Reduction 2015-2030. Link.\nPrevention Web Science and Technology. Link.\n30 innovations\n\nDisaster risk reduction and innovations. Progress in Disaster Science, 2019. Link.\n30 Innovations linking disaster risk reduction with sustainable development goals. Link.\n30 innovations for disaster risk reduction. Link.\nApplications of artificial intelligence for disaster management. Natural Hazards, 2020. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/cienciaytecnologia.html#google",
-    "href": "grd/cienciaytecnologia.html#google",
-    "title": "Ciencia y tecnología",
-    "section": "Google",
-    "text": "Google\n This is how Google’s Flood Hub uses AI forecasting to power local-level flood warnings | UNDRR",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/cienciaytecnologia.html#lecturas-1",
-    "href": "grd/cienciaytecnologia.html#lecturas-1",
-    "title": "Ciencia y tecnología",
-    "section": "Lecturas",
-    "text": "Lecturas\n\nExploring the emerging evolution trends of disaster risk reduction research: a global scenario. International Journal of Environmental Science and Technology, 2021. Link.\nKnowledge and Disaster Risk Reduction. The Routledge Handbook of Hazards and Disaster Risk Reduction. 2011. Link\nPerspectives of Science and Technology in Disaster RiskReduction of Asia. 2016. International Journal of Disaster Risk Science. Link.\nThree innovative approaches for managing disaster risks. Link.\n2021 APRU Multi-Hazards Webinar Series: Health, Climate Change and Innovation in Disaster Risk Reduction. Link, link.\nADB and OECD. 2020. Leveraging Technology and Innovation for Disaster Risk Management and Financing. Link\nSuccess, innovation and challenge: School safety and disaster education in South America and the Caribbean, 2020. Link.\n\nIRDR Compilation 2010-2020: A Ten Year Science Quest for Disaster Risk Reduction. Link\nThe Integrated Research on Disaster Risk 2021 International Conference.Link.\nA framework for global science in support of risk-informed sustainable development and planetary health. 2021. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/sat.html#inform-risk",
-    "href": "grd/sat.html#inform-risk",
-    "title": "Sistemas de Alerta Temprana",
-    "section": "Inform Risk",
-    "text": "Inform Risk\n\nInform@Risk Sistema Participativo de Alertas Tempranas en Bello Oriente. Facebook, link.\n\n\n\n\n Entrevista con Carolina García Londoño, coordinadora Inform@risk Urbam, Eafit\n\n\n Ecuador. Fortalecimiento de Capacidades en Gestión de Riesgos con la metodología INFORM Index For Risk",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Sistemas de alerta temprana"
-    ]
-  },
-  {
-    "objectID": "grd/amenazasextraterrestres.html",
-    "href": "grd/amenazasextraterrestres.html",
-    "title": "Amenazas extraterrestres",
+    "objectID": "grd/educacion.html",
+    "href": "grd/educacion.html",
+    "title": "Educación en Gestión del Riesgo de Desastres",
     "section": "",
-    "text": "Comisión Colombiana del Espacio. Link\nFuerza Aerospacial\nIGAC.\n\nOffice for Outer Space Affairs UN-SPIDER Knowledge Portal. Link , Link\n\nAstroCo. Link).\n\nPlan de Acción para Colombia ante la amenaza de asteroides (el caso del Asteroide 2024 YR4). 2025. Link\n\nCONPES Desarrollo Espacial. Link.",
+    "text": "Ley 2272 de 2022 Servicio Social para la Paz\nDecreto 1079 de 2024. para reglamentar el Servicio Social para la Paz creado mediante la Ley 2272 de 2022. Link\nLey 2427 de 2024. Por medio de la cual se establece la capacitación, la profundización y la enseñanza para la sostenibilldad ambiental, cambio climático y gestión del riesgo de desastres. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Amenazas extraterrestres"
+      "Educación"
     ]
   },
   {
-    "objectID": "grd/amenazasextraterrestres.html#instituciones-nacionales",
-    "href": "grd/amenazasextraterrestres.html#instituciones-nacionales",
-    "title": "Amenazas extraterrestres",
+    "objectID": "grd/educacion.html#lista-de-expertos-y-lecturas",
+    "href": "grd/educacion.html#lista-de-expertos-y-lecturas",
+    "title": "Educación en Gestión del Riesgo de Desastres",
+    "section": "Lista de expertos y lecturas",
+    "text": "Lista de expertos y lecturas\n\nJohn Falk. Link\n\nFalk, J. H., & Dierking, L. D. (2013). The Museum Experience Revisited. Link.\n\n\n\n\nExpertos:\n\nJohn Falk. Link\nFalk, J. H., & Dierking, L. D. (2013). The Museum Experience Revisited. Link.\n\nLecturas\n\nBarriault, C., & Pearson, D. (2010). Assessing exhibits for learning in science centers: A practical tool. Visitor Studies, 13(1), 90–106. Link.\nMa, J., Shahar, E., Eliceiri, K., Mehta, G., & Yu, K. (2019). Shedding light: Integrating bioimaging technologies into the design of an interactive museum exhibit. DIS 2019 – Proceedings of the 2019 ACM Designing Interactive Systems Conference. Link.\nKing, D., Ma, J., Armendariz, A., & Yu, K. (2018). Developing Interactive Exhibits with Scientists: Three Example Collaborations from the Life Sciences Collection at the Exploratorium. Integrative and Comparative Biology, 58(1), 94–102. Link.\nKratz, S. & Merritt E. (2011). Museums and the future of education. On the Horizon, 19 (3), 188-195\nMacDonald, E., Johnson, V., Gillies, M., & Johnston, D. (2017). The impact of a museum-based hazard education program on students, teachers and parents. International Journal of Disaster Risk Reduction, 21, 360–366. Link.\nMartin, A. J., Durksen, T. L., Williamson, D., Kiss, J., & Ginns, P. (2016). The role of a museum-based science education program in promoting content knowledge and science motivation. Journal of Research in Science Teaching, 53 (9), 1364–1384. Link.\nMotschnig, R. & Cornelius-White J. (2012). Experiential/Significant Learning. Encyclopedia of the Sciences of Learning. Springer US. pp: 1219-1223. Link\nMuseums and the future of education. 2011. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Educación"
+    ]
+  },
+  {
+    "objectID": "grd/tecnologicas/amenazastecnol.html",
+    "href": "grd/tecnologicas/amenazastecnol.html",
+    "title": "Amenazas tecnológicas",
     "section": "",
-    "text": "Comisión Colombiana del Espacio. Link\nFuerza Aerospacial\nIGAC.\n\nOffice for Outer Space Affairs UN-SPIDER Knowledge Portal. Link , Link\n\nAstroCo. Link).\n\nPlan de Acción para Colombia ante la amenaza de asteroides (el caso del Asteroide 2024 YR4). 2025. Link\n\nCONPES Desarrollo Espacial. Link.",
+    "text": "Emerging Natech risk management in Colombia: A survey of governmental organizations. Safety Science, 128. Link. - The effects of extreme winds on atmospheric storage tanks. Reliability Engineering & System Safety, 195, 106686. Link\n\n\nSimposio Natech 2022\n\n Natech 22 – 1\nSala paralela: día 1, día 2.",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Amenazas extraterrestres"
+      "Amenazas tecnológicas"
     ]
   },
   {
-    "objectID": "grd/amenazasextraterrestres.html#instituciones-internacionales",
-    "href": "grd/amenazasextraterrestres.html#instituciones-internacionales",
-    "title": "Amenazas extraterrestres",
-    "section": "Instituciones internacionales",
-    "text": "Instituciones internacionales\n\nONU. Oficina para Asuntos del Espacio Ultraterrestre. Link. Link.\nOficina Regional de Apoyo en Colombia. Link.\nONU, Near-Earth Objects (NEOs). Link\nInternational Asteroid Warning Network (IAWN). Link\nNASA, Saving earth form asteroids. Link. Link.\nThe risk from space. Prevention web. Link.\nFireballs Nasa. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas extraterrestres"
-    ]
-  },
-  {
-    "objectID": "grd/amenazasextraterrestres.html#amenazas-extraterrestres",
-    "href": "grd/amenazasextraterrestres.html#amenazas-extraterrestres",
-    "title": "Amenazas extraterrestres",
-    "section": "Amenazas extraterrestres",
-    "text": "Amenazas extraterrestres\n\nEM-DAT Classification System. Link.\n7th IAA Planetary Defense Conference and 2017 IAA Planetary Defense Conference\n\nSession 1: Key International and Political Developments\nSession 2: Advancements and Progress in NEO Discovery\n\n\n\n\n\n La amenaza del impacto de asteroides cercanos a la Tierra\n\n\n Biografía de un impacto: el meteorito ruso | Ciencia en Bicicleta | Planetario Medellín\n\n\n\n\n Meteor Hits Russia Feb 15, 2013\n\n\n NASA | NPP Sees Aftermath of the Chelyabinsk Meteor\n\n\n\n\n 7th IAA Planetary Defense Conference Day 2: Discovery and Characterization",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas extraterrestres"
-    ]
-  },
-  {
-    "objectID": "grd/amenazasextraterrestres.html#evaluación-del-riesgo",
-    "href": "grd/amenazasextraterrestres.html#evaluación-del-riesgo",
-    "title": "Amenazas extraterrestres",
-    "section": "Evaluación del riesgo",
-    "text": "Evaluación del riesgo\n\nRisk assessment for asteroid impact threat scenarios. 2024. Link\nIntroduction to Asteroid Impact Risk Assessment. NASA. Link\nA probabilistic asteroid impact risk model: assessment of sub-300 m impacts. 2027. Link\n7th IAA Planetary Defense Conference Day 2: Discovery and Characterization\n\nSession 8 Impact Risk Assessment & Decision to Act",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas extraterrestres"
-    ]
-  },
-  {
-    "objectID": "grd/amenazasextraterrestres.html#comunicación-del-riesgo",
-    "href": "grd/amenazasextraterrestres.html#comunicación-del-riesgo",
-    "title": "Amenazas extraterrestres",
-    "section": "Comunicación del riesgo",
-    "text": "Comunicación del riesgo\n\n7th IAA Planetary Defense Conference Day 2: Discovery and Characterization\n\nSession 9: Public Education & Communication\n\n\n\n\n\n 7th IAA Planetary Defense Conference Day 5: Decision to Act and Public Engagement",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas extraterrestres"
-    ]
-  },
-  {
-    "objectID": "grd/amenazasextraterrestres.html#reducción-del-riesgo",
-    "href": "grd/amenazasextraterrestres.html#reducción-del-riesgo",
-    "title": "Amenazas extraterrestres",
-    "section": "Reducción del riesgo",
-    "text": "Reducción del riesgo\n\n7th IAA Planetary Defense Conference Day 2: Discovery and Characterization\n\nSession 4: Deflection and Disruption Models & Testing",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas extraterrestres"
-    ]
-  },
-  {
-    "objectID": "grd/amenazasextraterrestres.html#manejo-de-desastres",
-    "href": "grd/amenazasextraterrestres.html#manejo-de-desastres",
-    "title": "Amenazas extraterrestres",
-    "section": "Manejo de desastres",
-    "text": "Manejo de desastres\n\n7th IAA Planetary Defense Conference Day 2: Discovery and Characterization\n\nSession 6: Impact Consequences\nSession 7: Disaster Response\nSession 10: Threat Response Exercise\n\n\n\n\n\n 7th IAA Planetary Defense Conference Day 4: Impact Effects and Disaster Management",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas extraterrestres"
-    ]
-  },
-  {
-    "objectID": "grd/amenazasextraterrestres.html#ciencia",
-    "href": "grd/amenazasextraterrestres.html#ciencia",
-    "title": "Amenazas extraterrestres",
-    "section": "Ciencia",
-    "text": "Ciencia\n\n9th IAA Planetary Defense Conference. Link Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas extraterrestres"
-    ]
-  },
-  {
-    "objectID": "grd/amenazasextraterrestres.html#lecturas",
-    "href": "grd/amenazasextraterrestres.html#lecturas",
-    "title": "Amenazas extraterrestres",
-    "section": "Lecturas",
-    "text": "Lecturas\n\nWebinar - ¿Por qué desviar asteroides y estudiar sus meteoritos? Link.\nPodcast. Desafíos y soluciones en la detección de asteroides. UNAL, 2025. Link.\nEl impacto de pequeños asteroides sobre la Tierra. 2015. Revista Investigación y Ciencia. Link.\nMeteorite impacts in the ocean: the danger of tsunamis on the coast of Buenos Aires Province, Argentina. 2020. Link\nCan we predict the impact conditions of metre-sized meteoroids? 2019. Link.\nSegundo festival colombiano del asteroide. Link -\nAlgunos expertos\n\nJosep M. Trigo-Rodriguez. España. Link. Link.\nJorge Zuluaga. Colombia. Link.\nPablo Restrepo. Colombia. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas extraterrestres"
-    ]
-  },
-  {
-    "objectID": "grd/conocimiento-indicadores.html",
-    "href": "grd/conocimiento-indicadores.html",
-    "title": "Indicadores de riesgo de desastres",
+    "objectID": "grd/cursos.html",
+    "href": "grd/cursos.html",
+    "title": "Cursos, entrenamiento y redes",
     "section": "",
-    "text": "Pacific Disaster Center.\n\nColombia’s data-driven approach to creating safer, more resilient communities. Link.\nNDPBA Colombia Final Report. 2025. Link.\n\nAtlas de Riesgo de Colombia: revelando los desastres latentes. Unidad Nacional para la Gestión del Riesgo de Desastres. 2018. Link.\nInform Risk. 2015. Link.\nDatos del Consolidado de atención a emergencias. UNGRD. Link.\nDESINVENTAR. Base de datos de pérdidas históricas en Colombia (período 1970-2011). Link.\nCOLOMBIA – Censo Nacional de Población y Vivienda – CNPV – 2018. Link.\nOtros riesgos.\n\nCIPE. Colombia Risk Analysis: Subnational and Regional Risk Indices.Link. Link.\n\n\n\n\n\nINFORM subnational model of Colombia\n\n\nPacific Disaster Center Multi Risk index 2024. Link.",
+    "text": "The Australian Disaster Resilience Knowledge Hub\n\nEmergency planning collection. Link.\nDisasters. Link.\nGlossary. Link.\nEmergency Management Library. Link.\nRecovery Matters webinar series. Link.\nThe Australian Institute for Disaster Resilience. Link\n\nCONVERGE Training Modules. Link.\nDisaster Reduction Learning Center (DRLC). Link.\nRegional DDR e-learning platform. Link.\nThe National Disaster & Emergency Management University. FEMA. Link.\n\nIndependent Study Program. Link.\nCurriculum. Link.\n\nPacific Disaster Center. Online Courses. Link.\nDisaster Risk Management Training Center. Link.\n\nTraining Corner. Link.\nDisaster Risk Management Training online series 2022. European Commision. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
+      "Cursos, redes y recursos",
+      "Cursos en GRD"
     ]
   },
   {
-    "objectID": "grd/conocimiento-indicadores.html#lecturas",
-    "href": "grd/conocimiento-indicadores.html#lecturas",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "Lecturas",
-    "text": "Lecturas\n\nNatural hazard risk assessments at the global scale. 2020. NHESS. Link",
+    "objectID": "grd/cursos.html#el-riesgo-en-la-sociedad-moderna",
+    "href": "grd/cursos.html#el-riesgo-en-la-sociedad-moderna",
+    "title": "Cursos, entrenamiento y redes",
+    "section": "El riesgo en la sociedad moderna",
+    "text": "El riesgo en la sociedad moderna\n\n\n\n 1.1 The History of Risk\n\n\n 1.2 The Study of Risk: Security Studies\n\n\n\n\n 1.3 The Study of Risk: Safety Science\n\n\n 2.1 Risk Management\n\n\n\n\n 2.6 Risk Management: Strengths and Weaknesses\n\n\n 3.1 Risk Perception\n\n\n\n\nCoursera.",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
+      "Cursos, redes y recursos",
+      "Cursos en GRD"
     ]
   },
   {
-    "objectID": "grd/conocimiento-indicadores.html#emdat",
-    "href": "grd/conocimiento-indicadores.html#emdat",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "EmDat",
-    "text": "EmDat\n\nEM-DAT International Disaster Database. Link.\n\nEM-DAT Documentation. Link.\nEM-DAT: the Emergency Events Database. Link\n\n\n\n\n\nEmDat\n\n\n EmDat",
+    "objectID": "grd/cursos.html#building-resilience-to-compound-and-cascading-disaster-risks",
+    "href": "grd/cursos.html#building-resilience-to-compound-and-cascading-disaster-risks",
+    "title": "Cursos, entrenamiento y redes",
+    "section": "Building resilience to compound and cascading disaster risks",
+    "text": "Building resilience to compound and cascading disaster risks\n\n\n\n Building resilience to compound and cascading disaster risks\n\n\n Lesson 1：Compound and cascading disaster risks. What are they?\n\n\n\n\n Lesson 2：Six steps of disaster risk assessment\n\n\n Lesson 3：Designing resilience enhancing measures\n\n\n\n\n Lesson 4：Adaptive implementation framework\n\n\n Conclusion：Summary of the course",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
+      "Cursos, redes y recursos",
+      "Cursos en GRD"
     ]
   },
   {
-    "objectID": "grd/conocimiento-indicadores.html#inform-risk-index",
-    "href": "grd/conocimiento-indicadores.html#inform-risk-index",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "Inform Risk Index",
-    "text": "Inform Risk Index\n\nInform Risk Index. Link. Link.\n\nLatin America and Caribbean. Link.\n\n\n\n\n\nINFORM Subnational Risk Index\n\n\n\n\n\nColombia World Risk Report",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
-    ]
-  },
-  {
-    "objectID": "grd/conocimiento-indicadores.html#world-risk-index",
-    "href": "grd/conocimiento-indicadores.html#world-risk-index",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "World Risk Index",
-    "text": "World Risk Index\n\nWorld Risk Index. Link. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
-    ]
-  },
-  {
-    "objectID": "grd/conocimiento-indicadores.html#the-world-risk-report",
-    "href": "grd/conocimiento-indicadores.html#the-world-risk-report",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "The World Risk report",
-    "text": "The World Risk report\n\nThe World Risk report. Link.\n\n\n\n\n\nThe World Risk Report",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
-    ]
-  },
-  {
-    "objectID": "grd/conocimiento-indicadores.html#pacific-disaster-center",
-    "href": "grd/conocimiento-indicadores.html#pacific-disaster-center",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "Pacific Disaster Center",
-    "text": "Pacific Disaster Center\nGlobal Disaster Risk Trends. Select a country to view 10-year national trends.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
-    ]
-  },
-  {
-    "objectID": "grd/conocimiento-indicadores.html#world-economic-forum",
-    "href": "grd/conocimiento-indicadores.html#world-economic-forum",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "World Economic Forum",
-    "text": "World Economic Forum\n\nGlobal Risks Report 2024. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
-    ]
-  },
-  {
-    "objectID": "grd/manejodedesastres.html",
-    "href": "grd/manejodedesastres.html",
-    "title": "Manejo de desastres",
+    "objectID": "grd/conocimientodelriesgo.html",
+    "href": "grd/conocimientodelriesgo.html",
+    "title": "Conocimiento del riesgo de desastres",
     "section": "",
-    "text": "Reliefweb. Link.\nOXFAM. Link.",
+    "text": "Procesos de la gestión del riesgo de desastres acorde con la ley 1523 de 2012",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Manejo de desastres"
+      "Conocimiento del riesgo"
     ]
   },
   {
-    "objectID": "grd/manejodedesastres.html#lecturas",
-    "href": "grd/manejodedesastres.html#lecturas",
-    "title": "Manejo de desastres",
-    "section": "Lecturas",
-    "text": "Lecturas\n\nWe need to predict the people disasters will hit, not just the places. Nature 2025. Link.",
+    "objectID": "grd/conocimientodelriesgo.html#monitoreo-de-las-amenazas",
+    "href": "grd/conocimientodelriesgo.html#monitoreo-de-las-amenazas",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Monitoreo de las amenazas",
+    "text": "Monitoreo de las amenazas\n\nVisores Colombia\n\nSAMA Antioquía. DAGRAN. Link.\nSIATA. Valle de Aburrá. Link.\n\n\n\nRecursos\n\nRemote Sensing Tutorials. Government of Canada. Link.\nGee-community-catalog. Link.\nGeemap. Link.\nCloud-Based Remote Sensing with Google Earth Engine: Fundamentals and Applications. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Manejo de desastres"
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#escenarios-de-riesgo",
+    "href": "grd/conocimientodelriesgo.html#escenarios-de-riesgo",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Escenarios de riesgo",
+    "text": "Escenarios de riesgo\n\nEffectiveness of California earthquake scenarios in motivating mitigation. Earthquake spectra. 2025. Link.\n\n SimCenter: A computational framework to simulate the impacts of natural hazards",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#física",
+    "href": "grd/conocimientodelriesgo.html#física",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Física",
+    "text": "Física\n\nThe use of empirical vulnerability functions to assess the response of buildings to tsunami impact: Comparative review and summary of best practice. Tarbotton, et al. Earth Science Reviews. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#social",
+    "href": "grd/conocimientodelriesgo.html#social",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Social",
+    "text": "Social\n\nIndicador de Condiciones de Vulnerabilidad Urbana. 2023. GFDRR. Link.\nLineamientos para el análisis de la vulnerabilidad social en los estudios de la gestión municipal del riesgo de desastres. UNGRD. 2017. Link.\n\nPDC. Vulnerability Indicators. PDC’s vulnerability analysis measures the physical, environmental, social, and economic conditions and processes that increase susceptibility of communities and systems to the damaging effects of hazards. Multiple factors influencing disaster outcomes, including those linked to poverty and development, are considered in the analysis.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#artículos-científicos",
+    "href": "grd/conocimientodelriesgo.html#artículos-científicos",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Artículos científicos",
+    "text": "Artículos científicos\n\nWe need to predict the people disasters will hit, not just the places. Nature 2025. Link.\nTerritorial vulnerability assessment frame in Colombia: Disaster risk management. Villegast et al. 2017. IJDRM. Link.\nFraming vulnerability, risk and societal responses: the MOVE framework. Natural Hazards. 2013. Link.\nSocial vulnerability in Colombia. 2020. IJDRR. Link.\nSocial vulnerability in a multi-hazard context: a systematic review. Environmental Research Letters. 2022. Link.\nCardona, O.D.: The need for rethinking the concepts of vulnerability and risk from a holistic perspective: a necessary review and criticism for effective risk management. In: Indicators of Risk Management and Vulnerability Reduction: Case Studies in Latin American Urban Areas, United Nations University, Institute for Environment and Human Security (2011). Link.\nExplaining differential vulnerability to climate change: A social science review. Wires Climate Change. 2018. Link.\nUnderstanding human vulnerability to climate change: A global perspective on index validation for adaptation planning. Science of The Total Environment. 2022. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#metodologias",
+    "href": "grd/conocimientodelriesgo.html#metodologias",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Metodologias",
+    "text": "Metodologias\n\nUnderstanding disaster risk: foundational concepts and principles. UNDRR. Link.\n\nWhy reducing risk matters\nComponents of risk\nRisk drivers\nKey concepts\nThe DRR glossary\nEngage in DRR\n\nDisaster, Planning and Development: Managing Natural Hazards to Reduce Loss. OEA. Link, Link.\nBernal G.A., Cardona OD., Marulanda M.C., Carreño ML. (2021) Dealing with Uncertainty Using Fully Probabilistic Risk Assessment for Decision-Making. In: Eslamian S., Eslamian F. (eds) Handbook of Disaster Risk Reduction for Resilience. Springer, Cham. https://doi.org/10.1007/978-3-030-61278-8_14\nOregon Natural Hazards Risk Assessment Upgrade. Link. Link. Youtube",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#metodolgias-de-fema",
+    "href": "grd/conocimientodelriesgo.html#metodolgias-de-fema",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Metodolgias de FEMA",
+    "text": "Metodolgias de FEMA\n\nNational Risk Index Documentation. Link.\nNational Risk Index for Natural Hazards. Visor.\nNational Risk Index Hazard Info Table\nUpdating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. Link.\nEarthquake Hazard Maps. Link.\nFlood Map. Link.\n\n\n\n\n Physical and social vulnerability for the multi-hazard risk analysis of components and systems\n\n\n Mapping Risk: The National Risk Index for Natural Hazards",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#herramientas-para-el-análisis-de-riesgos",
+    "href": "grd/conocimientodelriesgo.html#herramientas-para-el-análisis-de-riesgos",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Herramientas para el análisis de riesgos",
+    "text": "Herramientas para el análisis de riesgos\n\nThe CAPRA (Probabilistic Risk Assessment) Platform. Link.\nCuadernos de trabajo (ver repositorios)\nSoftware\n\nWORLD BANK CLIMATE AND DISASTER RISK SCREENING TOOLS. Link\nRisk Data Library. Country Climate & Disaster Risk Screening Tools. Link.\nRisk Changes. An open-source Spatial Decision Support tool for the analysis of Dynamic Multi-Hazard risk. Link.\n\nDocumentation. Link.\n\n\n\n\n\n\n Introduction\n\n\n Hazard\n\n\n\n\nArtículos científicos\n\nA review of risk analysis methods for natural disasters. Nat Hazards 100, 571–593. Sun, R. et al. 2020. Link\nHybrid loss exceedance curve (HLEC) for disaster risk assessment. Velazquez et al. 2020. Link\nAssessing global exposure and vulnerability towards natural hazards: the Disaster Risk Index. Peduzzi, et al. 2009, Nat. Hazards Earth Syst. Link\n\n\n\n\n\n Lesson 2：Six steps of disaster risk assessment\n\n\n Building resilience to compound and cascading disaster risks\n\n\n\n\n Webinar Modern Technology in Disaster Management: The Challenges\n\n\n Integrated Risk management in Civil Protection\n\n\n\n\n Modelo mundial de riesgo en la infraestructura\n\n\n Risk Analysis for Civil Protection\n\n\n\n\n Using Exceedance Probabilities for Disaster Management\n\n\nEvaluación del riesgo",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#evaluación-del-riesgo-en-la-infraestructura-escolar",
+    "href": "grd/conocimientodelriesgo.html#evaluación-del-riesgo-en-la-infraestructura-escolar",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Evaluación del riesgo en la infraestructura escolar",
+    "text": "Evaluación del riesgo en la infraestructura escolar\n\nWebinar ‘Community Hazard Risk Tools: Structural Fragility and Vulnerability and System Reliability Mapping’ by the UNESCO Chair in DRR & RE, UCL. Link.\n\nGithub repository.\n\n\n\n\n\n Community Hazard Risk Tools: Structural Frag. and Vuln. and System Reliability Mapping Day 1\n\n\n Day 2",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#eventos-compuestos",
+    "href": "grd/conocimientodelriesgo.html#eventos-compuestos",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Eventos compuestos",
+    "text": "Eventos compuestos\n\nGuidelines for Studying Diverse Types of Compound Weather and Climate Events. 2021. Link\nHigh impact compound events in Australia. Link\nSignificantly wetter or drier future conditions for one to two thirds of the world’s population. 2024. Nature Comm. Link\n\n\n\n\n Guidelines for studying diverse types of compound weather and climate events\n\n\nEventos compuestos",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#eventos-extremos",
+    "href": "grd/conocimientodelriesgo.html#eventos-extremos",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Eventos extremos",
+    "text": "Eventos extremos\n\nWhat is detection and attribution? ARC. Link.\nIPCC AR6. Weather and climate extreme events in changing climate. Link\nTOP 10 THINGS TO KNOW ABOUT EXTREME EVENT ATTRIBUTION. Climate Central. Link\nAttribution of Extreme Events to Climate Change. Annual Review of Environment and Resourses. 2023. Link\nClimate-Informed Risk Assessment for Extreme Events. AGU 24. Link.\nAlguna evidencia para Colombia. Link. Link. Link. Link. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#disaster-forensics---undrr",
+    "href": "grd/conocimientodelriesgo.html#disaster-forensics---undrr",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Disaster Forensics - UNDRR",
+    "text": "Disaster Forensics - UNDRR\nLas siguientes preguntas describen un cuestionario simplificado para realizar un análisis forense de cualquier desastre. Las preguntas siguen los tres pasos clave de la metodología FORIN (Investigaciones Forenses de Desastres) (UNDRR. Disaster Forensics. Link)\n\n\nPASO 1 – COMPRENDER EL ADN DEL DESASTRE\n\nAnalizar los factores específicos de peligro, exposición y vulnerabilidad que hicieron de este desastre un desastre único y significativo. Esto implica un análisis descriptivo del peligro, la exposición, las condiciones inseguras y los patrones subsiguientes de daños, pérdidas e impacto.\n¿Qué pasó? (Peligro)\n\n¿Qué desencadenó el acontecimiento?\n¿El evento principal condujo a eventos secundarios relacionados? Por ejemplo, ¿causó el terremoto deslizamientos de tierra o roturas de presas que provocaron inundaciones?\n\n¿Dónde se concentró el daño? (Exposición)\n\n¿Cómo se expusieron los elementos sociales y ambientales?\n¿Cómo ha evolucionado la exposición a lo largo del tiempo y el espacio en relación con el desarrollo planificado o no planificado y las amenazas físicas?\n¿Las regulaciones de zonificación, los controles de uso del suelo y los códigos de infraestructura eran adecuados para los niveles de riesgo existentes en diferentes áreas?\n¿Los cambios en los niveles de exposición se debieron a decisiones sociales sobre la ubicación o a cambios en el entorno físico? ¿Cuál fue el papel de la deforestación, el diseño y la construcción urbana, o incluso el cambio climático?\n\n\n\n¿Cuál era la estructura social y económica de las comunidades expuestas?\n¿Cómo se distribuyeron las pérdidas y los daños entre diferentes áreas, grupos sociales y tipos de infraestructura?\n¿Qué factores influyeron en la expansión territorial? ¿Se ocuparon las zonas más seguras antes que las más vulnerables?\n¿Las leyes y normas ambientales abordaron las preocupaciones sobre peligros y vulnerabilidad?\n¿Existió una relación clara entre la exposición a peligros y los niveles de pobreza? ¿Cómo aumentaron los factores de riesgo crónicos (desempleo, mala salud, drogadicción o violencia personal y social) el riesgo y el impacto de los desastres?\n¿Existe una legislación adecuada a nivel nacional y local, incluidos códigos de construcción, aplicación y especificidad en cuestiones de gestión de riesgos?\n¿Existe un seguro contra pérdidas o responsabilidad civil? ¿Es obligatorio?\n¿Se integró la gestión del riesgo de desastres en otras áreas de políticas como la planificación urbana, la gestión ambiental y los seguros?\n¿Existen capacidades de investigación y educación centradas en la concientización sobre los riesgos y la cobertura de seguros?\n\n¿Quién sufrió más y por qué? (vulnerabilidad)\n\n¿Cómo contribuyeron el crecimiento y la distribución de la población en el pasado al desastre?\n¿Qué papel desempeñaron la degradación ambiental y el agotamiento de los servicios ecosistémicos?\n¿Cuáles fueron los impactos de la pobreza y la distribución del ingreso?\n\n¿Qué fue resiliente?\n¿Cuáles fueron los elementos institucionales y de gobernanza que contribuyeron a la resiliencia?\nResultado del Paso 1 = Identificación de las cadenas de ADN clave (puntos de inflexión únicos) que hicieron de este desastre algo único. La inclusión de relatos del desastre y conversaciones con las personas afectadas puede profundizar el análisis y proporcionar una visión realista de las acciones propuestas para la reducción del riesgo.\n\n\n\nPASO 2 – TENDENCIAS FUTURAS\n\nAnalice más a fondo las áreas clave identificadas del ADN del desastre y prediga las posibles tendencias futuras hasta 2050. Por ejemplo, si la urbanización y los asentamientos informales fueron los principales contribuyentes a los daños causados ​​por las inundaciones, ¿cuáles son las tendencias actuales y futuras probables para la urbanización y los asentamientos informales?\nResultado del paso 2 = Realizar un análisis de previsión futura para identificar qué áreas de riesgo actual es probable que aumenten en el futuro.\n\n\n\nPASO 3 – APRENDIZAJE FORENSE\n\nFacilitar un debate entre múltiples partes interesadas para revisar y refinar el análisis, creando conjuntamente políticas potenciales y acciones prácticas para reducir el riesgo asociado con cada cadena de ADN identificada, considerando los impactos del desastre y los escenarios futuros",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#lecturas-varias",
+    "href": "grd/conocimientodelriesgo.html#lecturas-varias",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Lecturas varias",
+    "text": "Lecturas varias\n\nThe Hazards Posed by Mesoscale Lightning Megaflashes. Link.\nGMT Tutorial is an open source collection of ~65 tools for manipulating geographic and Cartesian data sets. Link\nHow smartphones are being used to monitor ageing bridges. Link.\nTHE COST OF DOING NOTHING. Link.\n97% de los POT no tiene estudios de amenazas y riesgo urbano. El Nuevo Siglo. Link.\nLos desastres no son naturales. El País. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
     ]
   },
   {
@@ -2541,6 +2397,161 @@
       "Gestión del riesgo de desastres",
       "Amenazas hidrológicas y meteorológicas",
       "El Niño / La Niña"
+    ]
+  },
+  {
+    "objectID": "grd/hidrol-meteorologicas/index.html#hazard-information-profiles-hips-online-reference",
+    "href": "grd/hidrol-meteorologicas/index.html#hazard-information-profiles-hips-online-reference",
+    "title": "Riesgo por amenazas hidrológicas y meteorologicas",
+    "section": "2025 Hazard Information Profiles (HIPs) online reference",
+    "text": "2025 Hazard Information Profiles (HIPs) online reference\n8 hazards clusters and 53 specific hazards\n\n\n\nSpecific hazardSort descending\nIdentifier\nCluster\n\n\n\n\nAvalanche\nMH0801\nTerrestrial\n\n\nBlizzard\nMH0403\nPrecipitation Related\n\n\nCold Wave\nMH0502\nTemperature Related\n\n\nDepression or Cyclone (Low Pressure Area)\nMH0306\nPressure Related\n\n\nDerecho\nMH0302\nWind Related\n\n\nDownburst\nMH0101\nConvective Related\n\n\nDrought\nMH0401\nPrecipitation Related\n\n\nDust storm or Sandstorm\nMH0201\nLithometeors\n\n\nDzud\nMH0503\nTemperature Related\n\n\nEstuarine (Coastal) Flooding\nMH0602\nFlood\n\n\nExtra-tropical Cyclone\nMH0307\nPressure Related\n\n\nFlash Flood\nMH0603\nFlood\n\n\nFlooding\nMH0600\nFlood\n\n\nFluvial (Riverine) Flooding\nMH0604\nFlood\n\n\nFog\nMH0202\nLithometeors\n\n\nFreeze\nMH0504\nTemperature Related\n\n\nFreezing Rain (Ice storm)\nMH0506\nTemperature Related\n\n\nFrost (Hoar Frost)\nMH0505\nTemperature Related\n\n\nGale (Strong Gale)\nMH0303\nWind Related\n\n\nGlacial Lake Outburst Flood\nMH0607\nFlood\n\n\nGlaze\nMH0507\nTemperature Related\n\n\nGround Frost\nMH0508\nTemperature Related\n\n\nGroundwater Flooding\nMH0605\nFlood\n\n\nHail\nMH0404\nPrecipitation Related\n\n\nHaze\nMH0203\nLithometeors\n\n\nHeatwave\nMH0501\nTemperature Related\n\n\nIce Flow\nMH0707\nMarine\n\n\nIce-Jam Flood Including Debris\nMH0608\nFlood\n\n\nIcing (Including Ice)\nMH0509\nTemperature Related\n\n\nLightning (Electrical Storm)\nMH0102\nConvective Related\n\n\nMarine Heatwave\nMH0708\nMarine\n\n\nPonding (Drainage) Flood\nMH0609\nFlood\n\n\nRain\nMH0402\nPrecipitation Related\n\n\nRogue Wave\nMH0701\nMarine\n\n\nSand haze\nMH0204\nLithometeors\n\n\nSea Ice (Icebergs)\nMH0706\nMarine\n\n\nSeiche\nMH0702\nMarine\n\n\nSmoke\nMH0205\nLithometeors\n\n\nSnow\nMH0405\nPrecipitation Related\n\n\nSnow Storm\nMH0406\nPrecipitation Related\n\n\nSnowmelt Flood\nMH0610\nFlood\n\n\nSquall\nMH0304\nWind Related\n\n\nStorm Surge\nMH0703\nMarine\n\n\nStorm Tides\nMH0704\nMarine\n\n\nSub-Tropical Cyclone\nMH0308\nPressure Related\n\n\nSurface Water Flooding\nMH0606\nFlood\n\n\nThaw\nMH0510\nTemperature Related\n\n\nThunderstorm\nMH0103\nConvective Related\n\n\nTornado\nMH0305\nWind Related\n\n\nTropical Cyclone\nMH0309\nWind Related\n\n\nTsunami\nMH0705\nMarine\n\n\nWind\nMH0301\nWind Related",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas hidrológicas y meteorológicas"
+    ]
+  },
+  {
+    "objectID": "grd/ambientales/incendiosforestales.html",
+    "href": "grd/ambientales/incendiosforestales.html",
+    "title": "Incendios forestales",
+    "section": "",
+    "text": "UNGRD. Link\nMinambiente. Link. Link\nIDEAM. Link\nBomberos de Colombia. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas ambientales",
+      "Incendios forestales"
+    ]
+  },
+  {
+    "objectID": "grd/ambientales/incendiosforestales.html#instituciones-nacionales",
+    "href": "grd/ambientales/incendiosforestales.html#instituciones-nacionales",
+    "title": "Incendios forestales",
+    "section": "",
+    "text": "UNGRD. Link\nMinambiente. Link. Link\nIDEAM. Link\nBomberos de Colombia. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas ambientales",
+      "Incendios forestales"
+    ]
+  },
+  {
+    "objectID": "grd/ambientales/incendiosforestales.html#instituciones-internacionales",
+    "href": "grd/ambientales/incendiosforestales.html#instituciones-internacionales",
+    "title": "Incendios forestales",
+    "section": "Instituciones internacionales",
+    "text": "Instituciones internacionales\n\nARSET – Observaciones de Satélites y Herramientas para el Riesgo, Detección y Análisis de Incendios. Link)\nBrazil. Programa Queimadas. Link\nCopernicusLAC, case 6. Link. Link. Incendios: cartografía de eventos, peligro y recuperación.\nESA. Long-term dataset to analyse global fire trend. Link\nFire Information for Resource Management System. NASA. Link\nGlobal Wildfire Information System. Link\nHMS Smoke Explorer. Link\nIFRC. Link\nMODIS fire data in GRASS GIS. Link\nNational Indicative Aggregated Fire Extent Datasets. Link\nTranscending the disaster paradigm: Understanding persistence of animal populations in fire-prone environments. Global Change Biology, 2021. Link\n10 Years Beyond Bushfires. Community, Resilience and Recovery. Australia. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas ambientales",
+      "Incendios forestales"
+    ]
+  },
+  {
+    "objectID": "grd/ambientales/incendiosforestales.html#amenaza-por-incendios-forestales",
+    "href": "grd/ambientales/incendiosforestales.html#amenaza-por-incendios-forestales",
+    "title": "Incendios forestales",
+    "section": "Amenaza por incendios forestales",
+    "text": "Amenaza por incendios forestales\n\nMonitoreo de puntos de calor en Colombia. IDEAM. link\nBoletines técnicos IDEAM. Boletín de Alertas por Pronóstico de la Amenaza por Incendios de la Cobertura Vegetal (BAICV). Link\nPROTOCOLO PARA LA REALIZACIÓN DE MAPAS DE ZONIFICACIÓN DE RIESGOS A INCENDIOS DE LA COBERTURA VEGETAL. IDEAM, 2011. Link\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAmenaza por incendios forestales",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas ambientales",
+      "Incendios forestales"
+    ]
+  },
+  {
+    "objectID": "grd/ambientales/incendiosforestales.html#evaluación-del-riesgo-de-incendios-forestales",
+    "href": "grd/ambientales/incendiosforestales.html#evaluación-del-riesgo-de-incendios-forestales",
+    "title": "Incendios forestales",
+    "section": "Evaluación del riesgo de incendios forestales",
+    "text": "Evaluación del riesgo de incendios forestales\n\nEstrategia E2050. Link\nWildfire hazard and risk assessment. UNDRR. Link\nA wildfire risk assessment framework for land and resource management. US Forest Service. 2013. Link\nUSGS Wildfire Hazard and Risk Assessment Clearinghouse. Link.\nWildfire Risk Assessment. Copernicus. Link\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvaluación del riesgo por incendios forestales.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas ambientales",
+      "Incendios forestales"
+    ]
+  },
+  {
+    "objectID": "grd/ambientales/incendiosforestales.html#comunicación-del-riesgo-por-incendios-forestales",
+    "href": "grd/ambientales/incendiosforestales.html#comunicación-del-riesgo-por-incendios-forestales",
+    "title": "Incendios forestales",
+    "section": "Comunicación del riesgo por incendios forestales",
+    "text": "Comunicación del riesgo por incendios forestales\n\nNew good practice guide on Wildfire Risk Awareness and Communication. 2024. European Union. Link\nWildfire risk perception and communication in disadvantaged communities: Insights from Eastern Coachella Valley in Southern California. 2025. International Journal of Disaster Risk Reduction. Link\nForest fires risk communication. Operational recommendations to improve social prevention. eFIRECOM project. 2016. Link\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicación del riesgo por incendios forestales.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas ambientales",
+      "Incendios forestales"
+    ]
+  },
+  {
+    "objectID": "grd/ambientales/incendiosforestales.html#reducción-del-riesgo-de-incendios-forestales",
+    "href": "grd/ambientales/incendiosforestales.html#reducción-del-riesgo-de-incendios-forestales",
+    "title": "Incendios forestales",
+    "section": "Reducción del riesgo de incendios forestales",
+    "text": "Reducción del riesgo de incendios forestales\n\nPropuesta para el manejo integral del fuego en Colombia. 2019. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas ambientales",
+      "Incendios forestales"
+    ]
+  },
+  {
+    "objectID": "grd/ambientales/incendiosforestales.html#manejo-de-desastres-de-incendios-forestales",
+    "href": "grd/ambientales/incendiosforestales.html#manejo-de-desastres-de-incendios-forestales",
+    "title": "Incendios forestales",
+    "section": "Manejo de desastres de incendios forestales",
+    "text": "Manejo de desastres de incendios forestales\n\nRed Nacional de Brigadas Forestales Comunitarias. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas ambientales",
+      "Incendios forestales"
+    ]
+  },
+  {
+    "objectID": "grd/ambientales/incendiosforestales.html#lecturas",
+    "href": "grd/ambientales/incendiosforestales.html#lecturas",
+    "title": "Incendios forestales",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nClimate change is increasingly affecting fires worldwide. Nature. 2024. Link\nWildfire Fighters, Unmasked in Toxic Smoke, Are Getting Sick and Dying. NYT. 2025. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas ambientales",
+      "Incendios forestales"
+    ]
+  },
+  {
+    "objectID": "grd/ambientales/incendiosforestales.html#entrenamiento",
+    "href": "grd/ambientales/incendiosforestales.html#entrenamiento",
+    "title": "Incendios forestales",
+    "section": "Entrenamiento",
+    "text": "Entrenamiento\n\nCopernicus LAC MOOC. Link.\nARSET NASA wildfire training. LiInk",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas ambientales",
+      "Incendios forestales"
+    ]
+  },
+  {
+    "objectID": "grd/ambientales/incendiosforestales.html#repos",
+    "href": "grd/ambientales/incendiosforestales.html#repos",
+    "title": "Incendios forestales",
+    "section": "Repos",
+    "text": "Repos\n\nDownload wildfire hotspots detected by NASA satellites and the Fire Information for Resource Management System (FIRMS). Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas ambientales",
+      "Incendios forestales"
+    ]
+  },
+  {
+    "objectID": "grd/ambientales/incendiosforestales.html#videos",
+    "href": "grd/ambientales/incendiosforestales.html#videos",
+    "title": "Incendios forestales",
+    "section": "Videos",
+    "text": "Videos",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas ambientales",
+      "Incendios forestales"
     ]
   },
   {

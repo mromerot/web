@@ -14,14 +14,25 @@ editor: visual
 
 ## Instituciones internacionales
 
+-   Emergency Copernicus. [*Link*](https://emergency.copernicus.eu/)
+
+-   European Commission. River Flood Hazard Maps at European and Global Scale. [*Link*](https://data.jrc.ec.europa.eu/collection/id-0054).
+
 ## Amenaza por inundaciones
 
-Europe floods: new tool to estimate water depth and extent. 2024. [*Link*](https://joint-research-centre.ec.europa.eu/jrc-news-and-updates/europe-floods-new-tool-estimate-water-depth-and-extent-2024-09-20_en).\
-Satellite imaging reveals increased proportion of population exposed to floods. Nature, 2021. [*Link*](https://www.nature.com/articles/s41586-021-03695-w). - The fraction of the global population at risk of floods is growing. Nature News. 2021. [*Link*](https://www.nature.com/articles/d41586-021-01974-0). - ARSET – Monitoring and Modeling Floods using Earth Observations. NASA. [*Link*](https://appliedsciences.nasa.gov/join-mission/training/english/arset-monitoring-and-modeling-floods-using-earth-observations). - Global Floods. [*Link*](https://www.globalfloods.eu/) - What’s in Floodwaters? [*Link*](https://www.scientificamerican.com/article/whats-in-floodwaters/?utm_source=twitter&utm_medium=social&utm_campaign=socialflow).
+-   Europe floods: new tool to estimate water depth and extent. 2024. [*Link*](https://joint-research-centre.ec.europa.eu/jrc-news-and-updates/europe-floods-new-tool-estimate-water-depth-and-extent-2024-09-20_en).
+-   Satellite imaging reveals increased proportion of population exposed to floods. Nature, 2021. [*Link*](https://www.nature.com/articles/s41586-021-03695-w).
+-   The fraction of the global population at risk of floods is growing. Nature News. 2021. [*Link*](https://www.nature.com/articles/d41586-021-01974-0).
+-   ARSET – Monitoring and Modeling Floods using Earth Observations. NASA. [*Link*](https://appliedsciences.nasa.gov/join-mission/training/english/arset-monitoring-and-modeling-floods-using-earth-observations).
+-   Global Floods. [*Link*](https://www.globalfloods.eu/) - What’s in Floodwaters? [*Link*](https://www.scientificamerican.com/article/whats-in-floodwaters/?utm_source=twitter&utm_medium=social&utm_campaign=socialflow).
+
+![The share of people living in high-risk flood zones. Source: Rentschler, J, Salhab, M and Jafino, B. 2022. Flood Exposure and Poverty in 188 Countries. Nature Communications. [*Link*](https://blogs.worldbank.org/en/climatechange/flood-risk-already-affects-181-billion-people-climate-change-and-unplanned).](https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/The_share_of_people_living_in_high-risk_flood_zones.png){width="400"}
+
+![The share of population that is flood-exposed and living und \$5.50 per day. Source: Rentschler, J, Salhab, M and Jafino, B. 2022. Flood Exposure and Poverty in 188 Countries. Nature Communications.](https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/The_share_of_population_that_is_flood-exposed_and_living_und_5_50_per_day_0.png){width="400"}
+
+![Percentage of the population in each sub-national administrative region that live on floodplains, which is defined as the 1000-year flood extent. The proportion of the reaches that are in each of the floodplain categories for each region is shown by the top pie charts in each box. The proportion of the population settled on the different types of floodplains is shown by the bottom pie chart in each box. [*Link*](https://www.nature.com/articles/s41467-023-38297-9)](https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41467-023-38297-9/MediaObjects/41467_2023_38297_Fig2_HTML.png?as=webp){width="400"}
 
 ::: {layout-ncol="2"}
-{{< video "https://youtu.be/QWEXzQaYt9s" >}}
-
 {{< video "https://youtu.be/4zY6-GdprWA" >}}
 
 {{< video "https://www.youtube.com/watch?v=iY64O86eLB8" >}}
@@ -30,34 +41,32 @@ Satellite imaging reveals increased proportion of population exposed to floods. 
 
 {{< video "https://www.youtube.com/watch?v=GWSV3SLi40c" >}}
 
-Amenaza por inundaciones
+{{< video "https://youtu.be/z681aaybwCU" >}} Introduction to Flood Risk Management
 :::
 
 ## Evaluación del riesgo por inundaciones
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/swr4NlX2bVE" >}}
-
-Evaluación del riesgo por incendios forestales.
 :::
 
 ## Comunicación del riesgo por inundaciones
 
--   
+-   Flood risk communication: a fundamental tool for disaster risk management. Prevention web. [*Link*](https://www.preventionweb.net/publication/flood-risk-communication-fundamental-tool-disaster-risk-management)
+
+-   Flood Risk Communication Toolbox. US Army Corps of Engineers. [*Link*](https://www.iwr.usace.army.mil/Missions/Risk-Analysis-Gateway/Flood-Risk-Communication-Toolbox/).
+
+-   Bridging the gap in flood risk communication: a comparative study of community and organizational social media posts using natural language processing. 2025. [*Link*](https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2025.1553746/full)
 
 ::: {layout-ncol="2"}
-{{< video "https://youtu.be/8u3F5f47i_M" >}}
-
-Comunicación del riesgo por incendios forestales.
+{{< video "https://youtu.be/B0hObr47J7s" >}} How to Communicate Flood Risk to the Public
 :::
 
 ## Reducción del riesgo de inundaciones
 
-{{< video "https://youtu.be/ZtULL-6IcQg?si=jmWmRuvidFGTVYBM" >}} Planning for Safety: How Land Use Decisions Shape Flood Risk. [*Link*](https://www.aaas.org/events/planning-safety-how-land-use-decisions-shape-flood-risk)
+{{< video "https://youtu.be/ZtULL-6IcQg" >}} Planning for Safety: How Land Use Decisions Shape Flood Risk. [*Link*](https://www.aaas.org/events/planning-safety-how-land-use-decisions-shape-flood-risk)
 
 ## Manejo de desastres por inundaciones
-
--   Red
 
 ::: {layout-ncol="2"}
 {{< video "https://vimeo.com/701418128" >}}
@@ -66,6 +75,7 @@ Comunicación del riesgo por incendios forestales.
 ## Lecturas
 
 -   How to Know Your Flood Risk. NYT. 2025. [*Link*](https://www.nytimes.com/2025/07/15/climate/how-to-know-your-flood-risk.html).
+-   Flood hazard potential reveals global floodplain settlement patterns. Nature Comms. 2023. [*Link*](https://www.nature.com/articles/s41467-023-38297-9)
 
 ## **Entrenamiento**
 
