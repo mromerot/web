@@ -14,11 +14,14 @@ editor: visual
 
 # Amenaza por ciclones tropicales
 
-Histórico de huracanes
+## Histórico de huracanes
 
 -   Historical Hurricane Tracks. NOAA. [*Link*](https://www.climate.gov/maps-data/dataset/historical-hurricane-tracks-gis-map-viewer).
-
 -   UniSys -  Hurricane/Tropical Data. [*Link*](http://weather.unisys.com/hurricane/).
+
+## Visores
+
+[![[Real Time Tropical Cyclones](https://polarwx.com/tropical/)](images/Real Time Tropical Cyclones.png){width="400"}](https://polarwx.com/tropical/)
 
 # Evaluación del riesgo por ciclones tropicales
 

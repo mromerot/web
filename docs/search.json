@@ -775,11 +775,23 @@
     ]
   },
   {
-    "objectID": "grd/hidrol-meteorologicas/huracanes.html",
-    "href": "grd/hidrol-meteorologicas/huracanes.html",
+    "objectID": "grd/hidrol-meteorologicas/huracanes.html#histórico-de-huracanes",
+    "href": "grd/hidrol-meteorologicas/huracanes.html#histórico-de-huracanes",
     "title": "Huracanes",
-    "section": "",
-    "text": "Instituciones nacionales\n\n\n\n\n\nInstituciones internacionales\n\n\n\n\n\nAmenaza por ciclones tropicales\nHistórico de huracanes\n\nHistorical Hurricane Tracks. NOAA. Link.\nUniSys -  Hurricane/Tropical Data. Link.\n\n\n\nEvaluación del riesgo por ciclones tropicales\n\n\n\n\n\nComunicación del riesgo por ciclones tropicales\n\n\n\n\n\nReducción del riesgo de ciclones tropicales\n\n\n\n\n\nManejo de desastres por ciclones tropicales\n\n\n\n\n\nLecturas\n\nThe\n\n\n\nEntrenamiento\n\nCope\n\n\n\nRepositorios\n\nDownload\n\n\n\nVideos\nCICLONES TROPICALES\n\nHistorical Hurricane Tracks – GIS Map Viewer. NOAA. Link.Link.\nEl futuro de las costas en la era de los megahuracanes. El Pais. 2021. Link.\nEvaluación de áreas susceptibles a la inundación por marea de tormenta generada por huracanes en el archipiélago de San Andrés, Providencia y Santa Catalina, Colombia. Boletín Científico CIOH. Link.\nTropical Cyclone Risk Model – Geoscience Australia. Link. Github.\nAssessing tropical cyclone risks using geospatial techniques. 2018. Link.\nTropical cyclone disaster management using remote sensing and spatial analysis: A review. Link.\nMapping Global Earthquakes and Hurricane tracks with R. Link.\nInternational Best Track Archive for Climate Stewardship (IBTrACS) Project, Version 4. Link.\n50 Reefs Global Coral Ocean Warming, Connectivity and Cyclone Dataset. Link.\nProtocolo nacional de alerta por ciclones tropicales. UNGRD. Link\nCIMSS. Link.\nEfectos del cambio climático sobre los huracanes.\n\nGlobal increase in major tropical cyclone exceedance probability over the past four decades. PNAS. 2020. Link.\nEvidence that hurricanes are getting stronger. PNAS. 2020. Link.\nResponse of Global Tropical Cyclone Activity to Increasing CO 2: Results from Downscaling CMIP6 Models. 2020. Link.\nDeclining tropical cyclone frequency under global warming. Nature. 2022. Link.\nOcean currents show global intensification of weak tropical cyclones. Nature. 2022. Link.\n\n\n\n\n\n\n\n\nTORMENTAS CONVECTIVAS\n\nWakimoto, R. M. (2015). Mesoscale Meteorology: Microbursts. In Encyclopedia of Atmospheric Sciences: Second Edition. Link.\nBolgiani, P., Fernández‐González, S., Valero, F., Merino, A., García‐Ortega, E., Sánchez, J. L., & Martín, M. L. (2020). Simulation of Atmospheric Microbursts Using a Numerical Mesoscale Model at High Spatiotemporal Resolution. Journal of Geophysical Research: Atmospheres, 125(4). Link.",
+    "section": "Histórico de huracanes",
+    "text": "Histórico de huracanes\n\nHistorical Hurricane Tracks. NOAA. Link.\nUniSys -  Hurricane/Tropical Data. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas hidrológicas y meteorológicas",
+      "Huracanes"
+    ]
+  },
+  {
+    "objectID": "grd/hidrol-meteorologicas/huracanes.html#visores",
+    "href": "grd/hidrol-meteorologicas/huracanes.html#visores",
+    "title": "Huracanes",
+    "section": "Visores",
+    "text": "Visores\n\n\n\n[Real Time Tropical Cyclones](https://polarwx.com/tropical/)",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas hidrológicas y meteorológicas",
@@ -1067,7 +1079,7 @@
     "href": "grd/amenazasextraterrestres.html#instituciones-internacionales",
     "title": "Amenazas extraterrestres",
     "section": "Instituciones internacionales",
-    "text": "Instituciones internacionales\n\nONU. Oficina para Asuntos del Espacio Ultraterrestre. Link. Link.\nOficina Regional de Apoyo en Colombia. Link.\nONU, Near-Earth Objects (NEOs). Link\nInternational Asteroid Warning Network (IAWN). Link\nNASA, Saving earth form asteroids. Link. Link.\nThe risk from space. Prevention web. Link.\nFireballs Nasa. Link.",
+    "text": "Instituciones internacionales\n\nONU. Oficina para Asuntos del Espacio Ultraterrestre. Link. Link.\nOficina Regional de Apoyo en Colombia. Link.\nONU, Near-Earth Objects (NEOs). Link\nInternational Asteroid Warning Network (IAWN). Link\nNASA, Saving earth form asteroids. Link. Link.\nThe risk from space. Prevention web. Link.\nFireballs Nasa. Link.\nNOAA Space Weather Portal. Link. Link\n\n\n\n\nSpace Weather Portal",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas extraterrestres"
