@@ -1,21 +1,10 @@
 [
   {
-    "objectID": "datascience/ia.html",
-    "href": "datascience/ia.html",
+    "objectID": "datascience/ia.html#que-es-ia",
+    "href": "datascience/ia.html#que-es-ia",
     "title": "Inteligencia artificial",
-    "section": "",
-    "text": "AI Tool Master List\n1000 AI collection tools\nExample applications\nAIcyclopedia\n\n\n\n\n\nPerplexity\nTutor AI (Aprendizaje)\n\n\n\n\n\nMuse: Text-To-Image Generation\n\n\n\n\n\nMy Good Tape\nAI Transcription\naudiopen.ai\nOtter (Tomar notas y resumir)\nParrot AI\n\n\n\n\n\nFake You\n\n\n\n\n\nCopia el enlace largo del video de YouTube.\nVe a Summarize.tech y pega el enlace. Resumirá cada sección con marcas de tiempo. Copia el guión resumido.\nVe a Eleven Labs. Pega tu guión resumido. Eleven Labs leerá en voz alta todo el guión resumido para ti.\nJasper\n\n\n\n\n\nPodcast Adobe (Editar y mejorar audio)\n\n\n\n\n\ngptzero (Detector de AI)\nNew AI classifier for indicating AI-written text\nSummarize AI (Resumir)\nConsensus (Resumir papers)\nNatural Language → Knowledge Graph\nQuillbot (Reescribir)\nStrut\n\n\n\n\n\nDeepL\n\n\n\n\n\nReimagine\n\n\n\n\n\nLas IAs como ChatGPT ya crean nuevas profesiones (muy bien pagadas): a qué se dedica esta nueva clase de ‘ingenieros’\nCookbook\nAbstracts written by ChatGPT fool scientists. Nature. 2023",
-    "crumbs": [
-      "Ciencia de datos",
-      "Inteligencia artificial"
-    ]
-  },
-  {
-    "objectID": "datascience/ia.html#recursos-de-ia-para-el-trabajo-diario",
-    "href": "datascience/ia.html#recursos-de-ia-para-el-trabajo-diario",
-    "title": "Inteligencia artificial",
-    "section": "",
-    "text": "AI Tool Master List\n1000 AI collection tools\nExample applications\nAIcyclopedia\n\n\n\n\n\nPerplexity\nTutor AI (Aprendizaje)\n\n\n\n\n\nMuse: Text-To-Image Generation\n\n\n\n\n\nMy Good Tape\nAI Transcription\naudiopen.ai\nOtter (Tomar notas y resumir)\nParrot AI\n\n\n\n\n\nFake You\n\n\n\n\n\nCopia el enlace largo del video de YouTube.\nVe a Summarize.tech y pega el enlace. Resumirá cada sección con marcas de tiempo. Copia el guión resumido.\nVe a Eleven Labs. Pega tu guión resumido. Eleven Labs leerá en voz alta todo el guión resumido para ti.\nJasper\n\n\n\n\n\nPodcast Adobe (Editar y mejorar audio)\n\n\n\n\n\ngptzero (Detector de AI)\nNew AI classifier for indicating AI-written text\nSummarize AI (Resumir)\nConsensus (Resumir papers)\nNatural Language → Knowledge Graph\nQuillbot (Reescribir)\nStrut\n\n\n\n\n\nDeepL\n\n\n\n\n\nReimagine\n\n\n\n\n\nLas IAs como ChatGPT ya crean nuevas profesiones (muy bien pagadas): a qué se dedica esta nueva clase de ‘ingenieros’\nCookbook\nAbstracts written by ChatGPT fool scientists. Nature. 2023",
+    "section": "Que es IA",
+    "text": "Que es IA\n\nComo funciona la AI. LLM Visualization. Link\n\n\nListas\n\nAI Tool Master List\n1000 AI collection tools\nExample applications\nAIcyclopedia\n\n\n\nBuscadores\n\nPerplexity\nTutor AI (Aprendizaje)\n\n\n\nTexto a imagen\n\nMuse: Text-To-Image Generation\n\n\n\nVoz a texto\n\nMy Good Tape\nAI Transcription\naudiopen.ai\nOtter (Tomar notas y resumir)\nParrot AI\n\n\n\nVoz\n\nFake You\n\n\n\nResumir videos de YouTube\n\nCopia el enlace largo del video de YouTube.\nVe a Summarize.tech y pega el enlace. Resumirá cada sección con marcas de tiempo. Copia el guión resumido.\nVe a Eleven Labs. Pega tu guión resumido. Eleven Labs leerá en voz alta todo el guión resumido para ti.\nJasper\n\n\n\nAudio\n\nPodcast Adobe (Editar y mejorar audio)\n\n\n\nEscritura\n\ngptzero (Detector de AI)\nNew AI classifier for indicating AI-written text\nSummarize AI (Resumir)\nConsensus (Resumir papers)\nNatural Language → Knowledge Graph\nQuillbot (Reescribir)\nStrut\n\n\n\nTraductor\n\nDeepL\n\n\n\nEspacios del hogar\n\nReimagine\n\n\n\nLecturas diarias\n\nLas IAs como ChatGPT ya crean nuevas profesiones (muy bien pagadas): a qué se dedica esta nueva clase de ‘ingenieros’\nCookbook\nAbstracts written by ChatGPT fool scientists. Nature. 2023",
     "crumbs": [
       "Ciencia de datos",
       "Inteligencia artificial"
@@ -81,7 +70,18 @@
     "href": "datascience/myst.html",
     "title": "Myst, Zaar",
     "section": "",
-    "text": "Myst. Link.\n\nGet Started. Your first steps with MyST. Link\n\n\n\n\n\n\n\n\nComo instalar Myst\n\n\n\nRevise el tutorial por extenso aquí: link\n\nInstale Python, MyST Markdown CLI, y VS-Code\nRevise en consola si Myst se instaló correctamente: myst -v\nDescargue el contenido de ejemplo y navegue hasta la carpeta\n\ngit clone https://github.com/jupyter-book/mystmd-quickstart.git\ncd mystmd-quickstart\n`myst` aparecera este mensaje ” 💾 Writing new project and site config file: myst.yml — ? Would you like to run myst start now? (Y/n)”\nLuego podrá abrir el nuevo proyecto en su navegador.\n\n\n\n\n\n\n\n\n\n\nComo configurar Myst\n\n\n\n\nDebe existir al meno un archivo en el proyecto ¨El archivo index.md servirá como página principal del sitio.¨\nmyst start para ver el sitio web localmente\nAgregar contenido: Crear más archivos .md o notebooks .ipynb\nConfigurar: Editar myst.yml para personalizar título, descripción, etc. 4. Estructura: Crear subcarpetas y organizar tu contenido\nEstructura: Crear subcarpetas y organizar tu contenido\n\n\n\n SciPy Proceedings 2025. MyST Markdown and Curvenote\n Rowan Cockett- SciPy Proceedings: An Exemplar for Publishing Computational Open Science | SciPy 2025\n\n\n\nReflections on MyST-ification. 2025. Link\nAGU. About Notebooks Now!. Link.",
+    "text": "Myst. Link.\n\nGet Started. Your first steps with MyST. Link\n\n\n\n\n\n\n\n\nComo instalar Myst\n\n\n\nRevise el tutorial por extenso aquí: link\n\nInstale Python, MyST Markdown CLI, y VS-Code\nRevise en consola si Myst se instaló correctamente: myst -v\nDescargue el contenido de ejemplo y navegue hasta la carpeta\n\ngit clone https://github.com/jupyter-book/mystmd-quickstart.git\ncd mystmd-quickstart\n`myst` aparecera este mensaje ” 💾 Writing new project and site config file: myst.yml — ? Would you like to run myst start now? (Y/n)”\nLuego podrá abrir el nuevo proyecto en su navegador.\n\n\n\n\n\n\n\n\n\n\nComo configurar Myst\n\n\n\n\nDebe existir al meno un archivo en el proyecto ¨El archivo index.md servirá como página principal del sitio.¨\nmyst start para ver el sitio web localmente\nAgregar contenido: Crear más archivos .md o notebooks .ipynb\nConfigurar: Editar myst.yml para personalizar título, descripción, etc. 4. Estructura: Crear subcarpetas y organizar tu contenido\nEstructura: Crear subcarpetas y organizar tu contenido\n\n\n\n SciPy Proceedings 2025. MyST Markdown and Curvenote\n Rowan Cockett- SciPy Proceedings: An Exemplar for Publishing Computational Open Science | SciPy 2025\n\n\n\nAGU Notebooks. La Palma Seismicity 2021. Link\n\n\n\n\n\nReflections on MyST-ification. 2025. Link\nAGU. About Notebooks Now!. Link.\n\n\n\n\n\n\n\n\nZarr in the Browser — Fast, Flexible, and Surprisingly Powerful for Big Geo Data. 2025. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Myst"
+    ]
+  },
+  {
+    "objectID": "datascience/myst.html#myst-en-publicacion-científica",
+    "href": "datascience/myst.html#myst-en-publicacion-científica",
+    "title": "Myst, Zaar",
+    "section": "",
+    "text": "AGU Notebooks. La Palma Seismicity 2021. Link",
     "crumbs": [
       "Ciencia de datos",
       "Myst"
@@ -102,8 +102,8 @@
     "objectID": "datascience/myst.html#lecturas-1",
     "href": "datascience/myst.html#lecturas-1",
     "title": "Myst, Zaar",
-    "section": "Lecturas",
-    "text": "Lecturas\n\nZarr in the Browser — Fast, Flexible, and Surprisingly Powerful for Big Geo Data. 2025. Link.",
+    "section": "",
+    "text": "Zarr in the Browser — Fast, Flexible, and Surprisingly Powerful for Big Geo Data. 2025. Link.",
     "crumbs": [
       "Ciencia de datos",
       "Myst"
@@ -1900,11 +1900,11 @@
     ]
   },
   {
-    "objectID": "cyt/cienciareproduc.html#curvenote",
-    "href": "cyt/cienciareproduc.html#curvenote",
+    "objectID": "cyt/cienciareproduc.html#myst-and-curvenote",
+    "href": "cyt/cienciareproduc.html#myst-and-curvenote",
     "title": "Ciencia reproducible",
-    "section": "Curvenote",
-    "text": "Curvenote\n\nCurvenote. Link",
+    "section": "Myst and Curvenote",
+    "text": "Myst and Curvenote\n\nCurvenote. Link\nAGU Notebooks. La Palma Seismicity 2021. Link",
     "crumbs": [
       "Ciencia y tecnología",
       "Ciencia reproducible"
