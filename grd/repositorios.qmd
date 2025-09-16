@@ -12,13 +12,14 @@ editor: visual
 
 -   **Climate Informed Risk Index.** [Link](https://github.com/fulton-ring/nri-future-risk)**.** This tool is a replica of the National Risk Index (NRI) Future Risk tool, which was removed from the public by the US Government in February, 2025. It references the following datasets which were downloaded before the tool was taken down.
 -   **CLIMAAX CRA Handbook**. [Link](https://handbook.climaax.eu/intro.html).[Link](https://github.com/CLIMAAX/crabook). A regional climate risk assessment is often needed to design or update a climate adaptation and/or risk management plan. Regular updates are needed considering changing climate risk profiles
+-   **GeoAI: Artificial Intelligence for Geospatial Data.** [*Link*](https://github.com/opengeos/geoai)
 -   **Global Earthquake Model**. [*Link*](https://github.com/gem)
     -   Perfil Colombia. *Link*
 -   **Copernicus Browser.** [Link](https://github.com/eu-cdse/copernicus-browser).
 -   EM-DAT Documentation. [*Link*](https://doc.emdat.be/docs/)*. [Link](https://github.com/em-dat/).*
 -   **Global Facility for Disaster Reduction and Recovery (GFDRR)**. [Link](https://github.com/GFDRR). GFDRR supports developing countries on disaster risk reduction and climate change adaptation. 
     -   **CCDR-tools**. [Link](https://gfdrr.github.io/CCDR-tools/home.html).
--   **Hazus**. FEMA Natural Hazards Risk Assessment Program. [*Link*](https://github.com/nhrap-hazus)*.*
+-   **Hazus**. FEMA Natural Hazards Risk Assessment Program. [*Link*](https://github.com/nhrap-hazus)*. [Link](https://github.com/Niyam-Projects/sphere/tree/main)*
 -   **Disaster-Risk-Analysis-Platform**. [Link](https://github.com/invcble/Disaster-Risk-Analysis-Platform). Welcome to our project, "Disaster Risk Analytics Platform," developed with an aim to provide comprehensive disaster risk analysis for investment firms operating within the U.S. markets. Using advanced statistical analysis and deep learning technologies, this platform helps predict potential disasters and their financial impacts on various states, aiding firms in making informed, resilient investment decisions.
 -   **Disaster-Risk-Monitoring-Using-Satellite-Imagery**. [Link](https://github.com/Pray-d/Disaster-Risk-Monitoring-Using-Satellite-Imagery). A suggestion of task provided by NIVIDEA in its course Disaster Risk Monitoring Using Satellite Imagery
 -   Demostrador RIESGOS. [*Link*](https://github.com/riesgos/dlr-riesgos-frontend)
@@ -38,8 +39,9 @@ editor: visual
 ## **Entrenamiento en GRD**
 
 -   Risk Profiler (Canada). [Link](https://www.riskprofiler.ca/learn-more/training-materials/index.html)
-
 -   FEMA, [mapas de inundacion](https://www.fema.gov/es/flood-maps)
+
+{{< video "https://youtu.be/jdK-cleFUkc" width = 350 >}} GeoAI Workshop: Unlocking the Power of GeoAI with Python
 
 ## **Data science para desastres**
 
@@ -48,4 +50,4 @@ editor: visual
 
     -   Risk Data Fellows. [*Link*](https://riskdatalibrary.org/fellows/)*.*
 
-{{< video "https://youtu.be/J3yfu6A-Clc" width = 300 >}} How data is saving lives in Colombia \| UNDRR
+{{< video "https://youtu.be/J3yfu6A-Clc" width = 350 >}} How data is saving lives in Colombia \| UNDRR
