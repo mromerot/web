@@ -1,0 +1,22 @@
+---
+title: "Analysis Ready, Cloud Optimized (ARCO) Data"
+format: html
+editor: visual
+---
+
+# Video introductorio
+
+-   Accelerating Science Using Virtualized Data at PO.DAAC*. [Slides](https://earthdata.nasa.gov/s3fs-public/2025-08/Virtualized%20Data_PO.DAAC_8.21.25.pdf)*
+
+{{< video https://youtu.be/K1FJyB0-XjY >}}
+
+# Data and Digital Outputs Management Plan (DDOMP)
+
+-   Belmont forum DDOMP Guide. [*Link*](https://bfe-inf.github.io/toolkit/ddomp-preproposal.html)
+    -   ¿Qué tipos de conjuntos de datos y otros resultados digitales de valor a largo plazo espera que el proyecto produzca o reutilice?
+    -   ¿Qué miembro(s) de su equipo serán responsables de desarrollar, implementar, supervisar y actualizar el Plan de Gestión de Datos y Resultados Digitales?
+    -   ¿Cómo se han contabilizado los costes necesarios para gestionar los datos y los resultados digitales para garantizar la accesibilidad a largo plazo?
+
+# Binder
+
+-   Zero-to-Binder. [*Link*](https://book.the-turing-way.org/communication/binder/zero-to-binder.html)

@@ -1,0 +1,38 @@
+---
+title: "Riesgo por amenazas geológicas"
+format: html
+editor: visual
+---
+
+![](/grd/hidrol-meteorologicas/images/hips2025.png){width="400"}
+
+## [**Geológico**](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type&order=title&sort=desc)
+
+4 grupos de peligros y 25 peligros específicos
+
+| [Peligro específicoOrdenar ascendentemente](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=title&sort=asc "ordenar por peligro específico") | [Identificador](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_notation&sort=asc "ordenar por identificador") | [Grupo](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_cluster_type&sort=asc "ordenar por clúster") |
+|------------------------|------------------------|------------------------|
+| [Gases volcánicos y aerosoles](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0205) | GH0205 | Vulcanógeno |
+| [Ruptura y fisura superficial](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0311) | GH0311 | Otros riesgos geológicos |
+| [Subsidencia y levantamiento](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0309) | GH0309 | Falla de tierra |
+| [Movimiento de masa gravitacional submarina ('deslizamiento de tierra')](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0306) | GH0306 | Falla de tierra |
+| [Degradación del suelo](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0402) | GH0402 | Otros riesgos geológicos |
+| [Sumidero](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0308) | GH0308 | Falla de tierra |
+| [Subsidencia por contracción y expansión](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0310) | GH0310 | Falla de tierra |
+| [Invasión de arena](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0406) | GH0406 | Otros riesgos geológicos |
+| [Caídas de rocas, escombros y tierra](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0305) | GH0305 | Falla de tierra |
+| [Extensión de rocas, escombros y tierra (incluido el deslizamiento del paisaje)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0302) | GH0302 | Falla de tierra |
+| [Caídas de rocas, escombros y tierra](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0301) | GH0301 | Falla de tierra |
+| [Deslizamiento de rocas, escombros y tierra (lodo)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0304) | GH0304 | Falla de tierra |
+| [Erosión y acreción de los ríos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0404) | GH0404 | Otros riesgos geológicos |
+| [Corriente de densidad piroclástica](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0203) | GH0203 | Vulcanógeno |
+| [Licuefacción](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0307) | GH0307 | Falla de tierra |
+| [Flujos y domos de lava](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0201) | GH0201 | Vulcanógeno |
+| [Lahares](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0204) | GH0204 | Vulcanógeno |
+| [Gases terrestres (CH4, Rn, etc.)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0407) | GH0407 | Otros riesgos geológicos |
+| [Movimiento de masa gravitacional ('Deslizamiento de tierra')](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0300) | GH0300 | Otros riesgos geológicos |
+| [Terremoto](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0101) | GH0101 | Sismogénicos (Terremotos) |
+| [Flujos de escombros y tierra (lodo) y avalanchas de rocas](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0303) | GH0303 | Falla de tierra |
+| [Suelos compresivos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0401) | GH0401 | Otros riesgos geológicos |
+| [Erosión y acreción costera](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0405) | GH0405 | Otros riesgos geológicos |
+| [Caída de ceniza/tefra (incluidos proyectiles balísticos volcánicos)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0202) | GH0202 | Vulcanógeno |

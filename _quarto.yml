@@ -50,6 +50,7 @@ website:
               - text: "Inundaciones"
                 href: grd/hidrol-meteorologicas/inundaciones.qmd
           - section: "Amenazas geológicas"
+            href: grd/geologicas/index.qmd
             contents:
               - text: "Falla de terreno"
                 href: grd/geologicas/falladeterreno.qmd
@@ -62,16 +63,20 @@ website:
           - text: "Amenazas extraterrestres"
             href: grd/amenazasextraterrestres.qmd
           - section: "Amenazas ambientales"
+            href: grd/ambientales/index.qmd
             contents:
               - text: "Erosión costera"
                 href: grd/ambientales/erosioncostera.qmd
               - text: "Incendios forestales"
                 href: grd/ambientales/incendiosforestales.qmd
-          - text: "Amenazas tecnológicas"
-            href: grd/tecnologicas/amenazastecnol.qmd
+          - section: "Amenazas tecnológicas"
+            href: grd/tecnologicas/index.qmd
+            contents:
+              - text: "Amenazas tecnológicas"
+                href: grd/tecnologicas/amenazastecnol.qmd
           - text: "Amazonas"
             href: grd/amazonas.qmd
-          - text: "Glosario"
+          - text: "terminología"
             href: grd/glosario.qmd
 # aqui viene la seccion de cambio climatico
       - section: "Gestión del cambio climático"
@@ -102,6 +107,8 @@ website:
         contents:
           - text: "Ciencia de datos"
             href: datascience/cienciadedatos.qmd
+          - text: "ARCO Data"
+            href: datascience/arco.qmd
           - text: "Inteligencia artificial"
             href: datascience/ia.qmd
           - text: "D3"

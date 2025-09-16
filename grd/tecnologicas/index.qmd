@@ -1,0 +1,115 @@
+---
+title: "Riesgo por amenazas tencnológicas"
+format: html
+editor: visual
+---
+
+## [**Technological**](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type&order=title&sort=desc#technological)
+
+6 hazard clusters and 50 specific hazards
+
+| [Peligro específicoOrdenar ascendentemente](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=title&sort=asc "ordenar por peligro específico") | [Identificador](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_notation&sort=asc "ordenar por identificador") | [Grupo](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_cluster_type&sort=asc "ordenar por clúster") |
+|----|----|----|
+| [Falla en el suministro de agua](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0210) | TL0210 | Falla de infraestructura |
+| [Aguas residuales](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0503) | TL0503 | Desperdiciar |
+| [Lagunas de tratamiento de residuos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0510) | TL0510 | Desperdiciar |
+| [Falla del túnel](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0213) | TL0213 | Falla estructural |
+| [Relaves](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0511) | TL0511 | Desperdiciar |
+| [Falla de la cadena de suministro](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0206) | TL0206 | Falla estructural |
+| [Ataque a la cadena de suministro](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0105-0) | TL0105 | Peligro cibernético |
+| [Falla estructural](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0203) | TL0203 | Falla estructural |
+| [Residuos sólidos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0502) | TL0502 | Desperdiciar |
+| [Contaminación del suelo](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0303) | TL0303 | Falla industrial |
+| [Ingeniería social - Phishing](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0107) | TL0107 | Peligro cibernético |
+| [Riesgos de seguridad asociados con el petróleo y el gas](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0308) | TL0308 | Falla industrial |
+| [Accidente de tráfico](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0405) | TL0405 | Transporte |
+| [Inundación de embalses](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0215) | TL0215 | Inundación |
+| [Accidente ferroviario](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0404) | TL0404 | Transporte |
+| [Residuos radiactivos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0601) | TL0601 | Radiación |
+| [Agentes y materiales radiactivos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0602) | TL0602 | Radiación |
+| [Fallas de radio y otras telecomunicaciones](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0212) | TL0212 | Falla de infraestructura |
+| [Corte de energía o apagón](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0209) | TL0209 | Falla de infraestructura |
+| [Contaminación](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0302) | TL0302 | Falla industrial |
+| [Residuos plásticos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0505) | TL0505 | Desperdiciar |
+| [Falla de la planta nuclear](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0208) | TL0208 | Falla de infraestructura |
+| [agentes nucleares](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0603) | TL0603 | CBRNE (Químico, Biológico, Radiológico, Nuclear y Explosivo) |
+| [Natech](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0309) | TL0309 | Falla industrial |
+| [Peligros de la minería](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0307) | TL0307 | Falla industrial |
+| [Desechos marinos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0506) | TL0506 | Marina |
+| [Accidente marítimo](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0403) | TL0403 | Transporte |
+| [Malware](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0101) | TL0101 | Peligro cibernético |
+| [Fugas y derrames](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0301) | TL0301 | Falla industrial |
+| [Vertedero](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0509) | TL0509 | Desperdiciar |
+| [Accidente de transporte por vías navegables interiores](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0402) | TL0402 | Transporte |
+| [Residuos sanitarios](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0508) | TL0508 | Desperdiciar |
+| [Desechos peligrosos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0504) | TL0504 | Desperdiciar |
+| [Fuego](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0305) | TL0305 | Falla industrial |
+| [Agentes explosivos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0306) | TL0306 | Falla industrial |
+| [Explosión](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0304) | TL0304 | Falla industrial |
+| [Falla de telecomunicaciones de emergencia](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0211) | TL0211 | Falla de infraestructura |
+| [Residuos electrónicos (E-Waste)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0507) | TL0507 | Desperdiciar |
+| [Inundaciones de desagües y alcantarillas](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0214) | TL0214 | Inundación |
+| [Desperdicios de desastres y conflictos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0501) | TL0501 | Desperdiciar |
+| [Denegación de servicio](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0104) | TL0104 | Peligro cibernético |
+| [Violación de datos y violación de información personal identificable (PII)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0102) | TL0102 | Peligro cibernético |
+| [Falla de la presa](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0205) | TL0205 | Falla estructural |
+| [Ciberacoso](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0106) | TL0106 | Peligro cibernético |
+| [Falla crítica de infraestructura](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0207) | TL0207 | Falla estructural |
+| [Edificio, rascacielos, revestimiento](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0202) | TL0202 | Falla estructural |
+| [Colapso del edificio](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0201) | TL0201 | Falla estructural |
+| [Falla del puente](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0204) | TL0204 | Falla estructural |
+| [Accidente de transporte aéreo](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0401) | TL0401 | Transporte |
+| [Amenaza persistente avanzada](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0103) | TL0103 | Peligro cibernético |
+
+| [Peligro específicoOrdenar ascendentemente](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=title&sort=asc "ordenar por peligro específico") | [Identificador](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_notation&sort=asc "ordenar por identificador") | [Grupo](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_cluster_type&sort=asc "ordenar por clúster") |
+|----|----|----|
+| [Falla en el suministro de agua](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0210) | TL0210 | Falla de infraestructura |
+| [Aguas residuales](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0503) | TL0503 | Desperdiciar |
+| [Lagunas de tratamiento de residuos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0510) | TL0510 | Desperdiciar |
+| [Falla del túnel](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0213) | TL0213 | Falla estructural |
+| [Relaves](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0511) | TL0511 | Desperdiciar |
+| [Falla de la cadena de suministro](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0206) | TL0206 | Falla estructural |
+| [Ataque a la cadena de suministro](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0105-0) | TL0105 | Peligro cibernético |
+| [Falla estructural](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0203) | TL0203 | Falla estructural |
+| [Residuos sólidos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0502) | TL0502 | Desperdiciar |
+| [Contaminación del suelo](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0303) | TL0303 | Falla industrial |
+| [Ingeniería social - Phishing](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0107) | TL0107 | Peligro cibernético |
+| [Riesgos de seguridad asociados con el petróleo y el gas](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0308) | TL0308 | Falla industrial |
+| [Accidente de tráfico](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0405) | TL0405 | Transporte |
+| [Inundación de embalses](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0215) | TL0215 | Inundación |
+| [Accidente ferroviario](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0404) | TL0404 | Transporte |
+| [Residuos radiactivos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0601) | TL0601 | Radiación |
+| [Agentes y materiales radiactivos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0602) | TL0602 | Radiación |
+| [Fallas de radio y otras telecomunicaciones](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0212) | TL0212 | Falla de infraestructura |
+| [Corte de energía o apagón](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0209) | TL0209 | Falla de infraestructura |
+| [Contaminación](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0302) | TL0302 | Falla industrial |
+| [Residuos plásticos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0505) | TL0505 | Desperdiciar |
+| [Falla de la planta nuclear](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0208) | TL0208 | Falla de infraestructura |
+| [agentes nucleares](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0603) | TL0603 | CBRNE (Químico, Biológico, Radiológico, Nuclear y Explosivo) |
+| [Natech](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0309) | TL0309 | Falla industrial |
+| [Peligros de la minería](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0307) | TL0307 | Falla industrial |
+| [Desechos marinos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0506) | TL0506 | Marina |
+| [Accidente marítimo](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0403) | TL0403 | Transporte |
+| [Malware](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0101) | TL0101 | Peligro cibernético |
+| [Fugas y derrames](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0301) | TL0301 | Falla industrial |
+| [Vertedero](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0509) | TL0509 | Desperdiciar |
+| [Accidente de transporte por vías navegables interiores](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0402) | TL0402 | Transporte |
+| [Residuos sanitarios](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0508) | TL0508 | Desperdiciar |
+| [Desechos peligrosos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0504) | TL0504 | Desperdiciar |
+| [Fuego](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0305) | TL0305 | Falla industrial |
+| [Agentes explosivos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0306) | TL0306 | Falla industrial |
+| [Explosión](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0304) | TL0304 | Falla industrial |
+| [Falla de telecomunicaciones de emergencia](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0211) | TL0211 | Falla de infraestructura |
+| [Residuos electrónicos (E-Waste)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0507) | TL0507 | Desperdiciar |
+| [Inundaciones de desagües y alcantarillas](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0214) | TL0214 | Inundación |
+| [Desperdicios de desastres y conflictos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0501) | TL0501 | Desperdiciar |
+| [Denegación de servicio](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0104) | TL0104 | Peligro cibernético |
+| [Violación de datos y violación de información personal identificable (PII)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0102) | TL0102 | Peligro cibernético |
+| [Falla de la presa](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0205) | TL0205 | Falla estructural |
+| [Ciberacoso](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0106) | TL0106 | Peligro cibernético |
+| [Falla crítica de infraestructura](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0207) | TL0207 | Falla estructural |
+| [Edificio, rascacielos, revestimiento](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0202) | TL0202 | Falla estructural |
+| [Colapso del edificio](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0201) | TL0201 | Falla estructural |
+| [Falla del puente](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0204) | TL0204 | Falla estructural |
+| [Accidente de transporte aéreo](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0401) | TL0401 | Transporte |
+| [Amenaza persistente avanzada](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/tl0103) | TL0103 | Peligro cibernético |
