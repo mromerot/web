@@ -60,8 +60,6 @@ website:
                 href: grd/geologicas/tsunami.qmd
               - text: "Volcanes"
                 href: grd/geologicas/volcanes.qmd
-          - text: "Amenazas extraterrestres"
-            href: grd/amenazasextraterrestres.qmd
           - section: "Amenazas ambientales"
             href: grd/ambientales/index.qmd
             contents:
@@ -74,6 +72,16 @@ website:
             contents:
               - text: "Amenazas tecnológicas"
                 href: grd/tecnologicas/amenazastecnol.qmd
+          - section: "Amenazas sociales"
+            href: grd/sociales/index.qmd
+            contents:
+              - text: "Migración"
+                href: grd/sociales/migracion.qmd
+          - section: "Amenazas extraterrestres"
+            href: grd/extraterrestre/index.qmd
+            contents:
+              - text: "Amenazas extraterrestres"
+                href: grd/extraterrestre/amenazasextraterrestres.qmd
           - text: "Amazonas"
             href: grd/amazonas.qmd
           - text: "terminología"

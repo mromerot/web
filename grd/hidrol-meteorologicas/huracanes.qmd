@@ -21,7 +21,7 @@ editor: visual
 
 ## Visores
 
-[![[Real Time Tropical Cyclones](https://polarwx.com/tropical/)](images/Real Time Tropical Cyclones.png){width="400"}](https://polarwx.com/tropical/)
+[![\[Real Time Tropical Cyclones\](https://polarwx.com/tropical/)](images/Real%20Time%20Tropical%20Cyclones.png){width="400"}](https://polarwx.com/tropical/)
 
 # Evaluación del riesgo por ciclones tropicales
 
@@ -52,6 +52,8 @@ editor: visual
 -   Download
 
 # Videos
+
+{{< video "https://www.youtube.com/live/gtQCroUAfTI" >}}  Simposio Internacional de Gestión del Riesgo y Cambio Climático en Pequeñas Islas del Caribe
 
 **CICLONES TROPICALES**
 

@@ -1,0 +1,25 @@
+---
+title: "Riesgo por amenazas sociales"
+format: html
+editor: visual
+---
+
+## ![Hazard information profiles 2025](images/hips2025.png){width="400"}
+
+## [**2025 Hazard Information Profiles (HIPs) online reference**](https://www.preventionweb.net/drr-glossary/hips#meteorological)
+
+## **Amenazas Sociales**
+
+4 grupos de peligros y 9 peligros específicos
+
+| [Peligro específicoOrdenar ascendentemente](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=title&sort=asc "ordenar por peligro específico") | [Identificador](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_notation&sort=asc "ordenar por identificador") | [Grupo](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_cluster_type&sort=asc "ordenar por clúster") |
+|------------------------|------------------------|------------------------|
+| [Violencia](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/so0301) | SO0301 | Conductual |
+| [Grupo de suicidios](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/so0303) | SO0303 | Conductual |
+| [Estampida o Aplastamiento (Humano)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/so0302) | SO0302 | Conductual |
+| [Conflicto armado no internacional (CANI)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/so0102) | SO0102 | Conflicto |
+| [Conflicto armado internacional (CAI)](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/so0101) | SO0101 | Conflicto |
+| [Shock financiero](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/so0401) | SO0401 | Económico |
+| [Artefactos explosivos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/so0201) | SO0201 | Posconflicto |
+| [Degradación ambiental causada por conflictos](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/so0202) | SO0202 | Posconflicto |
+| [Disturbios civiles](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/so0103) | SO0103 | Conflicto |
