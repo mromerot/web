@@ -12,7 +12,7 @@ editor: visual
 
 8 grupos de peligros y 53 peligros específicos
 
-| [Peligro específicoOrdenar ascendentemente](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=title&sort=asc "ordenar por peligro específico") | [Identificador](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_notation&sort=asc "ordenar por identificador") | [Grupo](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_cluster_type&sort=asc "ordenar por clúster") |
+| [Peligro específico](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=title&sort=asc "ordenar por peligro específico") | [Identificador](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_notation&sort=asc "ordenar por identificador") | [Grupo](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_cluster_type&sort=asc "ordenar por clúster") |
 |------------------------|------------------------|------------------------|
 | [Viento](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0301) | MH0301 | Relacionado con el viento |
 | [Tsunami](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/mh0705) | MH0705 | Marina |

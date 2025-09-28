@@ -53,7 +53,7 @@ editor: visual
 
 # Videos
 
-{{< video "https://www.youtube.com/live/gtQCroUAfTI" >}}  Simposio Internacional de Gestión del Riesgo y Cambio Climático en Pequeñas Islas del Caribe
+{{< video "https://www.youtube.com/live/gtQCroUAfTI" >}} Simposio Internacional de Gestión del Riesgo y Cambio Climático en Pequeñas Islas del Caribe
 
 **CICLONES TROPICALES**
 
@@ -75,23 +75,27 @@ editor: visual
     -   Declining tropical cyclone frequency under global warming. Nature. 2022. [*Link*](https://www.nature.com/articles/s41558-022-01388-4).
     -   Ocean currents show global intensification of weak tropical cyclones. Nature. 2022. [*Link*](https://www.nature.com/articles/s41586-022-05326-4).
 
-![](https://www.youtube.com/watch?v=T5RkjYjyVC8)
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=T5RkjYjyVC8" >}}
 
-![](https://www.youtube.com/watch?v=KLXAJCciIbg)
+{{< video "https://www.youtube.com/watch?v=KLXAJCciIbg" >}}
 
-![](https://www.youtube.com/watch?v=6G3Q9QTYQdg)
+{{< video "https://www.youtube.com/watch?v=6G3Q9QTYQdg" >}}
 
-![](https://www.youtube.com/watch?v=At0Issg8PTk)
+{{< video "https://www.youtube.com/watch?v=At0Issg8PTk" >}}
 
-![](https://www.youtube.com/watch?v=oPIVifB3iDs)
+{{< video "https://www.youtube.com/watch?v=oPIVifB3iDs" >}}
 
-![](https://www.youtube.com/watch?v=nj-mFnvWjiU)
+{{< video "https://www.youtube.com/watch?v=nj-mFnvWjiU" >}}
+:::
 
 **TORMENTAS CONVECTIVAS**
 
 -   Wakimoto, R. M. (2015). Mesoscale Meteorology: Microbursts. In Encyclopedia of Atmospheric Sciences: Second Edition. [Link](https://doi.org/10.1016/B978-0-12-382225-3.00224-3).
 -   Bolgiani, P., Fernández‐González, S., Valero, F., Merino, A., García‐Ortega, E., Sánchez, J. L., & Martín, M. L. (2020). Simulation of Atmospheric Microbursts Using a Numerical Mesoscale Model at High Spatiotemporal Resolution. Journal of Geophysical Research: Atmospheres, 125(4). [*Link*](https://doi.org/10.1029/2019JD031791).
 
-![](https://www.youtube.com/watch?v=GBRDWMM8BdA)
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=GBRDWMM8BdA" >}}
 
-![](https://www.youtube.com/watch?v=LZAMoxTERzs)
+{{< video "https://www.youtube.com/watch?v=LZAMoxTERzs" >}}
+:::

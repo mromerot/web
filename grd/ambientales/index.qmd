@@ -10,8 +10,8 @@ editor: visual
 
 2 grupos de peligros y 24 peligros específicos
 
-| [Peligro específicoOrdenar ascendentemente](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=title&sort=asc "ordenar por peligro específico") | [Identificador](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_notation&sort=asc "ordenar por identificador") | [Grupo](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_cluster_type&sort=asc "ordenar por clúster") |
-|----|----|----|
+| [Peligro específico](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=title&sort=asc "ordenar por peligro específico") | [Identificador](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_notation&sort=asc "ordenar por identificador") | [Grupo](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_cluster_type&sort=asc "ordenar por clúster") |
+|------------------------|------------------------|------------------------|
 | [incendios forestales](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/en0205) | EN0205 | Degradación ambiental (silvicultura) |
 | [Pérdida/degradación de humedales](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/en0304) | EN0304 | Degradación ambiental |
 | [Erosión del suelo](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/gh0403) | GH0403 | Degradación ambiental |
