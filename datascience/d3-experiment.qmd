@@ -378,4 +378,106 @@ El **Gasto Doméstico Bruto en Investigación y Desarrollo (GERD)** como porcent
 
 ------------------------------------------------------------------------
 
+# Diagrama de radar
+
+``` {ojs}
+// Datos: 30 indicadores con su valor (aquí puse valores ficticios que puedes reemplazar)
+data = [
+  {axis: "1. Evaluación comunitaria", value: 1.2},
+  {axis: "2. Evaluación científica del riesgo", value: 2.0},
+  {axis: "3. Diseminación de información en RRD", value: 2.5},
+  {axis: "4. Educación de los niños en RRD", value: 3.0},
+  {axis: "5. RRD en la planificación del desarrollo", value: 1.8},
+  {axis: "6. RRD en la planificación territorial", value: 2.0},
+  {axis: "7. Toma comunitaria de decisiones", value: 2.2},
+  {axis: "8. Inclusión de grupos vulnerables", value: 1.7},
+  {axis: "9. Participación de las mujeres", value: 2.3},
+  {axis: "10. Conocimiento de derechos", value: 1.9},
+  {axis: "11. Alianzas para la RRD", value: 2.6},
+  {axis: "12. Gestión ambiental sostenible", value: 2.1},
+  {axis: "13. Seguridad y gestión del agua", value: 1.8},
+  {axis: "14. Acceso y conciencia de la salud", value: 1.6},
+  {axis: "15. Suministro seguro de alimentos", value: 1.4},
+  {axis: "16. Prácticas de medios de vida", value: 1.3},
+  {axis: "17. Acceso a mercado", value: 1.5},
+  {axis: "18. Acceso a servicios financieros", value: 1.2},
+  {axis: "19. Protección de ingresos y activos", value: 1.7},
+  {axis: "20. Acceso a protección social", value: 2.0},
+  {axis: "21. Cohesión social", value: 3.2},
+  {axis: "22. Infraestructura crítica", value: 2.8},
+  {axis: "23. Vivienda", value: 1.9},
+  {axis: "24. Planificación de contingencia", value: 2.1},
+  {axis: "25. Sistema de alerta temprana", value: 2.3},
+  {axis: "26. Capacidad de preparación", value: 2.0},
+  {axis: "27. Servicios de salud", value: 2.5},
+  {axis: "28. Servicios de educación", value: 2.9},
+  {axis: "29. Infraestructura en emergencias", value: 2.7},
+  {axis: "30. Liderazgo y voluntariado", value: 3.0}
+]
+
+// Radar chart con D3
+{
+  const width = 600, height = 600;
+  const radius = Math.min(width, height) / 2 - 60;
+  const levels = 5; // número de círculos concéntricos
+  const maxValue = 3.5; // escala máxima
+
+  const angleSlice = (Math.PI * 2) / data.length;
+
+  const rScale = d3.scaleLinear()
+    .domain([0, maxValue])
+    .range([0, radius]);
+
+  const svg = d3.create("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+  const g = svg.append("g")
+    .attr("transform", `translate(${width/2},${height/2})`);
+
+  // Dibujar círculos concéntricos
+  for (let i = 0; i <= levels; i++) {
+    g.append("circle")
+      .attr("r", radius/levels * i)
+      .attr("fill", "none")
+      .attr("stroke", "#ccc");
+  }
+
+  // Ejes radiales
+  data.forEach((d, i) => {
+    const angle = angleSlice * i - Math.PI/2;
+    g.append("line")
+      .attr("x1", 0)
+      .attr("y1", 0)
+      .attr("x2", rScale(maxValue) * Math.cos(angle))
+      .attr("y2", rScale(maxValue) * Math.sin(angle))
+      .attr("stroke", "#999");
+
+    // Etiquetas
+    g.append("text")
+      .attr("x", (rScale(maxValue + 0.2)) * Math.cos(angle))
+      .attr("y", (rScale(maxValue + 0.2)) * Math.sin(angle))
+      .attr("dy", "0.35em")
+      .style("font-size", "10px")
+      .style("text-anchor", angle > Math.PI/2 && angle < 3*Math.PI/2 ? "end" : "start")
+      .text(d.axis);
+  });
+
+  // Línea de valores
+  const line = d3.lineRadial()
+    .radius(d => rScale(d.value))
+    .angle((d,i) => i * angleSlice)
+    .curve(d3.curveLinearClosed);
+
+  g.append("path")
+    .datum(data)
+    .attr("d", line)
+    .attr("fill", "rgba(50,150,250,0.5)")
+    .attr("stroke", "steelblue")
+    .attr("stroke-width", 2);
+
+  return svg.node();
+}
+```
+
 *Documento generado con [Quarto](https://quarto.org/) y [Observable JS](https://observablehq.com/)*
