@@ -729,11 +729,23 @@
     ]
   },
   {
+    "objectID": "grd/repositorios.html#proyectos-internacionales",
+    "href": "grd/repositorios.html#proyectos-internacionales",
+    "title": "Repositorios Fair y data science en gestión del riesgo de desastres",
+    "section": "Proyectos internacionales",
+    "text": "Proyectos internacionales\n\nValorada. Link\n\nDemostrator 1. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Cursos, redes y recursos",
+      "Repositorios FAIR"
+    ]
+  },
+  {
     "objectID": "grd/repositorios.html#entrenamiento-en-grd",
     "href": "grd/repositorios.html#entrenamiento-en-grd",
     "title": "Repositorios Fair y data science en gestión del riesgo de desastres",
     "section": "Entrenamiento en GRD",
-    "text": "Entrenamiento en GRD\n\nRisk Profiler (Canada). Link\nFEMA, mapas de inundacion\n\n GeoAI Workshop: Unlocking the Power of GeoAI with Python",
+    "text": "Entrenamiento en GRD\n\nESRI Disaster Response Program. Link\nRisk Profiler (Canada). Link\nFEMA, mapas de inundacion\n\n GeoAI Workshop: Unlocking the Power of GeoAI with Python",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Cursos, redes y recursos",
@@ -903,18 +915,18 @@
     "href": "grd/conocimientodelriesgo.html#metodologias",
     "title": "Conocimiento del riesgo de desastres",
     "section": "Metodologias",
-    "text": "Metodologias\n\nUnderstanding disaster risk: foundational concepts and principles. UNDRR. Link.\n\nWhy reducing risk matters\nComponents of risk\nRisk drivers\nKey concepts\nThe DRR glossary\nEngage in DRR\n\nDisaster, Planning and Development: Managing Natural Hazards to Reduce Loss. OEA. Link, Link.\nBernal G.A., Cardona OD., Marulanda M.C., Carreño ML. (2021) Dealing with Uncertainty Using Fully Probabilistic Risk Assessment for Decision-Making. In: Eslamian S., Eslamian F. (eds) Handbook of Disaster Risk Reduction for Resilience. Springer, Cham. https://doi.org/10.1007/978-3-030-61278-8_14\nOregon Natural Hazards Risk Assessment Upgrade. Link. Link. Youtube",
+    "text": "Metodologias\n\nUnderstanding disaster risk: foundational concepts and principles. UNDRR. Link.\n\nWhy reducing risk matters\nComponents of risk\nRisk drivers\nKey concepts\nThe DRR glossary\nEngage in DRR\n\nDisaster, Planning and Development: Managing Natural Hazards to Reduce Loss. OEA. Link, Link.\nBernal G.A., Cardona OD., Marulanda M.C., Carreño ML. (2021) Dealing with Uncertainty Using Fully Probabilistic Risk Assessment for Decision-Making. In: Eslamian S., Eslamian F. (eds) Handbook of Disaster Risk Reduction for Resilience. Springer, Cham. https://doi.org/10.1007/978-3-030-61278-8_14\nOregon Natural Hazards Risk Assessment Upgrade. Link. Link. Youtube\nHow to develop a risk and vulnerability assessment. 2025. JRC. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Conocimiento del riesgo"
     ]
   },
   {
-    "objectID": "grd/conocimientodelriesgo.html#metodolgias-de-fema",
-    "href": "grd/conocimientodelriesgo.html#metodolgias-de-fema",
+    "objectID": "grd/conocimientodelriesgo.html#metodologías-de-fema",
+    "href": "grd/conocimientodelriesgo.html#metodologías-de-fema",
     "title": "Conocimiento del riesgo de desastres",
-    "section": "Metodolgias de FEMA",
-    "text": "Metodolgias de FEMA\n\nNational Risk Index Documentation. Link.\nNational Risk Index for Natural Hazards. Visor.\nNational Risk Index Hazard Info Table\nUpdating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. Link.\nEarthquake Hazard Maps. Link.\nFlood Map. Link.\n\n\n\n\n Physical and social vulnerability for the multi-hazard risk analysis of components and systems\n\n\n Mapping Risk: The National Risk Index for Natural Hazards",
+    "section": "Metodologías de FEMA",
+    "text": "Metodologías de FEMA\n\nNational Risk Index Documentation. Link.\nNational Risk Index for Natural Hazards. Visor.\nNational Risk Index Hazard Info Table\nUpdating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. Link.\nEarthquake Hazard Maps. Link.\nFlood Map. Link.\n\n\n\n\n Physical and social vulnerability for the multi-hazard risk analysis of components and systems\n\n\n Mapping Risk: The National Risk Index for Natural Hazards",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Conocimiento del riesgo"
@@ -1233,23 +1245,11 @@
     ]
   },
   {
-    "objectID": "grd/geologicas/riesgosismico.html",
-    "href": "grd/geologicas/riesgosismico.html",
-    "title": "Riesgo sísmico",
-    "section": "",
-    "text": "UNGRD. Link\nAsociación Colombiana de Ingeniería Sísmica - AIS. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas geológicas",
-      "Riesgo sísmico"
-    ]
-  },
-  {
     "objectID": "grd/geologicas/riesgosismico.html#instituciones-nacionales",
     "href": "grd/geologicas/riesgosismico.html#instituciones-nacionales",
     "title": "Riesgo sísmico",
-    "section": "",
-    "text": "UNGRD. Link\nAsociación Colombiana de Ingeniería Sísmica - AIS. Link.",
+    "section": "Instituciones nacionales",
+    "text": "Instituciones nacionales\n\nUNGRD. Link\nServicio Geológico de Colombia. Link\n\nSistema de Consulta de la Amenaza Sísmica de Colombia\n\nAsociación Colombiana de Ingeniería Sísmica - AIS. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas geológicas",
@@ -1883,6 +1883,28 @@
     ]
   },
   {
+    "objectID": "grd/cienciaytecnologia.html#lecturas",
+    "href": "grd/cienciaytecnologia.html#lecturas",
+    "title": "Ciencia y tecnología",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nArtificial intelligence for climate prediction of extremes: State of the art, challenges, and future perspectives. 2025. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciencia y tecnología"
+    ]
+  },
+  {
+    "objectID": "grd/cienciaytecnologia.html#herramientas",
+    "href": "grd/cienciaytecnologia.html#herramientas",
+    "title": "Ciencia y tecnología",
+    "section": "Herramientas",
+    "text": "Herramientas\n\nGoogle Geospatial Reasoning. Link\n\n\n\n\n Geospatial Reasoning: Demonstration application\n\n\n\n\nESRI Geospatial AI platform. Link\n\n\n\n\n GeoAI and GenAI in ArcGIS | 2025 Esri UAE User Conference\n\n\n Maximise data insights with geospatial analysis & GeoAI Maximise data insights with geospatial analysis & GeoAI",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciencia y tecnología"
+    ]
+  },
+  {
     "objectID": "grd/cienciaytecnologia.html#ciencia-y-tecnología",
     "href": "grd/cienciaytecnologia.html#ciencia-y-tecnología",
     "title": "Ciencia y tecnología",
@@ -1931,29 +1953,18 @@
     "href": "grd/cienciaytecnologia.html#algunos-investigadores-internacionales-en-drr",
     "title": "Ciencia y tecnología",
     "section": "Algunos investigadores Internacionales en DRR",
-    "text": "Algunos investigadores Internacionales en DRR\n-   Irasema Alcántara Ayala. [*Link*](https://scholar.google.co.uk/citations?hl=en&user=bDAzleQAAAAJ&view_op=list_works&sortby=pubdate).\n-   David E. Alexander. [*Link*](https://scholar.google.co.uk/citations?hl=en&user=F6l81zAAAAAJ).\n-   Susan L. Cutter. [*Link*](https://scholar.google.com/citations?hl=es&user=BCo8hAwAAAAJ&view_op=list_works&sortby=pubdate).\n-   Juergen Weichselgartner. [*Link*](https://scholar.google.com/citations?hl=es&user=fES1svQAAAAJ&view_op=list_works&sortby=pubdate).\n-   Benigno Aguirre. [*Link*](https://scholar.google.com/citations?hl=es&user=i36JlYgAAAAJ&view_op=list_works&sortby=pubdate).\n-   Douglas Paton (Risk communication). [*Link*](https://scholar.google.com/citations?hl=en&user=3luSZvYAAAAJ&view_op=list_works).\n-   JC Gaillard. [*Link*](https://jcgaillard.wordpress.com/).\n-   Gonzalo Lizarralde. [*Link*](https://scholar.google.com/citations?user=T6VcEwUAAAAJ&hl=es&oi=ao).\n-   Cees Van Westen. [*Link*](https://scholar.google.com/citations?hl=es&user=Y_wCIDYAAAAJ&view_op=list_works&sortby=pubdate)\n\nEventos internacionales\n\nAnnual Natural Hazards Workshop. Link.\nICGNH 2020: 14. International Conference on Geography and Natural Hazards. Link.\n\nRiesgos y salud pública\n\nThe Lancet Countdown: tracking progress on health and climate change. Link.\n\nProgramas institucionales asociados a la ciencia de los desastres\n\nServicio Geológico Colombiano. Plan Estratégico del Conocimiento Geocientífico del Territorio Colombiano 2022 – 2032.Link.\nPlan Estratégico Nacional de Investigación Ambiental – PENIA. Link.\n\nCiencia y datos abiertos para DRR\n\nOpenDRI Open data for resilience. Link.\nDigital Public Goods for Disaster Risk Reduction in a Changing Climate. Banco Mundial. 2023. Link.\nOpen Data for Resilient Urban Planning. Link. Github. Link.\nGFDRR open-risk-data-dashboard. Link.\nCODATA.\n\nFAIR Data for Disaster Risk Research. Link.\nWebinars. Link.\nCODATA-RDA Schools of Research Data Science. Link.\n\n\nInaSAFE is free software that produces realistic natural hazard impact scenarios for better planning. Link.\nUNESCO. Multistakeholder Consultations on Open Science. Link.\nLecturas\n\nHarnessing risk-informed data for disaster and climate resilience. 2022. Link. Link.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n&lt;/div&gt;\n&lt;div class=\"quarto-layout-cell\" style=\"flex-basis: 50.0%;justify-content: flex-start;\"&gt;",
+    "text": "Algunos investigadores Internacionales en DRR\n\n\n\n\n\n\n\nBenigno Aguirre. Link.\nCees Van Westen. Link\nDavid E. Alexander. Link.\nDouglas Paton (Risk communication). Link.\nGonzalo Lizarralde. Link.\nIrasema Alcántara Ayala. Link.\nJC Gaillard. Link.\nJuergen Weichselgartner. Link.\nSusan L. Cutter. Link.\n\n\n\n\n\nEventos internacionales\n\nAnnual Natural Hazards Workshop. Link.\nICGNH 2020: 14. International Conference on Geography and Natural Hazards. Link.\n\nRiesgos y salud pública\n\nThe Lancet Countdown: tracking progress on health and climate change. Link.\n\nProgramas institucionales asociados a la ciencia de los desastres\n\nServicio Geológico Colombiano. Plan Estratégico del Conocimiento Geocientífico del Territorio Colombiano 2022 – 2032.Link.\nPlan Estratégico Nacional de Investigación Ambiental – PENIA. Link.\n\nCiencia y datos abiertos para DRR\n\nOpenDRI Open data for resilience. Link.\nDigital Public Goods for Disaster Risk Reduction in a Changing Climate. Banco Mundial. 2023. Link.\nOpen Data for Resilient Urban Planning. Link. Github. Link.\nGFDRR open-risk-data-dashboard. Link.\nCODATA.\n\nFAIR Data for Disaster Risk Research. Link.\nWebinars. Link.\nCODATA-RDA Schools of Research Data Science. Link.\n\n\nInaSAFE is free software that produces realistic natural hazard impact scenarios for better planning. Link.\nUNESCO. Multistakeholder Consultations on Open Science. Link.\nLecturas\n\nHarnessing risk-informed data for disaster and climate resilience. 2022. Link. Link.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n&lt;/div&gt;\n&lt;div class=\"quarto-layout-cell\" style=\"flex-basis: 50.0%;justify-content: flex-start;\"&gt;",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Ciencia y tecnología"
     ]
   },
   {
-    "objectID": "grd/cienciaytecnologia.html#lecturas",
-    "href": "grd/cienciaytecnologia.html#lecturas",
+    "objectID": "grd/cienciaytecnologia.html#science-technology-and-academia",
+    "href": "grd/cienciaytecnologia.html#science-technology-and-academia",
     "title": "Ciencia y tecnología",
-    "section": "Lecturas",
-    "text": "Lecturas\n\nArtificial intelligence for climate prediction of extremes: State of the art, challenges, and future perspectives. 2025. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/cienciaytecnologia.html#science-technology-and-academia.",
-    "href": "grd/cienciaytecnologia.html#science-technology-and-academia.",
-    "title": "Ciencia y tecnología",
-    "section": "Science, Technology and Academia.",
-    "text": "Science, Technology and Academia.\n\nUNDRR. Link.\nGFDRR Innovation. Link\nAPRU Multi-Hazards. Link.\nThe science and technology roadmap to support the implementation of the Sendai Framework for Disaster Risk Reduction 2015-2030. Link.\nPrevention Web Science and Technology. Link.\n30 innovations\n\nDisaster risk reduction and innovations. Progress in Disaster Science, 2019. Link.\n30 Innovations linking disaster risk reduction with sustainable development goals. Link.\n30 innovations for disaster risk reduction. Link.\nApplications of artificial intelligence for disaster management. Natural Hazards, 2020. Link.",
+    "section": "Science, Technology and Academia",
+    "text": "Science, Technology and Academia\n\nUNDRR. Link.\nGFDRR Innovation. Link\nAPRU Multi-Hazards. Link.\nThe science and technology roadmap to support the implementation of the Sendai Framework for Disaster Risk Reduction 2015-2030. Link.\nPrevention Web Science and Technology. Link.\n30 innovations\n\nDisaster risk reduction and innovations. Progress in Disaster Science, 2019. Link.\n30 Innovations linking disaster risk reduction with sustainable development goals. Link.\n30 innovations for disaster risk reduction. Link.\nApplications of artificial intelligence for disaster management. Natural Hazards, 2020. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Ciencia y tecnología"
@@ -1975,7 +1986,7 @@
     "href": "grd/cienciaytecnologia.html#lecturas-1",
     "title": "Ciencia y tecnología",
     "section": "Lecturas",
-    "text": "Lecturas\n\nExploring the emerging evolution trends of disaster risk reduction research: a global scenario. International Journal of Environmental Science and Technology, 2021. Link.\nKnowledge and Disaster Risk Reduction. The Routledge Handbook of Hazards and Disaster Risk Reduction. 2011. Link\nPerspectives of Science and Technology in Disaster RiskReduction of Asia. 2016. International Journal of Disaster Risk Science. Link.\nThree innovative approaches for managing disaster risks. Link.\n2021 APRU Multi-Hazards Webinar Series: Health, Climate Change and Innovation in Disaster Risk Reduction. Link, link.\nADB and OECD. 2020. Leveraging Technology and Innovation for Disaster Risk Management and Financing. Link\nSuccess, innovation and challenge: School safety and disaster education in South America and the Caribbean, 2020. Link.\n\nIRDR Compilation 2010-2020: A Ten Year Science Quest for Disaster Risk Reduction. Link\nThe Integrated Research on Disaster Risk 2021 International Conference.Link.\nA framework for global science in support of risk-informed sustainable development and planetary health. 2021. Link.",
+    "text": "Lecturas\n\nExploring the emerging evolution trends of disaster risk reduction research: a global scenario. International Journal of Environmental Science and Technology, 2021. Link.\nKnowledge and Disaster Risk Reduction. The Routledge Handbook of Hazards and Disaster Risk Reduction. 2011. Link\nPerspectives of Science and Technology in Disaster RiskReduction of Asia. 2016. International Journal of Disaster Risk Science. Link.\nThree innovative approaches for managing disaster risks. Link.\n2021 APRU Multi-Hazards Webinar Series: Health, Climate Change and Innovation in Disaster Risk Reduction. Link, link.\nADB and OECD. 2020. Leveraging Technology and Innovation for Disaster Risk Management and Financing. Link\nSuccess, innovation and challenge: School safety and disaster education in South America and the Caribbean, 2020. Link.\nIRDR Compilation 2010-2020: A Ten Year Science Quest for Disaster Risk Reduction. Link\nThe Integrated Research on Disaster Risk 2021 International Conference. Link.\nA framework for global science in support of risk-informed sustainable development and planetary health. 2021. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Ciencia y tecnología"
@@ -2749,6 +2760,18 @@
     "crumbs": [
       "Gestión del riesgo de desastres",
       "terminología"
+    ]
+  },
+  {
+    "objectID": "grd/plataformas-redes.html",
+    "href": "grd/plataformas-redes.html",
+    "title": "Plataformas y redes",
+    "section": "",
+    "text": "Global Platform for Disaster Risk Reduction. Link. Youtube list\n\n Welcome to the Global Platform for Disaster Risk Reduction 2025 | UNDRR",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Cursos, redes y recursos",
+      "Plataformas y redes"
     ]
   },
   {

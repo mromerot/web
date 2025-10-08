@@ -10,6 +10,28 @@ editor: visual
 {{< video "https://www.youtube.com/watch?v=BNIT8mOdYRE" >}}
 :::
 
+# **Inteligencia artificial en GRD**
+
+## Lecturas
+
+-   Artificial intelligence for climate prediction of extremes: State of the art, challenges, and future perspectives. 2025. [*Link*](https://wires.onlinelibrary.wiley.com/doi/10.1002/wcc.914).
+
+## Herramientas
+
+-   Google Geospatial Reasoning. [*Link*](https://research.google/blog/geospatial-reasoning-unlocking-insights-with-generative-ai-and-multiple-foundation-models/)
+
+::: {layout-ncol="2"}
+{{< video  "https://youtu.be/ZyH3-7pBBiQ">}} Geospatial Reasoning: Demonstration application
+:::
+
+-   ESRI Geospatial AI platform. [*Link*](https://architecture.arcgis.com/en/overview/introduction-to-arcgis/geospatial-ai.html)
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/C1iMxjOeQZc">}} **GeoAI and GenAI in ArcGIS \| 2025 Esri UAE User Conference**
+
+{{< video "https://youtu.be/IG-PBLfPZRE" >}} Maximise data insights with geospatial analysis & GeoAI Maximise data insights with geospatial analysis & GeoAI
+:::
+
 # Cursos en ciencia y tecnología en grd
 
 -   Risk-informed governance and innovative technology for disaster risk reduction and resilience. UNDRR. [*Link*](https://unsec.unssc.org/course/view.php?id=309).
@@ -76,66 +98,38 @@ editor: visual
 {{< video "https://www.youtube.com/watch?v=9nrPQNHwvCc" >}} Los desastres no son naturales
 :::
 
-::: {layout-ncol="2"}
-:::
-
 # **Institutos y organizaciones internacionales**
 
 -   APRU – Association of Pacific Rim Universities. [*Link*](https://apru.org/).
-
 -   Center for Emergency Management and Homeland Security. ASU. [*Link*](https://cemhs.asu.edu/).
-
 -   Columbia Climate School. [*Link*](https://climate.columbia.edu/research).
-
 -   DesignSafe CI. [*Link*](https://www.designsafe-ci.org/#learning)
-
 -   FAO Ciencia, tecnología e innovación. [*Link*](https://www.fao.org/science-technology-and-innovation/about/es).
-
 -   GADRI – Global Aliance of Disaster Risk Institutes. [*Link*](https://gadri.net/).
-
 -   Global Assessment Repo. [Link](https://gar.unisdr.org/).
-
 -   Harvard Humanitarian Initiative. [*Link*](https://hhi.harvard.edu/).
-
 -   Hazards & Vulnerability Research Institute. [Link](http://artsandsciences.sc.edu/geog/hvri/front-page). [Link](https://www.youtube.com/channel/UCQ22ABWTJkxolMXLAnLKMLQ/videos).
-
--   I ntegrated Research on Disaster Risk International Center of Excellence Vulnerability and Resilience Metrics. [*Link*](http://www.irdrinternational.org/)
-
+-   Integrated Research on Disaster Risk International Center of Excellence Vulnerability and Resilience Metrics. [*Link*](http://www.irdrinternational.org/)
 -   Integrated Research on Disaster Risk (IRDR). [*Link*](https://www.irdrinternational.org/) [*Link*](https://council.science/what-we-do/research-programmes/thematic-organizations/integrated-research-on-disaster-risk-irdr/).
-
 -   International Science Council. [Link](https://council.science/).
-
 -   IRIDes – International Research Institute for Disaster Science. [*Link*](https://irides.tohoku.ac.jp/eng/)
-
 -   Natural Hazards Center. [*Link*](https://hazards.colorado.edu/news/center-news).
-
 -   CONVERGE. [*Link*](https://converge.colorado.edu/).
-
     -   Past Webinar Recordings. [*Link*](https://hazards.colorado.edu/training/webinars/pastrecordings).
         -   CONVERGE Training Modules. [Link.](https://converge.colorado.edu/resources/training-modules)
-
 -   NIED, Science for resilience. Japón. [*Link*](https://www.bosai.go.jp/e/index.html).
-
 -   Resilient America. [*Link*](https://sites.nationalacademies.org/pga/resilientamerica/)
-
 -   **Latinoamerica**
-
     -   CIGIDEN Chile. [*Link*](https://www.cigiden.cl/).
     -   CEPREDENAC. [*Link*](http://www.cepredenac.org/)
     -   La Red. Desenredando. [*Link*](https://www.desenredando.org/).
     -   Senapred. [*Link*](https://senapred.cl/).
-
 -   **Redes UNDRR**
-
     -   PreventionWeb community. [*Link*](https://cc.preventionweb.net/).
-
 -   **Plataformas de análisis de riesgos**
-
     -   Plataforma CAPRA – Uniandes. [*Link*](https://ecapra.org/es).
     -   Riesgos.de. [*Link*](https://www.riesgos.de/de/).
-
 -   **Sistemas de información de Colombia**
-
     -   Consolidados de emergencia y desastres. [*Link*](https://lookerstudio.google.com/u/0/reporting/a850fdeb-1229-4623-8a35-13895d4ec484/page/DyhoD).
     -   Corporación OSSO. [*Link*](https://osso.org.co/).
     -   Sistema de Alerta Temprana de Medellín y el Valle de Aburrá (SIATA). [*Link*](https://siata.gov.co/).
@@ -145,9 +139,7 @@ editor: visual
     -   FEWS Colombia. Sistemas de pronósticos hidrológicos y alerta temprana. [*Link*](http://www.ideam.gov.co/web/agua/fews)
     -   DHIME: Consulta y Descarga de Datos Hidrometeorológicos, IDEAM. [*Link*](http://dhime.ideam.gov.co/atencionciudadano/).
     -   Plataforma Observatorio Bahia de Cartagena. [*Link*](https://www.basic-cartagena.org/).
-
 -   **Manejo de desastres**
-
     -   Charter. [*Link*](https://disasterscharter.org/web/guest/about-the-charter). Activation list. [*Link.*](https://disasterscharter.org/web/guest/charter-activations)
         -   Colombia, Providencia. [*Link*](https://disasterscharter.org/web/guest/activations/-/article/storm-hurricane-urban-in-colombia-activation-687-).
 
@@ -205,17 +197,17 @@ editor: visual
 
 ## Algunos investigadores Internacionales en DRR
 
-```         
--   Irasema Alcántara Ayala. [*Link*](https://scholar.google.co.uk/citations?hl=en&user=bDAzleQAAAAJ&view_op=list_works&sortby=pubdate).
--   David E. Alexander. [*Link*](https://scholar.google.co.uk/citations?hl=en&user=F6l81zAAAAAJ).
--   Susan L. Cutter. [*Link*](https://scholar.google.com/citations?hl=es&user=BCo8hAwAAAAJ&view_op=list_works&sortby=pubdate).
--   Juergen Weichselgartner. [*Link*](https://scholar.google.com/citations?hl=es&user=fES1svQAAAAJ&view_op=list_works&sortby=pubdate).
+::: {.callout-important appearance="minimal"}
 -   Benigno Aguirre. [*Link*](https://scholar.google.com/citations?hl=es&user=i36JlYgAAAAJ&view_op=list_works&sortby=pubdate).
--   Douglas Paton (Risk communication). [*Link*](https://scholar.google.com/citations?hl=en&user=3luSZvYAAAAJ&view_op=list_works).
--   JC Gaillard. [*Link*](https://jcgaillard.wordpress.com/).
--   Gonzalo Lizarralde. [*Link*](https://scholar.google.com/citations?user=T6VcEwUAAAAJ&hl=es&oi=ao).
 -   Cees Van Westen. [*Link*](https://scholar.google.com/citations?hl=es&user=Y_wCIDYAAAAJ&view_op=list_works&sortby=pubdate)
-```
+-   David E. Alexander. [*Link*](https://scholar.google.co.uk/citations?hl=en&user=F6l81zAAAAAJ).
+-   Douglas Paton (Risk communication). [*Link*](https://scholar.google.com/citations?hl=en&user=3luSZvYAAAAJ&view_op=list_works).
+-   Gonzalo Lizarralde. [*Link*](https://scholar.google.com/citations?user=T6VcEwUAAAAJ&hl=es&oi=ao).
+-   Irasema Alcántara Ayala. [*Link*](https://scholar.google.co.uk/citations?hl=en&user=bDAzleQAAAAJ&view_op=list_works&sortby=pubdate).
+-   JC Gaillard. [*Link*](https://jcgaillard.wordpress.com/).
+-   Juergen Weichselgartner. [*Link*](https://scholar.google.com/citations?hl=es&user=fES1svQAAAAJ&view_op=list_works&sortby=pubdate).
+-   Susan L. Cutter. [*Link*](https://scholar.google.com/citations?hl=es&user=BCo8hAwAAAAJ&view_op=list_works&sortby=pubdate).
+:::
 
 -   **Eventos internacionales**
     -   Annual Natural Hazards Workshop. [*Link*](https://hazards.colorado.edu/workshop).
@@ -249,15 +241,7 @@ editor: visual
 </iframe>
 :::
 
-# **Inteligencia artificial**
-
-## Lecturas
-
--   Artificial intelligence for climate prediction of extremes: State of the art, challenges, and future perspectives. 2025. [*Link*](https://wires.onlinelibrary.wiley.com/doi/10.1002/wcc.914).
-
-# **Ciencia, tecnología e innovación en GRD**
-
-## Science, Technology and Academia.
+## Science, Technology and Academia
 
 -   UNDRR. [*Link*](https://www.undrr.org/implementing-sendai-framework-partners-and-stakeholders/science-and-technology-action-group).
 -   GFDRR Innovation. [*Link*](https://www.gfdrr.org/en/innovation)
@@ -277,24 +261,15 @@ editor: visual
 ## **Lecturas**
 
 -   Exploring the emerging evolution trends of disaster risk reduction research: a global scenario. *International Journal of Environmental Science and Technology,* 2021. [*Link*](https://link.springer.com/article/10.1007/s13762-020-02847-1).
-
 -   Knowledge and Disaster Risk Reduction. *The Routledge Handbook of Hazards and Disaster Risk Reduction*. 2011. [*Link*](https://www.routledgehandbooks.com/doi/10.4324/9780203844236.ch9)
-
 -   Perspectives of Science and Technology in Disaster RiskReduction of Asia. 2016. International Journal of Disaster Risk Science. [*Link*](https://doi.org/10.1007/s13753-016-0104-7).
-
 -   Three innovative approaches for managing disaster risks. [*Link*](https://blogs.worldbank.org/sustainablecities/three-innovative-approaches-managing-disaster-risks).
-
 -   2021 APRU Multi-Hazards Webinar Series: Health, Climate Change and Innovation in Disaster Risk Reduction. [*Link*](https://apru.org/event/2021-apru-multi-hazards-webinar-series-health-climate-change-and-innovation-in-disaster-risk-reduction/), [*link*](https://apru.org/wp-content/uploads/2021/10/MH-webinar_oct-2021.pdf).
-
 -   ADB and OECD. 2020. Leveraging Technology and Innovation for Disaster Risk Management and Financing. [*Link*](https://www.adb.org/sites/default/files/publication/664501/tech-innovation-disaster-risk-mgt-financing.pdf)
-
 -   Success, innovation and challenge: School safety and disaster education in South America and the Caribbean, 2020. [*Link*](https://www.sciencedirect.com/science/article/abs/pii/S2212420919305813).
-
-**IRDR Compilation 2010-2020: A Ten Year Science Quest for Disaster Risk Reduction**. [*Link*](https://www.irdrinternational.org/knowledge_pool/publications/868)
-
-**The Integrated Research on Disaster Risk 2021 International Conference.**[*Link.*](https://conference.irdrinternational.org/)
-
-**A framework for global science in support of risk-informed sustainable development and planetary health**. 2021. [*Link*](https://www.undrr.org/publication/framework-global-science-support-risk-informed-sustainable-development-and-planetary).
+-   IRDR Compilation 2010-2020: A Ten Year Science Quest for Disaster Risk Reduction. [*Link*](https://www.irdrinternational.org/knowledge_pool/publications/868)
+-   The Integrated Research on Disaster Risk 2021 International Conference. [*Link.*](https://conference.irdrinternational.org/)
+-   A framework for global science in support of risk-informed sustainable development and planetary health. 2021. [*Link*](https://www.undrr.org/publication/framework-global-science-support-risk-informed-sustainable-development-and-planetary).
 
 ::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/watch?v=Kv6LUyDTivQ" >}}
