@@ -4,10 +4,85 @@ format: html
 editor: visual
 ---
 
-::: {layout-ncol="2"}
-{{< video "https://www.youtube.com/watch?v=T4TVVT2_x3M" >}}
+```         
+<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1BfeFThS1e%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+```
 
-{{< video "https://www.youtube.com/watch?v=BNIT8mOdYRE" >}}
+## Science and Technology
+
+-   UNDRR. [*Link*](https://www.undrr.org/implementing-sendai-framework-partners-and-stakeholders/science-and-technology-action-group).
+-   GFDRR Innovation. [*Link*](https://www.gfdrr.org/en/innovation)
+-   APRU Multi-Hazards. [*Link*](https://apru.org/our-work/pacific-rim-challenges/multi-hazards/).
+-   The science and technology roadmap to support the implementation of the Sendai Framework for Disaster Risk Reduction 2015-2030. [*Link*](https://www.google.com/search?q=he+science+and+technology+roadmap+to+support+the+implementation+of+the+Sendai+Framework+for+Disaster+Risk+Reduction+2015-2030.&rlz=1C5OZZY_enCO1132CO1132&sourceid=chrome&ie=UTF-8#:~:text=The%20Science%20and,%E2%80%BA%20files%20%E2%80%BA%2065131_file).
+-   Prevention Web Science and Technology. [*Link*](https://www.preventionweb.net/themes/view/761#hits=20&sortby=default&view=pw&filter=themes%3A%5E%22Science+and+Technology%22%24).
+-   **30 innovations**
+    -   Disaster risk reduction and innovations. *Progress in Disaster Science*, 2019. [*Link*](https://www.sciencedirect.com/science/article/pii/S259006171930033X).
+    -   30 Innovations linking disaster risk reduction with sustainable development goals. [*Link*](https://www.preventionweb.net/publications/view/70713).
+    -   30 innovations for disaster risk reduction. [*Link*](https://www.preventionweb.net/publications/view/64473).
+    -   Applications of artificial intelligence for disaster management. *Natural Hazards,* 2020. [*Link*](https://link.springer.com/article/10.1007/s11069-020-04124-3).
+
+::: panel-tabset
+### **Prevention Web**
+
+[![\[Science and technology\](https://www.preventionweb.net/knowledge-base/themes/science-knowledge-and-advocacy/science-and-technology) This theme adresses how science and technology can contribute to DRR, including approaches and initiatives to bring scientific and technical knowledge into practice and policy, approaches for multidisciplinary engagement, good practice in scientific and technical aspects of DRR, and citizen science.](images/preventionwebscience.png){width="250"}](https://www.preventionweb.net/knowledge-base/themes/science-knowledge-and-advocacy/science-and-technology)
+
+### **Reporte especial**
+
+![](https://www.undrr.org/sites/default/files/styles/por/public/2025-07/portadatech.JPG.jpg?itok=mlAExvhp){fig-align="left" width="250"}
+
+[Reporte Especial sobre el uso de la tecnología en la reducción del riesgo de desastres](https://www.undrr.org/es/publication/documents-and-publications/reporte-especial-sobre-el-uso-de-la-tecnologia-en-la)
+
+### **Status Science Asia**
+
+![](https://www.undrr.org/sites/default/files/styles/por/public/2024-09/AP-STAG-2024-Report-cover.jpg?itok=uqsW5Ki7){fig-align="left" width="250"}
+
+[A Status of Science and Technology in Disaster Risk Reduction in Asia-Pacific 2024](https://www.undrr.org/es/node/89065)
+
+### **Science Plan Austria**
+
+[![](images/dcna.png){width="250"}](https://gadri.net/events/Austria_DCNA%20Science%20Plan%20EN.pdf)
+
+SCIENCE PLAN 2030+ DISASTER RISK REDUCTION DCNA
+:::
+
+## **Lecturas**
+
+-   Exploring the emerging evolution trends of disaster risk reduction research: a global scenario. *International Journal of Environmental Science and Technology,* 2021. [*Link*](https://link.springer.com/article/10.1007/s13762-020-02847-1).
+
+-   Knowledge and Disaster Risk Reduction. *The Routledge Handbook of Hazards and Disaster Risk Reduction*. 2011. [*Link*](https://www.routledgehandbooks.com/doi/10.4324/9780203844236.ch9)
+
+-   Perspectives of Science and Technology in Disaster RiskReduction of Asia. 2016. International Journal of Disaster Risk Science. [*Link*](https://doi.org/10.1007/s13753-016-0104-7).
+
+-   Three innovative approaches for managing disaster risks. [*Link*](https://blogs.worldbank.org/sustainablecities/three-innovative-approaches-managing-disaster-risks).
+
+-   2021 APRU Multi-Hazards Webinar Series: Health, Climate Change and Innovation in Disaster Risk Reduction. [*Link*](https://apru.org/event/2021-apru-multi-hazards-webinar-series-health-climate-change-and-innovation-in-disaster-risk-reduction/), [*link*](https://apru.org/wp-content/uploads/2021/10/MH-webinar_oct-2021.pdf).
+
+-   ADB and OECD. 2020. Leveraging Technology and Innovation for Disaster Risk Management and Financing. [*Link*](https://www.adb.org/sites/default/files/publication/664501/tech-innovation-disaster-risk-mgt-financing.pdf)
+
+-   Success, innovation and challenge: School safety and disaster education in South America and the Caribbean, 2020. [*Link*](https://www.sciencedirect.com/science/article/abs/pii/S2212420919305813).
+
+-   IRDR Compilation 2010-2020: A Ten Year Science Quest for Disaster Risk Reduction. [*Link*](https://www.irdrinternational.org/knowledge_pool/publications/868)
+
+-   The Integrated Research on Disaster Risk 2021 International Conference. [*Link.*](https://conference.irdrinternational.org/)
+
+-   A framework for global science in support of risk-informed sustainable development and planetary health. 2021. [*Link*](https://www.undrr.org/publication/framework-global-science-support-risk-informed-sustainable-development-and-planetary).
+
+-   Disaster Risk Science: A Geographical Perspective and a Research Framework. 2020. [*Link*](https://link.springer.com/article/10.1007/s13753-020-00296-5)
+
+-   Building a global forum for natural hazard science. NPJ. 2025. [*Link*](https://www.nature.com/articles/s44304-025-00130-2)
+
+## **Videos**
+
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=Kv6LUyDTivQ" >}}
+
+{{< video "https://www.youtube.com/watch?v=SRNPohtu6zo" >}}
+
+{{< video "https://www.youtube.com/watch?v=txi60sxkgjg" >}}
+
+{{< video "https://www.youtube.com/watch?v=uZswTWn9nyU" >}}
+
+{{< video "https://www.youtube.com/watch?v=65yMaoofboQ" >}}
 :::
 
 # **Inteligencia artificial en GRD**
@@ -20,14 +95,20 @@ editor: visual
 
 -   Google Geospatial Reasoning. [*Link*](https://research.google/blog/geospatial-reasoning-unlocking-insights-with-generative-ai-and-multiple-foundation-models/)
 
+:::: {layout-ncol="2"}
+{{< video "https://youtu.be/ZyH3-7pBBiQ">}} Geospatial Reasoning: Demonstration application
+
+{{< video "https://youtu.be/RfzZN7lLtgY" >}} This is how Google's Flood Hub uses AI forecasting to power local-level flood warnings \| UNDRR
+
 ::: {layout-ncol="2"}
-{{< video  "https://youtu.be/ZyH3-7pBBiQ">}} Geospatial Reasoning: Demonstration application
+{{< video "https://youtu.be/4A4WIRRMFPI" >}} Artificial Intelligence for Remote Sensing applications: recent developments and main challenges
 :::
+::::
 
 -   ESRI Geospatial AI platform. [*Link*](https://architecture.arcgis.com/en/overview/introduction-to-arcgis/geospatial-ai.html)
 
 ::: {layout-ncol="2"}
-{{< video "https://youtu.be/C1iMxjOeQZc">}} **GeoAI and GenAI in ArcGIS \| 2025 Esri UAE User Conference**
+{{< video "https://youtu.be/C1iMxjOeQZc">}} GeoAI and GenAI in ArcGIS \| 2025 Esri UAE User Conference
 
 {{< video "https://youtu.be/IG-PBLfPZRE" >}} Maximise data insights with geospatial analysis & GeoAI Maximise data insights with geospatial analysis & GeoAI
 :::
@@ -48,17 +129,7 @@ editor: visual
 {{< video "https://youtu.be/tiEh5vivKjU" >}} Session 6: Government Innovation and Technologies for DRR and Resilience (22 Sep 2020)
 :::
 
-# **Lecturas de referencia**
-
-## Ciencia y tecnología
-
--   Disaster Risk Science: A Geographical Perspective and a Research Framework. 2020. [*Link*](https://link.springer.com/article/10.1007/s13753-020-00296-5)
-
-## Libros de referencia nacionales
-
--   Los habitantes en la gestión del riesgo : acciones cotidianas, gobernanza adaptativa y cambio climático. UNAL. 2023. [*Link*](https://repositorio.unal.edu.co/items/4792ae2f-4519-4e6a-9fea-e1cfe0b90a86).
-
-## Libros de referencia internacionales
+# Libros de referencia internacionales
 
 -   The Routledge Handbook of Hazards and Disaster Risk Reduction. 2012. [*Link*](https://www.routledgehandbooks.com/doi/10.4324/9780203844236).
 -   The Routledge Handbook of Disaster Risk Reduction Including Climate Change Adaptation. 2017. [*Link*](https://books.google.com.co/books?id=4mgPEAAAQBAJ).
@@ -155,12 +226,13 @@ editor: visual
 {{< video "https://www.youtube.com/watch?v=Fp_eWW7bDtA" >}}
 :::
 
-## **Revistas en gestión de riesgos**
+# **Revistas en gestión de riesgos**
 
 -   **Internacionales**
     -   International Journal of Disaster Risk Reduction. [*Link*](https://www.journals.elsevier.com/international-journal-of-disaster-risk-reduction).
     -   International Journal of Disaster Risk Science. [*Link*](https://www.springer.com/journal/13753).
     -   Natural Hazards. [*Link*](https://link.springer.com/journal/11069).
+    -   Natural Hazards NPJ. *Link*
     -   Natural Hazards Review. [*Link*](https://ascelibrary.org/journal/nhrefo).
     -   Natural Hazards and Earth System Sciences. [*Link*](https://www.natural-hazards-and-earth-system-sciences.net/).
     -   Environmental Science and Policy. [*Link*](https://www.journals.elsevier.com/environmental-science-and-policy).
@@ -210,14 +282,21 @@ editor: visual
 :::
 
 -   **Eventos internacionales**
+
     -   Annual Natural Hazards Workshop. [*Link*](https://hazards.colorado.edu/workshop).
     -   ICGNH 2020: 14. International Conference on Geography and Natural Hazards. [*Link*](https://waset.org/geography-and-natural-hazards-conference-in-april-2020-in-boston).
+
 -   **Riesgos y salud pública**
+
     -   The Lancet Countdown: tracking progress on health and climate change. [*Link*](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)32596-6/fulltext).
+
 -   **Programas institucionales asociados a la ciencia de los desastres**
+
     -   Servicio Geológico Colombiano. Plan Estratégico del Conocimiento Geocientífico del Territorio Colombiano 2022 – 2032.[*Link*](https://www2.sgc.gov.co/Noticias/Paginas/plan-estrategico-del-conocimiento-geocientifico-2022-2032.aspx).
     -   Plan Estratégico Nacional de Investigación Ambiental – PENIA. [*Link*](https://www.minambiente.gov.co/wp-content/uploads/2021/12/PLAN-ESTRATEGICO-NACIONAL-DE-INVESTIGACION-AMBIENTAL-PENIA-2021-2030_12.pdf).
--   **Ciencia y datos abiertos para DRR**
+
+    # **Ciencia y datos abiertos para DRR**
+
     -   OpenDRI Open data for resilience. [*Link*](https://www.opendri.org/about/).
     -   Digital Public Goods for Disaster Risk Reduction in a Changing Climate. Banco Mundial. 2023. [*Link*](https://openknowledge.worldbank.org/entities/publication/a5534ede-04d2-4b1f-a317-1c5886e631ee).
     -   Open Data for Resilient Urban Planning. [*Link*](https://towardsdatascience.com/the-open-cities-ai-challenge-3d0b35a721cc). Github. [*Link*](https://github.com/drivendataorg/open-cities-ai-challenge).
@@ -226,9 +305,15 @@ editor: visual
         -   FAIR Data for Disaster Risk Research. [*Link*](https://codata.org/initiatives/task-groups/fair-data-for-disaster-risk-research/).
         -   Webinars. [*Link*](https://codata.org/events/webinars/).
         -   CODATA-RDA Schools of Research Data Science. [*Link*](https://codata.org/initiatives/data-skills/research-data-science-summer-schools/).
+
 -   **InaSAFE** is free software that produces realistic natural hazard impact scenarios for better planning. [*Link*](http://inasafe.org/home/index.html).
+
 -   UNESCO. Multistakeholder Consultations on Open Science. [*Link*](https://en.unesco.org/science-sustainable-future/open-science/consultation).
--   **Lecturas**
+
+-   Fifth Global Expert Forum for Producers and Users of Disaster-related Statistics. [*Link*](https://www.cepal.org/en/events/fifth-global-expert-forum-producers-and-users-disaster-related-statistics#agenda)
+
+    ## **Lecturas**
+
     -   Harnessing risk-informed data for disaster and climate resilience. 2022. [*Link*](https://www.preventionweb.net/publication/harnessing-risk-informed-data-disaster-and-climate-resilience?utm_source=LinkedIn&utm_campaign=PreventionSavesLives). [*Link*](https://www.sciencedirect.com/science/article/pii/S2590061722000412).
 
 ::: {layout-ncol="2"}
@@ -241,44 +326,12 @@ editor: visual
 </iframe>
 :::
 
-## Science, Technology and Academia
-
--   UNDRR. [*Link*](https://www.undrr.org/implementing-sendai-framework-partners-and-stakeholders/science-and-technology-action-group).
--   GFDRR Innovation. [*Link*](https://www.gfdrr.org/en/innovation)
--   APRU Multi-Hazards. [*Link*](https://apru.org/our-work/pacific-rim-challenges/multi-hazards/).
--   The science and technology roadmap to support the implementation of the Sendai Framework for Disaster Risk Reduction 2015-2030. [*Link*](https://www.google.com/search?q=he+science+and+technology+roadmap+to+support+the+implementation+of+the+Sendai+Framework+for+Disaster+Risk+Reduction+2015-2030.&rlz=1C5OZZY_enCO1132CO1132&sourceid=chrome&ie=UTF-8#:~:text=The%20Science%20and,%E2%80%BA%20files%20%E2%80%BA%2065131_file).
--   Prevention Web Science and Technology. [*Link*](https://www.preventionweb.net/themes/view/761#hits=20&sortby=default&view=pw&filter=themes%3A%5E%22Science+and+Technology%22%24).
--   **30 innovations**
-    -   Disaster risk reduction and innovations. *Progress in Disaster Science*, 2019. [*Link*](https://www.sciencedirect.com/science/article/pii/S259006171930033X).
-    -   30 Innovations linking disaster risk reduction with sustainable development goals. [*Link*](https://www.preventionweb.net/publications/view/70713).
-    -   30 innovations for disaster risk reduction. [*Link*](https://www.preventionweb.net/publications/view/64473).
-    -   Applications of artificial intelligence for disaster management. *Natural Hazards,* 2020. [*Link*](https://link.springer.com/article/10.1007/s11069-020-04124-3).
-
-## **Google**
-
-{{< video "https://youtu.be/RfzZN7lLtgY width = 400" >}} This is how Google's Flood Hub uses AI forecasting to power local-level flood warnings \| UNDRR
-
-## **Lecturas**
-
--   Exploring the emerging evolution trends of disaster risk reduction research: a global scenario. *International Journal of Environmental Science and Technology,* 2021. [*Link*](https://link.springer.com/article/10.1007/s13762-020-02847-1).
--   Knowledge and Disaster Risk Reduction. *The Routledge Handbook of Hazards and Disaster Risk Reduction*. 2011. [*Link*](https://www.routledgehandbooks.com/doi/10.4324/9780203844236.ch9)
--   Perspectives of Science and Technology in Disaster RiskReduction of Asia. 2016. International Journal of Disaster Risk Science. [*Link*](https://doi.org/10.1007/s13753-016-0104-7).
--   Three innovative approaches for managing disaster risks. [*Link*](https://blogs.worldbank.org/sustainablecities/three-innovative-approaches-managing-disaster-risks).
--   2021 APRU Multi-Hazards Webinar Series: Health, Climate Change and Innovation in Disaster Risk Reduction. [*Link*](https://apru.org/event/2021-apru-multi-hazards-webinar-series-health-climate-change-and-innovation-in-disaster-risk-reduction/), [*link*](https://apru.org/wp-content/uploads/2021/10/MH-webinar_oct-2021.pdf).
--   ADB and OECD. 2020. Leveraging Technology and Innovation for Disaster Risk Management and Financing. [*Link*](https://www.adb.org/sites/default/files/publication/664501/tech-innovation-disaster-risk-mgt-financing.pdf)
--   Success, innovation and challenge: School safety and disaster education in South America and the Caribbean, 2020. [*Link*](https://www.sciencedirect.com/science/article/abs/pii/S2212420919305813).
--   IRDR Compilation 2010-2020: A Ten Year Science Quest for Disaster Risk Reduction. [*Link*](https://www.irdrinternational.org/knowledge_pool/publications/868)
--   The Integrated Research on Disaster Risk 2021 International Conference. [*Link.*](https://conference.irdrinternational.org/)
--   A framework for global science in support of risk-informed sustainable development and planetary health. 2021. [*Link*](https://www.undrr.org/publication/framework-global-science-support-risk-informed-sustainable-development-and-planetary).
+## Otros videos
 
 ::: {layout-ncol="2"}
-{{< video "https://www.youtube.com/watch?v=Kv6LUyDTivQ" >}}
+{{< video "https://www.youtube.com/watch?v=T4TVVT2_x3M" >}}
 
-{{< video "https://www.youtube.com/watch?v=SRNPohtu6zo" >}}
-
-{{< video "https://www.youtube.com/watch?v=txi60sxkgjg" >}}
-
-{{< video "https://www.youtube.com/watch?v=uZswTWn9nyU" >}}
-
-{{< video "https://www.youtube.com/watch?v=65yMaoofboQ" >}}
+{{< video "https://www.youtube.com/watch?v=BNIT8mOdYRE" >}}
 :::
+
+::::::::::::

@@ -48,8 +48,6 @@ editor: visual
 
 -   Usos y no usos de los Escenarios de Cambio Climático. 2024. Visor story maps. [*Link*](https://visualizador.ideam.gov.co/portal/apps/storymaps/stories/660ec48de9454157b54adc074b1f38fd)
 
-{{< video "https://www.youtube.com/live/1z9IQ1bsTgU?si=eMBHg-fuEhlDXIRx" >}}
-
 -   **Marco normativo**
 -   **Ley 1931 de 2018 (Ley de cambio climático)** ver glosario. [*Link*](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=87765). \*\*\*
 -   CONPES 3700 de 2011*. [Link](https://colaboracion.dnp.gov.co/CDT/Conpes/Econ%C3%B3micos/3700.pdf)*.
@@ -74,7 +72,17 @@ editor: visual
     -   Contribución nacionalmente determinada - NDC.
     -   Presentación Plan Estratégico Nacional de Investigación Ambiental - PENIA. [*Link*](https://www.minambiente.gov.co/wp-content/uploads/2021/12/PLAN-ESTRATEGICO-NACIONAL-DE-INVESTIGACION-AMBIENTAL-PENIA-2021-2030_12.pdf).
 
-**Lecturas**
+![ESCENARIOS DE CAMBIO CLIMÁTICO CUARTA COMUNICACIÓN NACIONAL DE COLOMBIA](images/escenarios.png)
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/A3ZEkGpCjK8" >}} Resultados de los Escenarios de Cambio Climático en Colombia
+
+{{< video "https://youtu.be/fjJS2kRiQ4Y" >}} Sexto Reporte del IPCC: ¿Qué nos dice para Colombia y LATAM? - Los bosques en el Sistema Tierra
+
+{{< video "https://www.youtube.com/embed/1z9IQ1bsTgU" >}}
+:::
+
+## **Lecturas**
 
 -   Climate policies that achieved major emission reductions: Global evidence from two decades. Science. 2024. [*Link*](https://www.science.org/doi/10.1126/science.adl6547).
 
@@ -112,12 +120,6 @@ editor: visual
 <!-- -->
 
 -   The role of methane. [*Link*](https://m.box.com/shared_item/https%3A%2F%2Fcornell.app.box.com%2Fs%2F7j1pds0efeptwtb6wh9erumpn454enlt).
-
-# Informes de estado nacionales
-
-::: {layout-ncol="2"}
-{{< video "https://youtu.be/fjJS2kRiQ4Y" >}} Sexto Reporte del IPCC: ¿Qué nos dice para Colombia y LATAM? - Los bosques en el Sistema Tierra
-:::
 
 # Adaptación al cambio climático
 

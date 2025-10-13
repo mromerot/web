@@ -4,6 +4,16 @@ format: html
 editor: visual
 ---
 
+::: panel-tabset
+## Data sets
+
+[![\[Global risk data sets Making better use of global risk data and analytics\](https://www.preventionweb.net/understanding-disaster-risk/disaster-losses-and-statistics/global-risk-data-sets)](images/datasets.png){width="250"}](https://www.preventionweb.net/understanding-disaster-risk/disaster-losses-and-statistics/global-risk-data-sets)
+
+## Flood observatory
+
+[![\[Space-based Measurement, Mapping, and Modeling of Surface Water For Research, Humanitarian, and Water Resources Applications\](https://floodobservatory.colorado.edu/index.html)](images/floodobserv.png){width="250"}](https://floodobservatory.colorado.edu/index.html)
+:::
+
 # Índicadores nacionales
 
 -   Pacific Disaster Center.
@@ -15,14 +25,14 @@ editor: visual
 -   DESINVENTAR. Base de datos de pérdidas históricas en Colombia (período 1970-2011). [*Link*](http://online.desinventar.org/).
 -   COLOMBIA – Censo Nacional de Población y Vivienda – CNPV – 2018. [*Link*](http://microdatos.dane.gov.co/index.php/catalog/643/get_microdata).
 -   Otros riesgos.
-    -   CIPE. Colombia Risk Analysis: Subnational and Regional Risk Indices.[ *Link*](https://www.cipe.org/resources/colombia-risk-analysis-special-report/). [*Link*](https://www.colombiariskanalysis.com/)*.*
+    -   CIPE. Colombia Risk Analysis: Subnational and Regional Risk Indices.[*Link*](https://www.cipe.org/resources/colombia-risk-analysis-special-report/). [*Link*](https://www.colombiariskanalysis.com/)*.*
 
 ![INFORM subnational model of Colombia](https://drmkc.jrc.ec.europa.eu/inform-index/portals/0/InfoRM/2016/INFORM%20Graphics%202016/INFORM%20Subnational%20Graphics/INFORM_Colombia_2015_v2_HAZARDS.png){fig-align="left" width="300"}
 
 Pacific Disaster Center Multi Risk index 2024. [*Link*](https://analytics.pdc.org/global-risk-index/)*.*
 
 ::: {#viz1751820145622 .tableauPlaceholder style="position: relative"}
-`<noscript><a href='https://analytics.pdc.org/'`{=html} ![GRVA Dashboard Summary](https://public.tableau.com/static/images/DD/DDB5BHKWH/1_rss.png){alt="GRVA Dashboard Summary " style="border: none" width="500"} </a></noscript>
+`<noscript><a href='https://analytics.pdc.org/'`{=html} </a></noscript>
 
 <object class="tableauViz" style="display:none;">
 
@@ -32,28 +42,9 @@ Pacific Disaster Center Multi Risk index 2024. [*Link*](https://analytics.pdc.or
 :::
 
 ```{=html}
-<script type='text/javascript'>
-  var divElement = document.getElementById('viz1751820145622');
-  var vizElement = divElement.getElementsByTagName('object')[0];
-  if ( divElement.offsetWidth > 800 ) {
-    vizElement.style.minWidth='1200px';
-    vizElement.style.maxWidth='1920px';
-    vizElement.style.width='100%';
-    vizElement.style.minHeight='1627px';
-    vizElement.style.maxHeight='2627px';
-    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-  } else if ( divElement.offsetWidth > 500 ) {
-    vizElement.style.width='100%';
-    vizElement.style.height='1427px';
-  } else {
-    vizElement.style.width='100%';
-    vizElement.style.height='2827px';
-  }
-  var scriptElement = document.createElement('script');
-  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-  vizElement.parentNode.insertBefore(scriptElement, vizElement);
-</script>
 ```
+
+[![\[Mapbiomas\](https://plataforma.mapbiomas.org/coverage/coverage_lclu?tl\[id\]=4&tl\[themeKey\]=coverage&tl\[subthemeKey\]=coverage_lclu&tl\[legendKey\]=default&tl\[year\]=2024&tl\[pixelValues\]\[\]=5&tl\[pixelValues\]\[\]=3&tl\[pixelValues\]\[\]=6&tl\[pixelValues\]\[\]=49&tl\[pixelValues\]\[\]=23&tl\[pixelValues\]\[\]=24&tl\[pixelValues\]\[\]=25&tl\[pixelValues\]\[\]=30&tl\[pixelValues\]\[\]=68&tl\[pixelValues\]\[\]=75&tl\[pixelValues\]\[\]=31&tl\[pixelValues\]\[\]=33&tl\[pixelValues\]\[\]=34&tl\[pixelValues\]\[\]=9&tl\[pixelValues\]\[\]=21&tl\[pixelValues\]\[\]=35&tl\[pixelValues\]\[\]=74&tl\[pixelValues\]\[\]=11&tl\[pixelValues\]\[\]=12&tl\[pixelValues\]\[\]=13&tl\[pixelValues\]\[\]=29&tl\[pixelValues\]\[\]=32&tl\[pixelValues\]\[\]=50&tl\[pixelValues\]\[\]=81&tl\[pixelValues\]\[\]=82&t\[regionKey\]=colombia&t\[ids\]\[\]=18-1-1&t\[divisionCategoryId\]=3)](images/mapbiomas.png){width="400"}](https://plataforma.mapbiomas.org/coverage/coverage_lclu?tl%5Bid%5D=4&tl%5BthemeKey%5D=coverage&tl%5BsubthemeKey%5D=coverage_lclu&tl%5BlegendKey%5D=default&tl%5Byear%5D=2024&tl%5BpixelValues%5D%5B%5D=5&tl%5BpixelValues%5D%5B%5D=3&tl%5BpixelValues%5D%5B%5D=6&tl%5BpixelValues%5D%5B%5D=49&tl%5BpixelValues%5D%5B%5D=23&tl%5BpixelValues%5D%5B%5D=24&tl%5BpixelValues%5D%5B%5D=25&tl%5BpixelValues%5D%5B%5D=30&tl%5BpixelValues%5D%5B%5D=68&tl%5BpixelValues%5D%5B%5D=75&tl%5BpixelValues%5D%5B%5D=31&tl%5BpixelValues%5D%5B%5D=33&tl%5BpixelValues%5D%5B%5D=34&tl%5BpixelValues%5D%5B%5D=9&tl%5BpixelValues%5D%5B%5D=21&tl%5BpixelValues%5D%5B%5D=35&tl%5BpixelValues%5D%5B%5D=74&tl%5BpixelValues%5D%5B%5D=11&tl%5BpixelValues%5D%5B%5D=12&tl%5BpixelValues%5D%5B%5D=13&tl%5BpixelValues%5D%5B%5D=29&tl%5BpixelValues%5D%5B%5D=32&tl%5BpixelValues%5D%5B%5D=50&tl%5BpixelValues%5D%5B%5D=81&tl%5BpixelValues%5D%5B%5D=82&t%5BregionKey%5D=colombia&t%5Bids%5D%5B%5D=18-1-1&t%5BdivisionCategoryId%5D=3)
 
 # Índicadores mundiales
 

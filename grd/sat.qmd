@@ -4,8 +4,6 @@ format: html
 editor: visual
 ---
 
-## 
-
 # **Recursos**
 
 -   Access to early warning systems and disaster risk information and assessments. Naciones Unidas. [*Link*](https://www.un.org/en/observances/disaster-reduction-day).
@@ -13,6 +11,18 @@ editor: visual
 -   Early Warning Systems. Naciones Unidas. [*Link*](https://www.un-spider.org/risks-and-disasters/early-warning-systems#no-back).
     -   Dashboard. [*Link*](https://earlywarningsforall.org/site/early-warnings-all/early-warnings-all-dashboard)
 -   Institutional Partnerships in Multi-Hazard Early Warning Systems. [*Link*](https://public.wmo.int/en/programmes/disaster-risk-reduction-programme).
+
+::: panel-tabset
+## Handbook
+
+[![\[Handbook on the use of risk knowledge for multi-hazard early warning systems 2024.\](https://www.undrr.org/publication/handbook-use-risk-knowledge-multi-hazard-early-warning-systems-2024)](https://www.undrr.org/sites/default/files/styles/por/public/2024-10/Cover_UNDRR_0.png.jpg?itok=GzyNpWwV){width="250"}](https://www.undrr.org/publication/handbook-use-risk-knowledge-multi-hazard-early-warning-systems-2024)
+
+## Words into Action
+
+[![The United Nations Office for Disaster Risk Reduction (UNDRR) launched the \[Words into Action (WiA) publications\](https://www.undrr.org/words-into-action/guide-multi-hazard-early-warning) as a series of guidelines, based on global expertise, communities of practice and networks of disaster risk reduction (DRR) practitioners.](https://www.undrr.org/sites/default/files/inline-images/Screenshot%202023-06-20%20164850.png){width="250"}](https://www.undrr.org/words-into-action/guide-multi-hazard-early-warning)
+:::
+
+# Videos
 
 ::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/watch?v=dgsoS5oyMPQ" >}} 1er Intercambio de Experiencias sobre Sistemas de Alerta Temprana Comunitaria
@@ -41,3 +51,9 @@ Sistemas de alerta temprana
 
 {{< video "https://youtu.be/3LZzCVcbu_Y" >}} Ecuador. Fortalecimiento de Capacidades en Gestión de Riesgos con la metodología INFORM Index For Risk
 :::
+
+# Dashboards
+
+<iframe title="Data" width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiOGM1NmJlZmQtNzRhOC00MTZhLThkNWQtMjVlYTk0NDE1MGFhIiwidCI6ImVhYTZiZTU0LTQ2ODctNDBjNC05ODI3LWMwNDRiZDhlOGQzYyIsImMiOjl9&amp;pageName=ReportSectioncddc42cd26d94aa7a1dd" frameborder="0" allowFullScreen="true">
+
+</iframe>

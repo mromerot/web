@@ -517,17 +517,6 @@
     "text": "Predicting House Prices with Machine Learning\n\n\n\nPython\n\nMachine Learning\n\nData Cleaning\n\n\n\nThis project involves using machine learning algorithms to predict house prices based on various features such as location, size, and amenities. It includes data cleaning, feature engineering, and model selection.\n\n\n\nJan 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nCustomer Segmentation Using Clustering Techniques\n\n\n\nR\n\nMachine Learning\n\nClustering\n\nStatistical Modelling\n\n\n\nThis project focuses on segmenting customers into different groups based on their purchasing behavior and demographics. It uses clustering algorithms like K-means and hierarchical clustering to identify distinct customer segments.\n\n\n\nApr 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisualizing Global CO2 Emissions\n\n\n\nR\n\nData Visualization\n\nEnvironmental Science\n\n\n\nThis project involves creating visualizations to show trends in global CO2 emissions over time. It includes data extraction from public databases, data cleaning, and using visualization libraries to create interactive charts and graphs.\n\n\n\nJul 1, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "grd/gestiondelriesgo.html#agencias-nacionales-para-la-grd",
-    "href": "grd/gestiondelriesgo.html#agencias-nacionales-para-la-grd",
-    "title": "Gestión del riesgo de desastres",
-    "section": "Agencias nacionales para la GRD",
-    "text": "Agencias nacionales para la GRD\n\nAustralia:\n\nAustralian Disaster resilience hub. Link.\nThe National Emergency Management Agency. Link.\n\nCorea del Sur:\n\nMOIS. Link. Link.\n\nChile\n\nSENAPRED. Link\n\nEEUU.\n\nFederal Emergency Management Agency (FEMA). Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Gestión del riesgo de desastres"
-    ]
-  },
-  {
     "objectID": "grd/gestiondelriesgo.html#colombia",
     "href": "grd/gestiondelriesgo.html#colombia",
     "title": "Gestión del riesgo de desastres",
@@ -664,7 +653,7 @@
     "href": "grd/gestiondelriesgo.html#documentos-de-referencia-en-gdr-colombia",
     "title": "Gestión del riesgo de desastres",
     "section": "Documentos de referencia en GDR Colombia",
-    "text": "Documentos de referencia en GDR Colombia\n\nColombia: National Disaster Preparedness Baseline Assessment - A data-driven tool for assessing risk and building lasting resilience. 2025. Pacific Disaster Center. Link\nInvestigaciones en gestión del riesgo de desastres para Colombia: avances, perspectivas y casos de estudio. UNGRD. 2021. Link.\nDisaster Risk Assessment of Five Colombian Cities. InsuResilience Solutions Fund. 2019. Link\nAtlas de Riesgo de Colombia: revelando los desastres latentes. 2018. Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD). 2018. Link.\nAnálisis de la gestión del riesgo de desastres en Colombia. 2012. GFDRR, BM. Link\nDisaster risk management in Latin America and the Caribbean Region : GFDRR country notes - Colombia (English). Washington, DC: World Bank. Link.\nLa gestión del riesgo de desastres. Narváez et al. 2009. Link.\nDesastres de origen natural en Colombia, 1979-2004. Michel Hermelín. 2005. Link.\nDocumentos de GRD de la OCDE\n\nEvaluación de la gobernanza del riesgo en Colombia, OECD. 2019. OECD Publishing, Paris, Link. Link. Link.\nDisaster preparedness and response in Colombia. 2019. Link.\nDisaster risk identification and assessment in Colombia. 2019. Link.\nDisaster recovery and reconstruction in Colombia. 2019. Link.\nDisaster risk reduction in Colombia. 2019. Link.\nColombia’s strategic framework for disaster risk governance. 2019. Link.",
+    "text": "Documentos de referencia en GDR Colombia\n\nColombia: National Disaster Preparedness Baseline Assessment - A data-driven tool for assessing risk and building lasting resilience. 2025. Pacific Disaster Center. Link\nInvestigaciones en gestión del riesgo de desastres para Colombia: avances, perspectivas y casos de estudio. UNGRD. 2021. Link.\nDisaster Risk Assessment of Five Colombian Cities. InsuResilience Solutions Fund. 2019. Link\nAtlas de Riesgo de Colombia: revelando los desastres latentes. 2018. Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD). 2018. Link.\nAnálisis de la gestión del riesgo de desastres en Colombia. 2012. GFDRR, BM. Link\nDisaster risk management in Latin America and the Caribbean Region : GFDRR country notes - Colombia (English). Washington, DC: World Bank. Link.\nLa gestión del riesgo de desastres. Narváez et al. 2009. Link.\nDesastres de origen natural en Colombia, 1979-2004. Michel Hermelín. 2005. Link.\nLos habitantes en la gestión del riesgo : acciones cotidianas, gobernanza adaptativa y cambio climático. UNAL. 2023. Link.\nDocumentos de GRD de la OCDE\n\nEvaluación de la gobernanza del riesgo en Colombia, OECD. 2019. OECD Publishing, Paris, Link. Link. Link.\nDisaster preparedness and response in Colombia. 2019. Link.\nDisaster risk identification and assessment in Colombia. 2019. Link.\nDisaster recovery and reconstruction in Colombia. 2019. Link.\nDisaster risk reduction in Colombia. 2019. Link.\nColombia’s strategic framework for disaster risk governance. 2019. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Gestión del riesgo de desastres"
@@ -780,7 +769,7 @@
     "href": "grd/ambientales/index.html#ambiental",
     "title": "Riesgo por amenazas ambientales",
     "section": "Ambiental",
-    "text": "Ambiental\n2 grupos de peligros y 24 peligros específicos\n\n\n\nPeligro específico\nIdentificador\nGrupo\n\n\n\n\nincendios forestales\nEN0205\nDegradación ambiental (silvicultura)\n\n\nPérdida/degradación de humedales\nEN0304\nDegradación ambiental\n\n\nErosión del suelo\nGH0403\nDegradación ambiental\n\n\nAumento del nivel del mar\nEN0402\nDegradación ambiental\n\n\nMinería de arena\nEN0405\nDegradación ambiental\n\n\nIntrusión de agua salada\nEN0302\nDegradación ambiental\n\n\nSalinidad y sodicidad\nEN0303\nDegradación ambiental\n\n\nEscorrentía / Contaminación de fuentes no puntuales\nEN0106\nDegradación ambiental\n\n\nPérdida de permafrost\nEN0305\nDegradación ambiental\n\n\nAcidificación de los océanos\nEN0401\nDegradación ambiental\n\n\nPérdida de manglares\nEN0207\nDegradación ambiental\n\n\nDegradación de la tierra\nEN0301\nDegradación ambiental\n\n\nContaminación del aire en el hogar\nEN0101\nDegradación ambiental\n\n\nEspecies invasoras del bosque\nEN0204\nDegradación ambiental (silvicultura)\n\n\nPerturbaciones forestales\nEN0203\nDegradación ambiental\n\n\nDeclive y muerte regresiva de los bosques\nEN0202\nDegradación ambiental\n\n\nEutrofización\nEN0403\nDegradación ambiental\n\n\nDesertificación\nEN0206\nDegradación ambiental\n\n\nDeforestación\nEN0201\nDegradación ambiental (silvicultura)\n\n\nBlanqueamiento de corales\nEN0404\nDegradación ambiental\n\n\nCarbono negro\nEN0104\nDegradación ambiental\n\n\nPérdida de biodiversidad\nEN0501\nDegradación ambiental\n\n\nContaminación del aire ambiental (exterior)\nEN0103\nDegradación ambiental\n\n\nContaminación del aire (fuente puntual)\nEN0102\nDegradación ambiental\n\n\nLluvia ácida\nEN0105\nDegradación ambiental",
+    "text": "Ambiental\n2 grupos de peligros y 24 peligros específicos\n\n\n\nPeligro específico\nIdentificador\nGrupo\n\n\n\n\nincendios forestales\nEN0205\nDegradación ambiental (silvicultura)\n\n\nPérdida/degradación de humedales\nEN0304\nDegradación ambiental\n\n\nErosión del suelo\nGH0403\nDegradación ambiental\n\n\nAumento del nivel del mar\nEN0402\nDegradación ambiental\n\n\nMinería de arena\nEN0405\nDegradación ambiental\n\n\nIntrusión de agua salada\nEN0302\nDegradación ambiental\n\n\nSalinidad y sodicidad\nEN0303\nDegradación ambiental\n\n\nEscorrentía / Contaminación de fuentes no puntuales\nEN0106\nDegradación ambiental\n\n\nPérdida de permafrost\nEN0305\nDegradación ambiental\n\n\nAcidificación de los océanos\nEN0401\nDegradación ambiental\n\n\nPérdida de manglares\nEN0207\nDegradación ambiental\n\n\nDegradación de la tierra\nEN0301\nDegradación ambiental\n\n\nContaminación del aire en el hogar\nEN0101\nDegradación ambiental\n\n\nEspecies invasoras del bosque\nEN0204\nDegradación ambiental (silvicultura)\n\n\nPerturbaciones forestales\nEN0203\nDegradación ambiental\n\n\nDeclive y muerte regresiva de los bosques\nEN0202\nDegradación ambiental\n\n\nEutrofización\nEN0403\nDegradación ambiental\n\n\nDesertificación\nEN0206\nDegradación ambiental\n\n\nDeforestación\nEN0201\nDegradación ambiental (silvicultura)\n\n\nBlanqueamiento de corales\nEN0404\nDegradación ambiental\n\n\nCarbono negro\nEN0104\nDegradación ambiental\n\n\nPérdida de biodiversidad\nEN0501\nDegradación ambiental\n\n\nContaminación del aire ambiental (exterior)\nEN0103\nDegradación ambiental\n\n\nContaminación del aire (fuente puntual)\nEN0102\nDegradación ambiental\n\n\nLluvia ácida\nEN0105\nDegradación ambiental\n\n\n\n\n\n\n[Mapbiomas](https://plataforma.mapbiomas.org/coverage/coverage_lclu?tl[id]=4&tl[themeKey]=coverage&tl[subthemeKey]=coverage_lclu&tl[legendKey]=default&tl[year]=2024&tl[pixelValues][]=5&tl[pixelValues][]=3&tl[pixelValues][]=6&tl[pixelValues][]=49&tl[pixelValues][]=23&tl[pixelValues][]=24&tl[pixelValues][]=25&tl[pixelValues][]=30&tl[pixelValues][]=68&tl[pixelValues][]=75&tl[pixelValues][]=31&tl[pixelValues][]=33&tl[pixelValues][]=34&tl[pixelValues][]=9&tl[pixelValues][]=21&tl[pixelValues][]=35&tl[pixelValues][]=74&tl[pixelValues][]=11&tl[pixelValues][]=12&tl[pixelValues][]=13&tl[pixelValues][]=29&tl[pixelValues][]=32&tl[pixelValues][]=50&tl[pixelValues][]=81&tl[pixelValues][]=82&t[regionKey]=colombia&t[ids][]=18-1-1&t[divisionCategoryId]=3)",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas ambientales"
@@ -1441,7 +1430,19 @@
     "href": "grd/geologicas/falladeterreno.html#lea-esto",
     "title": "Falla de terreno",
     "section": "Lea esto 👇🏼",
-    "text": "Lea esto 👇🏼\n\nClasificaciónLandslide Types\n\n\nClasificación de movimiento en masa y su distribución en terrenos geológicos de Colombia\n\nClasificación de movimiento en masa y su distribución en terrenos geológicos de Colombia. Juan Montero Olarte. https://doi.org/10.32685/9789585978218\n\n\n\nEncyclopedia of Natural Hazards. Landslide Types. David Cruden\n\n\n\n\nUnderstanding and Reducing Landslide Disaster Risk: Volume 4. Link.\nLandslide Hazard and Risk. Link.\nThe Landslide Handbook— A Guide to Understanding Landslides. USGS. Link.\nA unified landslide classification system for loess slopes: A critical review. Geomorphology. 2019. Link\nThe Varnes classification of landslide types, an update. Lanslides. 2013. Link.\nUsing the Working Classification of Landslides to Assess the Danger from a Natural Slope. Landslide Processes. 2015. Link\nDeslizamientos fatales en Colombia (desde tiempos históricos hasta 2020) y sus impactos socioeconómicos. 2020. Link\nSpace-time analysis of the relationship between landslides occurrence, rainfall variability and ENSO in the Tropical Andean Mountain region in Colombia. 2024. Link.\nLandslide Travel Distances in Colombia from National Landslide Database Analysis. 2022. Link.\nSpatial and temporal patterns and the socioeconomic impacts of landslides in the tropical and mountainous Colombian Andes. Disasters. 2020. Link.\nSpatial and temporal landslide distributions using global and open landslide databases. Natural Hzards. 2023. Link.\nAn Increasing Trend of Landslides as a Consequence of the Global Change. Earth Systems and Environment. 2025. Link.\n\n\n\n\n\n\nAn Increasing Trend of Landslides as a Consequence of the Global Change\n\n\n\n\n\n\nAn Increasing Trend of Landslides as a Consequence of the Global Change",
+    "text": "Lea esto 👇🏼\n\nClasificaciónLandslide Types\n\n\nClasificación de movimiento en masa y su distribución en terrenos geológicos de Colombia\n\nClasificación de movimiento en masa y su distribución en terrenos geológicos de Colombia. Juan Montero Olarte. https://doi.org/10.32685/9789585978218\n\n\n\nEncyclopedia of Natural Hazards. Landslide Types. David Cruden\n\n\n\n\nUnderstanding and Reducing Landslide Disaster Risk: Volume 4. Link.\nLandslide Hazard and Risk. Link.\nThe Landslide Handbook— A Guide to Understanding Landslides. USGS. Link.\nA unified landslide classification system for loess slopes: A critical review. Geomorphology. 2019. Link\nThe Varnes classification of landslide types, an update. Lanslides. 2013. Link.\nUsing the Working Classification of Landslides to Assess the Danger from a Natural Slope. Landslide Processes. 2015. Link\nDeslizamientos fatales en Colombia (desde tiempos históricos hasta 2020) y sus impactos socioeconómicos. 2020. Link\nSpace-time analysis of the relationship between landslides occurrence, rainfall variability and ENSO in the Tropical Andean Mountain region in Colombia. 2024. Link.\nLandslide Travel Distances in Colombia from National Landslide Database Analysis. 2022. Link.\nSpatial and temporal patterns and the socioeconomic impacts of landslides in the tropical and mountainous Colombian Andes. Disasters. 2020. Link.\nSpatial and temporal landslide distributions using global and open landslide databases. Natural Hzards. 2023. Link.\nAn Increasing Trend of Landslides as a Consequence of the Global Change. Earth Systems and Environment. 2025. Link.\nThe biggest landslide event in Brazil: preliminary analysis of the Rio Grande do Sul mega disaster in May 2024. 2025. Landslides.Link.\n\n\n\n\n\n\nAn Increasing Trend of Landslides as a Consequence of the Global Change\n\n\n\n\n\n\nAn Increasing Trend of Landslides as a Consequence of the Global Change",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas geológicas",
+      "Falla de terreno"
+    ]
+  },
+  {
+    "objectID": "grd/geologicas/falladeterreno.html#revistas-científicas",
+    "href": "grd/geologicas/falladeterreno.html#revistas-científicas",
+    "title": "Falla de terreno",
+    "section": "Revistas científicas",
+    "text": "Revistas científicas\n\nLandslides. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas geológicas",
@@ -1883,8 +1884,52 @@
     ]
   },
   {
+    "objectID": "grd/cienciaytecnologia.html",
+    "href": "grd/cienciaytecnologia.html",
+    "title": "Ciencia y tecnología",
+    "section": "",
+    "text": "&lt;iframe src=\"https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1BfeFThS1e%2F&show_text=false&width=560&t=0\" width=\"560\" height=\"314\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\"&gt;&lt;/iframe&gt;",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciencia y tecnología"
+    ]
+  },
+  {
+    "objectID": "grd/cienciaytecnologia.html#science-and-technology",
+    "href": "grd/cienciaytecnologia.html#science-and-technology",
+    "title": "Ciencia y tecnología",
+    "section": "Science and Technology",
+    "text": "Science and Technology\n\nUNDRR. Link.\nGFDRR Innovation. Link\nAPRU Multi-Hazards. Link.\nThe science and technology roadmap to support the implementation of the Sendai Framework for Disaster Risk Reduction 2015-2030. Link.\nPrevention Web Science and Technology. Link.\n30 innovations\n\nDisaster risk reduction and innovations. Progress in Disaster Science, 2019. Link.\n30 Innovations linking disaster risk reduction with sustainable development goals. Link.\n30 innovations for disaster risk reduction. Link.\nApplications of artificial intelligence for disaster management. Natural Hazards, 2020. Link.\n\n\n\nPrevention WebReporte especialStatus Science AsiaScience Plan Austria\n\n\n\n\n\n[Science and technology](https://www.preventionweb.net/knowledge-base/themes/science-knowledge-and-advocacy/science-and-technology) This theme adresses how science and technology can contribute to DRR, including approaches and initiatives to bring scientific and technical knowledge into practice and policy, approaches for multidisciplinary engagement, good practice in scientific and technical aspects of DRR, and citizen science.\n\n\n\n\n\n\n\n\n\nReporte Especial sobre el uso de la tecnología en la reducción del riesgo de desastres\n\n\n\n\n\n\n\nA Status of Science and Technology in Disaster Risk Reduction in Asia-Pacific 2024\n\n\n\nSCIENCE PLAN 2030+ DISASTER RISK REDUCTION DCNA",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciencia y tecnología"
+    ]
+  },
+  {
     "objectID": "grd/cienciaytecnologia.html#lecturas",
     "href": "grd/cienciaytecnologia.html#lecturas",
+    "title": "Ciencia y tecnología",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nExploring the emerging evolution trends of disaster risk reduction research: a global scenario. International Journal of Environmental Science and Technology, 2021. Link.\nKnowledge and Disaster Risk Reduction. The Routledge Handbook of Hazards and Disaster Risk Reduction. 2011. Link\nPerspectives of Science and Technology in Disaster RiskReduction of Asia. 2016. International Journal of Disaster Risk Science. Link.\nThree innovative approaches for managing disaster risks. Link.\n2021 APRU Multi-Hazards Webinar Series: Health, Climate Change and Innovation in Disaster Risk Reduction. Link, link.\nADB and OECD. 2020. Leveraging Technology and Innovation for Disaster Risk Management and Financing. Link\nSuccess, innovation and challenge: School safety and disaster education in South America and the Caribbean, 2020. Link.\nIRDR Compilation 2010-2020: A Ten Year Science Quest for Disaster Risk Reduction. Link\nThe Integrated Research on Disaster Risk 2021 International Conference. Link.\nA framework for global science in support of risk-informed sustainable development and planetary health. 2021. Link.\nDisaster Risk Science: A Geographical Perspective and a Research Framework. 2020. Link\nBuilding a global forum for natural hazard science. NPJ. 2025. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciencia y tecnología"
+    ]
+  },
+  {
+    "objectID": "grd/cienciaytecnologia.html#videos",
+    "href": "grd/cienciaytecnologia.html#videos",
+    "title": "Ciencia y tecnología",
+    "section": "Videos",
+    "text": "Videos",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciencia y tecnología"
+    ]
+  },
+  {
+    "objectID": "grd/cienciaytecnologia.html#lecturas-1",
+    "href": "grd/cienciaytecnologia.html#lecturas-1",
     "title": "Ciencia y tecnología",
     "section": "Lecturas",
     "text": "Lecturas\n\nArtificial intelligence for climate prediction of extremes: State of the art, challenges, and future perspectives. 2025. Link.",
@@ -1898,51 +1943,7 @@
     "href": "grd/cienciaytecnologia.html#herramientas",
     "title": "Ciencia y tecnología",
     "section": "Herramientas",
-    "text": "Herramientas\n\nGoogle Geospatial Reasoning. Link\n\n\n\n\n Geospatial Reasoning: Demonstration application\n\n\n\n\nESRI Geospatial AI platform. Link\n\n\n\n\n GeoAI and GenAI in ArcGIS | 2025 Esri UAE User Conference\n\n\n Maximise data insights with geospatial analysis & GeoAI Maximise data insights with geospatial analysis & GeoAI",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/cienciaytecnologia.html#ciencia-y-tecnología",
-    "href": "grd/cienciaytecnologia.html#ciencia-y-tecnología",
-    "title": "Ciencia y tecnología",
-    "section": "Ciencia y tecnología",
-    "text": "Ciencia y tecnología\n\nDisaster Risk Science: A Geographical Perspective and a Research Framework. 2020. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/cienciaytecnologia.html#libros-de-referencia-nacionales",
-    "href": "grd/cienciaytecnologia.html#libros-de-referencia-nacionales",
-    "title": "Ciencia y tecnología",
-    "section": "Libros de referencia nacionales",
-    "text": "Libros de referencia nacionales\n\nLos habitantes en la gestión del riesgo : acciones cotidianas, gobernanza adaptativa y cambio climático. UNAL. 2023. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/cienciaytecnologia.html#libros-de-referencia-internacionales",
-    "href": "grd/cienciaytecnologia.html#libros-de-referencia-internacionales",
-    "title": "Ciencia y tecnología",
-    "section": "Libros de referencia internacionales",
-    "text": "Libros de referencia internacionales\n\nThe Routledge Handbook of Hazards and Disaster Risk Reduction. 2012. Link.\nThe Routledge Handbook of Disaster Risk Reduction Including Climate Change Adaptation. 2017. Link.\nCrisis and Emergency Management: Theory and Practice, Second Edition. 2017. Link.\nExtreme Natural Hazards, Disaster Risks and Societal Implications. 2014. Link.\nEncyclopedia of Natural Hazards. 2013. Link.\nEncyclopedia of Natural Hazard Science. OUP. Link.\nEducation for Sustainable Development and Disaster Risk Reduction. 2014. Link.\nIntegrated Research on Disaster Risks. Springer. 2021. Link.\nIntroduction to Catastrophe Risk Modelling. A Physics-based Approach. 2025. Link. Link\nNatural Hazards, Second Edition: Explanation and Integration. 2017. Link.\nNatural Hazards and Disasters. Fifth Ed. Hyndman. 2017. Link.\nNatural Catastrophe Risk Management and Modelling: A Practitioner’s Guide. Link\nThe Role of Ecosystems in Disaster Risk Reduction. 2013. Link. ***\nSocial Vulnerability to Disasters, Second Edition. 2013. Link.\nSystemic Risk: History, Measurement and Regulation. 2019. Link.\nSystemic Disaster Risk Handbook. 2021\nSustainable Development and Disaster Risk Reduction. 2016. Link.\nNatural Climate Solutions Handbook: A Technical Guide for Assessing NatureBased Mitigation Opportunities in Countries. 2021. Link.\nThe Invention of Disaster. Power and Knowledge in Discourses on Hazard and Vulnerability. Routledge. 2022. Link.\nCreating Resilient Futures. Integrating Disaster Risk Reduction, Sustainable Development Goals and Climate Change Adaptation Agendas. 2022. Springer. Link.\nHandbook on Climate Change and Disasters. 2023. Link.\nDisaster Risk Reduction for Resilience. Climate Change and Disaster Risk Adaptation. 2023. Link\nFísica del caos en la predicción meteorológica. 2023. AEMET España. Link.\nLecturas sobre conceptos\n\nManaging the Risks of Extreme Events and Disasters to Advance Climate Change Adaptation. IPCC. 2012. Link.\n\nChapter 2. Determinants of risk: exposure and vulnerability. Link.\nGestión de los riesgos de fenómenos meteorológicos extremos y desastres para mejorar la adaptación al cambio climático. IPCC, 2012. Link. Link.\n\nBriefing note on systemic risk. UNDRR, 2022. Link.\nA framework for complex climate change risk assessment. One Earth. 2021. Link.\n\n\n\n\n\n Systemic Disaster Risk Handbook\n\n\n Climate change and disaster risk management\n\n\n\n\n Los desastres no son naturales",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/cienciaytecnologia.html#revistas-en-gestión-de-riesgos",
-    "href": "grd/cienciaytecnologia.html#revistas-en-gestión-de-riesgos",
-    "title": "Ciencia y tecnología",
-    "section": "Revistas en gestión de riesgos",
-    "text": "Revistas en gestión de riesgos\n\nInternacionales\n\nInternational Journal of Disaster Risk Reduction. Link.\nInternational Journal of Disaster Risk Science. Link.\nNatural Hazards. Link.\nNatural Hazards Review. Link.\nNatural Hazards and Earth System Sciences. Link.\nEnvironmental Science and Policy. Link.\nEnvironment: Science and Policy for Sustainable Development. Link.\nProgress in Disaster Science. Link.\nSafety Science. Link.\nRisk Analysis. Link.\nRisk, Hazards, & Crisis in Public Policy. Link.\nAdvances in Natural and Technological Hazards Research. Link.\nNature, Collection Natural Hazards. Link.\n\nNatural Hazard Center.\n\nList of Hazards and Disaster Journals. Link.\nResearch Check Sheets Series. Link\n\nLatinoamericanas\n\nRevista de Estudios Latinoamericanos sobre Reducción del Riesgo de Desastres REDER. Link.\n\nColombianas\n\nCuadernos de Geografía: Revista Colombiana de Geografía. Link.\nBoletín de Geología. Link.\nEarth Sciences Research Journal. Link.\nCT y F – Ciencia, Tecnologia y Futuro. Link.\nGeología Colombiana. Link.\nIngenieria e Investigacion. Link.\nRevista Facultad de Ingenieria. Link.\nRevistas de divulgación Seguros Sura. Link.\nRevista DYNA. Link.\nPerspectiva Geográfica. Link.\nLegislación prospectiva. Link.\n\nRanking de Revistas en GRD\n\nEn google académico\n\nArea Emergency management. Link.\n\nEn SJR\n\nArea Safety research. Link Latinoamerica. Link.\nArea Geography, Planning and Development. Link. Latinoamerica. Link.",
+    "text": "Herramientas\n\nGoogle Geospatial Reasoning. Link\n\n\n Geospatial Reasoning: Demonstration application\n This is how Google’s Flood Hub uses AI forecasting to power local-level flood warnings | UNDRR\n\n\n\n Artificial Intelligence for Remote Sensing applications: recent developments and main challenges\n\n\n\n\n\nESRI Geospatial AI platform. Link\n\n\n\n\n GeoAI and GenAI in ArcGIS | 2025 Esri UAE User Conference\n\n\n Maximise data insights with geospatial analysis & GeoAI Maximise data insights with geospatial analysis & GeoAI",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Ciencia y tecnología"
@@ -1953,40 +1954,18 @@
     "href": "grd/cienciaytecnologia.html#algunos-investigadores-internacionales-en-drr",
     "title": "Ciencia y tecnología",
     "section": "Algunos investigadores Internacionales en DRR",
-    "text": "Algunos investigadores Internacionales en DRR\n\n\n\n\n\n\n\nBenigno Aguirre. Link.\nCees Van Westen. Link\nDavid E. Alexander. Link.\nDouglas Paton (Risk communication). Link.\nGonzalo Lizarralde. Link.\nIrasema Alcántara Ayala. Link.\nJC Gaillard. Link.\nJuergen Weichselgartner. Link.\nSusan L. Cutter. Link.\n\n\n\n\n\nEventos internacionales\n\nAnnual Natural Hazards Workshop. Link.\nICGNH 2020: 14. International Conference on Geography and Natural Hazards. Link.\n\nRiesgos y salud pública\n\nThe Lancet Countdown: tracking progress on health and climate change. Link.\n\nProgramas institucionales asociados a la ciencia de los desastres\n\nServicio Geológico Colombiano. Plan Estratégico del Conocimiento Geocientífico del Territorio Colombiano 2022 – 2032.Link.\nPlan Estratégico Nacional de Investigación Ambiental – PENIA. Link.\n\nCiencia y datos abiertos para DRR\n\nOpenDRI Open data for resilience. Link.\nDigital Public Goods for Disaster Risk Reduction in a Changing Climate. Banco Mundial. 2023. Link.\nOpen Data for Resilient Urban Planning. Link. Github. Link.\nGFDRR open-risk-data-dashboard. Link.\nCODATA.\n\nFAIR Data for Disaster Risk Research. Link.\nWebinars. Link.\nCODATA-RDA Schools of Research Data Science. Link.\n\n\nInaSAFE is free software that produces realistic natural hazard impact scenarios for better planning. Link.\nUNESCO. Multistakeholder Consultations on Open Science. Link.\nLecturas\n\nHarnessing risk-informed data for disaster and climate resilience. 2022. Link. Link.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n&lt;/div&gt;\n&lt;div class=\"quarto-layout-cell\" style=\"flex-basis: 50.0%;justify-content: flex-start;\"&gt;",
+    "text": "Algunos investigadores Internacionales en DRR\n\n\n\n\n\n\n\nBenigno Aguirre. Link.\nCees Van Westen. Link\nDavid E. Alexander. Link.\nDouglas Paton (Risk communication). Link.\nGonzalo Lizarralde. Link.\nIrasema Alcántara Ayala. Link.\nJC Gaillard. Link.\nJuergen Weichselgartner. Link.\nSusan L. Cutter. Link.\n\n\n\n\n\nEventos internacionales\n\nAnnual Natural Hazards Workshop. Link.\nICGNH 2020: 14. International Conference on Geography and Natural Hazards. Link.\n\nRiesgos y salud pública\n\nThe Lancet Countdown: tracking progress on health and climate change. Link.\n\nProgramas institucionales asociados a la ciencia de los desastres\n\nServicio Geológico Colombiano. Plan Estratégico del Conocimiento Geocientífico del Territorio Colombiano 2022 – 2032.Link.\nPlan Estratégico Nacional de Investigación Ambiental – PENIA. Link.\n\nCiencia y datos abiertos para DRR\n\nOpenDRI Open data for resilience. Link.\nDigital Public Goods for Disaster Risk Reduction in a Changing Climate. Banco Mundial. 2023. Link.\nOpen Data for Resilient Urban Planning. Link. Github. Link.\nGFDRR open-risk-data-dashboard. Link.\nCODATA.\n\nFAIR Data for Disaster Risk Research. Link.\nWebinars. Link.\nCODATA-RDA Schools of Research Data Science. Link.\n\n\nInaSAFE is free software that produces realistic natural hazard impact scenarios for better planning. Link.\nUNESCO. Multistakeholder Consultations on Open Science. Link.\nFifth Global Expert Forum for Producers and Users of Disaster-related Statistics. Link\nLecturas\n\nHarnessing risk-informed data for disaster and climate resilience. 2022. Link. Link.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n&lt;/div&gt;\n&lt;div class=\"quarto-layout-cell\" style=\"flex-basis: 50.0%;justify-content: flex-start;\"&gt;",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Ciencia y tecnología"
     ]
   },
   {
-    "objectID": "grd/cienciaytecnologia.html#science-technology-and-academia",
-    "href": "grd/cienciaytecnologia.html#science-technology-and-academia",
+    "objectID": "grd/cienciaytecnologia.html#otros-videos",
+    "href": "grd/cienciaytecnologia.html#otros-videos",
     "title": "Ciencia y tecnología",
-    "section": "Science, Technology and Academia",
-    "text": "Science, Technology and Academia\n\nUNDRR. Link.\nGFDRR Innovation. Link\nAPRU Multi-Hazards. Link.\nThe science and technology roadmap to support the implementation of the Sendai Framework for Disaster Risk Reduction 2015-2030. Link.\nPrevention Web Science and Technology. Link.\n30 innovations\n\nDisaster risk reduction and innovations. Progress in Disaster Science, 2019. Link.\n30 Innovations linking disaster risk reduction with sustainable development goals. Link.\n30 innovations for disaster risk reduction. Link.\nApplications of artificial intelligence for disaster management. Natural Hazards, 2020. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/cienciaytecnologia.html#google",
-    "href": "grd/cienciaytecnologia.html#google",
-    "title": "Ciencia y tecnología",
-    "section": "Google",
-    "text": "Google\n This is how Google’s Flood Hub uses AI forecasting to power local-level flood warnings | UNDRR",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
-    "objectID": "grd/cienciaytecnologia.html#lecturas-1",
-    "href": "grd/cienciaytecnologia.html#lecturas-1",
-    "title": "Ciencia y tecnología",
-    "section": "Lecturas",
-    "text": "Lecturas\n\nExploring the emerging evolution trends of disaster risk reduction research: a global scenario. International Journal of Environmental Science and Technology, 2021. Link.\nKnowledge and Disaster Risk Reduction. The Routledge Handbook of Hazards and Disaster Risk Reduction. 2011. Link\nPerspectives of Science and Technology in Disaster RiskReduction of Asia. 2016. International Journal of Disaster Risk Science. Link.\nThree innovative approaches for managing disaster risks. Link.\n2021 APRU Multi-Hazards Webinar Series: Health, Climate Change and Innovation in Disaster Risk Reduction. Link, link.\nADB and OECD. 2020. Leveraging Technology and Innovation for Disaster Risk Management and Financing. Link\nSuccess, innovation and challenge: School safety and disaster education in South America and the Caribbean, 2020. Link.\nIRDR Compilation 2010-2020: A Ten Year Science Quest for Disaster Risk Reduction. Link\nThe Integrated Research on Disaster Risk 2021 International Conference. Link.\nA framework for global science in support of risk-informed sustainable development and planetary health. 2021. Link.",
+    "section": "Otros videos",
+    "text": "Otros videos\n\n\n\n\n\n\n\n\n\n\n::::::::::::",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Ciencia y tecnología"
@@ -2125,6 +2104,17 @@
     ]
   },
   {
+    "objectID": "grd/sat.html",
+    "href": "grd/sat.html",
+    "title": "Sistemas de Alerta Temprana",
+    "section": "",
+    "text": "Access to early warning systems and disaster risk information and assessments. Naciones Unidas. Link.\nSistema de Alerta Temprana de Medellín y el Valle de Aburrá. SIATA. Link.\nEarly Warning Systems. Naciones Unidas. Link.\n\nDashboard. Link\n\nInstitutional Partnerships in Multi-Hazard Early Warning Systems. Link.\n\n\nHandbookWords into Action\n\n\n\n\n\n[Handbook on the use of risk knowledge for multi-hazard early warning systems 2024.](https://www.undrr.org/publication/handbook-use-risk-knowledge-multi-hazard-early-warning-systems-2024)\n\n\n\n\n\n\n\nThe United Nations Office for Disaster Risk Reduction (UNDRR) launched the [Words into Action (WiA) publications](https://www.undrr.org/words-into-action/guide-multi-hazard-early-warning) as a series of guidelines, based on global expertise, communities of practice and networks of disaster risk reduction (DRR) practitioners.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Sistemas de alerta temprana"
+    ]
+  },
+  {
     "objectID": "grd/sat.html#inform-risk",
     "href": "grd/sat.html#inform-risk",
     "title": "Sistemas de Alerta Temprana",
@@ -2155,17 +2145,6 @@
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas tecnológicas"
-    ]
-  },
-  {
-    "objectID": "grd/conocimiento-indicadores.html",
-    "href": "grd/conocimiento-indicadores.html",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "",
-    "text": "Pacific Disaster Center.\n\nColombia’s data-driven approach to creating safer, more resilient communities. Link.\nNDPBA Colombia Final Report. 2025. Link.\n\nAtlas de Riesgo de Colombia: revelando los desastres latentes. Unidad Nacional para la Gestión del Riesgo de Desastres. 2018. Link.\nInform Risk. 2015. Link.\nDatos del Consolidado de atención a emergencias. UNGRD. Link.\nDESINVENTAR. Base de datos de pérdidas históricas en Colombia (período 1970-2011). Link.\nCOLOMBIA – Censo Nacional de Población y Vivienda – CNPV – 2018. Link.\nOtros riesgos.\n\nCIPE. Colombia Risk Analysis: Subnational and Regional Risk Indices.Link. Link.\n\n\n\n\n\nINFORM subnational model of Colombia\n\n\nPacific Disaster Center Multi Risk index 2024. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
     ]
   },
   {
@@ -2308,7 +2287,7 @@
     "href": "grd/hidrol-meteorologicas/inundaciones.html#amenaza-por-inundaciones",
     "title": "Inundaciones",
     "section": "Amenaza por inundaciones",
-    "text": "Amenaza por inundaciones\n\nFEMA. Hazus. Link\nEurope floods: new tool to estimate water depth and extent. 2024. Link.\nSatellite imaging reveals increased proportion of population exposed to floods. Nature, 2021. Link.\nThe fraction of the global population at risk of floods is growing. Nature News. 2021. Link.\nARSET – Monitoring and Modeling Floods using Earth Observations. NASA. Link.\nGlobal Floods. Link - What’s in Floodwaters? Link.\n\n\n\n\nThe share of people living in high-risk flood zones. Source: Rentschler, J, Salhab, M and Jafino, B. 2022. Flood Exposure and Poverty in 188 Countries. Nature Communications. Link.\n\n\n\n\n\nThe share of population that is flood-exposed and living und $5.50 per day. Source: Rentschler, J, Salhab, M and Jafino, B. 2022. Flood Exposure and Poverty in 188 Countries. Nature Communications.\n\n\n\n\n\nPercentage of the population in each sub-national administrative region that live on floodplains, which is defined as the 1000-year flood extent. The proportion of the reaches that are in each of the floodplain categories for each region is shown by the top pie charts in each box. The proportion of the population settled on the different types of floodplains is shown by the bottom pie chart in each box. Link\n\n\n\n\n\n\n\n\n\n\n\n\n\n Part 1: Overview of Flood Monitoring Tools based on Remote Sensing Observations\n\n\n\n\n\n\n\n Introduction to Flood Risk Management",
+    "text": "Amenaza por inundaciones\n\n\n\n[Space-based Measurement, Mapping, and Modeling of Surface Water For Research, Humanitarian, and Water Resources Applications](https://floodobservatory.colorado.edu/index.html)\n\n\n\nFEMA. Hazus. Link\nEurope floods: new tool to estimate water depth and extent. 2024. Link.\nSatellite imaging reveals increased proportion of population exposed to floods. Nature, 2021. Link.\nThe fraction of the global population at risk of floods is growing. Nature News. 2021. Link.\nARSET – Monitoring and Modeling Floods using Earth Observations. NASA. Link.\nGlobal Floods. Link - What’s in Floodwaters? Link.\n\n\n\n\nThe share of people living in high-risk flood zones. Source: Rentschler, J, Salhab, M and Jafino, B. 2022. Flood Exposure and Poverty in 188 Countries. Nature Communications. Link.\n\n\n\n\n\nThe share of population that is flood-exposed and living und $5.50 per day. Source: Rentschler, J, Salhab, M and Jafino, B. 2022. Flood Exposure and Poverty in 188 Countries. Nature Communications.\n\n\n\n\n\nPercentage of the population in each sub-national administrative region that live on floodplains, which is defined as the 1000-year flood extent. The proportion of the reaches that are in each of the floodplain categories for each region is shown by the top pie charts in each box. The proportion of the population settled on the different types of floodplains is shown by the bottom pie chart in each box. Link\n\n\n\n\n\n\n\n\n\n\n\n\n\n Part 1: Overview of Flood Monitoring Tools based on Remote Sensing Observations\n\n\n\n\n\n\n\n Introduction to Flood Risk Management",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas hidrológicas y meteorológicas",
@@ -2320,7 +2299,7 @@
     "href": "grd/hidrol-meteorologicas/inundaciones.html#evaluación-del-riesgo-por-inundaciones",
     "title": "Inundaciones",
     "section": "Evaluación del riesgo por inundaciones",
-    "text": "Evaluación del riesgo por inundaciones",
+    "text": "Evaluación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\n\n[From flood maps to mind maps: Participatory systems modelling of floods in Limbe, Cameroon](https://cdkn.org/story/flood-maps-mind-maps-participatory-systems-modelling-floods-limbe-cameroon). In Limbe, Cameroon, flooding is not just caused by heavy rainfall. Rather from a complex interplay of land-use decisions, poor waste management, weak governance and a lack of infrastructure, with cascading impacts on education, transportation, health, and the economy. Tackling this requires a systems‑thinking approach. The following blog by Dr Lum Sonita Awah, a postdoctoral Fellow at the University of the Free State and an early career research fellow with CDKN, shares how participatory systems modelling can be used to create holistic approaches to flood mitigation and management.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas hidrológicas y meteorológicas",
@@ -2567,7 +2546,7 @@
     "href": "grd/ambientales/erosioncostera.html",
     "title": "Erosión costera",
     "section": "",
-    "text": "Amenaza y vulnerabilidad por erosión costera en Colombia: enfoque regional para la gestión del riesgo. 2018. Invemar. Link.\nLanzamiento del libro Erosión costera en el litoral antioqueño, 2022. Link.\nPresent and Future Challenges of Coastal Erosion in Latin America. 2014. Link\nAre We Managing in the Right Way the Coastal Erosion along the Caribbean Coast of Colombia? 2020. Link.\nAlgunos expertos Colombia. * Nelson Rangel. Universidad del Atlantico. Link.\n\nAndrés Osorio. Universidad Nacional sede Medellin. Link.\nConstanza Ricaurte. INVEMAR. Link.\nVladimir Toro. UdeA. Link\nhttps://www.facebook.com/CorporacionAcademicaAmbiental/videos/482006680659849",
+    "text": "Amenaza y vulnerabilidad por erosión costera en Colombia: enfoque regional para la gestión del riesgo. 2018. Invemar. Link.\nLanzamiento del libro Erosión costera en el litoral antioqueño, 2022. Link.\nPresent and Future Challenges of Coastal Erosion in Latin America. 2014. Link\nAre We Managing in the Right Way the Coastal Erosion along the Caribbean Coast of Colombia? 2020. Link.\nAlgunos expertos Colombia.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas ambientales",
@@ -2934,6 +2913,17 @@
   {
     "objectID": "gcc/gestion-cambio-climatico.html#lecturas",
     "href": "gcc/gestion-cambio-climatico.html#lecturas",
+    "title": "Gestión del cambio climático",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nClimate policies that achieved major emission reductions: Global evidence from two decades. Science. 2024. Link.\n\n\n\n\n Sistema Nacional Ambiental\n\n\n Presentación Plan Estratégico Nacional de Investigación Ambiental - PENIA",
+    "crumbs": [
+      "Gestión del cambio climático",
+      "Gestión del cambio climático"
+    ]
+  },
+  {
+    "objectID": "gcc/gestion-cambio-climatico.html#lecturas-1",
+    "href": "gcc/gestion-cambio-climatico.html#lecturas-1",
     "title": "Gestión del cambio climático",
     "section": "Lecturas",
     "text": "Lecturas\n\nSouth America is becoming warmer, drier, and more flammable. Nature. 2024. Link.",
