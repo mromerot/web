@@ -377,8 +377,9 @@ El **Gasto Doméstico Bruto en Investigación y Desarrollo (GERD)** como porcent
 -   Algunos países pueden tener metodologías ligeramente diferentes en la recopilación de datos
 
 ------------------------------------------------------------------------
+# Objetos en observable
 
-# Diagrama de radar
+## Diagrama de radar
 
 ``` {ojs}
 // Datos: 30 indicadores con su valor (aquí puse valores ficticios que puedes reemplazar)
@@ -478,6 +479,84 @@ data = [
 
   return svg.node();
 }
+```
+
+## Tablas
+
+Tabla con D3.js puro
+
+```{ojs}
+// Datos de ejemplo
+paises_data = [
+  { País: "Colombia", Población: 52000000, Región: "América" },
+  { País: "Chile", Población: 19000000, Región: "América" },
+  { País: "España", Población: 47000000, Región: "Europa" }
+]
+```
+
+```{ojs}
+// Tabla creada con D3
+{
+  const data = paises_data;
+  const table = d3.create("table")
+    .style("border-collapse", "collapse")
+    .style("width", "100%");
+
+  const thead = table.append("thead");
+  const tbody = table.append("tbody");
+
+  const columns = Object.keys(data[0]);
+
+  // encabezados
+  thead.append("tr")
+    .selectAll("th")
+    .data(columns)
+    .enter()
+    .append("th")
+    .text(d => d)
+    .style("border", "1px solid #ccc")
+    .style("background", "#f4f4f4")
+    .style("padding", "8px");
+
+  // filas
+  const rows = tbody.selectAll("tr")
+    .data(data)
+    .enter()
+    .append("tr");
+
+  rows.selectAll("td")
+    .data(d => columns.map(c => d[c]))
+    .enter()
+    .append("td")
+    .text(d => d)
+    .style("border", "1px solid #ccc")
+    .style("padding", "8px");
+
+  return table.node();
+}
+```
+
+Tabla con filtros usando Inputs.table
+
+```{ojs}
+viewof filtro = Inputs.select(["Todas", "América", "Europa"], {label: "Filtrar por región:", value: "Todas"})
+```
+
+```{ojs}
+// Datos filtrados
+paises_filtrados = filtro === "Todas"
+  ? paises_data
+  : paises_data.filter(d => d.Región === filtro)
+```
+
+```{ojs}
+Inputs.table(paises_filtrados, {
+  header: {
+    "País": "País",
+    "Población": "Población",
+    "Región": "Región"
+  }
+})
 ```
 
 *Documento generado con [Quarto](https://quarto.org/) y [Observable JS](https://observablehq.com/)*

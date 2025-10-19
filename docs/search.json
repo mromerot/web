@@ -1965,7 +1965,7 @@
     "href": "grd/cienciaytecnologia.html#otros-videos",
     "title": "Ciencia y tecnología",
     "section": "Otros videos",
-    "text": "Otros videos\n\n\n\n\n\n\n\n\n\n\n::::::::::::",
+    "text": "Otros videos",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Ciencia y tecnología"
@@ -3407,11 +3407,33 @@
     ]
   },
   {
+    "objectID": "datascience/d3-experiment.html#diagrama-de-radar",
+    "href": "datascience/d3-experiment.html#diagrama-de-radar",
+    "title": "Inversión Global en Investigación y Desarrollo",
+    "section": "Diagrama de radar",
+    "text": "Diagrama de radar\n\n\nCode\ndata = [\n  {axis: \"1. Evaluación comunitaria\", value: 1.2},\n  {axis: \"2. Evaluación científica del riesgo\", value: 2.0},\n  {axis: \"3. Diseminación de información en RRD\", value: 2.5},\n  {axis: \"4. Educación de los niños en RRD\", value: 3.0},\n  {axis: \"5. RRD en la planificación del desarrollo\", value: 1.8},\n  {axis: \"6. RRD en la planificación territorial\", value: 2.0},\n  {axis: \"7. Toma comunitaria de decisiones\", value: 2.2},\n  {axis: \"8. Inclusión de grupos vulnerables\", value: 1.7},\n  {axis: \"9. Participación de las mujeres\", value: 2.3},\n  {axis: \"10. Conocimiento de derechos\", value: 1.9},\n  {axis: \"11. Alianzas para la RRD\", value: 2.6},\n  {axis: \"12. Gestión ambiental sostenible\", value: 2.1},\n  {axis: \"13. Seguridad y gestión del agua\", value: 1.8},\n  {axis: \"14. Acceso y conciencia de la salud\", value: 1.6},\n  {axis: \"15. Suministro seguro de alimentos\", value: 1.4},\n  {axis: \"16. Prácticas de medios de vida\", value: 1.3},\n  {axis: \"17. Acceso a mercado\", value: 1.5},\n  {axis: \"18. Acceso a servicios financieros\", value: 1.2},\n  {axis: \"19. Protección de ingresos y activos\", value: 1.7},\n  {axis: \"20. Acceso a protección social\", value: 2.0},\n  {axis: \"21. Cohesión social\", value: 3.2},\n  {axis: \"22. Infraestructura crítica\", value: 2.8},\n  {axis: \"23. Vivienda\", value: 1.9},\n  {axis: \"24. Planificación de contingencia\", value: 2.1},\n  {axis: \"25. Sistema de alerta temprana\", value: 2.3},\n  {axis: \"26. Capacidad de preparación\", value: 2.0},\n  {axis: \"27. Servicios de salud\", value: 2.5},\n  {axis: \"28. Servicios de educación\", value: 2.9},\n  {axis: \"29. Infraestructura en emergencias\", value: 2.7},\n  {axis: \"30. Liderazgo y voluntariado\", value: 3.0}\n]\n\n// Radar chart con D3\n{\n  const width = 600, height = 600;\n  const radius = Math.min(width, height) / 2 - 60;\n  const levels = 5; // número de círculos concéntricos\n  const maxValue = 3.5; // escala máxima\n\n  const angleSlice = (Math.PI * 2) / data.length;\n\n  const rScale = d3.scaleLinear()\n    .domain([0, maxValue])\n    .range([0, radius]);\n\n  const svg = d3.create(\"svg\")\n    .attr(\"width\", width)\n    .attr(\"height\", height);\n\n  const g = svg.append(\"g\")\n    .attr(\"transform\", `translate(${width/2},${height/2})`);\n\n  // Dibujar círculos concéntricos\n  for (let i = 0; i &lt;= levels; i++) {\n    g.append(\"circle\")\n      .attr(\"r\", radius/levels * i)\n      .attr(\"fill\", \"none\")\n      .attr(\"stroke\", \"#ccc\");\n  }\n\n  // Ejes radiales\n  data.forEach((d, i) =&gt; {\n    const angle = angleSlice * i - Math.PI/2;\n    g.append(\"line\")\n      .attr(\"x1\", 0)\n      .attr(\"y1\", 0)\n      .attr(\"x2\", rScale(maxValue) * Math.cos(angle))\n      .attr(\"y2\", rScale(maxValue) * Math.sin(angle))\n      .attr(\"stroke\", \"#999\");\n\n    // Etiquetas\n    g.append(\"text\")\n      .attr(\"x\", (rScale(maxValue + 0.2)) * Math.cos(angle))\n      .attr(\"y\", (rScale(maxValue + 0.2)) * Math.sin(angle))\n      .attr(\"dy\", \"0.35em\")\n      .style(\"font-size\", \"10px\")\n      .style(\"text-anchor\", angle &gt; Math.PI/2 && angle &lt; 3*Math.PI/2 ? \"end\" : \"start\")\n      .text(d.axis);\n  });\n\n  // Línea de valores\n  const line = d3.lineRadial()\n    .radius(d =&gt; rScale(d.value))\n    .angle((d,i) =&gt; i * angleSlice)\n    .curve(d3.curveLinearClosed);\n\n  g.append(\"path\")\n    .datum(data)\n    .attr(\"d\", line)\n    .attr(\"fill\", \"rgba(50,150,250,0.5)\")\n    .attr(\"stroke\", \"steelblue\")\n    .attr(\"stroke-width\", 2);\n\n  return svg.node();\n}",
+    "crumbs": [
+      "Ciencia de datos",
+      "Experimento con D3"
+    ]
+  },
+  {
+    "objectID": "datascience/d3-experiment.html#tablas",
+    "href": "datascience/d3-experiment.html#tablas",
+    "title": "Inversión Global en Investigación y Desarrollo",
+    "section": "Tablas",
+    "text": "Tablas\nTabla con D3.js puro\n\n\nCode\n// Datos de ejemplo\npaises_data = [\n  { País: \"Colombia\", Población: 52000000, Región: \"América\" },\n  { País: \"Chile\", Población: 19000000, Región: \"América\" },\n  { País: \"España\", Población: 47000000, Región: \"Europa\" }\n]\n\n\n\n\n\n\n\n\n\nCode\n// Tabla creada con D3\n{\n  const data = paises_data;\n  const table = d3.create(\"table\")\n    .style(\"border-collapse\", \"collapse\")\n    .style(\"width\", \"100%\");\n\n  const thead = table.append(\"thead\");\n  const tbody = table.append(\"tbody\");\n\n  const columns = Object.keys(data[0]);\n\n  // encabezados\n  thead.append(\"tr\")\n    .selectAll(\"th\")\n    .data(columns)\n    .enter()\n    .append(\"th\")\n    .text(d =&gt; d)\n    .style(\"border\", \"1px solid #ccc\")\n    .style(\"background\", \"#f4f4f4\")\n    .style(\"padding\", \"8px\");\n\n  // filas\n  const rows = tbody.selectAll(\"tr\")\n    .data(data)\n    .enter()\n    .append(\"tr\");\n\n  rows.selectAll(\"td\")\n    .data(d =&gt; columns.map(c =&gt; d[c]))\n    .enter()\n    .append(\"td\")\n    .text(d =&gt; d)\n    .style(\"border\", \"1px solid #ccc\")\n    .style(\"padding\", \"8px\");\n\n  return table.node();\n}\n\n\n\n\n\n\n\nTabla con filtros usando Inputs.table\n\n\nCode\nviewof filtro = Inputs.select([\"Todas\", \"América\", \"Europa\"], {label: \"Filtrar por región:\", value: \"Todas\"})\n\n\n\n\n\n\n\n\n\nCode\n// Datos filtrados\npaises_filtrados = filtro === \"Todas\"\n  ? paises_data\n  : paises_data.filter(d =&gt; d.Región === filtro)\n\n\n\n\n\n\n\n\n\nCode\nInputs.table(paises_filtrados, {\n  header: {\n    \"País\": \"País\",\n    \"Población\": \"Población\",\n    \"Región\": \"Región\"\n  }\n})\n\n\n\n\n\n\n\nDocumento generado con Quarto y Observable JS",
+    "crumbs": [
+      "Ciencia de datos",
+      "Experimento con D3"
+    ]
+  },
+  {
     "objectID": "datascience/d3.html",
     "href": "datascience/d3.html",
     "title": "D3, Observable y JS",
     "section": "",
-    "text": "Observable HQ. Link.\nQuarto and Observable. Link.\n\n\n\n\n Introduction to D3 P1. Slides.\n\n\n Introduction to D3 P2. Slides.\n\n\n\n\n Introduction to D3 P3.\n\n\n Introduction to D3 P4.\n\n\n\n\n Introduction to D3 P5.",
+    "text": "Observable HQ. Link.\n\nHands-on Tutorials. Link\nNotebooks. Link\nObservable Notebook Kit. Link\nInput: Table. Link\nGallery. Link\n\nQuarto and Observable. Link. Link\n\n\n\n\n Introduction to D3 P1. Slides.\n\n\n Introduction to D3 P2. Slides.\n\n\n\n\n Introduction to D3 P3.\n\n\n Introduction to D3 P4.\n\n\n\n\n Introduction to D3 P5.",
     "crumbs": [
       "Ciencia de datos",
       "D3"
@@ -3422,7 +3444,7 @@
     "href": "datascience/d3.html#d3",
     "title": "D3, Observable y JS",
     "section": "",
-    "text": "Observable HQ. Link.\nQuarto and Observable. Link.\n\n\n\n\n Introduction to D3 P1. Slides.\n\n\n Introduction to D3 P2. Slides.\n\n\n\n\n Introduction to D3 P3.\n\n\n Introduction to D3 P4.\n\n\n\n\n Introduction to D3 P5.",
+    "text": "Observable HQ. Link.\n\nHands-on Tutorials. Link\nNotebooks. Link\nObservable Notebook Kit. Link\nInput: Table. Link\nGallery. Link\n\nQuarto and Observable. Link. Link\n\n\n\n\n Introduction to D3 P1. Slides.\n\n\n Introduction to D3 P2. Slides.\n\n\n\n\n Introduction to D3 P3.\n\n\n Introduction to D3 P4.\n\n\n\n\n Introduction to D3 P5.",
     "crumbs": [
       "Ciencia de datos",
       "D3"

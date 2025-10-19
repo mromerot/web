@@ -7,7 +7,12 @@ editor: visual
 ## D3
 
 -   Observable HQ. [*Link*](https://observablehq.com/)*.*
--   Quarto and Observable. [*Link*](https://quarto.org/docs/interactive/ojs/index.html).
+    -   Hands-on Tutorials. [*Link*](https://observablehq.com/collection/%40observablehq/tutorial?utm_source=chatgpt.com)
+    -   Notebooks. [*Link*](https://observablehq.com/documentation/notebooks/?utm_source=chatgpt.com)
+    -   Observable Notebook Kit. [*Link*](https://observablehq.com/notebook-kit/kit)
+    -   Input: Table. [*Link*](https://observablehq.com/@observablehq/input-table)
+    -   Gallery. [*Link*](https://observablehq.com/@d3/gallery)
+-   Quarto and Observable. [*Link*](https://quarto.org/docs/interactive/ojs/index.html). [*Link*](https://observablehq.com/@observablehq/plot-gallery)
 
 ::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/embed/CCBTX2pI2fU" >}} Introduction to D3 P1. [Slides](https://docs.google.com/presentation/d/1IrZiaKZ86m0Ll25HsWHesEsEYbtsH_-TFIrBZBLMMfE/edit?slide=id.g282fb476d44_0_108#slide=id.g282fb476d44_0_108).
