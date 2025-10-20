@@ -1,0 +1,99 @@
+---
+title: "Graficas Python y R"
+format: html
+editor: visual
+---
+
+# **Recursos de visualización de datos**
+
+## Python
+
+### Matplotlib
+
+-   Documentación oficial. [*Link*](https://matplotlib.org/).
+-   Tutoriales de Matplotlib. [*Link*](https://matplotlib.org/stable/tutorials/index.html).
+
+### Seaborn
+
+-   Documentación oficial. [*Link*](https://seaborn.pydata.org/).
+-   Galería de ejemplos. [*Link*](https://seaborn.pydata.org/examples/index.html).
+
+### Plotly
+
+-   Documentación oficial de Plotly Python. [*Link*](https://plotly.com/python/).
+-   Plotly Express. [*Link*](https://plotly.com/python/plotly-express/).
+
+### Altair
+
+-   Documentación oficial. [*Link*](https://altair-viz.github.io/).
+-   Galería de ejemplos. [*Link*](https://altair-viz.github.io/gallery/index.html).
+
+## R
+
+### ggplot2
+
+-   Documentación oficial. [*Link*](https://ggplot2.tidyverse.org/).
+-   R Graphics Cookbook. [*Link*](https://r-graphics.org/).
+-   ggplot2 extensions. [*Link*](https://exts.ggplot2.tidyverse.org/).
+
+### Plotly R
+
+-   Documentación oficial. [*Link*](https://plotly.com/r/).
+-   Plotly R book. [*Link*](https://plotly-r.com/).
+
+### Highcharter
+
+-   Documentación oficial. [*Link*](https://jkunst.com/highcharter/).
+-   Ejemplos. [*Link*](https://jkunst.com/highcharter/articles/highcharts.html).
+
+## Recursos generales
+
+-   Data Visualization Catalogue. [*Link*](https://datavizcatalogue.com/).
+-   From Data to Viz. [*Link*](https://www.data-to-viz.com/).
+-   The R Graph Gallery. [*Link*](https://r-graph-gallery.com/).
+-   Python Graph Gallery. [*Link*](https://python-graph-gallery.com/).
+
+## Pruebas
+
+```{r}
+#| code-fold: true
+#| code-summary: "Mostrar código"
+#| warning: false
+#| message: false
+
+# Instalar plotly si no está instalado
+if (!require("plotly")) {
+  install.packages("plotly")
+  library(plotly)
+}
+
+library(plotly)
+
+fig <- plot_ly(
+    type = 'scatterpolar',
+    fill = 'toself'
+  )
+fig <- fig %>%
+  add_trace(
+    r = c(39, 28, 8, 7, 28, 39),
+    theta = c('A','B','C', 'D', 'E', 'A'),
+    name = 'Group A'
+  )
+fig <- fig %>%
+  add_trace(
+    r = c(1.5, 10, 39, 31, 15, 1.5),
+    theta = c('A','B','C', 'D', 'E', 'A'),
+    name = 'Group B'
+  )
+fig <- fig %>%
+  layout(
+    polar = list(
+      radialaxis = list(
+        visible = TRUE,
+        range = c(0,50)
+      )
+    )
+  )
+
+fig
+```

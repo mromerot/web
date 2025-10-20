@@ -3449,5 +3449,60 @@
       "Ciencia de datos",
       "D3"
     ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html",
+    "href": "datascience/graficas-python-r.html",
+    "title": "Graficas Python y R",
+    "section": "",
+    "text": "Documentación oficial. Link.\nTutoriales de Matplotlib. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nGalería de ejemplos. Link.\n\n\n\n\n\nDocumentación oficial de Plotly Python. Link.\nPlotly Express. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nGalería de ejemplos. Link.\n\n\n\n\n\n\n\n\nDocumentación oficial. Link.\nR Graphics Cookbook. Link.\nggplot2 extensions. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nPlotly R book. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nEjemplos. Link.\n\n\n\n\n\n\nData Visualization Catalogue. Link.\nFrom Data to Viz. Link.\nThe R Graph Gallery. Link.\nPython Graph Gallery. Link.\n\n\n\n\n\n\nMostrar código\n# Instalar plotly si no está instalado\nif (!require(\"plotly\")) {\n  install.packages(\"plotly\")\n  library(plotly)\n}\n\nlibrary(plotly)\n\nfig &lt;- plot_ly(\n    type = 'scatterpolar',\n    fill = 'toself'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(39, 28, 8, 7, 28, 39),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group A'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(1.5, 10, 39, 31, 15, 1.5),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group B'\n  )\nfig &lt;- fig %&gt;%\n  layout(\n    polar = list(\n      radialaxis = list(\n        visible = TRUE,\n        range = c(0,50)\n      )\n    )\n  )\n\nfig",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#python",
+    "href": "datascience/graficas-python-r.html#python",
+    "title": "Graficas Python y R",
+    "section": "",
+    "text": "Documentación oficial. Link.\nTutoriales de Matplotlib. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nGalería de ejemplos. Link.\n\n\n\n\n\nDocumentación oficial de Plotly Python. Link.\nPlotly Express. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nGalería de ejemplos. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#r",
+    "href": "datascience/graficas-python-r.html#r",
+    "title": "Graficas Python y R",
+    "section": "",
+    "text": "Documentación oficial. Link.\nR Graphics Cookbook. Link.\nggplot2 extensions. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nPlotly R book. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nEjemplos. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#recursos-generales",
+    "href": "datascience/graficas-python-r.html#recursos-generales",
+    "title": "Graficas Python y R",
+    "section": "",
+    "text": "Data Visualization Catalogue. Link.\nFrom Data to Viz. Link.\nThe R Graph Gallery. Link.\nPython Graph Gallery. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#pruebas",
+    "href": "datascience/graficas-python-r.html#pruebas",
+    "title": "Graficas Python y R",
+    "section": "",
+    "text": "Mostrar código\n# Instalar plotly si no está instalado\nif (!require(\"plotly\")) {\n  install.packages(\"plotly\")\n  library(plotly)\n}\n\nlibrary(plotly)\n\nfig &lt;- plot_ly(\n    type = 'scatterpolar',\n    fill = 'toself'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(39, 28, 8, 7, 28, 39),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group A'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(1.5, 10, 39, 31, 15, 1.5),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group B'\n  )\nfig &lt;- fig %&gt;%\n  layout(\n    polar = list(\n      radialaxis = list(\n        visible = TRUE,\n        range = c(0,50)\n      )\n    )\n  )\n\nfig",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
   }
 ]
