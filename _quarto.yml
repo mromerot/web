@@ -99,6 +99,8 @@ website:
             href: gestiondeproyectos/gestiontecnologiainnovacion.qmd
           - text: "Gestión de proyectos"
             href: gestiondeproyectos/projectmanagement.qmd
+
+# aqui viene la seccion de ciencia y tecnologia
       - section: "Ciencia y tecnología"
         contents:
           - text: "Escritura y publicación académica"
@@ -109,12 +111,16 @@ website:
             href: cyt/docenciaeducacion.qmd
           - text: "Ciencia transdiciplinar"
             href: cyt/transdisciplina.qmd
+# aqui viene la seccion de ecologia y conservacion
       - text: "Ecología y conservación"
         href: ecolyconserv/ecologiayconservacion.qmd
+# aqui viene la seccion de ciencia de datos
       - section: "Ciencia de datos"
         contents:
           - text: "Ciencia de datos"
             href: datascience/cienciadedatos.qmd
+          - text: "Graficas Python y R"
+            href: datascience/graficas-python-r.qmd
           - text: "ARCO Data"
             href: datascience/arco.qmd
           - text: "Inteligencia artificial"
@@ -123,6 +129,8 @@ website:
             href: datascience/d3.qmd
           - text: "Experimento con D3"
             href: datascience/d3-experiment.qmd
+          - text: "Graficas python y R"
+            href: datascience/graficas-python-r.qmd
           - text: "Github"
             href: datascience/github.qmd
           - text: "Atajos de Quarto"

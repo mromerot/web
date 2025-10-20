@@ -56,8 +56,8 @@ editor: visual
 ## Pruebas
 
 ```{r}
-#| code-fold: true
-#| code-summary: "Mostrar código"
+#| code-fold: show
+#| code-summary: "Ocultar/Mostrar código"
 #| warning: false
 #| message: false
 
