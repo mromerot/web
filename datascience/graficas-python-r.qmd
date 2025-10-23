@@ -97,3 +97,405 @@ fig <- fig %>%
 
 fig
 ```
+
+## Pruebas de mapas
+
+## 🌍 Mapa vectorial desde PMTiles
+
+```{=html}
+<link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet">
+<script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/pmtiles@3.0.3/dist/pmtiles.js"></script>
+
+<div id="map" style="width:100%; height:600px; border: 1px solid #ccc; border-radius: 4px; margin: 20px 0; background-color: #f5f5f5;"></div>
+
+<script>
+  // Esperar a que las librerías se carguen
+  window.addEventListener('load', function() {
+    (function() {
+      try {
+        // Verificar que las librerías estén disponibles
+        if (typeof maplibregl === 'undefined') {
+          throw new Error('MapLibre GL no está cargado');
+        }
+        if (typeof pmtiles === 'undefined') {
+          throw new Error('PMTiles no está cargado');
+        }
+
+        // Inicializar el protocolo PMTiles
+        const protocol = new pmtiles.Protocol();
+        maplibregl.addProtocol("pmtiles", protocol.tile);
+
+      // Crear el mapa
+      const map = new maplibregl.Map({
+        container: 'map',
+        style: {
+          version: 8,
+          sources: {
+            protomaps: {
+              type: "vector",
+              url: "pmtiles://https://r2-public.protomaps.com/protomaps-sample-datasets/protomaps-basemap-opensource-20230408.pmtiles",
+              attribution: '© <a href="https://protomaps.com">Protomaps</a> © <a href="https://openstreetmap.org">OpenStreetMap</a>'
+            }
+          },
+          layers: [
+            {
+              id: "background",
+              type: "background",
+              paint: {"background-color": "#f8f8f8"}
+            },
+            {
+              id: "water",
+              source: "protomaps",
+              "source-layer": "water",
+              type: "fill",
+              paint: {"fill-color": "#80d0ff"}
+            },
+            {
+              id: "roads",
+              source: "protomaps",
+              "source-layer": "roads",
+              type: "line",
+              paint: {
+                "line-color": "#888",
+                "line-width": [
+                  "interpolate",
+                  ["exponential", 1.5],
+                  ["zoom"],
+                  5, 0.5,
+                  10, 1.5,
+                  15, 3
+                ]
+              }
+            },
+            {
+              id: "buildings",
+              source: "protomaps",
+              "source-layer": "buildings",
+              type: "fill",
+              paint: {
+                "fill-color": "#ddd",
+                "fill-opacity": 0.5
+              },
+              minzoom: 13
+            },
+            {
+              id: "places",
+              source: "protomaps",
+              "source-layer": "places",
+              type: "symbol",
+              layout: {
+                "text-field": ["get", "name"],
+                "text-size": [
+                  "interpolate",
+                  ["linear"],
+                  ["zoom"],
+                  5, 10,
+                  10, 14
+                ],
+                "text-anchor": "center"
+              },
+              paint: {
+                "text-color": "#333",
+                "text-halo-color": "#fff",
+                "text-halo-width": 2
+              }
+            }
+          ]
+        },
+        center: [-74.0721, 4.7110], // Bogotá
+        zoom: 10,
+        maxZoom: 18,
+        minZoom: 2
+      });
+
+      // Agregar controles de navegación
+      map.addControl(new maplibregl.NavigationControl(), 'top-right');
+
+      // Agregar escala
+      map.addControl(new maplibregl.ScaleControl(), 'bottom-left');
+
+      // Mensaje de carga exitosa
+      map.on('load', function() {
+        console.log('Mapa PMTiles cargado exitosamente');
+      });
+
+      } catch (error) {
+        console.error("Error al cargar el mapa:", error);
+        const mapDiv = document.getElementById('map');
+        if (mapDiv) {
+          mapDiv.innerHTML = '<div style="padding:20px; color:red; text-align:center;"><strong>Error al cargar el mapa:</strong><br>' + error.message + '</div>';
+        }
+      }
+    })();
+  });
+</script>
+```
+
+## 🇨🇴 Mapa de Colombia con PMTiles
+
+Este mapa muestra Colombia usando datos vectoriales de OpenStreetMap a través de PMTiles.
+
+```{=html}
+<div id="map-colombia" style="width:100%; height:700px; border: 2px solid #0033A0; border-radius: 8px; margin: 20px 0; background-color: #f5f5f5;"></div>
+
+<script>
+  // Este mapa se crea después de que el primero ya haya cargado
+  setTimeout(function() {
+    (function() {
+      try {
+        // Verificar que las librerías estén cargadas
+        if (typeof pmtiles === 'undefined') {
+          throw new Error('PMTiles no está cargado');
+        }
+        if (typeof maplibregl === 'undefined') {
+          throw new Error('MapLibre GL no está cargado');
+        }
+
+        // El protocolo ya está registrado por el mapa anterior
+
+        // Crear el mapa centrado en Colombia
+        const mapColombia = new maplibregl.Map({
+          container: 'map-colombia',
+          style: {
+            version: 8,
+            sources: {
+              protomaps: {
+                type: "vector",
+                url: "pmtiles://https://r2-public.protomaps.com/protomaps-sample-datasets/protomaps-basemap-opensource-20230408.pmtiles",
+                attribution: '© <a href="https://protomaps.com">Protomaps</a> © <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>'
+              }
+            },
+            layers: [
+              {
+                id: "background",
+                type: "background",
+                paint: {"background-color": "#f0f0f0"}
+              },
+              {
+                id: "landuse",
+                source: "protomaps",
+                "source-layer": "landuse",
+                type: "fill",
+                paint: {
+                  "fill-color": [
+                    "match",
+                    ["get", "pmap:kind"],
+                    ["park", "nature_reserve", "forest"],
+                    "#d4e7d4",
+                    ["beach", "sand"],
+                    "#f5e9d3",
+                    "#e8e8e8"
+                  ],
+                  "fill-opacity": 0.5
+                }
+              },
+              {
+                id: "water",
+                source: "protomaps",
+                "source-layer": "water",
+                type: "fill",
+                paint: {"fill-color": "#4A90E2", "fill-opacity": 0.8}
+              },
+              {
+                id: "water-outline",
+                source: "protomaps",
+                "source-layer": "water",
+                type: "line",
+                paint: {"line-color": "#2E5C8A", "line-width": 1}
+              },
+              {
+                id: "boundaries",
+                source: "protomaps",
+                "source-layer": "boundaries",
+                type: "line",
+                paint: {
+                  "line-color": "#666",
+                  "line-width": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    4, 1,
+                    8, 2
+                  ],
+                  "line-dasharray": [3, 2]
+                }
+              },
+              {
+                id: "roads",
+                source: "protomaps",
+                "source-layer": "roads",
+                type: "line",
+                paint: {
+                  "line-color": [
+                    "match",
+                    ["get", "pmap:kind"],
+                    ["highway", "primary"],
+                    "#FFA500",
+                    ["secondary", "tertiary"],
+                    "#FFD700",
+                    "#CCCCCC"
+                  ],
+                  "line-width": [
+                    "interpolate",
+                    ["exponential", 1.5],
+                    ["zoom"],
+                    4, 0.3,
+                    8, 1,
+                    12, 3,
+                    16, 8
+                  ]
+                }
+              },
+              {
+                id: "buildings",
+                source: "protomaps",
+                "source-layer": "buildings",
+                type: "fill",
+                paint: {
+                  "fill-color": "#d9d0c1",
+                  "fill-opacity": 0.7
+                },
+                minzoom: 12
+              },
+              {
+                id: "buildings-outline",
+                source: "protomaps",
+                "source-layer": "buildings",
+                type: "line",
+                paint: {
+                  "line-color": "#b8a992",
+                  "line-width": 0.5
+                },
+                minzoom: 14
+              },
+              {
+                id: "places-cities",
+                source: "protomaps",
+                "source-layer": "places",
+                type: "symbol",
+                filter: ["in", ["get", "pmap:kind"], ["literal", ["city", "town"]]],
+                layout: {
+                  "text-field": ["get", "name"],
+                  "text-size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    4, 11,
+                    8, 16,
+                    12, 20
+                  ],
+                  "text-anchor": "top",
+                  "text-offset": [0, 0.5],
+                  "text-font": ["Noto Sans Bold"]
+                },
+                paint: {
+                  "text-color": "#0033A0",
+                  "text-halo-color": "#ffffff",
+                  "text-halo-width": 2
+                }
+              },
+              {
+                id: "places-other",
+                source: "protomaps",
+                "source-layer": "places",
+                type: "symbol",
+                filter: ["!in", ["get", "pmap:kind"], ["literal", ["city", "town"]]],
+                layout: {
+                  "text-field": ["get", "name"],
+                  "text-size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    8, 9,
+                    12, 12
+                  ],
+                  "text-anchor": "center"
+                },
+                paint: {
+                  "text-color": "#555",
+                  "text-halo-color": "#fff",
+                  "text-halo-width": 1.5
+                },
+                minzoom: 10
+              }
+            ]
+          },
+          center: [-74.2973, 4.5709], // Centro de Colombia
+          zoom: 5.5,
+          maxZoom: 18,
+          minZoom: 4,
+          maxBounds: [[-85, -5], [-65, 15]] // Límites aproximados de Colombia y región
+        });
+
+        // Agregar controles de navegación
+        mapColombia.addControl(new maplibregl.NavigationControl(), 'top-right');
+
+        // Agregar control de escala
+        mapColombia.addControl(new maplibregl.ScaleControl({
+          maxWidth: 200,
+          unit: 'metric'
+        }), 'bottom-left');
+
+        // Agregar marcadores para ciudades principales
+        const ciudadesPrincipales = [
+          { nombre: "Bogotá", coords: [-74.0721, 4.7110] },
+          { nombre: "Medellín", coords: [-75.5636, 6.2442] },
+          { nombre: "Cali", coords: [-76.5225, 3.4516] },
+          { nombre: "Barranquilla", coords: [-74.7813, 10.9639] },
+          { nombre: "Cartagena", coords: [-75.5144, 10.3910] }
+        ];
+
+        mapColombia.on('load', function() {
+          console.log('Mapa de Colombia cargado exitosamente');
+
+          // Agregar marcadores para las ciudades principales
+          ciudadesPrincipales.forEach(ciudad => {
+            const el = document.createElement('div');
+            el.className = 'marker-ciudad';
+            el.style.backgroundColor = '#FFC300';
+            el.style.width = '12px';
+            el.style.height = '12px';
+            el.style.borderRadius = '50%';
+            el.style.border = '2px solid #0033A0';
+            el.style.cursor = 'pointer';
+
+            new maplibregl.Marker({element: el})
+              .setLngLat(ciudad.coords)
+              .setPopup(new maplibregl.Popup({ offset: 25 })
+                .setHTML(`<strong>${ciudad.nombre}</strong>`))
+              .addTo(mapColombia);
+          });
+        });
+
+        // Mostrar información al hacer clic
+        mapColombia.on('click', function(e) {
+          const features = mapColombia.queryRenderedFeatures(e.point);
+          if (features.length > 0) {
+            console.log('Features en este punto:', features[0].properties);
+          }
+        });
+
+      } catch (error) {
+        console.error("Error al cargar el mapa de Colombia:", error);
+        const mapDiv = document.getElementById('map-colombia');
+        if (mapDiv) {
+          mapDiv.innerHTML = '<div style="padding:40px; color:#d32f2f; text-align:center; background-color:#ffebee; border-radius:4px;"><strong>⚠️ Error al cargar el mapa:</strong><br>' + error.message + '<br><small>Por favor, verifica la consola del navegador para más detalles.</small></div>';
+        }
+      }
+    })();
+  }, 1000);
+</script>
+
+<style>
+  .maplibregl-popup-content {
+    font-family: 'Arial', sans-serif;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  .maplibregl-popup-content strong {
+    color: #0033A0;
+    font-size: 14px;
+  }
+</style>
+```

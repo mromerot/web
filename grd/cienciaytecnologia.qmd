@@ -4,7 +4,7 @@ format: html
 editor: visual
 ---
 
-```         
+```{=html}
 <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1BfeFThS1e%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 ```
 
@@ -95,15 +95,15 @@ SCIENCE PLAN 2030+ DISASTER RISK REDUCTION DCNA
 
 -   Google Geospatial Reasoning. [*Link*](https://research.google/blog/geospatial-reasoning-unlocking-insights-with-generative-ai-and-multiple-foundation-models/)
 
-:::: {layout-ncol="2"}
+::: {layout-ncol="2"}
 {{< video "https://youtu.be/ZyH3-7pBBiQ">}} Geospatial Reasoning: Demonstration application
 
 {{< video "https://youtu.be/RfzZN7lLtgY" >}} This is how Google's Flood Hub uses AI forecasting to power local-level flood warnings \| UNDRR
 
-::: {layout-ncol="2"}
 {{< video "https://youtu.be/4A4WIRRMFPI" >}} Artificial Intelligence for Remote Sensing applications: recent developments and main challenges
+
+{{< video "https://youtu.be/NYAUwrjyzEs?si=NAOmwShtDt_glb0k" >}} AI for Weather and Climate Preparedness and Resilience
 :::
-::::
 
 -   ESRI Geospatial AI platform. [*Link*](https://architecture.arcgis.com/en/overview/introduction-to-arcgis/geospatial-ai.html)
 
@@ -319,7 +319,7 @@ SCIENCE PLAN 2030+ DISASTER RISK REDUCTION DCNA
 ::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/watch?v=-ImINBEeiIs" >}}
 
-{{< video "https://www.youtube.com/watch?v=kb6OpSIVP7I " >}}
+{{< video "https://www.youtube.com/watch?v=kb6OpSIVP7I" >}}
 
 <iframe title="2021-06-21 CODATA DDI Alliance webinar: Implementing FAIR - What DDI Can Do for You!" src="https://player.vimeo.com/video/565557781?dnt=1&amp;app_id=122963" width="570" height="320" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media">
 

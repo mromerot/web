@@ -279,7 +279,7 @@
     "href": "datascience/graficas-python-r.html",
     "title": "Graficas Python y R",
     "section": "",
-    "text": "Documentación oficial. Link.\nTutoriales de Matplotlib. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nGalería de ejemplos. Link.\n\n\n\n\n\nDocumentación oficial de Plotly Python. Link.\nPlotly Express. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nGalería de ejemplos. Link.\n\n\n\n\n\n\n\n\nDocumentación oficial. Link.\nR Graphics Cookbook. Link.\nggplot2 extensions. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nPlotly R book. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nEjemplos. Link.\n\n\n\n\n\n\nData Visualization Catalogue. Link.\nFrom Data to Viz. Link.\nThe R Graph Gallery. Link.\nPython Graph Gallery. Link.\n\n\n\n\n\n\nOcultar/Mostrar código\n# Instalar plotly si no está instalado\nif (!require(\"plotly\")) {\n  install.packages(\"plotly\")\n  library(plotly)\n}\n\nlibrary(plotly)\n\nfig &lt;- plot_ly(\n    type = 'scatterpolar',\n    fill = 'toself'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(39, 28, 8, 7, 28, 39),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group A'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(1.5, 10, 39, 31, 15, 1.5),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group B'\n  )\nfig &lt;- fig %&gt;%\n  layout(\n    polar = list(\n      radialaxis = list(\n        visible = TRUE,\n        range = c(0,50)\n      )\n    )\n  )\n\nfig",
+    "text": "Documentación oficial. Link.\nTutoriales de Matplotlib. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nGalería de ejemplos. Link.\n\n\n\n\n\nDocumentación oficial de Plotly Python. Link.\nPlotly Express. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nGalería de ejemplos. Link.\n\n\n\n\n\n\n\n\nDocumentación oficial. Link.\nR Graphics Cookbook. Link.\nggplot2 extensions. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nPlotly R book. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nEjemplos. Link.\n\n\n\n\n\n\nData Visualization Catalogue. Link.\nFrom Data to Viz. Link.\nThe R Graph Gallery. Link.\nPython Graph Gallery. Link.\n\n\n\n\n\n\nOcultar/Mostrar código\n# Instalar plotly si no está instalado\nif (!require(\"plotly\")) {\n  install.packages(\"plotly\")\n  library(plotly)\n}\n\nlibrary(plotly)\n\nfig &lt;- plot_ly(\n    type = 'scatterpolar',\n    fill = 'toself'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(39, 28, 8, 7, 28, 39),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group A'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(1.5, 10, 39, 31, 15, 1.5),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group B'\n  )\nfig &lt;- fig %&gt;%\n  layout(\n    polar = list(\n      radialaxis = list(\n        visible = TRUE,\n        range = c(0,50)\n      )\n    )\n  )\n\nfig\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEste mapa muestra Colombia usando datos vectoriales de OpenStreetMap a través de PMTiles.",
     "crumbs": [
       "Ciencia de datos",
       "Graficas Python y R"
@@ -324,6 +324,17 @@
     "title": "Graficas Python y R",
     "section": "",
     "text": "Ocultar/Mostrar código\n# Instalar plotly si no está instalado\nif (!require(\"plotly\")) {\n  install.packages(\"plotly\")\n  library(plotly)\n}\n\nlibrary(plotly)\n\nfig &lt;- plot_ly(\n    type = 'scatterpolar',\n    fill = 'toself'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(39, 28, 8, 7, 28, 39),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group A'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(1.5, 10, 39, 31, 15, 1.5),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group B'\n  )\nfig &lt;- fig %&gt;%\n  layout(\n    polar = list(\n      radialaxis = list(\n        visible = TRUE,\n        range = c(0,50)\n      )\n    )\n  )\n\nfig",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#mapa-de-colombia-con-pmtiles",
+    "href": "datascience/graficas-python-r.html#mapa-de-colombia-con-pmtiles",
+    "title": "Graficas Python y R",
+    "section": "",
+    "text": "Este mapa muestra Colombia usando datos vectoriales de OpenStreetMap a través de PMTiles.",
     "crumbs": [
       "Ciencia de datos",
       "Graficas Python y R"
@@ -1501,17 +1512,6 @@
     ]
   },
   {
-    "objectID": "grd/cienciaytecnologia.html",
-    "href": "grd/cienciaytecnologia.html",
-    "title": "Ciencia y tecnología",
-    "section": "",
-    "text": "&lt;iframe src=\"https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1BfeFThS1e%2F&show_text=false&width=560&t=0\" width=\"560\" height=\"314\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\"&gt;&lt;/iframe&gt;",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Ciencia y tecnología"
-    ]
-  },
-  {
     "objectID": "grd/cienciaytecnologia.html#science-and-technology",
     "href": "grd/cienciaytecnologia.html#science-and-technology",
     "title": "Ciencia y tecnología",
@@ -1560,7 +1560,7 @@
     "href": "grd/cienciaytecnologia.html#herramientas",
     "title": "Ciencia y tecnología",
     "section": "Herramientas",
-    "text": "Herramientas\n\nGoogle Geospatial Reasoning. Link\n\n\n Geospatial Reasoning: Demonstration application\n This is how Google’s Flood Hub uses AI forecasting to power local-level flood warnings | UNDRR\n\n\n\n Artificial Intelligence for Remote Sensing applications: recent developments and main challenges\n\n\n\n\n\nESRI Geospatial AI platform. Link\n\n\n\n\n GeoAI and GenAI in ArcGIS | 2025 Esri UAE User Conference\n\n\n Maximise data insights with geospatial analysis & GeoAI Maximise data insights with geospatial analysis & GeoAI",
+    "text": "Herramientas\n\nGoogle Geospatial Reasoning. Link\n\n\n\n\n Geospatial Reasoning: Demonstration application\n\n\n This is how Google’s Flood Hub uses AI forecasting to power local-level flood warnings | UNDRR\n\n\n\n\n Artificial Intelligence for Remote Sensing applications: recent developments and main challenges\n\n\n AI for Weather and Climate Preparedness and Resilience\n\n\n\n\nESRI Geospatial AI platform. Link\n\n\n\n\n GeoAI and GenAI in ArcGIS | 2025 Esri UAE User Conference\n\n\n Maximise data insights with geospatial analysis & GeoAI Maximise data insights with geospatial analysis & GeoAI",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Ciencia y tecnología"

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Test Mapa PMTiles</title>
+  <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet">
+  <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+  <script src="https://unpkg.com/pmtiles@3.0.3/dist/pmtiles.js"></script>
+  <style>
+    body { margin: 0; padding: 20px; font-family: Arial, sans-serif; }
+    #status { padding: 10px; background: #f0f0f0; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <div id="status">Cargando mapa...</div>
+  <div id="map" style="width:100%; height:600px; border: 2px solid #0033A0;"></div>
+
+  <script>
+    document.getElementById('status').innerHTML = 'Librerías cargadas. MapLibre: ' + (typeof maplibregl !== 'undefined') + ', PMTiles: ' + (typeof pmtiles !== 'undefined');
+
+    try {
+      const protocol = new pmtiles.Protocol();
+      maplibregl.addProtocol("pmtiles", protocol.tile);
+
+      const map = new maplibregl.Map({
+        container: 'map',
+        style: {
+          version: 8,
+          sources: {
+            protomaps: {
+              type: "vector",
+              url: "pmtiles://https://r2-public.protomaps.com/protomaps-sample-datasets/protomaps-basemap-opensource-20230408.pmtiles"
+            }
+          },
+          layers: [
+            {
+              id: "background",
+              type: "background",
+              paint: {"background-color": "#f0f0f0"}
+            },
+            {
+              id: "water",
+              source: "protomaps",
+              "source-layer": "water",
+              type: "fill",
+              paint: {"fill-color": "#4A90E2"}
+            },
+            {
+              id: "roads",
+              source: "protomaps",
+              "source-layer": "roads",
+              type: "line",
+              paint: {"line-color": "#888", "line-width": 1}
+            }
+          ]
+        },
+        center: [-74.2973, 4.5709],
+        zoom: 6
+      });
+
+      map.addControl(new maplibregl.NavigationControl());
+
+      map.on('load', function() {
+        document.getElementById('status').innerHTML = '✅ Mapa cargado exitosamente!';
+      });
+
+      map.on('error', function(e) {
+        document.getElementById('status').innerHTML = '❌ Error: ' + e.error.message;
+      });
+
+    } catch (error) {
+      document.getElementById('status').innerHTML = '❌ Error: ' + error.message;
+      console.error(error);
+    }
+  </script>
+</body>
+</html>
