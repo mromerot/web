@@ -44,13 +44,26 @@ Pacific Disaster Center Multi Risk index 2024. [*Link*](https://analytics.pdc.or
 ```{=html}
 ```
 
-[![\[Mapbiomas\](https://plataforma.mapbiomas.org/coverage/coverage_lclu?tl\[id\]=4&tl\[themeKey\]=coverage&tl\[subthemeKey\]=coverage_lclu&tl\[legendKey\]=default&tl\[year\]=2024&tl\[pixelValues\]\[\]=5&tl\[pixelValues\]\[\]=3&tl\[pixelValues\]\[\]=6&tl\[pixelValues\]\[\]=49&tl\[pixelValues\]\[\]=23&tl\[pixelValues\]\[\]=24&tl\[pixelValues\]\[\]=25&tl\[pixelValues\]\[\]=30&tl\[pixelValues\]\[\]=68&tl\[pixelValues\]\[\]=75&tl\[pixelValues\]\[\]=31&tl\[pixelValues\]\[\]=33&tl\[pixelValues\]\[\]=34&tl\[pixelValues\]\[\]=9&tl\[pixelValues\]\[\]=21&tl\[pixelValues\]\[\]=35&tl\[pixelValues\]\[\]=74&tl\[pixelValues\]\[\]=11&tl\[pixelValues\]\[\]=12&tl\[pixelValues\]\[\]=13&tl\[pixelValues\]\[\]=29&tl\[pixelValues\]\[\]=32&tl\[pixelValues\]\[\]=50&tl\[pixelValues\]\[\]=81&tl\[pixelValues\]\[\]=82&t\[regionKey\]=colombia&t\[ids\]\[\]=18-1-1&t\[divisionCategoryId\]=3)](images/mapbiomas.png){width="400"}](https://plataforma.mapbiomas.org/coverage/coverage_lclu?tl%5Bid%5D=4&tl%5BthemeKey%5D=coverage&tl%5BsubthemeKey%5D=coverage_lclu&tl%5BlegendKey%5D=default&tl%5Byear%5D=2024&tl%5BpixelValues%5D%5B%5D=5&tl%5BpixelValues%5D%5B%5D=3&tl%5BpixelValues%5D%5B%5D=6&tl%5BpixelValues%5D%5B%5D=49&tl%5BpixelValues%5D%5B%5D=23&tl%5BpixelValues%5D%5B%5D=24&tl%5BpixelValues%5D%5B%5D=25&tl%5BpixelValues%5D%5B%5D=30&tl%5BpixelValues%5D%5B%5D=68&tl%5BpixelValues%5D%5B%5D=75&tl%5BpixelValues%5D%5B%5D=31&tl%5BpixelValues%5D%5B%5D=33&tl%5BpixelValues%5D%5B%5D=34&tl%5BpixelValues%5D%5B%5D=9&tl%5BpixelValues%5D%5B%5D=21&tl%5BpixelValues%5D%5B%5D=35&tl%5BpixelValues%5D%5B%5D=74&tl%5BpixelValues%5D%5B%5D=11&tl%5BpixelValues%5D%5B%5D=12&tl%5BpixelValues%5D%5B%5D=13&tl%5BpixelValues%5D%5B%5D=29&tl%5BpixelValues%5D%5B%5D=32&tl%5BpixelValues%5D%5B%5D=50&tl%5BpixelValues%5D%5B%5D=81&tl%5BpixelValues%5D%5B%5D=82&t%5BregionKey%5D=colombia&t%5Bids%5D%5B%5D=18-1-1&t%5BdivisionCategoryId%5D=3)
+[![\[Mapbiomas\](https://plataforma.mapbiomas.org/)](images/mapbiomas.png){width="250"}](https://plataforma.mapbiomas.org/)
 
 # Índicadores mundiales
 
 ## Lecturas
 
--   Natural hazard risk assessments at the global scale. 2020. NHESS. [*Link*](https://nhess.copernicus.org/articles/20/1069/2020/)
+-   Natural hazard risk assessments at the global scale. 2020. NHESS. [*Link*](https://nhess.copernicus.org/articles/20/1069/2020/)*.*
+-   Is the number of global natural disasters increasing? 2022. Environmental Hazards. [*Link*](https://www.tandfonline.com/doi/abs/10.1080/17477891.2023.2239807)*.*
+-   Incompleteness of natural disaster data and its implications on the interpretation of trends. 2024. Environmental Hazards. [*Link*](https://www.tandfonline.com/doi/full/10.1080/17477891.2024.2377561)*.*
+-   The number of natural disasters is zero: commentary to “is the number of global natural disasters increasing?” 2024. [*Link*](https://link.springer.com/article/10.1007/s11069-025-07245-9)*.*
+-   Comments on the short communication: The number of natural disasters is zero: commentary to “Is the number of global natural disasters increasing?” 2025. [*Link*](https://link.springer.com/article/10.1007/s11069-025-07710-5#ref-CR5)*.*
+-   Is the number of natural disasters increasing? 2024. [*Link*](https://ourworldindata.org/disaster-database-limitations).
+
+```{=html}
+<iframe src="https://ourworldindata.org/grapher/number-of-natural-disaster-events?tab=line" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+```
+
+```{=html}
+<iframe src="https://ourworldindata.org/grapher/natural-disasters-reported-by-deaths?tab=line" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+```
 
 ## EmDat
 

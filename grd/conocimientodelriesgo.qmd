@@ -117,7 +117,7 @@ editor: visual
 
 # Evaluación del riesgo
 
-::: {.panel-tabset}
+::: panel-tabset
 ### Revisión Métodos
 
 [![](images/BID.png){width="200"}](https://publications.iadb.org/es/revision-de-metodos-y-herramientas-de-software-para-evaluacion-de-riesgo-de-desastres)
