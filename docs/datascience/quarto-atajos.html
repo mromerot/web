@@ -616,6 +616,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#callout-blocks" id="toc-callout-blocks" class="nav-link" data-scroll-target="#callout-blocks">Callout blocks</a></li>
   <li><a href="#texto-desplegable" id="toc-texto-desplegable" class="nav-link" data-scroll-target="#texto-desplegable">Texto desplegable</a></li>
   <li><a href="#qué-es-un-archivo-yml" id="toc-qué-es-un-archivo-yml" class="nav-link" data-scroll-target="#qué-es-un-archivo-yml">Qué es un archivo yml</a></li>
+  <li><a href="#campos-de-un-encabezado-yml-en-un-cuaderno" id="toc-campos-de-un-encabezado-yml-en-un-cuaderno" class="nav-link" data-scroll-target="#campos-de-un-encabezado-yml-en-un-cuaderno">Campos de un encabezado yml en un cuaderno</a></li>
+  <li><a href="#ejemplo-completo" id="toc-ejemplo-completo" class="nav-link" data-scroll-target="#ejemplo-completo">📝 Ejemplo Completo</a></li>
   </ul>
 </nav>
     </div>
@@ -805,7 +807,214 @@ Texto desplegable
 </section>
 <section id="qué-es-un-archivo-yml" class="level2">
 <h2 class="anchored" data-anchor-id="qué-es-un-archivo-yml">Qué es un archivo yml</h2>
+<ul>
+<li>Lesson 4: YAML Headers. <a href="https://zsmith27.github.io/rmarkdown_crash-course/lesson-4-yaml-headers.html"><em>Link</em></a>.</li>
+<li>Quarto. <a href="https://quarto.org/docs/manuscripts/authoring/vscode.html"><em>Link</em></a></li>
+</ul>
 <p></p><div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/BEki_rsWu4E" width="400" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> YAML Tutorial | Learn YAML in 10 Minutes<p></p>
+</section>
+<section id="campos-de-un-encabezado-yml-en-un-cuaderno" class="level2">
+<h2 class="anchored" data-anchor-id="campos-de-un-encabezado-yml-en-un-cuaderno">Campos de un encabezado yml en un cuaderno</h2>
+<section id="metadatos-básicos" class="level3">
+<h3 class="anchored" data-anchor-id="metadatos-básicos"><strong>Metadatos Básicos</strong></h3>
+<pre><code>title: "Título del Capítulo"
+subtitle: "Subtítulo opcional"
+author: "Nombre del Autor"
+date: "2025-01-15"  # o "today" para fecha automática
+date-format: "long"  # "short", "medium", "long", "iso"</code></pre>
+</section>
+<section id="campos-para-author" class="level3">
+<h3 class="anchored" data-anchor-id="campos-para-author"><strong>Campos para author</strong></h3>
+<pre><code>title: "Mi Documento Científico"
+author:
+  - name: "Juan Pérez"
+    affiliation: "Universidad Nacional"
+    email: "juan.perez@universidad.edu"
+    orcid: "0000-0002-1234-5678"
+    corresponding: true
+    roles:
+      - conceptualization
+      - methodology
+      - writing
+    degrees: "PhD"
+    url: Sitio web personal
+  - name: "María García"
+    affiliation: 
+      - "Instituto de Investigación"
+      - "Centro de Estudios Avanzados"
+    email: "maria.garcia@instituto.org"
+    orcid: "0000-0003-9876-5432"
+---
+name: Nombre completo del autor (requerido)
+affiliation: Institución(es) de afiliación (string o lista)
+email: Correo electrónico
+orcid: ID de ORCID (identificador único de investigador)
+corresponding: Boolean para indicar autor de correspondencia
+url: Sitio web personal
+roles: Roles específicos según taxonomía CRediT
+acknowledgements: Agradecimientos específicos del autor</code></pre>
+</section>
+<section id="información-del-documento" class="level3">
+<h3 class="anchored" data-anchor-id="información-del-documento"><strong>Información del Documento</strong></h3>
+<pre><code>abstract: "Resumen del documento"
+keywords: [palabra1, palabra2, palabra3]
+lang: es  # Idioma del documento
+description: "Descripción breve para metadatos"</code></pre>
+</section>
+<section id="banner-y-apariencia" class="level3">
+<h3 class="anchored" data-anchor-id="banner-y-apariencia"><strong>Banner y Apariencia</strong></h3>
+<pre><code>title-block-banner: true  # o ruta a imagen: "banner.png"
+title-block-banner-color: "white"
+title-block-style: default  # "default", "plain", "none"</code></pre>
+</section>
+<section id="bibliografía" class="level3">
+<h3 class="anchored" data-anchor-id="bibliografía"><strong>Bibliografía</strong></h3>
+<pre><code>bibliography: references.bib
+csl: vancouver-brackets.csl  # Estilo de citación
+citation-location: document  # "document", "margin", "margin-ref"
+link-citations: true
+nocite: '@*'  # Para incluir todas las referencias</code></pre>
+</section>
+<section id="referencias-cruzadas" class="level3">
+<h3 class="anchored" data-anchor-id="referencias-cruzadas"><strong>Referencias Cruzadas</strong></h3>
+<pre><code>crossref:
+  fig-prefix: "Figura"
+  tbl-prefix: "Tabla"
+  eq-prefix: "Ecuación"
+  chapters: false  # true si numeras por capítulo</code></pre>
+</section>
+<section id="formato-html" class="level3">
+<h3 class="anchored" data-anchor-id="formato-html"><strong>Formato HTML</strong></h3>
+<pre><code>format:
+  html:
+    theme: cosmo  # cerulean, journal, flatly, darkly, etc.
+    toc: true  # Tabla de contenidos
+    toc-depth: 3
+    toc-location: left  # "left", "right", "body"
+    toc-title: "Contenido"
+    number-sections: false
+    number-depth: 3
+    code-fold: false  # true, "show", false
+    code-tools: false
+    code-copy: true
+    highlight-style: github  # pygments, tango, espresso, etc.
+    css: custom.css
+    include-in-header: header.html
+    include-before-body: before.html
+    include-after-body: after.html
+    self-contained: false
+    embed-resources: false
+    grid:
+      sidebar-width: 300px
+      body-width: 900px
+      margin-width: 250px
+    mainfont: "Source Sans Pro"</code></pre>
+</section>
+<section id="formato-pdf" class="level3">
+<h3 class="anchored" data-anchor-id="formato-pdf"><strong>Formato PDF</strong></h3>
+<pre><code>format:
+  pdf:
+    documentclass: article  # book, report, scrartcl
+    papersize: letter  # a4, letter, legal
+    geometry: margin=1in
+    fontsize: 11pt
+    linestretch: 1.5
+    number-sections: true
+    colorlinks: true
+    linkcolor: blue
+    urlcolor: blue
+    citecolor: green
+    keep-tex: true
+    include-in-header:
+      - text: |
+          \usepackage{graphicx}
+          \usepackage{xcolor}
+    prefer-html: true</code></pre>
+</section>
+<section id="formato-word" class="level3">
+<h3 class="anchored" data-anchor-id="formato-word"><strong>Formato Word</strong></h3>
+<pre><code>format:
+  docx:
+    reference-doc: template.docx
+    number-sections: true
+    highlight-style: github</code></pre>
+</section>
+<section id="ejecutación-de-código" class="level3">
+<h3 class="anchored" data-anchor-id="ejecutación-de-código"><strong>Ejecutación de Código</strong></h3>
+<pre><code>execute:
+  echo: true  # Mostrar código
+  warning: false  # Mostrar warnings
+  error: false  # Mostrar errores
+  include: true  # Incluir salidas
+  eval: true  # Ejecutar código
+  cache: false  # Cachear resultados
+  freeze: auto  # "true", "false", "auto"</code></pre>
+</section>
+<section id="figuras-y-tablas" class="level3">
+<h3 class="anchored" data-anchor-id="figuras-y-tablas"><strong>Figuras y Tablas</strong></h3>
+<pre><code>fig-width: 7
+fig-height: 5
+fig-dpi: 300
+fig-format: png  # png, jpg, svg, pdf
+fig-align: center  # left, right, center
+tbl-colwidths: auto  # [60, 40] para porcentajes</code></pre>
+</section>
+<section id="otros-campos-útiles" class="level3">
+<h3 class="anchored" data-anchor-id="otros-campos-útiles"><strong>Otros Campos Útiles</strong></h3>
+<pre><code>draft: false  # true para marcar como borrador
+published: "2025-01-15"
+license: "CC BY 4.0"
+doi: "10.xxxx/xxxxx"
+categories: [categoría1, categoría2]
+tags: [tag1, tag2]
+image: featured.png  # Imagen destacada
+filters: [filter1.lua, filter2.lua]</code></pre>
+</section>
+<section id="campos-específicos-de-libro" class="level3">
+<h3 class="anchored" data-anchor-id="campos-específicos-de-libro"><strong>Campos Específicos de Libro</strong></h3>
+<pre><code>editor: "Nombre del Editor"
+publisher: "Editorial"
+isbn: "978-xxx-xxxx"
+edition: "Primera edición"
+volume: 1
+page-navigation: true</code></pre>
+</section>
+</section>
+<section id="ejemplo-completo" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-completo">📝 Ejemplo Completo</h2>
+<pre><code>---
+title: "Título Completo del Capítulo"
+subtitle: "Subtítulo Descriptivo"
+author: "Juan Pérez, María García"
+date: "2025-01-15"
+date-format: "long"
+lang: es
+abstract: "Este es el resumen del capítulo que describe..."
+keywords: [palabra1, palabra2, palabra3]
+title-block-banner: banner.png
+title-block-banner-color: "white"
+bibliography: referencias.bib
+csl: vancouver-brackets.csl
+crossref:
+  fig-prefix: "Figura"
+  tbl-prefix: "Tabla"
+  chapters: false
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: false
+    css: custom.css
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    keep-tex: true
+execute:
+  echo: false
+  warning: false
+fig-width: 7
+fig-height: 5
+---</code></pre>
 
 
 </section>
