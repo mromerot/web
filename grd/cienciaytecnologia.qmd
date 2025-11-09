@@ -91,9 +91,17 @@ SCIENCE PLAN 2030+ DISASTER RISK REDUCTION DCNA
 
 -   Artificial intelligence for climate prediction of extremes: State of the art, challenges, and future perspectives. 2025. [*Link*](https://wires.onlinelibrary.wiley.com/doi/10.1002/wcc.914).
 
-## Herramientas
+- Masterclass series: Leveraging artificial intelligence for disaster risk reduction. Link
 
--   Google Geospatial Reasoning. [*Link*](https://research.google/blog/geospatial-reasoning-unlocking-insights-with-generative-ai-and-multiple-foundation-models/)
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/hLlrKZN8h5k">}} Introduction to Artificial Intelligence (AI)
+
+{{< video "https://youtu.be/Z6iqEJoBJnw?si=iXFDMogaMWo3BAlb" >}} AI Applications for Multi-Hazard Early Warning Systems
+
+{{< video "https://youtu.be/Ab_audwoJVU" >}} AI Applications for Urban Resilience and Risk Assessment
+
+{{< video "https://youtu.be/qdT-6OWEwNI" >}} Principles for the Ethical Use of AI for DRR by Governments
+:::
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/ZyH3-7pBBiQ">}} Geospatial Reasoning: Demonstration application
@@ -107,11 +115,16 @@ SCIENCE PLAN 2030+ DISASTER RISK REDUCTION DCNA
 
 -   ESRI Geospatial AI platform. [*Link*](https://architecture.arcgis.com/en/overview/introduction-to-arcgis/geospatial-ai.html)
 
+
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/C1iMxjOeQZc">}} GeoAI and GenAI in ArcGIS \| 2025 Esri UAE User Conference
 
 {{< video "https://youtu.be/IG-PBLfPZRE" >}} Maximise data insights with geospatial analysis & GeoAI Maximise data insights with geospatial analysis & GeoAI
 :::
+
+## Herramientas
+
+-   Google Geospatial Reasoning. [*Link*](https://research.google/blog/geospatial-reasoning-unlocking-insights-with-generative-ai-and-multiple-foundation-models/)
 
 # Cursos en ciencia y tecnología en grd
 

@@ -16,7 +16,7 @@ editor: visual
 -   **Global Earthquake Model**. [*Link*](https://github.com/gem)
     -   Perfil Colombia. *Link*
 -   **Copernicus Browser.** [Link](https://github.com/eu-cdse/copernicus-browser).
--   EM-DAT Documentation. [*Link*](https://doc.emdat.be/docs/)*. [Link](https://github.com/em-dat/).*
+-   **EM-DAT Documentation**. [*Link*](https://doc.emdat.be/docs/)*. [Link](https://github.com/em-dat/). [Python](https://github.com/em-dat/python_tutorials).*
 -   **Global Facility for Disaster Reduction and Recovery (GFDRR)**. [Link](https://github.com/GFDRR). GFDRR supports developing countries on disaster risk reduction and climate change adaptation. 
     -   **CCDR-tools**. [Link](https://gfdrr.github.io/CCDR-tools/home.html).
 -   **Hazus**. FEMA Natural Hazards Risk Assessment Program. [*Link*](https://github.com/nhrap-hazus)*. [Link](https://github.com/Niyam-Projects/sphere/tree/main)*
@@ -32,7 +32,7 @@ editor: visual
 -   **Disaster Vulnerability Map**. Catholic Charities USA Disaster Vulnerability Map. [*Link*](https://github.com/ccusa/Disaster_Vulnerability_Map)
 -   Mapeo de Asentamientos Informales basado en Inteligencia Artificial. Banco Mundial. [*Link*](https://www.iadb.org/es/quienes-somos/topicos/desarrollo-urbano-y-vivienda/maiia).
 -   Climate change AI. [*Link*](https://www.climatechange.ai/tutorials?).
--   Github
+-   **Github**
     -   #DRR. [*Link*](https://github.com/topics/disaster-risk-management)
 
 {{< video "https://riesgos.de/images/downloads/RIESGOS2.0_Project_Video_Presentation_V1.0_2022.mp4 width = 400">}}
