@@ -67,6 +67,11 @@ website:
                 href: grd/ambientales/erosioncostera.qmd
               - text: "Incendios forestales"
                 href: grd/ambientales/incendiosforestales.qmd
+          - section: "Amenazas biológicas"
+            href: grd/biologicos/index.qmd
+            contents:
+              - text: "COVID-19"
+                href: grd/biologicos/covid.qmd
           - section: "Amenazas tecnológicas"
             href: grd/tecnologicas/index.qmd
             contents:
