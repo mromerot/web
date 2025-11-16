@@ -12,7 +12,7 @@ website:
     search: true
     collapse-level: 1
     contents:
-# Esto es la seccion mas grande, GRD
+      # Esto es la seccion mas grande, GRD
       - section: "Gestión del riesgo de desastres"
         contents:
           - text: "Gestión del riesgo de desastres"
@@ -39,7 +39,7 @@ website:
                 href: grd/repositorios.qmd
           - text: "Sistemas de alerta temprana"
             href: grd/sat.qmd
-# aqui viene la seccion de amenazas
+          # aqui viene la seccion de amenazas
           - section: "Amenazas hidrológicas y meteorológicas"
             href: grd/hidrol-meteorologicas/index.qmd
             contents:
@@ -95,7 +95,7 @@ website:
             href: grd/ciudades.qmd
           - text: "Terminología"
             href: grd/glosario.qmd
-# aqui viene la seccion de cambio climatico
+      # aqui viene la seccion de cambio climatico
       - section: "Gestión del cambio climático"
         contents:
           - text: "Gestión del cambio climático"
@@ -108,8 +108,7 @@ website:
             href: gestiondeproyectos/gestiontecnologiainnovacion.qmd
           - text: "Gestión de proyectos"
             href: gestiondeproyectos/projectmanagement.qmd
-
-# aqui viene la seccion de ciencia y tecnologia
+      # aqui viene la seccion de ciencia y tecnologia
       - section: "Ciencia y tecnología"
         contents:
           - text: "Escritura y publicación académica"
@@ -120,14 +119,20 @@ website:
             href: cyt/docenciaeducacion.qmd
           - text: "Ciencia transdiciplinar"
             href: cyt/transdisciplina.qmd
-# aqui viene la seccion de ecologia y conservacion
+      # aqui viene la seccion de ecologia y conservacion
       - text: "Ecología y conservación"
         href: ecolyconserv/ecologiayconservacion.qmd
-# aqui viene la seccion de ciencia de datos
+      # aqui viene la seccion de ciencia de datos
       - section: "Ciencia de datos"
         contents:
           - text: "Ciencia de datos"
             href: datascience/cienciadedatos.qmd
+          - text: "Quarto"
+            href: datascience/quarto.qmd
+          - text: "Myst"
+            href: datascience/myst.qmd
+          - text: "Github"
+            href: datascience/github.qmd
           - text: "Graficas Python y R"
             href: datascience/graficas-python-r.qmd
           - text: "ARCO Data"
@@ -140,14 +145,6 @@ website:
             href: datascience/d3.qmd
           - text: "Experimento con D3"
             href: datascience/d3-experiment.qmd
-          - text: "Graficas python y R"
-            href: datascience/graficas-python-r.qmd
-          - text: "Github"
-            href: datascience/github.qmd
-          - text: "Atajos de Quarto"
-            href: datascience/quarto-atajos.qmd
-          - text: "Myst"
-            href: datascience/myst.qmd
       - text: "Matemáticas y estadística"
         href: math-stats/math-stats.qmd
       - section: "Vida laboral"
