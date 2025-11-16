@@ -49,6 +49,8 @@ website:
                 href: grd/hidrol-meteorologicas/huracanes.qmd
               - text: "Inundaciones"
                 href: grd/hidrol-meteorologicas/inundaciones.qmd
+              - text: "Inundaciones repentinas"
+                href: grd/hidrol-meteorologicas/inundaciones-repentinas.qmd
           - section: "Amenazas geológicas"
             href: grd/geologicas/index.qmd
             contents:
@@ -89,7 +91,9 @@ website:
                 href: grd/extraterrestre/amenazasextraterrestres.qmd
           - text: "Amazonas"
             href: grd/amazonas.qmd
-          - text: "terminología"
+          - text: "Ciudades"
+            href: grd/ciudades.qmd
+          - text: "Terminología"
             href: grd/glosario.qmd
 # aqui viene la seccion de cambio climatico
       - section: "Gestión del cambio climático"

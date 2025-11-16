@@ -798,7 +798,7 @@
     "href": "grd/repositorios.html#lista-de-repositorios-en-grd",
     "title": "Repositorios Fair y data science en gestión del riesgo de desastres",
     "section": "Lista de repositorios en GRD",
-    "text": "Lista de repositorios en GRD\n\nClimate Informed Risk Index. Link. This tool is a replica of the National Risk Index (NRI) Future Risk tool, which was removed from the public by the US Government in February, 2025. It references the following datasets which were downloaded before the tool was taken down.\nCLIMAAX CRA Handbook. Link.Link. A regional climate risk assessment is often needed to design or update a climate adaptation and/or risk management plan. Regular updates are needed considering changing climate risk profiles\nGeoAI: Artificial Intelligence for Geospatial Data. Link\nGlobal Earthquake Model. Link\n\nPerfil Colombia. Link\n\nCopernicus Browser. Link.\nEM-DAT Documentation. Link. Link. Python.\nGlobal Facility for Disaster Reduction and Recovery (GFDRR). Link. GFDRR supports developing countries on disaster risk reduction and climate change adaptation. \n\nCCDR-tools. Link.\n\nHazus. FEMA Natural Hazards Risk Assessment Program. Link. Link\nDisaster-Risk-Analysis-Platform. Link. Welcome to our project, “Disaster Risk Analytics Platform,” developed with an aim to provide comprehensive disaster risk analysis for investment firms operating within the U.S. markets. Using advanced statistical analysis and deep learning technologies, this platform helps predict potential disasters and their financial impacts on various states, aiding firms in making informed, resilient investment decisions.\nDisaster-Risk-Monitoring-Using-Satellite-Imagery. Link. A suggestion of task provided by NIVIDEA in its course Disaster Risk Monitoring Using Satellite Imagery\nDemostrador RIESGOS. Link\nTOMRAP – Tool for Multi-hazard Risk Assessment in Python. Link. The project builds on outputs from the METEOR project (NEE6423R) to generate a tool that can be used in future projects to assess multi-hazard risk. The METEOR model was initially developed in ArcGIS. By streamlining this code in Python we will make multi-hazard risk analysis faster and more widely applicable. \nFlood Probability Prediction using Artificial Neural Network. Link\nSeismic Hazard and Risk Analysis calculations. Link. Supporting calculations for the textbook Seismic Hazard and Risk Analysis.\nProject Pythia. Link. An education and training hub for the geoscientific Python community\nPO.DAAC Cookbook. Link. Español\nNASA Earthdata Cloud Cookbook. Link\nDisaster Vulnerability Map. Catholic Charities USA Disaster Vulnerability Map. Link\nMapeo de Asentamientos Informales basado en Inteligencia Artificial. Banco Mundial. Link.\nClimate change AI. Link.\nGithub\n\n#DRR. Link",
+    "text": "Lista de repositorios en GRD\n\nClimate Informed Risk Index. Link. This tool is a replica of the National Risk Index (NRI) Future Risk tool, which was removed from the public by the US Government in February, 2025. It references the following datasets which were downloaded before the tool was taken down.\nCLIMAAX CRA Handbook. Link.Link. A regional climate risk assessment is often needed to design or update a climate adaptation and/or risk management plan. Regular updates are needed considering changing climate risk profiles\nGeoAI: Artificial Intelligence for Geospatial Data. Link\nGlobal Earthquake Model. Link\n\nPerfil Colombia. Link\n\nCopernicus Browser. Link.\nEM-DAT Documentation. Link. Link. Python.\nGlobal Facility for Disaster Reduction and Recovery (GFDRR). Link. GFDRR supports developing countries on disaster risk reduction and climate change adaptation. \n\nCCDR-tools. Link.\n\nHazus. FEMA Natural Hazards Risk Assessment Program. Link. Link\nDisaster-Risk-Analysis-Platform. Link. Welcome to our project, “Disaster Risk Analytics Platform,” developed with an aim to provide comprehensive disaster risk analysis for investment firms operating within the U.S. markets. Using advanced statistical analysis and deep learning technologies, this platform helps predict potential disasters and their financial impacts on various states, aiding firms in making informed, resilient investment decisions.\nDisaster-Risk-Monitoring-Using-Satellite-Imagery. Link. A suggestion of task provided by NIVIDEA in its course Disaster Risk Monitoring Using Satellite Imagery\nDisaster Risk Pooling tool. Link\nDemostrador RIESGOS. Link\nTOMRAP – Tool for Multi-hazard Risk Assessment in Python. Link. The project builds on outputs from the METEOR project (NEE6423R) to generate a tool that can be used in future projects to assess multi-hazard risk. The METEOR model was initially developed in ArcGIS. By streamlining this code in Python we will make multi-hazard risk analysis faster and more widely applicable. \nFlood Probability Prediction using Artificial Neural Network. Link\nSeismic Hazard and Risk Analysis calculations. Link. Supporting calculations for the textbook Seismic Hazard and Risk Analysis.\nProject Pythia. Link. An education and training hub for the geoscientific Python community\nPO.DAAC Cookbook. Link. Español\nNASA Earthdata Cloud Cookbook. Link\nDisaster Vulnerability Map. Catholic Charities USA Disaster Vulnerability Map. Link\nMapeo de Asentamientos Informales basado en Inteligencia Artificial. Banco Mundial. Link.\nClimate change AI. Link.\nGithub\n\n#DRR. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Cursos, redes y recursos",
@@ -864,284 +864,394 @@
     ]
   },
   {
-    "objectID": "grd/hidrol-meteorologicas/huracanes.html#histórico-de-huracanes",
-    "href": "grd/hidrol-meteorologicas/huracanes.html#histórico-de-huracanes",
-    "title": "Huracanes",
-    "section": "Histórico de huracanes",
-    "text": "Histórico de huracanes\n\nHistorical Hurricane Tracks. NOAA. Link.\nUniSys -  Hurricane/Tropical Data. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas hidrológicas y meteorológicas",
-      "Huracanes"
-    ]
-  },
-  {
-    "objectID": "grd/hidrol-meteorologicas/huracanes.html#visores",
-    "href": "grd/hidrol-meteorologicas/huracanes.html#visores",
-    "title": "Huracanes",
-    "section": "Visores",
-    "text": "Visores\n\n\n\n\n[Real Time Tropical Cyclones](https://polarwx.com/tropical/)",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas hidrológicas y meteorológicas",
-      "Huracanes"
-    ]
-  },
-  {
-    "objectID": "grd/hidrol-meteorologicas/index.html#hazard-information-profiles-hips-online-reference",
-    "href": "grd/hidrol-meteorologicas/index.html#hazard-information-profiles-hips-online-reference",
-    "title": "Riesgo por amenazas hidrológicas y meteorologicas",
-    "section": "2025 Hazard Information Profiles (HIPs) online reference",
-    "text": "2025 Hazard Information Profiles (HIPs) online reference",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas hidrológicas y meteorológicas"
-    ]
-  },
-  {
-    "objectID": "grd/hidrol-meteorologicas/index.html#meteorológico-e-hidrológico",
-    "href": "grd/hidrol-meteorologicas/index.html#meteorológico-e-hidrológico",
-    "title": "Riesgo por amenazas hidrológicas y meteorologicas",
-    "section": "Meteorológico e Hidrológico",
-    "text": "Meteorológico e Hidrológico\n8 grupos de peligros y 53 peligros específicos\n\n\n\nPeligro específico\nIdentificador\nGrupo\n\n\n\n\nViento\nMH0301\nRelacionado con el viento\n\n\nTsunami\nMH0705\nMarina\n\n\nCiclón tropical\nMH0309\nRelacionado con el viento\n\n\nTornado\nMH0305\nRelacionado con el viento\n\n\nTormenta\nMH0103\nRelacionado con la convección\n\n\nDeshielo\nMH0510\nRelacionado con la temperatura\n\n\nInundaciones de aguas superficiales\nMH0606\nInundación\n\n\nCiclón subtropical\nMH0308\nRelacionado con la presión\n\n\nMareas de tormenta\nMH0704\nMarina\n\n\nMarejada ciclónica\nMH0703\nMarina\n\n\nChubasco\nMH0304\nRelacionado con el viento\n\n\nInundación por deshielo\nMH0610\nInundación\n\n\nTormenta de nieve\nMH0406\nPrecipitación relacionada\n\n\nNieve\nMH0405\nPrecipitación relacionada\n\n\nFumar\nMH0205\nLitómetros\n\n\nSeiche\nMH0702\nMarina\n\n\nHielo marino (Icebergs)\nMH0706\nMarina\n\n\nNiebla de arena\nMH0204\nLitómetros\n\n\nOla gigante\nMH0701\nMarina\n\n\nLluvia\nMH0402\nPrecipitación relacionada\n\n\nInundación por encharcamiento (drenaje)\nMH0609\nInundación\n\n\nOla de calor marina\nMH0708\nMarina\n\n\nRelámpago (Tormenta eléctrica)\nMH0102\nRelacionado con la convección\n\n\nFormación de hielo (incluido el hielo)\nMH0509\nRelacionado con la temperatura\n\n\nInundación por acumulación de hielo, incluidos escombros\nMH0608\nInundación\n\n\nFlujo de hielo\nMH0707\nMarina\n\n\nOla de calor\nMH0501\nRelacionado con la temperatura\n\n\nBruma\nMH0203\nLitómetros\n\n\nGranizo\nMH0404\nPrecipitación relacionada\n\n\nInundaciones de aguas subterráneas\nMH0605\nInundación\n\n\nEscarcha en el suelo\nMH0508\nRelacionado con la temperatura\n\n\nVidriado\nMH0507\nRelacionado con la temperatura\n\n\nInundación por desbordamiento de un lago glacial\nMH0607\nInundación\n\n\nGale (Vendaval fuerte)\nMH0303\nRelacionado con el viento\n\n\nEscarcha (Escarcha)\nMH0505\nRelacionado con la temperatura\n\n\nLluvia helada (Tormenta de hielo)\nMH0506\nRelacionado con la temperatura\n\n\nCongelar\nMH0504\nRelacionado con la temperatura\n\n\nNiebla\nMH0202\nLitómetros\n\n\nInundaciones fluviales\nMH0604\nInundación\n\n\nInundación\nMH0600\nInundación\n\n\nInundación repentina\nMH0603\nInundación\n\n\nCiclón extratropical\nMH0307\nRelacionado con la presión\n\n\nInundaciones estuarinas (costeras)\nMH0602\nInundación\n\n\nDzud\nMH0503\nRelacionado con la temperatura\n\n\nTormenta de polvo o tormenta de arena\nMH0201\nLitómetros\n\n\nSequía\nMH0401\nPrecipitación relacionada\n\n\nExplosión descendente\nMH0101\nRelacionado con la convección\n\n\nDerecho\nMH0302\nRelacionado con el viento\n\n\nDepresión o Ciclón (Zona de Baja Presión)\nMH0306\nRelacionado con la presión\n\n\nOla de frío\nMH0502\nRelacionado con la temperatura\n\n\nVentisca\nMH0403\nPrecipitación relacionada\n\n\nAvalancha\nMH0801\nTerrestre",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas hidrológicas y meteorológicas"
-    ]
-  },
-  {
-    "objectID": "grd/hidrol-meteorologicas/elnino.html",
-    "href": "grd/hidrol-meteorologicas/elnino.html",
-    "title": "El Niño/La Niña Oscilación del Sur",
+    "objectID": "grd/hidrol-meteorologicas/inundaciones-repentinas.html",
+    "href": "grd/hidrol-meteorologicas/inundaciones-repentinas.html",
+    "title": "Inundaciones Repentinas y avenidas torrenciales",
     "section": "",
-    "text": "Extraordinary animation reveals ocean’s role in El Niños\n\nInstituciones nacionales\n\n\nInstituciones internacionales\n\nOSHA. El fenónemo de El Niño. Link\n\n\n\n\n\n\n\nMecanismos y procesos\n\nNOAA El Nino Southern Oscillation. Link.\nEl Niño & La Niña (El Niño-Southern Oscillation) - Climate.gov. Link.\nENSO @ the Australian Bureau of Meteorology. Link.\nMultivariate ENSO Index Version 2 (MEI.v2). Link.\nEl Niño and La Niña Years and Intensities. Link.\nKelvin wave Link.\nRossby wave. Link.\n\n El Nino - What is it?\n\n\nPronóstico\n\nThe El Niño/Southern Oscillation 2015-17: Analysis and Predictions. Steve Paton Physical Monitoring Program. STRI. Link.\nEl Niño and La Niña Years and Intensities. Link.\nForecasting El Niño-Southern Oscillation (ENSO). Link.\n\n\n\nImpactos\n\nInvestigating Coral Bleaching Using Data in the Classroom. Link\nBleaching observations (1963-2010). WRI. Link.\nCoral Reefs Special issue: The 2014-2017 Global Coral Bleaching Event: Drivers, Impacts, and Lessons Learned Volume 38, Issue 4, August 2019. Link.\nNASA Data, Trainings Help Uruguay Navigate Drought. Link\n\n\n\nOtros\n\nPacific Decadal Oscillation (PDO). Link.\nClimate Indices. Link.\n\n\n\nLecturas\n\nDo you know that El Niño has a little brother?. Link.\n¿La frecuencia de ENOS se incrementará con el cambio climático global?\n\nEl Niño events will intensify under global warming. Nature 2018. Link.\nIncreased variability of eastern Pacific El Niño under greenhouse warming. Nature 2018. Link.",
+    "text": "Hillslope torrential hazard cascades in tropical mountains. Natural Hazards and Earth System Sciences. 2025. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas hidrológicas y meteorológicas",
-      "El Niño / La Niña"
+      "Inundaciones repentinas"
     ]
   },
   {
-    "objectID": "grd/conocimientodelriesgo.html",
-    "href": "grd/conocimientodelriesgo.html",
-    "title": "Conocimiento del riesgo de desastres",
+    "objectID": "grd/hidrol-meteorologicas/inundaciones-repentinas.html#lecturas",
+    "href": "grd/hidrol-meteorologicas/inundaciones-repentinas.html#lecturas",
+    "title": "Inundaciones Repentinas y avenidas torrenciales",
     "section": "",
-    "text": "Procesos de la gestión del riesgo de desastres acorde con la ley 1523 de 2012",
+    "text": "Hillslope torrential hazard cascades in tropical mountains. Natural Hazards and Earth System Sciences. 2025. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
+      "Amenazas hidrológicas y meteorológicas",
+      "Inundaciones repentinas"
     ]
   },
   {
-    "objectID": "grd/conocimientodelriesgo.html#monitoreo-de-las-amenazas",
-    "href": "grd/conocimientodelriesgo.html#monitoreo-de-las-amenazas",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Monitoreo de las amenazas",
-    "text": "Monitoreo de las amenazas\n\nVisores Colombia\n\nSAMA Antioquía. DAGRAN. Link.\nSIATA. Valle de Aburrá. Link.\n\n\n\nRecursos\n\nRemote Sensing Tutorials. Government of Canada. Link.\nGee-community-catalog. Link.\nGeemap. Link.\nCloud-Based Remote Sensing with Google Earth Engine: Fundamentals and Applications. Link",
+    "objectID": "grd/hidrol-meteorologicas/olasdecalor.html",
+    "href": "grd/hidrol-meteorologicas/olasdecalor.html",
+    "title": "Olas de calor",
+    "section": "",
+    "text": "Evaluación del riesgo\n\nHeat Action Platform. Conduct a Baseline Heat Risk Assessment. Link\n\n Cool your community with the Heat Action Platform"
+  },
+  {
+    "objectID": "grd/hidrol-meteorologicas/inundaciones.html",
+    "href": "grd/hidrol-meteorologicas/inundaciones.html",
+    "title": "Inundaciones",
+    "section": "",
+    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
+      "Amenazas hidrológicas y meteorológicas",
+      "Inundaciones"
     ]
   },
   {
-    "objectID": "grd/conocimientodelriesgo.html#escenarios-de-riesgo",
-    "href": "grd/conocimientodelriesgo.html#escenarios-de-riesgo",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Escenarios de riesgo",
-    "text": "Escenarios de riesgo\n\nEffectiveness of California earthquake scenarios in motivating mitigation. Earthquake spectra. 2025. Link.\n\n SimCenter: A computational framework to simulate the impacts of natural hazards",
+    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#instituciones-nacionales",
+    "href": "grd/hidrol-meteorologicas/inundaciones.html#instituciones-nacionales",
+    "title": "Inundaciones",
+    "section": "",
+    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
+      "Amenazas hidrológicas y meteorológicas",
+      "Inundaciones"
     ]
   },
   {
-    "objectID": "grd/conocimientodelriesgo.html#lecturas",
-    "href": "grd/conocimientodelriesgo.html#lecturas",
-    "title": "Conocimiento del riesgo de desastres",
+    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#instituciones-internacionales",
+    "href": "grd/hidrol-meteorologicas/inundaciones.html#instituciones-internacionales",
+    "title": "Inundaciones",
+    "section": "Instituciones internacionales",
+    "text": "Instituciones internacionales\n\nEmergency Copernicus. Link\nEuropean Commission. River Flood Hazard Maps at European and Global Scale. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas hidrológicas y meteorológicas",
+      "Inundaciones"
+    ]
+  },
+  {
+    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#amenaza-por-inundaciones",
+    "href": "grd/hidrol-meteorologicas/inundaciones.html#amenaza-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Amenaza por inundaciones",
+    "text": "Amenaza por inundaciones\n\n\n\n[Space-based Measurement, Mapping, and Modeling of Surface Water For Research, Humanitarian, and Water Resources Applications](https://floodobservatory.colorado.edu/index.html)\n\n\n\nFEMA. Hazus. Link\nEurope floods: new tool to estimate water depth and extent. 2024. Link.\nSatellite imaging reveals increased proportion of population exposed to floods. Nature, 2021. Link.\nThe fraction of the global population at risk of floods is growing. Nature News. 2021. Link.\nARSET – Monitoring and Modeling Floods using Earth Observations. NASA. Link.\nGlobal Floods. Link - What’s in Floodwaters? Link.\n\n\n\n\nThe share of people living in high-risk flood zones. Source: Rentschler, J, Salhab, M and Jafino, B. 2022. Flood Exposure and Poverty in 188 Countries. Nature Communications. Link.\n\n\n\n\n\nThe share of population that is flood-exposed and living und $5.50 per day. Source: Rentschler, J, Salhab, M and Jafino, B. 2022. Flood Exposure and Poverty in 188 Countries. Nature Communications.\n\n\n\n\n\nPercentage of the population in each sub-national administrative region that live on floodplains, which is defined as the 1000-year flood extent. The proportion of the reaches that are in each of the floodplain categories for each region is shown by the top pie charts in each box. The proportion of the population settled on the different types of floodplains is shown by the bottom pie chart in each box. Link\n\n\n\n\n\n\n\n\n\n\n\n\n\n Part 1: Overview of Flood Monitoring Tools based on Remote Sensing Observations\n\n\n\n\n\n\n\n Introduction to Flood Risk Management",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas hidrológicas y meteorológicas",
+      "Inundaciones"
+    ]
+  },
+  {
+    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#evaluación-del-riesgo-por-inundaciones",
+    "href": "grd/hidrol-meteorologicas/inundaciones.html#evaluación-del-riesgo-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Evaluación del riesgo por inundaciones",
+    "text": "Evaluación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\n\n[From flood maps to mind maps: Participatory systems modelling of floods in Limbe, Cameroon](https://cdkn.org/story/flood-maps-mind-maps-participatory-systems-modelling-floods-limbe-cameroon). In Limbe, Cameroon, flooding is not just caused by heavy rainfall. Rather from a complex interplay of land-use decisions, poor waste management, weak governance and a lack of infrastructure, with cascading impacts on education, transportation, health, and the economy. Tackling this requires a systems‑thinking approach. The following blog by Dr Lum Sonita Awah, a postdoctoral Fellow at the University of the Free State and an early career research fellow with CDKN, shares how participatory systems modelling can be used to create holistic approaches to flood mitigation and management.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas hidrológicas y meteorológicas",
+      "Inundaciones"
+    ]
+  },
+  {
+    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#comunicación-del-riesgo-por-inundaciones",
+    "href": "grd/hidrol-meteorologicas/inundaciones.html#comunicación-del-riesgo-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Comunicación del riesgo por inundaciones",
+    "text": "Comunicación del riesgo por inundaciones\n\nFlood risk communication: a fundamental tool for disaster risk management. Prevention web. Link\nFlood Risk Communication Toolbox. US Army Corps of Engineers. Link.\nBridging the gap in flood risk communication: a comparative study of community and organizational social media posts using natural language processing. 2025. Link\n\n\n\n\n How to Communicate Flood Risk to the Public",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas hidrológicas y meteorológicas",
+      "Inundaciones"
+    ]
+  },
+  {
+    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#reducción-del-riesgo-de-inundaciones",
+    "href": "grd/hidrol-meteorologicas/inundaciones.html#reducción-del-riesgo-de-inundaciones",
+    "title": "Inundaciones",
+    "section": "Reducción del riesgo de inundaciones",
+    "text": "Reducción del riesgo de inundaciones\n Planning for Safety: How Land Use Decisions Shape Flood Risk. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas hidrológicas y meteorológicas",
+      "Inundaciones"
+    ]
+  },
+  {
+    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#manejo-de-desastres-por-inundaciones",
+    "href": "grd/hidrol-meteorologicas/inundaciones.html#manejo-de-desastres-por-inundaciones",
+    "title": "Inundaciones",
+    "section": "Manejo de desastres por inundaciones",
+    "text": "Manejo de desastres por inundaciones",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas hidrológicas y meteorológicas",
+      "Inundaciones"
+    ]
+  },
+  {
+    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#lecturas",
+    "href": "grd/hidrol-meteorologicas/inundaciones.html#lecturas",
+    "title": "Inundaciones",
     "section": "Lecturas",
-    "text": "Lecturas\n\nRethinking policy on high mountain cascading hazards. Nature Geoscience. 2025. Link.\n\n“Marcos globales como el Marco de Sendai y los Objetivos de Desarrollo Sostenible de las Naciones Unidas siguen tratando los multiamenazas como eventos individuales coexistentes, en lugar de como interacciones en cascada6,7. Igualmente crítico es que las políticas tampoco tienen suficientemente en cuenta la frecuencia y la magnitud de los fenómenos extremos que cambian con el clima, lo que significa que los intervalos de recurrencia de los peligros estimados a partir de estadísticas históricas ya no representan con precisión el riesgo. Sin un cambio fundamental de perspectiva, las políticas, y por ende su implementación, seguirán subestimando la magnitud y la complejidad de las interacciones en cascada, especialmente en las regiones de alta montaña.”",
+    "text": "Lecturas\n\nHow to Know Your Flood Risk. NYT. 2025. Link.\nFlood hazard potential reveals global floodplain settlement patterns. Nature Comms. 2023. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
+      "Amenazas hidrológicas y meteorológicas",
+      "Inundaciones"
     ]
   },
   {
-    "objectID": "grd/conocimientodelriesgo.html#física",
-    "href": "grd/conocimientodelriesgo.html#física",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Física",
-    "text": "Física\n\nThe use of empirical vulnerability functions to assess the response of buildings to tsunami impact: Comparative review and summary of best practice. Tarbotton, et al. Earth Science Reviews. Link",
+    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#entrenamiento",
+    "href": "grd/hidrol-meteorologicas/inundaciones.html#entrenamiento",
+    "title": "Inundaciones",
+    "section": "Entrenamiento",
+    "text": "Entrenamiento\n\nCope",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
+      "Amenazas hidrológicas y meteorológicas",
+      "Inundaciones"
     ]
   },
   {
-    "objectID": "grd/conocimientodelriesgo.html#social",
-    "href": "grd/conocimientodelriesgo.html#social",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Social",
-    "text": "Social\n\nIndicador de Condiciones de Vulnerabilidad Urbana. 2023. GFDRR. Link.\nLineamientos para el análisis de la vulnerabilidad social en los estudios de la gestión municipal del riesgo de desastres. UNGRD. 2017. Link.\n\nPDC. Vulnerability Indicators. PDC’s vulnerability analysis measures the physical, environmental, social, and economic conditions and processes that increase susceptibility of communities and systems to the damaging effects of hazards. Multiple factors influencing disaster outcomes, including those linked to poverty and development, are considered in the analysis.",
+    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#repositorios",
+    "href": "grd/hidrol-meteorologicas/inundaciones.html#repositorios",
+    "title": "Inundaciones",
+    "section": "Repositorios",
+    "text": "Repositorios\n\nA Collection of NASA ARSET Courses for Flood Mapping and Synthetic Aperture Radar (SAR). Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
+      "Amenazas hidrológicas y meteorológicas",
+      "Inundaciones"
     ]
   },
   {
-    "objectID": "grd/conocimientodelriesgo.html#artículos-científicos",
-    "href": "grd/conocimientodelriesgo.html#artículos-científicos",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Artículos científicos",
-    "text": "Artículos científicos\n\nWe need to predict the people disasters will hit, not just the places. Nature 2025. Link.\nTerritorial vulnerability assessment frame in Colombia: Disaster risk management. Villegast et al. 2017. IJDRM. Link.\nFraming vulnerability, risk and societal responses: the MOVE framework. Natural Hazards. 2013. Link.\nSocial vulnerability in Colombia. 2020. IJDRR. Link.\nSocial vulnerability in a multi-hazard context: a systematic review. Environmental Research Letters. 2022. Link.\nCardona, O.D.: The need for rethinking the concepts of vulnerability and risk from a holistic perspective: a necessary review and criticism for effective risk management. In: Indicators of Risk Management and Vulnerability Reduction: Case Studies in Latin American Urban Areas, United Nations University, Institute for Environment and Human Security (2011). Link.\nExplaining differential vulnerability to climate change: A social science review. Wires Climate Change. 2018. Link.\nUnderstanding human vulnerability to climate change: A global perspective on index validation for adaptation planning. Science of The Total Environment. 2022. Link.",
+    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#videos",
+    "href": "grd/hidrol-meteorologicas/inundaciones.html#videos",
+    "title": "Inundaciones",
+    "section": "Videos",
+    "text": "Videos",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
+      "Amenazas hidrológicas y meteorológicas",
+      "Inundaciones"
     ]
   },
   {
-    "objectID": "grd/conocimientodelriesgo.html#metodologias",
-    "href": "grd/conocimientodelriesgo.html#metodologias",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Metodologias",
-    "text": "Metodologias\n\nUnderstanding disaster risk: foundational concepts and principles. UNDRR. Link.\n\nWhy reducing risk matters\nComponents of risk\nRisk drivers\nKey concepts\nThe DRR glossary\nEngage in DRR\n\nDisaster, Planning and Development: Managing Natural Hazards to Reduce Loss. OEA. Link, Link.\nBernal G.A., Cardona OD., Marulanda M.C., Carreño ML. (2021) Dealing with Uncertainty Using Fully Probabilistic Risk Assessment for Decision-Making. In: Eslamian S., Eslamian F. (eds) Handbook of Disaster Risk Reduction for Resilience. Springer, Cham. https://doi.org/10.1007/978-3-030-61278-8_14\nOregon Natural Hazards Risk Assessment Upgrade. Link. Link. Youtube\nHow to develop a risk and vulnerability assessment. 2025. JRC. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#metodologías-de-fema",
-    "href": "grd/conocimientodelriesgo.html#metodologías-de-fema",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Metodologías de FEMA",
-    "text": "Metodologías de FEMA\n\nNational Risk Index Documentation. Link.\nNational Risk Index for Natural Hazards. Visor.\nNational Risk Index Hazard Info Table\nUpdating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. Link.\nEarthquake Hazard Maps. Link.\nFlood Map. Link.\n\n\n\n\n Physical and social vulnerability for the multi-hazard risk analysis of components and systems\n\n\n Mapping Risk: The National Risk Index for Natural Hazards\n\n\n\n\n Risk Modeling and Management for Natural Disasters: Innovation by the Numbers. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#herramientas-para-el-análisis-de-riesgos",
-    "href": "grd/conocimientodelriesgo.html#herramientas-para-el-análisis-de-riesgos",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Herramientas para el análisis de riesgos",
-    "text": "Herramientas para el análisis de riesgos\n\nThe CAPRA (Probabilistic Risk Assessment) Platform. Link.\nCuadernos de trabajo (ver repositorios)\nSoftware\n\nWORLD BANK CLIMATE AND DISASTER RISK SCREENING TOOLS. Link\nRisk Data Library. Country Climate & Disaster Risk Screening Tools. Link.\nRisk Changes. An open-source Spatial Decision Support tool for the analysis of Dynamic Multi-Hazard risk. Link.\n\nDocumentation. Link.\n\n\n\n\n\n\n Introduction\n\n\n Hazard\n\n\n\n\nArtículos científicos\n\nA review of risk analysis methods for natural disasters. Nat Hazards 100, 571–593. Sun, R. et al. 2020. Link\nHybrid loss exceedance curve (HLEC) for disaster risk assessment. Velazquez et al. 2020. Link\nAssessing global exposure and vulnerability towards natural hazards: the Disaster Risk Index. Peduzzi, et al. 2009, Nat. Hazards Earth Syst. Link\n\n\n\n\n\n Lesson 2：Six steps of disaster risk assessment\n\n\n Building resilience to compound and cascading disaster risks\n\n\n\n\n Webinar Modern Technology in Disaster Management: The Challenges\n\n\n Integrated Risk management in Civil Protection\n\n\n\n\n Modelo mundial de riesgo en la infraestructura\n\n\n Risk Analysis for Civil Protection\n\n\n\n\n Using Exceedance Probabilities for Disaster Management\n\n\nEvaluación del riesgo",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#evaluación-del-riesgo-en-la-infraestructura-escolar",
-    "href": "grd/conocimientodelriesgo.html#evaluación-del-riesgo-en-la-infraestructura-escolar",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Evaluación del riesgo en la infraestructura escolar",
-    "text": "Evaluación del riesgo en la infraestructura escolar\n\nWebinar ‘Community Hazard Risk Tools: Structural Fragility and Vulnerability and System Reliability Mapping’ by the UNESCO Chair in DRR & RE, UCL. Link.\n\nGithub repository.\n\n\n\n\n\n Community Hazard Risk Tools: Structural Frag. and Vuln. and System Reliability Mapping Day 1\n\n\n Day 2",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#eventos-compuestos",
-    "href": "grd/conocimientodelriesgo.html#eventos-compuestos",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Eventos compuestos",
-    "text": "Eventos compuestos\n\nGuidelines for Studying Diverse Types of Compound Weather and Climate Events. 2021. Link\nHigh impact compound events in Australia. Link\nSignificantly wetter or drier future conditions for one to two thirds of the world’s population. 2024. Nature Comm. Link\n\n\n\n\n Guidelines for studying diverse types of compound weather and climate events\n\n\nEventos compuestos",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#eventos-extremos",
-    "href": "grd/conocimientodelriesgo.html#eventos-extremos",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Eventos extremos",
-    "text": "Eventos extremos\n\nWhat is detection and attribution? ARC. Link.\nIPCC AR6. Weather and climate extreme events in changing climate. Link\nTOP 10 THINGS TO KNOW ABOUT EXTREME EVENT ATTRIBUTION. Climate Central. Link\nAttribution of Extreme Events to Climate Change. Annual Review of Environment and Resourses. 2023. Link\nClimate-Informed Risk Assessment for Extreme Events. AGU 24. Link.\nAlguna evidencia para Colombia. Link. Link. Link. Link. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#disaster-forensics---undrr",
-    "href": "grd/conocimientodelriesgo.html#disaster-forensics---undrr",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Disaster Forensics - UNDRR",
-    "text": "Disaster Forensics - UNDRR\nLas siguientes preguntas describen un cuestionario simplificado para realizar un análisis forense de cualquier desastre. Las preguntas siguen los tres pasos clave de la metodología FORIN (Investigaciones Forenses de Desastres) (UNDRR. Disaster Forensics. Link)\n\n\nPASO 1 – COMPRENDER EL ADN DEL DESASTRE\n\nAnalizar los factores específicos de peligro, exposición y vulnerabilidad que hicieron de este desastre un desastre único y significativo. Esto implica un análisis descriptivo del peligro, la exposición, las condiciones inseguras y los patrones subsiguientes de daños, pérdidas e impacto.\n¿Qué pasó? (Peligro)\n\n¿Qué desencadenó el acontecimiento?\n¿El evento principal condujo a eventos secundarios relacionados? Por ejemplo, ¿causó el terremoto deslizamientos de tierra o roturas de presas que provocaron inundaciones?\n\n¿Dónde se concentró el daño? (Exposición)\n\n¿Cómo se expusieron los elementos sociales y ambientales?\n¿Cómo ha evolucionado la exposición a lo largo del tiempo y el espacio en relación con el desarrollo planificado o no planificado y las amenazas físicas?\n¿Las regulaciones de zonificación, los controles de uso del suelo y los códigos de infraestructura eran adecuados para los niveles de riesgo existentes en diferentes áreas?\n¿Los cambios en los niveles de exposición se debieron a decisiones sociales sobre la ubicación o a cambios en el entorno físico? ¿Cuál fue el papel de la deforestación, el diseño y la construcción urbana, o incluso el cambio climático?\n\n\n\n¿Cuál era la estructura social y económica de las comunidades expuestas?\n¿Cómo se distribuyeron las pérdidas y los daños entre diferentes áreas, grupos sociales y tipos de infraestructura?\n¿Qué factores influyeron en la expansión territorial? ¿Se ocuparon las zonas más seguras antes que las más vulnerables?\n¿Las leyes y normas ambientales abordaron las preocupaciones sobre peligros y vulnerabilidad?\n¿Existió una relación clara entre la exposición a peligros y los niveles de pobreza? ¿Cómo aumentaron los factores de riesgo crónicos (desempleo, mala salud, drogadicción o violencia personal y social) el riesgo y el impacto de los desastres?\n¿Existe una legislación adecuada a nivel nacional y local, incluidos códigos de construcción, aplicación y especificidad en cuestiones de gestión de riesgos?\n¿Existe un seguro contra pérdidas o responsabilidad civil? ¿Es obligatorio?\n¿Se integró la gestión del riesgo de desastres en otras áreas de políticas como la planificación urbana, la gestión ambiental y los seguros?\n¿Existen capacidades de investigación y educación centradas en la concientización sobre los riesgos y la cobertura de seguros?\n\n¿Quién sufrió más y por qué? (vulnerabilidad)\n\n¿Cómo contribuyeron el crecimiento y la distribución de la población en el pasado al desastre?\n¿Qué papel desempeñaron la degradación ambiental y el agotamiento de los servicios ecosistémicos?\n¿Cuáles fueron los impactos de la pobreza y la distribución del ingreso?\n\n¿Qué fue resiliente?\n¿Cuáles fueron los elementos institucionales y de gobernanza que contribuyeron a la resiliencia?\nResultado del Paso 1 = Identificación de las cadenas de ADN clave (puntos de inflexión únicos) que hicieron de este desastre algo único. La inclusión de relatos del desastre y conversaciones con las personas afectadas puede profundizar el análisis y proporcionar una visión realista de las acciones propuestas para la reducción del riesgo.\n\n\n\nPASO 2 – TENDENCIAS FUTURAS\n\nAnalice más a fondo las áreas clave identificadas del ADN del desastre y prediga las posibles tendencias futuras hasta 2050. Por ejemplo, si la urbanización y los asentamientos informales fueron los principales contribuyentes a los daños causados ​​por las inundaciones, ¿cuáles son las tendencias actuales y futuras probables para la urbanización y los asentamientos informales?\nResultado del paso 2 = Realizar un análisis de previsión futura para identificar qué áreas de riesgo actual es probable que aumenten en el futuro.\n\n\n\nPASO 3 – APRENDIZAJE FORENSE\n\nFacilitar un debate entre múltiples partes interesadas para revisar y refinar el análisis, creando conjuntamente políticas potenciales y acciones prácticas para reducir el riesgo asociado con cada cadena de ADN identificada, considerando los impactos del desastre y los escenarios futuros",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/conocimientodelriesgo.html#lecturas-varias",
-    "href": "grd/conocimientodelriesgo.html#lecturas-varias",
-    "title": "Conocimiento del riesgo de desastres",
-    "section": "Lecturas varias",
-    "text": "Lecturas varias\n\nThe Hazards Posed by Mesoscale Lightning Megaflashes. Link.\nGMT Tutorial is an open source collection of ~65 tools for manipulating geographic and Cartesian data sets. Link\nHow smartphones are being used to monitor ageing bridges. Link.\nTHE COST OF DOING NOTHING. Link.\n97% de los POT no tiene estudios de amenazas y riesgo urbano. El Nuevo Siglo. Link.\nLos desastres no son naturales. El País. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Conocimiento del riesgo"
-    ]
-  },
-  {
-    "objectID": "grd/cursos.html",
-    "href": "grd/cursos.html",
-    "title": "Cursos, entrenamiento y redes",
+    "objectID": "grd/manejodedesastres.html",
+    "href": "grd/manejodedesastres.html",
+    "title": "Manejo de desastres",
     "section": "",
-    "text": "The Australian Disaster Resilience Knowledge Hub\n\nEmergency planning collection. Link.\nDisasters. Link.\nGlossary. Link.\nEmergency Management Library. Link.\nRecovery Matters webinar series. Link.\nThe Australian Institute for Disaster Resilience. Link\n\nCONVERGE Training Modules. Link.\nDisaster Reduction Learning Center (DRLC). Link.\nRegional DDR e-learning platform. Link.\nThe National Disaster & Emergency Management University. FEMA. Link.\n\nIndependent Study Program. Link.\nCurriculum. Link.\n\nPacific Disaster Center. Online Courses. Link.\nDisaster Risk Management Training Center. Link.\n\nTraining Corner. Link.\nDisaster Risk Management Training online series 2022. European Commision. Link.",
+    "text": "Reliefweb. Link.\nOXFAM. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Cursos, redes y recursos",
-      "Cursos en GRD"
+      "Manejo de desastres"
     ]
   },
   {
-    "objectID": "grd/cursos.html#el-riesgo-en-la-sociedad-moderna",
-    "href": "grd/cursos.html#el-riesgo-en-la-sociedad-moderna",
-    "title": "Cursos, entrenamiento y redes",
-    "section": "El riesgo en la sociedad moderna",
-    "text": "El riesgo en la sociedad moderna\n\n\n\n 1.1 The History of Risk\n\n\n 1.2 The Study of Risk: Security Studies\n\n\n\n\n 1.3 The Study of Risk: Safety Science\n\n\n 2.1 Risk Management\n\n\n\n\n 2.6 Risk Management: Strengths and Weaknesses\n\n\n 3.1 Risk Perception\n\n\n\n\nCoursera.",
+    "objectID": "grd/manejodedesastres.html#lecturas",
+    "href": "grd/manejodedesastres.html#lecturas",
+    "title": "Manejo de desastres",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nWe need to predict the people disasters will hit, not just the places. Nature 2025. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Cursos, redes y recursos",
-      "Cursos en GRD"
+      "Manejo de desastres"
     ]
   },
   {
-    "objectID": "grd/cursos.html#building-resilience-to-compound-and-cascading-disaster-risks",
-    "href": "grd/cursos.html#building-resilience-to-compound-and-cascading-disaster-risks",
-    "title": "Cursos, entrenamiento y redes",
-    "section": "Building resilience to compound and cascading disaster risks",
-    "text": "Building resilience to compound and cascading disaster risks\n\n\n\n Building resilience to compound and cascading disaster risks\n\n\n Lesson 1：Compound and cascading disaster risks. What are they?\n\n\n\n\n Lesson 2：Six steps of disaster risk assessment\n\n\n Lesson 3：Designing resilience enhancing measures\n\n\n\n\n Lesson 4：Adaptive implementation framework\n\n\n Conclusion：Summary of the course",
+    "objectID": "grd/conocimiento-indicadores.html#lecturas",
+    "href": "grd/conocimiento-indicadores.html#lecturas",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "Lecturas",
+    "text": "Lecturas\n\nNatural hazard risk assessments at the global scale. 2020. NHESS. Link.\nIs the number of global natural disasters increasing? 2022. Environmental Hazards. Link.\nIncompleteness of natural disaster data and its implications on the interpretation of trends. 2024. Environmental Hazards. Link.\nThe number of natural disasters is zero: commentary to “is the number of global natural disasters increasing?” 2024. Link.\nComments on the short communication: The number of natural disasters is zero: commentary to “Is the number of global natural disasters increasing?” 2025. Link.\nIs the number of natural disasters increasing? 2024. Link.\nWeather-related disasters increase over past 50 years, causing more damage but fewer deaths. 2021. OMS. Link.\nOfficial statistics are vastly undercounting deaths from extreme weather. Nature 2025 Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Cursos, redes y recursos",
-      "Cursos en GRD"
+      "Indicadores de riesgo nacionales y mundiales"
     ]
   },
   {
-    "objectID": "grd/biologicos/index.html#hazard-information-profiles-hips-online-reference",
-    "href": "grd/biologicos/index.html#hazard-information-profiles-hips-online-reference",
-    "title": "Riesgos biológicos",
-    "section": "2025 Hazard Information Profiles (HIPs) online reference",
-    "text": "2025 Hazard Information Profiles (HIPs) online reference",
+    "objectID": "grd/conocimiento-indicadores.html#emdat",
+    "href": "grd/conocimiento-indicadores.html#emdat",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "EmDat",
+    "text": "EmDat\n\nEM-DAT International Disaster Database. Link.\n\nEM-DAT Documentation. Link.\nEM-DAT: the Emergency Events Database. Link\n\n\n\n\n\nEmDat\n\n\n EmDat",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Amenazas biológicas"
+      "Indicadores de riesgo nacionales y mundiales"
     ]
   },
   {
-    "objectID": "grd/biologicos/index.html#grupos-de-peligros-y-83-peligros-específicos",
-    "href": "grd/biologicos/index.html#grupos-de-peligros-y-83-peligros-específicos",
-    "title": "Riesgos biológicos",
-    "section": "6 grupos de peligros y 83 peligros específicos",
-    "text": "6 grupos de peligros y 83 peligros específicos\n\n\n\npeligro específico\nIdentificador\nGrupo\n\n\n\n\nEnfermedades zoonóticas\nBI0113\nEnfermedades infecciosas\n\n\nVirus del Zika\nBI0242\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nFiebre amarilla\nBI0241\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nFiebre del Nilo Occidental\nBI0240\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedades transmitidas por el agua\nBI0110\nEnfermedades infecciosas\n\n\nBrotes de enfermedades de plantas causadas por virus, fitoplasmas y viroides\nBI0503\nEnfermedades de las plantas\n\n\nFiebres hemorrágicas virales\nBI0109\nEnfermedades infecciosas\n\n\nEnfermedades transmitidas por vectores (ETV)\nBI0108\nEnfermedades infecciosas\n\n\nVaricela y herpes zóster\nBI0239\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedades prevenibles mediante vacunación\nBI0107\nEnfermedades infecciosas\n\n\nFiebre tifoidea\nBI0226\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nTuberculosis\nBI0237\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nTripanosomiasis\nBI0238\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nenvenenamiento por mordedura de serpiente\nBI0605\nOtros riesgos biológicos\n\n\nViruela\nBI0235\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedad del camarón (bacteriana) - Necrosis hepática pancreática aguda\nBI0314\nEnfermedades infecciosas animales\n\n\nShigelosis\nBI0234\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nInfecciones de transmisión sexual\nBI0106\nEnfermedades infecciosas\n\n\nSíndrome Respiratorio Agudo Severo (SARS)\nBI0236\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nGripe estacional\nBI0243\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nRotavirus\nBI0233\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nPeste bovina\nBI0312\nEnfermedades infecciosas animales\n\n\nFiebre del Valle del Rift\nBI0311\nEnfermedades infecciosas animales\n\n\nRabia\nBI0232\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nFiebre Q\nBI0231\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedades priónicas\nBI0230\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nPolio\nBI0229\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nPlaga\nBI0228\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nPeste des Petits Ruminants\nBI0310\nEnfermedades infecciosas animales\n\n\nTos ferina (humana)\nBI0227\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nfiebre paratifoidea\nBI0225\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nGripe pandémica (humana)\nBI0244\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedad de las ostras en la acuicultura\nBI0313\nEnfermedades infecciosas animales\n\n\nEnfermedad de Newcastle\nBI0308\nEnfermedades infecciosas animales\n\n\nGusano barrenador del Nuevo Mundo (NWS)\nBI0309\nEnfermedades infecciosas animales\n\n\nEnfermedades tropicales desatendidas\nBI0105\nEnfermedades infecciosas\n\n\nMpox\nBI0224\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nSíndrome Respiratorio de Oriente Medio (MERS)\nBI0223\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nMeningitis meningocócica\nBI0222\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nSarampión\nBI0221\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedad por el virus de Marburgo\nBI0220\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nMalaria\nBI0219\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedad de la piel nodular\nBI0307\nEnfermedades infecciosas animales\n\n\nplaga de langostas\nBI0402\nEnfermedades transmitidas por insectos\n\n\nListeriosis\nBI0218\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nLeptospirosis\nBI0217\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nLepra\nBI0216\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nFiebre de Lassa\nBI0215\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEspecies invasoras, incluidas las malas hierbas\nBI0403\nEnfermedades transmitidas por insectos\n\n\nInfestaciones de plagas de insectos\nBI0401\nEnfermedades transmitidas por insectos\n\n\nEnfermedades infecciosas de los animales (no zoonosis)\nBI0301\nEnfermedades infecciosas animales\n\n\nConflicto entre humanos y fauna silvestre\nBI0604\nOtros riesgos biológicos\n\n\nVIH y SIDA\nBI0214\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nHepatitis C\nBI0213\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nHepatitis B\nBI0212\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nHepatitis A\nBI0211\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nFloraciones de algas nocivas\nBI0603\nOtros riesgos biológicos\n\n\nEnfermedad fúngica de las plantas\nBI0502\nEnfermedades de las plantas\n\n\nFiebre aftosa\nBI0306\nEnfermedades infecciosas animales\n\n\nEnfermedades transmitidas por los alimentos\nBI0104\nEnfermedades infecciosas\n\n\nEscherichia coli (STEC)\nBI0210\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nÉbola\nBI0209\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nDifteria\nBI0208\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedades diarreicas\nBI0103\nEnfermedades infecciosas\n\n\nDengue\nBI0207\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\ncisticercosis\nBI0112\nEnfermedades infecciosas\n\n\nCriptosporidio\nBI0111\nEnfermedades infecciosas\n\n\nFiebre hemorrágica de Crimea-Congo\nBI0206\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nCOVID-19 (SARS-CoV-2)\nBI0205\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nPleuroneumonía caprina contagiosa (PPCC)\nBI0305\nEnfermedades infecciosas animales\n\n\nPleuroneumonía bovina contagiosa (CBPP)\nBI0304\nEnfermedades infecciosas animales\n\n\nPeste porcina clásica\nBI0303\nEnfermedades infecciosas animales\n\n\nCólera\nBI0204\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nChikungunya\nBI0203\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nBrucelosis\nBI0202\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nVirus transmitidos por la sangre\nBI0102\nEnfermedades infecciosas\n\n\nAgentes biológicos\nBI0602\nOtros riesgos biológicos\n\n\nEnfermedad bacteriana de las plantas\nBI0501\nEnfermedades de las plantas\n\n\nGripe aviar\nBI0245\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nResistencia antimicrobiana\nBI0601\nOtros riesgos biológicos\n\n\nÁntrax\nBI0201\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedades transmitidas por el aire\nBI0101\nEnfermedades infecciosas\n\n\nPeste porcina africana\nBI0302\nEnfermedades infecciosas animales",
+    "objectID": "grd/conocimiento-indicadores.html#inform-risk-index",
+    "href": "grd/conocimiento-indicadores.html#inform-risk-index",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "Inform Risk Index",
+    "text": "Inform Risk Index\n\nInform Risk Index. Link. Link.\n\nLatin America and Caribbean. Link.\n\n\n\n\n\nINFORM Subnational Risk Index\n\n\n\n\n\nColombia World Risk Report",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Amenazas biológicas"
+      "Indicadores de riesgo nacionales y mundiales"
+    ]
+  },
+  {
+    "objectID": "grd/conocimiento-indicadores.html#world-risk-index",
+    "href": "grd/conocimiento-indicadores.html#world-risk-index",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "World Risk Index",
+    "text": "World Risk Index\n\nWorld Risk Index. Link. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Indicadores de riesgo nacionales y mundiales"
+    ]
+  },
+  {
+    "objectID": "grd/conocimiento-indicadores.html#the-world-risk-report",
+    "href": "grd/conocimiento-indicadores.html#the-world-risk-report",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "The World Risk report",
+    "text": "The World Risk report\n\nThe World Risk report. Link.\n\n\n\n\n\nThe World Risk Report",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Indicadores de riesgo nacionales y mundiales"
+    ]
+  },
+  {
+    "objectID": "grd/conocimiento-indicadores.html#pacific-disaster-center",
+    "href": "grd/conocimiento-indicadores.html#pacific-disaster-center",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "Pacific Disaster Center",
+    "text": "Pacific Disaster Center\nGlobal Disaster Risk Trends. Select a country to view 10-year national trends.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Indicadores de riesgo nacionales y mundiales"
+    ]
+  },
+  {
+    "objectID": "grd/conocimiento-indicadores.html#world-economic-forum",
+    "href": "grd/conocimiento-indicadores.html#world-economic-forum",
+    "title": "Indicadores de riesgo de desastres",
+    "section": "World Economic Forum",
+    "text": "World Economic Forum\n\nGlobal Risks Report 2024. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Indicadores de riesgo nacionales y mundiales"
+    ]
+  },
+  {
+    "objectID": "grd/biologicos/covid.html#instituciones-internacionales",
+    "href": "grd/biologicos/covid.html#instituciones-internacionales",
+    "title": "Covid",
+    "section": "Instituciones internacionales",
+    "text": "Instituciones internacionales",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas biológicas",
+      "COVID-19"
+    ]
+  },
+  {
+    "objectID": "grd/biologicos/covid.html#evaluación-del-riesgo",
+    "href": "grd/biologicos/covid.html#evaluación-del-riesgo",
+    "title": "Covid",
+    "section": "Evaluación del riesgo",
+    "text": "Evaluación del riesgo",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas biológicas",
+      "COVID-19"
+    ]
+  },
+  {
+    "objectID": "grd/biologicos/covid.html#comunicación-del-riesgo",
+    "href": "grd/biologicos/covid.html#comunicación-del-riesgo",
+    "title": "Covid",
+    "section": "Comunicación del riesgo",
+    "text": "Comunicación del riesgo",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas biológicas",
+      "COVID-19"
+    ]
+  },
+  {
+    "objectID": "grd/biologicos/covid.html#reducción-del-riesgo",
+    "href": "grd/biologicos/covid.html#reducción-del-riesgo",
+    "title": "Covid",
+    "section": "Reducción del riesgo",
+    "text": "Reducción del riesgo",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas biológicas",
+      "COVID-19"
+    ]
+  },
+  {
+    "objectID": "grd/biologicos/covid.html#manejo-de-desastres",
+    "href": "grd/biologicos/covid.html#manejo-de-desastres",
+    "title": "Covid",
+    "section": "Manejo de desastres",
+    "text": "Manejo de desastres",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas biológicas",
+      "COVID-19"
+    ]
+  },
+  {
+    "objectID": "grd/biologicos/covid.html#ciencia",
+    "href": "grd/biologicos/covid.html#ciencia",
+    "title": "Covid",
+    "section": "Ciencia",
+    "text": "Ciencia",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas biológicas",
+      "COVID-19"
+    ]
+  },
+  {
+    "objectID": "grd/biologicos/covid.html#lecturas",
+    "href": "grd/biologicos/covid.html#lecturas",
+    "title": "Covid",
+    "section": "Lecturas",
+    "text": "Lecturas",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas biológicas",
+      "COVID-19"
+    ]
+  },
+  {
+    "objectID": "grd/ciudades.html",
+    "href": "grd/ciudades.html",
+    "title": "Ciudades",
+    "section": "",
+    "text": "Deep learning enables city-wide climate projections of street-level heat stress. Urban Climate 2025. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciudades"
+    ]
+  },
+  {
+    "objectID": "grd/ciudades.html#estrés-térmico",
+    "href": "grd/ciudades.html#estrés-térmico",
+    "title": "Ciudades",
+    "section": "",
+    "text": "Deep learning enables city-wide climate projections of street-level heat stress. Urban Climate 2025. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciudades"
+    ]
+  },
+  {
+    "objectID": "grd/ciudades.html#cartografia",
+    "href": "grd/ciudades.html#cartografia",
+    "title": "Ciudades",
+    "section": "Cartografia",
+    "text": "Cartografia\n\nGlobalBuildingAtlas: An Open Global and Complete Dataset of Building Polygons, Heights and LoD1 3D Models. 2025. Link\nThe World’s 2.75B Buildings. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Ciudades"
     ]
   },
   {
@@ -2258,338 +2368,296 @@
     ]
   },
   {
-    "objectID": "grd/biologicos/covid.html#instituciones-internacionales",
-    "href": "grd/biologicos/covid.html#instituciones-internacionales",
-    "title": "Covid",
-    "section": "Instituciones internacionales",
-    "text": "Instituciones internacionales",
+    "objectID": "grd/biologicos/index.html#hazard-information-profiles-hips-online-reference",
+    "href": "grd/biologicos/index.html#hazard-information-profiles-hips-online-reference",
+    "title": "Riesgos biológicos",
+    "section": "2025 Hazard Information Profiles (HIPs) online reference",
+    "text": "2025 Hazard Information Profiles (HIPs) online reference",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Amenazas biológicas",
-      "COVID-19"
+      "Amenazas biológicas"
     ]
   },
   {
-    "objectID": "grd/biologicos/covid.html#evaluación-del-riesgo",
-    "href": "grd/biologicos/covid.html#evaluación-del-riesgo",
-    "title": "Covid",
-    "section": "Evaluación del riesgo",
-    "text": "Evaluación del riesgo",
+    "objectID": "grd/biologicos/index.html#grupos-de-peligros-y-83-peligros-específicos",
+    "href": "grd/biologicos/index.html#grupos-de-peligros-y-83-peligros-específicos",
+    "title": "Riesgos biológicos",
+    "section": "6 grupos de peligros y 83 peligros específicos",
+    "text": "6 grupos de peligros y 83 peligros específicos\n\n\n\npeligro específico\nIdentificador\nGrupo\n\n\n\n\nEnfermedades zoonóticas\nBI0113\nEnfermedades infecciosas\n\n\nVirus del Zika\nBI0242\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nFiebre amarilla\nBI0241\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nFiebre del Nilo Occidental\nBI0240\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedades transmitidas por el agua\nBI0110\nEnfermedades infecciosas\n\n\nBrotes de enfermedades de plantas causadas por virus, fitoplasmas y viroides\nBI0503\nEnfermedades de las plantas\n\n\nFiebres hemorrágicas virales\nBI0109\nEnfermedades infecciosas\n\n\nEnfermedades transmitidas por vectores (ETV)\nBI0108\nEnfermedades infecciosas\n\n\nVaricela y herpes zóster\nBI0239\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedades prevenibles mediante vacunación\nBI0107\nEnfermedades infecciosas\n\n\nFiebre tifoidea\nBI0226\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nTuberculosis\nBI0237\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nTripanosomiasis\nBI0238\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nenvenenamiento por mordedura de serpiente\nBI0605\nOtros riesgos biológicos\n\n\nViruela\nBI0235\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedad del camarón (bacteriana) - Necrosis hepática pancreática aguda\nBI0314\nEnfermedades infecciosas animales\n\n\nShigelosis\nBI0234\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nInfecciones de transmisión sexual\nBI0106\nEnfermedades infecciosas\n\n\nSíndrome Respiratorio Agudo Severo (SARS)\nBI0236\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nGripe estacional\nBI0243\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nRotavirus\nBI0233\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nPeste bovina\nBI0312\nEnfermedades infecciosas animales\n\n\nFiebre del Valle del Rift\nBI0311\nEnfermedades infecciosas animales\n\n\nRabia\nBI0232\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nFiebre Q\nBI0231\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedades priónicas\nBI0230\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nPolio\nBI0229\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nPlaga\nBI0228\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nPeste des Petits Ruminants\nBI0310\nEnfermedades infecciosas animales\n\n\nTos ferina (humana)\nBI0227\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nfiebre paratifoidea\nBI0225\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nGripe pandémica (humana)\nBI0244\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedad de las ostras en la acuicultura\nBI0313\nEnfermedades infecciosas animales\n\n\nEnfermedad de Newcastle\nBI0308\nEnfermedades infecciosas animales\n\n\nGusano barrenador del Nuevo Mundo (NWS)\nBI0309\nEnfermedades infecciosas animales\n\n\nEnfermedades tropicales desatendidas\nBI0105\nEnfermedades infecciosas\n\n\nMpox\nBI0224\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nSíndrome Respiratorio de Oriente Medio (MERS)\nBI0223\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nMeningitis meningocócica\nBI0222\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nSarampión\nBI0221\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedad por el virus de Marburgo\nBI0220\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nMalaria\nBI0219\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedad de la piel nodular\nBI0307\nEnfermedades infecciosas animales\n\n\nplaga de langostas\nBI0402\nEnfermedades transmitidas por insectos\n\n\nListeriosis\nBI0218\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nLeptospirosis\nBI0217\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nLepra\nBI0216\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nFiebre de Lassa\nBI0215\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEspecies invasoras, incluidas las malas hierbas\nBI0403\nEnfermedades transmitidas por insectos\n\n\nInfestaciones de plagas de insectos\nBI0401\nEnfermedades transmitidas por insectos\n\n\nEnfermedades infecciosas de los animales (no zoonosis)\nBI0301\nEnfermedades infecciosas animales\n\n\nConflicto entre humanos y fauna silvestre\nBI0604\nOtros riesgos biológicos\n\n\nVIH y SIDA\nBI0214\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nHepatitis C\nBI0213\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nHepatitis B\nBI0212\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nHepatitis A\nBI0211\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nFloraciones de algas nocivas\nBI0603\nOtros riesgos biológicos\n\n\nEnfermedad fúngica de las plantas\nBI0502\nEnfermedades de las plantas\n\n\nFiebre aftosa\nBI0306\nEnfermedades infecciosas animales\n\n\nEnfermedades transmitidas por los alimentos\nBI0104\nEnfermedades infecciosas\n\n\nEscherichia coli (STEC)\nBI0210\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nÉbola\nBI0209\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nDifteria\nBI0208\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedades diarreicas\nBI0103\nEnfermedades infecciosas\n\n\nDengue\nBI0207\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\ncisticercosis\nBI0112\nEnfermedades infecciosas\n\n\nCriptosporidio\nBI0111\nEnfermedades infecciosas\n\n\nFiebre hemorrágica de Crimea-Congo\nBI0206\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nCOVID-19 (SARS-CoV-2)\nBI0205\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nPleuroneumonía caprina contagiosa (PPCC)\nBI0305\nEnfermedades infecciosas animales\n\n\nPleuroneumonía bovina contagiosa (CBPP)\nBI0304\nEnfermedades infecciosas animales\n\n\nPeste porcina clásica\nBI0303\nEnfermedades infecciosas animales\n\n\nCólera\nBI0204\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nChikungunya\nBI0203\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nBrucelosis\nBI0202\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nVirus transmitidos por la sangre\nBI0102\nEnfermedades infecciosas\n\n\nAgentes biológicos\nBI0602\nOtros riesgos biológicos\n\n\nEnfermedad bacteriana de las plantas\nBI0501\nEnfermedades de las plantas\n\n\nGripe aviar\nBI0245\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nResistencia antimicrobiana\nBI0601\nOtros riesgos biológicos\n\n\nÁntrax\nBI0201\nEnfermedades infecciosas específicas de interés para la salud pública\n\n\nEnfermedades transmitidas por el aire\nBI0101\nEnfermedades infecciosas\n\n\nPeste porcina africana\nBI0302\nEnfermedades infecciosas animales",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Amenazas biológicas",
-      "COVID-19"
+      "Amenazas biológicas"
     ]
   },
   {
-    "objectID": "grd/biologicos/covid.html#comunicación-del-riesgo",
-    "href": "grd/biologicos/covid.html#comunicación-del-riesgo",
-    "title": "Covid",
-    "section": "Comunicación del riesgo",
-    "text": "Comunicación del riesgo",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas biológicas",
-      "COVID-19"
-    ]
-  },
-  {
-    "objectID": "grd/biologicos/covid.html#reducción-del-riesgo",
-    "href": "grd/biologicos/covid.html#reducción-del-riesgo",
-    "title": "Covid",
-    "section": "Reducción del riesgo",
-    "text": "Reducción del riesgo",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas biológicas",
-      "COVID-19"
-    ]
-  },
-  {
-    "objectID": "grd/biologicos/covid.html#manejo-de-desastres",
-    "href": "grd/biologicos/covid.html#manejo-de-desastres",
-    "title": "Covid",
-    "section": "Manejo de desastres",
-    "text": "Manejo de desastres",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas biológicas",
-      "COVID-19"
-    ]
-  },
-  {
-    "objectID": "grd/biologicos/covid.html#ciencia",
-    "href": "grd/biologicos/covid.html#ciencia",
-    "title": "Covid",
-    "section": "Ciencia",
-    "text": "Ciencia",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas biológicas",
-      "COVID-19"
-    ]
-  },
-  {
-    "objectID": "grd/biologicos/covid.html#lecturas",
-    "href": "grd/biologicos/covid.html#lecturas",
-    "title": "Covid",
-    "section": "Lecturas",
-    "text": "Lecturas",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas biológicas",
-      "COVID-19"
-    ]
-  },
-  {
-    "objectID": "grd/conocimiento-indicadores.html#lecturas",
-    "href": "grd/conocimiento-indicadores.html#lecturas",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "Lecturas",
-    "text": "Lecturas\n\nNatural hazard risk assessments at the global scale. 2020. NHESS. Link.\nIs the number of global natural disasters increasing? 2022. Environmental Hazards. Link.\nIncompleteness of natural disaster data and its implications on the interpretation of trends. 2024. Environmental Hazards. Link.\nThe number of natural disasters is zero: commentary to “is the number of global natural disasters increasing?” 2024. Link.\nComments on the short communication: The number of natural disasters is zero: commentary to “Is the number of global natural disasters increasing?” 2025. Link.\nIs the number of natural disasters increasing? 2024. Link.\nWeather-related disasters increase over past 50 years, causing more damage but fewer deaths. 2021. OMS. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
-    ]
-  },
-  {
-    "objectID": "grd/conocimiento-indicadores.html#emdat",
-    "href": "grd/conocimiento-indicadores.html#emdat",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "EmDat",
-    "text": "EmDat\n\nEM-DAT International Disaster Database. Link.\n\nEM-DAT Documentation. Link.\nEM-DAT: the Emergency Events Database. Link\n\n\n\n\n\nEmDat\n\n\n EmDat",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
-    ]
-  },
-  {
-    "objectID": "grd/conocimiento-indicadores.html#inform-risk-index",
-    "href": "grd/conocimiento-indicadores.html#inform-risk-index",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "Inform Risk Index",
-    "text": "Inform Risk Index\n\nInform Risk Index. Link. Link.\n\nLatin America and Caribbean. Link.\n\n\n\n\n\nINFORM Subnational Risk Index\n\n\n\n\n\nColombia World Risk Report",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
-    ]
-  },
-  {
-    "objectID": "grd/conocimiento-indicadores.html#world-risk-index",
-    "href": "grd/conocimiento-indicadores.html#world-risk-index",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "World Risk Index",
-    "text": "World Risk Index\n\nWorld Risk Index. Link. Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
-    ]
-  },
-  {
-    "objectID": "grd/conocimiento-indicadores.html#the-world-risk-report",
-    "href": "grd/conocimiento-indicadores.html#the-world-risk-report",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "The World Risk report",
-    "text": "The World Risk report\n\nThe World Risk report. Link.\n\n\n\n\n\nThe World Risk Report",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
-    ]
-  },
-  {
-    "objectID": "grd/conocimiento-indicadores.html#pacific-disaster-center",
-    "href": "grd/conocimiento-indicadores.html#pacific-disaster-center",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "Pacific Disaster Center",
-    "text": "Pacific Disaster Center\nGlobal Disaster Risk Trends. Select a country to view 10-year national trends.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
-    ]
-  },
-  {
-    "objectID": "grd/conocimiento-indicadores.html#world-economic-forum",
-    "href": "grd/conocimiento-indicadores.html#world-economic-forum",
-    "title": "Indicadores de riesgo de desastres",
-    "section": "World Economic Forum",
-    "text": "World Economic Forum\n\nGlobal Risks Report 2024. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Indicadores de riesgo nacionales y mundiales"
-    ]
-  },
-  {
-    "objectID": "grd/manejodedesastres.html",
-    "href": "grd/manejodedesastres.html",
-    "title": "Manejo de desastres",
+    "objectID": "grd/cursos.html",
+    "href": "grd/cursos.html",
+    "title": "Cursos, entrenamiento y redes",
     "section": "",
-    "text": "Reliefweb. Link.\nOXFAM. Link.",
+    "text": "The Australian Disaster Resilience Knowledge Hub\n\nEmergency planning collection. Link.\nDisasters. Link.\nGlossary. Link.\nEmergency Management Library. Link.\nRecovery Matters webinar series. Link.\nThe Australian Institute for Disaster Resilience. Link\n\nCONVERGE Training Modules. Link.\nDisaster Reduction Learning Center (DRLC). Link.\nRegional DDR e-learning platform. Link.\nThe National Disaster & Emergency Management University. FEMA. Link.\n\nIndependent Study Program. Link.\nCurriculum. Link.\n\nPacific Disaster Center. Online Courses. Link.\nDisaster Risk Management Training Center. Link.\n\nTraining Corner. Link.\nDisaster Risk Management Training online series 2022. European Commision. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Manejo de desastres"
+      "Cursos, redes y recursos",
+      "Cursos en GRD"
     ]
   },
   {
-    "objectID": "grd/manejodedesastres.html#lecturas",
-    "href": "grd/manejodedesastres.html#lecturas",
-    "title": "Manejo de desastres",
+    "objectID": "grd/cursos.html#el-riesgo-en-la-sociedad-moderna",
+    "href": "grd/cursos.html#el-riesgo-en-la-sociedad-moderna",
+    "title": "Cursos, entrenamiento y redes",
+    "section": "El riesgo en la sociedad moderna",
+    "text": "El riesgo en la sociedad moderna\n\n\n\n 1.1 The History of Risk\n\n\n 1.2 The Study of Risk: Security Studies\n\n\n\n\n 1.3 The Study of Risk: Safety Science\n\n\n 2.1 Risk Management\n\n\n\n\n 2.6 Risk Management: Strengths and Weaknesses\n\n\n 3.1 Risk Perception\n\n\n\n\nCoursera.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Cursos, redes y recursos",
+      "Cursos en GRD"
+    ]
+  },
+  {
+    "objectID": "grd/cursos.html#building-resilience-to-compound-and-cascading-disaster-risks",
+    "href": "grd/cursos.html#building-resilience-to-compound-and-cascading-disaster-risks",
+    "title": "Cursos, entrenamiento y redes",
+    "section": "Building resilience to compound and cascading disaster risks",
+    "text": "Building resilience to compound and cascading disaster risks\n\n\n\n Building resilience to compound and cascading disaster risks\n\n\n Lesson 1：Compound and cascading disaster risks. What are they?\n\n\n\n\n Lesson 2：Six steps of disaster risk assessment\n\n\n Lesson 3：Designing resilience enhancing measures\n\n\n\n\n Lesson 4：Adaptive implementation framework\n\n\n Conclusion：Summary of the course",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Cursos, redes y recursos",
+      "Cursos en GRD"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html",
+    "href": "grd/conocimientodelriesgo.html",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "",
+    "text": "Procesos de la gestión del riesgo de desastres acorde con la ley 1523 de 2012",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#monitoreo-de-las-amenazas",
+    "href": "grd/conocimientodelriesgo.html#monitoreo-de-las-amenazas",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Monitoreo de las amenazas",
+    "text": "Monitoreo de las amenazas\n\nVisores Colombia\n\nSAMA Antioquía. DAGRAN. Link.\nSIATA. Valle de Aburrá. Link.\n\n\n\nRecursos\n\nRemote Sensing Tutorials. Government of Canada. Link.\nGee-community-catalog. Link.\nGeemap. Link.\nCloud-Based Remote Sensing with Google Earth Engine: Fundamentals and Applications. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#escenarios-de-riesgo",
+    "href": "grd/conocimientodelriesgo.html#escenarios-de-riesgo",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Escenarios de riesgo",
+    "text": "Escenarios de riesgo\n\nEffectiveness of California earthquake scenarios in motivating mitigation. Earthquake spectra. 2025. Link.\n\n SimCenter: A computational framework to simulate the impacts of natural hazards",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#lecturas",
+    "href": "grd/conocimientodelriesgo.html#lecturas",
+    "title": "Conocimiento del riesgo de desastres",
     "section": "Lecturas",
-    "text": "Lecturas\n\nWe need to predict the people disasters will hit, not just the places. Nature 2025. Link.",
+    "text": "Lecturas\n\nRethinking policy on high mountain cascading hazards. Nature Geoscience. 2025. Link.\n\n“Marcos globales como el Marco de Sendai y los Objetivos de Desarrollo Sostenible de las Naciones Unidas siguen tratando los multiamenazas como eventos individuales coexistentes, en lugar de como interacciones en cascada6,7. Igualmente crítico es que las políticas tampoco tienen suficientemente en cuenta la frecuencia y la magnitud de los fenómenos extremos que cambian con el clima, lo que significa que los intervalos de recurrencia de los peligros estimados a partir de estadísticas históricas ya no representan con precisión el riesgo. Sin un cambio fundamental de perspectiva, las políticas, y por ende su implementación, seguirán subestimando la magnitud y la complejidad de las interacciones en cascada, especialmente en las regiones de alta montaña.”",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "Manejo de desastres"
+      "Conocimiento del riesgo"
     ]
   },
   {
-    "objectID": "grd/hidrol-meteorologicas/inundaciones.html",
-    "href": "grd/hidrol-meteorologicas/inundaciones.html",
-    "title": "Inundaciones",
+    "objectID": "grd/conocimientodelriesgo.html#física",
+    "href": "grd/conocimientodelriesgo.html#física",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Física",
+    "text": "Física\n\nThe use of empirical vulnerability functions to assess the response of buildings to tsunami impact: Comparative review and summary of best practice. Tarbotton, et al. Earth Science Reviews. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#social",
+    "href": "grd/conocimientodelriesgo.html#social",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Social",
+    "text": "Social\n\nIndicador de Condiciones de Vulnerabilidad Urbana. 2023. GFDRR. Link.\nLineamientos para el análisis de la vulnerabilidad social en los estudios de la gestión municipal del riesgo de desastres. UNGRD. 2017. Link.\n\nPDC. Vulnerability Indicators. PDC’s vulnerability analysis measures the physical, environmental, social, and economic conditions and processes that increase susceptibility of communities and systems to the damaging effects of hazards. Multiple factors influencing disaster outcomes, including those linked to poverty and development, are considered in the analysis.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#artículos-científicos",
+    "href": "grd/conocimientodelriesgo.html#artículos-científicos",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Artículos científicos",
+    "text": "Artículos científicos\n\nWe need to predict the people disasters will hit, not just the places. Nature 2025. Link.\nTerritorial vulnerability assessment frame in Colombia: Disaster risk management. Villegast et al. 2017. IJDRM. Link.\nFraming vulnerability, risk and societal responses: the MOVE framework. Natural Hazards. 2013. Link.\nSocial vulnerability in Colombia. 2020. IJDRR. Link.\nSocial vulnerability in a multi-hazard context: a systematic review. Environmental Research Letters. 2022. Link.\nCardona, O.D.: The need for rethinking the concepts of vulnerability and risk from a holistic perspective: a necessary review and criticism for effective risk management. In: Indicators of Risk Management and Vulnerability Reduction: Case Studies in Latin American Urban Areas, United Nations University, Institute for Environment and Human Security (2011). Link.\nExplaining differential vulnerability to climate change: A social science review. Wires Climate Change. 2018. Link.\nUnderstanding human vulnerability to climate change: A global perspective on index validation for adaptation planning. Science of The Total Environment. 2022. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#metodologias",
+    "href": "grd/conocimientodelriesgo.html#metodologias",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Metodologias",
+    "text": "Metodologias\n\nUnderstanding disaster risk: foundational concepts and principles. UNDRR. Link.\n\nWhy reducing risk matters\nComponents of risk\nRisk drivers\nKey concepts\nThe DRR glossary\nEngage in DRR\n\nDisaster, Planning and Development: Managing Natural Hazards to Reduce Loss. OEA. Link, Link.\nBernal G.A., Cardona OD., Marulanda M.C., Carreño ML. (2021) Dealing with Uncertainty Using Fully Probabilistic Risk Assessment for Decision-Making. In: Eslamian S., Eslamian F. (eds) Handbook of Disaster Risk Reduction for Resilience. Springer, Cham. https://doi.org/10.1007/978-3-030-61278-8_14\nOregon Natural Hazards Risk Assessment Upgrade. Link. Link. Youtube\nHow to develop a risk and vulnerability assessment. 2025. JRC. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#metodologías-de-fema",
+    "href": "grd/conocimientodelriesgo.html#metodologías-de-fema",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Metodologías de FEMA",
+    "text": "Metodologías de FEMA\n\nNational Risk Index Documentation. Link.\nNational Risk Index for Natural Hazards. Visor.\nNational Risk Index Hazard Info Table\nUpdating the Indicators of Disaster Risk and Risk Management for the Americas. 2011. Link.\nEarthquake Hazard Maps. Link.\nFlood Map. Link.\n\n\n\n\n Physical and social vulnerability for the multi-hazard risk analysis of components and systems\n\n\n Mapping Risk: The National Risk Index for Natural Hazards\n\n\n\n\n Risk Modeling and Management for Natural Disasters: Innovation by the Numbers. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#herramientas-para-el-análisis-de-riesgos",
+    "href": "grd/conocimientodelriesgo.html#herramientas-para-el-análisis-de-riesgos",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Herramientas para el análisis de riesgos",
+    "text": "Herramientas para el análisis de riesgos\n\nThe CAPRA (Probabilistic Risk Assessment) Platform. Link.\nCuadernos de trabajo (ver repositorios)\nSoftware\n\nWORLD BANK CLIMATE AND DISASTER RISK SCREENING TOOLS. Link\nRisk Data Library. Country Climate & Disaster Risk Screening Tools. Link.\nRisk Changes. An open-source Spatial Decision Support tool for the analysis of Dynamic Multi-Hazard risk. Link.\n\nDocumentation. Link.\n\n\n\n\n\n\n Introduction\n\n\n Hazard\n\n\n\n\nArtículos científicos\n\nA review of risk analysis methods for natural disasters. Nat Hazards 100, 571–593. Sun, R. et al. 2020. Link\nHybrid loss exceedance curve (HLEC) for disaster risk assessment. Velazquez et al. 2020. Link\nAssessing global exposure and vulnerability towards natural hazards: the Disaster Risk Index. Peduzzi, et al. 2009, Nat. Hazards Earth Syst. Link\n\n\n\n\n\n Lesson 2：Six steps of disaster risk assessment\n\n\n Building resilience to compound and cascading disaster risks\n\n\n\n\n Webinar Modern Technology in Disaster Management: The Challenges\n\n\n Integrated Risk management in Civil Protection\n\n\n\n\n Modelo mundial de riesgo en la infraestructura\n\n\n Risk Analysis for Civil Protection\n\n\n\n\n Using Exceedance Probabilities for Disaster Management\n\n\nEvaluación del riesgo",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#evaluación-del-riesgo-en-la-infraestructura-escolar",
+    "href": "grd/conocimientodelriesgo.html#evaluación-del-riesgo-en-la-infraestructura-escolar",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Evaluación del riesgo en la infraestructura escolar",
+    "text": "Evaluación del riesgo en la infraestructura escolar\n\nWebinar ‘Community Hazard Risk Tools: Structural Fragility and Vulnerability and System Reliability Mapping’ by the UNESCO Chair in DRR & RE, UCL. Link.\n\nGithub repository.\n\n\n\n\n\n Community Hazard Risk Tools: Structural Frag. and Vuln. and System Reliability Mapping Day 1\n\n\n Day 2",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#eventos-en-cascada",
+    "href": "grd/conocimientodelriesgo.html#eventos-en-cascada",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Eventos en cascada",
+    "text": "Eventos en cascada\n\nCascading hazards and compound disasters. NPJ Natural Hazards. 2025. Link",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#eventos-compuestos",
+    "href": "grd/conocimientodelriesgo.html#eventos-compuestos",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Eventos compuestos",
+    "text": "Eventos compuestos\n\nGuidelines for Studying Diverse Types of Compound Weather and Climate Events. 2021. Link\nHigh impact compound events in Australia. Link\nSignificantly wetter or drier future conditions for one to two thirds of the world’s population. 2024. Nature Comm. Link\n\n\n\n\n Guidelines for studying diverse types of compound weather and climate events\n\n\nEventos compuestos",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#eventos-extremos",
+    "href": "grd/conocimientodelriesgo.html#eventos-extremos",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Eventos extremos",
+    "text": "Eventos extremos\n\nWhat is detection and attribution? ARC. Link.\nIPCC AR6. Weather and climate extreme events in changing climate. Link\nTOP 10 THINGS TO KNOW ABOUT EXTREME EVENT ATTRIBUTION. Climate Central. Link\nAttribution of Extreme Events to Climate Change. Annual Review of Environment and Resourses. 2023. Link\nClimate-Informed Risk Assessment for Extreme Events. AGU 24. Link.\nAlguna evidencia para Colombia. Link. Link. Link. Link. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#disaster-forensics---undrr",
+    "href": "grd/conocimientodelriesgo.html#disaster-forensics---undrr",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Disaster Forensics - UNDRR",
+    "text": "Disaster Forensics - UNDRR\nLas siguientes preguntas describen un cuestionario simplificado para realizar un análisis forense de cualquier desastre. Las preguntas siguen los tres pasos clave de la metodología FORIN (Investigaciones Forenses de Desastres) (UNDRR. Disaster Forensics. Link)\n\n\nPASO 1 – COMPRENDER EL ADN DEL DESASTRE\n\nAnalizar los factores específicos de peligro, exposición y vulnerabilidad que hicieron de este desastre un desastre único y significativo. Esto implica un análisis descriptivo del peligro, la exposición, las condiciones inseguras y los patrones subsiguientes de daños, pérdidas e impacto.\n¿Qué pasó? (Peligro)\n\n¿Qué desencadenó el acontecimiento?\n¿El evento principal condujo a eventos secundarios relacionados? Por ejemplo, ¿causó el terremoto deslizamientos de tierra o roturas de presas que provocaron inundaciones?\n\n¿Dónde se concentró el daño? (Exposición)\n\n¿Cómo se expusieron los elementos sociales y ambientales?\n¿Cómo ha evolucionado la exposición a lo largo del tiempo y el espacio en relación con el desarrollo planificado o no planificado y las amenazas físicas?\n¿Las regulaciones de zonificación, los controles de uso del suelo y los códigos de infraestructura eran adecuados para los niveles de riesgo existentes en diferentes áreas?\n¿Los cambios en los niveles de exposición se debieron a decisiones sociales sobre la ubicación o a cambios en el entorno físico? ¿Cuál fue el papel de la deforestación, el diseño y la construcción urbana, o incluso el cambio climático?\n\n\n\n¿Cuál era la estructura social y económica de las comunidades expuestas?\n¿Cómo se distribuyeron las pérdidas y los daños entre diferentes áreas, grupos sociales y tipos de infraestructura?\n¿Qué factores influyeron en la expansión territorial? ¿Se ocuparon las zonas más seguras antes que las más vulnerables?\n¿Las leyes y normas ambientales abordaron las preocupaciones sobre peligros y vulnerabilidad?\n¿Existió una relación clara entre la exposición a peligros y los niveles de pobreza? ¿Cómo aumentaron los factores de riesgo crónicos (desempleo, mala salud, drogadicción o violencia personal y social) el riesgo y el impacto de los desastres?\n¿Existe una legislación adecuada a nivel nacional y local, incluidos códigos de construcción, aplicación y especificidad en cuestiones de gestión de riesgos?\n¿Existe un seguro contra pérdidas o responsabilidad civil? ¿Es obligatorio?\n¿Se integró la gestión del riesgo de desastres en otras áreas de políticas como la planificación urbana, la gestión ambiental y los seguros?\n¿Existen capacidades de investigación y educación centradas en la concientización sobre los riesgos y la cobertura de seguros?\n\n¿Quién sufrió más y por qué? (vulnerabilidad)\n\n¿Cómo contribuyeron el crecimiento y la distribución de la población en el pasado al desastre?\n¿Qué papel desempeñaron la degradación ambiental y el agotamiento de los servicios ecosistémicos?\n¿Cuáles fueron los impactos de la pobreza y la distribución del ingreso?\n\n¿Qué fue resiliente?\n¿Cuáles fueron los elementos institucionales y de gobernanza que contribuyeron a la resiliencia?\nResultado del Paso 1 = Identificación de las cadenas de ADN clave (puntos de inflexión únicos) que hicieron de este desastre algo único. La inclusión de relatos del desastre y conversaciones con las personas afectadas puede profundizar el análisis y proporcionar una visión realista de las acciones propuestas para la reducción del riesgo.\n\n\n\nPASO 2 – TENDENCIAS FUTURAS\n\nAnalice más a fondo las áreas clave identificadas del ADN del desastre y prediga las posibles tendencias futuras hasta 2050. Por ejemplo, si la urbanización y los asentamientos informales fueron los principales contribuyentes a los daños causados ​​por las inundaciones, ¿cuáles son las tendencias actuales y futuras probables para la urbanización y los asentamientos informales?\nResultado del paso 2 = Realizar un análisis de previsión futura para identificar qué áreas de riesgo actual es probable que aumenten en el futuro.\n\n\n\nPASO 3 – APRENDIZAJE FORENSE\n\nFacilitar un debate entre múltiples partes interesadas para revisar y refinar el análisis, creando conjuntamente políticas potenciales y acciones prácticas para reducir el riesgo asociado con cada cadena de ADN identificada, considerando los impactos del desastre y los escenarios futuros",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#lecturas-varias",
+    "href": "grd/conocimientodelriesgo.html#lecturas-varias",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Lecturas varias",
+    "text": "Lecturas varias\n\nThe Hazards Posed by Mesoscale Lightning Megaflashes. Link.\nGMT Tutorial is an open source collection of ~65 tools for manipulating geographic and Cartesian data sets. Link\nHow smartphones are being used to monitor ageing bridges. Link.\nTHE COST OF DOING NOTHING. Link.\n97% de los POT no tiene estudios de amenazas y riesgo urbano. El Nuevo Siglo. Link.\nLos desastres no son naturales. El País. Link.",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/hidrol-meteorologicas/elnino.html",
+    "href": "grd/hidrol-meteorologicas/elnino.html",
+    "title": "El Niño/La Niña Oscilación del Sur",
     "section": "",
-    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link",
+    "text": "Extraordinary animation reveals ocean’s role in El Niños\n\nInstituciones nacionales\n\n\nInstituciones internacionales\n\nOSHA. El fenónemo de El Niño. Link\n\n\n\n\n\n\n\nMecanismos y procesos\n\nNOAA El Nino Southern Oscillation. Link.\nEl Niño & La Niña (El Niño-Southern Oscillation) - Climate.gov. Link.\nENSO @ the Australian Bureau of Meteorology. Link.\nMultivariate ENSO Index Version 2 (MEI.v2). Link.\nEl Niño and La Niña Years and Intensities. Link.\nKelvin wave Link.\nRossby wave. Link.\n\n El Nino - What is it?\n\n\nPronóstico\n\nThe El Niño/Southern Oscillation 2015-17: Analysis and Predictions. Steve Paton Physical Monitoring Program. STRI. Link.\nEl Niño and La Niña Years and Intensities. Link.\nForecasting El Niño-Southern Oscillation (ENSO). Link.\n\n\n\nImpactos\n\nInvestigating Coral Bleaching Using Data in the Classroom. Link\nBleaching observations (1963-2010). WRI. Link.\nCoral Reefs Special issue: The 2014-2017 Global Coral Bleaching Event: Drivers, Impacts, and Lessons Learned Volume 38, Issue 4, August 2019. Link.\nNASA Data, Trainings Help Uruguay Navigate Drought. Link\n\n\n\nOtros\n\nPacific Decadal Oscillation (PDO). Link.\nClimate Indices. Link.\n\n\n\nLecturas\n\nDo you know that El Niño has a little brother?. Link.\n¿La frecuencia de ENOS se incrementará con el cambio climático global?\n\nEl Niño events will intensify under global warming. Nature 2018. Link.\nIncreased variability of eastern Pacific El Niño under greenhouse warming. Nature 2018. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas hidrológicas y meteorológicas",
-      "Inundaciones"
+      "El Niño / La Niña"
     ]
   },
   {
-    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#instituciones-nacionales",
-    "href": "grd/hidrol-meteorologicas/inundaciones.html#instituciones-nacionales",
-    "title": "Inundaciones",
-    "section": "",
-    "text": "UNGRD. Link\nMinambiente.\nIDEAM. Link\nFondo Adaptación\nBomberos de Colombia. Link",
+    "objectID": "grd/hidrol-meteorologicas/index.html#hazard-information-profiles-hips-online-reference",
+    "href": "grd/hidrol-meteorologicas/index.html#hazard-information-profiles-hips-online-reference",
+    "title": "Riesgo por amenazas hidrológicas y meteorologicas",
+    "section": "2025 Hazard Information Profiles (HIPs) online reference",
+    "text": "2025 Hazard Information Profiles (HIPs) online reference",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas hidrológicas y meteorológicas"
+    ]
+  },
+  {
+    "objectID": "grd/hidrol-meteorologicas/index.html#meteorológico-e-hidrológico",
+    "href": "grd/hidrol-meteorologicas/index.html#meteorológico-e-hidrológico",
+    "title": "Riesgo por amenazas hidrológicas y meteorologicas",
+    "section": "Meteorológico e Hidrológico",
+    "text": "Meteorológico e Hidrológico\n8 grupos de peligros y 53 peligros específicos\n\n\n\nPeligro específico\nIdentificador\nGrupo\n\n\n\n\nViento\nMH0301\nRelacionado con el viento\n\n\nTsunami\nMH0705\nMarina\n\n\nCiclón tropical\nMH0309\nRelacionado con el viento\n\n\nTornado\nMH0305\nRelacionado con el viento\n\n\nTormenta\nMH0103\nRelacionado con la convección\n\n\nDeshielo\nMH0510\nRelacionado con la temperatura\n\n\nInundaciones de aguas superficiales\nMH0606\nInundación\n\n\nCiclón subtropical\nMH0308\nRelacionado con la presión\n\n\nMareas de tormenta\nMH0704\nMarina\n\n\nMarejada ciclónica\nMH0703\nMarina\n\n\nChubasco\nMH0304\nRelacionado con el viento\n\n\nInundación por deshielo\nMH0610\nInundación\n\n\nTormenta de nieve\nMH0406\nPrecipitación relacionada\n\n\nNieve\nMH0405\nPrecipitación relacionada\n\n\nFumar\nMH0205\nLitómetros\n\n\nSeiche\nMH0702\nMarina\n\n\nHielo marino (Icebergs)\nMH0706\nMarina\n\n\nNiebla de arena\nMH0204\nLitómetros\n\n\nOla gigante\nMH0701\nMarina\n\n\nLluvia\nMH0402\nPrecipitación relacionada\n\n\nInundación por encharcamiento (drenaje)\nMH0609\nInundación\n\n\nOla de calor marina\nMH0708\nMarina\n\n\nRelámpago (Tormenta eléctrica)\nMH0102\nRelacionado con la convección\n\n\nFormación de hielo (incluido el hielo)\nMH0509\nRelacionado con la temperatura\n\n\nInundación por acumulación de hielo, incluidos escombros\nMH0608\nInundación\n\n\nFlujo de hielo\nMH0707\nMarina\n\n\nOla de calor\nMH0501\nRelacionado con la temperatura\n\n\nBruma\nMH0203\nLitómetros\n\n\nGranizo\nMH0404\nPrecipitación relacionada\n\n\nInundaciones de aguas subterráneas\nMH0605\nInundación\n\n\nEscarcha en el suelo\nMH0508\nRelacionado con la temperatura\n\n\nVidriado\nMH0507\nRelacionado con la temperatura\n\n\nInundación por desbordamiento de un lago glacial\nMH0607\nInundación\n\n\nGale (Vendaval fuerte)\nMH0303\nRelacionado con el viento\n\n\nEscarcha (Escarcha)\nMH0505\nRelacionado con la temperatura\n\n\nLluvia helada (Tormenta de hielo)\nMH0506\nRelacionado con la temperatura\n\n\nCongelar\nMH0504\nRelacionado con la temperatura\n\n\nNiebla\nMH0202\nLitómetros\n\n\nInundaciones fluviales\nMH0604\nInundación\n\n\nInundación\nMH0600\nInundación\n\n\nInundación repentina\nMH0603\nInundación\n\n\nCiclón extratropical\nMH0307\nRelacionado con la presión\n\n\nInundaciones estuarinas (costeras)\nMH0602\nInundación\n\n\nDzud\nMH0503\nRelacionado con la temperatura\n\n\nTormenta de polvo o tormenta de arena\nMH0201\nLitómetros\n\n\nSequía\nMH0401\nPrecipitación relacionada\n\n\nExplosión descendente\nMH0101\nRelacionado con la convección\n\n\nDerecho\nMH0302\nRelacionado con el viento\n\n\nDepresión o Ciclón (Zona de Baja Presión)\nMH0306\nRelacionado con la presión\n\n\nOla de frío\nMH0502\nRelacionado con la temperatura\n\n\nVentisca\nMH0403\nPrecipitación relacionada\n\n\nAvalancha\nMH0801\nTerrestre",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Amenazas hidrológicas y meteorológicas"
+    ]
+  },
+  {
+    "objectID": "grd/hidrol-meteorologicas/huracanes.html#histórico-de-huracanes",
+    "href": "grd/hidrol-meteorologicas/huracanes.html#histórico-de-huracanes",
+    "title": "Huracanes",
+    "section": "Histórico de huracanes",
+    "text": "Histórico de huracanes\n\nHistorical Hurricane Tracks. NOAA. Link.\nUniSys -  Hurricane/Tropical Data. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas hidrológicas y meteorológicas",
-      "Inundaciones"
+      "Huracanes"
     ]
   },
   {
-    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#instituciones-internacionales",
-    "href": "grd/hidrol-meteorologicas/inundaciones.html#instituciones-internacionales",
-    "title": "Inundaciones",
-    "section": "Instituciones internacionales",
-    "text": "Instituciones internacionales\n\nEmergency Copernicus. Link\nEuropean Commission. River Flood Hazard Maps at European and Global Scale. Link.",
+    "objectID": "grd/hidrol-meteorologicas/huracanes.html#visores",
+    "href": "grd/hidrol-meteorologicas/huracanes.html#visores",
+    "title": "Huracanes",
+    "section": "Visores",
+    "text": "Visores\n\n\n\n\n[Real Time Tropical Cyclones](https://polarwx.com/tropical/)",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas hidrológicas y meteorológicas",
-      "Inundaciones"
+      "Huracanes"
     ]
-  },
-  {
-    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#amenaza-por-inundaciones",
-    "href": "grd/hidrol-meteorologicas/inundaciones.html#amenaza-por-inundaciones",
-    "title": "Inundaciones",
-    "section": "Amenaza por inundaciones",
-    "text": "Amenaza por inundaciones\n\n\n\n[Space-based Measurement, Mapping, and Modeling of Surface Water For Research, Humanitarian, and Water Resources Applications](https://floodobservatory.colorado.edu/index.html)\n\n\n\nFEMA. Hazus. Link\nEurope floods: new tool to estimate water depth and extent. 2024. Link.\nSatellite imaging reveals increased proportion of population exposed to floods. Nature, 2021. Link.\nThe fraction of the global population at risk of floods is growing. Nature News. 2021. Link.\nARSET – Monitoring and Modeling Floods using Earth Observations. NASA. Link.\nGlobal Floods. Link - What’s in Floodwaters? Link.\n\n\n\n\nThe share of people living in high-risk flood zones. Source: Rentschler, J, Salhab, M and Jafino, B. 2022. Flood Exposure and Poverty in 188 Countries. Nature Communications. Link.\n\n\n\n\n\nThe share of population that is flood-exposed and living und $5.50 per day. Source: Rentschler, J, Salhab, M and Jafino, B. 2022. Flood Exposure and Poverty in 188 Countries. Nature Communications.\n\n\n\n\n\nPercentage of the population in each sub-national administrative region that live on floodplains, which is defined as the 1000-year flood extent. The proportion of the reaches that are in each of the floodplain categories for each region is shown by the top pie charts in each box. The proportion of the population settled on the different types of floodplains is shown by the bottom pie chart in each box. Link\n\n\n\n\n\n\n\n\n\n\n\n\n\n Part 1: Overview of Flood Monitoring Tools based on Remote Sensing Observations\n\n\n\n\n\n\n\n Introduction to Flood Risk Management",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas hidrológicas y meteorológicas",
-      "Inundaciones"
-    ]
-  },
-  {
-    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#evaluación-del-riesgo-por-inundaciones",
-    "href": "grd/hidrol-meteorologicas/inundaciones.html#evaluación-del-riesgo-por-inundaciones",
-    "title": "Inundaciones",
-    "section": "Evaluación del riesgo por inundaciones",
-    "text": "Evaluación del riesgo por inundaciones\n\n\n\n\n\n\n\n\n\n\n[From flood maps to mind maps: Participatory systems modelling of floods in Limbe, Cameroon](https://cdkn.org/story/flood-maps-mind-maps-participatory-systems-modelling-floods-limbe-cameroon). In Limbe, Cameroon, flooding is not just caused by heavy rainfall. Rather from a complex interplay of land-use decisions, poor waste management, weak governance and a lack of infrastructure, with cascading impacts on education, transportation, health, and the economy. Tackling this requires a systems‑thinking approach. The following blog by Dr Lum Sonita Awah, a postdoctoral Fellow at the University of the Free State and an early career research fellow with CDKN, shares how participatory systems modelling can be used to create holistic approaches to flood mitigation and management.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas hidrológicas y meteorológicas",
-      "Inundaciones"
-    ]
-  },
-  {
-    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#comunicación-del-riesgo-por-inundaciones",
-    "href": "grd/hidrol-meteorologicas/inundaciones.html#comunicación-del-riesgo-por-inundaciones",
-    "title": "Inundaciones",
-    "section": "Comunicación del riesgo por inundaciones",
-    "text": "Comunicación del riesgo por inundaciones\n\nFlood risk communication: a fundamental tool for disaster risk management. Prevention web. Link\nFlood Risk Communication Toolbox. US Army Corps of Engineers. Link.\nBridging the gap in flood risk communication: a comparative study of community and organizational social media posts using natural language processing. 2025. Link\n\n\n\n\n How to Communicate Flood Risk to the Public",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas hidrológicas y meteorológicas",
-      "Inundaciones"
-    ]
-  },
-  {
-    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#reducción-del-riesgo-de-inundaciones",
-    "href": "grd/hidrol-meteorologicas/inundaciones.html#reducción-del-riesgo-de-inundaciones",
-    "title": "Inundaciones",
-    "section": "Reducción del riesgo de inundaciones",
-    "text": "Reducción del riesgo de inundaciones\n Planning for Safety: How Land Use Decisions Shape Flood Risk. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas hidrológicas y meteorológicas",
-      "Inundaciones"
-    ]
-  },
-  {
-    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#manejo-de-desastres-por-inundaciones",
-    "href": "grd/hidrol-meteorologicas/inundaciones.html#manejo-de-desastres-por-inundaciones",
-    "title": "Inundaciones",
-    "section": "Manejo de desastres por inundaciones",
-    "text": "Manejo de desastres por inundaciones",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas hidrológicas y meteorológicas",
-      "Inundaciones"
-    ]
-  },
-  {
-    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#lecturas",
-    "href": "grd/hidrol-meteorologicas/inundaciones.html#lecturas",
-    "title": "Inundaciones",
-    "section": "Lecturas",
-    "text": "Lecturas\n\nHow to Know Your Flood Risk. NYT. 2025. Link.\nFlood hazard potential reveals global floodplain settlement patterns. Nature Comms. 2023. Link",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas hidrológicas y meteorológicas",
-      "Inundaciones"
-    ]
-  },
-  {
-    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#entrenamiento",
-    "href": "grd/hidrol-meteorologicas/inundaciones.html#entrenamiento",
-    "title": "Inundaciones",
-    "section": "Entrenamiento",
-    "text": "Entrenamiento\n\nCope",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas hidrológicas y meteorológicas",
-      "Inundaciones"
-    ]
-  },
-  {
-    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#repositorios",
-    "href": "grd/hidrol-meteorologicas/inundaciones.html#repositorios",
-    "title": "Inundaciones",
-    "section": "Repositorios",
-    "text": "Repositorios\n\nA Collection of NASA ARSET Courses for Flood Mapping and Synthetic Aperture Radar (SAR). Link.",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas hidrológicas y meteorológicas",
-      "Inundaciones"
-    ]
-  },
-  {
-    "objectID": "grd/hidrol-meteorologicas/inundaciones.html#videos",
-    "href": "grd/hidrol-meteorologicas/inundaciones.html#videos",
-    "title": "Inundaciones",
-    "section": "Videos",
-    "text": "Videos",
-    "crumbs": [
-      "Gestión del riesgo de desastres",
-      "Amenazas hidrológicas y meteorológicas",
-      "Inundaciones"
-    ]
-  },
-  {
-    "objectID": "grd/hidrol-meteorologicas/olasdecalor.html",
-    "href": "grd/hidrol-meteorologicas/olasdecalor.html",
-    "title": "Olas de calor",
-    "section": "",
-    "text": "Evaluación del riesgo\n\nHeat Action Platform. Conduct a Baseline Heat Risk Assessment. Link\n\n Cool your community with the Heat Action Platform"
   },
   {
     "objectID": "grd/ambientales/incendiosforestales.html",
@@ -2767,7 +2835,7 @@
     "text": "Terminology on disaster risk reduction. UNDRR. Link. Link\nTerminology Prevention Web. Link\n\nUnderstanding disaster risk: foundational concepts and principles. Link\n\nHazard definition and classification review. UNDRR. Link\nEm-Dat hazards general classification. Link\nEncyclopedia of Natural Hazards. 2013. Link\nThe Australian Disaster Resilience Knowledge Hub. Glossary. Link\nDisaster Classification. DesInventar. Link.\nGlosario Servicio Geológico Colombiano. Link\nGlossary of Geology. AGI. Link\nUSGS. Glossary of Terms. Link\nFEMA. Link\nPrepare Center, topics. Link\nIPCC Glossary. Link\nUnesco. Glossary of basic terminology on disaster risk reduction. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2778,7 +2846,7 @@
     "text": "Terminology on disaster risk reduction. UNDRR. Link. Link\nTerminology Prevention Web. Link\n\nUnderstanding disaster risk: foundational concepts and principles. Link\n\nHazard definition and classification review. UNDRR. Link\nEm-Dat hazards general classification. Link\nEncyclopedia of Natural Hazards. 2013. Link\nThe Australian Disaster Resilience Knowledge Hub. Glossary. Link\nDisaster Classification. DesInventar. Link.\nGlosario Servicio Geológico Colombiano. Link\nGlossary of Geology. AGI. Link\nUSGS. Glossary of Terms. Link\nFEMA. Link\nPrepare Center, topics. Link\nIPCC Glossary. Link\nUnesco. Glossary of basic terminology on disaster risk reduction. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2789,7 +2857,7 @@
     "text": "Colombia\n\nTerminología sobre Gestión del Riesgo de Desastres y Fenómenos Amenazantes. 2017. UNGRD. Link.\n\n\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2800,7 +2868,7 @@
     "text": "A\nAfectado\nPersonas afectadas de forma directa o indirectamente por un evento amenazante. Los afectados directamente son quienes presentan lesiones, enfermedades u otros efectos en la salud, quienes fueron evacuados o desplazados, reubicados o quienes han sufrido daños directos en sus medios de sustento y bienes económicos, físicos, sociales, culturales y ambientales. Los afectados indirectamente, son personas quienes han sufrido consecuencias (distintas a los efectos directos) a través del tiempo, debido a la interrupción o cambios con consecuencias psicológicas, sociales y de salud, en la economía, infraestructura indispensable, servicios básicos, comercio y trabajo (UNGA. 2016). (Tomado de UNGRD, 2017)\nAlerta\nEstado que se declara con anterioridad a la manifestación de un evento peligroso, con base en el monitoreo del comportamiento del respectivo fenómeno, con el fin de que las entidades y la población involucrada activen procedimientos de acción previamente establecidos (Ley 1523 de 2012). (Tomado de UNGRD, 2017)",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2811,7 +2879,7 @@
     "text": "B\nBase de datos de pérdidas por desastres y emergencias\nConjunto de registros sistemáticamente recolectados sobre la ocurrencia de emergencias y desastres, pérdidas e impactos (UNGA, 2016). (Tomado de UNGRD, 2017)",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2822,7 +2890,7 @@
     "text": "C\nCalamidad pública\nEs el resultado que se desencadena de la manifestación de uno o varios eventos naturales o antropogénicos no intencionales que al encontrar condiciones propicias de vulnerabilidad en las personas, los bienes, la infraestructura, los medios de subsistencia, la prestación de servicios o los recursos ambientales, causa daños o pérdidas humanas, materiales, económicas o ambientales, generando una alteración intensa, grave y extendida en las condiciones normales de funcionamiento de la población, en el respectivo territorio, que exige al municipio, distrito o departamento ejecutar acciones de respuesta a la emergencia, rehabilitación y reconstrucción (Ley 1523 de 2012). (Tomado de UNGRD, 2017)\nComunidad\nGrupo de personas que se localiza en un espacio determinado y establecen vínculos espontáneos de solidaridad construidos en el tiempo. Esta interacción hace posible que se generen elementos de identidad que favorecen la cohesión y el auto reconocimiento del grupo. Los intereses de la comunidad se sobreponen a los intereses particulares para el logro de objetivos comunes. Por su parte, una comunidad vulnerable es aquella que, ante un evento extremo, puede recibir mayor afectación, debido a factores como la localización y a la incapacidad para implementar acciones de prevención y adaptación orientadas la recuperación de sus medios de subsistencia en el corto plazo (Méndez, sf). (Tomado de UNGRD, 2017)\nConstrucción social del riesgo\nSe refiere a los procesos a través de los cuales la sociedad y los distintos agentes sociales contribuyen a la creación de contextos y entornos de riesgo. Esto ocurre o por la transformación de eventos naturales en amenazas debido a la inadecuada ubicación de edificaciones e infraestructuras, producción y satisfactores de la vida, etc.; por la transformación de recursos naturales en amenazas a través de procesos de degradación ambiental; o por la creación y consolidación de condiciones diversas de vulnerabilidad, las cuales potencian la acción negativa de las amenazas y eventos peligrosos. Algunos autores también ven en el proceso de percepción y subjetivización del riesgo, un proceso de “construcción social” del riesgo (Lavell, 2007). (Tomado de UNGRD, 2017)\nDesastre\nEs el resultado que se desencadena de la manifestación de uno o varios eventos naturales o antropogénicos no intencionales que al encontrar condiciones propicias de vulnerabilidad en las personas, los bienes, la infraestructura, los medios de subsistencia, la prestación de servicios o los recursos ambientales, causa daños o pérdidas humanas, materiales, económicas o ambientales, generando una alteración intensa, grave y extendida en las condiciones normales de funcionamiento de la sociedad, que exige del Estado y del sistema nacional ejecutar acciones de respuesta a la emergencia, rehabilitación y reconstrucción (Ley 1523 de 2012). (Tomado de UNGRD, 2017)",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2833,7 +2901,7 @@
     "text": "E\nEmergencia\nSituación caracterizada por la alteración o interrupción intensa y grave de las condiciones normales de funcionamiento u operación de una comunidad, causada por un evento adverso o por la inminencia del mismo, que obliga a una reacción inmediata y que requiere la respuesta de las instituciones del Estado, los medios de comunicación y de la comunidad en general (Ley 1523 de 2012). (Tomado de UNGRD, 2017)\nEstrategia de respuesta a emergencias (ETRE)\nEs el marco de actuación de las entidades del Sistema Nacional para la Gestión del Riesgo de Desastres para la reacción y atención de emergencias. Se refiere a todos los aspectos que deben activarse por las entidades en forma individual y colectiva con el propósito de ejecutar la respuesta a emergencias de manera oportuna y efectiva. (Tomado de UNGRD, 2017)\nEvacuación\nTraslado temporal de personas y bienes a sitios seguros, antes, durante o después de la ocurrencia de un fenómeno amenazante para protegerlos (a partir de UNGA, 2016). (Tomado de UNGRD, 2017)",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2844,7 +2912,7 @@
     "text": "F\nFrecuencia\nNúmero de eventos por una unidad de tiempo definida (ISO/IEC, 2009). (Tomado de UNGRD, 2017)",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2855,7 +2923,7 @@
     "text": "G\nGestión ambiental\nSe refiere a las acciones que, en forma consciente y dirigida a propósitos definidos, realice la sociedad para administrar los recursos naturales, renovables o no. Esto implica conservar, recuperar, mejorar, proteger o utilizar moderadamente los recursos naturales; orientar los procesos culturales al logro de sostenibilidad; ocupar y transformar el territorio de manera racional y sostenible; y revertir los efectos del deterioro y la contaminación sobre la calidad de vida, el estado de los ecosistemas, y la actividad económica (MADS, 2012). (Tomado de UNGRD, 2017)\nGestión del riesgo\nEs el proceso social de planeación, ejecución, seguimiento y evaluación de políticas y acciones permanentes para el conocimiento del riesgo y promoción de una mayor conciencia del mismo, impedir o evitar que se genere, reducirlo o controlarlo cuando ya existe y para prepararse y manejar las situaciones de desastre, así como para la posterior recuperación, entiéndase: rehabilitación y reconstrucción. Estas acciones tienen el propósito explícito de contribuir a la seguridad, el bienestar y calidad de vida de las personas y al desarrollo sostenible (Ley 1523 de 2012). (Tomado de UNGRD, 2017)\nGobernanza del riesgo de desastres\nSistema de instituciones, mecanismos, políticas y marcos legales y otros mecanismos diseñados para guiar, coordinar y supervisar la gestión del riesgo de desastres y áreas relacionadas con políticas públicas y privadas (a partir de UNGA, 2016). (Tomado de UNGRD, 2017)",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2866,7 +2934,7 @@
     "text": "I\nInfraestructura indispensable\nLas estructuras físicas, instalaciones, redes y otros bienes que proveen servicios que son esenciales para el funcionamiento socioeconómico de una comunidad (a partir de UNGA, 2016). (Tomado de UNGRD, 2017)",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2877,7 +2945,7 @@
     "text": "L\nLogística en emergencia\nEn situaciones de emergencia es la movilización de personal, equipos, accesorios, herramientas, suministros y ayuda humanitaria de emergencia para el trabajo del personal operativo y/o la atención de la población afectada (UNGRD, 2016-1). (Tomado de UNGRD, 2017)",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2888,7 +2956,7 @@
     "text": "M\nManejo de desastres\nEs el proceso de la gestión del riesgo compuesto por la preparación para la respuesta a emergencias, la preparación para la recuperación posdesastre, la ejecución de dicha respuesta y la ejecución de la respectiva recuperación, entiéndase: rehabilitación y recuperación (Ley 1523 de 2012). (Tomado de UNGRD, 2017)",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2899,7 +2967,7 @@
     "text": "P\nPérdidas económicas\nImpacto económico total que se compone de pérdidas económicas directas e indirectas. La pérdida económica directa hace referencia al valor monetario de la destrucción total o parcial de bienes físicos existentes en el área afectada. La pérdida económica directa es casi equivalente a los daños físicos. Por su parte, la pérdida económica indirecta se refiere a una disminución en la valorización económica como consecuencia de una pérdida económica directa y/o impactos humanos y ambientales (UNGA, 2016). (Tomado de UNGRD, 2017)\nPlan de evacuación\nCorresponde a las acciones de preparación para que la respuesta que permite que las personas que se encuentran en una edificación (vivienda, oficina, institución educativa, establecimiento comercial, entre otras.) puedan realizar una salida ordenada, rápida y segura, con el fin de proteger la vida (UNGRD, 2016-2). (Tomado de UNGRD, 2017)\nPlan de gestión del riesgo de desastres\nEs el instrumento que define los objetivos, programas, acciones, responsables y presupuestos, mediante las cuales se ejecutan los procesos de conocimiento del riesgo, reducción del riesgo y de manejo de desastres, en el marco de la planificación del desarrollo. (Tomado de UNGRD, 2017)\nPreparación\nEs el conjunto de acciones principalmente de coordinación, sistemas de alerta, capacitación, equipamiento, centros de reserva y albergues y entrenamiento, con el propósito de optimizar la ejecución de los diferentes servicios básicos de respuesta, como accesibilidad y transporte, telecomunicaciones, evaluación de daños y análisis de necesidades, salud y saneamiento básico, búsqueda y rescate, extinción de incendios y manejo de materiales peligrosos, albergues y alimentación, servicios públicos, seguridad y convivencia, aspectos financieros y legales, información pública y el manejo general de la respuesta, entre otros (Ley 1523 de 2012). (Tomado de UNGRD, 2017)\nPrevención de riesgo\nMedidas y acciones de intervención restrictiva o prospectiva dispuestas con anticipación con el fin de evitar que se genere riesgo. Puede enfocarse a evitar o neutralizar la amenaza o la exposición y la vulnerabilidad ante la misma en forma definitiva para impedir que se genere nuevo riesgo. Los instrumentos esenciales de la prevención son aquellos previstos en la planificación, la inversión pública y el ordenamiento ambiental territorial, que tienen como objetivo reglamentar el uso y la ocupación del suelo de forma segura y sostenible. (Ley 1523 de 2012). (Tomado de UNGRD, 2017)\nPrincipio de autoconservación\nToda persona natural o jurídica, bien sea de derecho público o privado, tiene el deber de adoptar las medidas necesarias para una adecuada gestión del riesgo en su ámbito personal y funcional, con miras a salvaguardarse, que es condición necesaria para el ejercicio de la solidaridad social. (Tomado de UNGRD, 2017)\nPrincipio de concurrencia\nLa concurrencia de competencias entre entidades nacionales y territoriales de los ámbitos público, privado y comunitario que constituyen el sistema nacional de gestión del riesgo de desastres, tiene lugar cuando la eficacia en los procesos, acciones y tareas se logre mediante la unión de esfuerzos y la colaboración no jerárquica entre las autoridades y entidades involucradas. La acción concurrente puede darse en beneficio de todas o de algunas de las entidades. El ejercicio concurrente de competencias exige el respeto de las atribuciones propias de las autoridades involucradas, el acuerdo expreso sobre las metas comunes y sobre los procesos y procedimientos para alcanzarlas. (Tomado de UNGRD, 2017)\nPrincipio de coordinación\nLa coordinación de competencias es la actuación integrada de servicios tanto estatales como privados y comunitarios especializados y diferenciados, cuyas funciones tienen objetivos comunes para garantizar la armonía en el ejercicio de las funciones y el logro de los fines o cometidos del Sistema Nacional de Gestión del Riesgo de Desastres. (Tomado de UNGRD, 2017)\nPrincipio de diversidad cultural\nEn reconocimiento de los derechos económicos, sociales y culturales de las personas, los procesos de la gestión del riesgo deben ser respetuosos de las particularidades culturales de cada comunidad y aprovechar al máximo los recursos culturales de la misma. (Tomado de UNGRD, 2017)\nPrincipio de igualdad\nTodas las personas naturales tendrán la misma ayuda y el mismo trato al momento de atendérseles con ayuda humanitaria, en las situaciones de desastre y peligro que desarrolla esta ley. (Tomado de UNGRD, 2017)\nPrincipio de oportuna información\nPara todos los efectos de esta ley, es obligación de las autoridades del Sistema Nacional de Gestión del Riesgo de Desastres, mantener debidamente informadas a todas las personas naturales y jurídicas sobre: posibilidades de riesgo, gestión de desastres, acciones de rehabilitación y construcción así como también sobre las donaciones recibidas, las donaciones administradas y las donaciones. (Tomado de UNGRD, 2017)\nPrincipio participativo\nEs deber de las autoridades y entidades del Sistema Nacional de Gestión del Riesgo de Desastres, reconocer, facilitar y promover la organización y participación de comunidades étnicas, asociaciones cívicas, comunitarias, vecinales, benéficas, de voluntariado y de utilidad común. Es deber de todas las personas hacer parte del proceso de gestión del riesgo en su comunidad. (Tomado de UNGRD, 2017)\nPrincipio de precaución\nCuando exista la posibilidad de daños graves o irreversibles a las vidas, a los bienes y derechos de las personas, a las instituciones y a los ecosistemas como resultado de la materialización del riesgo en desastre, las autoridades y los particulares aplicarán el principio de precaución en virtud del cual la falta de certeza científica absoluta no será óbice para adoptar medidas encaminadas a prevenir, mitigar la situación de riesgo. (Tomado de UNGRD, 2017)\nPrincipio de protección\nLos residentes en Colombia deben ser protegidos por las autoridades en su vida e integridad física y mental, en sus bienes y en sus derechos colectivos a la seguridad, la tranquilidad y la salubridad públicas y a gozar de un ambiente sano, frente a posibles desastres o fenómenos peligrosos que amenacen o infieran daño a los valores enunciados. (Tomado de UNGRD, 2017)\nPrincipio de solidaridad social\nTodas las personas naturales y jurídicas, sean estas últimas de derecho público o privado, apoyarán con acciones humanitarias a las situaciones de desastre y peligro para la vida o la salud de las personas. (Tomado de UNGRD, 2017)\nPrincipio de sostenibilidad ambiental\nEl desarrollo es sostenible cuando satisface las necesidades del presente sin comprometer la capacidad de los sistemas ambientales de satisfacer las necesidades futuras e implica tener en cuenta la dimensión económica, social y ambiental del desarrollo. El riesgo de desastre se deriva de procesos de uso y ocupación insostenible del territorio, por tanto, la explotación racional de los recursos naturales y la protección del medio ambiente constituyen características irreductibles de sostenibilidad ambiental y contribuyen a la gestión del riesgo de desastres. (Tomado de UNGRD, 2017)\nPrincipio sistémico\nLa política de gestión del riesgo se hará efectiva mediante un sistema administrativo de coordinación de actividades estatales y particulares. El sistema operará en modos de integración sectorial y territorial; garantizará la continuidad de los procesos, la interacción y enlazamiento de las actividades mediante bases de acción comunes y coordinación de competencias. Como sistema abierto, estructurado y organizado, exhibirá las calidades de interconexión, diferenciación, recursividad, control, sinergia y reiteración. (Tomado de UNGRD, 2017)\nPrincipio de gradualidad\nLa gestión del riesgo se despliega de manera continua, mediante procesos secuenciales en tiempos y alcances que se renuevan permanentemente. Dicha gestión continuada estará regida por los principios de gestión pública consagrados en el artículo 209 de la Constitución y debe entenderse a la luz del desarrollo político, histórico y socioeconómico de la sociedad que se beneficia. (Tomado de UNGRD, 2017)\nPrincipio del interés público o social\nEn toda situación de riesgo o de desastre, el interés público o social prevalecerá sobre el interés particular. Los intereses locales, regionales, sectoriales y colectivos cederán frente al interés nacional, sin detrimento de los derechos fundamentales del individuo y, sin demérito, de la autonomía de las entidades territoriales. (Tomado de UNGRD, 2017)\nPrincipio de subsidiariedad\nSe refiere al reconocimiento de la autonomía de las entidades territoriales para ejercer sus competencias. La subsidiariedad puede ser de dos tipos: la subsidiariedad negativa, cuando la autoridad territorial de rango superior se abstiene de intervenir el riesgo y su materialización en el ámbito de las autoridades de rango inferior, si estas tienen los medios para hacerlo. La subsidiariedad positiva, impone a las autoridades de rango superior, el deber de acudir en ayuda de las autoridades de rango inferior, cuando estas últimas, no tengan los medios para enfrentar el riesgo y su materialización en desastre o cuando esté en riesgo un valor, un interés o un bien jurídico protegido relevante para la autoridad superior que acude en ayuda de la entidad afectada. (Tomado de UNGRD, 2017)",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2910,7 +2978,7 @@
     "text": "R\nRecuperación\nSon las acciones para el restablecimiento de las condiciones normales de vida mediante la rehabilitación, reparación o reconstrucción del área afectada, los bienes y servicios interrumpidos o deteriorados y el restablecimiento e impulso del desarrollo económico y social de la comunidad. La recuperación tiene como propósito central evitar la reproducción de las condiciones de riesgo preexistentes en el área o sector afectado (Ley 1523 de 2012). (Tomado de UNGRD, 2017)\nReconstrucción\nSe refiere a la reconstrucción a medio y largo plazo y restauración sostenible de infraestructuras críticas resilientes, servicios, vivienda, instalaciones y medios de subsistencia necesarios para el pleno funcionamiento de una comunidad o una sociedad afectada por un desastre, en concordancia con los principios del desarrollo sostenible y reconstruir mejor para evitar o reducir el riesgo futuro (UNGA, 2016). (Tomado de UNGRD, 2017)\nRehabilitación\nAcciones que se realizan inmediatamente después del desastre. Consiste fundamentalmente en la recuperación temporal de los servicios básicos (agua, desagüe, comunicaciones, alimentación y otros) que permitan normalizar las actividades en la zona afectada por el desastre. La rehabilitación es parte de la respuesta ante una emergencia. Restablecimiento de las condiciones mínimas de vida, mediante la recuperación a corto plazo de los servicios básicos y del inicio de la reparación del daño físico, social y económico causado por un desastre (Lavell, 2007). (Tomado de UNGRD, 2017)\nResiliencia\nLa capacidad de un sistema, comunidad o sociedad expuestos a una amenaza para resistir, absorber, adaptarse y recuperarse de sus efectos de manera oportuna y eficaz, lo que incluye la preservación y la restauración de sus estructuras y funciones básicas (UNISDR, 2009). (Tomado de UNGRD, 2017)\nRespuesta\nEjecución de las actividades necesarias para la atención de la emergencia como accesibilidad y transporte, telecomunicaciones, evaluación de daños y análisis de necesidades, salud y saneamiento básico, búsqueda y rescate, extinción de incendios y manejo de materiales peligrosos, albergues y alimentación, servicios públicos, seguridad y convivencia, aspectos financieros y legales, información pública y el manejo general de la respuesta, entre otros. La efectividad de la respuesta depende de la calidad de preparación (Ley 1523 de 2012). (Tomado de UNGRD, 2017)\nRiesgo aceptable\nPosibles consecuencias sociales y económicas que, implícita o explícitamente, una sociedad o un segmento de la misma asume o tolera en forma consciente por considerar innecesaria, inoportuna o imposible una intervención para su reducción dado el contexto económico, social, político, cultural y técnico existente. La noción es de pertinencia formal y técnica en condiciones donde la información existe y cierta racionalización en el proceso de toma de decisiones puede ejercerse, y sirve para determinar las mínimas exigencias o requisitos de seguridad, con fines de protección y planificación, ante posibles fenómenos peligrosos (Lavel, 2007). (Tomado de UNGRD, 2017)\nRiesgo de desastres\nCorresponde a los daños o pérdidas potenciales que pueden presentarse debido a los eventos físicos peligrosos de origen natural, socio-natural, tecnológico, biosanitário o humano no intencional, en un período de tiempo específico y que son determinados por la vulnerabilidad de los elementos expuestos; por consiguiente, el riesgo de desastres se deriva de la combinación de la amenaza y la vulnerabilidad (Ley 1523 de 2012). (Tomado de UNGRD, 2017)\nRiesgo extensivo\nEl riesgo generalizado que se relaciona con la exposición de poblaciones dispersas a condiciones reiteradas o persistentes con una intensidad baja o moderada, a menudo de naturaleza altamente localizada, lo cual puede conducir a un impacto acumulativo muy debilitante de los desastres (UNISDR, 2009). (Tomado de UNGRD, 2017)\nRiesgo intensivo\nEl riesgo asociado con la exposición de grandes concentraciones poblacionales y actividades económicas a intensos eventos relativos a las amenazas existentes, los cuales pueden conducir al surgimiento de impactos potencialmente catastróficos de desastres que incluirían una gran cantidad de muertes y la pérdida de bienes (UNISDR, 2009). (Tomado de UNGRD, 2017)\nRiesgo residual\nEl riesgo que todavía no se ha gestionado, aun cuando existan medidas eficaces para la reducción del riesgo de desastres y para los cuales se debe mantener las capacidades de respuesta de emergencia y de recuperación (UNISDR, 2009). (Tomado de UNGRD, 2017)\nRiesgo tecnológico\nDaños o pérdidas potenciales que pueden presentarse debido a los eventos mayores generados por el uso y acceso a la tecnología, originados en sucesos antrópicos, naturales, socio-naturales y propios de la operación. Se excluyen de su alcance i) los riesgos asociados a la seguridad informática y gestión de información, con excepción de las instalaciones operativas, ii) los establecimientos, las instalaciones o zonas de almacenamientos militares, iii) los riesgos asociados a las radiaciones ionizantes que tienen su origen en sustancias, iv) las armas o agentes de destrucción masiva y v) los riesgo asociados a los agentes biológicos, con excepción de las instalaciones operativas (UNGRD, Resolución 1770 de 2013). (Tomado de UNGRD, 2017)",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2921,7 +2989,7 @@
     "text": "S\nSeguridad territorial\nLa seguridad territorial se refiere a la sostenibilidad de las relaciones entre la dinámica de la naturaleza y la dinámica de las comunidades en un territorio en particular. Este concepto incluye las nociones de seguridad alimentaria, seguridad jurídica o institucional, seguridad económica, seguridad ecológica y seguridad social (Ley 1523 de 2012). (Tomado de UNGRD, 2017)\nServicios de emergencia\nEl conjunto de agencias especializadas con la responsabilidad y los objetivos específicos de proteger a la población y los bienes en situaciones de emergencia (UNISDR, 2009). (Tomado de UNGRD, 2017)\nSimulación\nEs un juego de roles que se realiza en un ambiente controlado, normalmente es un salón o sala, por lo que son llamados “ejercicios de escritorio”. En una simulación participan los tomadores de decisiones y los actores más representativos del contexto de emergencias en el nivel nacional, departamental y/o municipal. Se basa en situaciones hipotéticas que se derivan del análisis de riesgo del municipio, estrategia de respuesta y protocolos específicos (Tomado de UNGRD, 2016-3). (Tomado de UNGRD, 2017)\nSimulacro\nSon ejercicios prácticos que representan una situación de emergencia lo más cercano a lo que sería en la realidad, basados siempre en el análisis del riesgo, en consecuencia, una simulación es una forma de poner a prueba la Estrategia Municipal de Respuesta y sus protocolos (UNGRD, 2016). (Tomado de UNGRD, 2017)\nSistemas de alerta temprana\nSistema integrado de vigilancia, previsión y predicción de riesgos, evaluación de riesgos de desastres, comunicación y preparación, sistemas y procesos que permiten a las personas, comunidades, gobiernos, empresas y otros, tomar medidas oportunas para reducir los riesgos de desastres ante la manifestación de un evento amenazante (a partir de UNGA, 2016). (Tomado de UNGRD, 2017)",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2932,7 +3000,7 @@
     "text": "V\nVariabilidad del clima\nLa variabilidad del clima se refiere a las variaciones en el estado medio y otros datos estadísticos (como las desviaciones típicas, la ocurrencia de fenómenos extremos, etc.) del clima en todas las escalas temporales y espaciales, más allá de fenómenos meteorológicos determinados. La variabilidad se puede deber a procesos internos naturales dentro del sistema climático (variabilidad interna), o a variaciones en los forzamientos externos antropogénicos (variabilidad externa) (IPCC, 2013). (Tomado de UNGRD, 2017)",
     "crumbs": [
       "Gestión del riesgo de desastres",
-      "terminología"
+      "Terminología"
     ]
   },
   {
@@ -2964,7 +3032,7 @@
     "href": "grd/reducciondelriesgo.html",
     "title": "Reducción del riesgo de desastres",
     "section": "",
-    "text": "Planes municipales de gestión del riesgo\n\nGuía metodológica para la formulación y actualización de planes municipales de gestión del riesgo de desastres (PMGRD). UNGRD. 2021. Link\n\n\n\n\n Planes Municipales de Gestión del Riesgo\n\n\n Instrumentos de planificación en gestión de riesgo de desastres- Caja de herramientas\n\n\n\n\n Guía técnica para la implementación de los Planes de Gestión del Riesgo de Desastres\n\n\n Lanzamiento de la Guía para Planes Municipales de Gestión del Riesgo\n\n\n\n\n\nOrdenamiento territorial y gestión de riesgos\n\nGuía para la Integración de la Gestión del Riesgo de Desastres en los Planes de Desarrollo Territorial 2020 – 2023. UNGRD. Link.\nMinambiente. Gestión del Riesgo en el Ordenamiento Territorial. Link. Link.\nMinvivienda. Gestion del riesto - POT. Link\nCalderon. 2017. El ordenamiento territorial para la gestión del riesgo de desastres en Colombia. Link.\nReasentamiento. Climate-induced relocation. Science. 2021. Special Issue. Link.\n\n\n\n\n Ordenamiento territorial y gestión de riesgos\n\n\n Gestión de riesgo y ordenamiento territorial para geólogos\n\n\n\n\n\nInteracción de la GRD con otros instrumentos de planificación\n\nPlanes Integrales de Gestión del Cambio Climático Territorial (PIGCCT). Link.\nPlanes de Ordenación y Manejo de Cuencas Hidrográficas (POMCA). Link.\n\n\n\n\n\n Planes integrales de gestión de cambio climático territoriales\n\n\n Lanzamiento de la Guía de Territorios Empoderados para la Acción Climática\n\n\n\n\n Planes de Ordenación y Manejo de Cuencas Hidrográficas -POMCA\n\n\n\n\n\nProtección financiera\n\nSuramericana de seguros (2:37:10). Link.\nPublic Investment Profile for Disaster Risk Reduction: A Macro-Economic Study. IDB. 2020. Link.\nMarco Fiscal de Mediano Plazo 2025 Minhacienda. Link\n\n\n\n\n\n Charla Suramericana de seguros\n\n\n Navigating the financial impacts of disasters | Recovery Matters webinar series\n\n\n\n\n Integrated Approach to Disaster Risk Management:Prevent, Residual risk Prepare, Respond, Recover\n\n\n\n\n\n\n\n Earthquake loss modelling for (re)insurance\n\n\n\n\n\nSoluciones basadas en la naturaleza ECO-DRR\n\nUICN\n\nEco-DRR: What are IUCN’s solutions?. Link.\nDisaster Risk Reduction. Link.\n\nONU. Programa para el medio ambiente. Ecosystem-based disaster risk reduction. Link.\nWorld bank. Nature-based Solutions: a Cost-effective Approach for Disaster Risk and Water Resource Management. Link.\nMeasuring the success of climate change adaptation and mitigation in terrestrial ecosystems. Science 2019. Link.\nUNEP y la UICN lanzan fondo global para la adaptación basada en ecosistemas. Link.\nThe Role of Ecosystems in Disaster Risk Reduction. 2013. Link.\nPublic review of the Words into Action guide: ‘Nature-based solutions for disaster risk reduction’. Link.\nWords into Action: Nature-based solutions for disaster risk reduction. Link.\nEcopetrol. SbN. Link.\nThe Role of Nature-Based Solutions in Supporting Social-Ecological Resilience for Climate Change Adaptation. 2022. Link\nCurso “Integración de Soluciones Basadas en la Naturaleza (SBN) en la planificación urbana. 2022. Link\nFactsheet: Soluciones basadas en la Naturaleza (SbN) en las NDC de América Latina y el Caribe: clasificación de los compromisos para la acción climática. Link.\nNature-based Solutions: Opportunities and Challenges for Scaling Up. Link.\nFactsheet: Soluciones basadas en la Naturaleza (SbN) en las NDC de América Latina y el Caribe: clasificación de los compromisos para la acción climática. Link.\nNature-based Solutions: Opportunities and Challenges for Scaling Up. Link.\nWords into Action: Nature-based Solutions for Disaster Risk Reduction guide. UNDRR. 2023. Link\nBases de datos\n\nWeadapt. Base de datos. Link.\nNature-based Solutions Initiative. University of Oxford. Link.\nTRY plant trait database – enhanced coverage and open access. GCB. 2020. Link.\nUrban Nature Atlas. Link.\n\n\nhttps://www.youtube.com/live/XaeyqSWqs4w?feature=share\nLa Reducción del riesgo de Desastres basada en Ecosistemas en Colombia\nhttps://youtu.be/Pf_t2h_9Z98\nhttps://youtu.be/Pf_t2h_9Z98 https://youtu.be/hhGEprt89ks\nhttps://www.youtube.com/watch?v=GGuAbB0jBm4u0026amp;t=3s\nEco-DRR y SbN para la adaptación. 2023\nhttps://youtu.be/lCFG2u9xnWc Words into Action: Nature-based Solutions for Disaster Risk Reduction. 2023",
+    "text": "Planes municipales de gestión del riesgo\n\nGuía metodológica para la formulación y actualización de planes municipales de gestión del riesgo de desastres (PMGRD). UNGRD. 2021. Link\n\n\n\n\n Planes Municipales de Gestión del Riesgo\n\n\n Instrumentos de planificación en gestión de riesgo de desastres- Caja de herramientas\n\n\n\n\n Guía técnica para la implementación de los Planes de Gestión del Riesgo de Desastres\n\n\n Lanzamiento de la Guía para Planes Municipales de Gestión del Riesgo\n\n\n\n\n\nOrdenamiento territorial y gestión de riesgos\n\nGuía para la Integración de la Gestión del Riesgo de Desastres en los Planes de Desarrollo Territorial 2020 – 2023. UNGRD. Link.\nMinambiente. Gestión del Riesgo en el Ordenamiento Territorial. Link. Link.\nMinvivienda. Gestion del riesto - POT. Link\nCalderon. 2017. El ordenamiento territorial para la gestión del riesgo de desastres en Colombia. Link.\nReasentamiento. Climate-induced relocation. Science. 2021. Special Issue. Link.\n\n\n\n\n Ordenamiento territorial y gestión de riesgos\n\n\n Gestión de riesgo y ordenamiento territorial para geólogos\n\n\n\n\n\nInteracción de la GRD con otros instrumentos de planificación\n\nPlanes Integrales de Gestión del Cambio Climático Territorial (PIGCCT). Link.\nPlanes de Ordenación y Manejo de Cuencas Hidrográficas (POMCA). Link.\n\n\n\n\n\n Planes integrales de gestión de cambio climático territoriales\n\n\n Lanzamiento de la Guía de Territorios Empoderados para la Acción Climática\n\n\n\n\n Planes de Ordenación y Manejo de Cuencas Hidrográficas -POMCA\n\n\n\n\n\nProtección financiera\n\nSuramericana de seguros (2:37:10). Link.\nPublic Investment Profile for Disaster Risk Reduction: A Macro-Economic Study. IDB. 2020. Link.\nDisaster Risk Pooling tool. Link\nMarco Fiscal de Mediano Plazo 2025 Minhacienda. Link\n\n\n\n\n\n Charla Suramericana de seguros\n\n\n Navigating the financial impacts of disasters | Recovery Matters webinar series\n\n\n\n\n Integrated Approach to Disaster Risk Management:Prevent, Residual risk Prepare, Respond, Recover\n\n\n\n\n\n\n\n Earthquake loss modelling for (re)insurance\n\n\n\n\n\nSoluciones basadas en la naturaleza ECO-DRR\n\nUICN\n\nEco-DRR: What are IUCN’s solutions?. Link.\nDisaster Risk Reduction. Link.\n\nONU. Programa para el medio ambiente. Ecosystem-based disaster risk reduction. Link.\nWorld bank. Nature-based Solutions: a Cost-effective Approach for Disaster Risk and Water Resource Management. Link.\nMeasuring the success of climate change adaptation and mitigation in terrestrial ecosystems. Science 2019. Link.\nUNEP y la UICN lanzan fondo global para la adaptación basada en ecosistemas. Link.\nThe Role of Ecosystems in Disaster Risk Reduction. 2013. Link.\nPublic review of the Words into Action guide: ‘Nature-based solutions for disaster risk reduction’. Link.\nWords into Action: Nature-based solutions for disaster risk reduction. Link.\nEcopetrol. SbN. Link.\nThe Role of Nature-Based Solutions in Supporting Social-Ecological Resilience for Climate Change Adaptation. 2022. Link\nCurso “Integración de Soluciones Basadas en la Naturaleza (SBN) en la planificación urbana. 2022. Link\nFactsheet: Soluciones basadas en la Naturaleza (SbN) en las NDC de América Latina y el Caribe: clasificación de los compromisos para la acción climática. Link.\nNature-based Solutions: Opportunities and Challenges for Scaling Up. Link.\nFactsheet: Soluciones basadas en la Naturaleza (SbN) en las NDC de América Latina y el Caribe: clasificación de los compromisos para la acción climática. Link.\nNature-based Solutions: Opportunities and Challenges for Scaling Up. Link.\nWords into Action: Nature-based Solutions for Disaster Risk Reduction guide. UNDRR. 2023. Link\nBases de datos\n\nWeadapt. Base de datos. Link.\nNature-based Solutions Initiative. University of Oxford. Link.\nTRY plant trait database – enhanced coverage and open access. GCB. 2020. Link.\nUrban Nature Atlas. Link.\n\n\nhttps://www.youtube.com/live/XaeyqSWqs4w?feature=share\nLa Reducción del riesgo de Desastres basada en Ecosistemas en Colombia\nhttps://youtu.be/Pf_t2h_9Z98\nhttps://youtu.be/Pf_t2h_9Z98 https://youtu.be/hhGEprt89ks\nhttps://www.youtube.com/watch?v=GGuAbB0jBm4u0026amp;t=3s\nEco-DRR y SbN para la adaptación. 2023\nhttps://youtu.be/lCFG2u9xnWc Words into Action: Nature-based Solutions for Disaster Risk Reduction. 2023",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Reducción del riesgo"
