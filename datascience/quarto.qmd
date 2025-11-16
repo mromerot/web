@@ -6,9 +6,10 @@ editor: visual
 
 ## Recursos de ayuda
 
+-   Quarto Guide. [*Link*](https://quarto.org/docs/guide/) \*\*\*
 -   Reproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. [*Link*](https://mine-cetinkaya-rundel.github.io/quarto-books-conf24/#/title-slide)
 
-## Publicar
+## Comandos
 
 -   En Terminal:
     -   `quarto render` para renderizar las páginas
@@ -21,6 +22,83 @@ editor: visual
     -   git push
 -   To validate the YAML, run: `quarto check`
 
+------------------------------------------------------------------------
+
+## **Tablas**
+
+-   Quarto guide for Tables. [*Link*](https://quarto.org/docs/authoring/tables.html)
+
+### Ejemplo 1
+
+``` markdown
+| Prederminada | Izq.| Der.| Centrado |
+|----|:--|---:|:----:|# 4 rayas = 100% ancho, : izq = alineado izq 
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+| 1       | 1    |     1 |   1    |
+
+: Demostración de sintaxis de tabla. {#tbl-sintaxis}
+
+Observe que: 
+- Despues de los dos puntos va la leyenda.
+- La referencia cruzada y el diseño de la tabla. 
+- Puede aplicarse color a filas especificas (no se explica aquí).
+```
+
+<style>
+#tbl-sintaxis thead {
+  background-color: #e8e8e8; /* gris claro */
+}
+#tbl-sintaxis tbody tr:nth-child(2) {
+  background-color: #ffe4e1; /* rosado claro */
+}
+#tbl-sintaxis tbody tr:last-child {
+  background-color: #fffacd; /* amarillo claro */
+}
+</style>
+
+| Prederminada | Izquierda | Derecha | Centrado |
+|--------------|:----------|--------:|:--------:|
+| C            | 12        |      12 |    12    |
+| B            | 123       |     123 |   123    |
+| A            | 1         |       1 |    1     |
+| Decisión     | Vender    | Comprar |   Neutro  |
+
+: Demostración de sintaxis de tabla. {#tbl-sintaxis}
+
+### Ejemplo 2 con div envolvente
+
+``` markdown
+::: {style="color: black; font-family: Arial, sans-serif;"}
+| Fruta  | Precio  |
+|--------|--------|
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+
+: [Precios promedio de frutas.]{style="color: black; font-family: Arial, sans-serif;"} {#tbl-frutas .striped .hover tbl-colwidths="\[75,25\]"}
+
+Observe que:
+- Inicia y termina la tabla con `:::` envolviendola en un div con estilo
+- Despues de los primeros `:::` se declara se usará fuente Arial y en color negro
+- En la leyenda se aplica de nuevo para evitar configuración predeterminada de Quarto.
+:::
+```
+
+::: {style="color: black; font-family: Arial, sans-serif;"}
+| Fruta  | Precio |
+|--------|--------|
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+
+: [Precios promedio de frutas.]{style="color: black; font-family: Arial, sans-serif;"} {#tbl-frutas .striped .hover tbl-colwidths="\[75,25\]"}
+:::
+
+En la @tbl-frutas se observa el precio promedio de las frutas (así se generan referencias cruzadas).
+
+------------------------------------------------------------------------
+
 ## **Tabsets**
 
 ``` {.Markdown style="color: gray"}
@@ -32,6 +110,8 @@ Content for `Tab A`
 Content for `Tab B`
 :::
 ```
+
+------------------------------------------------------------------------
 
 ## Insertar elementos en dos columnas
 
@@ -55,7 +135,7 @@ Insertar video de un live: cambiar "live" por "embed"
 https://www.youtube.com/embed/srgbUPu9Mo4
 ```
 
-## Insertar imagenes
+## Insertar imágenes
 
 ``` {.Markdown style="color: gray"}
 Insertar imagen
@@ -271,7 +351,7 @@ format:
     highlight-style: github
 ```
 
-### **Ejecutación de Código**
+### **Ejecución de código**
 
 ```         
 execute:

@@ -70,7 +70,7 @@
     "href": "datascience/quarto.html",
     "title": "Quarto atajos",
     "section": "",
-    "text": "Reproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link",
+    "text": "Quarto Guide. Link ***\nReproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link",
     "crumbs": [
       "Ciencia de datos",
       "Quarto"
@@ -81,18 +81,29 @@
     "href": "datascience/quarto.html#recursos-de-ayuda",
     "title": "Quarto atajos",
     "section": "",
-    "text": "Reproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link",
+    "text": "Quarto Guide. Link ***\nReproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link",
     "crumbs": [
       "Ciencia de datos",
       "Quarto"
     ]
   },
   {
-    "objectID": "datascience/quarto.html#publicar",
-    "href": "datascience/quarto.html#publicar",
+    "objectID": "datascience/quarto.html#comandos",
+    "href": "datascience/quarto.html#comandos",
     "title": "Quarto atajos",
-    "section": "Publicar",
-    "text": "Publicar\n\nEn Terminal:\n\nquarto render para renderizar las páginas\nquarto preview vista preliminar\nquarto check revisión de configuración\nquarto --help todas las ayudas\n\nPara cargar la página: commit and push\n\ngit add .\ngit commit -m “descripción actualización”\ngit push\n\nTo validate the YAML, run: quarto check",
+    "section": "Comandos",
+    "text": "Comandos\n\nEn Terminal:\n\nquarto render para renderizar las páginas\nquarto preview vista preliminar\nquarto check revisión de configuración\nquarto --help todas las ayudas\n\nPara cargar la página: commit and push\n\ngit add .\ngit commit -m “descripción actualización”\ngit push\n\nTo validate the YAML, run: quarto check",
+    "crumbs": [
+      "Ciencia de datos",
+      "Quarto"
+    ]
+  },
+  {
+    "objectID": "datascience/quarto.html#tablas",
+    "href": "datascience/quarto.html#tablas",
+    "title": "Quarto atajos",
+    "section": "Tablas",
+    "text": "Tablas\n\nQuarto guide for Tables. Link\n\n\nEjemplo 1\n| Prederminada | Izq.| Der.| Centrado |\n|----|:--|---:|:----:|# 4 rayas = 100% ancho, : izq = alineado izq \n| 12      | 12   |    12 |   12   |\n| 123     | 123  |   123 |  123   |\n| 1       | 1    |     1 |   1    |\n\n: Demostración de sintaxis de tabla. {#tbl-sintaxis}\n\nObserve que: \n- Despues de los dos puntos va la leyenda.\n- La referencia cruzada y el diseño de la tabla. \n- Puede aplicarse color a filas especificas (no se explica aquí).\n\n\n\n\nTable 1: Demostración de sintaxis de tabla.\n\n\n\n\n\nPrederminada\nIzquierda\nDerecha\nCentrado\n\n\n\n\nC\n12\n12\n12\n\n\nB\n123\n123\n123\n\n\nA\n1\n1\n1\n\n\nDecisión\nVender\nComprar\nNeutro\n\n\n\n\n\n\n\n\nEjemplo 2 con div envolvente\n::: {style=\"color: black; font-family: Arial, sans-serif;\"}\n| Fruta  | Precio  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: [Precios promedio de frutas.]{style=\"color: black; font-family: Arial, sans-serif;\"} {#tbl-frutas .striped .hover tbl-colwidths=\"\\[75,25\\]\"}\n\nObserve que:\n- Inicia y termina la tabla con `:::` envolviendola en un div con estilo\n- Despues de los primeros `:::` se declara se usará fuente Arial y en color negro\n- En la leyenda se aplica de nuevo para evitar configuración predeterminada de Quarto.\n:::\n\n\n\n\nTable 2: Precios promedio de frutas.\n\n\n\n\n\n\n\n\n\nFruta\nPrecio\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09\n\n\n\n\n\n\n\nEn la Table 2 se observa el precio promedio de las frutas (así se generan referencias cruzadas).",
     "crumbs": [
       "Ciencia de datos",
       "Quarto"
@@ -132,11 +143,11 @@
     ]
   },
   {
-    "objectID": "datascience/quarto.html#insertar-imagenes",
-    "href": "datascience/quarto.html#insertar-imagenes",
+    "objectID": "datascience/quarto.html#insertar-imágenes",
+    "href": "datascience/quarto.html#insertar-imágenes",
     "title": "Quarto atajos",
-    "section": "Insertar imagenes",
-    "text": "Insertar imagenes\nInsertar imagen\n\n![](https://mdg.imgix.net/assets/images/markdown-flowchart.png?auto=format&fit=clip&q=40&w=1080)",
+    "section": "Insertar imágenes",
+    "text": "Insertar imágenes\nInsertar imagen\n\n![](https://mdg.imgix.net/assets/images/markdown-flowchart.png?auto=format&fit=clip&q=40&w=1080)",
     "crumbs": [
       "Ciencia de datos",
       "Quarto"
@@ -180,7 +191,7 @@
     "href": "datascience/quarto.html#campos-de-un-encabezado-yml-en-un-cuaderno",
     "title": "Quarto atajos",
     "section": "Campos de un encabezado yml en un cuaderno",
-    "text": "Campos de un encabezado yml en un cuaderno\n\nMetadatos Básicos\ntitle: \"Título del Capítulo\"\nsubtitle: \"Subtítulo opcional\"\nauthor: \"Nombre del Autor\"\ndate: \"2025-01-15\"  # o \"today\" para fecha automática\ndate-format: \"long\"  # \"short\", \"medium\", \"long\", \"iso\"\n\n\nCampos para author\ntitle: \"Mi Documento Científico\"\nauthor:\n  - name: \"Juan Pérez\"\n    affiliation: \"Universidad Nacional\"\n    email: \"juan.perez@universidad.edu\"\n    orcid: \"0000-0002-1234-5678\"\n    corresponding: true\n    roles:\n      - conceptualization\n      - methodology\n      - writing\n    degrees: \"PhD\"\n    url: Sitio web personal\n  - name: \"María García\"\n    affiliation: \n      - \"Instituto de Investigación\"\n      - \"Centro de Estudios Avanzados\"\n    email: \"maria.garcia@instituto.org\"\n    orcid: \"0000-0003-9876-5432\"\n---\nname: Nombre completo del autor (requerido)\naffiliation: Institución(es) de afiliación (string o lista)\nemail: Correo electrónico\norcid: ID de ORCID (identificador único de investigador)\ncorresponding: Boolean para indicar autor de correspondencia\nurl: Sitio web personal\nroles: Roles específicos según taxonomía CRediT\nacknowledgements: Agradecimientos específicos del autor\n\n\nInformación del Documento\nabstract: \"Resumen del documento\"\nkeywords: [palabra1, palabra2, palabra3]\nlang: es  # Idioma del documento\ndescription: \"Descripción breve para metadatos\"\n\n\nBanner y Apariencia\ntitle-block-banner: true  # o ruta a imagen: \"banner.png\"\ntitle-block-banner-color: \"white\"\ntitle-block-style: default  # \"default\", \"plain\", \"none\"\n\n\nBibliografía\nbibliography: references.bib\ncsl: vancouver-brackets.csl  # Estilo de citación\ncitation-location: document  # \"document\", \"margin\", \"margin-ref\"\nlink-citations: true\nnocite: '@*'  # Para incluir todas las referencias\n\n\nReferencias Cruzadas\ncrossref:\n  fig-prefix: \"Figura\"\n  tbl-prefix: \"Tabla\"\n  eq-prefix: \"Ecuación\"\n  chapters: false  # true si numeras por capítulo\n\n\nFormato HTML\nformat:\n  html:\n    theme: cosmo  # cerulean, journal, flatly, darkly, etc.\n    toc: true  # Tabla de contenidos\n    toc-depth: 3\n    toc-location: left  # \"left\", \"right\", \"body\"\n    toc-title: \"Contenido\"\n    number-sections: false\n    number-depth: 3\n    code-fold: false  # true, \"show\", false\n    code-tools: false\n    code-copy: true\n    highlight-style: github  # pygments, tango, espresso, etc.\n    css: custom.css\n    include-in-header: header.html\n    include-before-body: before.html\n    include-after-body: after.html\n    self-contained: false\n    embed-resources: false\n    grid:\n      sidebar-width: 300px\n      body-width: 900px\n      margin-width: 250px\n    mainfont: \"Source Sans Pro\"\n\n\nFormato PDF\nformat:\n  pdf:\n    documentclass: article  # book, report, scrartcl\n    papersize: letter  # a4, letter, legal\n    geometry: margin=1in\n    fontsize: 11pt\n    linestretch: 1.5\n    number-sections: true\n    colorlinks: true\n    linkcolor: blue\n    urlcolor: blue\n    citecolor: green\n    keep-tex: true\n    include-in-header:\n      - text: |\n          \\usepackage{graphicx}\n          \\usepackage{xcolor}\n    prefer-html: true\n\n\nFormato Word\nformat:\n  docx:\n    reference-doc: template.docx\n    number-sections: true\n    highlight-style: github\n\n\nEjecutación de Código\nexecute:\n  echo: true  # Mostrar código\n  warning: false  # Mostrar warnings\n  error: false  # Mostrar errores\n  include: true  # Incluir salidas\n  eval: true  # Ejecutar código\n  cache: false  # Cachear resultados\n  freeze: auto  # \"true\", \"false\", \"auto\"\n\n\nFiguras y Tablas\nfig-width: 7\nfig-height: 5\nfig-dpi: 300\nfig-format: png  # png, jpg, svg, pdf\nfig-align: center  # left, right, center\ntbl-colwidths: auto  # [60, 40] para porcentajes\n\n\nOtros Campos Útiles\ndraft: false  # true para marcar como borrador\npublished: \"2025-01-15\"\nlicense: \"CC BY 4.0\"\ndoi: \"10.xxxx/xxxxx\"\ncategories: [categoría1, categoría2]\ntags: [tag1, tag2]\nimage: featured.png  # Imagen destacada\nfilters: [filter1.lua, filter2.lua]\n\n\nCampos Específicos de Libro\neditor: \"Nombre del Editor\"\npublisher: \"Editorial\"\nisbn: \"978-xxx-xxxx\"\nedition: \"Primera edición\"\nvolume: 1\npage-navigation: true",
+    "text": "Campos de un encabezado yml en un cuaderno\n\nMetadatos Básicos\ntitle: \"Título del Capítulo\"\nsubtitle: \"Subtítulo opcional\"\nauthor: \"Nombre del Autor\"\ndate: \"2025-01-15\"  # o \"today\" para fecha automática\ndate-format: \"long\"  # \"short\", \"medium\", \"long\", \"iso\"\n\n\nCampos para author\ntitle: \"Mi Documento Científico\"\nauthor:\n  - name: \"Juan Pérez\"\n    affiliation: \"Universidad Nacional\"\n    email: \"juan.perez@universidad.edu\"\n    orcid: \"0000-0002-1234-5678\"\n    corresponding: true\n    roles:\n      - conceptualization\n      - methodology\n      - writing\n    degrees: \"PhD\"\n    url: Sitio web personal\n  - name: \"María García\"\n    affiliation: \n      - \"Instituto de Investigación\"\n      - \"Centro de Estudios Avanzados\"\n    email: \"maria.garcia@instituto.org\"\n    orcid: \"0000-0003-9876-5432\"\n---\nname: Nombre completo del autor (requerido)\naffiliation: Institución(es) de afiliación (string o lista)\nemail: Correo electrónico\norcid: ID de ORCID (identificador único de investigador)\ncorresponding: Boolean para indicar autor de correspondencia\nurl: Sitio web personal\nroles: Roles específicos según taxonomía CRediT\nacknowledgements: Agradecimientos específicos del autor\n\n\nInformación del Documento\nabstract: \"Resumen del documento\"\nkeywords: [palabra1, palabra2, palabra3]\nlang: es  # Idioma del documento\ndescription: \"Descripción breve para metadatos\"\n\n\nBanner y Apariencia\ntitle-block-banner: true  # o ruta a imagen: \"banner.png\"\ntitle-block-banner-color: \"white\"\ntitle-block-style: default  # \"default\", \"plain\", \"none\"\n\n\nBibliografía\nbibliography: references.bib\ncsl: vancouver-brackets.csl  # Estilo de citación\ncitation-location: document  # \"document\", \"margin\", \"margin-ref\"\nlink-citations: true\nnocite: '@*'  # Para incluir todas las referencias\n\n\nReferencias Cruzadas\ncrossref:\n  fig-prefix: \"Figura\"\n  tbl-prefix: \"Tabla\"\n  eq-prefix: \"Ecuación\"\n  chapters: false  # true si numeras por capítulo\n\n\nFormato HTML\nformat:\n  html:\n    theme: cosmo  # cerulean, journal, flatly, darkly, etc.\n    toc: true  # Tabla de contenidos\n    toc-depth: 3\n    toc-location: left  # \"left\", \"right\", \"body\"\n    toc-title: \"Contenido\"\n    number-sections: false\n    number-depth: 3\n    code-fold: false  # true, \"show\", false\n    code-tools: false\n    code-copy: true\n    highlight-style: github  # pygments, tango, espresso, etc.\n    css: custom.css\n    include-in-header: header.html\n    include-before-body: before.html\n    include-after-body: after.html\n    self-contained: false\n    embed-resources: false\n    grid:\n      sidebar-width: 300px\n      body-width: 900px\n      margin-width: 250px\n    mainfont: \"Source Sans Pro\"\n\n\nFormato PDF\nformat:\n  pdf:\n    documentclass: article  # book, report, scrartcl\n    papersize: letter  # a4, letter, legal\n    geometry: margin=1in\n    fontsize: 11pt\n    linestretch: 1.5\n    number-sections: true\n    colorlinks: true\n    linkcolor: blue\n    urlcolor: blue\n    citecolor: green\n    keep-tex: true\n    include-in-header:\n      - text: |\n          \\usepackage{graphicx}\n          \\usepackage{xcolor}\n    prefer-html: true\n\n\nFormato Word\nformat:\n  docx:\n    reference-doc: template.docx\n    number-sections: true\n    highlight-style: github\n\n\nEjecución de código\nexecute:\n  echo: true  # Mostrar código\n  warning: false  # Mostrar warnings\n  error: false  # Mostrar errores\n  include: true  # Incluir salidas\n  eval: true  # Ejecutar código\n  cache: false  # Cachear resultados\n  freeze: auto  # \"true\", \"false\", \"auto\"\n\n\nFiguras y Tablas\nfig-width: 7\nfig-height: 5\nfig-dpi: 300\nfig-format: png  # png, jpg, svg, pdf\nfig-align: center  # left, right, center\ntbl-colwidths: auto  # [60, 40] para porcentajes\n\n\nOtros Campos Útiles\ndraft: false  # true para marcar como borrador\npublished: \"2025-01-15\"\nlicense: \"CC BY 4.0\"\ndoi: \"10.xxxx/xxxxx\"\ncategories: [categoría1, categoría2]\ntags: [tag1, tag2]\nimage: featured.png  # Imagen destacada\nfilters: [filter1.lua, filter2.lua]\n\n\nCampos Específicos de Libro\neditor: \"Nombre del Editor\"\npublisher: \"Editorial\"\nisbn: \"978-xxx-xxxx\"\nedition: \"Primera edición\"\nvolume: 1\npage-navigation: true",
     "crumbs": [
       "Ciencia de datos",
       "Quarto"
