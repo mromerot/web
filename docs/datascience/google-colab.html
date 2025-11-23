@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Cafés especiales – Inicio</title>
+<title>Google Colab – Inicio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -69,7 +104,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Cafés especiales – Inicio">
+<meta property="og:title" content="Google Colab – Inicio">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Inicio">
 </head>
 
@@ -82,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../vidalaboral/cafe.html">Vida laboral</a></li><li class="breadcrumb-item"><a href="../vidalaboral/cafe.html">Café</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datascience/cienciadedatos.html">Ciencia de datos</a></li><li class="breadcrumb-item"><a href="../datascience/google-colab.html">Google Colab</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -463,13 +499,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
  <span class="menu-text">Ciencia de datos</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../datascience/cienciadedatos.html" class="sidebar-item-text sidebar-link">
@@ -496,7 +532,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/google-colab.html" class="sidebar-item-text sidebar-link">
+  <a href="../datascience/google-colab.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Google Colab</span></a>
   </div>
 </li>
@@ -546,16 +582,16 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
  <span class="menu-text">Vida laboral</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../vidalaboral/cafe.html" class="sidebar-item-text sidebar-link active">
+  <a href="../vidalaboral/cafe.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Café</span></a>
   </div>
 </li>
@@ -606,25 +642,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contenidos</h2>
    
   <ul class="collapse">
-  <li><a href="#calidad-y-evaluación-del-café" id="toc-calidad-y-evaluación-del-café" class="nav-link active" data-scroll-target="#calidad-y-evaluación-del-café">Calidad y evaluación del café</a></li>
-  <li><a href="#métodos-de-preparación-de-café" id="toc-métodos-de-preparación-de-café" class="nav-link" data-scroll-target="#métodos-de-preparación-de-café">Métodos de preparación de café</a>
-  <ul class="collapse">
-  <li><a href="#hoop" id="toc-hoop" class="nav-link" data-scroll-target="#hoop">Hoop</a></li>
-  </ul></li>
-  <li><a href="#tiendas-de-café" id="toc-tiendas-de-café" class="nav-link" data-scroll-target="#tiendas-de-café">Tiendas de café</a></li>
-  <li><a href="#podcast" id="toc-podcast" class="nav-link" data-scroll-target="#podcast">Podcast</a>
-  <ul class="collapse">
-  <li><a href="#ciencia-y-otras-lecturas" id="toc-ciencia-y-otras-lecturas" class="nav-link" data-scroll-target="#ciencia-y-otras-lecturas">Ciencia y otras lecturas</a></li>
-  </ul></li>
+  <li><a href="#recursos-de-ayuda" id="toc-recursos-de-ayuda" class="nav-link active" data-scroll-target="#recursos-de-ayuda">Recursos de ayuda</a></li>
+  <li><a href="#qué-es-google-colab" id="toc-qué-es-google-colab" class="nav-link" data-scroll-target="#qué-es-google-colab">¿Qué es Google Colab?</a></li>
+  <li><a href="#características-principales" id="toc-características-principales" class="nav-link" data-scroll-target="#características-principales">Características principales</a></li>
+  <li><a href="#comandos-básicos" id="toc-comandos-básicos" class="nav-link" data-scroll-target="#comandos-básicos">Comandos básicos</a></li>
+  <li><a href="#atajos-de-teclado" id="toc-atajos-de-teclado" class="nav-link" data-scroll-target="#atajos-de-teclado">Atajos de teclado</a></li>
+  <li><a href="#nivel-intermedio" id="toc-nivel-intermedio" class="nav-link" data-scroll-target="#nivel-intermedio">Nivel intermedio</a></li>
+  <li><a href="#videos-tutoriales-recomendados" id="toc-videos-tutoriales-recomendados" class="nav-link" data-scroll-target="#videos-tutoriales-recomendados">Videos tutoriales recomendados</a></li>
+  <li><a href="#proyectos-destacados-en-github" id="toc-proyectos-destacados-en-github" class="nav-link" data-scroll-target="#proyectos-destacados-en-github">Proyectos destacados en GitHub</a></li>
+  <li><a href="#recursos-útiles-adicionales" id="toc-recursos-útiles-adicionales" class="nav-link" data-scroll-target="#recursos-útiles-adicionales">Recursos útiles adicionales</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../vidalaboral/cafe.html">Vida laboral</a></li><li class="breadcrumb-item"><a href="../vidalaboral/cafe.html">Café</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datascience/cienciadedatos.html">Ciencia de datos</a></li><li class="breadcrumb-item"><a href="../datascience/google-colab.html">Google Colab</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Cafés especiales</h1>
+<h1 class="title">Google Colab</h1>
 </div>
 
 
@@ -641,149 +676,282 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<hr>
-<section id="calidad-y-evaluación-del-café" class="level1">
-<h1>Calidad y evaluación del café</h1>
+<section id="recursos-de-ayuda" class="level2">
+<h2 class="anchored" data-anchor-id="recursos-de-ayuda">Recursos de ayuda</h2>
 <ul>
-<li><a href="https://enlaceejemplo.com/">En busca de la taza de café perfecta</a></li>
-<li><a href="https://www.nytimes.com/">The Coffee Maker. NYT, 2022</a></li>
-<li>Evaluación
-<ul>
-<li><a href="https://enlaceejemplo.com/">EL CAFÉ DE CALIDAD Y EL SISTEMA DE EVALUACIÓN DE LOS 100 PUNTOS</a></li>
-</ul></li>
-<li>Secado
-<ul>
-<li><a href="https://enlaceejemplo.com/">Todo Lo Que Necesitas Saber Sobre El Café Honey</a></li>
-<li><a href="https://enlaceejemplo.com/">HONEY PROCESS ¿EN QUÉ CONSISTE?</a></li>
-</ul></li>
+<li>Google Colab. <a href="https://colab.research.google.com/"><em>Link</em></a></li>
+<li>Google Colab Tutorial. <a href="https://colab.research.google.com/notebooks/intro.ipynb"><em>Link</em></a></li>
 </ul>
 </section>
-<section id="métodos-de-preparación-de-café" class="level1">
-<h1>Métodos de preparación de café</h1>
+<section id="qué-es-google-colab" class="level2">
+<h2 class="anchored" data-anchor-id="qué-es-google-colab">¿Qué es Google Colab?</h2>
+<p>Google Colaboratory (Colab) es un entorno de notebook Jupyter alojado que no requiere configuración y se ejecuta completamente en la nube. Con Colab puedes escribir y ejecutar código Python en tu navegador.</p>
+</section>
+<section id="características-principales" class="level2">
+<h2 class="anchored" data-anchor-id="características-principales">Características principales</h2>
 <ul>
-<li>Prensa francesa</li>
-<li>V60</li>
-<li>Chemex</li>
-<li>Aeropress</li>
-<li>Expresso</li>
+<li>Acceso gratuito a GPUs y TPUs</li>
+<li>Fácil compartir notebooks</li>
+<li>Integración con Google Drive</li>
+<li>Instalación de paquetes Python</li>
+<li>Colaboración en tiempo real</li>
 </ul>
-<section id="hoop" class="level2">
-<h2 class="anchored" data-anchor-id="hoop">Hoop</h2>
-<ul>
-<li>Ceado. <a href="https://coffee.ceado.com/en/products/86-hoop_coffee_brewer/56-hoop"><em>Link</em></a></li>
-</ul>
-<p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/14Wte33lAVE width=500" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> Ceado<p></p>
-<hr>
+</section>
+<section id="comandos-básicos" class="level2">
+<h2 class="anchored" data-anchor-id="comandos-básicos">Comandos básicos</h2>
+<section id="instalar-paquetes" class="level3">
+<h3 class="anchored" data-anchor-id="instalar-paquetes">Instalar paquetes</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install nombre_paquete</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="montar-google-drive" class="level3">
+<h3 class="anchored" data-anchor-id="montar-google-drive">Montar Google Drive</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="subir-archivos" class="level3">
+<h3 class="anchored" data-anchor-id="subir-archivos">Subir archivos</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> files</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>uploaded <span class="op">=</span> files.upload()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="descargar-archivos" class="level3">
+<h3 class="anchored" data-anchor-id="descargar-archivos">Descargar archivos</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> files</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>files.download(<span class="st">'archivo.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="tiendas-de-café" class="level1">
-<h1>Tiendas de café</h1>
+<section id="atajos-de-teclado" class="level2">
+<h2 class="anchored" data-anchor-id="atajos-de-teclado">Atajos de teclado</h2>
 <ul>
-<li><strong>Usaquén</strong>
-<ul>
-<li><a href="https://www.cafesanalberto.com/">San Alberto</a></li>
-<li><a href="https://www.colocoffee.co/">Colo Coffee</a></li>
-<li><a href="https://www.catacionpublica.com/">Catación Pública</a></li>
-</ul></li>
-<li><strong>Chapinero</strong>
-<ul>
-<li><a href="https://cafelibertario.com/">Libertario</a></li>
-<li><a href="https://www.devocion.com.co/">Devoción</a></li>
-<li><a href="https://www.varietale.com.co/">Varietale</a></li>
-<li><a href="https://cafecultor.com/">Café Cultor</a></li>
-<li><a href="https://amorperfecto.com/">Amor Perfecto</a></li>
-<li><a href="https://www.colocoffee.co/">Colo Coffee</a></li>
-<li><a href="https://www.tropicaliacafe.com/">Tropicalia</a></li>
-<li><a href="https://azaharcoffee.com/">Azahar</a></li>
-<li><a href="https://almacafe.com.co/">Alma</a></li>
-<li><a href="https://jondechcafe.com/">Jon Dech Cafe</a></li>
-<li><a href="https://bogotacoffeeroasters.com/">Bogota Coffee Roasters</a></li>
-<li><a href="https://cafedelatinteria.com/">Cafe de la Tintería</a></li>
-</ul></li>
-<li><strong>Marcas de café especial de Colombia</strong>
-<ul>
-<li><a href="https://cafesenigma.com/">Enigma</a></li>
-<li><a href="https://cafesolarte.com/">Solarte</a></li>
-<li><a href="https://laderasdeltapias.com/">Laderas del Tapias</a></li>
-<li><a href="https://enlaceejemplo.com/">Divisas de la virgen</a></li>
-<li><a href="https://pergaminocafe.com/">Pergamino</a></li>
-<li><a href="https://5centocafe.com/">5cento</a></li>
-<li><a href="https://cafesommelier.com/">Café Sommelier</a></li>
-<li><a href="https://serraniasdejardin.com/">Serranias de Jardin</a></li>
-</ul></li>
-<li><strong>Tiendas de café especial</strong>
-<ul>
-<li><a href="https://enlaceejemplo.com/">Cafés de origen <em>la más completa hasta ahora</em></a></li>
-</ul></li>
-<li><strong>Buscadores</strong>
-<ul>
-<li><a href="https://www.freshfarmer.co/">Freshfarmer</a></li>
-<li><a href="https://mcultivo.com/">m.cultivo</a></li>
-<li><a href="https://enlaceejemplo.com/">Mapa Coffee masters 2022</a></li>
-</ul></li>
-<li><strong>Accesorios</strong>
-<ul>
-<li><a href="https://enlaceejemplo.com/">La feria de la greca</a></li>
-</ul></li>
+<li><code>Ctrl + M B</code> - Insertar celda debajo</li>
+<li><code>Ctrl + M A</code> - Insertar celda arriba</li>
+<li><code>Ctrl + M D</code> - Eliminar celda</li>
+<li><code>Ctrl + Enter</code> - Ejecutar celda</li>
+<li><code>Shift + Enter</code> - Ejecutar celda y avanzar</li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Influenciadores</p>
-<ul>
-<li><p>James Hoffmann <a href="https://www.jameshoffmann.co.uk/">Webpage</a> <a href="https://www.youtube.com/channel/UCMb0O2CdPBNi-QqPk5T3gsQ">Youtube</a> Instagram <span class="citation" data-cites="jimseven">@jimseven</span></p></li>
-<li><p>Tanner coffee <a href="https://www.facebook.com/reel/548751493636877">Enlace a Facebook</a></p></li>
-</ul>
-</div>
-</div>
 <hr>
 </section>
-<section id="podcast" class="level1">
-<h1>Podcast</h1>
+<section id="nivel-intermedio" class="level2">
+<h2 class="anchored" data-anchor-id="nivel-intermedio">Nivel intermedio</h2>
+<section id="trabajar-con-gpus-y-tpus" class="level3">
+<h3 class="anchored" data-anchor-id="trabajar-con-gpus-y-tpus">Trabajar con GPUs y TPUs</h3>
+<section id="activar-gpu" class="level4">
+<h4 class="anchored" data-anchor-id="activar-gpu">Activar GPU</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificar si GPU está disponible</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"GPU disponible:"</span>, tf.test.gpu_device_name())</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Con PyTorch</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"GPU disponible:"</span>, torch.cuda.is_available())</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"GPU nombre:"</span>, torch.cuda.get_device_name(<span class="dv">0</span>) <span class="cf">if</span> torch.cuda.is_available() <span class="cf">else</span> <span class="st">"No GPU"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Para activar GPU: <strong>Runtime → Change runtime type → GPU</strong></p>
+</section>
+<section id="activar-tpu" class="level4">
+<h4 class="anchored" data-anchor-id="activar-tpu">Activar TPU</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificar TPU</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    tpu <span class="op">=</span> tf.distribute.cluster_resolver.TPUClusterResolver()</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'TPU disponible en:'</span>, tpu.cluster_spec().as_dict()[<span class="st">'worker'</span>])</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">ValueError</span>:</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'TPU no disponible'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="gestión-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="gestión-de-datos">Gestión de datos</h3>
+<section id="leer-archivos-desde-google-drive" class="level4">
+<h4 class="anchored" data-anchor-id="leer-archivos-desde-google-drive">Leer archivos desde Google Drive</h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Después de montar Drive</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'/content/drive/MyDrive/datos/archivo.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="descargar-datos-desde-url" class="level4">
+<h4 class="anchored" data-anchor-id="descargar-datos-desde-url">Descargar datos desde URL</h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>wget https:<span class="op">//</span>url<span class="op">-</span><span class="kw">del</span><span class="op">-</span>archivo.com<span class="op">/</span>datos.<span class="bu">zip</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>unzip datos.<span class="bu">zip</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="trabajar-con-google-sheets" class="level4">
+<h4 class="anchored" data-anchor-id="trabajar-con-google-sheets">Trabajar con Google Sheets</h4>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> auth</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.auth <span class="im">import</span> default</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gspread</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>auth.authenticate_user()</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>creds, _ <span class="op">=</span> default()</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>gc <span class="op">=</span> gspread.authorize(creds)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>worksheet <span class="op">=</span> gc.<span class="bu">open</span>(<span class="st">'Nombre_Hoja'</span>).sheet1</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> worksheet.get_all_values()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="optimización-y-trucos-avanzados" class="level3">
+<h3 class="anchored" data-anchor-id="optimización-y-trucos-avanzados">Optimización y trucos avanzados</h3>
+<section id="evitar-desconexión-automática" class="level4">
+<h4 class="anchored" data-anchor-id="evitar-desconexión-automática">Evitar desconexión automática</h4>
+<div class="sourceCode" id="cb10"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>javascript</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">ClickConnect</span>(){</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"Evitando desconexión"</span>)<span class="op">;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"colab-toolbar-button#connect"</span>)<span class="op">.</span><span class="fu">click</span>()</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="pp">setInterval</span>(ClickConnect<span class="op">,</span> <span class="dv">60000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="usar-variables-de-entorno" class="level4">
+<h4 class="anchored" data-anchor-id="usar-variables-de-entorno">Usar variables de entorno</h4>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> userdata</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Guardar secretos en Colab</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>api_key <span class="op">=</span> userdata.get(<span class="st">'API_KEY'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="ejecutar-comandos-bash-largos" class="level4">
+<h4 class="anchored" data-anchor-id="ejecutar-comandos-bash-largos">Ejecutar comandos bash largos</h4>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>bash</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>echo <span class="st">"Iniciando proceso largo..."</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>python script_largo.py <span class="op">&gt;</span> output.log <span class="dv">2</span><span class="op">&gt;&amp;</span><span class="dv">1</span> <span class="op">&amp;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>echo <span class="st">"Proceso iniciado en background"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="visualización-avanzada" class="level3">
+<h3 class="anchored" data-anchor-id="visualización-avanzada">Visualización avanzada</h3>
+<section id="gráficos-interactivos-con-plotly" class="level4">
+<h4 class="anchored" data-anchor-id="gráficos-interactivos-con-plotly">Gráficos interactivos con Plotly</h4>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install plotly</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> px.data.iris()</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.scatter(df, x<span class="op">=</span><span class="st">"sepal_width"</span>, y<span class="op">=</span><span class="st">"sepal_length"</span>, color<span class="op">=</span><span class="st">"species"</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="widgets-interactivos" class="level4">
+<h4 class="anchored" data-anchor-id="widgets-interactivos">Widgets interactivos</h4>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ipywidgets <span class="im">import</span> interact</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="at">@interact</span>(freq<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="fl">0.5</span>))</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_wave(freq<span class="op">=</span><span class="dv">5</span>):</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">100</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    plt.plot(x, np.sin(freq <span class="op">*</span> x))</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="integración-con-github" class="level3">
+<h3 class="anchored" data-anchor-id="integración-con-github">Integración con GitHub</h3>
+<section id="clonar-repositorio" class="level4">
+<h4 class="anchored" data-anchor-id="clonar-repositorio">Clonar repositorio</h4>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git clone https:<span class="op">//</span>github.com<span class="op">/</span>usuario<span class="op">/</span>repositorio.git</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>cd repositorio</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="configurar-git" class="level4">
+<h4 class="anchored" data-anchor-id="configurar-git">Configurar Git</h4>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git config <span class="op">--</span><span class="kw">global</span> user.email <span class="st">"tu@email.com"</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git config <span class="op">--</span><span class="kw">global</span> user.name <span class="st">"Tu Nombre"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="hacer-commit-y-push" class="level4">
+<h4 class="anchored" data-anchor-id="hacer-commit-y-push">Hacer commit y push</h4>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git add .</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git commit <span class="op">-</span>m <span class="st">"Actualización desde Colab"</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git push origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="manejo-de-memoria" class="level3">
+<h3 class="anchored" data-anchor-id="manejo-de-memoria">Manejo de memoria</h3>
+<section id="verificar-uso-de-ram" class="level4">
+<h4 class="anchored" data-anchor-id="verificar-uso-de-ram">Verificar uso de RAM</h4>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>cat <span class="op">/</span>proc<span class="op">/</span>meminfo <span class="op">|</span> grep MemTotal</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>cat <span class="op">/</span>proc<span class="op">/</span>meminfo <span class="op">|</span> grep MemAvailable</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="liberar-memoria" class="level4">
+<h4 class="anchored" data-anchor-id="liberar-memoria">Liberar memoria</h4>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gc</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>gc.collect()</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Borrar variables específicas</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> variable_grande</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>gc.collect()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+</section>
+<section id="videos-tutoriales-recomendados" class="level2">
+<h2 class="anchored" data-anchor-id="videos-tutoriales-recomendados">Videos tutoriales recomendados</h2>
+<section id="nivel-básico" class="level3">
+<h3 class="anchored" data-anchor-id="nivel-básico">Nivel básico</h3>
 <ul>
-<li><a href="https://enlaceejemplo.com/">Vivir Café Revista en Podcast. Por Hugo Sabogal</a></li>
-<li><strong>Enlaces del programa</strong>
-<ul>
-<li><a href="https://enlaceejemplo.com/"><em>Innovakit</em></a></li>
-<li><a href="https://indestec.com.co" class="uri">https://indestec.com.co</a></li>
-<li><a href="http://vivircafe.com" class="uri">http://vivircafe.com</a></li>
-<li><a href="https://www.qimacoffee.com" class="uri">https://www.qimacoffee.com</a></li>
-<li><a href="https://www.asopep.org" class="uri">https://www.asopep.org</a></li>
-<li><a href="https://federaciondecafeteros.org/wp/sostenibilidad/eje-social" class="uri">https://federaciondecafeteros.org/wp/sostenibilidad/eje-social</a></li>
-<li><a href="https://coocentral.com" class="uri">https://coocentral.com</a></li>
-<li><a href="http://cafemontesycolinas.com/index1.html" class="uri">http://cafemontesycolinas.com/index1.html</a></li>
-<li><a href="https://lapalmayeltucanhotel.com" class="uri">https://lapalmayeltucanhotel.com</a></li>
-<li><a href="https://www.eternitycoffeeroasters.com" class="uri">https://www.eternitycoffeeroasters.com</a></li>
-<li><a href="https://www.thecoffeequest.com" class="uri">https://www.thecoffeequest.com</a></li>
-<li><a href="https://www.campesinospecialtycoffee.com" class="uri">https://www.campesinospecialtycoffee.com</a></li>
-<li><a href="https://mastercol.co" class="uri">https://mastercol.co</a></li>
-<li><a href="https://lltostadores.com" class="uri">https://lltostadores.com</a></li>
-<li><a href="https://guayacancafe.negocio.site" class="uri">https://guayacancafe.negocio.site</a></li>
-<li><a href="http://tazadeexcelenciacolombia.com" class="uri">http://tazadeexcelenciacolombia.com</a></li>
-<li><a href="https://allianceforcoffeeexcellence.org" class="uri">https://allianceforcoffeeexcellence.org</a></li>
-<li><a href="http://www.supremo.be" class="uri">http://www.supremo.be</a></li>
-<li><a href="http://www.asecc.co" class="uri">http://www.asecc.co</a></li>
-<li><a href="http://www.4point0brands.com" class="uri">http://www.4point0brands.com</a></li>
-<li><a href="https://caravellacoffee.com/">Caravella coffee importers</a></li>
-<li><a href="https://guayacancafe.negocio.site/">Guayacán Café</a></li>
-</ul></li>
+<li><strong>Google Colab Tutorial for Beginners</strong> - freeCodeCamp.org <a href="https://www.youtube.com/watch?v=inN8seMm7UI"><em>Link</em></a></li>
+<li><strong>Complete Google Colab Tutorial</strong> - Coding Professor <a href="https://www.youtube.com/watch?v=RLYoEyIHL6A"><em>Link</em></a></li>
 </ul>
-<section id="ciencia-y-otras-lecturas" class="level2">
-<h2 class="anchored" data-anchor-id="ciencia-y-otras-lecturas">Ciencia y otras lecturas</h2>
+</section>
+<section id="nivel-intermedio-1" class="level3">
+<h3 class="anchored" data-anchor-id="nivel-intermedio-1">Nivel intermedio</h3>
 <ul>
-<li><a href="https://www.cell.com/matter/fulltext/S2590-2385(19)30410-2">Systematically Improving Espresso: Insights from Mathematical Modeling and Experiment. Matter, 2020</a></li>
-<li><a href="https://enlaceejemplo.com/">Paper-Filtered Coffee and Cholesterol</a></li>
+<li><strong>Google Colab GPU Tutorial</strong> - Aladdin Persson <a href="https://www.youtube.com/watch?v=PVsS9WtwVB8"><em>Link</em></a></li>
+<li><strong>Master Google Colab in 20 Minutes</strong> - Nicholas Renotte <a href="https://www.youtube.com/watch?v=agj3AxNPDdE"><em>Link</em></a></li>
+<li><strong>Google Colab Pro Tips and Tricks</strong> - Abhishek Thakur <a href="https://www.youtube.com/watch?v=7ftRDD_KsC8"><em>Link</em></a></li>
+</ul>
+</section>
+<section id="machine-learning-con-colab" class="level3">
+<h3 class="anchored" data-anchor-id="machine-learning-con-colab">Machine Learning con Colab</h3>
+<ul>
+<li><strong>Deep Learning with Google Colab</strong> - Python Simplified <a href="https://www.youtube.com/watch?v=PBYKHuJRfYA"><em>Link</em></a></li>
+<li><strong>Training Neural Networks on Google Colab</strong> - Sentdex <a href="https://www.youtube.com/watch?v=yNkjJDWs2ic"><em>Link</em></a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="proyectos-destacados-en-github" class="level2">
+<h2 class="anchored" data-anchor-id="proyectos-destacados-en-github">Proyectos destacados en GitHub</h2>
+<section id="colecciones-de-notebooks" class="level3">
+<h3 class="anchored" data-anchor-id="colecciones-de-notebooks">Colecciones de notebooks</h3>
+<ul>
+<li><strong>google/colaboratory</strong> - Notebooks oficiales de ejemplo <a href="https://github.com/googlecolab/colabtools"><em>Link</em></a></li>
+<li><strong>Awesome Colab Notebooks</strong> - Colección curada de notebooks <a href="https://github.com/firmai/awesome-google-colab"><em>Link</em></a></li>
+</ul>
+</section>
+<section id="proyectos-de-machine-learning" class="level3">
+<h3 class="anchored" data-anchor-id="proyectos-de-machine-learning">Proyectos de Machine Learning</h3>
+<ul>
+<li><strong>PyTorch Lightning Colab</strong> - Ejemplos de Deep Learning <a href="https://github.com/PyTorchLightning/pytorch-lightning"><em>Link</em></a></li>
+<li><strong>TensorFlow Examples</strong> - Tutoriales oficiales de TensorFlow <a href="https://github.com/tensorflow/docs"><em>Link</em></a></li>
+</ul>
+</section>
+<section id="herramientas-y-utilidades" class="level3">
+<h3 class="anchored" data-anchor-id="herramientas-y-utilidades">Herramientas y utilidades</h3>
+<ul>
+<li><strong>ColabCode</strong> - Ejecutar VS Code en Colab <a href="https://github.com/abhishekkrthakur/colabcode"><em>Link</em></a></li>
+<li><strong>Google Drive Downloader</strong> - Descargar archivos grandes desde Drive <a href="https://github.com/ndrplz/google-drive-downloader"><em>Link</em></a></li>
+<li><strong>Colab-SSH</strong> - Conectar a Colab vía SSH <a href="https://github.com/WassimBenzarti/colab-ssh"><em>Link</em></a></li>
+</ul>
+</section>
+<section id="proyectos-de-visión-por-computadora" class="level3">
+<h3 class="anchored" data-anchor-id="proyectos-de-visión-por-computadora">Proyectos de visión por computadora</h3>
+<ul>
+<li><strong>YOLOv5</strong> - Detección de objetos en tiempo real <a href="https://github.com/ultralytics/yolov5"><em>Link</em></a></li>
+<li><strong>Detectron2</strong> - Framework de detección de objetos de Facebook <a href="https://github.com/facebookresearch/detectron2"><em>Link</em></a></li>
+</ul>
+</section>
+<section id="procesamiento-de-lenguaje-natural" class="level3">
+<h3 class="anchored" data-anchor-id="procesamiento-de-lenguaje-natural">Procesamiento de lenguaje natural</h3>
+<ul>
+<li><strong>Hugging Face Transformers</strong> - Modelos de NLP pre-entrenados <a href="https://github.com/huggingface/transformers"><em>Link</em></a></li>
+<li><strong>spaCy</strong> - Procesamiento de lenguaje natural industrial <a href="https://github.com/explosion/spaCy"><em>Link</em></a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="recursos-útiles-adicionales" class="level2">
+<h2 class="anchored" data-anchor-id="recursos-útiles-adicionales">Recursos útiles adicionales</h2>
+<ul>
+<li>Seedbank de Colab - Colección de notebooks ML <a href="https://research.google.com/seedbank/"><em>Link</em></a></li>
+<li>Colab FAQ - Preguntas frecuentes oficiales <a href="https://research.google.com/colaboratory/faq.html"><em>Link</em></a></li>
+<li>Awesome Colab - Lista curada de recursos <a href="https://github.com/firmai/awesome-google-colab"><em>Link</em></a></li>
+<li>Colab Research - Blog oficial de Google Research <a href="https://colab.research.google.com/notebooks/welcome.ipynb"><em>Link</em></a></li>
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

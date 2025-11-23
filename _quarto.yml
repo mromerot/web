@@ -133,6 +133,8 @@ website:
             href: datascience/myst.qmd
           - text: "Github"
             href: datascience/github.qmd
+          - text: "Google Colab"
+            href: datascience/google-colab.qmd
           - text: "Graficas Python y R"
             href: datascience/graficas-python-r.qmd
           - text: "ARCO Data"

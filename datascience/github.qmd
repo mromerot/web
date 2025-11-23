@@ -16,6 +16,445 @@ editor: visual
 
 -   Introduction to GitHub. [*Link*](https://github.com/mromerot/skills-introduction-to-github)
 
-## Github copilot
+## Recursos de ayuda
+
+-   GitHub Documentation. [*Link*](https://docs.github.com/)
+-   GitHub Skills. [*Link*](https://skills.github.com/)
+-   GitHub Community. [*Link*](https://github.com/community)
+
+## Comandos básicos de Git
+
+### Configuración inicial
+
+```bash
+# Configurar nombre y email
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu@email.com"
+
+# Ver configuración
+git config --list
+```
+
+### Crear y clonar repositorios
+
+```bash
+# Inicializar repositorio
+git init
+
+# Clonar repositorio
+git clone https://github.com/usuario/repositorio.git
+
+# Clonar con nombre específico
+git clone https://github.com/usuario/repositorio.git mi-proyecto
+```
+
+### Comandos esenciales
+
+```bash
+# Ver estado
+git status
+
+# Agregar archivos
+git add archivo.txt
+git add .  # Agregar todos
+
+# Hacer commit
+git commit -m "Mensaje descriptivo"
+
+# Ver historial
+git log
+git log --oneline --graph
+```
+
+### Trabajar con remotos
+
+```bash
+# Ver remotos
+git remote -v
+
+# Agregar remoto
+git remote add origin https://github.com/usuario/repo.git
+
+# Push
+git push origin main
+
+# Pull
+git pull origin main
+```
+
+------------------------------------------------------------------------
+
+## Nivel intermedio
+
+### Branching (Ramificación)
+
+#### Crear y cambiar ramas
+
+```bash
+# Crear rama
+git branch nombre-rama
+
+# Cambiar a rama
+git checkout nombre-rama
+
+# Crear y cambiar en un comando
+git checkout -b nueva-rama
+
+# Cambiar de rama (forma moderna)
+git switch nombre-rama
+git switch -c nueva-rama  # Crear y cambiar
+```
+
+#### Fusionar ramas
+
+```bash
+# Fusionar rama en la actual
+git merge nombre-rama
+
+# Fusionar con squash (combinar commits)
+git merge --squash nombre-rama
+
+# Abortar merge conflictivo
+git merge --abort
+```
+
+#### Eliminar ramas
+
+```bash
+# Eliminar rama local
+git branch -d nombre-rama  # Solo si está fusionada
+git branch -D nombre-rama  # Forzar eliminación
+
+# Eliminar rama remota
+git push origin --delete nombre-rama
+```
+
+### Manejo de conflictos
+
+```bash
+# Ver archivos con conflictos
+git status
+
+# Después de resolver manualmente
+git add archivo-resuelto.txt
+git commit -m "Resolver conflicto"
+
+# Usar herramienta de merge
+git mergetool
+```
+
+### Rebase interactivo
+
+```bash
+# Rebase interactivo de últimos 3 commits
+git rebase -i HEAD~3
+
+# Rebase sobre otra rama
+git rebase main
+
+# Continuar después de resolver conflictos
+git rebase --continue
+
+# Abortar rebase
+git rebase --abort
+```
+
+### Stash (Guardar cambios temporalmente)
+
+```bash
+# Guardar cambios
+git stash
+git stash save "Mensaje descriptivo"
+
+# Ver stashes guardados
+git stash list
+
+# Aplicar último stash
+git stash apply
+git stash pop  # Aplicar y eliminar
+
+# Aplicar stash específico
+git stash apply stash@{2}
+
+# Eliminar stash
+git stash drop stash@{0}
+git stash clear  # Eliminar todos
+```
+
+### Cherry-pick (Seleccionar commits específicos)
+
+```bash
+# Aplicar commit específico a rama actual
+git cherry-pick abc123
+
+# Cherry-pick múltiples commits
+git cherry-pick abc123 def456
+
+# Cherry-pick sin hacer commit automático
+git cherry-pick -n abc123
+```
+
+### Tags (Etiquetas)
+
+```bash
+# Crear tag
+git tag v1.0.0
+git tag -a v1.0.0 -m "Versión 1.0.0"
+
+# Ver tags
+git tag
+git tag -l "v1.*"
+
+# Push tags
+git push origin v1.0.0
+git push origin --tags  # Push todos los tags
+
+# Eliminar tag
+git tag -d v1.0.0
+git push origin --delete v1.0.0
+```
+
+### Comandos útiles avanzados
+
+#### Git reflog (Recuperar commits)
+
+```bash
+# Ver historial de referencias
+git reflog
+
+# Recuperar commit perdido
+git checkout abc123
+git reset --hard abc123
+```
+
+#### Git diff avanzado
+
+```bash
+# Diferencias entre ramas
+git diff main..feature
+
+# Diferencias de archivos específicos
+git diff HEAD -- archivo.txt
+
+# Diferencias con estadísticas
+git diff --stat
+```
+
+#### Git reset y revert
+
+```bash
+# Deshacer último commit (mantener cambios)
+git reset --soft HEAD~1
+
+# Deshacer último commit (descartar cambios)
+git reset --hard HEAD~1
+
+# Revertir commit creando nuevo commit
+git revert abc123
+```
+
+### GitHub CLI (gh)
+
+```bash
+# Instalar GitHub CLI
+# macOS: brew install gh
+# Windows: winget install GitHub.cli
+
+# Login
+gh auth login
+
+# Crear repositorio
+gh repo create nombre-repo --public
+
+# Crear PR
+gh pr create --title "Nueva feature" --body "Descripción"
+
+# Ver PRs
+gh pr list
+gh pr view 123
+
+# Clonar repos
+gh repo clone usuario/repositorio
+```
+
+### GitHub Actions básico
+
+```yaml
+# .github/workflows/ci.yml
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      - name: Run tests
+        run: pytest
+```
+
+### Trabajo colaborativo
+
+#### Pull Requests
+
+```bash
+# Crear rama para feature
+git checkout -b feature/nueva-funcionalidad
+
+# Hacer cambios y commits
+git add .
+git commit -m "Agregar nueva funcionalidad"
+
+# Push de la rama
+git push origin feature/nueva-funcionalidad
+
+# Luego crear PR en GitHub web o con gh cli
+gh pr create
+```
+
+#### Code Review
+
+```bash
+# Ver cambios de PR
+gh pr checkout 123
+gh pr diff 123
+
+# Comentar en PR
+gh pr comment 123 --body "Se ve bien!"
+
+# Aprobar PR
+gh pr review 123 --approve
+
+# Mergear PR
+gh pr merge 123
+```
+
+### .gitignore avanzado
+
+```gitignore
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.local
+
+# Build
+dist/
+build/
+*.egg-info/
+```
+
+### GitHub Pages
+
+```bash
+# Crear rama gh-pages
+git checkout --orphan gh-pages
+
+# Agregar contenido
+git add .
+git commit -m "Initial GitHub Pages"
+
+# Push
+git push origin gh-pages
+
+# Configurar en Settings → Pages
+```
+
+------------------------------------------------------------------------
+
+## Videos tutoriales recomendados
+
+### Nivel básico
+
+-   **Git and GitHub for Beginners** - freeCodeCamp.org [*Link*](https://www.youtube.com/watch?v=RGOj5yH7evk)
+-   **Git Tutorial for Beginners** - Programming with Mosh [*Link*](https://www.youtube.com/watch?v=8JJ101D3knE)
+
+### Nivel intermedio
+
+-   **Git Branching and Merging** - Traversy Media [*Link*](https://www.youtube.com/watch?v=Q1kHG842HoI)
+-   **Advanced Git Tutorial** - Academind [*Link*](https://www.youtube.com/watch?v=qsTthZi23VE)
+-   **Git Rebase vs Merge** - DevTips [*Link*](https://www.youtube.com/watch?v=CRlGDDprdOQ)
+
+### GitHub específico
+
+-   **GitHub Actions Tutorial** - TechWorld with Nana [*Link*](https://www.youtube.com/watch?v=R8_veQiYBjI)
+-   **Pull Requests Explained** - Fireship [*Link*](https://www.youtube.com/watch?v=8lGpZkjnkt4)
+
+------------------------------------------------------------------------
+
+## Proyectos destacados en GitHub
+
+### Recursos de aprendizaje
+
+-   **first-contributions** - Guía para tu primera contribución [*Link*](https://github.com/firstcontributions/first-contributions)
+-   **github-cheat-sheet** - Trucos y comandos útiles [*Link*](https://github.com/tiimgreen/github-cheat-sheet)
+-   **awesome-github** - Lista curada de recursos GitHub [*Link*](https://github.com/phillipadsmith/awesome-github)
+
+### Herramientas Git/GitHub
+
+-   **git-extras** - Comandos extra para Git [*Link*](https://github.com/tj/git-extras)
+-   **hub** - Extensión de línea de comandos para GitHub [*Link*](https://github.com/github/hub)
+-   **gitignore.io** - Generador de .gitignore [*Link*](https://github.com/toptal/gitignore.io)
+
+### GitHub Actions
+
+-   **awesome-actions** - Lista de GitHub Actions [*Link*](https://github.com/sdras/awesome-actions)
+-   **actions-toolkit** - Toolkit para crear Actions [*Link*](https://github.com/actions/toolkit)
+
+### Automatización y CI/CD
+
+-   **pre-commit** - Framework para git hooks [*Link*](https://github.com/pre-commit/pre-commit)
+-   **semantic-release** - Versionado semántico automático [*Link*](https://github.com/semantic-release/semantic-release)
+-   **release-drafter** - Automatizar release notes [*Link*](https://github.com/release-drafter/release-drafter)
+
+### Perfiles y documentación
+
+-   **github-profile-readme-generator** - Generador de README perfil [*Link*](https://github.com/rahuldkjain/github-profile-readme-generator)
+-   **awesome-readme** - Ejemplos de READMEs increíbles [*Link*](https://github.com/matiassingers/awesome-readme)
+-   **shields** - Badges para repositorios [*Link*](https://github.com/badges/shields)
+
+------------------------------------------------------------------------
+
+## GitHub Copilot
 
 -   What is GitHub Copilot?. [*Link*](https://docs.github.com/en/copilot/get-started/what-is-github-copilot)
+-   GitHub Copilot Documentation. [*Link*](https://docs.github.com/en/copilot)
+
+## Recursos adicionales
+
+-   Pro Git Book (gratuito). [*Link*](https://git-scm.com/book/en/v2)
+-   GitHub Learning Lab. [*Link*](https://lab.github.com/)
+-   GitHub Student Developer Pack. [*Link*](https://education.github.com/pack)
+-   Conventional Commits. [*Link*](https://www.conventionalcommits.org/)
