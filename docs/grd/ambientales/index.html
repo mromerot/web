@@ -67,12 +67,57 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
+</script>
+<!-- Google Site Verification -->
+<!-- Reemplaza XXXXX con tu código de verificación de Google Search Console -->
+<!-- <meta name="google-site-verification" content="XXXXX" /> -->
+
+<!-- Meta tags adicionales para SEO -->
+<meta name="author" content="Mauricio Romero Torres">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@mauricioromerot">
+
+<!-- Schema.org markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mauricio Romero Torres",
+  "jobTitle": "Gestor de ciencia y tecnología",
+  "url": "https://mromerot.github.io/web/",
+  "sameAs": [
+    "https://x.com/mauricioromerot",
+    "https://www.linkedin.com/in/mauricio-romero-torres-1b33b95/",
+    "https://scholar.google.com/citations?user=n484vskAAAAJ"
+  ]
+}
+</script>
 
 
 <meta property="og:title" content="Riesgo por amenazas ambientales – Inicio">
-<meta property="og:description" content="">
+<meta property="og:description" content="Sitio web sobre gestión del riesgo de desastres, ciencia de datos, cambio climático y tecnología">
 <meta property="og:image" content="https://www.undrr.org/sites/default/files/styles/por/public/document_thumbnails/94561.jpg?h=6a9e38f6&amp;itok=Xd3LiX_K">
 <meta property="og:site_name" content="Inicio">
+<meta name="twitter:title" content="Riesgo por amenazas ambientales – Inicio">
+<meta name="twitter:description" content="Sitio web sobre gestión del riesgo de desastres, ciencia de datos, cambio climático y tecnología">
+<meta name="twitter:image" content="https://www.undrr.org/sites/default/files/styles/por/public/document_thumbnails/94561.jpg?h=6a9e38f6&amp;itok=Xd3LiX_K">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -610,7 +655,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#ambiental" id="toc-ambiental" class="nav-link active" data-scroll-target="#ambiental"><strong>Ambiental</strong></a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -863,7 +908,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/mromerot\.github\.io\/web\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1198,7 +1243,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
 <p>Made with ❤️ and Quarto</p>
-</div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

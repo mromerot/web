@@ -105,12 +105,61 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
+</script>
+<!-- Google Site Verification -->
+<!-- Reemplaza XXXXX con tu código de verificación de Google Search Console -->
+<!-- <meta name="google-site-verification" content="XXXXX" /> -->
+
+<!-- Meta tags adicionales para SEO -->
+<meta name="author" content="Mauricio Romero Torres">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@mauricioromerot">
+
+<!-- Schema.org markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mauricio Romero Torres",
+  "jobTitle": "Gestor de ciencia y tecnología",
+  "url": "https://mromerot.github.io/web/",
+  "sameAs": [
+    "https://x.com/mauricioromerot",
+    "https://www.linkedin.com/in/mauricio-romero-torres-1b33b95/",
+    "https://scholar.google.com/citations?user=n484vskAAAAJ"
+  ]
+}
+</script>
 
 
 <meta property="og:title" content="Third Blog Post – Inicio">
 <meta property="og:description" content="An example post where the source document is a Jupyter Notebook">
-<meta property="og:image" content="index_files/figure-html/cell-2-output-1.png">
+<meta property="og:image" content="https://mromerot.github.io/web/blog/third-post/index_files/figure-html/cell-2-output-1.png">
 <meta property="og:site_name" content="Inicio">
+<meta property="og:image:height" content="384">
+<meta property="og:image:width" content="721">
+<meta name="twitter:title" content="Third Blog Post – Inicio">
+<meta name="twitter:description" content="An example post where the source document is a Jupyter Notebook">
+<meta name="twitter:image" content="https://mromerot.github.io/web/blog/third-post/index_files/figure-html/cell-2-output-1.png">
+<meta name="twitter:image-height" content="384">
+<meta name="twitter:image-width" content="721">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -791,7 +840,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/mromerot\.github\.io\/web\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1126,7 +1175,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>   
     <div class="nav-footer-center">
 <p>Made with ❤️ and Quarto</p>
-</div>
+<div class="toc-actions"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

@@ -102,11 +102,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
+</script>
+<!-- Google Site Verification -->
+<!-- Reemplaza XXXXX con tu código de verificación de Google Search Console -->
+<!-- <meta name="google-site-verification" content="XXXXX" /> -->
+
+<!-- Meta tags adicionales para SEO -->
+<meta name="author" content="Mauricio Romero Torres">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@mauricioromerot">
+
+<!-- Schema.org markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mauricio Romero Torres",
+  "jobTitle": "Gestor de ciencia y tecnología",
+  "url": "https://mromerot.github.io/web/",
+  "sameAs": [
+    "https://x.com/mauricioromerot",
+    "https://www.linkedin.com/in/mauricio-romero-torres-1b33b95/",
+    "https://scholar.google.com/citations?user=n484vskAAAAJ"
+  ]
+}
+</script>
 
 
 <meta property="og:title" content="Quarto atajos – Inicio">
-<meta property="og:description" content="">
+<meta property="og:description" content="Sitio web sobre gestión del riesgo de desastres, ciencia de datos, cambio climático y tecnología">
 <meta property="og:site_name" content="Inicio">
+<meta name="twitter:title" content="Quarto atajos – Inicio">
+<meta name="twitter:description" content="Sitio web sobre gestión del riesgo de desastres, ciencia de datos, cambio climático y tecnología">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -655,7 +699,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#campos-de-un-encabezado-yml-en-un-cuaderno" id="toc-campos-de-un-encabezado-yml-en-un-cuaderno" class="nav-link" data-scroll-target="#campos-de-un-encabezado-yml-en-un-cuaderno">Campos de un encabezado yml en un cuaderno</a></li>
   <li><a href="#ejemplo-completo" id="toc-ejemplo-completo" class="nav-link" data-scroll-target="#ejemplo-completo">📝 Ejemplo Completo</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1265,7 +1309,7 @@ fig-height: 5
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/mromerot\.github\.io\/web\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1600,7 +1644,7 @@ fig-height: 5
     </div>   
     <div class="nav-footer-center">
 <p>Made with ❤️ and Quarto</p>
-</div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

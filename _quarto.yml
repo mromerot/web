@@ -5,8 +5,14 @@ project:
 
 website:
   title: "Inicio"
+  site-url: "https://mromerot.github.io/web/"
+  description: "Sitio web sobre gestión del riesgo de desastres, ciencia de datos, cambio climático y tecnología"
   open-graph: true  # Open graph for social media sharing
+  twitter-card: true
+  google-analytics: "G-XXXXXXXXXX"  # Reemplazar con tu ID de Google Analytics
   page-footer: "Made with ❤️ and Quarto"
+  repo-url: "https://github.com/mromerot/web"
+  issue-url: "https://github.com/mromerot/web/issues"
   sidebar:
     style: "docked"
     search: true
@@ -173,3 +179,4 @@ format:
     toc-title: "Contenidos"
     toc-back-to-top: true
     toc-back-to-top-text: "Volver arriba"
+    include-in-header: _includes/head.html

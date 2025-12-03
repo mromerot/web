@@ -1,6 +1,16 @@
 ---
 title: "Mauricio Romero Torres"
 subtitle: "Gestor de ciencia y tecnología"
+description: "Sitio web de Mauricio Romero Torres - Gestión del riesgo de desastres, ciencia de datos, cambio climático y tecnología"
+author: "Mauricio Romero Torres"
+keywords:
+  - gestión del riesgo de desastres
+  - ciencia de datos
+  - cambio climático
+  - Python
+  - R
+  - Quarto
+  - machine learning
 # `profile.jpeg` photo by Mauricio Romero
 image: profile.jpeg
 about: # https://quarto.org/docs/websites/website-about.html
