@@ -26,11 +26,32 @@ editor: visual
 
 # Evaluación del riesgo por por tsunami
 
--   Libros:
+-   Lecturas:
     -   Probabilistic Tsunami Hazard and Risk Analysis. Towards Disaster Risk Reduction and Resilience. 2024. [*Link*](https://www.sciencedirect.com/book/9780443189876/probabilistic-tsunami-hazard-and-risk-analysis). [*Google*](https://books.google.com.co/books?id=-cIAEQAAQBAJ&printsec=frontcover&dq=Probabilistic+Tsunami+Hazard+and+Risk+Analysis&hl=es-419&newbks=1&newbks_redir=0&sa=X&redir_esc=y#v=onepage&q&f=false)
     -   Probabilistic Tsunami Hazard and Risk Analysis: Towards Disaster Risk. [*Link*](https://books.google.com.co/books?id=BqVYEAAAQBAJ&printsec=frontcover&dq=Probabilistic+Tsunami+Hazard+and+Risk+Analysis&hl=es-419&newbks=1&newbks_redir=0&sa=X&redir_esc=y#v=onepage&q=Probabilistic%20Tsunami%20Hazard%20and%20Risk%20Analysis&f=false).
+    -   Estimated Average Annualized Tsunami Losses for the United States. 2025. [*Link*](https://www.usgs.gov/publications/estimated-average-annualized-tsunami-losses-united-states). [*Link*](https://www.fema.gov/sites/default/files/documents/fema_hazus_p-2426_estimated-average-annualized-tsunami-losses-united-states_092025.pdf)*.*
+        -   Data associated with the national assessment of potential average annualized losses from tsunamis in the United States. [*Link*](https://www.sciencebase.gov/catalog/item/68750de9d4be025f81987bc2)
+        -   Estimated average annualized losses from potential building damage and fatalities due to earthquake-generated tsunamis in the United States. 2025. International Journal of Disaster Risk Reduction. [*Link*](https://www.sciencedirect.com/science/article/pii/S2212420925006624)
 
 # Comunicación del riesgo
+
+Lecturas:
+
+-   Tsunami risk communication and management: Contemporary gaps and challenges. 2022. International Journal of Disaster Risk Reduction. [*Link*](https://www.sciencedirect.com/science/article/pii/S2212420921007329)
+-   Early Warning for All: Tsunami warning communication and dissemination in the Americas and the Caribbean. UNDRR. 2025. [*Link*](https://www.undrr.org/event/early-warning-all-tsunami-warning-communication-and-dissemination-americas-and-caribbean)
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/maak6xGfipc" >}}
+
+{{< video "https://youtu.be/U8oLVkuiPgQ" >}}
+
+{{< video "https://youtu.be/aEcQHRr0plU" >}}
+:::
+
+**Videos:**
+- Communicating Local Climate & Hazard Risk Information to At-Risk Residents
+- Hazardous Webinar July 2025: Disaster through a social media lens
+- Understanding tsunami risk and warnings | Alaska Insight
 
 # Reducción del riesgo
 
@@ -42,6 +63,8 @@ Tsunami paso a paso: los escandalosos errores y omisiones del SHOA y la ONEMI. [
 
 ## Videos
 
-{{\<video "https://www.youtube.com/watch?v=w2BIPxPaolQ" \>}}
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=w2BIPxPaolQ" >}}
 
-{{\<video "https://www.youtube.com/watch?v=DdGO9Tqp98Q" \>}}
+{{< video "https://www.youtube.com/watch?v=DdGO9Tqp98Q" >}}
+:::
