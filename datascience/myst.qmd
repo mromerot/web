@@ -6,6 +6,7 @@ editor: visual
 
 # Myst
 
+-   Mi proyecto paralelo de Myst
 -   Myst. [*Link*](https://mystmd.org/guide).
     -   Get Started. Your first steps with MyST. [*Link*](https://mystmd.org/guide/quickstart)
 
@@ -34,6 +35,15 @@ Revise el tutorial por extenso aquí: [*link*](https://mystmd.org/guide/quicksta
 -   Agregar contenido: Crear más archivos .md o notebooks .ipynb
 -   Configurar: Editar `myst.yml` para personalizar título, descripción, etc. 4. Estructura: Crear subcarpetas y organizar tu contenido
 -   Estructura: Crear subcarpetas y organizar tu contenido
+:::
+
+::: callout-note
+## Comando rapidos
+
+`myst start` Preview en navegador
+`myst build --html` Build estático (para generar HTML)
+
+
 :::
 
 {{< video "https://youtu.be/YGzBF-2wAWU" width = "400" >}} SciPy Proceedings 2025. MyST Markdown and Curvenote

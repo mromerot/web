@@ -26,7 +26,11 @@ editor: visual
 
 ### Configuración inicial
 
-```bash
+``` bash
+#Instalarlo con Homebrew
+instalar el GitHub CLI primero. Voy a instalarlo usando Homebrew.
+`brew install gh`
+`gh auth login` para autenticarse
 # Configurar nombre y email
 git config --global user.name "Tu Nombre"
 git config --global user.email "tu@email.com"
@@ -37,7 +41,7 @@ git config --list
 
 ### Crear y clonar repositorios
 
-```bash
+``` bash
 # Inicializar repositorio
 git init
 
@@ -50,7 +54,7 @@ git clone https://github.com/usuario/repositorio.git mi-proyecto
 
 ### Comandos esenciales
 
-```bash
+``` bash
 # Ver estado
 git status
 
@@ -68,7 +72,7 @@ git log --oneline --graph
 
 ### Trabajar con remotos
 
-```bash
+``` bash
 # Ver remotos
 git remote -v
 
@@ -90,7 +94,7 @@ git pull origin main
 
 #### Crear y cambiar ramas
 
-```bash
+``` bash
 # Crear rama
 git branch nombre-rama
 
@@ -107,7 +111,7 @@ git switch -c nueva-rama  # Crear y cambiar
 
 #### Fusionar ramas
 
-```bash
+``` bash
 # Fusionar rama en la actual
 git merge nombre-rama
 
@@ -120,7 +124,7 @@ git merge --abort
 
 #### Eliminar ramas
 
-```bash
+``` bash
 # Eliminar rama local
 git branch -d nombre-rama  # Solo si está fusionada
 git branch -D nombre-rama  # Forzar eliminación
@@ -131,7 +135,7 @@ git push origin --delete nombre-rama
 
 ### Manejo de conflictos
 
-```bash
+``` bash
 # Ver archivos con conflictos
 git status
 
@@ -145,7 +149,7 @@ git mergetool
 
 ### Rebase interactivo
 
-```bash
+``` bash
 # Rebase interactivo de últimos 3 commits
 git rebase -i HEAD~3
 
@@ -161,7 +165,7 @@ git rebase --abort
 
 ### Stash (Guardar cambios temporalmente)
 
-```bash
+``` bash
 # Guardar cambios
 git stash
 git stash save "Mensaje descriptivo"
@@ -183,7 +187,7 @@ git stash clear  # Eliminar todos
 
 ### Cherry-pick (Seleccionar commits específicos)
 
-```bash
+``` bash
 # Aplicar commit específico a rama actual
 git cherry-pick abc123
 
@@ -196,7 +200,7 @@ git cherry-pick -n abc123
 
 ### Tags (Etiquetas)
 
-```bash
+``` bash
 # Crear tag
 git tag v1.0.0
 git tag -a v1.0.0 -m "Versión 1.0.0"
@@ -218,7 +222,7 @@ git push origin --delete v1.0.0
 
 #### Git reflog (Recuperar commits)
 
-```bash
+``` bash
 # Ver historial de referencias
 git reflog
 
@@ -229,7 +233,7 @@ git reset --hard abc123
 
 #### Git diff avanzado
 
-```bash
+``` bash
 # Diferencias entre ramas
 git diff main..feature
 
@@ -242,7 +246,7 @@ git diff --stat
 
 #### Git reset y revert
 
-```bash
+``` bash
 # Deshacer último commit (mantener cambios)
 git reset --soft HEAD~1
 
@@ -255,7 +259,7 @@ git revert abc123
 
 ### GitHub CLI (gh)
 
-```bash
+``` bash
 # Instalar GitHub CLI
 # macOS: brew install gh
 # Windows: winget install GitHub.cli
@@ -279,7 +283,7 @@ gh repo clone usuario/repositorio
 
 ### GitHub Actions básico
 
-```yaml
+``` yaml
 # .github/workflows/ci.yml
 name: CI
 
@@ -309,7 +313,7 @@ jobs:
 
 #### Pull Requests
 
-```bash
+``` bash
 # Crear rama para feature
 git checkout -b feature/nueva-funcionalidad
 
@@ -326,7 +330,7 @@ gh pr create
 
 #### Code Review
 
-```bash
+``` bash
 # Ver cambios de PR
 gh pr checkout 123
 gh pr diff 123
@@ -343,7 +347,7 @@ gh pr merge 123
 
 ### .gitignore avanzado
 
-```gitignore
+``` gitignore
 # Python
 __pycache__/
 *.py[cod]
@@ -378,7 +382,7 @@ build/
 
 ### GitHub Pages
 
-```bash
+``` bash
 # Crear rama gh-pages
 git checkout --orphan gh-pages
 
