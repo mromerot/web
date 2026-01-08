@@ -40,10 +40,7 @@ Revise el tutorial por extenso aquí: [*link*](https://mystmd.org/guide/quicksta
 ::: callout-note
 ## Comando rapidos
 
-`myst start` Preview en navegador
-`myst build --html` Build estático (para generar HTML)
-
-
+`myst start` Preview en navegador `myst build --html` Build estático (para generar HTML)
 :::
 
 {{< video "https://youtu.be/YGzBF-2wAWU" width = "400" >}} SciPy Proceedings 2025. MyST Markdown and Curvenote
