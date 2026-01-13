@@ -411,7 +411,7 @@
     "href": "datascience/github.html#recursos-de-ayuda",
     "title": "Github",
     "section": "Recursos de ayuda",
-    "text": "Recursos de ayuda\n\nGitHub Documentation. Link\nGitHub Skills. Link &lt;— recomendado !\nGitHub Community. Link\nInstalación y Configuración (Git SCM Book)\n\n Banco Interamericano de Desarollo Code4Dev: ¿Cómo optimizar tu repositorio de código abierto con Git y GitHub?",
+    "text": "Recursos de ayuda\n\nGitHub Skills. Link &lt;— recomendado para aprender el flujo de trabajo!\n\nIntroduction to GitHub\nHello GitHub Actions\nGitHub Pages\nReview pull requests\nBasic writing and formatting syntax\n\nGitHub Documentation. Link\nGitHub Community. Link\nInstalación y Configuración (Git SCM Book)\n\n Banco Interamericano de Desarollo Code4Dev: ¿Cómo optimizar tu repositorio de código abierto con Git y GitHub?",
     "crumbs": [
       "Ciencia de datos",
       "Github"
@@ -433,7 +433,7 @@
     "href": "datascience/github.html#repositorios",
     "title": "Github",
     "section": "Repositorios",
-    "text": "Repositorios\n¿Qué es un repositorio? Un repositorio es un proyecto que contiene archivos y carpetas. Un repositorio registra las versiones de archivos y carpetas. Para más información, consulta “Acerca de los repositorios” en la documentación de GitHub.\nRepositorio local: Es un directorio local que contiene los archivos de código del proyecto.\nRepositorio remoto: Es una versión en línea del repositorio local alojada en servicios como GitHub, GitLab y BitBucket.\n\n\n\nMedium. What is git commit, push, pull, log, aliases, fetch, config & clone.\n\n\nClonación (clone): Es la acción de crear un clon o copia de un repositorio en un nuevo directorio sea local o en la nube.\nConfirmación (Commit): Es una instantánea de los cambios del proyecto en preparación.\n\nGuarda los cambios realizados en los archivos del proyecto.\nIncluye un mensaje descriptivo que explica qué cambios se hicieron y por qué\nTiene un identificador único (hash)\nRegistra quién hizo los cambios y cuándo\n\nConfirmar y subir/enviar (Commit and push): Es el proceso de guardar los cambios locales mediante un commit y luego enviarlos (push) al repositorio remoto para compartirlos con otros colaboradores o publicarlos como página web.\nRama (Branch): Una rama es una versión paralela de tu repositorio. Por defecto, tu repositorio tiene una rama con nombre main, que se considera la rama definitiva. Crear ramas adicionales te permite copiar la mainrama de tu repositorio y realizar cambios de forma segura sin interrumpir el proyecto principal. Muchas personas usan ramas para trabajar en funciones específicas sin afectar a otras partes del proyecto. Los cambios (commits) deben aprobarse por el administrador del repositorio o del proyecto a través de un pull request.\nFusión en Git (Git merge): El proceso de combinar dos ramas en Git.\nArchivo .gitignore: Es un archivo que especifica los archivos no rastreados intencionalmente que Git debe ignorar.\nÁrea de preparación: Una caché que contiene los cambios que se incluirán en la próxima confirmación.\nAlmacenamiento temporal de Git: Otro tipo de caché que contiene cambios no deseados a los que quizás quieras volver más adelante.\nID de confirmación o hash: Un identificador único para cada confirmación, que se utiliza para cambiar a diferentes puntos de guardado.\nHEAD (siempre en mayúsculas): un nombre de referencia para la última confirmación, para evitar que tenga que escribir los identificadores de las confirmaciones.",
+    "text": "Repositorios\n¿Qué es un repositorio? Un repositorio es un proyecto que contiene archivos y carpetas. Un repositorio registra las versiones de archivos y carpetas. Para más información, consulta “Acerca de los repositorios” en la documentación de GitHub.\nRepositorio local: Es un directorio local que contiene los archivos de código del proyecto.\nRepositorio remoto: Es una versión en línea del repositorio local alojada en servicios como GitHub, GitLab y BitBucket.\n\n\n\nMedium. What is git commit, push, pull, log, aliases, fetch, config & clone.\n\n\nClonación (clone): Es la acción de crear un clon o copia de un repositorio en un nuevo directorio sea local o en la nube.\nConfirmación (Commit): Es una instantánea de los cambios del proyecto en preparación.\n\nGuarda los cambios realizados en los archivos del proyecto.\nIncluye un mensaje descriptivo que explica qué cambios se hicieron y por qué\nTiene un identificador único (hash)\nRegistra quién hizo los cambios y cuándo\n\nConfirmar y subir/enviar (Commit and push): Es el proceso de guardar los cambios locales mediante un commit y luego enviarlos (push) al repositorio remoto para compartirlos con otros colaboradores o publicarlos como página web.\n\nDe forma similar a guardar un archivo editado, una confirmación registra los cambios en uno o más archivos de tu rama. Git asigna a cada confirmación un ID único, llamado SHA o hash, que identifica:\n\nLos cambios específicos\nCuando se hicieron los cambios\nQuién creó los cambios\n\n\nRama (Branch): Una rama es una versión paralela de tu repositorio. Por defecto, tu repositorio tiene una rama con nombre main, que se considera la rama definitiva. Crear ramas adicionales te permite copiar la mainrama de tu repositorio y realizar cambios de forma segura sin interrumpir el proyecto principal. Muchas personas usan ramas para trabajar en funciones específicas sin afectar a otras partes del proyecto. Los cambios (commits) deben aprobarse por el administrador del repositorio o del proyecto a través de un pull request.\n\nLas solicitudes de cambiosson propuestas para combinar los cambios de código en un proyecto. Una “pull request” es la característica de colaboración fundamental de GitHub, que le permite discutir y revisar los cambios antes de fusionarlos. Esto ayuda a los equipos a trabajar juntos, detectar problemas al principio y mantener la calidad del código.\nFusión en Git (Git merge): El proceso de combinar dos ramas en Git. Una fusión añade los cambios de la solicitud de extracción y la rama a la mainrama. Para más información sobre las fusiones, consulta ” Fusionar una solicitud de extracción “.\n\n¿Qué es un pull request?: La colaboración se lleva a cabo en una solicitud de extracción . Esta solicitud muestra los cambios en tu rama a otras personas y permite aceptarlos, rechazarlos o sugerir cambios adicionales. En una comparación, esta solicitud conservará los cambios que acabas de realizar en tu rama y propondrá su aplicación a la mainrama del proyecto. Para más información sobre las solicitudes de extracción, consulta “Acerca de pull request”.\nArchivo .gitignore: Es un archivo que especifica los archivos no rastreados intencionalmente que Git debe ignorar.\nÁrea de preparación: Una caché que contiene los cambios que se incluirán en la próxima confirmación.\nAlmacenamiento temporal de Git: Otro tipo de caché que contiene cambios no deseados a los que quizás quieras volver más adelante.\nHEAD (siempre en mayúsculas): un nombre de referencia para la última confirmación, para evitar que tenga que escribir los identificadores de las confirmaciones.",
     "crumbs": [
       "Ciencia de datos",
       "Github"
@@ -2216,7 +2216,7 @@
     "href": "cyt/cienciareproduc.html#markdown",
     "title": "Ciencia reproducible",
     "section": "Markdown",
-    "text": "Markdown\nMarkdown es un lenguaje de marcado ligero que permite añadir elementos de formato a documentos de texto sin formato. Creado por John Gruber en 2004, Markdown es actualmente uno de los lenguajes de marcado más populares del mundo. Markdown se puede usar para todo. Se usa para crear sitios web, documentos, notas, libros, presentaciones, correos electrónicos y documentación técnica. Markdown es independiente de la plataforma.\n\n\nMarkdown Guide Org. Link ***\nThe Markdown Guide. Link.\nMarkdown Cheatsheets. Link\nRich content editors. Link\n\nDillinger. Link.\nProsemirror. Link.\nStackEdit. Link",
+    "text": "Markdown\nRevise la sección: datascience/markdown\nMarkdown es un lenguaje de marcado ligero que permite añadir elementos de formato a documentos de texto sin formato. Creado por John Gruber en 2004, Markdown es actualmente uno de los lenguajes de marcado más populares del mundo. Markdown se puede usar para todo. Se usa para crear sitios web, documentos, notas, libros, presentaciones, correos electrónicos y documentación técnica. Markdown es independiente de la plataforma.\n\n\nMarkdown Guide Org. Link ***\nThe Markdown Guide. Link.\nMarkdown Cheatsheets. Link\nRich content editors. Link\n\nDillinger. Link.\nProsemirror. Link.\nStackEdit. Link",
     "crumbs": [
       "Ciencia y tecnología",
       "Ciencia reproducible"
@@ -3629,7 +3629,18 @@
     "href": "datascience/markdown.html",
     "title": "Markdown",
     "section": "",
-    "text": "Markdown es un lenguaje de marcado ligero creado por John Gruber en 2004. Su objetivo es ser fácil de leer y escribir, y convertirse fácilmente en HTML y otros formatos.\n\n\n\nSimplicidad: Sintaxis sencilla y fácil de aprender\nPortabilidad: Archivos de texto plano que funcionan en cualquier sistema\nVersatilidad: Se puede convertir a HTML, PDF, Word, y más\nControl de versiones: Ideal para Git y GitHub\nAmpliamente adoptado: Usado en GitHub, Jupyter, Stack Overflow, Reddit, y más\n\n\n\n\n\nMarkdown Guide - Guía completa de Markdown\nGitHub Flavored Markdown - Especificación de GFM\nMarkdown Tutorial - Tutorial interactivo\nCommonMark - Especificación estándar\n\n\n\n\n\n\n# Encabezado 1\n## Encabezado 2\n### Encabezado 3\n#### Encabezado 4\n##### Encabezado 5\n###### Encabezado 6\n\n\n\n*cursiva* o _cursiva_\n**negrita** o __negrita__\n***negrita y cursiva*** o ___negrita y cursiva___\n~~tachado~~\nEjemplo: - cursiva o cursiva - negrita o negrita - negrita y cursiva - tachado\n\n\n\n\n\n- Elemento 1\n- Elemento 2\n  - Sub-elemento 2.1\n  - Sub-elemento 2.2\n- Elemento 3\n\n* También funciona con asteriscos\n+ O con signos más\n\n\n\n1. Primer elemento\n2. Segundo elemento\n3. Tercer elemento\n   1. Sub-elemento 3.1\n   2. Sub-elemento 3.2\n\n\n\n\n[Texto del enlace](https://www.ejemplo.com)\n[Enlace con título](https://www.ejemplo.com \"Título del enlace\")\n&lt;https://www.ejemplo.com&gt;\nEjemplo: Markdown Guide\n\n\n\n![Texto alternativo](ruta/a/imagen.png)\n![Texto alternativo](ruta/a/imagen.png \"Título de la imagen\")\n\n\n\n\n\nUsa `código en línea` con comillas invertidas.\nEjemplo: El comando git status muestra el estado del repositorio.\n\n\n\n```\nBloque de código simple\n```\n\n```python\n# Código Python con resaltado de sintaxis\ndef hola_mundo():\n    print(\"Hola, mundo!\")\n```\n\n```javascript\n// Código JavaScript\nconst saludo = \"Hola, mundo!\";\nconsole.log(saludo);\n```\n\n\n\n\n&gt; Esta es una cita.\n&gt; Puede tener múltiples líneas.\n&gt;\n&gt; Y múltiples párrafos.\n\n&gt; Nivel 1\n&gt;&gt; Nivel 2\n&gt;&gt;&gt; Nivel 3\nEjemplo: &gt; Esta es una cita de ejemplo. &gt; Markdown hace que sea fácil citar texto.\n\n\n\n---\n***\n___\n\n\n\n\n| Encabezado 1 | Encabezado 2 | Encabezado 3 |\n|--------------|--------------|--------------|\n| Celda 1      | Celda 2      | Celda 3      |\n| Celda 4      | Celda 5      | Celda 6      |\n\n| Alineación izquierda | Centrado | Alineación derecha |\n|:---------------------|:--------:|-------------------:|\n| Texto                | Texto    | Texto              |\nEjemplo:\n\n\n\nLenguaje\nAño\nCreador\n\n\n\n\nPython\n1991\nGuido van Rossum\n\n\nJavaScript\n1995\nBrendan Eich\n\n\nRuby\n1995\nYukihiro Matsumoto\n\n\n\n\n\n\n\n\n\n- [x] Tarea completada\n- [ ] Tarea pendiente\n- [ ] Otra tarea pendiente\nEjemplo: - [x] Aprender sintaxis básica de Markdown - [ ] Practicar con ejemplos - [ ] Crear mi primer documento\n\n\n\n@usuario - Mencionar a un usuario\n#123 - Referencia a un issue\n\n\n\n:smile: :heart: :thumbsup: :rocket:\nEjemplo: :smile: :rocket: :heart:\n\n\n\n```python {.line-numbers}\ndef ejemplo():\n    print(\"Código con números de línea\")\n```\n\n\n\nTexto con una nota al pie[^1].\n\n[^1]: Esta es la nota al pie.\n\n\n\n\n\n\nGitHub usa GitHub Flavored Markdown (GFM) que incluye: - Autoenlaces para URLs - Tachado con ~~ - Listas de tareas - Tablas - Menciones de usuarios y equipos - Referencias a issues y pull requests\n\n\n\nJupyter usa Markdown en las celdas de texto para: - Documentar análisis de datos - Explicar código - Incluir ecuaciones matemáticas con LaTeX\n\n\n\nQuarto extiende Markdown con: - Callouts (cuadros de alerta) - Divs y spans - Atributos de código - Referencias cruzadas - Citas y bibliografía\nEjemplo de callout en Quarto:\n::: {.callout-note}\nEsta es una nota importante.\n:::\n\n::: {.callout-warning}\nEsta es una advertencia.\n:::\n\n::: {.callout-important}\nEsto es muy importante.\n:::\n\n\n\n\n\n\nLa ecuación $E = mc^2$ es famosa.\n\n\n\n$$\n\\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n$$\nEjemplo:\nLa ecuación de Einstein: \\(E = mc^2\\)\nFórmula cuadrática: \\[\nx = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n\\]\n\n\n\n\n\n\n\nVisual Studio Code: Con extensiones como Markdown All in One\nTypora: Editor WYSIWYG de Markdown\nObsidian: Para tomar notas con Markdown\nMarkText: Editor gratuito y de código abierto\nDillinger: Editor online de Markdown\n\n\n\n\n\nPandoc: Conversor universal de documentos\nMarkdown to PDF: Herramientas online\nkramdown: Procesador de Markdown en Ruby\n\n\n\n\n\nMarkdown Cheatsheet\nGitHub Markdown Cheatsheet\n\n\n\n\n\n\nUsa espacios en blanco: Deja líneas en blanco entre elementos para mejor legibilidad\nConsistencia: Mantén un estilo consistente (por ejemplo, siempre usa * para listas)\nNombres de archivo: Usa nombres descriptivos con extensión .md o .markdown\nPrevisualización: Siempre previsualiza tu documento antes de publicar\nControl de versiones: Usa Git para rastrear cambios en archivos Markdown\nDocumenta código: Usa README.md para documentar proyectos\nSimplicidad: No sobrecargues con formato innecesario\n\n\n\n\n\n\n\nCaracterística\nCommonMark\nGFM\nPandoc\nQuarto\n\n\n\n\nSintaxis básica\n✓\n✓\n✓\n✓\n\n\nTablas\n-\n✓\n✓\n✓\n\n\nListas de tareas\n-\n✓\n✓\n✓\n\n\nNotas al pie\n-\n✓\n✓\n✓\n\n\nAtributos\n-\n-\n✓\n✓\n\n\nDivs/Spans\n-\n-\n✓\n✓\n\n\nCallouts\n-\n-\n-\n✓\n\n\n\n\n\n\n\n\n# Nombre del Proyecto\n\n## Descripción\nUna breve descripción del proyecto.\n\n## Instalación\n```bash\npip install mi-paquete\n\n\n\n\nimport mi_paquete\nmi_paquete.funcion()\n\n\n\nPor favor lee CONTRIBUTING.md para detalles.\n\n\n\nEste proyecto está bajo la Licencia MIT - ver LICENSE.md\n\n### Documentación de API\n\n```markdown\n# API Reference\n\n## `funcion_ejemplo(parametro1, parametro2)`\n\n### Descripción\nRealiza una operación específica con los parámetros dados.\n\n### Parámetros\n- `parametro1` (str): Descripción del primer parámetro\n- `parametro2` (int): Descripción del segundo parámetro\n\n### Retorna\n- `dict`: Un diccionario con los resultados\n\n### Ejemplo\n```python\nresultado = funcion_ejemplo(\"texto\", 42)\nprint(resultado)\n```\n\n\n\n\nMarkdown Crash Course - Traversy Media\nMarkdown Tutorial for Beginners - Corey Schafer\n\n\n\n\n\nThe Markdown Guide Book - Libro completo sobre Markdown\nAwesome Markdown - Lista curada de recursos\nMarkdown Style Guide - Guía de estilo",
+    "text": "Markdown es un lenguaje de marcado ligero que permite añadir elementos de formato a documentos de texto sin formato. Creado por John Gruber en 2004, Markdown es actualmente uno de los lenguajes de marcado más populares del mundo. Markdown se puede usar para todo. Se usa para crear sitios web, documentos, notas, libros, presentaciones, correos electrónicos y documentación técnica. Markdown es independiente de la plataforma.\n\n\n\nEl flujo de Markdown",
+    "crumbs": [
+      "Ciencia de datos",
+      "Markdown"
+    ]
+  },
+  {
+    "objectID": "datascience/markdown.html#introducción-a-markdown",
+    "href": "datascience/markdown.html#introducción-a-markdown",
+    "title": "Markdown",
+    "section": "",
+    "text": "Markdown es un lenguaje de marcado ligero que permite añadir elementos de formato a documentos de texto sin formato. Creado por John Gruber en 2004, Markdown es actualmente uno de los lenguajes de marcado más populares del mundo. Markdown se puede usar para todo. Se usa para crear sitios web, documentos, notas, libros, presentaciones, correos electrónicos y documentación técnica. Markdown es independiente de la plataforma.\n\n\n\nEl flujo de Markdown",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
@@ -3639,8 +3650,8 @@
     "objectID": "datascience/markdown.html#por-qué-usar-markdown",
     "href": "datascience/markdown.html#por-qué-usar-markdown",
     "title": "Markdown",
-    "section": "",
-    "text": "Simplicidad: Sintaxis sencilla y fácil de aprender\nPortabilidad: Archivos de texto plano que funcionan en cualquier sistema\nVersatilidad: Se puede convertir a HTML, PDF, Word, y más\nControl de versiones: Ideal para Git y GitHub\nAmpliamente adoptado: Usado en GitHub, Jupyter, Stack Overflow, Reddit, y más",
+    "section": "¿Por qué usar Markdown?",
+    "text": "¿Por qué usar Markdown?\n\nSimplicidad: Sintaxis sencilla y fácil de aprender\nPortabilidad: Archivos de texto plano que funcionan en cualquier sistema\nVersatilidad: Se puede convertir a HTML, PDF, Word, y más\nControl de versiones: Ideal para Git y GitHub\nAmpliamente adoptado: Usado en GitHub, Jupyter, Stack Overflow, Reddit, y más",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
@@ -3650,8 +3661,8 @@
     "objectID": "datascience/markdown.html#recursos-de-ayuda",
     "href": "datascience/markdown.html#recursos-de-ayuda",
     "title": "Markdown",
-    "section": "",
-    "text": "Markdown Guide - Guía completa de Markdown\nGitHub Flavored Markdown - Especificación de GFM\nMarkdown Tutorial - Tutorial interactivo\nCommonMark - Especificación estándar",
+    "section": "Recursos de ayuda",
+    "text": "Recursos de ayuda\n\nMarkdown Guide - Guía completa de Markdown\nGitHub Flavored Markdown - Especificación de GFM\nMarkdown Tutorial - Tutorial interactivo\nCommonMark - Especificación estándar\nCommunicate using Markdown - Curso de GitHub Skills sobre Markdown\n\nRich content editors. Link - Dillinger. Link. - Prosemirror. Link. - StackEdit. Link",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
@@ -3661,8 +3672,8 @@
     "objectID": "datascience/markdown.html#sintaxis-básica",
     "href": "datascience/markdown.html#sintaxis-básica",
     "title": "Markdown",
-    "section": "",
-    "text": "# Encabezado 1\n## Encabezado 2\n### Encabezado 3\n#### Encabezado 4\n##### Encabezado 5\n###### Encabezado 6\n\n\n\n*cursiva* o _cursiva_\n**negrita** o __negrita__\n***negrita y cursiva*** o ___negrita y cursiva___\n~~tachado~~\nEjemplo: - cursiva o cursiva - negrita o negrita - negrita y cursiva - tachado\n\n\n\n\n\n- Elemento 1\n- Elemento 2\n  - Sub-elemento 2.1\n  - Sub-elemento 2.2\n- Elemento 3\n\n* También funciona con asteriscos\n+ O con signos más\n\n\n\n1. Primer elemento\n2. Segundo elemento\n3. Tercer elemento\n   1. Sub-elemento 3.1\n   2. Sub-elemento 3.2\n\n\n\n\n[Texto del enlace](https://www.ejemplo.com)\n[Enlace con título](https://www.ejemplo.com \"Título del enlace\")\n&lt;https://www.ejemplo.com&gt;\nEjemplo: Markdown Guide\n\n\n\n![Texto alternativo](ruta/a/imagen.png)\n![Texto alternativo](ruta/a/imagen.png \"Título de la imagen\")\n\n\n\n\n\nUsa `código en línea` con comillas invertidas.\nEjemplo: El comando git status muestra el estado del repositorio.\n\n\n\n```\nBloque de código simple\n```\n\n```python\n# Código Python con resaltado de sintaxis\ndef hola_mundo():\n    print(\"Hola, mundo!\")\n```\n\n```javascript\n// Código JavaScript\nconst saludo = \"Hola, mundo!\";\nconsole.log(saludo);\n```\n\n\n\n\n&gt; Esta es una cita.\n&gt; Puede tener múltiples líneas.\n&gt;\n&gt; Y múltiples párrafos.\n\n&gt; Nivel 1\n&gt;&gt; Nivel 2\n&gt;&gt;&gt; Nivel 3\nEjemplo: &gt; Esta es una cita de ejemplo. &gt; Markdown hace que sea fácil citar texto.\n\n\n\n---\n***\n___\n\n\n\n\n| Encabezado 1 | Encabezado 2 | Encabezado 3 |\n|--------------|--------------|--------------|\n| Celda 1      | Celda 2      | Celda 3      |\n| Celda 4      | Celda 5      | Celda 6      |\n\n| Alineación izquierda | Centrado | Alineación derecha |\n|:---------------------|:--------:|-------------------:|\n| Texto                | Texto    | Texto              |\nEjemplo:\n\n\n\nLenguaje\nAño\nCreador\n\n\n\n\nPython\n1991\nGuido van Rossum\n\n\nJavaScript\n1995\nBrendan Eich\n\n\nRuby\n1995\nYukihiro Matsumoto",
+    "section": "Sintaxis básica",
+    "text": "Sintaxis básica\n\nEncabezados\n# Encabezado 1\n## Encabezado 2\n### Encabezado 3\n#### Encabezado 4\n##### Encabezado 5\n###### Encabezado 6\n\n\nÉnfasis\n*cursiva* o _cursiva_\n**negrita** o __negrita__\n***negrita y cursiva*** o ___negrita y cursiva___\n~~tachado~~\nEjemplo: - cursiva o cursiva - negrita o negrita - negrita y cursiva - tachado\n\n\nListas\n\nListas no ordenadas\n- Elemento 1\n- Elemento 2\n  - Sub-elemento 2.1\n  - Sub-elemento 2.2\n- Elemento 3\n\n* También funciona con asteriscos\n+ O con signos más\n\n\nListas ordenadas\n1. Primer elemento\n2. Segundo elemento\n3. Tercer elemento\n   1. Sub-elemento 3.1\n   2. Sub-elemento 3.2\n\n\n\nEnlaces\n[Texto del enlace](https://www.ejemplo.com)\n[Enlace con título](https://www.ejemplo.com \"Título del enlace\")\n&lt;https://www.ejemplo.com&gt;\nEjemplo: Markdown Guide\n\n\nImágenes\n![Texto alternativo](ruta/a/imagen.png)\n![Texto alternativo](ruta/a/imagen.png \"Título de la imagen\")\n\n\nCódigo\n\nCódigo en línea\nUsa `código en línea` con comillas invertidas.\nEjemplo: El comando git status muestra el estado del repositorio.\n\n\nBloques de código\n```\nBloque de código simple\n```\n\n```python\n# Código Python con resaltado de sintaxis\ndef hola_mundo():\n    print(\"Hola, mundo!\")\n```\n\n```javascript\n// Código JavaScript\nconst saludo = \"Hola, mundo!\";\nconsole.log(saludo);\n```\n\n\n\nCitas\n&gt; Esta es una cita.\n&gt; Puede tener múltiples líneas.\n&gt;\n&gt; Y múltiples párrafos.\n\n&gt; Nivel 1\n&gt;&gt; Nivel 2\n&gt;&gt;&gt; Nivel 3\nEjemplo: &gt; Esta es una cita de ejemplo. &gt; Markdown hace que sea fácil citar texto.\n\n\nLíneas horizontales\n---\n***\n___\n\n\n\nTablas\n| Encabezado 1 | Encabezado 2 | Encabezado 3 |\n|--------------|--------------|--------------|\n| Celda 1      | Celda 2      | Celda 3      |\n| Celda 4      | Celda 5      | Celda 6      |\n\n| Alineación izquierda | Centrado | Alineación derecha |\n|:---------------------|:--------:|-------------------:|\n| Texto                | Texto    | Texto              |\nEjemplo:\n\n\n\nLenguaje\nAño\nCreador\n\n\n\n\nPython\n1991\nGuido van Rossum\n\n\nJavaScript\n1995\nBrendan Eich\n\n\nRuby\n1995\nYukihiro Matsumoto",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
@@ -3672,8 +3683,8 @@
     "objectID": "datascience/markdown.html#sintaxis-extendida-github-flavored-markdown",
     "href": "datascience/markdown.html#sintaxis-extendida-github-flavored-markdown",
     "title": "Markdown",
-    "section": "",
-    "text": "- [x] Tarea completada\n- [ ] Tarea pendiente\n- [ ] Otra tarea pendiente\nEjemplo: - [x] Aprender sintaxis básica de Markdown - [ ] Practicar con ejemplos - [ ] Crear mi primer documento\n\n\n\n@usuario - Mencionar a un usuario\n#123 - Referencia a un issue\n\n\n\n:smile: :heart: :thumbsup: :rocket:\nEjemplo: :smile: :rocket: :heart:\n\n\n\n```python {.line-numbers}\ndef ejemplo():\n    print(\"Código con números de línea\")\n```\n\n\n\nTexto con una nota al pie[^1].\n\n[^1]: Esta es la nota al pie.",
+    "section": "Sintaxis extendida (GitHub Flavored Markdown)",
+    "text": "Sintaxis extendida (GitHub Flavored Markdown)\n\nListas de tareas\n- [x] Tarea completada\n- [ ] Tarea pendiente\n- [ ] Otra tarea pendiente\nEjemplo: - [x] Aprender sintaxis básica de Markdown - [ ] Practicar con ejemplos - [ ] Crear mi primer documento\n\n\nMenciones y referencias\n@usuario - Mencionar a un usuario\n#123 - Referencia a un issue\n\n\nEmojis\n:smile: :heart: :thumbsup: :rocket:\nEjemplo: :smile: :rocket: :heart:\n\n\nBloques de código con información adicional\n```python {.line-numbers}\ndef ejemplo():\n    print(\"Código con números de línea\")\n```\n\n\nNotas al pie\nTexto con una nota al pie[^1].\n\n[^1]: Esta es la nota al pie.",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
@@ -3683,8 +3694,8 @@
     "objectID": "datascience/markdown.html#markdown-en-diferentes-contextos",
     "href": "datascience/markdown.html#markdown-en-diferentes-contextos",
     "title": "Markdown",
-    "section": "",
-    "text": "GitHub usa GitHub Flavored Markdown (GFM) que incluye: - Autoenlaces para URLs - Tachado con ~~ - Listas de tareas - Tablas - Menciones de usuarios y equipos - Referencias a issues y pull requests\n\n\n\nJupyter usa Markdown en las celdas de texto para: - Documentar análisis de datos - Explicar código - Incluir ecuaciones matemáticas con LaTeX\n\n\n\nQuarto extiende Markdown con: - Callouts (cuadros de alerta) - Divs y spans - Atributos de código - Referencias cruzadas - Citas y bibliografía\nEjemplo de callout en Quarto:\n::: {.callout-note}\nEsta es una nota importante.\n:::\n\n::: {.callout-warning}\nEsta es una advertencia.\n:::\n\n::: {.callout-important}\nEsto es muy importante.\n:::",
+    "section": "Markdown en diferentes contextos",
+    "text": "Markdown en diferentes contextos\n\nGitHub\nGitHub usa GitHub Flavored Markdown (GFM) que incluye: - Autoenlaces para URLs - Tachado con ~~ - Listas de tareas - Tablas - Menciones de usuarios y equipos - Referencias a issues y pull requests\n\n\nJupyter Notebooks\nJupyter usa Markdown en las celdas de texto para: - Documentar análisis de datos - Explicar código - Incluir ecuaciones matemáticas con LaTeX\n\n\nQuarto\nQuarto extiende Markdown con: - Callouts (cuadros de alerta) - Divs y spans - Atributos de código - Referencias cruzadas - Citas y bibliografía\nEjemplo de callout en Quarto:\n::: {.callout-note}\nEsta es una nota importante.\n:::\n\n::: {.callout-warning}\nEsta es una advertencia.\n:::\n\n::: {.callout-important}\nEsto es muy importante.\n:::",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
@@ -3694,8 +3705,8 @@
     "objectID": "datascience/markdown.html#matemáticas-con-latex",
     "href": "datascience/markdown.html#matemáticas-con-latex",
     "title": "Markdown",
-    "section": "",
-    "text": "La ecuación $E = mc^2$ es famosa.\n\n\n\n$$\n\\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n$$\nEjemplo:\nLa ecuación de Einstein: \\(E = mc^2\\)\nFórmula cuadrática: \\[\nx = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n\\]",
+    "section": "Matemáticas con LaTeX",
+    "text": "Matemáticas con LaTeX\n\nEcuaciones en línea\nLa ecuación $E = mc^2$ es famosa.\n\n\nEcuaciones en bloque\n$$\n\\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n$$\nEjemplo:\nLa ecuación de Einstein: \\(E = mc^2\\)\nFórmula cuadrática: \\[\nx = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n\\]",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
@@ -3705,8 +3716,8 @@
     "objectID": "datascience/markdown.html#herramientas-útiles",
     "href": "datascience/markdown.html#herramientas-útiles",
     "title": "Markdown",
-    "section": "",
-    "text": "Visual Studio Code: Con extensiones como Markdown All in One\nTypora: Editor WYSIWYG de Markdown\nObsidian: Para tomar notas con Markdown\nMarkText: Editor gratuito y de código abierto\nDillinger: Editor online de Markdown\n\n\n\n\n\nPandoc: Conversor universal de documentos\nMarkdown to PDF: Herramientas online\nkramdown: Procesador de Markdown en Ruby\n\n\n\n\n\nMarkdown Cheatsheet\nGitHub Markdown Cheatsheet",
+    "section": "Herramientas útiles",
+    "text": "Herramientas útiles\n\nEditores de Markdown\n\nVisual Studio Code: Con extensiones como Markdown All in One\nTypora: Editor WYSIWYG de Markdown\nObsidian: Para tomar notas con Markdown\nMarkText: Editor gratuito y de código abierto\nDillinger: Editor online de Markdown\n\n\n\nConversores\n\nPandoc: Conversor universal de documentos\nMarkdown to PDF: Herramientas online\nkramdown: Procesador de Markdown en Ruby\n\n\n\nCheatsheets\n\nMarkdown Cheatsheet\nGitHub Markdown Cheatsheet",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
@@ -3716,8 +3727,8 @@
     "objectID": "datascience/markdown.html#buenas-prácticas",
     "href": "datascience/markdown.html#buenas-prácticas",
     "title": "Markdown",
-    "section": "",
-    "text": "Usa espacios en blanco: Deja líneas en blanco entre elementos para mejor legibilidad\nConsistencia: Mantén un estilo consistente (por ejemplo, siempre usa * para listas)\nNombres de archivo: Usa nombres descriptivos con extensión .md o .markdown\nPrevisualización: Siempre previsualiza tu documento antes de publicar\nControl de versiones: Usa Git para rastrear cambios en archivos Markdown\nDocumenta código: Usa README.md para documentar proyectos\nSimplicidad: No sobrecargues con formato innecesario",
+    "section": "Buenas prácticas",
+    "text": "Buenas prácticas\n\nUsa espacios en blanco: Deja líneas en blanco entre elementos para mejor legibilidad\nConsistencia: Mantén un estilo consistente (por ejemplo, siempre usa * para listas)\nNombres de archivo: Usa nombres descriptivos con extensión .md o .markdown\nPrevisualización: Siempre previsualiza tu documento antes de publicar\nControl de versiones: Usa Git para rastrear cambios en archivos Markdown\nDocumenta código: Usa README.md para documentar proyectos\nSimplicidad: No sobrecargues con formato innecesario",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
@@ -3727,8 +3738,8 @@
     "objectID": "datascience/markdown.html#diferencias-entre-sabores-de-markdown",
     "href": "datascience/markdown.html#diferencias-entre-sabores-de-markdown",
     "title": "Markdown",
-    "section": "",
-    "text": "Característica\nCommonMark\nGFM\nPandoc\nQuarto\n\n\n\n\nSintaxis básica\n✓\n✓\n✓\n✓\n\n\nTablas\n-\n✓\n✓\n✓\n\n\nListas de tareas\n-\n✓\n✓\n✓\n\n\nNotas al pie\n-\n✓\n✓\n✓\n\n\nAtributos\n-\n-\n✓\n✓\n\n\nDivs/Spans\n-\n-\n✓\n✓\n\n\nCallouts\n-\n-\n-\n✓",
+    "section": "Diferencias entre sabores de Markdown",
+    "text": "Diferencias entre sabores de Markdown\n\n\n\nCaracterística\nCommonMark\nGFM\nPandoc\nQuarto\n\n\n\n\nSintaxis básica\n✓\n✓\n✓\n✓\n\n\nTablas\n-\n✓\n✓\n✓\n\n\nListas de tareas\n-\n✓\n✓\n✓\n\n\nNotas al pie\n-\n✓\n✓\n✓\n\n\nAtributos\n-\n-\n✓\n✓\n\n\nDivs/Spans\n-\n-\n✓\n✓\n\n\nCallouts\n-\n-\n-\n✓",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
@@ -3738,8 +3749,8 @@
     "objectID": "datascience/markdown.html#ejemplos-prácticos",
     "href": "datascience/markdown.html#ejemplos-prácticos",
     "title": "Markdown",
-    "section": "",
-    "text": "# Nombre del Proyecto\n\n## Descripción\nUna breve descripción del proyecto.\n\n## Instalación\n```bash\npip install mi-paquete",
+    "section": "Ejemplos prácticos",
+    "text": "Ejemplos prácticos\n\nREADME de proyecto\n# Nombre del Proyecto\n\n## Descripción\nUna breve descripción del proyecto.\n\n## Instalación\n```bash\npip install mi-paquete",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
@@ -3749,8 +3760,8 @@
     "objectID": "datascience/markdown.html#uso",
     "href": "datascience/markdown.html#uso",
     "title": "Markdown",
-    "section": "",
-    "text": "import mi_paquete\nmi_paquete.funcion()",
+    "section": "Uso",
+    "text": "Uso\nimport mi_paquete\nmi_paquete.funcion()",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
@@ -3760,8 +3771,8 @@
     "objectID": "datascience/markdown.html#contribuir",
     "href": "datascience/markdown.html#contribuir",
     "title": "Markdown",
-    "section": "",
-    "text": "Por favor lee CONTRIBUTING.md para detalles.",
+    "section": "Contribuir",
+    "text": "Contribuir\nPor favor lee CONTRIBUTING.md para detalles.",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
@@ -3771,8 +3782,8 @@
     "objectID": "datascience/markdown.html#licencia",
     "href": "datascience/markdown.html#licencia",
     "title": "Markdown",
-    "section": "",
-    "text": "Este proyecto está bajo la Licencia MIT - ver LICENSE.md\n\n### Documentación de API\n\n```markdown\n# API Reference\n\n## `funcion_ejemplo(parametro1, parametro2)`\n\n### Descripción\nRealiza una operación específica con los parámetros dados.\n\n### Parámetros\n- `parametro1` (str): Descripción del primer parámetro\n- `parametro2` (int): Descripción del segundo parámetro\n\n### Retorna\n- `dict`: Un diccionario con los resultados\n\n### Ejemplo\n```python\nresultado = funcion_ejemplo(\"texto\", 42)\nprint(resultado)\n```",
+    "section": "Licencia",
+    "text": "Licencia\nEste proyecto está bajo la Licencia MIT - ver LICENSE.md\n\n### Documentación de API\n\n```markdown\n# API Reference\n\n## `funcion_ejemplo(parametro1, parametro2)`\n\n### Descripción\nRealiza una operación específica con los parámetros dados.\n\n### Parámetros\n- `parametro1` (str): Descripción del primer parámetro\n- `parametro2` (int): Descripción del segundo parámetro\n\n### Retorna\n- `dict`: Un diccionario con los resultados\n\n### Ejemplo\n```python\nresultado = funcion_ejemplo(\"texto\", 42)\nprint(resultado)\n```",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
@@ -3782,8 +3793,8 @@
     "objectID": "datascience/markdown.html#videos-tutoriales",
     "href": "datascience/markdown.html#videos-tutoriales",
     "title": "Markdown",
-    "section": "",
-    "text": "Markdown Crash Course - Traversy Media\nMarkdown Tutorial for Beginners - Corey Schafer",
+    "section": "Videos tutoriales",
+    "text": "Videos tutoriales\n\nMarkdown Crash Course - Traversy Media\nMarkdown Tutorial for Beginners - Corey Schafer",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
@@ -3793,8 +3804,8 @@
     "objectID": "datascience/markdown.html#recursos-adicionales",
     "href": "datascience/markdown.html#recursos-adicionales",
     "title": "Markdown",
-    "section": "",
-    "text": "The Markdown Guide Book - Libro completo sobre Markdown\nAwesome Markdown - Lista curada de recursos\nMarkdown Style Guide - Guía de estilo",
+    "section": "Recursos adicionales",
+    "text": "Recursos adicionales\n\nThe Markdown Guide Book - Libro completo sobre Markdown\nAwesome Markdown - Lista curada de recursos\nMarkdown Style Guide - Guía de estilo",
     "crumbs": [
       "Ciencia de datos",
       "Markdown"

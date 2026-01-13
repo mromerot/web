@@ -4,9 +4,11 @@ format: html
 editor: visual
 ---
 
-# Markdown
+## Introducción a Markdown
 
-Markdown es un lenguaje de marcado ligero creado por John Gruber en 2004. Su objetivo es ser fácil de leer y escribir, y convertirse fácilmente en HTML y otros formatos.
+Markdown es un lenguaje de marcado ligero que permite añadir elementos de formato a documentos de texto sin formato. Creado por [John Gruber](https://daringfireball.net/projects/markdown/) en 2004, Markdown es actualmente uno de los lenguajes de marcado más populares del mundo. Markdown se puede usar para todo. Se usa para crear sitios web, documentos, notas, libros, presentaciones, correos electrónicos y documentación técnica. Markdown es independiente de la plataforma.
+
+![El flujo de Markdown](https://mdg.imgix.net/assets/images/markdown-flowchart.png?auto=format&fit=clip&q=40&w=1080)
 
 ## ¿Por qué usar Markdown?
 
@@ -22,6 +24,12 @@ Markdown es un lenguaje de marcado ligero creado por John Gruber en 2004. Su obj
 - [GitHub Flavored Markdown](https://github.github.com/gfm/) - Especificación de GFM
 - [Markdown Tutorial](https://www.markdowntutorial.com/) - Tutorial interactivo
 - [CommonMark](https://commonmark.org/) - Especificación estándar
+- [Communicate using Markdown](https://github.com/skills/communicate-using-markdown?tab=readme-ov-file#communicate-using-markdown) - Curso de GitHub Skills sobre Markdown
+
+Rich content editors. [*Link*](https://markdownguide.offshoot.io/tools/)
+    -   Dillinger. [*Link*](https://dillinger.io/).
+    -   Prosemirror. [*Link*](https://prosemirror.net/).
+    -   StackEdit. [*Link*](https://stackedit.io/)
 
 ## Sintaxis básica
 

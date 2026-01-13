@@ -786,8 +786,15 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <section id="recursos-de-ayuda" class="level2">
 <h2 class="anchored" data-anchor-id="recursos-de-ayuda">Recursos de ayuda</h2>
 <ul>
+<li>GitHub Skills. <a href="https://skills.github.com/"><em>Link</em></a> <em>&lt;— recomendado para aprender el flujo de trabajo!</em>
+<ul>
+<li><a href="https://github.com/skills/introduction-to-github">Introduction to GitHub</a></li>
+<li><a href="https://github.com/skills/hello-github-actions">Hello GitHub Actions</a></li>
+<li><a href="https://github.com/skills/github-pages">GitHub Pages</a></li>
+<li><a href="https://github.com/skills/review-pull-requests">Review pull requests</a></li>
+<li><a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Basic writing and formatting syntax</a></li>
+</ul></li>
 <li>GitHub Documentation. <a href="https://docs.github.com/"><em>Link</em></a></li>
-<li>GitHub Skills. <a href="https://skills.github.com/"><em>Link</em></a> <em>&lt;— recomendado !</em></li>
 <li>GitHub Community. <a href="https://github.com/community"><em>Link</em></a></li>
 <li><a href="https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Configurando-Git-por-primera-vez">Instalación y Configuración (Git SCM Book)</a></li>
 </ul>
@@ -816,13 +823,24 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <li>Tiene un identificador único (hash)</li>
 <li>Registra quién hizo los cambios y cuándo</li>
 </ul>
-<p><strong>Confirmar y subir/enviar (Commit and push)</strong>: Es el proceso de guardar los cambios locales mediante un commit y luego enviarlos (push) al repositorio remoto para compartirlos con otros colaboradores o publicarlos como página web.</p>
+<p><strong>Confirmar y subir/enviar (<a href="https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits">Commit</a> and push)</strong>: Es el proceso de guardar los cambios locales mediante un commit y luego enviarlos (push) al repositorio remoto para compartirlos con otros colaboradores o publicarlos como página web.</p>
+<ul>
+<li><p>De forma similar a guardar un archivo editado, una confirmación registra los cambios en uno o más archivos de tu rama. Git asigna a cada confirmación un ID único, llamado <strong>SHA</strong> o <strong>hash</strong>, que identifica:</p>
+<ul>
+<li><p>Los cambios específicos</p></li>
+<li><p>Cuando se hicieron los cambios</p></li>
+<li><p>Quién creó los cambios</p></li>
+</ul></li>
+</ul>
 <p><strong>Rama (Branch)</strong>: Una <a href="https://docs.github.com/en/get-started/quickstart/github-glossary#branch"><em>rama</em></a> es una versión paralela de tu repositorio. Por defecto, tu repositorio tiene una rama con nombre <code>main</code>, que se considera la rama definitiva. Crear ramas adicionales te permite copiar la <code>main</code>rama de tu repositorio y realizar cambios de forma segura sin interrumpir el proyecto principal. Muchas personas usan ramas para trabajar en funciones específicas sin afectar a otras partes del proyecto. Los cambios (commits) deben aprobarse por el administrador del repositorio o del proyecto a través de un <strong>pull request</strong>.</p>
-<p><strong>Fusión en Git (Git merge)</strong>: El proceso de combinar dos ramas en Git.</p>
+<ul>
+<li><p><a href="https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">Las solicitudes de cambios</a>son propuestas para combinar los cambios de código en un proyecto. Una “<strong>pull request</strong>” es la característica de colaboración fundamental de GitHub, que le permite discutir y revisar los cambios antes de fusionarlos. Esto ayuda a los equipos a trabajar juntos, detectar problemas al principio y mantener la calidad del código.</p></li>
+<li><p><strong>Fusión en Git (Git merge)</strong>: El proceso de combinar dos ramas en Git. Una <a href="https://docs.github.com/en/get-started/quickstart/github-glossary#merge"><em>fusión</em></a> añade los cambios de la solicitud de extracción y la rama a la <code>main</code>rama. Para más información sobre las fusiones, consulta ” <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request">Fusionar una solicitud de extracción</a> “.</p></li>
+</ul>
+<p><strong>¿Qué es un pull request?:</strong> La colaboración se lleva a cabo en una <a href="https://docs.github.com/en/get-started/quickstart/github-glossary#pull-request"><em>solicitud de extracción</em></a> . Esta solicitud muestra los cambios en tu rama a otras personas y permite aceptarlos, rechazarlos o sugerir cambios adicionales. En una comparación, esta solicitud conservará los cambios que acabas de realizar en tu rama y propondrá su aplicación a la <code>main</code>rama del proyecto. Para más información sobre las solicitudes de extracción, consulta “<a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">Acerca de pull request</a>”.</p>
 <p><strong>Archivo .gitignore</strong>: Es un archivo que especifica los archivos no rastreados intencionalmente que Git debe ignorar.</p>
 <p><strong>Área de preparación</strong>: Una caché que contiene los cambios que se incluirán en la próxima confirmación.</p>
 <p><strong>Almacenamiento temporal de Git</strong>: Otro tipo de caché que contiene cambios no deseados a los que quizás quieras volver más adelante.</p>
-<p><strong>ID de confirmación o hash</strong>: Un identificador único para cada confirmación, que se utiliza para cambiar a diferentes puntos de guardado.</p>
 <p><strong>HEAD</strong> (siempre en mayúsculas): un nombre de referencia para la última confirmación, para evitar que tenga que escribir los identificadores de las confirmaciones.</p>
 </section>
 <section id="comandos-comunes-de-git-usados-en-distintas-situaciones" class="level2">

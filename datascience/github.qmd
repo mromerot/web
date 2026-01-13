@@ -47,8 +47,13 @@ El sistema de control de versiones es una herramienta que rastrea cada modificac
 
 ## Recursos de ayuda
 
+-   GitHub Skills. [*Link*](https://skills.github.com/) *\<— recomendado para aprender el flujo de trabajo!*
+    -   [Introduction to GitHub](https://github.com/skills/introduction-to-github)
+    -   [Hello GitHub Actions](https://github.com/skills/hello-github-actions)
+    -   [GitHub Pages](https://github.com/skills/github-pages)
+    -   [Review pull requests](https://github.com/skills/review-pull-requests)
+    -   [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 -   GitHub Documentation. [*Link*](https://docs.github.com/)
--   GitHub Skills. [*Link*](https://skills.github.com/) *\<— recomendado !*
 -   GitHub Community. [*Link*](https://github.com/community)
 -   [Instalación y Configuración (Git SCM Book)](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Configurando-Git-por-primera-vez)
 
@@ -77,19 +82,29 @@ Puede encontrar un glosario oficial [aquí](https://docs.github.com/en/get-start
 -   Tiene un identificador único (hash)
 -   Registra quién hizo los cambios y cuándo
 
-**Confirmar y subir/enviar (Commit and push)**: Es el proceso de guardar los cambios locales mediante un commit y luego enviarlos (push) al repositorio remoto para compartirlos con otros colaboradores o publicarlos como página web.
+**Confirmar y subir/enviar ([Commit](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits) and push)**: Es el proceso de guardar los cambios locales mediante un commit y luego enviarlos (push) al repositorio remoto para compartirlos con otros colaboradores o publicarlos como página web.
+
+-   De forma similar a guardar un archivo editado, una confirmación registra los cambios en uno o más archivos de tu rama. Git asigna a cada confirmación un ID único, llamado **SHA** o **hash**, que identifica:
+
+    -   Los cambios específicos
+
+    -   Cuando se hicieron los cambios
+
+    -   Quién creó los cambios
 
 **Rama (Branch)**: Una [*rama*](https://docs.github.com/en/get-started/quickstart/github-glossary#branch) es una versión paralela de tu repositorio. Por defecto, tu repositorio tiene una rama con nombre `main`, que se considera la rama definitiva. Crear ramas adicionales te permite copiar la `main`rama de tu repositorio y realizar cambios de forma segura sin interrumpir el proyecto principal. Muchas personas usan ramas para trabajar en funciones específicas sin afectar a otras partes del proyecto. Los cambios (commits) deben aprobarse por el administrador del repositorio o del proyecto a través de un **pull request**.
 
-**Fusión en Git (Git merge)**: El proceso de combinar dos ramas en Git.
+-   [Las solicitudes de cambios ](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)son propuestas para combinar los cambios de código en un proyecto. Una "**pull request**" es la característica de colaboración fundamental de GitHub, que le permite discutir y revisar los cambios antes de fusionarlos. Esto ayuda a los equipos a trabajar juntos, detectar problemas al principio y mantener la calidad del código.
+
+-   **Fusión en Git (Git merge)**: El proceso de combinar dos ramas en Git. Una [*fusión*](https://docs.github.com/en/get-started/quickstart/github-glossary#merge) añade los cambios de la solicitud de extracción y la rama a la `main`rama. Para más información sobre las fusiones, consulta " [Fusionar una solicitud de extracción](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) ".
+
+**¿Qué es un pull request?:** La colaboración se lleva a cabo en una [*solicitud de extracción*](https://docs.github.com/en/get-started/quickstart/github-glossary#pull-request) . Esta solicitud muestra los cambios en tu rama a otras personas y permite aceptarlos, rechazarlos o sugerir cambios adicionales. En una comparación, esta solicitud conservará los cambios que acabas de realizar en tu rama y propondrá su aplicación a la `main`rama del proyecto. Para más información sobre las solicitudes de extracción, consulta "[Acerca de pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)".
 
 **Archivo .gitignore**: Es un archivo que especifica los archivos no rastreados intencionalmente que Git debe ignorar.
 
 **Área de preparación**: Una caché que contiene los cambios que se incluirán en la próxima confirmación.
 
 **Almacenamiento temporal de Git**: Otro tipo de caché que contiene cambios no deseados a los que quizás quieras volver más adelante.
-
-**ID de confirmación o hash**: Un identificador único para cada confirmación, que se utiliza para cambiar a diferentes puntos de guardado.
 
 **HEAD** (siempre en mayúsculas): un nombre de referencia para la última confirmación, para evitar que tenga que escribir los identificadores de las confirmaciones.
 
