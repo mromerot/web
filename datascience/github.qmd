@@ -4,23 +4,59 @@ format: html
 editor: visual
 ---
 
-# Github
-
 ![Git Commands](images/git-commands.png)
 
-## Qué es Github
+{{< video "https://youtu.be/pBy1zgt0XPc" >}} Qué es GitHub?
+
+# Fundamentos
 
 Github es una plataforma de desarrollo colaborativo y un sistema de control de versiones de proyectos y sus archivos.
 
+El sistema de control de versiones es una herramienta que rastrea cada modificación en el código, creando un historial completo del proyecto. Se tiene la posibilidad de volver atrás a versiones preliminares.
+
+**Git** (sistema de control, Git) difiere de **GitHub** y la plataforma (GitHub) en aspectos como:
+
+-   **Git**
+    -   Sistema de control de versiones distribuido (software)
+    -   Funciona de manera local en tu computadora
+    -   Es una herramienta de línea de comandos
+    -   Es gratuito y de código abierto Creado por Linus Torvalds en 2005
+    -   Permite rastrear cambios, crear ramas, fusionar código
+    -   Funciona sin conexión a internet No requiere cuenta ni registro
+-   **GitHub**
+    -   Plataforma web para alojar repositorios Git
+
+    -   Funciona en la nube (repositorios remotos)
+
+    -   Tiene interfaz gráfica web
+
+    -   Ofrece planes gratuitos y de pago
+
+    -   Fundado en 2008, comprado por Microsoft en 2018
+
+    -   Agrega funcionalidades colaborativas: pull requests, issues, code review, GitHub Actions, wikis, etc.
+
+    -   Requiere conexión a internet .Necesitas crear una cuenta
+
 {{< video "https://youtu.be/r8jQ9hVA2qs">}} A brief introduction to Git for beginners \| GitHub
+
+# **Configuración**
+
+-   Puedes comenzar a aprender aquí: <https://github.com/skills/introduction-to-github>
+-   Configuración inicial: `git config` (nombre de usuario y correo).
+
+## Recursos de ayuda
+
+-   GitHub Documentation. [*Link*](https://docs.github.com/)
+-   GitHub Skills. [*Link*](https://skills.github.com/) *\<— recomendado !*
+-   GitHub Community. [*Link*](https://github.com/community)
+-   [Instalación y Configuración (Git SCM Book)](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Configurando-Git-por-primera-vez)
 
 {{< video "https://youtu.be/dkqWcbe2Ks4" >}} Banco Interamericano de Desarollo Code4Dev: ¿Cómo optimizar tu repositorio de código abierto con Git y GitHub?
 
-## **Key Terminologies in Git**
 
-: A cache that holds changes that will go into your next commit. Git stash: Another type of cache that holds unwanted changes you may want to return to later. Commit ID or hash: A unique identifier for each commit, used for switching to different save points. HEAD (always capitalized letters): A reference name for the latest commit, to save you from having to type commit IDs.
-
-Terminología clave en Git
+## Definiciones 
+Fuente ([*link*](https://intellipaat.com/blog/tutorial/devops-tutorial/git-cheat-sheet/#key_terminologies_in_git))
 
 -   **Repositorio local**: Es un directorio local que contiene los archivos de código del proyecto.
 
@@ -29,6 +65,13 @@ Terminología clave en Git
 -   **Clonación**: Es la acción de crear un clon o copia de un repositorio en un nuevo directorio.
 
 -   **Confirmación (Commit)**: Es una instantánea de los cambios del proyecto en preparación.
+
+    -   Guarda los cambios realizados en los archivos del proyecto.
+    -   Incluye un mensaje descriptivo que explica qué cambios se hicieron y por qué
+    -   Tiene un identificador único (hash)
+    -   Registra quién hizo los cambios y cuándo
+
+-   **Confirmar y subir/enviar (Commit and push)**: Es el proceso de guardar los cambios locales mediante un commit y luego enviarlos (push) al repositorio remoto para compartirlos con otros colaboradores.
 
 -   **Rama (Branch)**: Una rama es una copia del proyecto que se utiliza para trabajar en un entorno aislado sin afectar al proyecto principal.
 
@@ -44,17 +87,101 @@ Terminología clave en Git
 
 -   **HEAD** (siempre en mayúsculas): un nombre de referencia para la última confirmación, para evitar que tenga que escribir los identificadores de las confirmaciones.
 
-## **Introduction to GitHub**
+## Comandos comunes de Git usados en distintas situaciones
 
--   Introduction to GitHub. [*Link*](https://github.com/mromerot/skills-introduction-to-github)
+::: callout-important
 
-## Recursos de ayuda
+Iniciar un área de trabajo  
+*(ver también: `git help tutorial`)*
 
--   GitHub Documentation. [*Link*](https://docs.github.com/)
--   GitHub Skills. [*Link*](https://skills.github.com/)
--   GitHub Community. [*Link*](https://github.com/community)
+- **`git clone`**  
+  Clona un repositorio en un nuevo directorio.
 
-## Comandos básicos de Git
+- **`git init`**  
+  Crea un repositorio Git vacío o reinicializa uno existente.
+
+
+Trabajar sobre el cambio actual  
+*(ver también: `git help everyday`)*
+
+- **`git add`**  
+  Añade el contenido de archivos al índice (staging area).
+
+- **`git mv`**  
+  Mueve o renombra un archivo, un directorio o un enlace simbólico.
+
+- **`git restore`**  
+  Restaura archivos del árbol de trabajo.
+
+- **`git rm`**  
+  Elimina archivos del árbol de trabajo y del índice.
+
+
+Examinar el historial y el estado  
+*(ver también: `git help revisions`)*
+
+- **`git bisect`**  
+  Usa búsqueda binaria para encontrar el commit que introdujo un error.
+
+- **`git diff`**  
+  Muestra los cambios entre commits, entre un commit y el árbol de trabajo, etc.
+
+- **`git grep`**  
+  Imprime las líneas que coinciden con un patrón.
+
+- **`git log`**  
+  Muestra el historial de commits.
+
+- **`git show`**  
+  Muestra distintos tipos de objetos.
+
+- **`git status`**  
+  Muestra el estado del árbol de trabajo.
+
+
+Hacer crecer, marcar y ajustar el historial común
+
+- **`git backfill`**  
+  Descarga objetos faltantes en un clon parcial.
+
+- **`git branch`**  
+  Lista, crea o elimina ramas.
+
+- **`git commit`**  
+  Registra cambios en el repositorio.
+
+- **`git merge`**  
+  Une dos o más historiales de desarrollo.
+
+- **`git rebase`**  
+  Reaplica commits sobre la punta de otra base.
+
+- **`git reset`**  
+  Restablece el HEAD actual al estado especificado.
+
+- **`git switch`**  
+  Cambia entre ramas.
+
+- **`git tag`**  
+  Crea, lista, elimina o verifica una etiqueta firmada con GPG.
+
+
+Colaborar  
+*(ver también: `git help workflows`)*
+
+- **`git fetch`**  
+  Descarga objetos y referencias desde otro repositorio.
+
+- **`git pull`**  
+  Obtiene cambios e integra desde otro repositorio o una rama local.
+
+- **`git push`**  
+  Actualiza referencias remotas junto con los objetos asociados.
+:::
+
+# Comandos de Git por nivel de dificultad
+
+## Nivel básico
 
 ### Configuración inicial
 
@@ -117,9 +244,6 @@ git push origin main
 # Pull
 git pull origin main
 ```
-
-------------------------------------------------------------------------
-
 ## Nivel intermedio
 
 ### Branching (Ramificación)

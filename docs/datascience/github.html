@@ -147,11 +147,13 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 
 
 <meta property="og:title" content="Github – Inicio">
+<meta property="og:description" content="Sitio web sobre gestión del riesgo de desastres, ciencia de datos, cambio climático y tecnología">
 <meta property="og:image" content="https://mromerot.github.io/web/datascience/images/git-commands.png">
 <meta property="og:site_name" content="Inicio">
 <meta property="og:image:height" content="1166">
 <meta property="og:image:width" content="1194">
 <meta name="twitter:title" content="Github – Inicio">
+<meta name="twitter:description" content="Sitio web sobre gestión del riesgo de desastres, ciencia de datos, cambio climático y tecnología">
 <meta name="twitter:image" content="https://mromerot.github.io/web/datascience/images/git-commands.png">
 <meta name="twitter:image-height" content="1166">
 <meta name="twitter:image-width" content="1194">
@@ -691,13 +693,16 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
     <h2 id="toc-title">Contenidos</h2>
    
   <ul class="collapse">
-  <li><a href="#github" id="toc-github" class="nav-link active" data-scroll-target="#github">Github</a>
+  <li><a href="#fundamentos" id="toc-fundamentos" class="nav-link active" data-scroll-target="#fundamentos">Fundamentos</a></li>
+  <li><a href="#configuración" id="toc-configuración" class="nav-link" data-scroll-target="#configuración"><strong>Configuración</strong></a>
   <ul class="collapse">
-  <li><a href="#qué-es-github" id="toc-qué-es-github" class="nav-link" data-scroll-target="#qué-es-github">Qué es Github</a></li>
-  <li><a href="#key-terminologies-in-git" id="toc-key-terminologies-in-git" class="nav-link" data-scroll-target="#key-terminologies-in-git"><strong>Key Terminologies in Git</strong></a></li>
-  <li><a href="#introduction-to-github" id="toc-introduction-to-github" class="nav-link" data-scroll-target="#introduction-to-github"><strong>Introduction to GitHub</strong></a></li>
   <li><a href="#recursos-de-ayuda" id="toc-recursos-de-ayuda" class="nav-link" data-scroll-target="#recursos-de-ayuda">Recursos de ayuda</a></li>
-  <li><a href="#comandos-básicos-de-git" id="toc-comandos-básicos-de-git" class="nav-link" data-scroll-target="#comandos-básicos-de-git">Comandos básicos de Git</a></li>
+  <li><a href="#definiciones" id="toc-definiciones" class="nav-link" data-scroll-target="#definiciones">Definiciones</a></li>
+  <li><a href="#comandos-comunes-de-git-usados-en-distintas-situaciones" id="toc-comandos-comunes-de-git-usados-en-distintas-situaciones" class="nav-link" data-scroll-target="#comandos-comunes-de-git-usados-en-distintas-situaciones">Comandos comunes de Git usados en distintas situaciones</a></li>
+  </ul></li>
+  <li><a href="#comandos-de-git-por-nivel-de-dificultad" id="toc-comandos-de-git-por-nivel-de-dificultad" class="nav-link" data-scroll-target="#comandos-de-git-por-nivel-de-dificultad">Comandos de Git por nivel de dificultad</a>
+  <ul class="collapse">
+  <li><a href="#nivel-básico" id="toc-nivel-básico" class="nav-link" data-scroll-target="#nivel-básico">Nivel básico</a></li>
   <li><a href="#nivel-intermedio" id="toc-nivel-intermedio" class="nav-link" data-scroll-target="#nivel-intermedio">Nivel intermedio</a></li>
   <li><a href="#videos-tutoriales-recomendados" id="toc-videos-tutoriales-recomendados" class="nav-link" data-scroll-target="#videos-tutoriales-recomendados">Videos tutoriales recomendados</a></li>
   <li><a href="#proyectos-destacados-en-github" id="toc-proyectos-destacados-en-github" class="nav-link" data-scroll-target="#proyectos-destacados-en-github">Proyectos destacados en GitHub</a></li>
@@ -729,29 +734,72 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 </header>
 
 
-<section id="github" class="level1">
-<h1>Github</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/git-commands.png" class="img-fluid figure-img"></p>
 <figcaption>Git Commands</figcaption>
 </figure>
 </div>
-<section id="qué-es-github" class="level2">
-<h2 class="anchored" data-anchor-id="qué-es-github">Qué es Github</h2>
+<p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/pBy1zgt0XPc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> Qué es GitHub?<p></p>
+<section id="fundamentos" class="level1">
+<h1>Fundamentos</h1>
 <p>Github es una plataforma de desarrollo colaborativo y un sistema de control de versiones de proyectos y sus archivos.</p>
+<p>El sistema de control de versiones es una herramienta que rastrea cada modificación en el código, creando un historial completo del proyecto. Se tiene la posibilidad de volver atrás a versiones preliminares.</p>
+<p><strong>Git</strong> (sistema de control, Git) difiere de <strong>GitHub</strong> y la plataforma (GitHub) en aspectos como:</p>
+<ul>
+<li><strong>Git</strong>
+<ul>
+<li>Sistema de control de versiones distribuido (software)</li>
+<li>Funciona de manera local en tu computadora</li>
+<li>Es una herramienta de línea de comandos</li>
+<li>Es gratuito y de código abierto Creado por Linus Torvalds en 2005</li>
+<li>Permite rastrear cambios, crear ramas, fusionar código</li>
+<li>Funciona sin conexión a internet No requiere cuenta ni registro</li>
+</ul></li>
+<li><strong>GitHub</strong>
+<ul>
+<li><p>Plataforma web para alojar repositorios Git</p></li>
+<li><p>Funciona en la nube (repositorios remotos)</p></li>
+<li><p>Tiene interfaz gráfica web</p></li>
+<li><p>Ofrece planes gratuitos y de pago</p></li>
+<li><p>Fundado en 2008, comprado por Microsoft en 2018</p></li>
+<li><p>Agrega funcionalidades colaborativas: pull requests, issues, code review, GitHub Actions, wikis, etc.</p></li>
+<li><p>Requiere conexión a internet .Necesitas crear una cuenta</p></li>
+</ul></li>
+</ul>
 <p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/r8jQ9hVA2qs" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> A brief introduction to Git for beginners | GitHub<p></p>
+</section>
+<section id="configuración" class="level1">
+<h1><strong>Configuración</strong></h1>
+<ul>
+<li>Puedes comenzar a aprender aquí: <a href="https://github.com/skills/introduction-to-github" class="uri">https://github.com/skills/introduction-to-github</a></li>
+<li>Configuración inicial: <code>git config</code> (nombre de usuario y correo).</li>
+</ul>
+<section id="recursos-de-ayuda" class="level2">
+<h2 class="anchored" data-anchor-id="recursos-de-ayuda">Recursos de ayuda</h2>
+<ul>
+<li>GitHub Documentation. <a href="https://docs.github.com/"><em>Link</em></a></li>
+<li>GitHub Skills. <a href="https://skills.github.com/"><em>Link</em></a> <em>&lt;— recomendado !</em></li>
+<li>GitHub Community. <a href="https://github.com/community"><em>Link</em></a></li>
+<li><a href="https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Configurando-Git-por-primera-vez">Instalación y Configuración (Git SCM Book)</a></li>
+</ul>
 <p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/dkqWcbe2Ks4" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> Banco Interamericano de Desarollo Code4Dev: ¿Cómo optimizar tu repositorio de código abierto con Git y GitHub?<p></p>
 </section>
-<section id="key-terminologies-in-git" class="level2">
-<h2 class="anchored" data-anchor-id="key-terminologies-in-git"><strong>Key Terminologies in Git</strong></h2>
-<p>: A cache that holds changes that will go into your next commit. Git stash: Another type of cache that holds unwanted changes you may want to return to later. Commit ID or hash: A unique identifier for each commit, used for switching to different save points. HEAD (always capitalized letters): A reference name for the latest commit, to save you from having to type commit IDs.</p>
-<p>Terminología clave en Git</p>
+<section id="definiciones" class="level2">
+<h2 class="anchored" data-anchor-id="definiciones">Definiciones</h2>
+<p>Fuente (<a href="https://intellipaat.com/blog/tutorial/devops-tutorial/git-cheat-sheet/#key_terminologies_in_git"><em>link</em></a>)</p>
 <ul>
 <li><p><strong>Repositorio local</strong>: Es un directorio local que contiene los archivos de código del proyecto.</p></li>
 <li><p><strong>Repositorio remoto</strong>: Es una versión en línea del repositorio local alojada en servicios como GitHub, GitLab y BitBucket.</p></li>
 <li><p><strong>Clonación</strong>: Es la acción de crear un clon o copia de un repositorio en un nuevo directorio.</p></li>
-<li><p><strong>Confirmación (Commit)</strong>: Es una instantánea de los cambios del proyecto en preparación.</p></li>
+<li><p><strong>Confirmación (Commit)</strong>: Es una instantánea de los cambios del proyecto en preparación.</p>
+<ul>
+<li>Guarda los cambios realizados en los archivos del proyecto.</li>
+<li>Incluye un mensaje descriptivo que explica qué cambios se hicieron y por qué</li>
+<li>Tiene un identificador único (hash)</li>
+<li>Registra quién hizo los cambios y cuándo</li>
+</ul></li>
+<li><p><strong>Confirmar y subir/enviar (Commit and push)</strong>: Es el proceso de guardar los cambios locales mediante un commit y luego enviarlos (push) al repositorio remoto para compartirlos con otros colaboradores.</p></li>
 <li><p><strong>Rama (Branch)</strong>: Una rama es una copia del proyecto que se utiliza para trabajar en un entorno aislado sin afectar al proyecto principal.</p></li>
 <li><p><strong>Fusión en Git (Git merge)</strong>: El proceso de combinar dos ramas en Git.</p></li>
 <li><p><strong>Archivo .gitignore</strong>: Es un archivo que especifica los archivos no rastreados intencionalmente que Git debe ignorar.</p></li>
@@ -761,22 +809,91 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <li><p><strong>HEAD</strong> (siempre en mayúsculas): un nombre de referencia para la última confirmación, para evitar que tenga que escribir los identificadores de las confirmaciones.</p></li>
 </ul>
 </section>
-<section id="introduction-to-github" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-to-github"><strong>Introduction to GitHub</strong></h2>
+<section id="comandos-comunes-de-git-usados-en-distintas-situaciones" class="level2">
+<h2 class="anchored" data-anchor-id="comandos-comunes-de-git-usados-en-distintas-situaciones">Comandos comunes de Git usados en distintas situaciones</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Iniciar un área de trabajo<br>
+<em>(ver también: <code>git help tutorial</code>)</em></p>
 <ul>
-<li>Introduction to GitHub. <a href="https://github.com/mromerot/skills-introduction-to-github"><em>Link</em></a></li>
+<li><p><strong><code>git clone</code></strong><br>
+Clona un repositorio en un nuevo directorio.</p></li>
+<li><p><strong><code>git init</code></strong><br>
+Crea un repositorio Git vacío o reinicializa uno existente.</p></li>
 </ul>
-</section>
-<section id="recursos-de-ayuda" class="level2">
-<h2 class="anchored" data-anchor-id="recursos-de-ayuda">Recursos de ayuda</h2>
+<p>Trabajar sobre el cambio actual<br>
+<em>(ver también: <code>git help everyday</code>)</em></p>
 <ul>
-<li>GitHub Documentation. <a href="https://docs.github.com/"><em>Link</em></a></li>
-<li>GitHub Skills. <a href="https://skills.github.com/"><em>Link</em></a></li>
-<li>GitHub Community. <a href="https://github.com/community"><em>Link</em></a></li>
+<li><p><strong><code>git add</code></strong><br>
+Añade el contenido de archivos al índice (staging area).</p></li>
+<li><p><strong><code>git mv</code></strong><br>
+Mueve o renombra un archivo, un directorio o un enlace simbólico.</p></li>
+<li><p><strong><code>git restore</code></strong><br>
+Restaura archivos del árbol de trabajo.</p></li>
+<li><p><strong><code>git rm</code></strong><br>
+Elimina archivos del árbol de trabajo y del índice.</p></li>
 </ul>
+<p>Examinar el historial y el estado<br>
+<em>(ver también: <code>git help revisions</code>)</em></p>
+<ul>
+<li><p><strong><code>git bisect</code></strong><br>
+Usa búsqueda binaria para encontrar el commit que introdujo un error.</p></li>
+<li><p><strong><code>git diff</code></strong><br>
+Muestra los cambios entre commits, entre un commit y el árbol de trabajo, etc.</p></li>
+<li><p><strong><code>git grep</code></strong><br>
+Imprime las líneas que coinciden con un patrón.</p></li>
+<li><p><strong><code>git log</code></strong><br>
+Muestra el historial de commits.</p></li>
+<li><p><strong><code>git show</code></strong><br>
+Muestra distintos tipos de objetos.</p></li>
+<li><p><strong><code>git status</code></strong><br>
+Muestra el estado del árbol de trabajo.</p></li>
+</ul>
+<p>Hacer crecer, marcar y ajustar el historial común</p>
+<ul>
+<li><p><strong><code>git backfill</code></strong><br>
+Descarga objetos faltantes en un clon parcial.</p></li>
+<li><p><strong><code>git branch</code></strong><br>
+Lista, crea o elimina ramas.</p></li>
+<li><p><strong><code>git commit</code></strong><br>
+Registra cambios en el repositorio.</p></li>
+<li><p><strong><code>git merge</code></strong><br>
+Une dos o más historiales de desarrollo.</p></li>
+<li><p><strong><code>git rebase</code></strong><br>
+Reaplica commits sobre la punta de otra base.</p></li>
+<li><p><strong><code>git reset</code></strong><br>
+Restablece el HEAD actual al estado especificado.</p></li>
+<li><p><strong><code>git switch</code></strong><br>
+Cambia entre ramas.</p></li>
+<li><p><strong><code>git tag</code></strong><br>
+Crea, lista, elimina o verifica una etiqueta firmada con GPG.</p></li>
+</ul>
+<p>Colaborar<br>
+<em>(ver también: <code>git help workflows</code>)</em></p>
+<ul>
+<li><p><strong><code>git fetch</code></strong><br>
+Descarga objetos y referencias desde otro repositorio.</p></li>
+<li><p><strong><code>git pull</code></strong><br>
+Obtiene cambios e integra desde otro repositorio o una rama local.</p></li>
+<li><p><strong><code>git push</code></strong><br>
+Actualiza referencias remotas junto con los objetos asociados.</p></li>
+</ul>
+</div>
+</div>
 </section>
-<section id="comandos-básicos-de-git" class="level2">
-<h2 class="anchored" data-anchor-id="comandos-básicos-de-git">Comandos básicos de Git</h2>
+</section>
+<section id="comandos-de-git-por-nivel-de-dificultad" class="level1">
+<h1>Comandos de Git por nivel de dificultad</h1>
+<section id="nivel-básico" class="level2">
+<h2 class="anchored" data-anchor-id="nivel-básico">Nivel básico</h2>
 <section id="configuración-inicial" class="level3">
 <h3 class="anchored" data-anchor-id="configuración-inicial">Configuración inicial</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Instalarlo con Homebrew</span></span>
@@ -830,7 +947,6 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Pull</span></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
 </section>
 </section>
 <section id="nivel-intermedio" class="level2">
@@ -1114,8 +1230,8 @@ build/
 </section>
 <section id="videos-tutoriales-recomendados" class="level2">
 <h2 class="anchored" data-anchor-id="videos-tutoriales-recomendados">Videos tutoriales recomendados</h2>
-<section id="nivel-básico" class="level3">
-<h3 class="anchored" data-anchor-id="nivel-básico">Nivel básico</h3>
+<section id="nivel-básico-1" class="level3">
+<h3 class="anchored" data-anchor-id="nivel-básico-1">Nivel básico</h3>
 <ul>
 <li><strong>Git and GitHub for Beginners</strong> - freeCodeCamp.org <a href="https://www.youtube.com/watch?v=RGOj5yH7evk"><em>Link</em></a></li>
 <li><strong>Git Tutorial for Beginners</strong> - Programming with Mosh <a href="https://www.youtube.com/watch?v=8JJ101D3knE"><em>Link</em></a></li>
