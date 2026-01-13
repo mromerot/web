@@ -137,6 +137,8 @@ website:
             href: datascience/quarto.qmd
           - text: "Myst"
             href: datascience/myst.qmd
+          - text: "Markdown"
+            href: datascience/markdown.md
           - text: "Github"
             href: datascience/github.qmd
           - text: "Google Colab"

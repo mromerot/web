@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Projects – Inicio</title>
+<title>Markdown – Inicio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -70,35 +103,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-image','listing-description','listing-categories','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-image","listing-description","listing-categories","listing-date"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 
 <script type="text/javascript">
@@ -171,12 +175,12 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Projects – Inicio">
-<meta property="og:image" content="https://mromerot.github.io/web/projects/images/breno-assis-r3WAWU5Fi5Q-unsplash.jpg">
+<meta property="og:title" content="Markdown – Inicio">
+<meta property="og:description" content="Sitio web sobre gestión del riesgo de desastres, ciencia de datos, cambio climático y tecnología">
 <meta property="og:site_name" content="Inicio">
-<meta name="twitter:title" content="Projects – Inicio">
-<meta name="twitter:image" content="https://mromerot.github.io/web/projects/images/breno-assis-r3WAWU5Fi5Q-unsplash.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Markdown – Inicio">
+<meta name="twitter:description" content="Sitio web sobre gestión del riesgo de desastres, ciencia de datos, cambio climático y tecnología">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -188,9 +192,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      Inicio
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datascience/cienciadedatos.html">Ciencia de datos</a></li><li class="breadcrumb-item"><a href="../datascience/markdown.html">Markdown</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -571,13 +573,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
  <span class="menu-text">Ciencia de datos</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../datascience/cienciadedatos.html" class="sidebar-item-text sidebar-link">
@@ -598,7 +600,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/markdown.html" class="sidebar-item-text sidebar-link">
+  <a href="../datascience/markdown.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Markdown</span></a>
   </div>
 </li>
@@ -715,15 +717,38 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul class="collapse">
+  <li><a href="#markdown" id="toc-markdown" class="nav-link active" data-scroll-target="#markdown">Markdown</a>
+  <ul class="collapse">
+  <li><a href="#por-qué-usar-markdown" id="toc-por-qué-usar-markdown" class="nav-link" data-scroll-target="#por-qué-usar-markdown">¿Por qué usar Markdown?</a></li>
+  <li><a href="#recursos-de-ayuda" id="toc-recursos-de-ayuda" class="nav-link" data-scroll-target="#recursos-de-ayuda">Recursos de ayuda</a></li>
+  <li><a href="#sintaxis-básica" id="toc-sintaxis-básica" class="nav-link" data-scroll-target="#sintaxis-básica">Sintaxis básica</a></li>
+  <li><a href="#sintaxis-extendida-github-flavored-markdown" id="toc-sintaxis-extendida-github-flavored-markdown" class="nav-link" data-scroll-target="#sintaxis-extendida-github-flavored-markdown">Sintaxis extendida (GitHub Flavored Markdown)</a></li>
+  <li><a href="#markdown-en-diferentes-contextos" id="toc-markdown-en-diferentes-contextos" class="nav-link" data-scroll-target="#markdown-en-diferentes-contextos">Markdown en diferentes contextos</a></li>
+  <li><a href="#matemáticas-con-latex" id="toc-matemáticas-con-latex" class="nav-link" data-scroll-target="#matemáticas-con-latex">Matemáticas con LaTeX</a></li>
+  <li><a href="#herramientas-útiles" id="toc-herramientas-útiles" class="nav-link" data-scroll-target="#herramientas-útiles">Herramientas útiles</a></li>
+  <li><a href="#buenas-prácticas" id="toc-buenas-prácticas" class="nav-link" data-scroll-target="#buenas-prácticas">Buenas prácticas</a></li>
+  <li><a href="#diferencias-entre-sabores-de-markdown" id="toc-diferencias-entre-sabores-de-markdown" class="nav-link" data-scroll-target="#diferencias-entre-sabores-de-markdown">Diferencias entre sabores de Markdown</a></li>
+  <li><a href="#ejemplos-prácticos" id="toc-ejemplos-prácticos" class="nav-link" data-scroll-target="#ejemplos-prácticos">Ejemplos prácticos</a></li>
+  <li><a href="#uso" id="toc-uso" class="nav-link" data-scroll-target="#uso">Uso</a></li>
+  <li><a href="#contribuir" id="toc-contribuir" class="nav-link" data-scroll-target="#contribuir">Contribuir</a></li>
+  <li><a href="#licencia" id="toc-licencia" class="nav-link" data-scroll-target="#licencia">Licencia</a></li>
+  <li><a href="#videos-tutoriales" id="toc-videos-tutoriales" class="nav-link" data-scroll-target="#videos-tutoriales">Videos tutoriales</a></li>
+  <li><a href="#recursos-adicionales" id="toc-recursos-adicionales" class="nav-link" data-scroll-target="#recursos-adicionales">Recursos adicionales</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datascience/cienciadedatos.html">Ciencia de datos</a></li><li class="breadcrumb-item"><a href="../datascience/markdown.html">Markdown</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
+<h1 class="title">Markdown</h1>
 </div>
 
 
@@ -740,107 +765,418 @@ window.Quarto = {
 </header>
 
 
+<section id="markdown" class="level1">
+<h1>Markdown</h1>
+<p>Markdown es un lenguaje de marcado ligero creado por John Gruber en 2004. Su objetivo es ser fácil de leer y escribir, y convertirse fácilmente en HTML y otros formatos.</p>
+<section id="por-qué-usar-markdown" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-usar-markdown">¿Por qué usar Markdown?</h2>
+<ul>
+<li><strong>Simplicidad</strong>: Sintaxis sencilla y fácil de aprender</li>
+<li><strong>Portabilidad</strong>: Archivos de texto plano que funcionan en cualquier sistema</li>
+<li><strong>Versatilidad</strong>: Se puede convertir a HTML, PDF, Word, y más</li>
+<li><strong>Control de versiones</strong>: Ideal para Git y GitHub</li>
+<li><strong>Ampliamente adoptado</strong>: Usado en GitHub, Jupyter, Stack Overflow, Reddit, y más</li>
+</ul>
+</section>
+<section id="recursos-de-ayuda" class="level2">
+<h2 class="anchored" data-anchor-id="recursos-de-ayuda">Recursos de ayuda</h2>
+<ul>
+<li><a href="https://www.markdownguide.org/">Markdown Guide</a> - Guía completa de Markdown</li>
+<li><a href="https://github.github.com/gfm/">GitHub Flavored Markdown</a> - Especificación de GFM</li>
+<li><a href="https://www.markdowntutorial.com/">Markdown Tutorial</a> - Tutorial interactivo</li>
+<li><a href="https://commonmark.org/">CommonMark</a> - Especificación estándar</li>
+</ul>
+</section>
+<section id="sintaxis-básica" class="level2">
+<h2 class="anchored" data-anchor-id="sintaxis-básica">Sintaxis básica</h2>
+<section id="encabezados" class="level3">
+<h3 class="anchored" data-anchor-id="encabezados">Encabezados</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Encabezado 1</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Encabezado 2</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Encabezado 3</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Encabezado 4</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">##### Encabezado 5</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">###### Encabezado 6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="énfasis" class="level3">
+<h3 class="anchored" data-anchor-id="énfasis">Énfasis</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>*cursiva* o _cursiva_</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>**negrita** o __negrita__</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>***negrita y cursiva*** o ___negrita y cursiva___</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>~~tachado~~</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ejemplo: - <em>cursiva</em> o <em>cursiva</em> - <strong>negrita</strong> o <strong>negrita</strong> - <strong><em>negrita y cursiva</em></strong> - <del>tachado</del></p>
+</section>
+<section id="listas" class="level3">
+<h3 class="anchored" data-anchor-id="listas">Listas</h3>
+<section id="listas-no-ordenadas" class="level4">
+<h4 class="anchored" data-anchor-id="listas-no-ordenadas">Listas no ordenadas</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Elemento 1</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Elemento 2</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Sub-elemento 2.1</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Sub-elemento 2.2</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Elemento 3</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>También funciona con asteriscos</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">+ </span>O con signos más</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="listas-ordenadas" class="level4">
+<h4 class="anchored" data-anchor-id="listas-ordenadas">Listas ordenadas</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Primer elemento</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Segundo elemento</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Tercer elemento</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ss">   1. </span>Sub-elemento 3.1</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ss">   2. </span>Sub-elemento 3.2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="enlaces" class="level3">
+<h3 class="anchored" data-anchor-id="enlaces">Enlaces</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Texto del enlace</span><span class="co">](https://www.ejemplo.com)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Enlace con título</span><span class="co">](https://www.ejemplo.com "Título del enlace")</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://www.ejemplo.com&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ejemplo: <a href="https://www.markdownguide.org/">Markdown Guide</a></p>
+</section>
+<section id="imágenes" class="level3">
+<h3 class="anchored" data-anchor-id="imágenes">Imágenes</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Texto alternativo](ruta/a/imagen.png)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="al">![Texto alternativo](ruta/a/imagen.png "Título de la imagen")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="código" class="level3">
+<h3 class="anchored" data-anchor-id="código">Código</h3>
+<section id="código-en-línea" class="level4">
+<h4 class="anchored" data-anchor-id="código-en-línea">Código en línea</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Usa <span class="in">`código en línea`</span> con comillas invertidas.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ejemplo: El comando <code>git status</code> muestra el estado del repositorio.</p>
+</section>
+<section id="bloques-de-código" class="level4">
+<h4 class="anchored" data-anchor-id="bloques-de-código">Bloques de código</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="in">Bloque de código simple</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Código Python con resaltado de sintaxis</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hola_mundo():</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hola, mundo!"</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="in">```javascript</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">// Código JavaScript</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> saludo <span class="op">=</span> <span class="st">"Hola, mundo!"</span><span class="op">;</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>console<span class="op">.</span><span class="fu">log</span><span class="op">(</span>saludo<span class="op">);</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="citas" class="level3">
+<h3 class="anchored" data-anchor-id="citas">Citas</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Esta es una cita.</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Puede tener múltiples líneas.</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Y múltiples párrafos.</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Nivel 1</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;&gt; Nivel 2</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;&gt;&gt; Nivel 3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ejemplo: &gt; Esta es una cita de ejemplo. &gt; Markdown hace que sea fácil citar texto.</p>
+</section>
+<section id="líneas-horizontales" class="level3">
+<h3 class="anchored" data-anchor-id="líneas-horizontales">Líneas horizontales</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">***</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">___</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="tablas" class="level3">
+<h3 class="anchored" data-anchor-id="tablas">Tablas</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Encabezado 1 <span class="pp">|</span> Encabezado 2 <span class="pp">|</span> Encabezado 3 <span class="pp">|</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|--------------|--------------|--------------|</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Celda 1      <span class="pp">|</span> Celda 2      <span class="pp">|</span> Celda 3      <span class="pp">|</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Celda 4      <span class="pp">|</span> Celda 5      <span class="pp">|</span> Celda 6      <span class="pp">|</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Alineación izquierda <span class="pp">|</span> Centrado <span class="pp">|</span> Alineación derecha <span class="pp">|</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------------------|:--------:|-------------------:|</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Texto                <span class="pp">|</span> Texto    <span class="pp">|</span> Texto              <span class="pp">|</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ejemplo:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Lenguaje</th>
+<th>Año</th>
+<th>Creador</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Python</td>
+<td>1991</td>
+<td>Guido van Rossum</td>
+</tr>
+<tr class="even">
+<td>JavaScript</td>
+<td>1995</td>
+<td>Brendan Eich</td>
+</tr>
+<tr class="odd">
+<td>Ruby</td>
+<td>1995</td>
+<td>Yukihiro Matsumoto</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="sintaxis-extendida-github-flavored-markdown" class="level2">
+<h2 class="anchored" data-anchor-id="sintaxis-extendida-github-flavored-markdown">Sintaxis extendida (GitHub Flavored Markdown)</h2>
+<section id="listas-de-tareas" class="level3">
+<h3 class="anchored" data-anchor-id="listas-de-tareas">Listas de tareas</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Tarea completada</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Tarea pendiente</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Otra tarea pendiente</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ejemplo: - [x] Aprender sintaxis básica de Markdown - [ ] Practicar con ejemplos - [ ] Crear mi primer documento</p>
+</section>
+<section id="menciones-y-referencias" class="level3">
+<h3 class="anchored" data-anchor-id="menciones-y-referencias">Menciones y referencias</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>@usuario - Mencionar a un usuario</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>#123 - Referencia a un issue</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="emojis" class="level3">
+<h3 class="anchored" data-anchor-id="emojis">Emojis</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="sc">:smile:</span> <span class="sc">:heart:</span> <span class="sc">:thumbsup:</span> <span class="sc">:rocket:</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ejemplo: :smile: :rocket: :heart:</p>
+</section>
+<section id="bloques-de-código-con-información-adicional" class="level3">
+<h3 class="anchored" data-anchor-id="bloques-de-código-con-información-adicional">Bloques de código con información adicional</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="in">```python {.line-numbers}</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ejemplo():</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Código con números de línea"</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="notas-al-pie" class="level3">
+<h3 class="anchored" data-anchor-id="notas-al-pie">Notas al pie</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>Texto con una nota al pie<span class="ot">[^1]</span>.</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="ot">[^1]: </span>Esta es la nota al pie.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="markdown-en-diferentes-contextos" class="level2">
+<h2 class="anchored" data-anchor-id="markdown-en-diferentes-contextos">Markdown en diferentes contextos</h2>
+<section id="github" class="level3">
+<h3 class="anchored" data-anchor-id="github">GitHub</h3>
+<p>GitHub usa GitHub Flavored Markdown (GFM) que incluye: - Autoenlaces para URLs - Tachado con <code>~~</code> - Listas de tareas - Tablas - Menciones de usuarios y equipos - Referencias a issues y pull requests</p>
+</section>
+<section id="jupyter-notebooks" class="level3">
+<h3 class="anchored" data-anchor-id="jupyter-notebooks">Jupyter Notebooks</h3>
+<p>Jupyter usa Markdown en las celdas de texto para: - Documentar análisis de datos - Explicar código - Incluir ecuaciones matemáticas con LaTeX</p>
+</section>
+<section id="quarto" class="level3">
+<h3 class="anchored" data-anchor-id="quarto">Quarto</h3>
+<p>Quarto extiende Markdown con: - Callouts (cuadros de alerta) - Divs y spans - Atributos de código - Referencias cruzadas - Citas y bibliografía</p>
+<p>Ejemplo de callout en Quarto:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>Esta es una nota importante.</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>Esta es una advertencia.</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>Esto es muy importante.</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="matemáticas-con-latex" class="level2">
+<h2 class="anchored" data-anchor-id="matemáticas-con-latex">Matemáticas con LaTeX</h2>
+<section id="ecuaciones-en-línea" class="level3">
+<h3 class="anchored" data-anchor-id="ecuaciones-en-línea">Ecuaciones en línea</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>La ecuación $E = mc^2$ es famosa.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="ecuaciones-en-bloque" class="level3">
+<h3 class="anchored" data-anchor-id="ecuaciones-en-bloque">Ecuaciones en bloque</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>$$</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ejemplo:</p>
+<p>La ecuación de Einstein: <span class="math inline">\(E = mc^2\)</span></p>
+<p>Fórmula cuadrática: <span class="math display">\[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]</span></p>
+</section>
+</section>
+<section id="herramientas-útiles" class="level2">
+<h2 class="anchored" data-anchor-id="herramientas-útiles">Herramientas útiles</h2>
+<section id="editores-de-markdown" class="level3">
+<h3 class="anchored" data-anchor-id="editores-de-markdown">Editores de Markdown</h3>
+<ul>
+<li><strong>Visual Studio Code</strong>: Con extensiones como Markdown All in One</li>
+<li><strong>Typora</strong>: Editor WYSIWYG de Markdown</li>
+<li><strong>Obsidian</strong>: Para tomar notas con Markdown</li>
+<li><strong>MarkText</strong>: Editor gratuito y de código abierto</li>
+<li><strong>Dillinger</strong>: Editor online de Markdown</li>
+</ul>
+</section>
+<section id="conversores" class="level3">
+<h3 class="anchored" data-anchor-id="conversores">Conversores</h3>
+<ul>
+<li><strong>Pandoc</strong>: Conversor universal de documentos</li>
+<li><strong>Markdown to PDF</strong>: Herramientas online</li>
+<li><strong>kramdown</strong>: Procesador de Markdown en Ruby</li>
+</ul>
+</section>
+<section id="cheatsheets" class="level3">
+<h3 class="anchored" data-anchor-id="cheatsheets">Cheatsheets</h3>
+<ul>
+<li><a href="https://www.markdownguide.org/cheat-sheet/">Markdown Cheatsheet</a></li>
+<li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">GitHub Markdown Cheatsheet</a></li>
+</ul>
+</section>
+</section>
+<section id="buenas-prácticas" class="level2">
+<h2 class="anchored" data-anchor-id="buenas-prácticas">Buenas prácticas</h2>
+<ol type="1">
+<li><strong>Usa espacios en blanco</strong>: Deja líneas en blanco entre elementos para mejor legibilidad</li>
+<li><strong>Consistencia</strong>: Mantén un estilo consistente (por ejemplo, siempre usa <code>*</code> para listas)</li>
+<li><strong>Nombres de archivo</strong>: Usa nombres descriptivos con extensión <code>.md</code> o <code>.markdown</code></li>
+<li><strong>Previsualización</strong>: Siempre previsualiza tu documento antes de publicar</li>
+<li><strong>Control de versiones</strong>: Usa Git para rastrear cambios en archivos Markdown</li>
+<li><strong>Documenta código</strong>: Usa README.md para documentar proyectos</li>
+<li><strong>Simplicidad</strong>: No sobrecargues con formato innecesario</li>
+</ol>
+</section>
+<section id="diferencias-entre-sabores-de-markdown" class="level2">
+<h2 class="anchored" data-anchor-id="diferencias-entre-sabores-de-markdown">Diferencias entre sabores de Markdown</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Característica</th>
+<th>CommonMark</th>
+<th>GFM</th>
+<th>Pandoc</th>
+<th>Quarto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sintaxis básica</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>Tablas</td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>Listas de tareas</td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>Notas al pie</td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>Atributos</td>
+<td>-</td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>Divs/Spans</td>
+<td>-</td>
+<td>-</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>Callouts</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ejemplos-prácticos" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos-prácticos">Ejemplos prácticos</h2>
+<section id="readme-de-proyecto" class="level3">
+<h3 class="anchored" data-anchor-id="readme-de-proyecto">README de proyecto</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Nombre del Proyecto</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Descripción</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>Una breve descripción del proyecto.</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Instalación</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install mi-paquete</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="uso" class="level2">
+<h2 class="anchored" data-anchor-id="uso">Uso</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> mi_paquete</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>mi_paquete.funcion()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="contribuir" class="level2">
+<h2 class="anchored" data-anchor-id="contribuir">Contribuir</h2>
+<p>Por favor lee <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> para detalles.</p>
+</section>
+<section id="licencia" class="level2">
+<h2 class="anchored" data-anchor-id="licencia">Licencia</h2>
+<p>Este proyecto está bajo la Licencia MIT - ver <a href="LICENSE.md">LICENSE.md</a></p>
+<pre><code>
+### Documentación de API
+
+```markdown
+# API Reference
+
+## `funcion_ejemplo(parametro1, parametro2)`
+
+### Descripción
+Realiza una operación específica con los parámetros dados.
+
+### Parámetros
+- `parametro1` (str): Descripción del primer parámetro
+- `parametro2` (int): Descripción del segundo parámetro
+
+### Retorna
+- `dict`: Un diccionario con los resultados
+
+### Ejemplo
+```python
+resultado = funcion_ejemplo("texto", 42)
+print(resultado)</code></pre>
+<p>```</p>
+</section>
+<section id="videos-tutoriales" class="level2">
+<h2 class="anchored" data-anchor-id="videos-tutoriales">Videos tutoriales</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=HUBNt18RFbo">Markdown Crash Course</a> - Traversy Media</li>
+<li><a href="https://www.youtube.com/watch?v=2JE66WFpaII">Markdown Tutorial for Beginners</a> - Corey Schafer</li>
+</ul>
+</section>
+<section id="recursos-adicionales" class="level2">
+<h2 class="anchored" data-anchor-id="recursos-adicionales">Recursos adicionales</h2>
+<ul>
+<li><a href="https://www.markdownguide.org/book/">The Markdown Guide Book</a> - Libro completo sobre Markdown</li>
+<li><a href="https://github.com/mundimark/awesome-markdown">Awesome Markdown</a> - Lista curada de recursos</li>
+<li><a href="http://www.cirosantilli.com/markdown-style-guide/">Markdown Style Guide</a> - Guía de estilo</li>
+</ul>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="UHl0aG9uJTJDTWFjaGluZSUyMExlYXJuaW5nJTJDRGF0YSUyMENsZWFuaW5n" data-listing-date-sort="1704085200000">
-<a href="https://example.com/house-prices" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="images/breno-assis-r3WAWU5Fi5Q-unsplash.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Predicting House Prices with Machine Learning
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMENsZWFuaW5n'); return false;">Data Cleaning</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>This project involves using machine learning algorithms to predict house prices based on various features such as location, size, and amenities. It includes data cleaning, feature engineering, and model selection.</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jan 1, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="UiUyQ01hY2hpbmUlMjBMZWFybmluZyUyQ0NsdXN0ZXJpbmclMkNTdGF0aXN0aWNhbCUyME1vZGVsbGluZw==" data-listing-date-sort="1711947600000">
-<a href="https://example.com/customer-segmentation" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="images/adrien-delforge-CrHG_ZYn1Dw-unsplash.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Customer Segmentation Using Clustering Techniques
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2x1c3RlcmluZw=='); return false;">Clustering</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljYWwlMjBNb2RlbGxpbmc='); return false;">Statistical Modelling</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>This project focuses on segmenting customers into different groups based on their purchasing behavior and demographics. It uses clustering algorithms like K-means and hierarchical clustering to identify distinct customer segments.</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Apr 1, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="UiUyQ0RhdGElMjBWaXN1YWxpemF0aW9uJTJDRW52aXJvbm1lbnRhbCUyMFNjaWVuY2U=" data-listing-date-sort="1719810000000">
-<a href="https://example.com/co2-visualization" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="images/anne-nygard-vc-vPgGqAr4-unsplash.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Visualizing Global CO2 Emissions
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMFZpc3VhbGl6YXRpb24='); return false;">Data Visualization</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RW52aXJvbm1lbnRhbCUyMFNjaWVuY2U='); return false;">Environmental Science</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>This project involves creating visualizations to show trends in global CO2 emissions over time. It includes data extraction from public databases, data cleaning, and using visualization libraries to create interactive charts and graphs.</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jul 1, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -1249,7 +1585,7 @@ Jul 1, 2024
     </div>   
     <div class="nav-footer-center">
 <p>Made with ❤️ and Quarto</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

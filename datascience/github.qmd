@@ -54,129 +54,130 @@ El sistema de control de versiones es una herramienta que rastrea cada modificac
 
 {{< video "https://youtu.be/dkqWcbe2Ks4" >}} Banco Interamericano de Desarollo Code4Dev: ¿Cómo optimizar tu repositorio de código abierto con Git y GitHub?
 
+## Definiciones
 
-## Definiciones 
-Fuente ([*link*](https://intellipaat.com/blog/tutorial/devops-tutorial/git-cheat-sheet/#key_terminologies_in_git))
+Puede encontrar un glosario oficial [aquí](https://docs.github.com/en/get-started/learning-about-github/github-glossary#branch).
 
--   **Repositorio local**: Es un directorio local que contiene los archivos de código del proyecto.
+## Repositorios
 
--   **Repositorio remoto**: Es una versión en línea del repositorio local alojada en servicios como GitHub, GitLab y BitBucket.
+**¿Qué es un repositorio?** Un [*repositorio*](https://docs.github.com/get-started/quickstart/github-glossary#repository) es un proyecto que contiene archivos y carpetas. Un repositorio registra las versiones de archivos y carpetas. Para más información, consulta "[Acerca de los repositorios](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories)" en la documentación de GitHub.
 
--   **Clonación**: Es la acción de crear un clon o copia de un repositorio en un nuevo directorio.
+**Repositorio local**: Es un directorio local que contiene los archivos de código del proyecto.
 
--   **Confirmación (Commit)**: Es una instantánea de los cambios del proyecto en preparación.
+**Repositorio remoto**: Es una versión en línea del repositorio local alojada en servicios como GitHub, GitLab y BitBucket.
 
-    -   Guarda los cambios realizados en los archivos del proyecto.
-    -   Incluye un mensaje descriptivo que explica qué cambios se hicieron y por qué
-    -   Tiene un identificador único (hash)
-    -   Registra quién hizo los cambios y cuándo
+![[Medium](https://medium.com/mindorks/what-is-git-commit-push-pull-log-aliases-fetch-config-clone-56bc52a3601c). What is git commit, push, pull, log, aliases, fetch, config & clone.](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*E4povWZ5H-K3OaguFQJ0IQ.png){width="600"}
 
--   **Confirmar y subir/enviar (Commit and push)**: Es el proceso de guardar los cambios locales mediante un commit y luego enviarlos (push) al repositorio remoto para compartirlos con otros colaboradores.
+**Clonación (clone)**: Es la acción de crear un clon o copia de un repositorio en un nuevo directorio sea local o en la nube.
 
--   **Rama (Branch)**: Una rama es una copia del proyecto que se utiliza para trabajar en un entorno aislado sin afectar al proyecto principal.
+**Confirmación (Commit)**: Es una instantánea de los cambios del proyecto en preparación.
 
--   **Fusión en Git (Git merge)**: El proceso de combinar dos ramas en Git.
+-   Guarda los cambios realizados en los archivos del proyecto.
+-   Incluye un mensaje descriptivo que explica qué cambios se hicieron y por qué
+-   Tiene un identificador único (hash)
+-   Registra quién hizo los cambios y cuándo
 
--   **Archivo .gitignore**: Es un archivo que especifica los archivos no rastreados intencionalmente que Git debe ignorar.
+**Confirmar y subir/enviar (Commit and push)**: Es el proceso de guardar los cambios locales mediante un commit y luego enviarlos (push) al repositorio remoto para compartirlos con otros colaboradores o publicarlos como página web.
 
--   **Área de preparación**: Una caché que contiene los cambios que se incluirán en la próxima confirmación.
+**Rama (Branch)**: Una [*rama*](https://docs.github.com/en/get-started/quickstart/github-glossary#branch) es una versión paralela de tu repositorio. Por defecto, tu repositorio tiene una rama con nombre `main`, que se considera la rama definitiva. Crear ramas adicionales te permite copiar la `main`rama de tu repositorio y realizar cambios de forma segura sin interrumpir el proyecto principal. Muchas personas usan ramas para trabajar en funciones específicas sin afectar a otras partes del proyecto. Los cambios (commits) deben aprobarse por el administrador del repositorio o del proyecto a través de un **pull request**.
 
--   **Almacenamiento temporal de Git**: Otro tipo de caché que contiene cambios no deseados a los que quizás quieras volver más adelante.
+**Fusión en Git (Git merge)**: El proceso de combinar dos ramas en Git.
 
--   **ID de confirmación o hash**: Un identificador único para cada confirmación, que se utiliza para cambiar a diferentes puntos de guardado.
+**Archivo .gitignore**: Es un archivo que especifica los archivos no rastreados intencionalmente que Git debe ignorar.
 
--   **HEAD** (siempre en mayúsculas): un nombre de referencia para la última confirmación, para evitar que tenga que escribir los identificadores de las confirmaciones.
+**Área de preparación**: Una caché que contiene los cambios que se incluirán en la próxima confirmación.
+
+**Almacenamiento temporal de Git**: Otro tipo de caché que contiene cambios no deseados a los que quizás quieras volver más adelante.
+
+**ID de confirmación o hash**: Un identificador único para cada confirmación, que se utiliza para cambiar a diferentes puntos de guardado.
+
+**HEAD** (siempre en mayúsculas): un nombre de referencia para la última confirmación, para evitar que tenga que escribir los identificadores de las confirmaciones.
 
 ## Comandos comunes de Git usados en distintas situaciones
 
 ::: callout-important
-
-Iniciar un área de trabajo  
+Iniciar un área de trabajo\
 *(ver también: `git help tutorial`)*
 
-- **`git clone`**  
-  Clona un repositorio en un nuevo directorio.
+-   **`git clone`**\
+    Clona un repositorio en un nuevo directorio.
 
-- **`git init`**  
-  Crea un repositorio Git vacío o reinicializa uno existente.
+-   **`git init`**\
+    Crea un repositorio Git vacío o reinicializa uno existente.
 
-
-Trabajar sobre el cambio actual  
+Trabajar sobre el cambio actual\
 *(ver también: `git help everyday`)*
 
-- **`git add`**  
-  Añade el contenido de archivos al índice (staging area).
+-   **`git add`**\
+    Añade el contenido de archivos al índice (staging area).
 
-- **`git mv`**  
-  Mueve o renombra un archivo, un directorio o un enlace simbólico.
+-   **`git mv`**\
+    Mueve o renombra un archivo, un directorio o un enlace simbólico.
 
-- **`git restore`**  
-  Restaura archivos del árbol de trabajo.
+-   **`git restore`**\
+    Restaura archivos del árbol de trabajo.
 
-- **`git rm`**  
-  Elimina archivos del árbol de trabajo y del índice.
+-   **`git rm`**\
+    Elimina archivos del árbol de trabajo y del índice.
 
-
-Examinar el historial y el estado  
+Examinar el historial y el estado\
 *(ver también: `git help revisions`)*
 
-- **`git bisect`**  
-  Usa búsqueda binaria para encontrar el commit que introdujo un error.
+-   **`git bisect`**\
+    Usa búsqueda binaria para encontrar el commit que introdujo un error.
 
-- **`git diff`**  
-  Muestra los cambios entre commits, entre un commit y el árbol de trabajo, etc.
+-   **`git diff`**\
+    Muestra los cambios entre commits, entre un commit y el árbol de trabajo, etc.
 
-- **`git grep`**  
-  Imprime las líneas que coinciden con un patrón.
+-   **`git grep`**\
+    Imprime las líneas que coinciden con un patrón.
 
-- **`git log`**  
-  Muestra el historial de commits.
+-   **`git log`**\
+    Muestra el historial de commits.
 
-- **`git show`**  
-  Muestra distintos tipos de objetos.
+-   **`git show`**\
+    Muestra distintos tipos de objetos.
 
-- **`git status`**  
-  Muestra el estado del árbol de trabajo.
-
+-   **`git status`**\
+    Muestra el estado del árbol de trabajo.
 
 Hacer crecer, marcar y ajustar el historial común
 
-- **`git backfill`**  
-  Descarga objetos faltantes en un clon parcial.
+-   **`git backfill`**\
+    Descarga objetos faltantes en un clon parcial.
 
-- **`git branch`**  
-  Lista, crea o elimina ramas.
+-   **`git branch`**\
+    Lista, crea o elimina ramas.
 
-- **`git commit`**  
-  Registra cambios en el repositorio.
+-   **`git commit`**\
+    Registra cambios en el repositorio.
 
-- **`git merge`**  
-  Une dos o más historiales de desarrollo.
+-   **`git merge`**\
+    Une dos o más historiales de desarrollo.
 
-- **`git rebase`**  
-  Reaplica commits sobre la punta de otra base.
+-   **`git rebase`**\
+    Reaplica commits sobre la punta de otra base.
 
-- **`git reset`**  
-  Restablece el HEAD actual al estado especificado.
+-   **`git reset`**\
+    Restablece el HEAD actual al estado especificado.
 
-- **`git switch`**  
-  Cambia entre ramas.
+-   **`git switch`**\
+    Cambia entre ramas.
 
-- **`git tag`**  
-  Crea, lista, elimina o verifica una etiqueta firmada con GPG.
+-   **`git tag`**\
+    Crea, lista, elimina o verifica una etiqueta firmada con GPG.
 
-
-Colaborar  
+Colaborar\
 *(ver también: `git help workflows`)*
 
-- **`git fetch`**  
-  Descarga objetos y referencias desde otro repositorio.
+-   **`git fetch`**\
+    Descarga objetos y referencias desde otro repositorio.
 
-- **`git pull`**  
-  Obtiene cambios e integra desde otro repositorio o una rama local.
+-   **`git pull`**\
+    Obtiene cambios e integra desde otro repositorio o una rama local.
 
-- **`git push`**  
-  Actualiza referencias remotas junto con los objetos asociados.
+-   **`git push`**\
+    Actualiza referencias remotas junto con los objetos asociados.
 :::
 
 # Comandos de Git por nivel de dificultad
@@ -244,6 +245,7 @@ git push origin main
 # Pull
 git pull origin main
 ```
+
 ## Nivel intermedio
 
 ### Branching (Ramificación)
@@ -553,6 +555,10 @@ git push origin gh-pages
 ```
 
 ------------------------------------------------------------------------
+
+## Otros temas
+
+-   [**Working with Jupyter Notebook files on GitHub**](https://docs.github.com/en/repositories/working-with-files/using-files/working-with-non-code-files#working-with-jupyter-notebook-files-on-github)
 
 ## Videos tutoriales recomendados
 

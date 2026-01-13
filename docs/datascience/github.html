@@ -577,6 +577,12 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../datascience/markdown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Markdown</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../datascience/github.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Github</span></a>
   </div>
@@ -698,12 +704,14 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   <ul class="collapse">
   <li><a href="#recursos-de-ayuda" id="toc-recursos-de-ayuda" class="nav-link" data-scroll-target="#recursos-de-ayuda">Recursos de ayuda</a></li>
   <li><a href="#definiciones" id="toc-definiciones" class="nav-link" data-scroll-target="#definiciones">Definiciones</a></li>
+  <li><a href="#repositorios" id="toc-repositorios" class="nav-link" data-scroll-target="#repositorios">Repositorios</a></li>
   <li><a href="#comandos-comunes-de-git-usados-en-distintas-situaciones" id="toc-comandos-comunes-de-git-usados-en-distintas-situaciones" class="nav-link" data-scroll-target="#comandos-comunes-de-git-usados-en-distintas-situaciones">Comandos comunes de Git usados en distintas situaciones</a></li>
   </ul></li>
   <li><a href="#comandos-de-git-por-nivel-de-dificultad" id="toc-comandos-de-git-por-nivel-de-dificultad" class="nav-link" data-scroll-target="#comandos-de-git-por-nivel-de-dificultad">Comandos de Git por nivel de dificultad</a>
   <ul class="collapse">
   <li><a href="#nivel-básico" id="toc-nivel-básico" class="nav-link" data-scroll-target="#nivel-básico">Nivel básico</a></li>
   <li><a href="#nivel-intermedio" id="toc-nivel-intermedio" class="nav-link" data-scroll-target="#nivel-intermedio">Nivel intermedio</a></li>
+  <li><a href="#otros-temas" id="toc-otros-temas" class="nav-link" data-scroll-target="#otros-temas">Otros temas</a></li>
   <li><a href="#videos-tutoriales-recomendados" id="toc-videos-tutoriales-recomendados" class="nav-link" data-scroll-target="#videos-tutoriales-recomendados">Videos tutoriales recomendados</a></li>
   <li><a href="#proyectos-destacados-en-github" id="toc-proyectos-destacados-en-github" class="nav-link" data-scroll-target="#proyectos-destacados-en-github">Proyectos destacados en GitHub</a></li>
   <li><a href="#github-copilot" id="toc-github-copilot" class="nav-link" data-scroll-target="#github-copilot">GitHub Copilot</a></li>
@@ -787,27 +795,35 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 </section>
 <section id="definiciones" class="level2">
 <h2 class="anchored" data-anchor-id="definiciones">Definiciones</h2>
-<p>Fuente (<a href="https://intellipaat.com/blog/tutorial/devops-tutorial/git-cheat-sheet/#key_terminologies_in_git"><em>link</em></a>)</p>
-<ul>
-<li><p><strong>Repositorio local</strong>: Es un directorio local que contiene los archivos de código del proyecto.</p></li>
-<li><p><strong>Repositorio remoto</strong>: Es una versión en línea del repositorio local alojada en servicios como GitHub, GitLab y BitBucket.</p></li>
-<li><p><strong>Clonación</strong>: Es la acción de crear un clon o copia de un repositorio en un nuevo directorio.</p></li>
-<li><p><strong>Confirmación (Commit)</strong>: Es una instantánea de los cambios del proyecto en preparación.</p>
+<p>Puede encontrar un glosario oficial <a href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#branch">aquí</a>.</p>
+</section>
+<section id="repositorios" class="level2">
+<h2 class="anchored" data-anchor-id="repositorios">Repositorios</h2>
+<p><strong>¿Qué es un repositorio?</strong> Un <a href="https://docs.github.com/get-started/quickstart/github-glossary#repository"><em>repositorio</em></a> es un proyecto que contiene archivos y carpetas. Un repositorio registra las versiones de archivos y carpetas. Para más información, consulta “<a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories">Acerca de los repositorios</a>” en la documentación de GitHub.</p>
+<p><strong>Repositorio local</strong>: Es un directorio local que contiene los archivos de código del proyecto.</p>
+<p><strong>Repositorio remoto</strong>: Es una versión en línea del repositorio local alojada en servicios como GitHub, GitLab y BitBucket.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*E4povWZ5H-K3OaguFQJ0IQ.png" class="img-fluid figure-img" width="600"></p>
+<figcaption><a href="https://medium.com/mindorks/what-is-git-commit-push-pull-log-aliases-fetch-config-clone-56bc52a3601c">Medium</a>. What is git commit, push, pull, log, aliases, fetch, config &amp; clone.</figcaption>
+</figure>
+</div>
+<p><strong>Clonación (clone)</strong>: Es la acción de crear un clon o copia de un repositorio en un nuevo directorio sea local o en la nube.</p>
+<p><strong>Confirmación (Commit)</strong>: Es una instantánea de los cambios del proyecto en preparación.</p>
 <ul>
 <li>Guarda los cambios realizados en los archivos del proyecto.</li>
 <li>Incluye un mensaje descriptivo que explica qué cambios se hicieron y por qué</li>
 <li>Tiene un identificador único (hash)</li>
 <li>Registra quién hizo los cambios y cuándo</li>
-</ul></li>
-<li><p><strong>Confirmar y subir/enviar (Commit and push)</strong>: Es el proceso de guardar los cambios locales mediante un commit y luego enviarlos (push) al repositorio remoto para compartirlos con otros colaboradores.</p></li>
-<li><p><strong>Rama (Branch)</strong>: Una rama es una copia del proyecto que se utiliza para trabajar en un entorno aislado sin afectar al proyecto principal.</p></li>
-<li><p><strong>Fusión en Git (Git merge)</strong>: El proceso de combinar dos ramas en Git.</p></li>
-<li><p><strong>Archivo .gitignore</strong>: Es un archivo que especifica los archivos no rastreados intencionalmente que Git debe ignorar.</p></li>
-<li><p><strong>Área de preparación</strong>: Una caché que contiene los cambios que se incluirán en la próxima confirmación.</p></li>
-<li><p><strong>Almacenamiento temporal de Git</strong>: Otro tipo de caché que contiene cambios no deseados a los que quizás quieras volver más adelante.</p></li>
-<li><p><strong>ID de confirmación o hash</strong>: Un identificador único para cada confirmación, que se utiliza para cambiar a diferentes puntos de guardado.</p></li>
-<li><p><strong>HEAD</strong> (siempre en mayúsculas): un nombre de referencia para la última confirmación, para evitar que tenga que escribir los identificadores de las confirmaciones.</p></li>
 </ul>
+<p><strong>Confirmar y subir/enviar (Commit and push)</strong>: Es el proceso de guardar los cambios locales mediante un commit y luego enviarlos (push) al repositorio remoto para compartirlos con otros colaboradores o publicarlos como página web.</p>
+<p><strong>Rama (Branch)</strong>: Una <a href="https://docs.github.com/en/get-started/quickstart/github-glossary#branch"><em>rama</em></a> es una versión paralela de tu repositorio. Por defecto, tu repositorio tiene una rama con nombre <code>main</code>, que se considera la rama definitiva. Crear ramas adicionales te permite copiar la <code>main</code>rama de tu repositorio y realizar cambios de forma segura sin interrumpir el proyecto principal. Muchas personas usan ramas para trabajar en funciones específicas sin afectar a otras partes del proyecto. Los cambios (commits) deben aprobarse por el administrador del repositorio o del proyecto a través de un <strong>pull request</strong>.</p>
+<p><strong>Fusión en Git (Git merge)</strong>: El proceso de combinar dos ramas en Git.</p>
+<p><strong>Archivo .gitignore</strong>: Es un archivo que especifica los archivos no rastreados intencionalmente que Git debe ignorar.</p>
+<p><strong>Área de preparación</strong>: Una caché que contiene los cambios que se incluirán en la próxima confirmación.</p>
+<p><strong>Almacenamiento temporal de Git</strong>: Otro tipo de caché que contiene cambios no deseados a los que quizás quieras volver más adelante.</p>
+<p><strong>ID de confirmación o hash</strong>: Un identificador único para cada confirmación, que se utiliza para cambiar a diferentes puntos de guardado.</p>
+<p><strong>HEAD</strong> (siempre en mayúsculas): un nombre de referencia para la última confirmación, para evitar que tenga que escribir los identificadores de las confirmaciones.</p>
 </section>
 <section id="comandos-comunes-de-git-usados-en-distintas-situaciones" class="level2">
 <h2 class="anchored" data-anchor-id="comandos-comunes-de-git-usados-en-distintas-situaciones">Comandos comunes de Git usados en distintas situaciones</h2>
@@ -1227,6 +1243,12 @@ build/
 <span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Configurar en Settings → Pages</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
+</section>
+<section id="otros-temas" class="level2">
+<h2 class="anchored" data-anchor-id="otros-temas">Otros temas</h2>
+<ul>
+<li><a href="https://docs.github.com/en/repositories/working-with-files/using-files/working-with-non-code-files#working-with-jupyter-notebook-files-on-github"><strong>Working with Jupyter Notebook files on GitHub</strong></a></li>
+</ul>
 </section>
 <section id="videos-tutoriales-recomendados" class="level2">
 <h2 class="anchored" data-anchor-id="videos-tutoriales-recomendados">Videos tutoriales recomendados</h2>
