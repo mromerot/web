@@ -147,9 +147,15 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 
 
 <meta property="og:title" content="Github – Inicio">
+<meta property="og:image" content="https://mromerot.github.io/web/datascience/images/git-commands.png">
 <meta property="og:site_name" content="Inicio">
+<meta property="og:image:height" content="1166">
+<meta property="og:image:width" content="1194">
 <meta name="twitter:title" content="Github – Inicio">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mromerot.github.io/web/datascience/images/git-commands.png">
+<meta name="twitter:image-height" content="1166">
+<meta name="twitter:image-width" content="1194">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -688,6 +694,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   <li><a href="#github" id="toc-github" class="nav-link active" data-scroll-target="#github">Github</a>
   <ul class="collapse">
   <li><a href="#qué-es-github" id="toc-qué-es-github" class="nav-link" data-scroll-target="#qué-es-github">Qué es Github</a></li>
+  <li><a href="#key-terminologies-in-git" id="toc-key-terminologies-in-git" class="nav-link" data-scroll-target="#key-terminologies-in-git"><strong>Key Terminologies in Git</strong></a></li>
   <li><a href="#introduction-to-github" id="toc-introduction-to-github" class="nav-link" data-scroll-target="#introduction-to-github"><strong>Introduction to GitHub</strong></a></li>
   <li><a href="#recursos-de-ayuda" id="toc-recursos-de-ayuda" class="nav-link" data-scroll-target="#recursos-de-ayuda">Recursos de ayuda</a></li>
   <li><a href="#comandos-básicos-de-git" id="toc-comandos-básicos-de-git" class="nav-link" data-scroll-target="#comandos-básicos-de-git">Comandos básicos de Git</a></li>
@@ -724,10 +731,35 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 
 <section id="github" class="level1">
 <h1>Github</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/git-commands.png" class="img-fluid figure-img"></p>
+<figcaption>Git Commands</figcaption>
+</figure>
+</div>
 <section id="qué-es-github" class="level2">
 <h2 class="anchored" data-anchor-id="qué-es-github">Qué es Github</h2>
+<p>Github es una plataforma de desarrollo colaborativo y un sistema de control de versiones de proyectos y sus archivos.</p>
 <p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/r8jQ9hVA2qs" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> A brief introduction to Git for beginners | GitHub<p></p>
 <p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/dkqWcbe2Ks4" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> Banco Interamericano de Desarollo Code4Dev: ¿Cómo optimizar tu repositorio de código abierto con Git y GitHub?<p></p>
+</section>
+<section id="key-terminologies-in-git" class="level2">
+<h2 class="anchored" data-anchor-id="key-terminologies-in-git"><strong>Key Terminologies in Git</strong></h2>
+<p>: A cache that holds changes that will go into your next commit. Git stash: Another type of cache that holds unwanted changes you may want to return to later. Commit ID or hash: A unique identifier for each commit, used for switching to different save points. HEAD (always capitalized letters): A reference name for the latest commit, to save you from having to type commit IDs.</p>
+<p>Terminología clave en Git</p>
+<ul>
+<li><p><strong>Repositorio local</strong>: Es un directorio local que contiene los archivos de código del proyecto.</p></li>
+<li><p><strong>Repositorio remoto</strong>: Es una versión en línea del repositorio local alojada en servicios como GitHub, GitLab y BitBucket.</p></li>
+<li><p><strong>Clonación</strong>: Es la acción de crear un clon o copia de un repositorio en un nuevo directorio.</p></li>
+<li><p><strong>Confirmación (Commit)</strong>: Es una instantánea de los cambios del proyecto en preparación.</p></li>
+<li><p><strong>Rama (Branch)</strong>: Una rama es una copia del proyecto que se utiliza para trabajar en un entorno aislado sin afectar al proyecto principal.</p></li>
+<li><p><strong>Fusión en Git (Git merge)</strong>: El proceso de combinar dos ramas en Git.</p></li>
+<li><p><strong>Archivo .gitignore</strong>: Es un archivo que especifica los archivos no rastreados intencionalmente que Git debe ignorar.</p></li>
+<li><p><strong>Área de preparación</strong>: Una caché que contiene los cambios que se incluirán en la próxima confirmación.</p></li>
+<li><p><strong>Almacenamiento temporal de Git</strong>: Otro tipo de caché que contiene cambios no deseados a los que quizás quieras volver más adelante.</p></li>
+<li><p><strong>ID de confirmación o hash</strong>: Un identificador único para cada confirmación, que se utiliza para cambiar a diferentes puntos de guardado.</p></li>
+<li><p><strong>HEAD</strong> (siempre en mayúsculas): un nombre de referencia para la última confirmación, para evitar que tenga que escribir los identificadores de las confirmaciones.</p></li>
+</ul>
 </section>
 <section id="introduction-to-github" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-to-github"><strong>Introduction to GitHub</strong></h2>

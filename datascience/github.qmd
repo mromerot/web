@@ -6,11 +6,43 @@ editor: visual
 
 # Github
 
+![Git Commands](images/git-commands.png)
+
 ## Qué es Github
+
+Github es una plataforma de desarrollo colaborativo y un sistema de control de versiones de proyectos y sus archivos.
 
 {{< video "https://youtu.be/r8jQ9hVA2qs">}} A brief introduction to Git for beginners \| GitHub
 
 {{< video "https://youtu.be/dkqWcbe2Ks4" >}} Banco Interamericano de Desarollo Code4Dev: ¿Cómo optimizar tu repositorio de código abierto con Git y GitHub?
+
+## **Key Terminologies in Git**
+
+: A cache that holds changes that will go into your next commit. Git stash: Another type of cache that holds unwanted changes you may want to return to later. Commit ID or hash: A unique identifier for each commit, used for switching to different save points. HEAD (always capitalized letters): A reference name for the latest commit, to save you from having to type commit IDs.
+
+Terminología clave en Git
+
+-   **Repositorio local**: Es un directorio local que contiene los archivos de código del proyecto.
+
+-   **Repositorio remoto**: Es una versión en línea del repositorio local alojada en servicios como GitHub, GitLab y BitBucket.
+
+-   **Clonación**: Es la acción de crear un clon o copia de un repositorio en un nuevo directorio.
+
+-   **Confirmación (Commit)**: Es una instantánea de los cambios del proyecto en preparación.
+
+-   **Rama (Branch)**: Una rama es una copia del proyecto que se utiliza para trabajar en un entorno aislado sin afectar al proyecto principal.
+
+-   **Fusión en Git (Git merge)**: El proceso de combinar dos ramas en Git.
+
+-   **Archivo .gitignore**: Es un archivo que especifica los archivos no rastreados intencionalmente que Git debe ignorar.
+
+-   **Área de preparación**: Una caché que contiene los cambios que se incluirán en la próxima confirmación.
+
+-   **Almacenamiento temporal de Git**: Otro tipo de caché que contiene cambios no deseados a los que quizás quieras volver más adelante.
+
+-   **ID de confirmación o hash**: Un identificador único para cada confirmación, que se utiliza para cambiar a diferentes puntos de guardado.
+
+-   **HEAD** (siempre en mayúsculas): un nombre de referencia para la última confirmación, para evitar que tenga que escribir los identificadores de las confirmaciones.
 
 ## **Introduction to GitHub**
 

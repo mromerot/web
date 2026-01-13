@@ -35,6 +35,7 @@ Revise el tutorial por extenso aquí: [*link*](https://mystmd.org/guide/quicksta
 -   Agregar contenido: Crear más archivos .md o notebooks .ipynb
 -   Configurar: Editar `myst.yml` para personalizar título, descripción, etc. 4. Estructura: Crear subcarpetas y organizar tu contenido
 -   Estructura: Crear subcarpetas y organizar tu contenido
+-   `Clean MyST cache` para limpiar memoria chaché cuando no cargan los archivos
 :::
 
 ::: callout-note
