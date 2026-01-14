@@ -14,7 +14,7 @@ Github es una plataforma de desarrollo colaborativo y un sistema de control de v
 
 El sistema de control de versiones es una herramienta que rastrea cada modificación en el código, creando un historial completo del proyecto. Se tiene la posibilidad de volver atrás a versiones preliminares.
 
-**Git** (sistema de control, Git) difiere de **GitHub** y la plataforma (GitHub) en aspectos como:
+**Git** (sistema de control, Git) difiere de la plataforma (GitHub) en aspectos como:
 
 -   **Git**
     -   Sistema de control de versiones distribuido (software)
@@ -94,7 +94,7 @@ Puede encontrar un glosario oficial [aquí](https://docs.github.com/en/get-start
 
 **Rama (Branch)**: Una [*rama*](https://docs.github.com/en/get-started/quickstart/github-glossary#branch) es una versión paralela de tu repositorio. Por defecto, tu repositorio tiene una rama con nombre `main`, que se considera la rama definitiva. Crear ramas adicionales te permite copiar la `main`rama de tu repositorio y realizar cambios de forma segura sin interrumpir el proyecto principal. Muchas personas usan ramas para trabajar en funciones específicas sin afectar a otras partes del proyecto. Los cambios (commits) deben aprobarse por el administrador del repositorio o del proyecto a través de un **pull request**.
 
--   [Las solicitudes de cambios ](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)son propuestas para combinar los cambios de código en un proyecto. Una "**pull request**" es la característica de colaboración fundamental de GitHub, que le permite discutir y revisar los cambios antes de fusionarlos. Esto ayuda a los equipos a trabajar juntos, detectar problemas al principio y mantener la calidad del código.
+-   [Las solicitudes de cambios](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)son propuestas para combinar los cambios de código en un proyecto. Una "**pull request**" es la característica de colaboración fundamental de GitHub, que le permite discutir y revisar los cambios antes de fusionarlos. Esto ayuda a los equipos a trabajar juntos, detectar problemas al principio y mantener la calidad del código.
 
 -   **Fusión en Git (Git merge)**: El proceso de combinar dos ramas en Git. Una [*fusión*](https://docs.github.com/en/get-started/quickstart/github-glossary#merge) añade los cambios de la solicitud de extracción y la rama a la `main`rama. Para más información sobre las fusiones, consulta " [Fusionar una solicitud de extracción](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) ".
 
