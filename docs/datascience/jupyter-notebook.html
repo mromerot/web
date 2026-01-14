@@ -707,7 +707,8 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
     <h2 id="toc-title">Contenidos</h2>
    
   <ul class="collapse">
-  <li><a href="#visualización-del-fenómeno-de-el-niño" id="toc-visualización-del-fenómeno-de-el-niño" class="nav-link active" data-scroll-target="#visualización-del-fenómeno-de-el-niño">Visualización del Fenómeno de El Niño</a></li>
+  <li><a href="#cuadernos-jupyter-en-quarto" id="toc-cuadernos-jupyter-en-quarto" class="nav-link active" data-scroll-target="#cuadernos-jupyter-en-quarto">Cuadernos Jupyter en quarto</a></li>
+  <li><a href="#visualización-del-fenómeno-de-el-niño" id="toc-visualización-del-fenómeno-de-el-niño" class="nav-link" data-scroll-target="#visualización-del-fenómeno-de-el-niño">Visualización del Fenómeno de El Niño</a></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -745,9 +746,20 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 </header>
 
 
-<p>Los cuadernos Jupyter pueden renderizarse en un entorno de Quarto utilizando en VS Code la extensión “Colab”, además desde Colab en la web o el entorno Jupyter lab localmente. Una descripción del uso de cuadernos Jupyter en Quarto se encuentra en la siguiente <a href="https://quarto.org/docs/authoring/jupyter.html">página</a>.</p>
-<section id="visualización-del-fenómeno-de-el-niño" class="level2">
-<h2 class="anchored" data-anchor-id="visualización-del-fenómeno-de-el-niño">Visualización del Fenómeno de El Niño</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://colab.research.google.com/github/mromerot/web/blob/main/datascience/jupyter-notebook.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<figcaption>Open In Colab</figcaption>
+</figure>
+</div>
+<section id="cuadernos-jupyter-en-quarto" class="level1">
+<h1>Cuadernos Jupyter en quarto</h1>
+<p>Los cuadernos Jupyter pueden renderizarse en un entorno de Quarto utilizando en VS Code la extensión “Colab”, además desde Colab en la web o el entorno Jupyter lab localmente.</p>
+<p>Una descripción del uso de cuadernos Jupyter en Quarto se encuentra en la siguiente <a href="https://quarto.org/docs/authoring/jupyter.html">página</a>.</p>
+<p>A continuación se muestra un ejemplo de un cuaderno Jupyter embebido en este documento Quarto con una gráfica de la intensidad del fenómeno de El Niño.</p>
+</section>
+<section id="visualización-del-fenómeno-de-el-niño" class="level1">
+<h1>Visualización del Fenómeno de El Niño</h1>
 <p>El Índice Oceánico Niño (ONI, por sus siglas en inglés) es el indicador estándar utilizado por NOAA para identificar eventos de El Niño (calentamiento) y La Niña (enfriamiento) en el Océano Pacífico tropical.</p>
 <p><strong>Definición:</strong> - <strong>El Niño</strong>: Cuando el ONI es ≥ +0.5°C por al menos 5 períodos consecutivos de 3 meses - <strong>La Niña</strong>: Cuando el ONI es ≤ -0.5°C por al menos 5 períodos consecutivos de 3 meses</p>
 <p>Los datos se obtienen directamente de la <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php">página del Climate Prediction Center de NOAA</a>.</p>
