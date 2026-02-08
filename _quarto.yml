@@ -157,8 +157,10 @@ website:
             href: datascience/d3.qmd
           - text: "Experimento con D3"
             href: datascience/d3-experiment.qmd
+# Aqui viene la seccion de matematicas y estadistica que debe trabajarse
       - text: "Matemáticas y estadística"
         href: math-stats/math-stats.qmd
+# Aqui viene la seccion de vida laboral y cv
       - section: "Vida laboral"
         contents:
           - text: "Café"
