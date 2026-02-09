@@ -15,10 +15,15 @@ editor: visual
 -   **CLIMAAX CRA Handbook**. [*Link*](https://handbook.climaax.eu/intro.html)*. [Link](https://github.com/CLIMAAX/crabook)*. A regional climate risk assessment is often needed to design or update a climate adaptation and/or risk management plan. Regular updates are needed considering changing climate risk profiles
 -   **Global Facility for Disaster Reduction and Recovery (GFDRR)**. [*Link*](https://github.com/GFDRR). GFDRR supports developing countries on disaster risk reduction and climate change adaptation. 
     -   **CCDR-tools**. [*Link*](https://gfdrr.github.io/CCDR-tools/home.html).
--   Design safe. [*Link*](https://www.designsafe-ci.org/use-designsafe/tools-applications/). [*Link*](https://www.designsafe-ci.org/)*. [Training videos](https://designsafe-ci.org/learning-center/training/). [Jupiter hub](https://jupyter.designsafe-ci.org/hub/login?next=%2Fhub%2F%3F_gl%3D1%2Ai1u2ai%2A_ga%2AMjczNjA1MTcuMTc2Mjg2NjY0OA..%2A_ga_D96RT1T24K%2AczE3NjM4NTI5NzgkbzgkZzEkdDE3NjM4NTMzOTUkajI1JGwwJGgw)*
+-   **Design safe**. [*Link*](https://www.designsafe-ci.org/use-designsafe/tools-applications/). [*Link*](https://www.designsafe-ci.org/)*. [Training videos](https://designsafe-ci.org/learning-center/training/). [Jupiter hub](https://jupyter.designsafe-ci.org/hub/login?next=%2Fhub%2F%3F_gl%3D1%2Ai1u2ai%2A_ga%2AMjczNjA1MTcuMTc2Mjg2NjY0OA..%2A_ga_D96RT1T24K%2AczE3NjM4NTI5NzgkbzgkZzEkdDE3NjM4NTMzOTUkajI1JGwwJGgw)*
     -   Texas Advanced Computing Center. [*Link*](https://tacc.utexas.edu/)
+    -   R2D application. [*Link*](https://simcenter.designsafe-ci.org/research-tools/r2dtool/?_gl=1y2emqu_gaODEwMzIzNzQzLjE3Njk1MTk5MDk._ga_D96RT1T24K*czE3NzA2MDE3NTQkbzMkZzEkdDE3NzA2MDE4NDgkajMyJGwwJGgw)
+        -   Examples. [*Link*](https://nheri-simcenter.github.io/R2D-Documentation/common/user_manual/examples/desktop/examples.html) *\*\*\**
+    -   User Guide. [*Link*](https://www.designsafe-ci.org/user-guide/tools/jupyterhub/#examples-of-jupyter-notebooks-available-via-designsafe)
 
-{{< video "https://youtu.be/KwDvcdB-bng width = 400">}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_aUuCGiZhys?si=ilb6vrDttozIP7xy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
 
 ------------------------------------------------------------------------
 
@@ -67,4 +72,6 @@ editor: visual
 
     -   Risk Data Fellows. [*Link*](https://riskdatalibrary.org/fellows/)*.*
 
-{{< video "https://youtu.be/J3yfu6A-Clc" width = 350 >}} How data is saving lives in Colombia \| UNDRR
+\<iframe width="560" height="315" src="https://www.youtube.com/embed/J3yfu6A-Clc?si=Cg-tWBqb4nxAlPqv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen\>\</iframe\>
+
+How data is saving lives in Colombia \| UNDRR
