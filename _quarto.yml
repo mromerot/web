@@ -157,6 +157,10 @@ website:
             href: datascience/d3.qmd
           - text: "Experimento con D3"
             href: datascience/d3-experiment.qmd
+          - text: "Claude"
+            href: datascience/claude.qmd
+          - text: "Claude Skills (Slides)"
+            href: datascience/claude-slides.qmd
 # Aqui viene la seccion de matematicas y estadistica que debe trabajarse
       - text: "Matemáticas y estadística"
         href: math-stats/math-stats.qmd

@@ -1,0 +1,678 @@
+---
+title: "Guia completa para construir Skills para Claude"
+format: revealjs
+editor: visual
+---
+
+## Contenidos
+
+-   Introduccion
+-   Fundamentos
+-   Planificacion y diseno
+-   Pruebas e iteracion
+-   Distribucion y publicacion
+-   Patrones y solucion de problemas
+-   Recursos y referencias
+
+------------------------------------------------------------------------
+
+## Introduccion
+
+Un **skill** es un conjunto de instrucciones - empaquetado como una carpeta simple - que ensena a Claude como manejar tareas o flujos de trabajo especificos.
+
+Los skills son una de las formas mas poderosas de personalizar Claude para tus necesidades. En lugar de volver a explicar tus preferencias, procesos y conocimiento de dominio en cada conversacion, los skills te permiten ensenarle a Claude una vez y beneficiarte siempre.
+
+------------------------------------------------------------------------
+
+## Los skills son poderosos cuando...
+
+-   Generan disenos frontend a partir de especificaciones
+-   Realizan investigacion con metodologia consistente
+-   Crean documentos que siguen la guia de estilo de tu equipo
+-   Orquestan procesos de multiples pasos
+-   Mejoran integraciones MCP con guia de flujos de trabajo
+
+------------------------------------------------------------------------
+
+## Lo que aprenderas
+
+-   Requisitos tecnicos y mejores practicas para la estructura de skills
+-   Patrones para skills independientes y flujos mejorados con MCP
+-   Patrones que hemos visto funcionar bien en diferentes casos de uso
+-   Como probar, iterar y distribuir tus skills
+
+------------------------------------------------------------------------
+
+## Para quien es esto
+
+-   **Desarrolladores** que quieren que Claude siga flujos de trabajo especificos de manera consistente
+-   **Usuarios avanzados** que quieren que Claude siga flujos de trabajo especificos
+-   **Equipos** que buscan estandarizar como Claude trabaja en su organizacion
+
+------------------------------------------------------------------------
+
+## Dos caminos en esta guia
+
+-   **Construyendo skills independientes?** Enfocate en Fundamentos, Planificacion y Diseno, y categoria 1-2.
+-   **Mejorando una integracion MCP?** La seccion "Skills + MCP" y la categoria 3 son para ti.
+
+Ambos caminos comparten los mismos requisitos tecnicos.
+
+------------------------------------------------------------------------
+
+# Capitulo 1 {background-color="#7a8a5c"}
+
+## Fundamentos
+
+------------------------------------------------------------------------
+
+## Que es un skill?
+
+Un skill es una carpeta que contiene:
+
+-   **SKILL.md** (requerido): Instrucciones en Markdown con frontmatter YAML
+-   **scripts/** (opcional): Codigo ejecutable (Python, Bash, etc.)
+-   **references/** (opcional): Documentacion cargada segun necesidad
+-   **assets/** (opcional): Plantillas, fuentes, iconos usados en la salida
+
+------------------------------------------------------------------------
+
+## Principios de diseno fundamentales
+
+### Divulgacion progresiva
+
+Los skills usan un sistema de tres niveles:
+
+-   **Primer nivel (frontmatter YAML):** Siempre cargado en el prompt de sistema de Claude.
+-   **Segundo nivel (cuerpo de SKILL.md):** Cargado cuando Claude considera que el skill es relevante.
+-   **Tercer nivel (archivos enlazados):** Archivos adicionales que Claude puede descubrir segun necesidad.
+
+Esto minimiza el uso de tokens manteniendo la experiencia especializada.
+
+------------------------------------------------------------------------
+
+## Composabilidad y portabilidad
+
+### Composabilidad
+
+Claude puede cargar multiples skills simultaneamente. Tu skill debe funcionar bien junto a otros.
+
+### Portabilidad
+
+Los skills funcionan de forma identica en Claude.ai, Claude Code y la API. Crea un skill una vez y funciona en todas las superficies sin modificacion.
+
+------------------------------------------------------------------------
+
+## Skills + Conectores MCP
+
+**La analogia de la cocina:**
+
+-   **MCP proporciona la cocina profesional:** acceso a herramientas, ingredientes y equipamiento.
+-   **Los skills proporcionan las recetas:** instrucciones paso a paso sobre como crear algo valioso.
+
+Juntos, permiten a los usuarios realizar tareas complejas sin necesidad de descifrar cada paso por si mismos.
+
+------------------------------------------------------------------------
+
+## MCP vs Skills
+
+| MCP (Conectividad) | Skills (Conocimiento) |
+|------------------------------------|------------------------------------|
+| Conecta Claude a tu servicio | Ensena a Claude como usar tu servicio efectivamente |
+| Proporciona acceso a datos en tiempo real e invocacion de herramientas | Captura flujos de trabajo y mejores practicas |
+| Lo que Claude **puede** hacer | Como Claude **deberia** hacerlo |
+
+------------------------------------------------------------------------
+
+## Por que esto importa para usuarios de MCP
+
+**Sin skills:**
+
+-   Los usuarios conectan tu MCP pero no saben que hacer despues
+-   Cada conversacion empieza desde cero
+-   Resultados inconsistentes
+
+**Con skills:**
+
+-   Flujos de trabajo preconstruidos se activan automaticamente
+-   Uso de herramientas consistente y confiable
+-   Mejores practicas integradas en cada interaccion
+
+------------------------------------------------------------------------
+
+# Capitulo 2 {background-color="#c07a8a"}
+
+## Planificacion y diseno
+
+------------------------------------------------------------------------
+
+## Comienza con casos de uso
+
+Antes de escribir cualquier codigo, identifica 2-3 casos de uso concretos que tu skill deberia habilitar.
+
+```
+Caso de uso: Planificacion de sprint de proyecto
+Disparador: El usuario dice "ayudame a planificar este sprint"
+Pasos:
+1. Obtener estado actual del proyecto de Linear (via MCP)
+2. Analizar velocidad y capacidad del equipo
+3. Sugerir priorizacion de tareas
+4. Crear tareas en Linear con etiquetas apropiadas
+Resultado: Sprint completamente planificado con tareas creadas
+```
+
+------------------------------------------------------------------------
+
+## Preguntate
+
+-   Que quiere lograr el usuario?
+-   Que flujos de trabajo de multiples pasos requiere esto?
+-   Que herramientas se necesitan (integradas o MCP?)
+-   Que conocimiento de dominio o mejores practicas deben incorporarse?
+
+------------------------------------------------------------------------
+
+## Categoria 1: Creacion de documentos y activos
+
+Creacion de resultados consistentes y de alta calidad incluyendo documentos, presentaciones, aplicaciones, disenos, codigo, etc.
+
+**Tecnicas clave:**
+
+-   Guias de estilo y estandares de marca incorporados
+-   Estructuras de plantilla para resultados consistentes
+-   Listas de verificacion de calidad antes de finalizar
+-   No requiere herramientas externas - usa las capacidades integradas de Claude
+
+------------------------------------------------------------------------
+
+## Categoria 2: Automatizacion de flujos de trabajo
+
+Procesos de multiples pasos que se benefician de una metodologia consistente.
+
+**Tecnicas clave:**
+
+-   Flujo de trabajo paso a paso con puertas de validacion
+-   Plantillas para estructuras comunes
+-   Sugerencias integradas de revision y mejora
+-   Ciclos de refinamiento iterativo
+
+------------------------------------------------------------------------
+
+## Categoria 3: Mejora de MCP
+
+Guia de flujo de trabajo para mejorar el acceso a herramientas que proporciona un servidor MCP.
+
+**Tecnicas clave:**
+
+-   Coordina multiples llamadas MCP en secuencia
+-   Incorpora experiencia de dominio
+-   Proporciona contexto que los usuarios de otro modo necesitarian especificar
+-   Manejo de errores para problemas comunes de MCP
+
+------------------------------------------------------------------------
+
+## Definir criterios de exito
+
+### Metricas cuantitativas:
+
+-   El skill se activa en el 90% de las consultas relevantes
+-   Completa el flujo de trabajo en X llamadas de herramientas
+-   0 llamadas API fallidas por flujo de trabajo
+
+### Metricas cualitativas:
+
+-   Los usuarios no necesitan indicarle a Claude los siguientes pasos
+-   Los flujos de trabajo se completan sin correccion del usuario
+-   Resultados consistentes entre sesiones
+
+------------------------------------------------------------------------
+
+## Requisitos tecnicos: Estructura de archivos
+
+```
+nombre-de-tu-skill/
+├── SKILL.md           # Requerido
+├── scripts/           # Opcional
+│   ├── process_data.py
+│   └── validate.sh
+├── references/        # Opcional
+│   ├── api-guide.md
+│   └── examples/
+└── assets/            # Opcional
+    └── report-template.md
+```
+
+------------------------------------------------------------------------
+
+## Reglas criticas
+
+**Nombre de SKILL.md:** Debe ser exactamente `SKILL.md` (sensible a mayusculas)
+
+**Nombre de la carpeta del skill:**
+
+-   Usar kebab-case: `notion-project-setup`
+-   Sin espacios, sin guiones bajos, sin mayusculas
+
+**Sin README.md** dentro de la carpeta del skill. Toda la documentacion va en `SKILL.md` o `references/`.
+
+------------------------------------------------------------------------
+
+## Frontmatter YAML
+
+El frontmatter YAML es como Claude decide si cargar tu skill.
+
+``` yaml
+---
+name: nombre-de-tu-skill
+description: Que hace. Usar cuando el usuario pide
+  [frases especificas].
+---
+```
+
+**name:** solo kebab-case, debe coincidir con el nombre de la carpeta
+
+**description:** Debe incluir QUE + CUANDO, menos de 1024 caracteres
+
+------------------------------------------------------------------------
+
+## Campos YAML opcionales
+
+-   **license:** MIT, Apache-2.0, etc.
+-   **compatibility:** Requisitos del entorno (1-500 caracteres)
+-   **metadata:** Pares clave-valor personalizados (author, version, mcp-server)
+
+### Restricciones de seguridad:
+
+-   Sin corchetes angulares XML en el frontmatter
+-   Skills con "claude" o "anthropic" en el nombre estan reservados
+
+------------------------------------------------------------------------
+
+## Escribir descripciones efectivas
+
+**Estructura:** `[Que hace]` + `[Cuando usarlo]` + `[Capacidades clave]`
+
+**Bueno:**
+
+```
+description: Gestiona flujos de trabajo de proyectos en Linear
+  incluyendo planificacion de sprint, creacion de tareas y
+  seguimiento de estado. Usar cuando el usuario mencione
+  "sprint", "tareas de Linear" o pida "crear tickets".
+```
+
+**Malo:**
+
+```
+description: Ayuda con proyectos.
+```
+
+------------------------------------------------------------------------
+
+## Escribir las instrucciones principales
+
+Estructura recomendada despues del frontmatter:
+
+1.  **Instrucciones** - Paso a paso con explicaciones claras
+2.  **Ejemplos** - Escenarios comunes con acciones y resultados esperados
+3.  **Solucion de problemas** - Errores comunes, causas y soluciones
+
+------------------------------------------------------------------------
+
+## Mejores practicas para instrucciones
+
+**Se especifico y accionable:**
+
+```
+Ejecuta `python scripts/validate.py --input {filename}`
+para verificar el formato de datos.
+Si la validacion falla, los problemas comunes incluyen:
+- Campos requeridos faltantes (agregarlos al CSV)
+- Formatos de fecha invalidos (usar YYYY-MM-DD)
+```
+
+**Incluye manejo de errores** y **referencia claramente los recursos incluidos.**
+
+Usa **divulgacion progresiva**: Mantiene SKILL.md enfocado; mueve detalles a `references/`.
+
+------------------------------------------------------------------------
+
+# Capitulo 3 {background-color="#9a8abd"}
+
+## Pruebas e iteracion
+
+------------------------------------------------------------------------
+
+## Enfoques de pruebas
+
+-   **Pruebas manuales en Claude.ai** - Ejecutar consultas directamente y observar el comportamiento
+-   **Pruebas con scripts en Claude Code** - Automatizar casos de prueba para validacion repetible
+-   **Pruebas programaticas via API de skills** - Construir suites de evaluacion
+
+**Consejo:** Itera en una sola tarea desafiante hasta que Claude tenga exito, luego extrae el enfoque ganador en un skill.
+
+------------------------------------------------------------------------
+
+## 1. Pruebas de activacion
+
+**Objetivo:** Asegurar que tu skill se carga en los momentos correctos.
+
+**Deberia activarse:**
+
+-   "Ayudame a configurar un nuevo espacio de trabajo en ProjectHub"
+-   "Necesito crear un proyecto en ProjectHub"
+
+**NO deberia activarse:**
+
+-   "Como esta el clima en San Francisco?"
+-   "Ayudame a escribir codigo Python"
+
+------------------------------------------------------------------------
+
+## 2. Pruebas funcionales
+
+**Objetivo:** Verificar que el skill produce resultados correctos.
+
+```
+Prueba: Crear proyecto con 5 tareas
+Dado: Nombre del proyecto "Planificacion Q4", 5 descripciones de tareas
+Cuando: El skill ejecuta el flujo de trabajo
+Entonces:
+  - Proyecto creado en ProjectHub
+  - 5 tareas creadas con propiedades correctas
+  - Todas las tareas vinculadas al proyecto
+  - Sin errores de API
+```
+
+------------------------------------------------------------------------
+
+## 3. Comparacion de rendimiento
+
+|                      | Sin skill                          | Con skill                    |
+|----------------------|------------------------------------|------------------------------|
+| Instrucciones        | El usuario las proporciona cada vez | Flujo de trabajo automatico |
+| Mensajes             | 15 ida y vuelta                    | 2 preguntas de clarificacion |
+| Llamadas API fallidas | 3 requiriendo reintento           | 0                            |
+| Tokens consumidos    | 12,000                             | 6,000                        |
+
+------------------------------------------------------------------------
+
+## Uso del skill skill-creator
+
+El skill `skill-creator` puede ayudarte a:
+
+-   **Crear:** Generar skills a partir de descripciones en lenguaje natural
+-   **Revisar:** Senalar problemas comunes, identificar riesgos de activacion
+-   **Iterar:** Traer casos limite de vuelta para mejorar
+
+```
+"Usa el skill skill-creator para ayudarme a construir
+un skill para [tu caso de uso]"
+```
+
+------------------------------------------------------------------------
+
+## Iteracion basada en retroalimentacion
+
+**Sub-activacion:** Agrega mas detalle y palabras clave a la descripcion
+
+**Sobre-activacion:** Agrega disparadores negativos, se mas especifico
+
+**Problemas de ejecucion:** Mejora las instrucciones, agrega manejo de errores
+
+Los skills son documentos vivos. Planifica iterar.
+
+------------------------------------------------------------------------
+
+# Capitulo 4 {background-color="#7a9ebd"}
+
+## Distribucion y publicacion
+
+------------------------------------------------------------------------
+
+## Modelo de distribucion actual (enero 2026)
+
+**Usuarios individuales:**
+
+1.  Descargar la carpeta del skill
+2.  Comprimir la carpeta (si es necesario)
+3.  Subir a Claude.ai via Configuracion \> Capacidades \> Skills
+4.  O colocar en el directorio de skills de Claude Code
+
+**Nivel organizacional:** Los administradores pueden desplegar skills en todo el espacio de trabajo con actualizaciones automaticas y gestion centralizada.
+
+------------------------------------------------------------------------
+
+## Un estandar abierto
+
+Agent Skills se publica como un **estandar abierto**. Como MCP, los skills deben ser portables entre herramientas y plataformas - el mismo skill deberia funcionar ya sea que uses Claude u otras plataformas de IA.
+
+------------------------------------------------------------------------
+
+## Uso de skills via API
+
+| Caso de uso                                      | Mejor superficie        |
+|--------------------------------------------------|-------------------------|
+| Usuarios finales interactuando directamente       | Claude.ai / Claude Code |
+| Pruebas manuales e iteracion                      | Claude.ai / Claude Code |
+| Aplicaciones usando skills programaticamente      | API                     |
+| Despliegues en produccion a escala                | API                     |
+| Pipelines automatizados y sistemas de agentes     | API                     |
+
+------------------------------------------------------------------------
+
+## Enfoque recomendado hoy
+
+1.  **Alojar en GitHub** - Repositorio publico, README claro, ejemplos de uso
+2.  **Documentar en tu repositorio MCP** - Enlazar skills desde la documentacion MCP
+3.  **Crear una guia de instalacion** - Instrucciones paso a paso
+
+------------------------------------------------------------------------
+
+## Posicionar tu skill
+
+**Enfocate en resultados, no en caracteristicas:**
+
+**Bueno:** "El skill de ProjectHub permite a los equipos configurar espacios de trabajo completos en segundos en lugar de gastar 30 minutos en configuracion manual."
+
+**Malo:** "El skill de ProjectHub es una carpeta que contiene frontmatter YAML e instrucciones en Markdown que llama a las herramientas de nuestro servidor MCP."
+
+------------------------------------------------------------------------
+
+# Capitulo 5 {background-color="#b5c9b5"}
+
+## Patrones y solucion de problemas
+
+------------------------------------------------------------------------
+
+## Eligiendo tu enfoque
+
+-   **Enfoque en el problema:** "Necesito configurar un espacio de trabajo" - Tu skill orquesta las llamadas MCP correctas en la secuencia correcta.
+-   **Enfoque en la herramienta:** "Tengo Notion MCP conectado" - Tu skill ensena a Claude los flujos de trabajo optimos y mejores practicas.
+
+La mayoria de los skills se inclinan hacia una direccion.
+
+------------------------------------------------------------------------
+
+## Patron 1: Orquestacion secuencial de flujo de trabajo
+
+**Usar cuando:** Procesos de multiples pasos en un orden especifico.
+
+```
+## Flujo: Incorporar nuevo cliente
+### Paso 1: Crear cuenta
+### Paso 2: Configurar pago
+### Paso 3: Crear suscripcion
+### Paso 4: Enviar correo de bienvenida
+```
+
+**Clave:** Orden explicito de pasos, dependencias, validacion en cada etapa, instrucciones de reversion.
+
+------------------------------------------------------------------------
+
+## Patron 2: Coordinacion multi-MCP
+
+**Usar cuando:** Los flujos de trabajo abarcan multiples servicios.
+
+```
+Fase 1: Exportacion de diseno (Figma MCP)
+Fase 2: Almacenamiento de activos (Drive MCP)
+Fase 3: Creacion de tareas (Linear MCP)
+Fase 4: Notificacion (Slack MCP)
+```
+
+**Clave:** Separacion clara de fases, paso de datos entre MCPs, validacion antes de la siguiente fase.
+
+------------------------------------------------------------------------
+
+## Patron 3: Refinamiento iterativo
+
+**Usar cuando:** La calidad del resultado mejora con la iteracion.
+
+1.  **Borrador inicial** - Obtener datos, generar primer borrador
+2.  **Verificacion de calidad** - Ejecutar script de validacion
+3.  **Ciclo de refinamiento** - Abordar problemas, regenerar, revalidar
+4.  **Finalizacion** - Aplicar formato, guardar version final
+
+**Clave:** Criterios de calidad explicitos, scripts de validacion, saber cuando detenerse.
+
+------------------------------------------------------------------------
+
+## Patron 4: Seleccion de herramientas segun contexto
+
+**Usar cuando:** Mismo resultado, diferentes herramientas segun el contexto.
+
+-   Archivos grandes (\>10MB): MCP de almacenamiento en la nube
+-   Documentos colaborativos: MCP de Notion/Docs
+-   Archivos de codigo: MCP de GitHub
+-   Archivos temporales: Almacenamiento local
+
+**Clave:** Criterios de decision claros, opciones de respaldo, transparencia sobre las elecciones.
+
+------------------------------------------------------------------------
+
+## Patron 5: Inteligencia especifica de dominio
+
+**Usar cuando:** Tu skill agrega conocimiento especializado mas alla del acceso a herramientas.
+
+1.  **Antes del procesamiento** - Verificaciones de cumplimiento, listas de sanciones, evaluacion de riesgo
+2.  **Procesamiento** - Ejecutar si cumple, marcar para revision si no
+3.  **Pista de auditoria** - Registrar todas las verificaciones, registrar decisiones, generar informe
+
+**Clave:** Experiencia de dominio en la logica, cumplimiento antes de la accion, documentacion exhaustiva.
+
+------------------------------------------------------------------------
+
+## Solucion de problemas: El skill no se sube
+
+-   **"No se encontro SKILL.md"**: Renombrar exactamente a `SKILL.md` (sensible a mayusculas)
+-   **"Frontmatter invalido"**: Verificar delimitadores YAML `---` y formato de comillas
+-   **"Nombre de skill invalido"**: Usar kebab-case, sin espacios ni mayusculas
+
+------------------------------------------------------------------------
+
+## Solucion de problemas: Problemas de activacion
+
+**El skill no se activa:**
+
+-   Es la descripcion demasiado generica?
+-   Incluye frases de activacion que los usuarios realmente dirian?
+-   Depuracion: Pregunta a Claude "Cuando usarias el skill \[nombre del skill\]?"
+
+**El skill se activa demasiado:**
+
+-   Agregar disparadores negativos
+-   Ser mas especifico en la descripcion
+-   Clarificar el alcance
+
+------------------------------------------------------------------------
+
+## Solucion de problemas: Instrucciones no seguidas
+
+1.  **Instrucciones demasiado extensas** - Mantener concisas, usar puntos
+2.  **Instrucciones enterradas** - Colocar las criticas arriba
+3.  **Lenguaje ambiguo** - Ser especifico con encabezados CRITICO
+4.  **"Pereza" del modelo** - Agregar aliento explicito en los prompts del usuario
+
+**Avanzado:** Incluir scripts de validacion para verificaciones deterministicas.
+
+------------------------------------------------------------------------
+
+## Problemas de contexto grande
+
+**Causas:** Contenido del skill demasiado grande, demasiados skills habilitados simultaneamente
+
+**Soluciones:**
+
+-   Mantener SKILL.md bajo 5,000 palabras
+-   Mover documentacion detallada a `references/`
+-   Evaluar si tienes 20-50+ skills habilitados simultaneamente
+-   Considerar "paquetes" de skills para capacidades relacionadas
+
+------------------------------------------------------------------------
+
+# Capitulo 6 {background-color="#c9b9a0"}
+
+## Recursos y referencias
+
+------------------------------------------------------------------------
+
+## Documentacion oficial
+
+**Recursos de Anthropic:**
+
+-   Guia de mejores practicas
+-   Documentacion de Skills
+-   Referencia de API
+-   Documentacion de MCP
+
+**Herramientas:**
+
+-   Skill `skill-creator` (integrado en Claude.ai y disponible para Claude Code)
+-   GitHub: anthropics/skills (repositorio publico de skills)
+
+------------------------------------------------------------------------
+
+## Ejemplos completos de skills
+
+-   **Document Skills** - Creacion de PDF, DOCX, PPTX, XLSX
+-   **Example Skills** - Varios patrones de flujos de trabajo
+-   **Partner Skills Directory** - Asana, Atlassian, Canva, Figma, Sentry, Zapier y mas
+
+------------------------------------------------------------------------
+
+## Lista de verificacion rapida
+
+**Antes de empezar:** Identificar casos de uso, identificar herramientas, revisar la guia, planificar estructura de carpetas
+
+**Durante el desarrollo:** Carpeta en kebab-case, SKILL.md existe, frontmatter YAML valido, descripcion incluye QUE y CUANDO
+
+**Antes de subir:** Probar activacion, pruebas funcionales pasan, comprimido como .zip
+
+**Despues de subir:** Probar en conversaciones reales, monitorear activacion, recopilar retroalimentacion, iterar
+
+------------------------------------------------------------------------
+
+## Referencia de frontmatter YAML
+
+``` yaml
+---
+name: nombre-del-skill
+description: [descripcion requerida]
+license: MIT
+allowed-tools: "Bash(python:*) WebFetch"
+metadata:
+  author: Nombre de la empresa
+  version: 1.0.0
+  mcp-server: nombre-del-servidor
+  category: productividad
+---
+```
+
+------------------------------------------------------------------------
+
+## Gracias {background-color="#c87c5b"}
+
+### Guia completa para construir Skills para Claude
+
+claude.ai

@@ -377,11 +377,12 @@ El **Gasto Doméstico Bruto en Investigación y Desarrollo (GERD)** como porcent
 -   Algunos países pueden tener metodologías ligeramente diferentes en la recopilación de datos
 
 ------------------------------------------------------------------------
+
 # Objetos en observable
 
 ## Diagrama de radar
 
-``` {ojs}
+```{ojs}
 // Datos: 30 indicadores con su valor (aquí puse valores ficticios que puedes reemplazar)
 data = [
   {axis: "1. Evaluación comunitaria", value: 1.2},
