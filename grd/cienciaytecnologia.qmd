@@ -4,11 +4,7 @@ format: html
 editor: visual
 ---
 
-```{=html}
-<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1BfeFThS1e%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-```
-
-## Science and Technology
+## Ciencia y Tecnología
 
 -   UNDRR. [*Link*](https://www.undrr.org/implementing-sendai-framework-partners-and-stakeholders/science-and-technology-action-group).
 -   GFDRR Innovation. [*Link*](https://www.gfdrr.org/en/innovation)
@@ -48,27 +44,16 @@ SCIENCE PLAN 2030+ DISASTER RISK REDUCTION DCNA
 ## **Lecturas**
 
 -   Exploring the emerging evolution trends of disaster risk reduction research: a global scenario. *International Journal of Environmental Science and Technology,* 2021. [*Link*](https://link.springer.com/article/10.1007/s13762-020-02847-1).
-
 -   Knowledge and Disaster Risk Reduction. *The Routledge Handbook of Hazards and Disaster Risk Reduction*. 2011. [*Link*](https://www.routledgehandbooks.com/doi/10.4324/9780203844236.ch9)
-
 -   Perspectives of Science and Technology in Disaster RiskReduction of Asia. 2016. International Journal of Disaster Risk Science. [*Link*](https://doi.org/10.1007/s13753-016-0104-7).
-
 -   Three innovative approaches for managing disaster risks. [*Link*](https://blogs.worldbank.org/sustainablecities/three-innovative-approaches-managing-disaster-risks).
-
 -   2021 APRU Multi-Hazards Webinar Series: Health, Climate Change and Innovation in Disaster Risk Reduction. [*Link*](https://apru.org/event/2021-apru-multi-hazards-webinar-series-health-climate-change-and-innovation-in-disaster-risk-reduction/), [*link*](https://apru.org/wp-content/uploads/2021/10/MH-webinar_oct-2021.pdf).
-
 -   ADB and OECD. 2020. Leveraging Technology and Innovation for Disaster Risk Management and Financing. [*Link*](https://www.adb.org/sites/default/files/publication/664501/tech-innovation-disaster-risk-mgt-financing.pdf)
-
 -   Success, innovation and challenge: School safety and disaster education in South America and the Caribbean, 2020. [*Link*](https://www.sciencedirect.com/science/article/abs/pii/S2212420919305813).
-
 -   IRDR Compilation 2010-2020: A Ten Year Science Quest for Disaster Risk Reduction. [*Link*](https://www.irdrinternational.org/knowledge_pool/publications/868)
-
 -   The Integrated Research on Disaster Risk 2021 International Conference. [*Link.*](https://conference.irdrinternational.org/)
-
 -   A framework for global science in support of risk-informed sustainable development and planetary health. 2021. [*Link*](https://www.undrr.org/publication/framework-global-science-support-risk-informed-sustainable-development-and-planetary).
-
 -   Disaster Risk Science: A Geographical Perspective and a Research Framework. 2020. [*Link*](https://link.springer.com/article/10.1007/s13753-020-00296-5)
-
 -   Building a global forum for natural hazard science. NPJ. 2025. [*Link*](https://www.nature.com/articles/s44304-025-00130-2)
 
 ## **Videos**
@@ -91,7 +76,9 @@ SCIENCE PLAN 2030+ DISASTER RISK REDUCTION DCNA
 
 -   Artificial intelligence for climate prediction of extremes: State of the art, challenges, and future perspectives. 2025. [*Link*](https://wires.onlinelibrary.wiley.com/doi/10.1002/wcc.914).
 
-- Masterclass series: Leveraging artificial intelligence for disaster risk reduction. Link
+-   Masterclass series: Leveraging artificial intelligence for disaster risk reduction. *Link*
+
+-   UNDRR. Artificial intelligence (AI) for disaster risk reduction. Collection. [*Link*](https://www.preventionweb.net/collections/artificial-intelligence-ai-disaster-risk-reduction)
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/hLlrKZN8h5k">}} Introduction to Artificial Intelligence (AI)
@@ -114,7 +101,6 @@ SCIENCE PLAN 2030+ DISASTER RISK REDUCTION DCNA
 :::
 
 -   ESRI Geospatial AI platform. [*Link*](https://architecture.arcgis.com/en/overview/introduction-to-arcgis/geospatial-ai.html)
-
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/C1iMxjOeQZc">}} GeoAI and GenAI in ArcGIS \| 2025 Esri UAE User Conference
@@ -298,6 +284,7 @@ SCIENCE PLAN 2030+ DISASTER RISK REDUCTION DCNA
 
     -   Annual Natural Hazards Workshop. [*Link*](https://hazards.colorado.edu/workshop).
     -   ICGNH 2020: 14. International Conference on Geography and Natural Hazards. [*Link*](https://waset.org/geography-and-natural-hazards-conference-in-april-2020-in-boston).
+    -   Hacking the heat: How data innovations can help cities face a rising threat. [*Link*](https://blogs.worldbank.org/en/opendata/hacking-the-heat--how-data-innovations-can-help-cities-face-a-ri)*. [Github Link](https://github.com/GFDRR/ICUC12-Hackathon-UrbanHeat)*
 
 -   **Riesgos y salud pública**
 

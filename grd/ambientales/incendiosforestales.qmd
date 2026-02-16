@@ -57,7 +57,17 @@ Amenaza por incendios forestales
 
 {{< video "https://youtu.be/OS-0GYDniqM" >}}
 
-Evaluación del riesgo por incendios forestales.
+{{< video "https://youtu.be/mU8Wsvh3TVI" >}} Turning data into resilience: ML approach to wildfire risk assessment
+
+{{< video "https://youtu.be/vE7QVqsD1GU" >}} CLIMAAX \| CoP \| Wildfire Risk Assessment: Learning from Regions
+:::
+
+::: {.callout-important appearance="minimal"}
+## Cuadernos reproducibles
+
+## 🔥 Probability of Fire Jupyter Book, ECMWF. [*Link*](https://ecmwf.github.io/AI-Probability-of-Fire/) 
+
+![](https://ecmwf.github.io/AI-Probability-of-Fire/build/PoF-light-5588beea6278b73afbd5578b3c5327d3.png){fig-align="center" width="252"}
 :::
 
 ## Comunicación del riesgo por incendios forestales
