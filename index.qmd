@@ -23,6 +23,9 @@ about: # https://quarto.org/docs/websites/website-about.html
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/mauricio-romero-torres-1b33b95/
+    - icon: github
+      text: GitHub
+      href: https://github.com/mromerot
     - icon: mortarboard
       text: Google Scholar
       href: https://scholar.google.com/citations?user=n484vskAAAAJ
