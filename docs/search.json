@@ -2792,7 +2792,7 @@
     "href": "grd/extraterrestre/index.html#amenazas-extraterrestres",
     "title": "Riesgo por amenazas extraterrestres",
     "section": "Amenazas Extraterrestres",
-    "text": "Amenazas Extraterrestres\n2 grupos de peligros y 10 peligros específicos\n\n\n\nPeligro específicoOrdenar ascendentemente\nIdentificador\nGrupo\n\n\n\n\nRadiación ultravioleta\nET0202\nExtraterrestre\n\n\nPeligro espacial/Accidente\nET0204\nExtraterrestre\n\n\ndesechos espaciales\nET0206\nExtraterrestre\n\n\nErupciones solares\nET0103\nClima espacial\n\n\nPartículas energéticas solares\nET0104\nClima espacial\n\n\nObjeto cercano a la Tierra\nET0205\nExtraterrestre\n\n\nImpacto de meteorito\nET0203\nExtraterrestre\n\n\nPerturbaciones ionosféricas\nET0102\nClima espacial\n\n\nPerturbación geomagnética\nET0101\nClima espacial\n\n\nExplosión en el aire\nET0201\nExtraterrestre",
+    "text": "Amenazas Extraterrestres\n2 grupos de peligros y 10 peligros específicos\n\n\n\nPeligro específicoOrdenar ascendentemente\nIdentificador\nGrupo\n\n\n\n\nExplosión en el aire\nET0201\nExtraterrestre\n\n\nRadiación ultravioleta\nET0202\nExtraterrestre\n\n\nImpacto de meteorito\nET0203\nExtraterrestre\n\n\nPeligro espacial/Accidente\nET0204\nExtraterrestre\n\n\nObjeto cercano a la Tierra\nET0205\nExtraterrestre\n\n\ndesechos espaciales\nET0206\nExtraterrestre\n\n\nPerturbación geomagnética\nET0101\nClima espacial\n\n\nPerturbaciones ionosféricas\nET0102\nClima espacial\n\n\nErupciones solares\nET0103\nClima espacial\n\n\nPartículas energéticas solares\nET0104\nClima espacial",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas extraterrestres"
