@@ -182,8 +182,11 @@ website:
 
 format:
   html:
-    font-size: 11pt
-    theme: [cosmo, styles.scss]
+    mainfont: Roboto
+    monofont: Fira Code
+    highlight-style: arrow
+    monobackgroundcolor: "#F7F7F7"
+    theme: [lumen, styles.scss]
     toc: true
     toc-depth: 2
     toc-title: "Contenidos"

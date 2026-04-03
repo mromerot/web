@@ -1,19 +1,70 @@
 /*-- scss:defaults --*/
 
-// Import Roboto font from Google Fonts
+// Import fonts from Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
-// Sass Variables
-// https://quarto.org/docs/output-formats/html-themes.html#sass-variables
+// ── Color palette (ALA cleaning_data theme) ──────────────────────────────────
+$primary:    #003A70 !default;   // dark blue
+$link-color: #003A70;
 
-/* Colors */
-$body-bg: #FFFFFF;
+// Sidebar highlight
+$sidebar-hl: #E54D23 !default;   // orange-red
+
+// Table of contents
+$toc-color:             #000;
+$toc-active-border:     #003A70;
+$toc-active-background: #EEECEA !default;
+
+// Body
+$body-bg:    #FFFFFF;
 $body-color: rgb(55, 58, 60);
-$link-color: rgb(39, 128, 227);
 
-/* Sidebar */
-$sidebar-bg: #E9F7EF;
+// Sidebar background (kept from original)
+$sidebar-bg: #f5f5f5;
 
-/* Fonts */
-$font-family-sans-serif: "Roboto", -apple-system, "system-ui", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+// ── Typography ────────────────────────────────────────────────────────────────
+$font-family-sans-serif: "Roboto", -apple-system, "system-ui", "Segoe UI",
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+$font-family-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
 $font-size-root: 15px;
+
+/*-- scss:rules --*/
+
+// ── Sidebar ───────────────────────────────────────────────────────────────────
+.sidebar-title {
+  color: #222322;
+}
+
+div.sidebar-item-container .active {
+  font-weight: bold;
+  color: #003A70 !important;
+}
+
+.sidebar-navigation a:hover {
+  color: #E54D23 !important;
+}
+
+// ── Table of contents ─────────────────────────────────────────────────────────
+.sidebar nav[role=doc-toc] ul > li > a.active,
+.sidebar nav[role=doc-toc] ul > li > ul > li > a.active {
+  font-weight: bold;
+}
+
+// ── Navbar active tab ─────────────────────────────────────────────────────────
+.nav-link.active {
+  background-color: #efc078 !important;
+}
+
+// ── Code blocks ───────────────────────────────────────────────────────────────
+pre.sourceCode {
+  background-color: #F7F7F7;
+}
+
+// ── Footnotes ─────────────────────────────────────────────────────────────────
+.footnotes {
+  font-size: 0.9rem;
+  color: var(--bs-gray-700);
+}
