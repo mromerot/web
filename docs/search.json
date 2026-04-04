@@ -2527,11 +2527,11 @@
     ]
   },
   {
-    "objectID": "grd/geologicas/riesgosismico.html#evaluación-del-riesgo-por-amenaza-sísmica",
-    "href": "grd/geologicas/riesgosismico.html#evaluación-del-riesgo-por-amenaza-sísmica",
+    "objectID": "grd/geologicas/riesgosismico.html#evaluación-del-riesgo-sísmico",
+    "href": "grd/geologicas/riesgosismico.html#evaluación-del-riesgo-sísmico",
     "title": "Riesgo sísmico",
-    "section": "Evaluación del riesgo por amenaza sísmica",
-    "text": "Evaluación del riesgo por amenaza sísmica\n\nWhy is Probabilistic Seismic Hazard Analysis (PSHA) still used?. 2017. Link\n\n\n\n\n Earthquake hazard and risk assessment (Webinar)\n\n\n Earthquake Risk Assessment: Current Challenges & Future Trends",
+    "section": "Evaluación del riesgo sísmico",
+    "text": "Evaluación del riesgo sísmico\n\nWhy is Probabilistic Seismic Hazard Analysis (PSHA) still used?. 2017. Link\n\n\n\n\n Earthquake hazard and risk assessment (Webinar)\n\n\n Earthquake Risk Assessment: Current Challenges & Future Trends\n\n\n\n\n Improving Our Understanding of Cascadia Earthquake Risk through Integrated Simulation",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas geológicas",
@@ -2835,7 +2835,7 @@
   {
     "objectID": "grd/ciudades.html",
     "href": "grd/ciudades.html",
-    "title": "Ciudades",
+    "title": "Riesgo de desastres en ciudades",
     "section": "",
     "text": "Deep learning enables city-wide climate projections of street-level heat stress. Urban Climate 2025. Link",
     "crumbs": [
@@ -2846,7 +2846,7 @@
   {
     "objectID": "grd/ciudades.html#estrés-térmico",
     "href": "grd/ciudades.html#estrés-térmico",
-    "title": "Ciudades",
+    "title": "Riesgo de desastres en ciudades",
     "section": "",
     "text": "Deep learning enables city-wide climate projections of street-level heat stress. Urban Climate 2025. Link",
     "crumbs": [
@@ -2857,9 +2857,9 @@
   {
     "objectID": "grd/ciudades.html#cartografia",
     "href": "grd/ciudades.html#cartografia",
-    "title": "Ciudades",
+    "title": "Riesgo de desastres en ciudades",
     "section": "Cartografia",
-    "text": "Cartografia\n\nGlobalBuildingAtlas: An Open Global and Complete Dataset of Building Polygons, Heights and LoD1 3D Models. 2025. Link\nThe World’s 2.75B Buildings. Link",
+    "text": "Cartografia\n\nGlobalBuildingAtlas: An Open Global and Complete Dataset of Building Polygons, Heights and LoD1 3D Models. 2025. Link\nThe World’s 2.75B Buildings. Link\n\n\n\n\n\n\n\n\n\n MARCAdapt: Urban Climate Risks in Hungary",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Ciudades"

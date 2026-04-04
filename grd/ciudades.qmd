@@ -1,5 +1,5 @@
 ---
-title: "Ciudades"
+title: "Riesgo de desastres en ciudades"
 format: html
 editor: visual
 ---
@@ -16,3 +16,7 @@ editor: visual
 -   The World's 2.75B Buildings. *Link*
 
 ![](https://tech.marksblogg.com/theme/images/gba/qgis-bin_6Y0A3doBbl.jpg){fig-align="center" width="300"}
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/rmZevuIUY4w" >}} MARCAdapt: Urban Climate Risks in Hungary
+:::
