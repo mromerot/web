@@ -2023,7 +2023,18 @@
     "href": "cyt/cienciareproduc.html#quarto",
     "title": "Ciencia reproducible",
     "section": "Quarto",
-    "text": "Quarto\n\nWhat is Quarto. Link.\nQuarto Guide. Link.***\nSlides. Reproducible Publications w/ Python and Quarto. Tom Mock. Link\nResources nrennie. Link.\nPosit workshops. Link.\nIsabella Velasquez. Link\nQuartificate is to transform Google Docs into Quarto books. Link.\nAwsome Quarto. The most up to date curated list of Quarto® docs, talks, tools, examples & articles the internet has to offer. Link\nReproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link\n\n Reproducible Manuscripts with Quarto - posit::conf(2023)\nGet started with Quarto | Mine Çetinkaya-Rundel\n Publishing a Quarto website through GitHub Pages (updated)\nBioC 2022 - Hello, Quarto!\nWelcome to Quarto Workshop! | Led by Tom Mock, RStudio\n Introducing Positron, a new data science IDE - posit conf 2024\n Quarto blogs\n Quarto books\n Citaciones\nVideos sobre Quarto pub",
+    "text": "Quarto\n\nWhat is Quarto. Link.\nQuarto Guide. Link.***\nSlides. Reproducible Publications w/ Python and Quarto. Tom Mock. Link\nResources nrennie. Link.\nPosit workshops. Link.\nIsabella Velasquez. Link\nQuartificate is to transform Google Docs into Quarto books. Link.\nAwsome Quarto. The most up to date curated list of Quarto® docs, talks, tools, examples & articles the internet has to offer. Link\nReproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link\n\n\n\n\n Reproducible Manuscripts with Quarto - posit::conf(2023)\n\n\nGet started with Quarto | Mine Çetinkaya-Rundel\n\n\n\n\n Publishing a Quarto website through GitHub Pages (updated)\n\n\nBioC 2022 - Hello, Quarto!\n\n\n\n\nWelcome to Quarto Workshop! | Led by Tom Mock, RStudio\n\n\n Introducing Positron, a new data science IDE - posit conf 2024\n\n\n\n\n Quarto blogs\n\n\n Quarto books\n\n\n\n\n Citaciones",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Ciencia reproducible"
+    ]
+  },
+  {
+    "objectID": "cyt/cienciareproduc.html#typst",
+    "href": "cyt/cienciareproduc.html#typst",
+    "title": "Ciencia reproducible",
+    "section": "Typst",
+    "text": "Typst\n\nTypst web page. Link.\nTypst with quarto. Link\n\n\n\n\n What is Typst? | A new markup-based typesetting system\n\n\n Typst: La Herramienta Definitiva para Documentos Modernos\n\n\n\n\n How to Make High Quality PDFs with Quarto and Typst\n\n\n Typst: A New Markup-Based Typesetting System | Posit Conf 2024",
     "crumbs": [
       "Ciencia y tecnología",
       "Ciencia reproducible"

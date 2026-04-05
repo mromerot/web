@@ -41,6 +41,7 @@ Un plan de gestión de datos (DMP) es un documento que describe cómo tratará s
 -   Awsome Quarto. The most up to date curated list of [Quarto®](https://quarto.org/) docs, talks, tools, examples & articles the internet has to offer. [*Link*](https://github.com/mcanouil/awesome-quarto)
 -   Reproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. [*Link*](https://mine-cetinkaya-rundel.github.io/quarto-books-conf24/#/title-slide)
 
+::: {layout-ncol="2"}
 {{< video "https://youtu.be/BoiW9UWDLY0" >}} Reproducible Manuscripts with Quarto - posit::conf(2023)
 
 {{< video "https://www.youtube.com/watch?v=_f3latmOhew" >}}Get started with Quarto \| Mine Çetinkaya-Rundel
@@ -58,8 +59,24 @@ Un plan de gestión de datos (DMP) es un documento que describe cómo tratará s
 {{< video "https://www.youtube.com/watch?v=fsfoqpQYN2k" >}} Quarto books
 
 {{< video "https://youtu.be/iOmMjcciKRA" >}} Citaciones
+:::
 
-Videos sobre Quarto pub
+## Typst
+
+-   Typst web page. [*Link*](https://typst.app/home).
+-   Typst with quarto. [*Link*](https://quarto.org/docs/blog/posts/2026-03-31-typst-books-and-more/)
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/NTGkb4FCLhM" >}} What is Typst? \| A new markup-based typesetting system
+
+{{< video "https://youtu.be/JIbr1CwGvco" >}} Typst: La Herramienta Definitiva para Documentos Modernos
+
+{{< video "https://youtu.be/NTGkb4FCLhM" >}} How to Make High Quality PDFs with Quarto and Typst
+
+{{< video "https://youtu.be/craiBTTCeWk" >}} Typst: A New Markup-Based Typesetting System \| Posit Conf 2024
+
+{{< video "https://youtu.be/idgZjnDIS1s" >}}
+:::
 
 ## Myst and Curvenote
 
