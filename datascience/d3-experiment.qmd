@@ -949,4 +949,114 @@ fig.update_layout(
 fig.show()
 ```
 
+## Cifras de emergencias reportadas por el departamento durante 1938-2024
+
+```{python}
+#| label: fig-cordoba-eventos
+#| fig-cap: "Tipo de Evento - Departamento de Córdoba (1938–2024)"
+#| warning: false
+#| message: false
+
+import io
+import warnings
+import pandas as pd
+import requests
+import plotly.graph_objects as go
+
+# Leer datos desde Google Sheets (SSL deshabilitado por cert local)
+sheet_id = "19G1PVPCOeF0LOJ-cqxa_7mk9LycuaJa2a12-HNLqmIo"
+url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore")
+    resp = requests.get(url, verify=False, timeout=30)
+df = pd.read_csv(io.StringIO(resp.text), low_memory=False)
+
+# Parsear fecha y filtrar Córdoba 1938-2024
+df["FECHA"] = pd.to_datetime(df["FECHA"], dayfirst=True, errors="coerce")
+df["AÑO"]   = df["FECHA"].dt.year
+
+cordoba = df[
+    df["DEPARTAMENTO"].str.upper().str.strip()
+      .str.contains("CÓRDOBA|CORDOBA", na=False) &
+    df["AÑO"].between(1938, 2024)
+].copy()
+
+# Conteo y agrupación (top 9 + Otros)
+counts = cordoba["EVENTO"].value_counts()
+total  = counts.sum()
+top    = counts.head(9)
+otros  = counts.iloc[9:].sum()
+if otros > 0:
+    top = pd.concat([top, pd.Series({"Otros": otros})])
+
+labels = top.index.tolist()
+values = top.values.tolist()
+
+# Paleta de colores
+color_map = {
+    "INUNDACIÓN":                "#4472C4",
+    "INCENDIO FORESTAL":         "#2CA8AA",
+    "VENDAVAL":                  "#E36C09",
+    "INCENDIO":                  "#F79646",
+    "SEQUÍA":                    "#FF8C7A",
+    "DESLIZAMIENTO":             "#FF1493",
+    "AVENIDA TORRENCIAL":        "#7030A0",
+    "DESABASTECIMIENTO DE AGUA": "#9E80B4",
+    "LLUVIAS":                   "#FFC000",
+    "Otros":                     "#D99694",
+}
+default_colors = [
+    "#4472C4","#2CA8AA","#E36C09","#F79646","#FF8C7A",
+    "#FF1493","#7030A0","#9E80B4","#FFC000","#D99694",
+]
+colors = [
+    color_map.get(lbl, default_colors[i % len(default_colors)])
+    for i, lbl in enumerate(labels)
+]
+
+# Texto interior (porcentaje con coma decimal, solo si ≥ 4%)
+pcts        = [v / total * 100 for v in values]
+text_inside = [
+    f"{p:.1f}%".replace(".", ",") if p >= 4 else ""
+    for p in pcts
+]
+
+# Gráfica
+fig = go.Figure(data=[go.Pie(
+    labels=labels,
+    values=values,
+    text=text_inside,
+    textinfo="text",
+    textposition="inside",
+    insidetextorientation="radial",
+    textfont=dict(size=13, color="white"),
+    marker=dict(colors=colors, line=dict(color="white", width=1.5)),
+    hovertemplate=(
+        "<b>%{label}</b><br>"
+        "Eventos: %{value:,}<br>"
+        "Porcentaje: %{percent}<extra></extra>"
+    ),
+)])
+
+fig.update_layout(
+    title=dict(
+        text=f"<b>Tipo de Evento — Córdoba (1938–2024)</b><br>"
+             f"<sup>Total: {total:,} eventos</sup>",
+        x=0.42, xanchor="center",
+        font=dict(size=16, family="Arial"),
+    ),
+    legend=dict(
+        orientation="v", xanchor="left",
+        x=1.01, y=0.5, yanchor="middle",
+        font=dict(size=11, family="Arial"),
+    ),
+    width=860, height=560,
+    margin=dict(t=90, b=40, l=20, r=260),
+    paper_bgcolor="white",
+)
+
+fig.show()
+```
+
+
 *Documento generado con [Quarto](https://quarto.org/) y [Observable JS](https://observablehq.com/)*
