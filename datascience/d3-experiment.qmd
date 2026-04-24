@@ -676,3 +676,85 @@ Plot.plot({
 ```
 
 *Documento generado con [Quarto](https://quarto.org/) y [Observable JS](https://observablehq.com/)*
+
+Proyecciones de población regional para el periodo 2018-2050 y proyecciones y retroproyecciones de población departamental para el periodo 1985-2017 y 2018-2050 con base en el CNPV 2018
+
+## Pirámide por departamento
+
+```{ojs}
+//| label: carga-datos-dep
+datos_dep_raw = FileAttachment("data/piramide_dep.json").json()
+```
+
+```{ojs}
+departamentos_lista = [...new Set(datos_dep_raw.map(d => d.d))].sort()
+
+viewof depto_sel = Inputs.select(departamentos_lista, {
+  label: "Departamento:",
+  value: "Antioquia"
+})
+```
+
+```{ojs}
+viewof año_dep = Inputs.range([2018, 2050], {
+  label: "Año:",
+  step: 1,
+  value: 2024
+})
+```
+
+```{ojs}
+viewof area_dep = Inputs.select(["Total", "Cabecera Municipal", "Centros Poblados y Rural Disperso"], {
+  label: "Área geográfica:"
+})
+```
+
+```{ojs}
+orden_dep = ["0 - 4","5 - 9","10 - 14","15 - 19","20 - 24","25 - 29",
+             "30 - 34","35 - 39","40 - 44","45 - 49","50 - 54","55 - 59",
+             "60 - 64","65 - 69","70 - 74","75 - 79","80 +"]
+
+datos_dep_fil = datos_dep_raw
+  .filter(d => d.d === depto_sel && d.a === año_dep && d.ar === area_dep)
+  .sort((a, b) => a.o - b.o)
+
+total_dep = datos_dep_fil.length > 0 ? datos_dep_fil[0].t : 0
+```
+
+```{ojs}
+Plot.plot({
+  width: 560,
+  height: 480,
+  marginLeft: 70,
+  marginRight: 10,
+  marginBottom: 60,
+  style: { fontSize: "12px" },
+  x: {
+    tickFormat: d => `${Math.abs(d).toFixed(1)}`,
+    label: `Población en ${año_dep} (%)  (Total: ${total_dep.toLocaleString('de-DE')})`,
+    labelOffset: 50,
+    domain: [-5, 5],
+    grid: true
+  },
+  y: {
+    label: "Rangos de edad",
+    domain: orden_dep
+  },
+  color: {
+    domain: ["Hombres", "Mujeres"],
+    range: ["#87CEEB", "#FFE066"],
+    legend: true
+  },
+  marks: [
+    Plot.barX(
+      datos_dep_fil.flatMap(d => [
+        { grupo: d.g, sexo: "Hombres", pct: -(d.h / total_dep) * 100 },
+        { grupo: d.g, sexo: "Mujeres", pct:  (d.m / total_dep) * 100 }
+      ]),
+      { x: "pct", y: "grupo", fill: "sexo", tip: true }
+    ),
+    Plot.ruleX([0], { stroke: "#555", strokeWidth: 1.2 })
+  ]
+})
+```
+
