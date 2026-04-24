@@ -691,7 +691,7 @@ departamentos_lista = [...new Set(datos_dep_raw.map(d => d.d))].sort()
 
 viewof depto_sel = Inputs.select(departamentos_lista, {
   label: "Departamento:",
-  value: "Antioquia"
+  value: "Córdoba"
 })
 ```
 
@@ -825,7 +825,7 @@ orden_grupos = [
 
 departamentos = sorted(df["depto"].unique())
 años = sorted(df["año"].unique())
-init_dept = "Antioquia"
+init_dept = "Córdoba"
 init_idx  = departamentos.index(init_dept)
 init_year = años[0]
 
