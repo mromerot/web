@@ -799,3 +799,153 @@ Plot.plot({
 })
 ```
 
+Piramide en Plotly
+
+```{python}
+#| label: piramide-plotly
+#| echo: false
+
+import plotly.graph_objects as go
+import pandas as pd
+import json
+
+with open("data/piramide_dep.json", encoding="utf-8") as f:
+    raw = json.load(f)
+
+df = pd.DataFrame(raw)
+df.columns = ["depto", "año", "area", "grupo", "orden", "h", "m", "total_pob"]
+df = df[df["area"] == "Total"].copy()
+df["año"] = df["año"].astype(int)
+
+orden_grupos = [
+    "0 - 4","5 - 9","10 - 14","15 - 19","20 - 24","25 - 29",
+    "30 - 34","35 - 39","40 - 44","45 - 49","50 - 54","55 - 59",
+    "60 - 64","65 - 69","70 - 74","75 - 79","80 +"
+]
+
+departamentos = sorted(df["depto"].unique())
+años = sorted(df["año"].unique())
+init_dept = "Antioquia"
+init_idx  = departamentos.index(init_dept)
+init_year = años[0]
+
+def pct_h_m(depto, año):
+    sub = df[(df["depto"] == depto) & (df["año"] == año)].sort_values("orden")
+    tot = int(sub["total_pob"].iloc[0])
+    ph = [-r / tot * 100 for r in sub["h"]]
+    pm = [ r / tot * 100 for r in sub["m"]]
+    return ph, pm, tot
+
+# --- Trazas: 2 por departamento (66 en total) ---
+traces = []
+for i, depto in enumerate(departamentos):
+    ph, pm, _ = pct_h_m(depto, init_year)
+    vis = (i == init_idx)
+    traces.append(go.Bar(
+        name="Hombres", x=ph, y=orden_grupos, orientation="h",
+        marker_color="#87CEEB", visible=vis,
+        legendgroup="Hombres", showlegend=(i == 0),
+        hovertemplate="%{x:.2f}%<extra>Hombres</extra>"
+    ))
+    traces.append(go.Bar(
+        name="Mujeres", x=pm, y=orden_grupos, orientation="h",
+        marker_color="#FFE066", visible=vis,
+        legendgroup="Mujeres", showlegend=(i == 0),
+        hovertemplate="%{x:.2f}%<extra>Mujeres</extra>"
+    ))
+
+fig = go.Figure(data=traces)
+
+# --- Frames: solo actualiza x (la visibilidad la controla el dropdown) ---
+frames = []
+for año in años:
+    fd = []
+    for depto in departamentos:
+        ph, pm, _ = pct_h_m(depto, año)
+        fd.append(go.Bar(x=ph))
+        fd.append(go.Bar(x=pm))
+    frames.append(go.Frame(
+        data=fd, name=str(año),
+        layout=go.Layout(title_text=f"<b>{init_dept}</b> — {año}")
+    ))
+fig.frames = frames
+
+# --- Slider de año ---
+sliders = [dict(
+    active=0,
+    steps=[dict(
+        method="animate",
+        args=[[str(a)], dict(mode="immediate",
+              frame=dict(duration=600, redraw=True),
+              transition=dict(duration=0))],
+        label=str(a)
+    ) for a in años],
+    x=0.05, y=0.0, len=0.9,
+    pad=dict(t=10, b=10),
+    currentvalue=dict(prefix="Año: ", font=dict(size=14)),
+    transition=dict(duration=0)
+)]
+
+# --- Dropdown de departamentos ---
+dept_buttons = []
+for i, depto in enumerate(departamentos):
+    vis = []
+    for j in range(len(departamentos)):
+        vis += [j == i, j == i]
+    ph0, pm0, tot0 = pct_h_m(depto, init_year)
+    dept_buttons.append(dict(
+        args=[{"visible": vis},
+              {"title": f"<b>{depto}</b> — Año: {init_year}  (Total: {tot0:,})"}],
+        label=depto,
+        method="update"
+    ))
+
+# --- Botones Play / Pausa ---
+play_pause = dict(
+    type="buttons", showactive=False,
+    x=0.05, y=-0.13,
+    buttons=[
+        dict(label="▶  Play", method="animate",
+             args=[None, dict(fromcurrent=True,
+                              frame=dict(duration=600, redraw=True),
+                              transition=dict(duration=0))]),
+        dict(label="⏸  Pausa", method="animate",
+             args=[[None], dict(mode="immediate",
+                                frame=dict(duration=0, redraw=False),
+                                transition=dict(duration=0))])
+    ]
+)
+
+dept_menu = dict(
+    buttons=dept_buttons, direction="down",
+    x=1.02, y=1.0, xanchor="left", yanchor="top",
+    showactive=True, pad=dict(t=5),
+    bgcolor="white", bordercolor="#ccc", borderwidth=1
+)
+
+_, _, tot_init = pct_h_m(init_dept, init_year)
+fig.update_layout(
+    title=f"<b>{init_dept}</b> — Año: {init_year}  (Total: {tot_init:,})",
+    xaxis=dict(
+        title="Población (%)",
+        range=[-5, 5],
+        tickvals=[-4, -3, -2, -1, 0, 1, 2, 3, 4],
+        ticktext=["4","3","2","1","0","1","2","3","4"],
+        showgrid=True, gridcolor="#eee"
+    ),
+    yaxis=dict(
+        title="Rangos de edad",
+        categoryorder="array", categoryarray=orden_grupos
+    ),
+    barmode="overlay",
+    updatemenus=[play_pause, dept_menu],
+    sliders=sliders,
+    legend=dict(x=1.02, y=0.55),
+    height=540,
+    margin=dict(l=80, r=160, b=140, t=60),
+    paper_bgcolor="white", plot_bgcolor="white"
+)
+
+fig.show()
+```
+
