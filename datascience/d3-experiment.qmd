@@ -563,6 +563,8 @@ Inputs.table(paises_filtrados, {
 
 # Distribución de edades en Colombia
 
+## Piramide poblacional en D3
+
 Pirámide poblacional construida con las [Proyecciones de Población DANE 2018-2070](https://www.dane.gov.co/), por área geográfica y año.
 
 ```{python}
@@ -675,11 +677,9 @@ Plot.plot({
 })
 ```
 
-*Documento generado con [Quarto](https://quarto.org/) y [Observable JS](https://observablehq.com/)*
 
-Proyecciones de población regional para el periodo 2018-2050 y proyecciones y retroproyecciones de población departamental para el periodo 1985-2017 y 2018-2050 con base en el CNPV 2018
+## Proyecciones y retroproyecciones de población departamental para el periodo 1985-2017 y 2018-2050 con base en el CNPV 2018
 
-## Pirámide por departamento
 
 ```{ojs}
 //| label: carga-datos-dep
@@ -799,7 +799,7 @@ Plot.plot({
 })
 ```
 
-Piramide en Plotly
+## Piramide poblacional en Plotly
 
 ```{python}
 #| label: piramide-plotly
@@ -949,3 +949,4 @@ fig.update_layout(
 fig.show()
 ```
 
+*Documento generado con [Quarto](https://quarto.org/) y [Observable JS](https://observablehq.com/)*
