@@ -560,4 +560,119 @@ Inputs.table(paises_filtrados, {
 })
 ```
 
+
+# Distribución de edades en Colombia
+
+Pirámide poblacional construida con las [Proyecciones de Población DANE 2018-2070](https://www.dane.gov.co/), por área geográfica y año.
+
+```{python}
+#| label: setup-piramide
+#| echo: false
+#| message: false
+
+import pandas as pd
+
+df = pd.read_excel("../data/PPED-AreaSexoEdadNac-2018-2070.xlsx",
+                   sheet_name="PobNacionalxÁreaSexoEdad",
+                   header=None)
+
+valid = df.iloc[9:].copy()
+valid = valid[pd.to_numeric(valid[1], errors='coerce').notna()].copy()
+valid[1] = valid[1].astype(int)
+
+labels_grupos = [f'{s} - {s+4}' for s in range(0, 80, 5)] + ['80 +']
+
+records = []
+for _, row in valid.iterrows():
+    territory = str(row[0])
+    year = int(row[1])
+    area = str(row[2])
+    total = int(row[3]) if pd.notna(row[3]) else 0
+
+    for i, start in enumerate(range(0, 80, 5)):
+        h = int(sum(row[6 + start + k] for k in range(5) if pd.notna(row[6 + start + k])))
+        m = int(sum(row[107 + start + k] for k in range(5) if pd.notna(row[107 + start + k])))
+        records.append({
+            'territorio': territory, 'año': year, 'area': area,
+            'grupo': labels_grupos[i], 'orden': i,
+            'hombres': h, 'mujeres': m, 'total_pob': total
+        })
+
+    # Grupo 80+: edades 80-100+ (cols 86-106 hombres, 187-207 mujeres)
+    h80 = int(sum(row[86 + k] for k in range(21) if pd.notna(row[86 + k])))
+    m80 = int(sum(row[187 + k] for k in range(21) if pd.notna(row[187 + k])))
+    records.append({
+        'territorio': territory, 'año': year, 'area': area,
+        'grupo': '80 +', 'orden': 16,
+        'hombres': h80, 'mujeres': m80, 'total_pob': total
+    })
+
+ojs_define(datos_piramide_colombia = records)
+```
+
+```{ojs}
+viewof año_pir = Inputs.range([2018, 2070], {
+  label: "Año:",
+  step: 1,
+  value: 2024
+})
+```
+
+```{ojs}
+viewof area_pir = Inputs.select(["Total", "Cabecera", "Centros Poblados y Rural Disperso"], {
+  label: "Área geográfica:"
+})
+```
+
+```{ojs}
+orden_grupos = ["0 - 4","5 - 9","10 - 14","15 - 19","20 - 24","25 - 29",
+                "30 - 34","35 - 39","40 - 44","45 - 49","50 - 54","55 - 59",
+                "60 - 64","65 - 69","70 - 74","75 - 79","80 +"]
+
+datos_filtrados = datos_piramide_colombia
+  .filter(d => d.año === año_pir && d.area === area_pir)
+  .sort((a, b) => a.orden - b.orden)
+
+total_pob = datos_filtrados.length > 0 ? datos_filtrados[0].total_pob : 0
+
+fmt_num = n => n.toLocaleString('de-DE')
+```
+
+```{ojs}
+Plot.plot({
+  width: 560,
+  height: 480,
+  marginLeft: 70,
+  marginRight: 10,
+  marginBottom: 60,
+  style: { fontSize: "12px" },
+  x: {
+    tickFormat: d => `${Math.abs(d).toFixed(1)}`,
+    label: `Población en ${año_pir} (%)  (Total: ${fmt_num(total_pob)})`,
+    labelOffset: 50,
+    domain: [-5, 5],
+    grid: true
+  },
+  y: {
+    label: "Rangos de edad",
+    domain: orden_grupos
+  },
+  color: {
+    domain: ["Hombres", "Mujeres"],
+    range: ["#87CEEB", "#FFE066"],
+    legend: true
+  },
+  marks: [
+    Plot.barX(
+      datos_filtrados.flatMap(d => [
+        { grupo: d.grupo, sexo: "Hombres", pct: -(d.hombres / total_pob) * 100 },
+        { grupo: d.grupo, sexo: "Mujeres", pct:  (d.mujeres / total_pob) * 100 }
+      ]),
+      { x: "pct", y: "grupo", fill: "sexo", tip: true }
+    ),
+    Plot.ruleX([0], { stroke: "#555", strokeWidth: 1.2 })
+  ]
+})
+```
+
 *Documento generado con [Quarto](https://quarto.org/) y [Observable JS](https://observablehq.com/)*
