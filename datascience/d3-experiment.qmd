@@ -1,7 +1,5 @@
 ---
-title: "Inversión Global en Investigación y Desarrollo"
-subtitle: "Análisis de Gastos Domésticos en I+D como Porcentaje del PIB"
-author: "Análisis OECD - MSTI Database"
+title: "Ejercicios con D3.js en Observable"
 date: today
 format:
   html:
@@ -16,6 +14,10 @@ execute:
   echo: true
   warning: false
 ---
+
+# Inversión Global en Investigación y Desarrollo. Análisis de Gastos Domésticos en I+D como Porcentaje del PIB
+
+Fuente: "Análisis OECD - MSTI Database"
 
 ## Introducción
 
@@ -613,11 +615,52 @@ ojs_define(datos_piramide_colombia = records)
 ```
 
 ```{ojs}
-viewof año_pir = Inputs.range([2018, 2070], {
-  label: "Año:",
-  step: 1,
-  value: 2024
-})
+viewof año_pir = {
+  let year = 2024;
+  let playing = false;
+  let interval = null;
+
+  const container = html`<div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:6px 0">
+    <label style="font-size:13px;font-weight:600;color:#333">Año:</label>
+    <button id="playbtn_pir" style="
+      padding:5px 16px;border-radius:4px;cursor:pointer;
+      background:#3a7abf;color:white;border:none;font-size:13px;font-weight:600">
+      ▶ Play
+    </button>
+    <span id="yearlbl_pir" style="font-weight:700;font-size:16px;min-width:44px;color:#222">${year}</span>
+    <input id="slider_pir" type="range" min="2018" max="2070" step="1" value="${year}"
+      style="width:260px;accent-color:#3a7abf">
+    <span style="font-size:12px;color:#888">2018 – 2070</span>
+  </div>`;
+
+  const btn    = container.querySelector('#playbtn_pir');
+  const slider = container.querySelector('#slider_pir');
+  const lbl    = container.querySelector('#yearlbl_pir');
+
+  function update(y) {
+    year = y;
+    slider.value = y;
+    lbl.textContent = y;
+    container.value = y;
+    container.dispatchEvent(new CustomEvent('input'));
+  }
+
+  btn.addEventListener('click', () => {
+    playing = !playing;
+    btn.textContent = playing ? '⏸ Pausa' : '▶ Play';
+    btn.style.background = playing ? '#c0392b' : '#3a7abf';
+    if (playing) {
+      interval = setInterval(() => update(year >= 2070 ? 2018 : year + 1), 600);
+    } else {
+      clearInterval(interval);
+    }
+  });
+
+  slider.addEventListener('input', () => update(+slider.value));
+
+  container.value = year;
+  return container;
+}
 ```
 
 ```{ojs}
@@ -679,7 +722,6 @@ Plot.plot({
 
 
 ## Proyecciones y retroproyecciones de población departamental para el periodo 1985-2017 y 2018-2050 con base en el CNPV 2018
-
 
 ```{ojs}
 //| label: carga-datos-dep
