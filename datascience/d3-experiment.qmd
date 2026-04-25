@@ -619,44 +619,70 @@ viewof año_pir = {
   let year = 2024;
   let playing = false;
   let interval = null;
+  let speed = 600;
+  const speeds = { '1×': 600, '1.5×': 400, '2×': 300, '4×': 150 };
+
+  const btnStyle = (active) =>
+    `padding:4px 10px;border-radius:4px;cursor:pointer;border:none;
+     font-size:12px;font-weight:600;
+     background:${active ? '#3a7abf' : '#ddd'};
+     color:${active ? 'white' : '#555'}`;
 
   const container = html`<div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:6px 0">
     <label style="font-size:13px;font-weight:600;color:#333">Año:</label>
-    <button id="playbtn_pir" style="
-      padding:5px 16px;border-radius:4px;cursor:pointer;
+    <button id="playbtn_pir" style="padding:5px 16px;border-radius:4px;cursor:pointer;
       background:#3a7abf;color:white;border:none;font-size:13px;font-weight:600">
       ▶ Play
     </button>
     <span id="yearlbl_pir" style="font-weight:700;font-size:16px;min-width:44px;color:#222">${year}</span>
     <input id="slider_pir" type="range" min="2018" max="2070" step="1" value="${year}"
-      style="width:260px;accent-color:#3a7abf">
+      style="width:240px;accent-color:#3a7abf">
     <span style="font-size:12px;color:#888">2018 – 2070</span>
+    <div style="display:flex;gap:4px;margin-left:4px">
+      <button class="spd_pir" data-ms="600"  style="${btnStyle(true)}">1×</button>
+      <button class="spd_pir" data-ms="400"  style="${btnStyle(false)}">1.5×</button>
+      <button class="spd_pir" data-ms="300"  style="${btnStyle(false)}">2×</button>
+      <button class="spd_pir" data-ms="150"  style="${btnStyle(false)}">4×</button>
+    </div>
   </div>`;
 
-  const btn    = container.querySelector('#playbtn_pir');
-  const slider = container.querySelector('#slider_pir');
-  const lbl    = container.querySelector('#yearlbl_pir');
+  const btn      = container.querySelector('#playbtn_pir');
+  const slider   = container.querySelector('#slider_pir');
+  const lbl      = container.querySelector('#yearlbl_pir');
+  const spdBtns  = container.querySelectorAll('.spd_pir');
 
   function update(y) {
-    year = y;
-    slider.value = y;
-    lbl.textContent = y;
+    year = y; slider.value = y; lbl.textContent = y;
     container.value = y;
     container.dispatchEvent(new CustomEvent('input'));
   }
 
+  function setSpeed(ms) {
+    speed = ms;
+    spdBtns.forEach(b => {
+      const active = +b.dataset.ms === ms;
+      b.style.background = active ? '#3a7abf' : '#ddd';
+      b.style.color      = active ? 'white'   : '#555';
+    });
+    if (playing) {
+      clearInterval(interval);
+      interval = setInterval(() => update(year >= 2070 ? 2018 : year + 1), speed);
+    }
+  }
+
   btn.addEventListener('click', () => {
     playing = !playing;
-    btn.textContent = playing ? '⏸ Pausa' : '▶ Play';
+    btn.textContent   = playing ? '⏸ Pausa' : '▶ Play';
     btn.style.background = playing ? '#c0392b' : '#3a7abf';
     if (playing) {
-      interval = setInterval(() => update(year >= 2070 ? 2018 : year + 1), 600);
+      interval = setInterval(() => update(year >= 2070 ? 2018 : year + 1), speed);
     } else {
       clearInterval(interval);
     }
   });
 
   slider.addEventListener('input', () => update(+slider.value));
+  spdBtns.forEach(b => b.addEventListener('click', () => setSpeed(+b.dataset.ms)));
 
   container.value = year;
   return container;
@@ -742,44 +768,69 @@ viewof año_dep = {
   let year = 2024;
   let playing = false;
   let interval = null;
+  let speed = 600;
+
+  const btnStyle = (active) =>
+    `padding:4px 10px;border-radius:4px;cursor:pointer;border:none;
+     font-size:12px;font-weight:600;
+     background:${active ? '#3a7abf' : '#ddd'};
+     color:${active ? 'white' : '#555'}`;
 
   const container = html`<div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:6px 0">
     <label style="font-size:13px;font-weight:600;color:#333">Año:</label>
-    <button id="playbtn" style="
-      padding:5px 16px;border-radius:4px;cursor:pointer;
+    <button id="playbtn_dep" style="padding:5px 16px;border-radius:4px;cursor:pointer;
       background:#3a7abf;color:white;border:none;font-size:13px;font-weight:600">
       ▶ Play
     </button>
-    <span id="yearlbl" style="font-weight:700;font-size:16px;min-width:44px;color:#222">${year}</span>
-    <input id="slider" type="range" min="2018" max="2050" step="1" value="${year}"
+    <span id="yearlbl_dep" style="font-weight:700;font-size:16px;min-width:44px;color:#222">${year}</span>
+    <input id="slider_dep" type="range" min="2018" max="2050" step="1" value="${year}"
       style="width:220px;accent-color:#3a7abf">
     <span style="font-size:12px;color:#888">2018 – 2050</span>
+    <div style="display:flex;gap:4px;margin-left:4px">
+      <button class="spd_dep" data-ms="600"  style="${btnStyle(true)}">1×</button>
+      <button class="spd_dep" data-ms="400"  style="${btnStyle(false)}">1.5×</button>
+      <button class="spd_dep" data-ms="300"  style="${btnStyle(false)}">2×</button>
+      <button class="spd_dep" data-ms="150"  style="${btnStyle(false)}">4×</button>
+    </div>
   </div>`;
 
-  const btn    = container.querySelector('#playbtn');
-  const slider = container.querySelector('#slider');
-  const lbl    = container.querySelector('#yearlbl');
+  const btn     = container.querySelector('#playbtn_dep');
+  const slider  = container.querySelector('#slider_dep');
+  const lbl     = container.querySelector('#yearlbl_dep');
+  const spdBtns = container.querySelectorAll('.spd_dep');
 
   function update(y) {
-    year = y;
-    slider.value = y;
-    lbl.textContent = y;
+    year = y; slider.value = y; lbl.textContent = y;
     container.value = y;
     container.dispatchEvent(new CustomEvent('input'));
   }
 
+  function setSpeed(ms) {
+    speed = ms;
+    spdBtns.forEach(b => {
+      const active = +b.dataset.ms === ms;
+      b.style.background = active ? '#3a7abf' : '#ddd';
+      b.style.color      = active ? 'white'   : '#555';
+    });
+    if (playing) {
+      clearInterval(interval);
+      interval = setInterval(() => update(year >= 2050 ? 2018 : year + 1), speed);
+    }
+  }
+
   btn.addEventListener('click', () => {
     playing = !playing;
-    btn.textContent = playing ? '⏸ Pausa' : '▶ Play';
+    btn.textContent      = playing ? '⏸ Pausa' : '▶ Play';
     btn.style.background = playing ? '#c0392b' : '#3a7abf';
     if (playing) {
-      interval = setInterval(() => update(year >= 2050 ? 2018 : year + 1), 600);
+      interval = setInterval(() => update(year >= 2050 ? 2018 : year + 1), speed);
     } else {
       clearInterval(interval);
     }
   });
 
   slider.addEventListener('input', () => update(+slider.value));
+  spdBtns.forEach(b => b.addEventListener('click', () => setSpeed(+b.dataset.ms)));
 
   container.value = year;
   return container;
@@ -958,6 +1009,32 @@ play_pause = dict(
     ]
 )
 
+# --- Botones de velocidad ---
+speed_menu = dict(
+    type="buttons", showactive=True,
+    x=0.38, y=-0.13,
+    bgcolor="white", bordercolor="#aaa", borderwidth=1,
+    font=dict(size=12),
+    buttons=[
+        dict(label="1×", method="animate",
+             args=[None, dict(fromcurrent=True,
+                              frame=dict(duration=600, redraw=True),
+                              transition=dict(duration=0))]),
+        dict(label="1.5×", method="animate",
+             args=[None, dict(fromcurrent=True,
+                              frame=dict(duration=400, redraw=True),
+                              transition=dict(duration=0))]),
+        dict(label="2×", method="animate",
+             args=[None, dict(fromcurrent=True,
+                              frame=dict(duration=300, redraw=True),
+                              transition=dict(duration=0))]),
+        dict(label="4×", method="animate",
+             args=[None, dict(fromcurrent=True,
+                              frame=dict(duration=150, redraw=True),
+                              transition=dict(duration=0))]),
+    ]
+)
+
 dept_menu = dict(
     buttons=dept_buttons, direction="down",
     x=1.02, y=1.0, xanchor="left", yanchor="top",
@@ -980,11 +1057,11 @@ fig.update_layout(
         categoryorder="array", categoryarray=orden_grupos
     ),
     barmode="overlay",
-    updatemenus=[play_pause, dept_menu],
+    updatemenus=[play_pause, speed_menu, dept_menu],
     sliders=sliders,
     legend=dict(x=1.02, y=0.55),
     height=540,
-    margin=dict(l=80, r=160, b=140, t=60),
+    margin=dict(l=80, r=160, b=160, t=60),
     paper_bgcolor="white", plot_bgcolor="white"
 )
 
