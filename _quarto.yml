@@ -2,6 +2,12 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - datascience/mapas/data/topojson.min.js
+    - datascience/mapas/data/maplibre-gl.js
+    - datascience/mapas/data/maplibre-gl.css
+    - datascience/mapas/data/pmtiles.js
+    - datascience/mapas/data/colombia.pmtiles
 
 website:
   title: "Inicio"
@@ -151,8 +157,17 @@ website:
             href: datascience/arco.qmd
           - text: "Inteligencia artificial"
             href: datascience/ia.qmd
-          - text: "Mapas"
-            href: datascience/mapas.qmd
+          - section: "Mapas"
+            href: datascience/mapas/index.qmd
+            contents:
+              - text: "Mapa Interactivo (Observable / TopoJSON)"
+                href: datascience/mapas/mapa_colombia_observable.qmd
+              - text: "Mapa Interactivo (PMTiles)"
+                href: datascience/mapas/mapa_colombia_pmtiles.qmd
+              - text: "Mapa Interactivo (Tiles)"
+                href: datascience/mapas/mapa_colombia_tiles.qmd
+              - text: "Índice de Riesgo (NRI)"
+                href: datascience/mapas/mapa_colombia_nri.qmd
           - text: "D3"
             href: datascience/d3.qmd
           - text: "Experimento con D3"

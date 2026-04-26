@@ -1,0 +1,322 @@
+---
+title: "Mapa Interactivo de Colombia PMTiles"
+subtitle: "Departamentos y Municipios · PMTiles + MapLibre GL · Fuente: IGAC / GADM v4.1"
+date: today
+lang: es
+format:
+  html:
+    theme: cosmo
+    toc: false
+    page-layout: full
+    embed-resources: false
+---
+
+```{r}
+#| include: false
+#| cache: false
+
+# ── Generar colombia.pmtiles si no existe ────────────────────────────────
+pmtiles_out <- "data/colombia.pmtiles"
+
+if (!file.exists(pmtiles_out)) {
+  dept_tmp <- "data/col_departamentos.pmtiles"
+  mun_tmp  <- "data/col_municipios.pmtiles"
+
+  if (!file.exists(dept_tmp))
+    system2("tippecanoe", c(
+      "-o", dept_tmp,
+      "--layer=departamentos",
+      "--minimum-zoom=3", "--maximum-zoom=10",
+      "--simplification=2", "--force",
+      "data/col_departamentos.geojson"
+    ))
+
+  if (!file.exists(mun_tmp))
+    system2("tippecanoe", c(
+      "-o", mun_tmp,
+      "--layer=municipios",
+      "--minimum-zoom=6", "--maximum-zoom=14",
+      "--coalesce-densest-as-needed",
+      "--extend-zooms-if-still-dropping",
+      "--force",
+      "data/col_municipios.geojson"
+    ))
+
+  system2("tile-join", c(
+    "-o", pmtiles_out, "--force",
+    dept_tmp, mun_tmp
+  ))
+}
+```
+
+```{=html}
+<!-- ── Dependencias MapLibre GL + PMTiles (locales) ────────────────────── -->
+<link  href="data/maplibre-gl.css" rel="stylesheet">
+<script src="data/maplibre-gl.js"></script>
+<script src="data/pmtiles.js"></script>
+
+<style>
+  #map-pmtiles {
+    width: 100%;
+    height: 78vh;
+    border-radius: 10px;
+    border: 1px solid #c8d6df;
+  }
+
+  /* Panel de info inferior */
+  #map-info {
+    background: rgba(26, 60, 94, 0.85);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 0 0 10px 10px;
+    font-size: 12px;
+    font-family: system-ui, sans-serif;
+    min-height: 28px;
+  }
+
+  /* Control de capas personalizado */
+  .layer-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-family: system-ui, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 10;
+    line-height: 1.8;
+  }
+  .layer-toggle label { cursor: pointer; }
+  .layer-toggle input  { margin-right: 6px; accent-color: #1a3c5e; }
+</style>
+
+<div style="position:relative;">
+  <div id="map-pmtiles"></div>
+
+  <!-- Control de capas -->
+  <div class="layer-toggle">
+    <b style="display:block;margin-bottom:4px;color:#1a3c5e">Capas</b>
+    <label><input type="checkbox" id="chk-dept" checked> Departamentos</label><br>
+    <label><input type="checkbox" id="chk-mun"  checked> Municipios (zoom ≥ 7)</label>
+  </div>
+</div>
+
+<div id="map-info">Colombia · 33 departamentos · 1119 municipios · Fuente: IGAC / GADM v4.1</div>
+
+<script>
+(function () {
+  // ── 1. Registrar protocolo PMTiles ANTES de crear el mapa ──────────────
+  const protocol = new pmtiles.Protocol();
+  maplibregl.addProtocol("pmtiles", protocol.tile.bind(protocol));
+
+  // URL absoluta del archivo PMTiles (resuelve correctamente relativa a la página)
+  const pmtilesUrl = "pmtiles://" + new URL("data/colombia.pmtiles", window.location.href).href;
+
+  // ── 2. Inicializar mapa solo con basemap en el estilo inicial ───────────
+  const map = new maplibregl.Map({
+    container: "map-pmtiles",
+    style: {
+      version: 8,
+      sources: {
+        "carto-light": {
+          type: "raster",
+          tiles: [
+            "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+            "https://b.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+          ],
+          tileSize: 256,
+          attribution: "© <a href='https://carto.com/'>CartoDB</a> © <a href='https://openstreetmap.org'>OSM</a>"
+        }
+      },
+      layers: [
+        { id: "basemap", type: "raster", source: "carto-light" }
+      ]
+    },
+    center: [-74.3, 4.5],
+    zoom: 5.2,
+    minZoom: 3,
+    maxZoom: 16
+  });
+
+  map.addControl(new maplibregl.NavigationControl(), "top-left");
+  map.addControl(new maplibregl.ScaleControl({ unit: "metric" }), "bottom-left");
+
+  map.on("error", (e) => console.error("[MapLibre]", e.error));
+
+  // ── 3. Agregar fuente PMTiles y capas después del load ──────────────────
+  map.on("load", () => {
+
+    // Fuente PMTiles
+    map.addSource("colombia", {
+      type: "vector",
+      url: pmtilesUrl
+    });
+
+    // Relleno departamentos
+    map.addLayer({
+      id: "dept-fill",
+      type: "fill",
+      source: "colombia",
+      "source-layer": "departamentos",
+      paint: {
+        "fill-color": "#c8dce8",
+        "fill-opacity": 0.5
+      }
+    });
+
+    // Borde departamentos
+    map.addLayer({
+      id: "dept-line",
+      type: "line",
+      source: "colombia",
+      "source-layer": "departamentos",
+      paint: {
+        "line-color": "#1a3c5e",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 3, 0.7, 10, 2.0]
+      }
+    });
+
+    // Highlight hover departamento
+    map.addLayer({
+      id: "dept-hover",
+      type: "fill",
+      source: "colombia",
+      "source-layer": "departamentos",
+      paint: {
+        "fill-color": "#2c6fa6",
+        "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 0.55, 0]
+      }
+    });
+
+    // Relleno municipios (visible desde zoom 7)
+    map.addLayer({
+      id: "mun-fill",
+      type: "fill",
+      source: "colombia",
+      "source-layer": "municipios",
+      minzoom: 7,
+      paint: {
+        "fill-color": "#f59e0b",
+        "fill-opacity": 0.25
+      }
+    });
+
+    // Borde municipios
+    map.addLayer({
+      id: "mun-line",
+      type: "line",
+      source: "colombia",
+      "source-layer": "municipios",
+      minzoom: 7,
+      paint: {
+        "line-color": "#92400e",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 7, 0.4, 14, 1.2]
+      }
+    });
+
+    // Highlight hover municipio
+    map.addLayer({
+      id: "mun-hover",
+      type: "fill",
+      source: "colombia",
+      "source-layer": "municipios",
+      minzoom: 7,
+      paint: {
+        "fill-color": "#b45309",
+        "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 0.55, 0]
+      }
+    });
+
+    // ── 4. Control de visibilidad de capas ────────────────────────────────
+    document.getElementById("chk-dept").addEventListener("change", (e) => {
+      const vis = e.target.checked ? "visible" : "none";
+      ["dept-fill", "dept-line", "dept-hover"].forEach(id => map.setLayoutProperty(id, "visibility", vis));
+    });
+
+    document.getElementById("chk-mun").addEventListener("change", (e) => {
+      const vis = e.target.checked ? "visible" : "none";
+      ["mun-fill", "mun-line", "mun-hover"].forEach(id => map.setLayoutProperty(id, "visibility", vis));
+    });
+  });
+
+  // ── 5. Hover interactivo ────────────────────────────────────────────────
+  let hoveredDept = null;
+  let hoveredMun  = null;
+  const infoEl = document.getElementById("map-info");
+
+  function clearHover(source, sourceLayer, id) {
+    if (id !== null) map.setFeatureState({ source, sourceLayer, id }, { hover: false });
+  }
+  function applyHover(source, sourceLayer, id) {
+    if (id !== null) map.setFeatureState({ source, sourceLayer, id }, { hover: true });
+  }
+
+  map.on("mousemove", "dept-hover", (e) => {
+    if (!e.features.length) return;
+    const feat = e.features[0];
+    if (hoveredDept !== null && hoveredDept !== feat.id)
+      clearHover("colombia", "departamentos", hoveredDept);
+    hoveredDept = feat.id;
+    applyHover("colombia", "departamentos", hoveredDept);
+    map.getCanvas().style.cursor = "pointer";
+    infoEl.innerHTML = `<b>${feat.properties.departamento}</b> &nbsp;·&nbsp; ${feat.properties.codigo_hasc || ""}`;
+  });
+
+  map.on("mouseleave", "dept-hover", () => {
+    clearHover("colombia", "departamentos", hoveredDept);
+    hoveredDept = null;
+    map.getCanvas().style.cursor = "";
+    infoEl.textContent = "Colombia · 33 departamentos · 1119 municipios · Fuente: IGAC / GADM v4.1";
+  });
+
+  map.on("mousemove", "mun-hover", (e) => {
+    if (!e.features.length) return;
+    const feat = e.features[0];
+    if (hoveredMun !== null && hoveredMun !== feat.id)
+      clearHover("colombia", "municipios", hoveredMun);
+    hoveredMun = feat.id;
+    applyHover("colombia", "municipios", hoveredMun);
+    map.getCanvas().style.cursor = "pointer";
+    infoEl.innerHTML = `<b>${feat.properties.municipio}</b> &nbsp;·&nbsp; ${feat.properties.departamento}`;
+  });
+
+  map.on("mouseleave", "mun-hover", () => {
+    clearHover("colombia", "municipios", hoveredMun);
+    hoveredMun = null;
+    map.getCanvas().style.cursor = "";
+    infoEl.textContent = "Colombia · 33 departamentos · 1119 municipios · Fuente: IGAC / GADM v4.1";
+  });
+
+  // ── 6. Popup al hacer clic ──────────────────────────────────────────────
+  const popup = new maplibregl.Popup({ closeButton: false, maxWidth: "220px" });
+
+  map.on("click", (e) => {
+    const queryLayers = map.getZoom() >= 7
+      ? ["mun-hover", "dept-hover"]
+      : ["dept-hover"];
+
+    const feats = map.queryRenderedFeatures(e.point, { layers: queryLayers });
+    if (!feats.length) { popup.remove(); return; }
+
+    const f = feats[0];
+    const isMun = f.layer.id === "mun-hover";
+
+    popup
+      .setLngLat(e.lngLat)
+      .setHTML(isMun
+        ? `<b style="font-size:13px">${f.properties.municipio}</b>
+           <br><span style="font-size:11px;color:#555">${f.properties.departamento}</span>`
+        : `<b style="font-size:13px">${f.properties.departamento}</b>
+           <br><span style="font-size:11px;color:#555">${f.properties.codigo_hasc || ""}</span>`)
+      .addTo(map);
+  });
+
+})();
+</script>
+```
+
+---
+
+> **Nota metodológica:** Los datos cartográficos corresponden a la división político-administrativa oficial de Colombia según el [Instituto Geográfico Agustín Codazzi — IGAC](https://www.igac.gov.co) y el [Marco Geoestadístico Nacional del DANE](https://www.dane.gov.co), descargados mediante [GADM v4.1](https://gadm.org) y convertidos al formato [PMTiles](https://docs.protomaps.com) para distribución eficiente vía HTTP Range Requests.

@@ -77,8 +77,647 @@
     ]
   },
   {
-    "objectID": "datascience/mapas.html",
-    "href": "datascience/mapas.html",
+    "objectID": "datascience/claude-slides.html#contenidos",
+    "href": "datascience/claude-slides.html#contenidos",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Contenidos",
+    "text": "Contenidos\n\nIntroduccion\nFundamentos\nPlanificacion y diseno\nPruebas e iteracion\nDistribucion y publicacion\nPatrones y solucion de problemas\nRecursos y referencias",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#introduccion",
+    "href": "datascience/claude-slides.html#introduccion",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Introduccion",
+    "text": "Introduccion\nUn skill es un conjunto de instrucciones - empaquetado como una carpeta simple - que ensena a Claude como manejar tareas o flujos de trabajo especificos.\nLos skills son una de las formas mas poderosas de personalizar Claude para tus necesidades. En lugar de volver a explicar tus preferencias, procesos y conocimiento de dominio en cada conversacion, los skills te permiten ensenarle a Claude una vez y beneficiarte siempre.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#los-skills-son-poderosos-cuando",
+    "href": "datascience/claude-slides.html#los-skills-son-poderosos-cuando",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Los skills son poderosos cuando…",
+    "text": "Los skills son poderosos cuando…\n\nGeneran disenos frontend a partir de especificaciones\nRealizan investigacion con metodologia consistente\nCrean documentos que siguen la guia de estilo de tu equipo\nOrquestan procesos de multiples pasos\nMejoran integraciones MCP con guia de flujos de trabajo",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#lo-que-aprenderas",
+    "href": "datascience/claude-slides.html#lo-que-aprenderas",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Lo que aprenderas",
+    "text": "Lo que aprenderas\n\nRequisitos tecnicos y mejores practicas para la estructura de skills\nPatrones para skills independientes y flujos mejorados con MCP\nPatrones que hemos visto funcionar bien en diferentes casos de uso\nComo probar, iterar y distribuir tus skills",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#para-quien-es-esto",
+    "href": "datascience/claude-slides.html#para-quien-es-esto",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Para quien es esto",
+    "text": "Para quien es esto\n\nDesarrolladores que quieren que Claude siga flujos de trabajo especificos de manera consistente\nUsuarios avanzados que quieren que Claude siga flujos de trabajo especificos\nEquipos que buscan estandarizar como Claude trabaja en su organizacion",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#dos-caminos-en-esta-guia",
+    "href": "datascience/claude-slides.html#dos-caminos-en-esta-guia",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Dos caminos en esta guia",
+    "text": "Dos caminos en esta guia\n\nConstruyendo skills independientes? Enfocate en Fundamentos, Planificacion y Diseno, y categoria 1-2.\nMejorando una integracion MCP? La seccion “Skills + MCP” y la categoria 3 son para ti.\n\nAmbos caminos comparten los mismos requisitos tecnicos.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#fundamentos",
+    "href": "datascience/claude-slides.html#fundamentos",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Fundamentos",
+    "text": "Fundamentos",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#que-es-un-skill",
+    "href": "datascience/claude-slides.html#que-es-un-skill",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Que es un skill?",
+    "text": "Que es un skill?\nUn skill es una carpeta que contiene:\n\nSKILL.md (requerido): Instrucciones en Markdown con frontmatter YAML\nscripts/ (opcional): Codigo ejecutable (Python, Bash, etc.)\nreferences/ (opcional): Documentacion cargada segun necesidad\nassets/ (opcional): Plantillas, fuentes, iconos usados en la salida",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#principios-de-diseno-fundamentales",
+    "href": "datascience/claude-slides.html#principios-de-diseno-fundamentales",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Principios de diseno fundamentales",
+    "text": "Principios de diseno fundamentales\nDivulgacion progresiva\nLos skills usan un sistema de tres niveles:\n\nPrimer nivel (frontmatter YAML): Siempre cargado en el prompt de sistema de Claude.\nSegundo nivel (cuerpo de SKILL.md): Cargado cuando Claude considera que el skill es relevante.\nTercer nivel (archivos enlazados): Archivos adicionales que Claude puede descubrir segun necesidad.\n\nEsto minimiza el uso de tokens manteniendo la experiencia especializada.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#composabilidad-y-portabilidad",
+    "href": "datascience/claude-slides.html#composabilidad-y-portabilidad",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Composabilidad y portabilidad",
+    "text": "Composabilidad y portabilidad\nComposabilidad\nClaude puede cargar multiples skills simultaneamente. Tu skill debe funcionar bien junto a otros.\nPortabilidad\nLos skills funcionan de forma identica en Claude.ai, Claude Code y la API. Crea un skill una vez y funciona en todas las superficies sin modificacion.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#skills-conectores-mcp",
+    "href": "datascience/claude-slides.html#skills-conectores-mcp",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Skills + Conectores MCP",
+    "text": "Skills + Conectores MCP\nLa analogia de la cocina:\n\nMCP proporciona la cocina profesional: acceso a herramientas, ingredientes y equipamiento.\nLos skills proporcionan las recetas: instrucciones paso a paso sobre como crear algo valioso.\n\nJuntos, permiten a los usuarios realizar tareas complejas sin necesidad de descifrar cada paso por si mismos.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#mcp-vs-skills",
+    "href": "datascience/claude-slides.html#mcp-vs-skills",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "MCP vs Skills",
+    "text": "MCP vs Skills\n\n\n\n\n\n\n\nMCP (Conectividad)\nSkills (Conocimiento)\n\n\n\n\nConecta Claude a tu servicio\nEnsena a Claude como usar tu servicio efectivamente\n\n\nProporciona acceso a datos en tiempo real e invocacion de herramientas\nCaptura flujos de trabajo y mejores practicas\n\n\nLo que Claude puede hacer\nComo Claude deberia hacerlo",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#por-que-esto-importa-para-usuarios-de-mcp",
+    "href": "datascience/claude-slides.html#por-que-esto-importa-para-usuarios-de-mcp",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Por que esto importa para usuarios de MCP",
+    "text": "Por que esto importa para usuarios de MCP\nSin skills:\n\nLos usuarios conectan tu MCP pero no saben que hacer despues\nCada conversacion empieza desde cero\nResultados inconsistentes\n\nCon skills:\n\nFlujos de trabajo preconstruidos se activan automaticamente\nUso de herramientas consistente y confiable\nMejores practicas integradas en cada interaccion",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#planificacion-y-diseno",
+    "href": "datascience/claude-slides.html#planificacion-y-diseno",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Planificacion y diseno",
+    "text": "Planificacion y diseno",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#comienza-con-casos-de-uso",
+    "href": "datascience/claude-slides.html#comienza-con-casos-de-uso",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Comienza con casos de uso",
+    "text": "Comienza con casos de uso\nAntes de escribir cualquier codigo, identifica 2-3 casos de uso concretos que tu skill deberia habilitar.\nCaso de uso: Planificacion de sprint de proyecto\nDisparador: El usuario dice \"ayudame a planificar este sprint\"\nPasos:\n1. Obtener estado actual del proyecto de Linear (via MCP)\n2. Analizar velocidad y capacidad del equipo\n3. Sugerir priorizacion de tareas\n4. Crear tareas en Linear con etiquetas apropiadas\nResultado: Sprint completamente planificado con tareas creadas",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#preguntate",
+    "href": "datascience/claude-slides.html#preguntate",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Preguntate",
+    "text": "Preguntate\n\nQue quiere lograr el usuario?\nQue flujos de trabajo de multiples pasos requiere esto?\nQue herramientas se necesitan (integradas o MCP?)\nQue conocimiento de dominio o mejores practicas deben incorporarse?",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#categoria-1-creacion-de-documentos-y-activos",
+    "href": "datascience/claude-slides.html#categoria-1-creacion-de-documentos-y-activos",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Categoria 1: Creacion de documentos y activos",
+    "text": "Categoria 1: Creacion de documentos y activos\nCreacion de resultados consistentes y de alta calidad incluyendo documentos, presentaciones, aplicaciones, disenos, codigo, etc.\nTecnicas clave:\n\nGuias de estilo y estandares de marca incorporados\nEstructuras de plantilla para resultados consistentes\nListas de verificacion de calidad antes de finalizar\nNo requiere herramientas externas - usa las capacidades integradas de Claude",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#categoria-2-automatizacion-de-flujos-de-trabajo",
+    "href": "datascience/claude-slides.html#categoria-2-automatizacion-de-flujos-de-trabajo",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Categoria 2: Automatizacion de flujos de trabajo",
+    "text": "Categoria 2: Automatizacion de flujos de trabajo\nProcesos de multiples pasos que se benefician de una metodologia consistente.\nTecnicas clave:\n\nFlujo de trabajo paso a paso con puertas de validacion\nPlantillas para estructuras comunes\nSugerencias integradas de revision y mejora\nCiclos de refinamiento iterativo",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#categoria-3-mejora-de-mcp",
+    "href": "datascience/claude-slides.html#categoria-3-mejora-de-mcp",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Categoria 3: Mejora de MCP",
+    "text": "Categoria 3: Mejora de MCP\nGuia de flujo de trabajo para mejorar el acceso a herramientas que proporciona un servidor MCP.\nTecnicas clave:\n\nCoordina multiples llamadas MCP en secuencia\nIncorpora experiencia de dominio\nProporciona contexto que los usuarios de otro modo necesitarian especificar\nManejo de errores para problemas comunes de MCP",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#definir-criterios-de-exito",
+    "href": "datascience/claude-slides.html#definir-criterios-de-exito",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Definir criterios de exito",
+    "text": "Definir criterios de exito\nMetricas cuantitativas:\n\nEl skill se activa en el 90% de las consultas relevantes\nCompleta el flujo de trabajo en X llamadas de herramientas\n0 llamadas API fallidas por flujo de trabajo\n\nMetricas cualitativas:\n\nLos usuarios no necesitan indicarle a Claude los siguientes pasos\nLos flujos de trabajo se completan sin correccion del usuario\nResultados consistentes entre sesiones",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#requisitos-tecnicos-estructura-de-archivos",
+    "href": "datascience/claude-slides.html#requisitos-tecnicos-estructura-de-archivos",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Requisitos tecnicos: Estructura de archivos",
+    "text": "Requisitos tecnicos: Estructura de archivos\nnombre-de-tu-skill/\n├── SKILL.md           # Requerido\n├── scripts/           # Opcional\n│   ├── process_data.py\n│   └── validate.sh\n├── references/        # Opcional\n│   ├── api-guide.md\n│   └── examples/\n└── assets/            # Opcional\n    └── report-template.md",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#reglas-criticas",
+    "href": "datascience/claude-slides.html#reglas-criticas",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Reglas criticas",
+    "text": "Reglas criticas\nNombre de SKILL.md: Debe ser exactamente SKILL.md (sensible a mayusculas)\nNombre de la carpeta del skill:\n\nUsar kebab-case: notion-project-setup\nSin espacios, sin guiones bajos, sin mayusculas\n\nSin README.md dentro de la carpeta del skill. Toda la documentacion va en SKILL.md o references/.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#frontmatter-yaml",
+    "href": "datascience/claude-slides.html#frontmatter-yaml",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Frontmatter YAML",
+    "text": "Frontmatter YAML\nEl frontmatter YAML es como Claude decide si cargar tu skill.\n---\nname: nombre-de-tu-skill\ndescription: Que hace. Usar cuando el usuario pide\n  [frases especificas].\n---\nname: solo kebab-case, debe coincidir con el nombre de la carpeta\ndescription: Debe incluir QUE + CUANDO, menos de 1024 caracteres",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#campos-yaml-opcionales",
+    "href": "datascience/claude-slides.html#campos-yaml-opcionales",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Campos YAML opcionales",
+    "text": "Campos YAML opcionales\n\nlicense: MIT, Apache-2.0, etc.\ncompatibility: Requisitos del entorno (1-500 caracteres)\nmetadata: Pares clave-valor personalizados (author, version, mcp-server)\n\nRestricciones de seguridad:\n\nSin corchetes angulares XML en el frontmatter\nSkills con “claude” o “anthropic” en el nombre estan reservados",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#escribir-descripciones-efectivas",
+    "href": "datascience/claude-slides.html#escribir-descripciones-efectivas",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Escribir descripciones efectivas",
+    "text": "Escribir descripciones efectivas\nEstructura: [Que hace] + [Cuando usarlo] + [Capacidades clave]\nBueno:\ndescription: Gestiona flujos de trabajo de proyectos en Linear\n  incluyendo planificacion de sprint, creacion de tareas y\n  seguimiento de estado. Usar cuando el usuario mencione\n  \"sprint\", \"tareas de Linear\" o pida \"crear tickets\".\nMalo:\ndescription: Ayuda con proyectos.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#escribir-las-instrucciones-principales",
+    "href": "datascience/claude-slides.html#escribir-las-instrucciones-principales",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Escribir las instrucciones principales",
+    "text": "Escribir las instrucciones principales\nEstructura recomendada despues del frontmatter:\n\nInstrucciones - Paso a paso con explicaciones claras\nEjemplos - Escenarios comunes con acciones y resultados esperados\nSolucion de problemas - Errores comunes, causas y soluciones",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#mejores-practicas-para-instrucciones",
+    "href": "datascience/claude-slides.html#mejores-practicas-para-instrucciones",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Mejores practicas para instrucciones",
+    "text": "Mejores practicas para instrucciones\nSe especifico y accionable:\nEjecuta `python scripts/validate.py --input {filename}`\npara verificar el formato de datos.\nSi la validacion falla, los problemas comunes incluyen:\n- Campos requeridos faltantes (agregarlos al CSV)\n- Formatos de fecha invalidos (usar YYYY-MM-DD)\nIncluye manejo de errores y referencia claramente los recursos incluidos.\nUsa divulgacion progresiva: Mantiene SKILL.md enfocado; mueve detalles a references/.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#pruebas-e-iteracion",
+    "href": "datascience/claude-slides.html#pruebas-e-iteracion",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Pruebas e iteracion",
+    "text": "Pruebas e iteracion",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#enfoques-de-pruebas",
+    "href": "datascience/claude-slides.html#enfoques-de-pruebas",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Enfoques de pruebas",
+    "text": "Enfoques de pruebas\n\nPruebas manuales en Claude.ai - Ejecutar consultas directamente y observar el comportamiento\nPruebas con scripts en Claude Code - Automatizar casos de prueba para validacion repetible\nPruebas programaticas via API de skills - Construir suites de evaluacion\n\nConsejo: Itera en una sola tarea desafiante hasta que Claude tenga exito, luego extrae el enfoque ganador en un skill.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#pruebas-de-activacion",
+    "href": "datascience/claude-slides.html#pruebas-de-activacion",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "1. Pruebas de activacion",
+    "text": "1. Pruebas de activacion\nObjetivo: Asegurar que tu skill se carga en los momentos correctos.\nDeberia activarse:\n\n“Ayudame a configurar un nuevo espacio de trabajo en ProjectHub”\n“Necesito crear un proyecto en ProjectHub”\n\nNO deberia activarse:\n\n“Como esta el clima en San Francisco?”\n“Ayudame a escribir codigo Python”",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#pruebas-funcionales",
+    "href": "datascience/claude-slides.html#pruebas-funcionales",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "2. Pruebas funcionales",
+    "text": "2. Pruebas funcionales\nObjetivo: Verificar que el skill produce resultados correctos.\nPrueba: Crear proyecto con 5 tareas\nDado: Nombre del proyecto \"Planificacion Q4\", 5 descripciones de tareas\nCuando: El skill ejecuta el flujo de trabajo\nEntonces:\n  - Proyecto creado en ProjectHub\n  - 5 tareas creadas con propiedades correctas\n  - Todas las tareas vinculadas al proyecto\n  - Sin errores de API",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#comparacion-de-rendimiento",
+    "href": "datascience/claude-slides.html#comparacion-de-rendimiento",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "3. Comparacion de rendimiento",
+    "text": "3. Comparacion de rendimiento\n\n\n\n\n\n\n\n\n\nSin skill\nCon skill\n\n\n\n\nInstrucciones\nEl usuario las proporciona cada vez\nFlujo de trabajo automatico\n\n\nMensajes\n15 ida y vuelta\n2 preguntas de clarificacion\n\n\nLlamadas API fallidas\n3 requiriendo reintento\n0\n\n\nTokens consumidos\n12,000\n6,000",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#uso-del-skill-skill-creator",
+    "href": "datascience/claude-slides.html#uso-del-skill-skill-creator",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Uso del skill skill-creator",
+    "text": "Uso del skill skill-creator\nEl skill skill-creator puede ayudarte a:\n\nCrear: Generar skills a partir de descripciones en lenguaje natural\nRevisar: Senalar problemas comunes, identificar riesgos de activacion\nIterar: Traer casos limite de vuelta para mejorar\n\n\"Usa el skill skill-creator para ayudarme a construir\nun skill para [tu caso de uso]\"",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#iteracion-basada-en-retroalimentacion",
+    "href": "datascience/claude-slides.html#iteracion-basada-en-retroalimentacion",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Iteracion basada en retroalimentacion",
+    "text": "Iteracion basada en retroalimentacion\nSub-activacion: Agrega mas detalle y palabras clave a la descripcion\nSobre-activacion: Agrega disparadores negativos, se mas especifico\nProblemas de ejecucion: Mejora las instrucciones, agrega manejo de errores\nLos skills son documentos vivos. Planifica iterar.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#distribucion-y-publicacion",
+    "href": "datascience/claude-slides.html#distribucion-y-publicacion",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Distribucion y publicacion",
+    "text": "Distribucion y publicacion",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#modelo-de-distribucion-actual-enero-2026",
+    "href": "datascience/claude-slides.html#modelo-de-distribucion-actual-enero-2026",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Modelo de distribucion actual (enero 2026)",
+    "text": "Modelo de distribucion actual (enero 2026)\nUsuarios individuales:\n\nDescargar la carpeta del skill\nComprimir la carpeta (si es necesario)\nSubir a Claude.ai via Configuracion &gt; Capacidades &gt; Skills\nO colocar en el directorio de skills de Claude Code\n\nNivel organizacional: Los administradores pueden desplegar skills en todo el espacio de trabajo con actualizaciones automaticas y gestion centralizada.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#un-estandar-abierto",
+    "href": "datascience/claude-slides.html#un-estandar-abierto",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Un estandar abierto",
+    "text": "Un estandar abierto\nAgent Skills se publica como un estandar abierto. Como MCP, los skills deben ser portables entre herramientas y plataformas - el mismo skill deberia funcionar ya sea que uses Claude u otras plataformas de IA.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#uso-de-skills-via-api",
+    "href": "datascience/claude-slides.html#uso-de-skills-via-api",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Uso de skills via API",
+    "text": "Uso de skills via API\n\n\n\n\n\n\n\nCaso de uso\nMejor superficie\n\n\n\n\nUsuarios finales interactuando directamente\nClaude.ai / Claude Code\n\n\nPruebas manuales e iteracion\nClaude.ai / Claude Code\n\n\nAplicaciones usando skills programaticamente\nAPI\n\n\nDespliegues en produccion a escala\nAPI\n\n\nPipelines automatizados y sistemas de agentes\nAPI",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#enfoque-recomendado-hoy",
+    "href": "datascience/claude-slides.html#enfoque-recomendado-hoy",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Enfoque recomendado hoy",
+    "text": "Enfoque recomendado hoy\n\nAlojar en GitHub - Repositorio publico, README claro, ejemplos de uso\nDocumentar en tu repositorio MCP - Enlazar skills desde la documentacion MCP\nCrear una guia de instalacion - Instrucciones paso a paso",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#posicionar-tu-skill",
+    "href": "datascience/claude-slides.html#posicionar-tu-skill",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Posicionar tu skill",
+    "text": "Posicionar tu skill\nEnfocate en resultados, no en caracteristicas:\nBueno: “El skill de ProjectHub permite a los equipos configurar espacios de trabajo completos en segundos en lugar de gastar 30 minutos en configuracion manual.”\nMalo: “El skill de ProjectHub es una carpeta que contiene frontmatter YAML e instrucciones en Markdown que llama a las herramientas de nuestro servidor MCP.”",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#patrones-y-solucion-de-problemas",
+    "href": "datascience/claude-slides.html#patrones-y-solucion-de-problemas",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Patrones y solucion de problemas",
+    "text": "Patrones y solucion de problemas",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#eligiendo-tu-enfoque",
+    "href": "datascience/claude-slides.html#eligiendo-tu-enfoque",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Eligiendo tu enfoque",
+    "text": "Eligiendo tu enfoque\n\nEnfoque en el problema: “Necesito configurar un espacio de trabajo” - Tu skill orquesta las llamadas MCP correctas en la secuencia correcta.\nEnfoque en la herramienta: “Tengo Notion MCP conectado” - Tu skill ensena a Claude los flujos de trabajo optimos y mejores practicas.\n\nLa mayoria de los skills se inclinan hacia una direccion.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#patron-1-orquestacion-secuencial-de-flujo-de-trabajo",
+    "href": "datascience/claude-slides.html#patron-1-orquestacion-secuencial-de-flujo-de-trabajo",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Patron 1: Orquestacion secuencial de flujo de trabajo",
+    "text": "Patron 1: Orquestacion secuencial de flujo de trabajo\nUsar cuando: Procesos de multiples pasos en un orden especifico.\n## Flujo: Incorporar nuevo cliente\n### Paso 1: Crear cuenta\n### Paso 2: Configurar pago\n### Paso 3: Crear suscripcion\n### Paso 4: Enviar correo de bienvenida\nClave: Orden explicito de pasos, dependencias, validacion en cada etapa, instrucciones de reversion.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#patron-2-coordinacion-multi-mcp",
+    "href": "datascience/claude-slides.html#patron-2-coordinacion-multi-mcp",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Patron 2: Coordinacion multi-MCP",
+    "text": "Patron 2: Coordinacion multi-MCP\nUsar cuando: Los flujos de trabajo abarcan multiples servicios.\nFase 1: Exportacion de diseno (Figma MCP)\nFase 2: Almacenamiento de activos (Drive MCP)\nFase 3: Creacion de tareas (Linear MCP)\nFase 4: Notificacion (Slack MCP)\nClave: Separacion clara de fases, paso de datos entre MCPs, validacion antes de la siguiente fase.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#patron-3-refinamiento-iterativo",
+    "href": "datascience/claude-slides.html#patron-3-refinamiento-iterativo",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Patron 3: Refinamiento iterativo",
+    "text": "Patron 3: Refinamiento iterativo\nUsar cuando: La calidad del resultado mejora con la iteracion.\n\nBorrador inicial - Obtener datos, generar primer borrador\nVerificacion de calidad - Ejecutar script de validacion\nCiclo de refinamiento - Abordar problemas, regenerar, revalidar\nFinalizacion - Aplicar formato, guardar version final\n\nClave: Criterios de calidad explicitos, scripts de validacion, saber cuando detenerse.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#patron-4-seleccion-de-herramientas-segun-contexto",
+    "href": "datascience/claude-slides.html#patron-4-seleccion-de-herramientas-segun-contexto",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Patron 4: Seleccion de herramientas segun contexto",
+    "text": "Patron 4: Seleccion de herramientas segun contexto\nUsar cuando: Mismo resultado, diferentes herramientas segun el contexto.\n\nArchivos grandes (&gt;10MB): MCP de almacenamiento en la nube\nDocumentos colaborativos: MCP de Notion/Docs\nArchivos de codigo: MCP de GitHub\nArchivos temporales: Almacenamiento local\n\nClave: Criterios de decision claros, opciones de respaldo, transparencia sobre las elecciones.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#patron-5-inteligencia-especifica-de-dominio",
+    "href": "datascience/claude-slides.html#patron-5-inteligencia-especifica-de-dominio",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Patron 5: Inteligencia especifica de dominio",
+    "text": "Patron 5: Inteligencia especifica de dominio\nUsar cuando: Tu skill agrega conocimiento especializado mas alla del acceso a herramientas.\n\nAntes del procesamiento - Verificaciones de cumplimiento, listas de sanciones, evaluacion de riesgo\nProcesamiento - Ejecutar si cumple, marcar para revision si no\nPista de auditoria - Registrar todas las verificaciones, registrar decisiones, generar informe\n\nClave: Experiencia de dominio en la logica, cumplimiento antes de la accion, documentacion exhaustiva.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#solucion-de-problemas-el-skill-no-se-sube",
+    "href": "datascience/claude-slides.html#solucion-de-problemas-el-skill-no-se-sube",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Solucion de problemas: El skill no se sube",
+    "text": "Solucion de problemas: El skill no se sube\n\n“No se encontro SKILL.md”: Renombrar exactamente a SKILL.md (sensible a mayusculas)\n“Frontmatter invalido”: Verificar delimitadores YAML --- y formato de comillas\n“Nombre de skill invalido”: Usar kebab-case, sin espacios ni mayusculas",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#solucion-de-problemas-problemas-de-activacion",
+    "href": "datascience/claude-slides.html#solucion-de-problemas-problemas-de-activacion",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Solucion de problemas: Problemas de activacion",
+    "text": "Solucion de problemas: Problemas de activacion\nEl skill no se activa:\n\nEs la descripcion demasiado generica?\nIncluye frases de activacion que los usuarios realmente dirian?\nDepuracion: Pregunta a Claude “Cuando usarias el skill [nombre del skill]?”\n\nEl skill se activa demasiado:\n\nAgregar disparadores negativos\nSer mas especifico en la descripcion\nClarificar el alcance",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#solucion-de-problemas-instrucciones-no-seguidas",
+    "href": "datascience/claude-slides.html#solucion-de-problemas-instrucciones-no-seguidas",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Solucion de problemas: Instrucciones no seguidas",
+    "text": "Solucion de problemas: Instrucciones no seguidas\n\nInstrucciones demasiado extensas - Mantener concisas, usar puntos\nInstrucciones enterradas - Colocar las criticas arriba\nLenguaje ambiguo - Ser especifico con encabezados CRITICO\n“Pereza” del modelo - Agregar aliento explicito en los prompts del usuario\n\nAvanzado: Incluir scripts de validacion para verificaciones deterministicas.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#problemas-de-contexto-grande",
+    "href": "datascience/claude-slides.html#problemas-de-contexto-grande",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Problemas de contexto grande",
+    "text": "Problemas de contexto grande\nCausas: Contenido del skill demasiado grande, demasiados skills habilitados simultaneamente\nSoluciones:\n\nMantener SKILL.md bajo 5,000 palabras\nMover documentacion detallada a references/\nEvaluar si tienes 20-50+ skills habilitados simultaneamente\nConsiderar “paquetes” de skills para capacidades relacionadas",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#recursos-y-referencias",
+    "href": "datascience/claude-slides.html#recursos-y-referencias",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Recursos y referencias",
+    "text": "Recursos y referencias",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#documentacion-oficial",
+    "href": "datascience/claude-slides.html#documentacion-oficial",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Documentacion oficial",
+    "text": "Documentacion oficial\nRecursos de Anthropic:\n\nGuia de mejores practicas\nDocumentacion de Skills\nReferencia de API\nDocumentacion de MCP\n\nHerramientas:\n\nSkill skill-creator (integrado en Claude.ai y disponible para Claude Code)\nGitHub: anthropics/skills (repositorio publico de skills)",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#ejemplos-completos-de-skills",
+    "href": "datascience/claude-slides.html#ejemplos-completos-de-skills",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Ejemplos completos de skills",
+    "text": "Ejemplos completos de skills\n\nDocument Skills - Creacion de PDF, DOCX, PPTX, XLSX\nExample Skills - Varios patrones de flujos de trabajo\nPartner Skills Directory - Asana, Atlassian, Canva, Figma, Sentry, Zapier y mas",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#lista-de-verificacion-rapida",
+    "href": "datascience/claude-slides.html#lista-de-verificacion-rapida",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Lista de verificacion rapida",
+    "text": "Lista de verificacion rapida\nAntes de empezar: Identificar casos de uso, identificar herramientas, revisar la guia, planificar estructura de carpetas\nDurante el desarrollo: Carpeta en kebab-case, SKILL.md existe, frontmatter YAML valido, descripcion incluye QUE y CUANDO\nAntes de subir: Probar activacion, pruebas funcionales pasan, comprimido como .zip\nDespues de subir: Probar en conversaciones reales, monitorear activacion, recopilar retroalimentacion, iterar",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#referencia-de-frontmatter-yaml",
+    "href": "datascience/claude-slides.html#referencia-de-frontmatter-yaml",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Referencia de frontmatter YAML",
+    "text": "Referencia de frontmatter YAML\n---\nname: nombre-del-skill\ndescription: [descripcion requerida]\nlicense: MIT\nallowed-tools: \"Bash(python:*) WebFetch\"\nmetadata:\n  author: Nombre de la empresa\n  version: 1.0.0\n  mcp-server: nombre-del-servidor\n  category: productividad\n---",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/claude-slides.html#gracias",
+    "href": "datascience/claude-slides.html#gracias",
+    "title": "Guia completa para construir Skills para Claude",
+    "section": "Gracias",
+    "text": "Gracias\nGuia completa para construir Skills para Claude\nclaude.ai",
+    "crumbs": [
+      "Ciencia de datos",
+      "Claude Skills (Slides)"
+    ]
+  },
+  {
+    "objectID": "datascience/mapas/mapa_colombia_pmtiles.html",
+    "href": "datascience/mapas/mapa_colombia_pmtiles.html",
+    "title": "Mapa Interactivo de Colombia PMTiles",
+    "section": "",
+    "text": "Capas\n     Departamentos\n     Municipios (zoom ≥ 7)\n  \n\n\nColombia · 33 departamentos · 1119 municipios · Fuente: IGAC / GADM v4.1\n\n\n\n\nNota metodológica: Los datos cartográficos corresponden a la división político-administrativa oficial de Colombia según el Instituto Geográfico Agustín Codazzi — IGAC y el Marco Geoestadístico Nacional del DANE, descargados mediante GADM v4.1 y convertidos al formato PMTiles para distribución eficiente vía HTTP Range Requests.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Mapas",
+      "Mapa Interactivo (PMTiles)"
+    ]
+  },
+  {
+    "objectID": "datascience/mapas/index.html",
+    "href": "datascience/mapas/index.html",
     "title": "mapas",
     "section": "",
     "text": "Guide to creating PMTiles. Link.\nProtomaps. Link.\n\n\n\n\n Introduction to D3 P1. Slides.\n\n\n Introduction to D3 P2. Slides.\n\n\n\n\n Introduction to D3 P3.\n\n\n Introduction to D3 P4.\n\n\n\n\n Introduction to D3 P5.",
@@ -88,8 +727,8 @@
     ]
   },
   {
-    "objectID": "datascience/mapas.html#herramientas",
-    "href": "datascience/mapas.html#herramientas",
+    "objectID": "datascience/mapas/index.html#herramientas",
+    "href": "datascience/mapas/index.html#herramientas",
     "title": "mapas",
     "section": "",
     "text": "Guide to creating PMTiles. Link.\nProtomaps. Link.\n\n\n\n\n Introduction to D3 P1. Slides.\n\n\n Introduction to D3 P2. Slides.\n\n\n\n\n Introduction to D3 P3.\n\n\n Introduction to D3 P4.\n\n\n\n\n Introduction to D3 P5.",
@@ -3969,9 +4608,9 @@
   {
     "objectID": "datascience/d3-experiment.html",
     "href": "datascience/d3-experiment.html",
-    "title": "Inversión Global en Investigación y Desarrollo",
+    "title": "Ejercicios con D3.js en Observable",
     "section": "",
-    "text": "La inversión en Investigación y Desarrollo (I+D) es un indicador clave de la capacidad innovadora de un país y su compromiso con el crecimiento económico basado en el conocimiento. El indicador “Gross Domestic Expenditure on Research and Development (GERD) as a percentage of GDP” mide el total de gastos domésticos en I+D expresados como porcentaje del Producto Interno Bruto.\nSegún la OECD, este indicador incluye:\n\nGastos corrientes y de capital en los cuatro sectores principales\nEmpresas privadas, Gobierno, Educación superior y Organizaciones sin fines de lucro\nInvestigación básica, investigación aplicada y desarrollo experimental\n\nLos datos presentados provienen de la base de datos OECD Main Science and Technology Indicators (MSTI) y reflejan las tendencias más recientes hasta 2023.",
+    "text": "Fuente: “Análisis OECD - MSTI Database”\n\n\nLa inversión en Investigación y Desarrollo (I+D) es un indicador clave de la capacidad innovadora de un país y su compromiso con el crecimiento económico basado en el conocimiento. El indicador “Gross Domestic Expenditure on Research and Development (GERD) as a percentage of GDP” mide el total de gastos domésticos en I+D expresados como porcentaje del Producto Interno Bruto.\nSegún la OECD, este indicador incluye:\n\nGastos corrientes y de capital en los cuatro sectores principales\nEmpresas privadas, Gobierno, Educación superior y Organizaciones sin fines de lucro\nInvestigación básica, investigación aplicada y desarrollo experimental\n\nLos datos presentados provienen de la base de datos OECD Main Science and Technology Indicators (MSTI) y reflejan las tendencias más recientes hasta 2023.\n\n\n\n\n\nCode\n// Datos de inversión en I+D como % del PIB (2023)\nrd_data = [\n  {country: \"Israel\", value: 6.35, region: \"Asia-Pacifico\"},\n  {country: \"Corea del Sur\", value: 4.96, region: \"Asia-Pacifico\"},\n  {country: \"Suecia\", value: 3.60, region: \"Europa\"},\n  {country: \"Estados Unidos\", value: 3.45, region: \"America del Norte\"},\n  {country: \"Japón\", value: 3.44, region: \"Asia-Pacifico\"},\n  {country: \"Bélgica\", value: 3.32, region: \"Europa\"},\n  {country: \"Austria\", value: 3.29, region: \"Europa\"},\n  {country: \"Suiza\", value: 3.25, region: \"Europa\"},\n  {country: \"Dinamarca\", value: 2.99, region: \"Europa\"},\n  {country: \"Alemania\", value: 2.95, region: \"Europa\"},\n  {country: \"Finlandia\", value: 2.85, region: \"Europa\"},\n  {country: \"Francia\", value: 2.75, region: \"Europa\"},\n  {country: \"Islandia\", value: 2.65, region: \"Europa\"},\n  {country: \"China\", value: 2.58, region: \"Asia-Pacifico\"},\n  {country: \"Países Bajos\", value: 2.35, region: \"Europa\"},\n  {country: \"Reino Unido\", value: 2.25, region: \"Europa\"},\n  {country: \"Noruega\", value: 2.15, region: \"Europa\"},\n  {country: \"Australia\", value: 2.05, region: \"Asia-Pacifico\"},\n  {country: \"Canadá\", value: 1.95, region: \"America del Norte\"},\n  {country: \"Italia\", value: 1.85, region: \"Europa\"},\n  {country: \"España\", value: 1.65, region: \"Europa\"},\n  {country: \"Portugal\", value: 1.45, region: \"Europa\"},\n  {country: \"México\", value: 0.55, region: \"America del Norte\"}\n]\n\n\n\n\n\n\n\n\n\nCode\n// Configuración de colores por región\ncolor_scale = new Map([\n  [\"Asia-Pacifico\", \"#ff6b6b\"],\n  [\"Europa\", \"#4ecdc4\"], \n  [\"America del Norte\", \"#45b7d1\"]\n])\n\n\n\n\n\n\n\n\n\nCode\n// Estadísticas descriptivas\nstats = {\n  const values = rd_data.map(d =&gt; d.value);\n  return {\n    max: d3.max(values),\n    min: d3.min(values),\n    mean: d3.mean(values),\n    median: d3.median(values),\n    countries_above_3: rd_data.filter(d =&gt; d.value &gt;= 3.0).length,\n    total_countries: rd_data.length\n  }\n}\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nviewof selected_region = Inputs.select(\n  [\"Todas las regiones\", \"Asia-Pacifico\", \"Europa\", \"America del Norte\"],\n  {label: \"Filtrar por región:\", value: \"Todas las regiones\"}\n)\n\n\n\n\n\n\n\n\n\nCode\n// Filtrar datos según selección\nfiltered_data = selected_region === \"Todas las regiones\" \n  ? rd_data \n  : rd_data.filter(d =&gt; d.region === selected_region)\n\n\n\n\n\n\n\n\n\nCode\n// Gráfico de barras principal\nPlot.plot({\n  title: \"Gastos Domésticos en I+D como % del PIB (2023)\",\n  subtitle: `Países seleccionados: ${selected_region}`,\n  width: 900,\n  height: 500,\n  marginLeft: 100,\n  marginBottom: 80,\n  x: {\n    domain: [0, 7],\n    label: \"Porcentaje del PIB (%)\",\n    grid: true\n  },\n  y: {\n    label: null,\n    domain: filtered_data.map(d =&gt; d.country)\n  },\n  color: {\n    domain: Array.from(color_scale.keys()),\n    range: Array.from(color_scale.values()),\n    legend: true\n  },\n  marks: [\n    Plot.barX(filtered_data, {\n      x: \"value\",\n      y: \"country\",\n      fill: \"region\",\n      sort: {y: \"x\", reverse: true},\n      tip: true\n    }),\n    Plot.text(filtered_data, {\n      x: d =&gt; d.value + 0.15,\n      y: \"country\",\n      text: d =&gt; `${d.value}%`,\n      fontSize: 11,\n      fill: \"#333\"\n    }),\n    Plot.ruleX([2.7], {stroke: \"#e74c3c\", strokeWidth: 2, strokeDasharray: \"5,5\"})\n  ]\n})\n\n\n\n\n\n\n\n\n\nCode\nhtml`&lt;p style=\"margin-top: 10px; font-size: 14px; color: #666;\"&gt;\n&lt;strong&gt;Línea roja punteada:&lt;/strong&gt; Promedio OECD (2.7%)\n&lt;/p&gt;`\n\n\n\n\n\n\n\n\n\n\n\n\nCode\n// Análisis regional\nregional_summary = d3.rollup(\n  rd_data,\n  v =&gt; ({\n    count: v.length,\n    average: d3.mean(v, d =&gt; d.value),\n    max: d3.max(v, d =&gt; d.value),\n    min: d3.min(v, d =&gt; d.value),\n    countries: v.map(d =&gt; d.country).join(\", \")\n  }),\n  d =&gt; d.region\n)\n\n\n\n\n\n\n\n\n\nCode\n// Tabla resumen por región\nInputs.table(\n  Array.from(regional_summary, ([region, data]) =&gt; ({\n    \"Región\": region,\n    \"Países\": data.count,\n    \"Promedio (%)\": data.average.toFixed(2),\n    \"Máximo (%)\": data.max.toFixed(2),\n    \"Mínimo (%)\": data.min.toFixed(2)\n  })),\n  {\n    header: {\n      \"Región\": \"Región\",\n      \"Países\": \"Número de Países\",\n      \"Promedio (%)\": \"Promedio I+D/PIB\",\n      \"Máximo (%)\": \"Máximo\",\n      \"Mínimo (%)\": \"Mínimo\"\n    }\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\nCode\n// Histograma de distribución\nPlot.plot({\n  title: \"Distribución de la Inversión en I+D\",\n  width: 700,\n  height: 300,\n  x: {\n    label: \"Porcentaje del PIB (%)\",\n    domain: [0, 7]\n  },\n  y: {\n    label: \"Número de países\"\n  },\n  marks: [\n    Plot.rectY(rd_data, Plot.binX({y: \"count\"}, {x: \"value\", thresholds: 20, fill: \"#4ecdc4\", opacity: 0.7})),\n    Plot.ruleX([stats.mean], {stroke: \"#e74c3c\", strokeWidth: 2}),\n    Plot.ruleX([stats.median], {stroke: \"#f39c12\", strokeWidth: 2})\n  ]\n})\n\n\n\n\n\n\n\n\n\nCode\nhtml`&lt;p style=\"margin-top: 10px; font-size: 14px; color: #666;\"&gt;\n&lt;span style=\"color: #e74c3c;\"&gt;&lt;strong&gt;Línea roja:&lt;/strong&gt; Media (${stats.mean.toFixed(2)}%)&lt;/span&gt; | \n&lt;span style=\"color: #f39c12;\"&gt;&lt;strong&gt;Línea naranja:&lt;/strong&gt; Mediana (${stats.median.toFixed(2)}%)&lt;/span&gt;\n&lt;/p&gt;`\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nhtml`\n&lt;div style=\"background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;\"&gt;\n&lt;h4 style=\"color: #2c3e50; margin-top: 0;\"&gt;📊 Hallazgos Principales&lt;/h4&gt;\n\n&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;\"&gt;\n  \n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #ff6b6b;\"&gt;\n&lt;strong&gt;🏆 Líderes Globales&lt;/strong&gt;&lt;br&gt;\nIsrael encabeza con &lt;strong&gt;${stats.max}%&lt;/strong&gt; del PIB, seguido por Corea del Sur y Suecia\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #4ecdc4;\"&gt;\n&lt;strong&gt;🌍 Umbral del 3%&lt;/strong&gt;&lt;br&gt;\nSolo &lt;strong&gt;${stats.countries_above_3}&lt;/strong&gt; de ${stats.total_countries} países superan el 3% del PIB\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #45b7d1;\"&gt;\n&lt;strong&gt;📈 Promedio OECD&lt;/strong&gt;&lt;br&gt;\nEl promedio OECD es &lt;strong&gt;2.7%&lt;/strong&gt; del PIB en 2023\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #f39c12;\"&gt;\n&lt;strong&gt;🌏 Dominancia Asiática&lt;/strong&gt;&lt;br&gt;\nAsia representa &lt;strong&gt;46%&lt;/strong&gt; del gasto global en I+D\n&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;\n`\n\n\n\n\n\n\n\n\n\n\n\n\nCode\n// Top 10 países\ntop_10 = rd_data\n  .sort((a, b) =&gt; b.value - a.value)\n  .slice(0, 10)\n\n\n\n\n\n\n\n\n\nCode\nPlot.plot({\n  title: \"Top 10 Países en Inversión I+D/PIB\",\n  width: 600,\n  height: 350,\n  x: {\n    label: null,\n    tickRotate: -45\n  },\n  y: {\n    label: \"Porcentaje del PIB (%)\",\n    domain: [0, 7]\n  },\n  color: {\n    domain: Array.from(color_scale.keys()),\n    range: Array.from(color_scale.values())\n  },\n  marks: [\n    Plot.barY(top_10, {\n      x: \"country\",\n      y: \"value\",\n      fill: \"region\",\n      tip: true\n    }),\n    Plot.text(top_10, {\n      x: \"country\",\n      y: d =&gt; d.value + 0.15,\n      text: d =&gt; `${d.value}%`,\n      fontSize: 10,\n      fill: \"#333\"\n    })\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nviewof selected_country = Inputs.select(\n  rd_data.map(d =&gt; d.country),\n  {label: \"Seleccionar país para detalles:\", value: \"Israel\"}\n)\n\n\n\n\n\n\n\n\n\nCode\n// Detalles del país seleccionado\ncountry_detail = rd_data.find(d =&gt; d.country === selected_country)\n\n\n\n\n\n\n\n\n\nCode\nhtml`\n&lt;div style=\"background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; margin: 20px 0;\"&gt;\n&lt;h3 style=\"margin-top: 0; font-size: 24px;\"&gt;${country_detail.country}&lt;/h3&gt;\n&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 15px;\"&gt;\n  \n&lt;div&gt;\n&lt;div style=\"font-size: 32px; font-weight: bold;\"&gt;${country_detail.value}%&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;del PIB en I+D&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;${country_detail.region}&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;Región&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;\n${(country_detail.value / stats.mean).toFixed(1)}x\n&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;vs. promedio OECD&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;\n#${rd_data.sort((a, b) =&gt; b.value - a.value).findIndex(d =&gt; d.country === country_detail.country) + 1}\n&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;Ranking mundial&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;\n`\n\n\n\n\n\n\n\n\n\n\n\n\nEl Gasto Doméstico Bruto en Investigación y Desarrollo (GERD) como porcentaje del PIB incluye:\n\nGastos corrientes y de capital en I+D\nCuatro sectores principales:\n\nEmpresas comerciales\nGobierno\nEducación superior\n\nOrganizaciones privadas sin fines de lucro\n\nTres tipos de investigación:\n\nInvestigación básica\nInvestigación aplicada\nDesarrollo experimental\n\n\n\n\n\n\nFuente principal: OECD Main Science and Technology Indicators (MSTI) Database\nURL: https://data-explorer.oecd.org\nDatos complementarios: World Bank, UNESCO Institute for Statistics\nAño de referencia: 2023 (datos más recientes disponibles)\nMetodología: Paridades de Poder Adquisitivo (PPP), precios constantes base 2015\n\n\n\n\n\nLos datos incluyen I+D financiada desde el extranjero pero excluyen fondos domésticos para I+D realizada fuera del territorio nacional\nLas cifras están expresadas en dólares estadounidenses constantes usando PPP para permitir comparaciones internacionales\nAlgunos países pueden tener metodologías ligeramente diferentes en la recopilación de datos",
     "crumbs": [
       "Ciencia de datos",
       "Experimento con D3"
@@ -3980,7 +4619,7 @@
   {
     "objectID": "datascience/d3-experiment.html#introducción",
     "href": "datascience/d3-experiment.html#introducción",
-    "title": "Inversión Global en Investigación y Desarrollo",
+    "title": "Ejercicios con D3.js en Observable",
     "section": "",
     "text": "La inversión en Investigación y Desarrollo (I+D) es un indicador clave de la capacidad innovadora de un país y su compromiso con el crecimiento económico basado en el conocimiento. El indicador “Gross Domestic Expenditure on Research and Development (GERD) as a percentage of GDP” mide el total de gastos domésticos en I+D expresados como porcentaje del Producto Interno Bruto.\nSegún la OECD, este indicador incluye:\n\nGastos corrientes y de capital en los cuatro sectores principales\nEmpresas privadas, Gobierno, Educación superior y Organizaciones sin fines de lucro\nInvestigación básica, investigación aplicada y desarrollo experimental\n\nLos datos presentados provienen de la base de datos OECD Main Science and Technology Indicators (MSTI) y reflejan las tendencias más recientes hasta 2023.",
     "crumbs": [
@@ -3991,9 +4630,9 @@
   {
     "objectID": "datascience/d3-experiment.html#datos-y-preparación",
     "href": "datascience/d3-experiment.html#datos-y-preparación",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Datos y Preparación",
-    "text": "Datos y Preparación\n\n\nCode\n// Datos de inversión en I+D como % del PIB (2023)\nrd_data = [\n  {country: \"Israel\", value: 6.35, region: \"Asia-Pacifico\"},\n  {country: \"Corea del Sur\", value: 4.96, region: \"Asia-Pacifico\"},\n  {country: \"Suecia\", value: 3.60, region: \"Europa\"},\n  {country: \"Estados Unidos\", value: 3.45, region: \"America del Norte\"},\n  {country: \"Japón\", value: 3.44, region: \"Asia-Pacifico\"},\n  {country: \"Bélgica\", value: 3.32, region: \"Europa\"},\n  {country: \"Austria\", value: 3.29, region: \"Europa\"},\n  {country: \"Suiza\", value: 3.25, region: \"Europa\"},\n  {country: \"Dinamarca\", value: 2.99, region: \"Europa\"},\n  {country: \"Alemania\", value: 2.95, region: \"Europa\"},\n  {country: \"Finlandia\", value: 2.85, region: \"Europa\"},\n  {country: \"Francia\", value: 2.75, region: \"Europa\"},\n  {country: \"Islandia\", value: 2.65, region: \"Europa\"},\n  {country: \"China\", value: 2.58, region: \"Asia-Pacifico\"},\n  {country: \"Países Bajos\", value: 2.35, region: \"Europa\"},\n  {country: \"Reino Unido\", value: 2.25, region: \"Europa\"},\n  {country: \"Noruega\", value: 2.15, region: \"Europa\"},\n  {country: \"Australia\", value: 2.05, region: \"Asia-Pacifico\"},\n  {country: \"Canadá\", value: 1.95, region: \"America del Norte\"},\n  {country: \"Italia\", value: 1.85, region: \"Europa\"},\n  {country: \"España\", value: 1.65, region: \"Europa\"},\n  {country: \"Portugal\", value: 1.45, region: \"Europa\"},\n  {country: \"México\", value: 0.55, region: \"America del Norte\"}\n]\n\n\n\n\n\n\n\n\n\nCode\n// Configuración de colores por región\ncolor_scale = new Map([\n  [\"Asia-Pacifico\", \"#ff6b6b\"],\n  [\"Europa\", \"#4ecdc4\"], \n  [\"America del Norte\", \"#45b7d1\"]\n])\n\n\n\n\n\n\n\n\n\nCode\n// Estadísticas descriptivas\nstats = {\n  const values = rd_data.map(d =&gt; d.value);\n  return {\n    max: d3.max(values),\n    min: d3.min(values),\n    mean: d3.mean(values),\n    median: d3.median(values),\n    countries_above_3: rd_data.filter(d =&gt; d.value &gt;= 3.0).length,\n    total_countries: rd_data.length\n  }\n}",
+    "title": "Ejercicios con D3.js en Observable",
+    "section": "",
+    "text": "Code\n// Datos de inversión en I+D como % del PIB (2023)\nrd_data = [\n  {country: \"Israel\", value: 6.35, region: \"Asia-Pacifico\"},\n  {country: \"Corea del Sur\", value: 4.96, region: \"Asia-Pacifico\"},\n  {country: \"Suecia\", value: 3.60, region: \"Europa\"},\n  {country: \"Estados Unidos\", value: 3.45, region: \"America del Norte\"},\n  {country: \"Japón\", value: 3.44, region: \"Asia-Pacifico\"},\n  {country: \"Bélgica\", value: 3.32, region: \"Europa\"},\n  {country: \"Austria\", value: 3.29, region: \"Europa\"},\n  {country: \"Suiza\", value: 3.25, region: \"Europa\"},\n  {country: \"Dinamarca\", value: 2.99, region: \"Europa\"},\n  {country: \"Alemania\", value: 2.95, region: \"Europa\"},\n  {country: \"Finlandia\", value: 2.85, region: \"Europa\"},\n  {country: \"Francia\", value: 2.75, region: \"Europa\"},\n  {country: \"Islandia\", value: 2.65, region: \"Europa\"},\n  {country: \"China\", value: 2.58, region: \"Asia-Pacifico\"},\n  {country: \"Países Bajos\", value: 2.35, region: \"Europa\"},\n  {country: \"Reino Unido\", value: 2.25, region: \"Europa\"},\n  {country: \"Noruega\", value: 2.15, region: \"Europa\"},\n  {country: \"Australia\", value: 2.05, region: \"Asia-Pacifico\"},\n  {country: \"Canadá\", value: 1.95, region: \"America del Norte\"},\n  {country: \"Italia\", value: 1.85, region: \"Europa\"},\n  {country: \"España\", value: 1.65, region: \"Europa\"},\n  {country: \"Portugal\", value: 1.45, region: \"Europa\"},\n  {country: \"México\", value: 0.55, region: \"America del Norte\"}\n]\n\n\n\n\n\n\n\n\n\nCode\n// Configuración de colores por región\ncolor_scale = new Map([\n  [\"Asia-Pacifico\", \"#ff6b6b\"],\n  [\"Europa\", \"#4ecdc4\"], \n  [\"America del Norte\", \"#45b7d1\"]\n])\n\n\n\n\n\n\n\n\n\nCode\n// Estadísticas descriptivas\nstats = {\n  const values = rd_data.map(d =&gt; d.value);\n  return {\n    max: d3.max(values),\n    min: d3.min(values),\n    mean: d3.mean(values),\n    median: d3.median(values),\n    countries_above_3: rd_data.filter(d =&gt; d.value &gt;= 3.0).length,\n    total_countries: rd_data.length\n  }\n}",
     "crumbs": [
       "Ciencia de datos",
       "Experimento con D3"
@@ -4002,9 +4641,9 @@
   {
     "objectID": "datascience/d3-experiment.html#visualización-principal-inversión-en-id-por-país",
     "href": "datascience/d3-experiment.html#visualización-principal-inversión-en-id-por-país",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Visualización Principal: Inversión en I+D por País",
-    "text": "Visualización Principal: Inversión en I+D por País\n\n\nCode\nviewof selected_region = Inputs.select(\n  [\"Todas las regiones\", \"Asia-Pacifico\", \"Europa\", \"America del Norte\"],\n  {label: \"Filtrar por región:\", value: \"Todas las regiones\"}\n)\n\n\n\n\n\n\n\n\n\nCode\n// Filtrar datos según selección\nfiltered_data = selected_region === \"Todas las regiones\" \n  ? rd_data \n  : rd_data.filter(d =&gt; d.region === selected_region)\n\n\n\n\n\n\n\n\n\nCode\n// Gráfico de barras principal\nPlot.plot({\n  title: \"Gastos Domésticos en I+D como % del PIB (2023)\",\n  subtitle: `Países seleccionados: ${selected_region}`,\n  width: 900,\n  height: 500,\n  marginLeft: 100,\n  marginBottom: 80,\n  x: {\n    domain: [0, 7],\n    label: \"Porcentaje del PIB (%)\",\n    grid: true\n  },\n  y: {\n    label: null,\n    domain: filtered_data.map(d =&gt; d.country)\n  },\n  color: {\n    domain: Array.from(color_scale.keys()),\n    range: Array.from(color_scale.values()),\n    legend: true\n  },\n  marks: [\n    Plot.barX(filtered_data, {\n      x: \"value\",\n      y: \"country\",\n      fill: \"region\",\n      sort: {y: \"x\", reverse: true},\n      tip: true\n    }),\n    Plot.text(filtered_data, {\n      x: d =&gt; d.value + 0.15,\n      y: \"country\",\n      text: d =&gt; `${d.value}%`,\n      fontSize: 11,\n      fill: \"#333\"\n    }),\n    Plot.ruleX([2.7], {stroke: \"#e74c3c\", strokeWidth: 2, strokeDasharray: \"5,5\"})\n  ]\n})\n\n\n\n\n\n\n\n\n\nCode\nhtml`&lt;p style=\"margin-top: 10px; font-size: 14px; color: #666;\"&gt;\n&lt;strong&gt;Línea roja punteada:&lt;/strong&gt; Promedio OECD (2.7%)\n&lt;/p&gt;`",
+    "title": "Ejercicios con D3.js en Observable",
+    "section": "",
+    "text": "Code\nviewof selected_region = Inputs.select(\n  [\"Todas las regiones\", \"Asia-Pacifico\", \"Europa\", \"America del Norte\"],\n  {label: \"Filtrar por región:\", value: \"Todas las regiones\"}\n)\n\n\n\n\n\n\n\n\n\nCode\n// Filtrar datos según selección\nfiltered_data = selected_region === \"Todas las regiones\" \n  ? rd_data \n  : rd_data.filter(d =&gt; d.region === selected_region)\n\n\n\n\n\n\n\n\n\nCode\n// Gráfico de barras principal\nPlot.plot({\n  title: \"Gastos Domésticos en I+D como % del PIB (2023)\",\n  subtitle: `Países seleccionados: ${selected_region}`,\n  width: 900,\n  height: 500,\n  marginLeft: 100,\n  marginBottom: 80,\n  x: {\n    domain: [0, 7],\n    label: \"Porcentaje del PIB (%)\",\n    grid: true\n  },\n  y: {\n    label: null,\n    domain: filtered_data.map(d =&gt; d.country)\n  },\n  color: {\n    domain: Array.from(color_scale.keys()),\n    range: Array.from(color_scale.values()),\n    legend: true\n  },\n  marks: [\n    Plot.barX(filtered_data, {\n      x: \"value\",\n      y: \"country\",\n      fill: \"region\",\n      sort: {y: \"x\", reverse: true},\n      tip: true\n    }),\n    Plot.text(filtered_data, {\n      x: d =&gt; d.value + 0.15,\n      y: \"country\",\n      text: d =&gt; `${d.value}%`,\n      fontSize: 11,\n      fill: \"#333\"\n    }),\n    Plot.ruleX([2.7], {stroke: \"#e74c3c\", strokeWidth: 2, strokeDasharray: \"5,5\"})\n  ]\n})\n\n\n\n\n\n\n\n\n\nCode\nhtml`&lt;p style=\"margin-top: 10px; font-size: 14px; color: #666;\"&gt;\n&lt;strong&gt;Línea roja punteada:&lt;/strong&gt; Promedio OECD (2.7%)\n&lt;/p&gt;`",
     "crumbs": [
       "Ciencia de datos",
       "Experimento con D3"
@@ -4013,9 +4652,9 @@
   {
     "objectID": "datascience/d3-experiment.html#análisis-por-regiones",
     "href": "datascience/d3-experiment.html#análisis-por-regiones",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Análisis por Regiones",
-    "text": "Análisis por Regiones\n\n\nCode\n// Análisis regional\nregional_summary = d3.rollup(\n  rd_data,\n  v =&gt; ({\n    count: v.length,\n    average: d3.mean(v, d =&gt; d.value),\n    max: d3.max(v, d =&gt; d.value),\n    min: d3.min(v, d =&gt; d.value),\n    countries: v.map(d =&gt; d.country).join(\", \")\n  }),\n  d =&gt; d.region\n)\n\n\n\n\n\n\n\n\n\nCode\n// Tabla resumen por región\nInputs.table(\n  Array.from(regional_summary, ([region, data]) =&gt; ({\n    \"Región\": region,\n    \"Países\": data.count,\n    \"Promedio (%)\": data.average.toFixed(2),\n    \"Máximo (%)\": data.max.toFixed(2),\n    \"Mínimo (%)\": data.min.toFixed(2)\n  })),\n  {\n    header: {\n      \"Región\": \"Región\",\n      \"Países\": \"Número de Países\",\n      \"Promedio (%)\": \"Promedio I+D/PIB\",\n      \"Máximo (%)\": \"Máximo\",\n      \"Mínimo (%)\": \"Mínimo\"\n    }\n  }\n)",
+    "title": "Ejercicios con D3.js en Observable",
+    "section": "",
+    "text": "Code\n// Análisis regional\nregional_summary = d3.rollup(\n  rd_data,\n  v =&gt; ({\n    count: v.length,\n    average: d3.mean(v, d =&gt; d.value),\n    max: d3.max(v, d =&gt; d.value),\n    min: d3.min(v, d =&gt; d.value),\n    countries: v.map(d =&gt; d.country).join(\", \")\n  }),\n  d =&gt; d.region\n)\n\n\n\n\n\n\n\n\n\nCode\n// Tabla resumen por región\nInputs.table(\n  Array.from(regional_summary, ([region, data]) =&gt; ({\n    \"Región\": region,\n    \"Países\": data.count,\n    \"Promedio (%)\": data.average.toFixed(2),\n    \"Máximo (%)\": data.max.toFixed(2),\n    \"Mínimo (%)\": data.min.toFixed(2)\n  })),\n  {\n    header: {\n      \"Región\": \"Región\",\n      \"Países\": \"Número de Países\",\n      \"Promedio (%)\": \"Promedio I+D/PIB\",\n      \"Máximo (%)\": \"Máximo\",\n      \"Mínimo (%)\": \"Mínimo\"\n    }\n  }\n)",
     "crumbs": [
       "Ciencia de datos",
       "Experimento con D3"
@@ -4024,9 +4663,9 @@
   {
     "objectID": "datascience/d3-experiment.html#distribución-y-percentiles",
     "href": "datascience/d3-experiment.html#distribución-y-percentiles",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Distribución y Percentiles",
-    "text": "Distribución y Percentiles\n\n\nCode\n// Histograma de distribución\nPlot.plot({\n  title: \"Distribución de la Inversión en I+D\",\n  width: 700,\n  height: 300,\n  x: {\n    label: \"Porcentaje del PIB (%)\",\n    domain: [0, 7]\n  },\n  y: {\n    label: \"Número de países\"\n  },\n  marks: [\n    Plot.rectY(rd_data, Plot.binX({y: \"count\"}, {x: \"value\", thresholds: 20, fill: \"#4ecdc4\", opacity: 0.7})),\n    Plot.ruleX([stats.mean], {stroke: \"#e74c3c\", strokeWidth: 2}),\n    Plot.ruleX([stats.median], {stroke: \"#f39c12\", strokeWidth: 2})\n  ]\n})\n\n\n\n\n\n\n\n\n\nCode\nhtml`&lt;p style=\"margin-top: 10px; font-size: 14px; color: #666;\"&gt;\n&lt;span style=\"color: #e74c3c;\"&gt;&lt;strong&gt;Línea roja:&lt;/strong&gt; Media (${stats.mean.toFixed(2)}%)&lt;/span&gt; | \n&lt;span style=\"color: #f39c12;\"&gt;&lt;strong&gt;Línea naranja:&lt;/strong&gt; Mediana (${stats.median.toFixed(2)}%)&lt;/span&gt;\n&lt;/p&gt;`",
+    "title": "Ejercicios con D3.js en Observable",
+    "section": "",
+    "text": "Code\n// Histograma de distribución\nPlot.plot({\n  title: \"Distribución de la Inversión en I+D\",\n  width: 700,\n  height: 300,\n  x: {\n    label: \"Porcentaje del PIB (%)\",\n    domain: [0, 7]\n  },\n  y: {\n    label: \"Número de países\"\n  },\n  marks: [\n    Plot.rectY(rd_data, Plot.binX({y: \"count\"}, {x: \"value\", thresholds: 20, fill: \"#4ecdc4\", opacity: 0.7})),\n    Plot.ruleX([stats.mean], {stroke: \"#e74c3c\", strokeWidth: 2}),\n    Plot.ruleX([stats.median], {stroke: \"#f39c12\", strokeWidth: 2})\n  ]\n})\n\n\n\n\n\n\n\n\n\nCode\nhtml`&lt;p style=\"margin-top: 10px; font-size: 14px; color: #666;\"&gt;\n&lt;span style=\"color: #e74c3c;\"&gt;&lt;strong&gt;Línea roja:&lt;/strong&gt; Media (${stats.mean.toFixed(2)}%)&lt;/span&gt; | \n&lt;span style=\"color: #f39c12;\"&gt;&lt;strong&gt;Línea naranja:&lt;/strong&gt; Mediana (${stats.median.toFixed(2)}%)&lt;/span&gt;\n&lt;/p&gt;`",
     "crumbs": [
       "Ciencia de datos",
       "Experimento con D3"
@@ -4035,9 +4674,9 @@
   {
     "objectID": "datascience/d3-experiment.html#insights-clave",
     "href": "datascience/d3-experiment.html#insights-clave",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Insights Clave",
-    "text": "Insights Clave\n\n\nCode\nhtml`\n&lt;div style=\"background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;\"&gt;\n&lt;h4 style=\"color: #2c3e50; margin-top: 0;\"&gt;📊 Hallazgos Principales&lt;/h4&gt;\n\n&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;\"&gt;\n  \n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #ff6b6b;\"&gt;\n&lt;strong&gt;🏆 Líderes Globales&lt;/strong&gt;&lt;br&gt;\nIsrael encabeza con &lt;strong&gt;${stats.max}%&lt;/strong&gt; del PIB, seguido por Corea del Sur y Suecia\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #4ecdc4;\"&gt;\n&lt;strong&gt;🌍 Umbral del 3%&lt;/strong&gt;&lt;br&gt;\nSolo &lt;strong&gt;${stats.countries_above_3}&lt;/strong&gt; de ${stats.total_countries} países superan el 3% del PIB\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #45b7d1;\"&gt;\n&lt;strong&gt;📈 Promedio OECD&lt;/strong&gt;&lt;br&gt;\nEl promedio OECD es &lt;strong&gt;2.7%&lt;/strong&gt; del PIB en 2023\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #f39c12;\"&gt;\n&lt;strong&gt;🌏 Dominancia Asiática&lt;/strong&gt;&lt;br&gt;\nAsia representa &lt;strong&gt;46%&lt;/strong&gt; del gasto global en I+D\n&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;\n`",
+    "title": "Ejercicios con D3.js en Observable",
+    "section": "",
+    "text": "Code\nhtml`\n&lt;div style=\"background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;\"&gt;\n&lt;h4 style=\"color: #2c3e50; margin-top: 0;\"&gt;📊 Hallazgos Principales&lt;/h4&gt;\n\n&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;\"&gt;\n  \n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #ff6b6b;\"&gt;\n&lt;strong&gt;🏆 Líderes Globales&lt;/strong&gt;&lt;br&gt;\nIsrael encabeza con &lt;strong&gt;${stats.max}%&lt;/strong&gt; del PIB, seguido por Corea del Sur y Suecia\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #4ecdc4;\"&gt;\n&lt;strong&gt;🌍 Umbral del 3%&lt;/strong&gt;&lt;br&gt;\nSolo &lt;strong&gt;${stats.countries_above_3}&lt;/strong&gt; de ${stats.total_countries} países superan el 3% del PIB\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #45b7d1;\"&gt;\n&lt;strong&gt;📈 Promedio OECD&lt;/strong&gt;&lt;br&gt;\nEl promedio OECD es &lt;strong&gt;2.7%&lt;/strong&gt; del PIB en 2023\n&lt;/div&gt;\n\n&lt;div style=\"background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #f39c12;\"&gt;\n&lt;strong&gt;🌏 Dominancia Asiática&lt;/strong&gt;&lt;br&gt;\nAsia representa &lt;strong&gt;46%&lt;/strong&gt; del gasto global en I+D\n&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;\n`",
     "crumbs": [
       "Ciencia de datos",
       "Experimento con D3"
@@ -4046,9 +4685,9 @@
   {
     "objectID": "datascience/d3-experiment.html#top-10-países",
     "href": "datascience/d3-experiment.html#top-10-países",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Top 10 Países",
-    "text": "Top 10 Países\n\n\nCode\n// Top 10 países\ntop_10 = rd_data\n  .sort((a, b) =&gt; b.value - a.value)\n  .slice(0, 10)\n\n\n\n\n\n\n\n\n\nCode\nPlot.plot({\n  title: \"Top 10 Países en Inversión I+D/PIB\",\n  width: 600,\n  height: 350,\n  x: {\n    label: null,\n    tickRotate: -45\n  },\n  y: {\n    label: \"Porcentaje del PIB (%)\",\n    domain: [0, 7]\n  },\n  color: {\n    domain: Array.from(color_scale.keys()),\n    range: Array.from(color_scale.values())\n  },\n  marks: [\n    Plot.barY(top_10, {\n      x: \"country\",\n      y: \"value\",\n      fill: \"region\",\n      tip: true\n    }),\n    Plot.text(top_10, {\n      x: \"country\",\n      y: d =&gt; d.value + 0.15,\n      text: d =&gt; `${d.value}%`,\n      fontSize: 10,\n      fill: \"#333\"\n    })\n  ]\n})",
+    "title": "Ejercicios con D3.js en Observable",
+    "section": "",
+    "text": "Code\n// Top 10 países\ntop_10 = rd_data\n  .sort((a, b) =&gt; b.value - a.value)\n  .slice(0, 10)\n\n\n\n\n\n\n\n\n\nCode\nPlot.plot({\n  title: \"Top 10 Países en Inversión I+D/PIB\",\n  width: 600,\n  height: 350,\n  x: {\n    label: null,\n    tickRotate: -45\n  },\n  y: {\n    label: \"Porcentaje del PIB (%)\",\n    domain: [0, 7]\n  },\n  color: {\n    domain: Array.from(color_scale.keys()),\n    range: Array.from(color_scale.values())\n  },\n  marks: [\n    Plot.barY(top_10, {\n      x: \"country\",\n      y: \"value\",\n      fill: \"region\",\n      tip: true\n    }),\n    Plot.text(top_10, {\n      x: \"country\",\n      y: d =&gt; d.value + 0.15,\n      text: d =&gt; `${d.value}%`,\n      fontSize: 10,\n      fill: \"#333\"\n    })\n  ]\n})",
     "crumbs": [
       "Ciencia de datos",
       "Experimento con D3"
@@ -4057,9 +4696,9 @@
   {
     "objectID": "datascience/d3-experiment.html#explorador-interactivo",
     "href": "datascience/d3-experiment.html#explorador-interactivo",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Explorador Interactivo",
-    "text": "Explorador Interactivo\n\n\nCode\nviewof selected_country = Inputs.select(\n  rd_data.map(d =&gt; d.country),\n  {label: \"Seleccionar país para detalles:\", value: \"Israel\"}\n)\n\n\n\n\n\n\n\n\n\nCode\n// Detalles del país seleccionado\ncountry_detail = rd_data.find(d =&gt; d.country === selected_country)\n\n\n\n\n\n\n\n\n\nCode\nhtml`\n&lt;div style=\"background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; margin: 20px 0;\"&gt;\n&lt;h3 style=\"margin-top: 0; font-size: 24px;\"&gt;${country_detail.country}&lt;/h3&gt;\n&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 15px;\"&gt;\n  \n&lt;div&gt;\n&lt;div style=\"font-size: 32px; font-weight: bold;\"&gt;${country_detail.value}%&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;del PIB en I+D&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;${country_detail.region}&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;Región&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;\n${(country_detail.value / stats.mean).toFixed(1)}x\n&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;vs. promedio OECD&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;\n#${rd_data.sort((a, b) =&gt; b.value - a.value).findIndex(d =&gt; d.country === country_detail.country) + 1}\n&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;Ranking mundial&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;\n`",
+    "title": "Ejercicios con D3.js en Observable",
+    "section": "",
+    "text": "Code\nviewof selected_country = Inputs.select(\n  rd_data.map(d =&gt; d.country),\n  {label: \"Seleccionar país para detalles:\", value: \"Israel\"}\n)\n\n\n\n\n\n\n\n\n\nCode\n// Detalles del país seleccionado\ncountry_detail = rd_data.find(d =&gt; d.country === selected_country)\n\n\n\n\n\n\n\n\n\nCode\nhtml`\n&lt;div style=\"background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 12px; margin: 20px 0;\"&gt;\n&lt;h3 style=\"margin-top: 0; font-size: 24px;\"&gt;${country_detail.country}&lt;/h3&gt;\n&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 15px;\"&gt;\n  \n&lt;div&gt;\n&lt;div style=\"font-size: 32px; font-weight: bold;\"&gt;${country_detail.value}%&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;del PIB en I+D&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;${country_detail.region}&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;Región&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;\n${(country_detail.value / stats.mean).toFixed(1)}x\n&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;vs. promedio OECD&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n&lt;div style=\"font-size: 18px; font-weight: bold;\"&gt;\n#${rd_data.sort((a, b) =&gt; b.value - a.value).findIndex(d =&gt; d.country === country_detail.country) + 1}\n&lt;/div&gt;\n&lt;div style=\"opacity: 0.9;\"&gt;Ranking mundial&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;\n`",
     "crumbs": [
       "Ciencia de datos",
       "Experimento con D3"
@@ -4068,9 +4707,9 @@
   {
     "objectID": "datascience/d3-experiment.html#metodología-y-fuentes",
     "href": "datascience/d3-experiment.html#metodología-y-fuentes",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Metodología y Fuentes",
-    "text": "Metodología y Fuentes\n\nDefinición del Indicador\nEl Gasto Doméstico Bruto en Investigación y Desarrollo (GERD) como porcentaje del PIB incluye:\n\nGastos corrientes y de capital en I+D\nCuatro sectores principales:\n\nEmpresas comerciales\nGobierno\nEducación superior\n\nOrganizaciones privadas sin fines de lucro\n\nTres tipos de investigación:\n\nInvestigación básica\nInvestigación aplicada\nDesarrollo experimental\n\n\n\n\nFuentes de Datos\n\nFuente principal: OECD Main Science and Technology Indicators (MSTI) Database\nURL: https://data-explorer.oecd.org\nDatos complementarios: World Bank, UNESCO Institute for Statistics\nAño de referencia: 2023 (datos más recientes disponibles)\nMetodología: Paridades de Poder Adquisitivo (PPP), precios constantes base 2015\n\n\n\nNotas Técnicas\n\nLos datos incluyen I+D financiada desde el extranjero pero excluyen fondos domésticos para I+D realizada fuera del territorio nacional\nLas cifras están expresadas en dólares estadounidenses constantes usando PPP para permitir comparaciones internacionales\nAlgunos países pueden tener metodologías ligeramente diferentes en la recopilación de datos",
+    "title": "Ejercicios con D3.js en Observable",
+    "section": "",
+    "text": "El Gasto Doméstico Bruto en Investigación y Desarrollo (GERD) como porcentaje del PIB incluye:\n\nGastos corrientes y de capital en I+D\nCuatro sectores principales:\n\nEmpresas comerciales\nGobierno\nEducación superior\n\nOrganizaciones privadas sin fines de lucro\n\nTres tipos de investigación:\n\nInvestigación básica\nInvestigación aplicada\nDesarrollo experimental\n\n\n\n\n\n\nFuente principal: OECD Main Science and Technology Indicators (MSTI) Database\nURL: https://data-explorer.oecd.org\nDatos complementarios: World Bank, UNESCO Institute for Statistics\nAño de referencia: 2023 (datos más recientes disponibles)\nMetodología: Paridades de Poder Adquisitivo (PPP), precios constantes base 2015\n\n\n\n\n\nLos datos incluyen I+D financiada desde el extranjero pero excluyen fondos domésticos para I+D realizada fuera del territorio nacional\nLas cifras están expresadas en dólares estadounidenses constantes usando PPP para permitir comparaciones internacionales\nAlgunos países pueden tener metodologías ligeramente diferentes en la recopilación de datos",
     "crumbs": [
       "Ciencia de datos",
       "Experimento con D3"
@@ -4079,7 +4718,7 @@
   {
     "objectID": "datascience/d3-experiment.html#diagrama-de-radar",
     "href": "datascience/d3-experiment.html#diagrama-de-radar",
-    "title": "Inversión Global en Investigación y Desarrollo",
+    "title": "Ejercicios con D3.js en Observable",
     "section": "Diagrama de radar",
     "text": "Diagrama de radar\n\n\nCode\ndata = [\n  {axis: \"1. Evaluación comunitaria\", value: 1.2},\n  {axis: \"2. Evaluación científica del riesgo\", value: 2.0},\n  {axis: \"3. Diseminación de información en RRD\", value: 2.5},\n  {axis: \"4. Educación de los niños en RRD\", value: 3.0},\n  {axis: \"5. RRD en la planificación del desarrollo\", value: 1.8},\n  {axis: \"6. RRD en la planificación territorial\", value: 2.0},\n  {axis: \"7. Toma comunitaria de decisiones\", value: 2.2},\n  {axis: \"8. Inclusión de grupos vulnerables\", value: 1.7},\n  {axis: \"9. Participación de las mujeres\", value: 2.3},\n  {axis: \"10. Conocimiento de derechos\", value: 1.9},\n  {axis: \"11. Alianzas para la RRD\", value: 2.6},\n  {axis: \"12. Gestión ambiental sostenible\", value: 2.1},\n  {axis: \"13. Seguridad y gestión del agua\", value: 1.8},\n  {axis: \"14. Acceso y conciencia de la salud\", value: 1.6},\n  {axis: \"15. Suministro seguro de alimentos\", value: 1.4},\n  {axis: \"16. Prácticas de medios de vida\", value: 1.3},\n  {axis: \"17. Acceso a mercado\", value: 1.5},\n  {axis: \"18. Acceso a servicios financieros\", value: 1.2},\n  {axis: \"19. Protección de ingresos y activos\", value: 1.7},\n  {axis: \"20. Acceso a protección social\", value: 2.0},\n  {axis: \"21. Cohesión social\", value: 3.2},\n  {axis: \"22. Infraestructura crítica\", value: 2.8},\n  {axis: \"23. Vivienda\", value: 1.9},\n  {axis: \"24. Planificación de contingencia\", value: 2.1},\n  {axis: \"25. Sistema de alerta temprana\", value: 2.3},\n  {axis: \"26. Capacidad de preparación\", value: 2.0},\n  {axis: \"27. Servicios de salud\", value: 2.5},\n  {axis: \"28. Servicios de educación\", value: 2.9},\n  {axis: \"29. Infraestructura en emergencias\", value: 2.7},\n  {axis: \"30. Liderazgo y voluntariado\", value: 3.0}\n]\n\n// Radar chart con D3\n{\n  const width = 600, height = 600;\n  const radius = Math.min(width, height) / 2 - 60;\n  const levels = 5; // número de círculos concéntricos\n  const maxValue = 3.5; // escala máxima\n\n  const angleSlice = (Math.PI * 2) / data.length;\n\n  const rScale = d3.scaleLinear()\n    .domain([0, maxValue])\n    .range([0, radius]);\n\n  const svg = d3.create(\"svg\")\n    .attr(\"width\", width)\n    .attr(\"height\", height);\n\n  const g = svg.append(\"g\")\n    .attr(\"transform\", `translate(${width/2},${height/2})`);\n\n  // Dibujar círculos concéntricos\n  for (let i = 0; i &lt;= levels; i++) {\n    g.append(\"circle\")\n      .attr(\"r\", radius/levels * i)\n      .attr(\"fill\", \"none\")\n      .attr(\"stroke\", \"#ccc\");\n  }\n\n  // Ejes radiales\n  data.forEach((d, i) =&gt; {\n    const angle = angleSlice * i - Math.PI/2;\n    g.append(\"line\")\n      .attr(\"x1\", 0)\n      .attr(\"y1\", 0)\n      .attr(\"x2\", rScale(maxValue) * Math.cos(angle))\n      .attr(\"y2\", rScale(maxValue) * Math.sin(angle))\n      .attr(\"stroke\", \"#999\");\n\n    // Etiquetas\n    g.append(\"text\")\n      .attr(\"x\", (rScale(maxValue + 0.2)) * Math.cos(angle))\n      .attr(\"y\", (rScale(maxValue + 0.2)) * Math.sin(angle))\n      .attr(\"dy\", \"0.35em\")\n      .style(\"font-size\", \"10px\")\n      .style(\"text-anchor\", angle &gt; Math.PI/2 && angle &lt; 3*Math.PI/2 ? \"end\" : \"start\")\n      .text(d.axis);\n  });\n\n  // Línea de valores\n  const line = d3.lineRadial()\n    .radius(d =&gt; rScale(d.value))\n    .angle((d,i) =&gt; i * angleSlice)\n    .curve(d3.curveLinearClosed);\n\n  g.append(\"path\")\n    .datum(data)\n    .attr(\"d\", line)\n    .attr(\"fill\", \"rgba(50,150,250,0.5)\")\n    .attr(\"stroke\", \"steelblue\")\n    .attr(\"stroke-width\", 2);\n\n  return svg.node();\n}",
     "crumbs": [
@@ -4090,7 +4729,7 @@
   {
     "objectID": "datascience/d3-experiment.html#tablas",
     "href": "datascience/d3-experiment.html#tablas",
-    "title": "Inversión Global en Investigación y Desarrollo",
+    "title": "Ejercicios con D3.js en Observable",
     "section": "Tablas",
     "text": "Tablas\nTabla con D3.js puro\n\n\nCode\n// Datos de ejemplo\npaises_data = [\n  { País: \"Colombia\", Población: 52000000, Región: \"América\" },\n  { País: \"Chile\", Población: 19000000, Región: \"América\" },\n  { País: \"España\", Población: 47000000, Región: \"Europa\" }\n]\n\n\n\n\n\n\n\n\n\nCode\n// Tabla creada con D3\n{\n  const data = paises_data;\n  const table = d3.create(\"table\")\n    .style(\"border-collapse\", \"collapse\")\n    .style(\"width\", \"100%\");\n\n  const thead = table.append(\"thead\");\n  const tbody = table.append(\"tbody\");\n\n  const columns = Object.keys(data[0]);\n\n  // encabezados\n  thead.append(\"tr\")\n    .selectAll(\"th\")\n    .data(columns)\n    .enter()\n    .append(\"th\")\n    .text(d =&gt; d)\n    .style(\"border\", \"1px solid #ccc\")\n    .style(\"background\", \"#f4f4f4\")\n    .style(\"padding\", \"8px\");\n\n  // filas\n  const rows = tbody.selectAll(\"tr\")\n    .data(data)\n    .enter()\n    .append(\"tr\");\n\n  rows.selectAll(\"td\")\n    .data(d =&gt; columns.map(c =&gt; d[c]))\n    .enter()\n    .append(\"td\")\n    .text(d =&gt; d)\n    .style(\"border\", \"1px solid #ccc\")\n    .style(\"padding\", \"8px\");\n\n  return table.node();\n}\n\n\n\n\n\n\n\nTabla con filtros usando Inputs.table\n\n\nCode\nviewof filtro = Inputs.select([\"Todas\", \"América\", \"Europa\"], {label: \"Filtrar por región:\", value: \"Todas\"})\n\n\n\n\n\n\n\n\n\nCode\n// Datos filtrados\npaises_filtrados = filtro === \"Todas\"\n  ? paises_data\n  : paises_data.filter(d =&gt; d.Región === filtro)\n\n\n\n\n\n\n\n\n\nCode\nInputs.table(paises_filtrados, {\n  header: {\n    \"País\": \"País\",\n    \"Población\": \"Población\",\n    \"Región\": \"Región\"\n  }\n})",
     "crumbs": [
@@ -4099,630 +4738,83 @@
     ]
   },
   {
-    "objectID": "datascience/claude-slides.html#contenidos",
-    "href": "datascience/claude-slides.html#contenidos",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Contenidos",
-    "text": "Contenidos\n\nIntroduccion\nFundamentos\nPlanificacion y diseno\nPruebas e iteracion\nDistribucion y publicacion\nPatrones y solucion de problemas\nRecursos y referencias",
+    "objectID": "datascience/d3-experiment.html#piramide-poblacional-en-d3",
+    "href": "datascience/d3-experiment.html#piramide-poblacional-en-d3",
+    "title": "Ejercicios con D3.js en Observable",
+    "section": "Piramide poblacional en D3",
+    "text": "Piramide poblacional en D3\nPirámide poblacional construida con las Proyecciones de Población DANE 2018-2070, por área geográfica y año.\n\n\nCode\nviewof año_pir = {\n  let year = 2024;\n  let playing = false;\n  let interval = null;\n  let speed = 600;\n  const speeds = { '1×': 600, '1.5×': 400, '2×': 300, '4×': 150 };\n\n  const btnStyle = (active) =&gt;\n    `padding:4px 10px;border-radius:4px;cursor:pointer;border:none;\n     font-size:12px;font-weight:600;\n     background:${active ? '#3a7abf' : '#ddd'};\n     color:${active ? 'white' : '#555'}`;\n\n  const container = html`&lt;div style=\"display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:6px 0\"&gt;\n    &lt;label style=\"font-size:13px;font-weight:600;color:#333\"&gt;Año:&lt;/label&gt;\n    &lt;button id=\"playbtn_pir\" style=\"padding:5px 16px;border-radius:4px;cursor:pointer;\n      background:#3a7abf;color:white;border:none;font-size:13px;font-weight:600\"&gt;\n      ▶ Play\n    &lt;/button&gt;\n    &lt;span id=\"yearlbl_pir\" style=\"font-weight:700;font-size:16px;min-width:44px;color:#222\"&gt;${year}&lt;/span&gt;\n    &lt;input id=\"slider_pir\" type=\"range\" min=\"2018\" max=\"2070\" step=\"1\" value=\"${year}\"\n      style=\"width:240px;accent-color:#3a7abf\"&gt;\n    &lt;span style=\"font-size:12px;color:#888\"&gt;2018 – 2070&lt;/span&gt;\n    &lt;div style=\"display:flex;gap:4px;margin-left:4px\"&gt;\n      &lt;button class=\"spd_pir\" data-ms=\"600\"  style=\"${btnStyle(true)}\"&gt;1×&lt;/button&gt;\n      &lt;button class=\"spd_pir\" data-ms=\"400\"  style=\"${btnStyle(false)}\"&gt;1.5×&lt;/button&gt;\n      &lt;button class=\"spd_pir\" data-ms=\"300\"  style=\"${btnStyle(false)}\"&gt;2×&lt;/button&gt;\n      &lt;button class=\"spd_pir\" data-ms=\"150\"  style=\"${btnStyle(false)}\"&gt;4×&lt;/button&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;`;\n\n  const btn      = container.querySelector('#playbtn_pir');\n  const slider   = container.querySelector('#slider_pir');\n  const lbl      = container.querySelector('#yearlbl_pir');\n  const spdBtns  = container.querySelectorAll('.spd_pir');\n\n  function update(y) {\n    year = y; slider.value = y; lbl.textContent = y;\n    container.value = y;\n    container.dispatchEvent(new CustomEvent('input'));\n  }\n\n  function setSpeed(ms) {\n    speed = ms;\n    spdBtns.forEach(b =&gt; {\n      const active = +b.dataset.ms === ms;\n      b.style.background = active ? '#3a7abf' : '#ddd';\n      b.style.color      = active ? 'white'   : '#555';\n    });\n    if (playing) {\n      clearInterval(interval);\n      interval = setInterval(() =&gt; update(year &gt;= 2070 ? 2018 : year + 1), speed);\n    }\n  }\n\n  btn.addEventListener('click', () =&gt; {\n    playing = !playing;\n    btn.textContent   = playing ? '⏸ Pausa' : '▶ Play';\n    btn.style.background = playing ? '#c0392b' : '#3a7abf';\n    if (playing) {\n      interval = setInterval(() =&gt; update(year &gt;= 2070 ? 2018 : year + 1), speed);\n    } else {\n      clearInterval(interval);\n    }\n  });\n\n  slider.addEventListener('input', () =&gt; update(+slider.value));\n  spdBtns.forEach(b =&gt; b.addEventListener('click', () =&gt; setSpeed(+b.dataset.ms)));\n\n  container.value = year;\n  return container;\n}\n\n\n\n\n\n\n\n\n\nCode\nviewof area_pir = Inputs.select([\"Total\", \"Cabecera\", \"Centros Poblados y Rural Disperso\"], {\n  label: \"Área geográfica:\"\n})\n\n\n\n\n\n\n\n\n\nCode\norden_grupos = [\"0 - 4\",\"5 - 9\",\"10 - 14\",\"15 - 19\",\"20 - 24\",\"25 - 29\",\n                \"30 - 34\",\"35 - 39\",\"40 - 44\",\"45 - 49\",\"50 - 54\",\"55 - 59\",\n                \"60 - 64\",\"65 - 69\",\"70 - 74\",\"75 - 79\",\"80 +\"]\n\ndatos_filtrados = datos_piramide_colombia\n  .filter(d =&gt; d.año === año_pir && d.area === area_pir)\n  .sort((a, b) =&gt; a.orden - b.orden)\n\ntotal_pob = datos_filtrados.length &gt; 0 ? datos_filtrados[0].total_pob : 0\n\nfmt_num = n =&gt; n.toLocaleString('de-DE')\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nPlot.plot({\n  width: 560,\n  height: 480,\n  marginLeft: 70,\n  marginRight: 10,\n  marginBottom: 60,\n  style: { fontSize: \"12px\" },\n  x: {\n    tickFormat: d =&gt; `${Math.abs(d).toFixed(1)}`,\n    label: `Población en ${año_pir} (%)  (Total: ${fmt_num(total_pob)})`,\n    labelOffset: 50,\n    domain: [-5, 5],\n    grid: true\n  },\n  y: {\n    label: \"Rangos de edad\",\n    domain: orden_grupos\n  },\n  color: {\n    domain: [\"Hombres\", \"Mujeres\"],\n    range: [\"#87CEEB\", \"#FFE066\"],\n    legend: true\n  },\n  marks: [\n    Plot.barX(\n      datos_filtrados.flatMap(d =&gt; [\n        { grupo: d.grupo, sexo: \"Hombres\", pct: -(d.hombres / total_pob) * 100 },\n        { grupo: d.grupo, sexo: \"Mujeres\", pct:  (d.mujeres / total_pob) * 100 }\n      ]),\n      { x: \"pct\", y: \"grupo\", fill: \"sexo\", tip: true }\n    ),\n    Plot.ruleX([0], { stroke: \"#555\", strokeWidth: 1.2 })\n  ]\n})",
     "crumbs": [
       "Ciencia de datos",
-      "Claude Skills (Slides)"
+      "Experimento con D3"
     ]
   },
   {
-    "objectID": "datascience/claude-slides.html#introduccion",
-    "href": "datascience/claude-slides.html#introduccion",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Introduccion",
-    "text": "Introduccion\nUn skill es un conjunto de instrucciones - empaquetado como una carpeta simple - que ensena a Claude como manejar tareas o flujos de trabajo especificos.\nLos skills son una de las formas mas poderosas de personalizar Claude para tus necesidades. En lugar de volver a explicar tus preferencias, procesos y conocimiento de dominio en cada conversacion, los skills te permiten ensenarle a Claude una vez y beneficiarte siempre.",
+    "objectID": "datascience/d3-experiment.html#proyecciones-y-retroproyecciones-de-población-departamental-para-el-periodo-1985-2017-y-2018-2050-con-base-en-el-cnpv-2018",
+    "href": "datascience/d3-experiment.html#proyecciones-y-retroproyecciones-de-población-departamental-para-el-periodo-1985-2017-y-2018-2050-con-base-en-el-cnpv-2018",
+    "title": "Ejercicios con D3.js en Observable",
+    "section": "Proyecciones y retroproyecciones de población departamental para el periodo 1985-2017 y 2018-2050 con base en el CNPV 2018",
+    "text": "Proyecciones y retroproyecciones de población departamental para el periodo 1985-2017 y 2018-2050 con base en el CNPV 2018\n\n\nCode\ndatos_dep_raw = FileAttachment(\"data/piramide_dep.json\").json()\n\n\n\n\n\n\n\n\n\nCode\ndepartamentos_lista = [...new Set(datos_dep_raw.map(d =&gt; d.d))].sort()\n\nviewof depto_sel = Inputs.select(departamentos_lista, {\n  label: \"Departamento:\",\n  value: \"Córdoba\"\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nviewof año_dep = {\n  let year = 2024;\n  let playing = false;\n  let interval = null;\n  let speed = 600;\n\n  const btnStyle = (active) =&gt;\n    `padding:4px 10px;border-radius:4px;cursor:pointer;border:none;\n     font-size:12px;font-weight:600;\n     background:${active ? '#3a7abf' : '#ddd'};\n     color:${active ? 'white' : '#555'}`;\n\n  const container = html`&lt;div style=\"display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:6px 0\"&gt;\n    &lt;label style=\"font-size:13px;font-weight:600;color:#333\"&gt;Año:&lt;/label&gt;\n    &lt;button id=\"playbtn_dep\" style=\"padding:5px 16px;border-radius:4px;cursor:pointer;\n      background:#3a7abf;color:white;border:none;font-size:13px;font-weight:600\"&gt;\n      ▶ Play\n    &lt;/button&gt;\n    &lt;span id=\"yearlbl_dep\" style=\"font-weight:700;font-size:16px;min-width:44px;color:#222\"&gt;${year}&lt;/span&gt;\n    &lt;input id=\"slider_dep\" type=\"range\" min=\"2018\" max=\"2050\" step=\"1\" value=\"${year}\"\n      style=\"width:220px;accent-color:#3a7abf\"&gt;\n    &lt;span style=\"font-size:12px;color:#888\"&gt;2018 – 2050&lt;/span&gt;\n    &lt;div style=\"display:flex;gap:4px;margin-left:4px\"&gt;\n      &lt;button class=\"spd_dep\" data-ms=\"600\"  style=\"${btnStyle(true)}\"&gt;1×&lt;/button&gt;\n      &lt;button class=\"spd_dep\" data-ms=\"400\"  style=\"${btnStyle(false)}\"&gt;1.5×&lt;/button&gt;\n      &lt;button class=\"spd_dep\" data-ms=\"300\"  style=\"${btnStyle(false)}\"&gt;2×&lt;/button&gt;\n      &lt;button class=\"spd_dep\" data-ms=\"150\"  style=\"${btnStyle(false)}\"&gt;4×&lt;/button&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;`;\n\n  const btn     = container.querySelector('#playbtn_dep');\n  const slider  = container.querySelector('#slider_dep');\n  const lbl     = container.querySelector('#yearlbl_dep');\n  const spdBtns = container.querySelectorAll('.spd_dep');\n\n  function update(y) {\n    year = y; slider.value = y; lbl.textContent = y;\n    container.value = y;\n    container.dispatchEvent(new CustomEvent('input'));\n  }\n\n  function setSpeed(ms) {\n    speed = ms;\n    spdBtns.forEach(b =&gt; {\n      const active = +b.dataset.ms === ms;\n      b.style.background = active ? '#3a7abf' : '#ddd';\n      b.style.color      = active ? 'white'   : '#555';\n    });\n    if (playing) {\n      clearInterval(interval);\n      interval = setInterval(() =&gt; update(year &gt;= 2050 ? 2018 : year + 1), speed);\n    }\n  }\n\n  btn.addEventListener('click', () =&gt; {\n    playing = !playing;\n    btn.textContent      = playing ? '⏸ Pausa' : '▶ Play';\n    btn.style.background = playing ? '#c0392b' : '#3a7abf';\n    if (playing) {\n      interval = setInterval(() =&gt; update(year &gt;= 2050 ? 2018 : year + 1), speed);\n    } else {\n      clearInterval(interval);\n    }\n  });\n\n  slider.addEventListener('input', () =&gt; update(+slider.value));\n  spdBtns.forEach(b =&gt; b.addEventListener('click', () =&gt; setSpeed(+b.dataset.ms)));\n\n  container.value = year;\n  return container;\n}\n\n\n\n\n\n\n\n\n\nCode\nviewof area_dep = Inputs.select([\"Total\", \"Cabecera Municipal\", \"Centros Poblados y Rural Disperso\"], {\n  label: \"Área geográfica:\"\n})\n\n\n\n\n\n\n\n\n\nCode\norden_dep = [\"0 - 4\",\"5 - 9\",\"10 - 14\",\"15 - 19\",\"20 - 24\",\"25 - 29\",\n             \"30 - 34\",\"35 - 39\",\"40 - 44\",\"45 - 49\",\"50 - 54\",\"55 - 59\",\n             \"60 - 64\",\"65 - 69\",\"70 - 74\",\"75 - 79\",\"80 +\"]\n\ndatos_dep_fil = datos_dep_raw\n  .filter(d =&gt; d.d === depto_sel && d.a === año_dep && d.ar === area_dep)\n  .sort((a, b) =&gt; a.o - b.o)\n\ntotal_dep = datos_dep_fil.length &gt; 0 ? datos_dep_fil[0].t : 0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nPlot.plot({\n  width: 560,\n  height: 480,\n  marginLeft: 70,\n  marginRight: 10,\n  marginBottom: 60,\n  style: { fontSize: \"12px\" },\n  x: {\n    tickFormat: d =&gt; `${Math.abs(d).toFixed(1)}`,\n    label: `Población en ${año_dep} (%)  (Total: ${total_dep.toLocaleString('de-DE')})`,\n    labelOffset: 50,\n    domain: [-5, 5],\n    grid: true\n  },\n  y: {\n    label: \"Rangos de edad\",\n    domain: orden_dep\n  },\n  color: {\n    domain: [\"Hombres\", \"Mujeres\"],\n    range: [\"#87CEEB\", \"#FFE066\"],\n    legend: true\n  },\n  marks: [\n    Plot.barX(\n      datos_dep_fil.flatMap(d =&gt; [\n        { grupo: d.g, sexo: \"Hombres\", pct: -(d.h / total_dep) * 100 },\n        { grupo: d.g, sexo: \"Mujeres\", pct:  (d.m / total_dep) * 100 }\n      ]),\n      { x: \"pct\", y: \"grupo\", fill: \"sexo\", tip: true }\n    ),\n    Plot.ruleX([0], { stroke: \"#555\", strokeWidth: 1.2 })\n  ]\n})",
     "crumbs": [
       "Ciencia de datos",
-      "Claude Skills (Slides)"
+      "Experimento con D3"
     ]
   },
   {
-    "objectID": "datascience/claude-slides.html#los-skills-son-poderosos-cuando",
-    "href": "datascience/claude-slides.html#los-skills-son-poderosos-cuando",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Los skills son poderosos cuando…",
-    "text": "Los skills son poderosos cuando…\n\nGeneran disenos frontend a partir de especificaciones\nRealizan investigacion con metodologia consistente\nCrean documentos que siguen la guia de estilo de tu equipo\nOrquestan procesos de multiples pasos\nMejoran integraciones MCP con guia de flujos de trabajo",
+    "objectID": "datascience/d3-experiment.html#piramide-poblacional-en-plotly",
+    "href": "datascience/d3-experiment.html#piramide-poblacional-en-plotly",
+    "title": "Ejercicios con D3.js en Observable",
+    "section": "Piramide poblacional en Plotly",
+    "text": "Piramide poblacional en Plotly",
     "crumbs": [
       "Ciencia de datos",
-      "Claude Skills (Slides)"
+      "Experimento con D3"
     ]
   },
   {
-    "objectID": "datascience/claude-slides.html#lo-que-aprenderas",
-    "href": "datascience/claude-slides.html#lo-que-aprenderas",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Lo que aprenderas",
-    "text": "Lo que aprenderas\n\nRequisitos tecnicos y mejores practicas para la estructura de skills\nPatrones para skills independientes y flujos mejorados con MCP\nPatrones que hemos visto funcionar bien en diferentes casos de uso\nComo probar, iterar y distribuir tus skills",
+    "objectID": "datascience/d3-experiment.html#cifras-de-emergencias-reportadas-por-el-departamento-durante-1938-2024",
+    "href": "datascience/d3-experiment.html#cifras-de-emergencias-reportadas-por-el-departamento-durante-1938-2024",
+    "title": "Ejercicios con D3.js en Observable",
+    "section": "Cifras de emergencias reportadas por el departamento durante 1938-2024",
+    "text": "Cifras de emergencias reportadas por el departamento durante 1938-2024\n\n\n\n\nCode\nimport io\nimport warnings\nimport pandas as pd\nimport requests\nimport plotly.graph_objects as go\n\n# Leer datos desde Google Sheets (SSL deshabilitado por cert local)\nsheet_id = \"19G1PVPCOeF0LOJ-cqxa_7mk9LycuaJa2a12-HNLqmIo\"\nurl = f\"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv\"\nwith warnings.catch_warnings():\n    warnings.simplefilter(\"ignore\")\n    resp = requests.get(url, verify=False, timeout=30)\ndf = pd.read_csv(io.StringIO(resp.content.decode(\"utf-8\")), low_memory=False)\n\n# Parsear fecha y filtrar Córdoba 1938-2024\ndf[\"FECHA\"] = pd.to_datetime(df[\"FECHA\"], dayfirst=True, errors=\"coerce\")\ndf[\"AÑO\"]   = df[\"FECHA\"].dt.year\n\ncordoba = df[\n    df[\"DEPARTAMENTO\"].str.upper().str.strip()\n      .str.contains(\"CÓRDOBA|CORDOBA\", na=False) &\n    df[\"AÑO\"].between(1938, 2024)\n].copy()\n\n# Conteo y agrupación (top 9 + Otros)\ncounts = cordoba[\"EVENTO\"].value_counts()\ntotal  = counts.sum()\ntop    = counts.head(9)\notros  = counts.iloc[9:].sum()\nif otros &gt; 0:\n    top = pd.concat([top, pd.Series({\"Otros\": otros})])\n\nlabels = top.index.tolist()\nvalues = top.values.tolist()\n\n# Paleta de colores\ncolor_map = {\n    \"INUNDACIÓN\":                \"#4472C4\",\n    \"INCENDIO FORESTAL\":         \"#2CA8AA\",\n    \"VENDAVAL\":                  \"#E36C09\",\n    \"INCENDIO\":                  \"#F79646\",\n    \"SEQUÍA\":                    \"#FF8C7A\",\n    \"DESLIZAMIENTO\":             \"#FF1493\",\n    \"AVENIDA TORRENCIAL\":        \"#7030A0\",\n    \"DESABASTECIMIENTO DE AGUA\": \"#9E80B4\",\n    \"LLUVIAS\":                   \"#FFC000\",\n    \"Otros\":                     \"#D99694\",\n}\ndefault_colors = [\n    \"#4472C4\",\"#2CA8AA\",\"#E36C09\",\"#F79646\",\"#FF8C7A\",\n    \"#FF1493\",\"#7030A0\",\"#9E80B4\",\"#FFC000\",\"#D99694\",\n]\ncolors = [\n    color_map.get(lbl, default_colors[i % len(default_colors)])\n    for i, lbl in enumerate(labels)\n]\n\n# Texto interior (porcentaje con coma decimal, solo si ≥ 4%)\npcts        = [v / total * 100 for v in values]\ntext_inside = [\n    f\"{p:.1f}%\".replace(\".\", \",\") if p &gt;= 4 else \"\"\n    for p in pcts\n]\n\n# Gráfica\nfig = go.Figure(data=[go.Pie(\n    labels=labels,\n    values=values,\n    text=text_inside,\n    textinfo=\"text\",\n    textposition=\"inside\",\n    insidetextorientation=\"radial\",\n    textfont=dict(size=13, color=\"white\"),\n    marker=dict(colors=colors, line=dict(color=\"white\", width=1.5)),\n    hovertemplate=(\n        \"&lt;b&gt;%{label}&lt;/b&gt;&lt;br&gt;\"\n        \"Eventos: %{value:,}&lt;br&gt;\"\n        \"Porcentaje: %{percent}&lt;extra&gt;&lt;/extra&gt;\"\n    ),\n)])\n\nfig.update_layout(\n    title=dict(\n        text=f\"&lt;b&gt;Tipo de Evento — Córdoba (1938–2024)&lt;/b&gt;&lt;br&gt;\"\n             f\"&lt;sup&gt;Total: {total:,} eventos&lt;/sup&gt;\",\n        x=0.42, xanchor=\"center\",\n        font=dict(size=16, family=\"Arial\"),\n    ),\n    legend=dict(\n        orientation=\"v\", xanchor=\"left\",\n        x=1.01, y=0.5, yanchor=\"middle\",\n        font=dict(size=11, family=\"Arial\"),\n    ),\n    width=860, height=560,\n    margin=dict(t=90, b=40, l=20, r=260),\n    paper_bgcolor=\"white\",\n)\n\nfig.show()\n\n\n\nFigure 1\n\n\n\nDocumento generado con Quarto y Observable JS",
     "crumbs": [
       "Ciencia de datos",
-      "Claude Skills (Slides)"
+      "Experimento con D3"
     ]
   },
   {
-    "objectID": "datascience/claude-slides.html#para-quien-es-esto",
-    "href": "datascience/claude-slides.html#para-quien-es-esto",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Para quien es esto",
-    "text": "Para quien es esto\n\nDesarrolladores que quieren que Claude siga flujos de trabajo especificos de manera consistente\nUsuarios avanzados que quieren que Claude siga flujos de trabajo especificos\nEquipos que buscan estandarizar como Claude trabaja en su organizacion",
+    "objectID": "datascience/mapas/mapa_colombia_tiles.html",
+    "href": "datascience/mapas/mapa_colombia_tiles.html",
+    "title": "Mapa Interactivo de Colombia",
+    "section": "",
+    "text": "Ver código\nlibrary(sf)\nlibrary(leaflet)\nlibrary(dplyr)\nlibrary(rmapshaper)\n\n# ── Cargar y simplificar geometrías (keep=5% de vértices) ─────────────────\ndept_raw &lt;- sf::st_read(\"data/col_departamentos.geojson\", quiet = TRUE)\nmun_raw  &lt;- sf::st_read(\"data/col_municipios.geojson\",   quiet = TRUE)\n\ndept &lt;- ms_simplify(dept_raw, keep = 0.05, keep_shapes = TRUE)\nmun  &lt;- ms_simplify(mun_raw,  keep = 0.05, keep_shapes = TRUE)\n\npal_dept &lt;- colorFactor(\n  palette = \"Set3\",\n  domain  = dept$departamento\n)\n\nleaflet(options = leafletOptions(minZoom = 5)) |&gt;\n  addProviderTiles(\"CartoDB.Positron\") |&gt;\n  setView(lng = -74.3, lat = 4.5, zoom = 6) |&gt;\n  # Capa municipios (visible desde zoom 7)\n  addPolygons(\n    data        = mun,\n    group       = \"Municipios\",\n    fillColor   = \"#f59e0b\",\n    fillOpacity = 0.25,\n    color       = \"#92400e\",\n    weight      = 0.6,\n    label       = ~paste0(municipio, \" (\", departamento, \")\"),\n    labelOptions = labelOptions(\n      style     = list(\"font-weight\" = \"normal\", padding = \"3px 6px\"),\n      textsize  = \"12px\",\n      direction = \"auto\"\n    )\n  ) |&gt;\n  # Capa departamentos\n  addPolygons(\n    data        = dept,\n    group       = \"Departamentos\",\n    fillColor   = ~pal_dept(departamento),\n    fillOpacity = 0.4,\n    color       = \"#1a3c5e\",\n    weight      = 1.2,\n    highlight   = highlightOptions(\n      weight      = 2.5,\n      color       = \"#c0392b\",\n      fillOpacity = 0.65,\n      bringToFront = TRUE\n    ),\n    label       = ~departamento,\n    labelOptions = labelOptions(\n      style     = list(\"font-weight\" = \"bold\", padding = \"4px 8px\"),\n      textsize  = \"13px\",\n      direction = \"auto\"\n    ),\n    popup = ~paste0(\n      \"&lt;b&gt;\", departamento, \"&lt;/b&gt;&lt;br&gt;\",\n      \"&lt;span style='font-size:11px;color:#555'&gt;\", codigo_hasc, \"&lt;/span&gt;\"\n    )\n  ) |&gt;\n  addLayersControl(\n    overlayGroups = c(\"Departamentos\", \"Municipios\"),\n    options = layersControlOptions(collapsed = FALSE)\n  ) |&gt;\n  addScaleBar(position = \"bottomleft\") |&gt;\n  addMiniMap(toggleDisplay = TRUE, minimized = TRUE)",
     "crumbs": [
       "Ciencia de datos",
-      "Claude Skills (Slides)"
+      "Mapas",
+      "Mapa Interactivo (Tiles)"
     ]
   },
   {
-    "objectID": "datascience/claude-slides.html#dos-caminos-en-esta-guia",
-    "href": "datascience/claude-slides.html#dos-caminos-en-esta-guia",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Dos caminos en esta guia",
-    "text": "Dos caminos en esta guia\n\nConstruyendo skills independientes? Enfocate en Fundamentos, Planificacion y Diseno, y categoria 1-2.\nMejorando una integracion MCP? La seccion “Skills + MCP” y la categoria 3 son para ti.\n\nAmbos caminos comparten los mismos requisitos tecnicos.",
+    "objectID": "datascience/mapas/mapa_colombia_nri.html",
+    "href": "datascience/mapas/mapa_colombia_nri.html",
+    "title": "Mapa Interactivo de Colombia",
+    "section": "",
+    "text": "📍 Departamento\n  \n    — Colombia (todos) —\n    AmazonasAntioquiaArauca\n    AtlánticoBogotá D.C.Bolívar\n    BoyacáCaldasCaquetá\n    CasanareCaucaCesar\n    ChocóCórdobaCundinamarca\n    GuainíaGuaviareHuila\n    La GuajiraMagdalenaMeta\n    NariñoNorte de SantanderPutumayo\n    QuindíoRisaralda\n    San Andrés y ProvidenciaSantander\n    SucreTolimaValle del Cauca\n    VaupésVichada\n  \n  ↺ Ver Colombia\n\n\n\n  \n  \n    Capas\n     Departamentos\n     Municipios (zoom ≥ 8)\n  \n\nColombia · 33 departamentos · 1119 municipios\n\n\n\n\nFuente: Cartografía oficial de Colombia — IGAC / GADM v4.1. Mapa base: CartoDB Voyager / OpenStreetMap.",
     "crumbs": [
       "Ciencia de datos",
-      "Claude Skills (Slides)"
+      "Mapas",
+      "Índice de Riesgo (NRI)"
     ]
   },
   {
-    "objectID": "datascience/claude-slides.html#fundamentos",
-    "href": "datascience/claude-slides.html#fundamentos",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Fundamentos",
-    "text": "Fundamentos",
+    "objectID": "datascience/mapas/mapa_colombia_observable.html",
+    "href": "datascience/mapas/mapa_colombia_observable.html",
+    "title": "🗺️ Mapa Interactivo de Colombia",
+    "section": "",
+    "text": "Mapa Interactivo de Colombia en Observable\n\ntopojson = window.topojson\n\n// ── Datos: un solo archivo TopoJSON (3.4 MB vs 153 MB en GeoJSON) ─────────\ntopo = FileAttachment(\"data/colombia_moderate.topojson\").json()\n\ndept = topojson.feature(topo, topo.objects.departamentos)\nmun  = topojson.feature(topo, topo.objects.municipios)\n\n// ── Listas derivadas ──────────────────────────────────────────────────────\nnombres_deptos = [\"— Colombia (todos) —\",\n  ...new Set(dept.features.map(f =&gt; f.properties.departamento).sort())\n]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof depto_sel = Inputs.select(nombres_deptos, {\n  label: \"📍 Departamento\",\n  value: \"— Colombia (todos) —\"\n})\n\n\n\n\n\n\n\ndept_filtrado = depto_sel === \"— Colombia (todos) —\"\n  ? dept\n  : ({\n      type: \"FeatureCollection\",\n      features: dept.features.filter(\n        f =&gt; f.properties.departamento === depto_sel\n      )\n    })\n\nmun_filtrado = depto_sel === \"— Colombia (todos) —\"\n  ? null\n  : ({\n      type: \"FeatureCollection\",\n      features: mun.features.filter(\n        f =&gt; f.properties.departamento === depto_sel\n      )\n    })\n\nn_municipios = mun_filtrado ? mun_filtrado.features.length : null\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n// ── Paleta de colores para municipios ─────────────────────────────────────\ncolor_mun = mun_filtrado\n  ? d3.scaleOrdinal()\n      .domain(mun_filtrado.features.map(f =&gt; f.properties.municipio))\n      .range(d3.quantize(d3.interpolate(\"#fde68a\", \"#b45309\"),\n                         Math.max(mun_filtrado.features.length, 2)))\n  : null\n\n\n\n\n\n\n\n// ══════════════════════════════════════════════════════════════════════════\n//  MAPA D3\n// ══════════════════════════════════════════════════════════════════════════\n{\n  const width  = 860\n  const height = 680\n\n  // ── Contenedor principal ───────────────────────────────────────────────\n  const container = d3.create(\"div\")\n    .style(\"position\", \"relative\")\n    .style(\"font-family\", \"system-ui, sans-serif\")\n\n  // ── SVG ────────────────────────────────────────────────────────────────\n  const svg = container.append(\"svg\")\n    .attr(\"width\",   \"100%\")\n    .attr(\"viewBox\", `0 0 ${width} ${height}`)\n    .style(\"background\", \"#f0f4f8\")\n    .style(\"border-radius\", \"12px\")\n\n  // ── Proyección: ajustar al feature visible ────────────────────────────\n  const geo_base = depto_sel === \"— Colombia (todos) —\" ? dept : dept_filtrado\n\n  const projection = d3.geoMercator()\n    .fitExtent([[20, 20], [width - 20, height - 60]], geo_base)\n\n  const path = d3.geoPath().projection(projection)\n\n  // ── Grupo: departamentos base (fondo gris suave) ──────────────────────\n  svg.append(\"g\")\n    .selectAll(\"path\")\n    .data(dept.features)\n    .join(\"path\")\n      .attr(\"d\", path)\n      .attr(\"fill\",   \"#e8ddc4\")\n      .attr(\"stroke\", \"#b8a98a\")\n      .attr(\"stroke-width\", 0.5)\n\n  // ── Grupo: municipios (si hay departamento seleccionado) ──────────────\n  if (mun_filtrado) {\n    svg.append(\"g\")\n      .selectAll(\"path\")\n      .data(mun_filtrado.features)\n      .join(\"path\")\n        .attr(\"d\", path)\n        .attr(\"fill\",   d =&gt; color_mun(d.properties.municipio))\n        .attr(\"fill-opacity\", 0.7)\n        .attr(\"stroke\", \"#92400e\")\n        .attr(\"stroke-width\", 0.7)\n      .append(\"title\")\n        .text(d =&gt; d.properties.municipio)\n  }\n\n  // ── Etiquetas de municipios (solo si el polígono tiene área suficiente) ──\n  if (mun_filtrado) {\n    const MIN_AREA = 400\n    svg.append(\"g\")\n      .attr(\"pointer-events\", \"none\")\n      .selectAll(\"text\")\n      .data(mun_filtrado.features.filter(d =&gt; {\n        const bounds = path.bounds(d)\n        const w = bounds[1][0] - bounds[0][0]\n        const h = bounds[1][1] - bounds[0][1]\n        return w * h &gt; MIN_AREA\n      }))\n      .join(\"text\")\n        .attr(\"x\", d =&gt; path.centroid(d)[0])\n        .attr(\"y\", d =&gt; path.centroid(d)[1])\n        .attr(\"text-anchor\", \"middle\")\n        .attr(\"dominant-baseline\", \"middle\")\n        .attr(\"font-size\", \"9px\")\n        .attr(\"font-family\", \"system-ui, sans-serif\")\n        .attr(\"font-weight\", \"600\")\n        .attr(\"fill\", \"#3b1f07\")\n        .attr(\"paint-order\", \"stroke\")\n        .attr(\"stroke\", \"white\")\n        .attr(\"stroke-width\", \"2.5px\")\n        .attr(\"stroke-linejoin\", \"round\")\n        .text(d =&gt; d.properties.municipio)\n  }\n\n  // ── Grupo: contorno del departamento seleccionado ─────────────────────\n  if (depto_sel !== \"— Colombia (todos) —\") {\n    svg.append(\"g\")\n      .selectAll(\"path\")\n      .data(dept_filtrado.features)\n      .join(\"path\")\n        .attr(\"d\", path)\n        .attr(\"fill\",         \"none\")\n        .attr(\"stroke\",       \"#c0392b\")\n        .attr(\"stroke-width\", 2.5)\n  }\n\n  // ── Tooltips con etiquetas de departamentos ───────────────────────────\n  if (depto_sel === \"— Colombia (todos) —\") {\n    const tooltip = container.append(\"div\")\n      .style(\"position\",       \"absolute\")\n      .style(\"pointer-events\", \"none\")\n      .style(\"background\",     \"rgba(26,60,94,0.9)\")\n      .style(\"color\",          \"white\")\n      .style(\"padding\",        \"5px 10px\")\n      .style(\"border-radius\",  \"6px\")\n      .style(\"font-size\",      \"12px\")\n      .style(\"font-weight\",    \"600\")\n      .style(\"display\",        \"none\")\n\n    svg.selectAll(\"path\")\n      .on(\"mouseover\", function(event, d) {\n        d3.select(this).attr(\"fill\", \"#b5975a\").attr(\"fill-opacity\", 0.85)\n        tooltip\n          .style(\"display\", \"block\")\n          .text(d.properties?.departamento || \"\")\n      })\n      .on(\"mousemove\", function(event) {\n        const [mx, my] = d3.pointer(event, container.node())\n        tooltip\n          .style(\"left\", (mx + 12) + \"px\")\n          .style(\"top\",  (my - 28) + \"px\")\n      })\n      .on(\"mouseout\", function() {\n        d3.select(this)\n          .attr(\"fill\", \"#e8ddc4\")\n          .attr(\"fill-opacity\", 1)\n        tooltip.style(\"display\", \"none\")\n      })\n  } else {\n    // Tooltips para municipios\n    const tooltip = container.append(\"div\")\n      .style(\"position\",       \"absolute\")\n      .style(\"pointer-events\", \"none\")\n      .style(\"background\",     \"rgba(26,60,94,0.9)\")\n      .style(\"color\",          \"white\")\n      .style(\"padding\",        \"5px 10px\")\n      .style(\"border-radius\",  \"6px\")\n      .style(\"font-size\",      \"12px\")\n      .style(\"display\",        \"none\")\n\n    svg.selectAll(\"g:nth-child(2) path\")\n      .on(\"mouseover\", function(event, d) {\n        d3.select(this).attr(\"fill-opacity\", 1).attr(\"stroke-width\", 2)\n        tooltip\n          .style(\"display\", \"block\")\n          .html(`&lt;b&gt;${d.properties.municipio}&lt;/b&gt;&lt;br&gt;\n                 &lt;span style=\"font-size:10px;opacity:.8\"&gt;${d.properties.departamento}&lt;/span&gt;`)\n      })\n      .on(\"mousemove\", function(event) {\n        const [mx, my] = d3.pointer(event, container.node())\n        tooltip\n          .style(\"left\", (mx + 12) + \"px\")\n          .style(\"top\",  (my - 40) + \"px\")\n      })\n      .on(\"mouseout\", function(event, d) {\n        d3.select(this)\n          .attr(\"fill-opacity\", 0.7)\n          .attr(\"stroke-width\", 0.7)\n        tooltip.style(\"display\", \"none\")\n      })\n  }\n\n  // ── Barra de información inferior ────────────────────────────────────\n  const info_y = height - 35\n  const infobar = svg.append(\"g\")\n\n  infobar.append(\"rect\")\n    .attr(\"x\", 0).attr(\"y\", info_y - 10)\n    .attr(\"width\", width).attr(\"height\", 50)\n    .attr(\"fill\", \"rgba(26,60,94,0.75)\")\n\n  const info_text = depto_sel === \"— Colombia (todos) —\"\n    ? `Colombia · 33 departamentos · 1119 municipios · Fuente: IGAC / GADM v4.1`\n    : `${depto_sel} · ${n_municipios} municipio(s) · Fuente: IGAC / GADM v4.1`\n\n  infobar.append(\"text\")\n    .attr(\"x\", width / 2).attr(\"y\", info_y + 12)\n    .attr(\"text-anchor\", \"middle\")\n    .attr(\"fill\", \"white\")\n    .attr(\"font-size\", \"11px\")\n    .text(info_text)\n\n  return container.node()\n}\n\n\n\n\n\n\n\n\nNota metodológica: Los datos cartográficos corresponden a la división político-administrativa oficial de Colombia según el Instituto Geográfico Agustín Codazzi — IGAC y el Marco Geoestadístico Nacional del DANE, descargados mediante la base de datos geoespacial GADM v4.1.",
     "crumbs": [
       "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#que-es-un-skill",
-    "href": "datascience/claude-slides.html#que-es-un-skill",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Que es un skill?",
-    "text": "Que es un skill?\nUn skill es una carpeta que contiene:\n\nSKILL.md (requerido): Instrucciones en Markdown con frontmatter YAML\nscripts/ (opcional): Codigo ejecutable (Python, Bash, etc.)\nreferences/ (opcional): Documentacion cargada segun necesidad\nassets/ (opcional): Plantillas, fuentes, iconos usados en la salida",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#principios-de-diseno-fundamentales",
-    "href": "datascience/claude-slides.html#principios-de-diseno-fundamentales",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Principios de diseno fundamentales",
-    "text": "Principios de diseno fundamentales\nDivulgacion progresiva\nLos skills usan un sistema de tres niveles:\n\nPrimer nivel (frontmatter YAML): Siempre cargado en el prompt de sistema de Claude.\nSegundo nivel (cuerpo de SKILL.md): Cargado cuando Claude considera que el skill es relevante.\nTercer nivel (archivos enlazados): Archivos adicionales que Claude puede descubrir segun necesidad.\n\nEsto minimiza el uso de tokens manteniendo la experiencia especializada.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#composabilidad-y-portabilidad",
-    "href": "datascience/claude-slides.html#composabilidad-y-portabilidad",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Composabilidad y portabilidad",
-    "text": "Composabilidad y portabilidad\nComposabilidad\nClaude puede cargar multiples skills simultaneamente. Tu skill debe funcionar bien junto a otros.\nPortabilidad\nLos skills funcionan de forma identica en Claude.ai, Claude Code y la API. Crea un skill una vez y funciona en todas las superficies sin modificacion.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#skills-conectores-mcp",
-    "href": "datascience/claude-slides.html#skills-conectores-mcp",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Skills + Conectores MCP",
-    "text": "Skills + Conectores MCP\nLa analogia de la cocina:\n\nMCP proporciona la cocina profesional: acceso a herramientas, ingredientes y equipamiento.\nLos skills proporcionan las recetas: instrucciones paso a paso sobre como crear algo valioso.\n\nJuntos, permiten a los usuarios realizar tareas complejas sin necesidad de descifrar cada paso por si mismos.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#mcp-vs-skills",
-    "href": "datascience/claude-slides.html#mcp-vs-skills",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "MCP vs Skills",
-    "text": "MCP vs Skills\n\n\n\n\n\n\n\nMCP (Conectividad)\nSkills (Conocimiento)\n\n\n\n\nConecta Claude a tu servicio\nEnsena a Claude como usar tu servicio efectivamente\n\n\nProporciona acceso a datos en tiempo real e invocacion de herramientas\nCaptura flujos de trabajo y mejores practicas\n\n\nLo que Claude puede hacer\nComo Claude deberia hacerlo",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#por-que-esto-importa-para-usuarios-de-mcp",
-    "href": "datascience/claude-slides.html#por-que-esto-importa-para-usuarios-de-mcp",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Por que esto importa para usuarios de MCP",
-    "text": "Por que esto importa para usuarios de MCP\nSin skills:\n\nLos usuarios conectan tu MCP pero no saben que hacer despues\nCada conversacion empieza desde cero\nResultados inconsistentes\n\nCon skills:\n\nFlujos de trabajo preconstruidos se activan automaticamente\nUso de herramientas consistente y confiable\nMejores practicas integradas en cada interaccion",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#planificacion-y-diseno",
-    "href": "datascience/claude-slides.html#planificacion-y-diseno",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Planificacion y diseno",
-    "text": "Planificacion y diseno",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#comienza-con-casos-de-uso",
-    "href": "datascience/claude-slides.html#comienza-con-casos-de-uso",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Comienza con casos de uso",
-    "text": "Comienza con casos de uso\nAntes de escribir cualquier codigo, identifica 2-3 casos de uso concretos que tu skill deberia habilitar.\nCaso de uso: Planificacion de sprint de proyecto\nDisparador: El usuario dice \"ayudame a planificar este sprint\"\nPasos:\n1. Obtener estado actual del proyecto de Linear (via MCP)\n2. Analizar velocidad y capacidad del equipo\n3. Sugerir priorizacion de tareas\n4. Crear tareas en Linear con etiquetas apropiadas\nResultado: Sprint completamente planificado con tareas creadas",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#preguntate",
-    "href": "datascience/claude-slides.html#preguntate",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Preguntate",
-    "text": "Preguntate\n\nQue quiere lograr el usuario?\nQue flujos de trabajo de multiples pasos requiere esto?\nQue herramientas se necesitan (integradas o MCP?)\nQue conocimiento de dominio o mejores practicas deben incorporarse?",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#categoria-1-creacion-de-documentos-y-activos",
-    "href": "datascience/claude-slides.html#categoria-1-creacion-de-documentos-y-activos",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Categoria 1: Creacion de documentos y activos",
-    "text": "Categoria 1: Creacion de documentos y activos\nCreacion de resultados consistentes y de alta calidad incluyendo documentos, presentaciones, aplicaciones, disenos, codigo, etc.\nTecnicas clave:\n\nGuias de estilo y estandares de marca incorporados\nEstructuras de plantilla para resultados consistentes\nListas de verificacion de calidad antes de finalizar\nNo requiere herramientas externas - usa las capacidades integradas de Claude",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#categoria-2-automatizacion-de-flujos-de-trabajo",
-    "href": "datascience/claude-slides.html#categoria-2-automatizacion-de-flujos-de-trabajo",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Categoria 2: Automatizacion de flujos de trabajo",
-    "text": "Categoria 2: Automatizacion de flujos de trabajo\nProcesos de multiples pasos que se benefician de una metodologia consistente.\nTecnicas clave:\n\nFlujo de trabajo paso a paso con puertas de validacion\nPlantillas para estructuras comunes\nSugerencias integradas de revision y mejora\nCiclos de refinamiento iterativo",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#categoria-3-mejora-de-mcp",
-    "href": "datascience/claude-slides.html#categoria-3-mejora-de-mcp",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Categoria 3: Mejora de MCP",
-    "text": "Categoria 3: Mejora de MCP\nGuia de flujo de trabajo para mejorar el acceso a herramientas que proporciona un servidor MCP.\nTecnicas clave:\n\nCoordina multiples llamadas MCP en secuencia\nIncorpora experiencia de dominio\nProporciona contexto que los usuarios de otro modo necesitarian especificar\nManejo de errores para problemas comunes de MCP",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#definir-criterios-de-exito",
-    "href": "datascience/claude-slides.html#definir-criterios-de-exito",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Definir criterios de exito",
-    "text": "Definir criterios de exito\nMetricas cuantitativas:\n\nEl skill se activa en el 90% de las consultas relevantes\nCompleta el flujo de trabajo en X llamadas de herramientas\n0 llamadas API fallidas por flujo de trabajo\n\nMetricas cualitativas:\n\nLos usuarios no necesitan indicarle a Claude los siguientes pasos\nLos flujos de trabajo se completan sin correccion del usuario\nResultados consistentes entre sesiones",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#requisitos-tecnicos-estructura-de-archivos",
-    "href": "datascience/claude-slides.html#requisitos-tecnicos-estructura-de-archivos",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Requisitos tecnicos: Estructura de archivos",
-    "text": "Requisitos tecnicos: Estructura de archivos\nnombre-de-tu-skill/\n├── SKILL.md           # Requerido\n├── scripts/           # Opcional\n│   ├── process_data.py\n│   └── validate.sh\n├── references/        # Opcional\n│   ├── api-guide.md\n│   └── examples/\n└── assets/            # Opcional\n    └── report-template.md",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#reglas-criticas",
-    "href": "datascience/claude-slides.html#reglas-criticas",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Reglas criticas",
-    "text": "Reglas criticas\nNombre de SKILL.md: Debe ser exactamente SKILL.md (sensible a mayusculas)\nNombre de la carpeta del skill:\n\nUsar kebab-case: notion-project-setup\nSin espacios, sin guiones bajos, sin mayusculas\n\nSin README.md dentro de la carpeta del skill. Toda la documentacion va en SKILL.md o references/.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#frontmatter-yaml",
-    "href": "datascience/claude-slides.html#frontmatter-yaml",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Frontmatter YAML",
-    "text": "Frontmatter YAML\nEl frontmatter YAML es como Claude decide si cargar tu skill.\n---\nname: nombre-de-tu-skill\ndescription: Que hace. Usar cuando el usuario pide\n  [frases especificas].\n---\nname: solo kebab-case, debe coincidir con el nombre de la carpeta\ndescription: Debe incluir QUE + CUANDO, menos de 1024 caracteres",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#campos-yaml-opcionales",
-    "href": "datascience/claude-slides.html#campos-yaml-opcionales",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Campos YAML opcionales",
-    "text": "Campos YAML opcionales\n\nlicense: MIT, Apache-2.0, etc.\ncompatibility: Requisitos del entorno (1-500 caracteres)\nmetadata: Pares clave-valor personalizados (author, version, mcp-server)\n\nRestricciones de seguridad:\n\nSin corchetes angulares XML en el frontmatter\nSkills con “claude” o “anthropic” en el nombre estan reservados",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#escribir-descripciones-efectivas",
-    "href": "datascience/claude-slides.html#escribir-descripciones-efectivas",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Escribir descripciones efectivas",
-    "text": "Escribir descripciones efectivas\nEstructura: [Que hace] + [Cuando usarlo] + [Capacidades clave]\nBueno:\ndescription: Gestiona flujos de trabajo de proyectos en Linear\n  incluyendo planificacion de sprint, creacion de tareas y\n  seguimiento de estado. Usar cuando el usuario mencione\n  \"sprint\", \"tareas de Linear\" o pida \"crear tickets\".\nMalo:\ndescription: Ayuda con proyectos.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#escribir-las-instrucciones-principales",
-    "href": "datascience/claude-slides.html#escribir-las-instrucciones-principales",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Escribir las instrucciones principales",
-    "text": "Escribir las instrucciones principales\nEstructura recomendada despues del frontmatter:\n\nInstrucciones - Paso a paso con explicaciones claras\nEjemplos - Escenarios comunes con acciones y resultados esperados\nSolucion de problemas - Errores comunes, causas y soluciones",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#mejores-practicas-para-instrucciones",
-    "href": "datascience/claude-slides.html#mejores-practicas-para-instrucciones",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Mejores practicas para instrucciones",
-    "text": "Mejores practicas para instrucciones\nSe especifico y accionable:\nEjecuta `python scripts/validate.py --input {filename}`\npara verificar el formato de datos.\nSi la validacion falla, los problemas comunes incluyen:\n- Campos requeridos faltantes (agregarlos al CSV)\n- Formatos de fecha invalidos (usar YYYY-MM-DD)\nIncluye manejo de errores y referencia claramente los recursos incluidos.\nUsa divulgacion progresiva: Mantiene SKILL.md enfocado; mueve detalles a references/.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#pruebas-e-iteracion",
-    "href": "datascience/claude-slides.html#pruebas-e-iteracion",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Pruebas e iteracion",
-    "text": "Pruebas e iteracion",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#enfoques-de-pruebas",
-    "href": "datascience/claude-slides.html#enfoques-de-pruebas",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Enfoques de pruebas",
-    "text": "Enfoques de pruebas\n\nPruebas manuales en Claude.ai - Ejecutar consultas directamente y observar el comportamiento\nPruebas con scripts en Claude Code - Automatizar casos de prueba para validacion repetible\nPruebas programaticas via API de skills - Construir suites de evaluacion\n\nConsejo: Itera en una sola tarea desafiante hasta que Claude tenga exito, luego extrae el enfoque ganador en un skill.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#pruebas-de-activacion",
-    "href": "datascience/claude-slides.html#pruebas-de-activacion",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "1. Pruebas de activacion",
-    "text": "1. Pruebas de activacion\nObjetivo: Asegurar que tu skill se carga en los momentos correctos.\nDeberia activarse:\n\n“Ayudame a configurar un nuevo espacio de trabajo en ProjectHub”\n“Necesito crear un proyecto en ProjectHub”\n\nNO deberia activarse:\n\n“Como esta el clima en San Francisco?”\n“Ayudame a escribir codigo Python”",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#pruebas-funcionales",
-    "href": "datascience/claude-slides.html#pruebas-funcionales",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "2. Pruebas funcionales",
-    "text": "2. Pruebas funcionales\nObjetivo: Verificar que el skill produce resultados correctos.\nPrueba: Crear proyecto con 5 tareas\nDado: Nombre del proyecto \"Planificacion Q4\", 5 descripciones de tareas\nCuando: El skill ejecuta el flujo de trabajo\nEntonces:\n  - Proyecto creado en ProjectHub\n  - 5 tareas creadas con propiedades correctas\n  - Todas las tareas vinculadas al proyecto\n  - Sin errores de API",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#comparacion-de-rendimiento",
-    "href": "datascience/claude-slides.html#comparacion-de-rendimiento",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "3. Comparacion de rendimiento",
-    "text": "3. Comparacion de rendimiento\n\n\n\n\n\n\n\n\n\nSin skill\nCon skill\n\n\n\n\nInstrucciones\nEl usuario las proporciona cada vez\nFlujo de trabajo automatico\n\n\nMensajes\n15 ida y vuelta\n2 preguntas de clarificacion\n\n\nLlamadas API fallidas\n3 requiriendo reintento\n0\n\n\nTokens consumidos\n12,000\n6,000",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#uso-del-skill-skill-creator",
-    "href": "datascience/claude-slides.html#uso-del-skill-skill-creator",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Uso del skill skill-creator",
-    "text": "Uso del skill skill-creator\nEl skill skill-creator puede ayudarte a:\n\nCrear: Generar skills a partir de descripciones en lenguaje natural\nRevisar: Senalar problemas comunes, identificar riesgos de activacion\nIterar: Traer casos limite de vuelta para mejorar\n\n\"Usa el skill skill-creator para ayudarme a construir\nun skill para [tu caso de uso]\"",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#iteracion-basada-en-retroalimentacion",
-    "href": "datascience/claude-slides.html#iteracion-basada-en-retroalimentacion",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Iteracion basada en retroalimentacion",
-    "text": "Iteracion basada en retroalimentacion\nSub-activacion: Agrega mas detalle y palabras clave a la descripcion\nSobre-activacion: Agrega disparadores negativos, se mas especifico\nProblemas de ejecucion: Mejora las instrucciones, agrega manejo de errores\nLos skills son documentos vivos. Planifica iterar.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#distribucion-y-publicacion",
-    "href": "datascience/claude-slides.html#distribucion-y-publicacion",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Distribucion y publicacion",
-    "text": "Distribucion y publicacion",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#modelo-de-distribucion-actual-enero-2026",
-    "href": "datascience/claude-slides.html#modelo-de-distribucion-actual-enero-2026",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Modelo de distribucion actual (enero 2026)",
-    "text": "Modelo de distribucion actual (enero 2026)\nUsuarios individuales:\n\nDescargar la carpeta del skill\nComprimir la carpeta (si es necesario)\nSubir a Claude.ai via Configuracion &gt; Capacidades &gt; Skills\nO colocar en el directorio de skills de Claude Code\n\nNivel organizacional: Los administradores pueden desplegar skills en todo el espacio de trabajo con actualizaciones automaticas y gestion centralizada.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#un-estandar-abierto",
-    "href": "datascience/claude-slides.html#un-estandar-abierto",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Un estandar abierto",
-    "text": "Un estandar abierto\nAgent Skills se publica como un estandar abierto. Como MCP, los skills deben ser portables entre herramientas y plataformas - el mismo skill deberia funcionar ya sea que uses Claude u otras plataformas de IA.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#uso-de-skills-via-api",
-    "href": "datascience/claude-slides.html#uso-de-skills-via-api",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Uso de skills via API",
-    "text": "Uso de skills via API\n\n\n\n\n\n\n\nCaso de uso\nMejor superficie\n\n\n\n\nUsuarios finales interactuando directamente\nClaude.ai / Claude Code\n\n\nPruebas manuales e iteracion\nClaude.ai / Claude Code\n\n\nAplicaciones usando skills programaticamente\nAPI\n\n\nDespliegues en produccion a escala\nAPI\n\n\nPipelines automatizados y sistemas de agentes\nAPI",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#enfoque-recomendado-hoy",
-    "href": "datascience/claude-slides.html#enfoque-recomendado-hoy",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Enfoque recomendado hoy",
-    "text": "Enfoque recomendado hoy\n\nAlojar en GitHub - Repositorio publico, README claro, ejemplos de uso\nDocumentar en tu repositorio MCP - Enlazar skills desde la documentacion MCP\nCrear una guia de instalacion - Instrucciones paso a paso",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#posicionar-tu-skill",
-    "href": "datascience/claude-slides.html#posicionar-tu-skill",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Posicionar tu skill",
-    "text": "Posicionar tu skill\nEnfocate en resultados, no en caracteristicas:\nBueno: “El skill de ProjectHub permite a los equipos configurar espacios de trabajo completos en segundos en lugar de gastar 30 minutos en configuracion manual.”\nMalo: “El skill de ProjectHub es una carpeta que contiene frontmatter YAML e instrucciones en Markdown que llama a las herramientas de nuestro servidor MCP.”",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#patrones-y-solucion-de-problemas",
-    "href": "datascience/claude-slides.html#patrones-y-solucion-de-problemas",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Patrones y solucion de problemas",
-    "text": "Patrones y solucion de problemas",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#eligiendo-tu-enfoque",
-    "href": "datascience/claude-slides.html#eligiendo-tu-enfoque",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Eligiendo tu enfoque",
-    "text": "Eligiendo tu enfoque\n\nEnfoque en el problema: “Necesito configurar un espacio de trabajo” - Tu skill orquesta las llamadas MCP correctas en la secuencia correcta.\nEnfoque en la herramienta: “Tengo Notion MCP conectado” - Tu skill ensena a Claude los flujos de trabajo optimos y mejores practicas.\n\nLa mayoria de los skills se inclinan hacia una direccion.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#patron-1-orquestacion-secuencial-de-flujo-de-trabajo",
-    "href": "datascience/claude-slides.html#patron-1-orquestacion-secuencial-de-flujo-de-trabajo",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Patron 1: Orquestacion secuencial de flujo de trabajo",
-    "text": "Patron 1: Orquestacion secuencial de flujo de trabajo\nUsar cuando: Procesos de multiples pasos en un orden especifico.\n## Flujo: Incorporar nuevo cliente\n### Paso 1: Crear cuenta\n### Paso 2: Configurar pago\n### Paso 3: Crear suscripcion\n### Paso 4: Enviar correo de bienvenida\nClave: Orden explicito de pasos, dependencias, validacion en cada etapa, instrucciones de reversion.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#patron-2-coordinacion-multi-mcp",
-    "href": "datascience/claude-slides.html#patron-2-coordinacion-multi-mcp",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Patron 2: Coordinacion multi-MCP",
-    "text": "Patron 2: Coordinacion multi-MCP\nUsar cuando: Los flujos de trabajo abarcan multiples servicios.\nFase 1: Exportacion de diseno (Figma MCP)\nFase 2: Almacenamiento de activos (Drive MCP)\nFase 3: Creacion de tareas (Linear MCP)\nFase 4: Notificacion (Slack MCP)\nClave: Separacion clara de fases, paso de datos entre MCPs, validacion antes de la siguiente fase.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#patron-3-refinamiento-iterativo",
-    "href": "datascience/claude-slides.html#patron-3-refinamiento-iterativo",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Patron 3: Refinamiento iterativo",
-    "text": "Patron 3: Refinamiento iterativo\nUsar cuando: La calidad del resultado mejora con la iteracion.\n\nBorrador inicial - Obtener datos, generar primer borrador\nVerificacion de calidad - Ejecutar script de validacion\nCiclo de refinamiento - Abordar problemas, regenerar, revalidar\nFinalizacion - Aplicar formato, guardar version final\n\nClave: Criterios de calidad explicitos, scripts de validacion, saber cuando detenerse.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#patron-4-seleccion-de-herramientas-segun-contexto",
-    "href": "datascience/claude-slides.html#patron-4-seleccion-de-herramientas-segun-contexto",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Patron 4: Seleccion de herramientas segun contexto",
-    "text": "Patron 4: Seleccion de herramientas segun contexto\nUsar cuando: Mismo resultado, diferentes herramientas segun el contexto.\n\nArchivos grandes (&gt;10MB): MCP de almacenamiento en la nube\nDocumentos colaborativos: MCP de Notion/Docs\nArchivos de codigo: MCP de GitHub\nArchivos temporales: Almacenamiento local\n\nClave: Criterios de decision claros, opciones de respaldo, transparencia sobre las elecciones.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#patron-5-inteligencia-especifica-de-dominio",
-    "href": "datascience/claude-slides.html#patron-5-inteligencia-especifica-de-dominio",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Patron 5: Inteligencia especifica de dominio",
-    "text": "Patron 5: Inteligencia especifica de dominio\nUsar cuando: Tu skill agrega conocimiento especializado mas alla del acceso a herramientas.\n\nAntes del procesamiento - Verificaciones de cumplimiento, listas de sanciones, evaluacion de riesgo\nProcesamiento - Ejecutar si cumple, marcar para revision si no\nPista de auditoria - Registrar todas las verificaciones, registrar decisiones, generar informe\n\nClave: Experiencia de dominio en la logica, cumplimiento antes de la accion, documentacion exhaustiva.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#solucion-de-problemas-el-skill-no-se-sube",
-    "href": "datascience/claude-slides.html#solucion-de-problemas-el-skill-no-se-sube",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Solucion de problemas: El skill no se sube",
-    "text": "Solucion de problemas: El skill no se sube\n\n“No se encontro SKILL.md”: Renombrar exactamente a SKILL.md (sensible a mayusculas)\n“Frontmatter invalido”: Verificar delimitadores YAML --- y formato de comillas\n“Nombre de skill invalido”: Usar kebab-case, sin espacios ni mayusculas",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#solucion-de-problemas-problemas-de-activacion",
-    "href": "datascience/claude-slides.html#solucion-de-problemas-problemas-de-activacion",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Solucion de problemas: Problemas de activacion",
-    "text": "Solucion de problemas: Problemas de activacion\nEl skill no se activa:\n\nEs la descripcion demasiado generica?\nIncluye frases de activacion que los usuarios realmente dirian?\nDepuracion: Pregunta a Claude “Cuando usarias el skill [nombre del skill]?”\n\nEl skill se activa demasiado:\n\nAgregar disparadores negativos\nSer mas especifico en la descripcion\nClarificar el alcance",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#solucion-de-problemas-instrucciones-no-seguidas",
-    "href": "datascience/claude-slides.html#solucion-de-problemas-instrucciones-no-seguidas",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Solucion de problemas: Instrucciones no seguidas",
-    "text": "Solucion de problemas: Instrucciones no seguidas\n\nInstrucciones demasiado extensas - Mantener concisas, usar puntos\nInstrucciones enterradas - Colocar las criticas arriba\nLenguaje ambiguo - Ser especifico con encabezados CRITICO\n“Pereza” del modelo - Agregar aliento explicito en los prompts del usuario\n\nAvanzado: Incluir scripts de validacion para verificaciones deterministicas.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#problemas-de-contexto-grande",
-    "href": "datascience/claude-slides.html#problemas-de-contexto-grande",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Problemas de contexto grande",
-    "text": "Problemas de contexto grande\nCausas: Contenido del skill demasiado grande, demasiados skills habilitados simultaneamente\nSoluciones:\n\nMantener SKILL.md bajo 5,000 palabras\nMover documentacion detallada a references/\nEvaluar si tienes 20-50+ skills habilitados simultaneamente\nConsiderar “paquetes” de skills para capacidades relacionadas",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#recursos-y-referencias",
-    "href": "datascience/claude-slides.html#recursos-y-referencias",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Recursos y referencias",
-    "text": "Recursos y referencias",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#documentacion-oficial",
-    "href": "datascience/claude-slides.html#documentacion-oficial",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Documentacion oficial",
-    "text": "Documentacion oficial\nRecursos de Anthropic:\n\nGuia de mejores practicas\nDocumentacion de Skills\nReferencia de API\nDocumentacion de MCP\n\nHerramientas:\n\nSkill skill-creator (integrado en Claude.ai y disponible para Claude Code)\nGitHub: anthropics/skills (repositorio publico de skills)",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#ejemplos-completos-de-skills",
-    "href": "datascience/claude-slides.html#ejemplos-completos-de-skills",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Ejemplos completos de skills",
-    "text": "Ejemplos completos de skills\n\nDocument Skills - Creacion de PDF, DOCX, PPTX, XLSX\nExample Skills - Varios patrones de flujos de trabajo\nPartner Skills Directory - Asana, Atlassian, Canva, Figma, Sentry, Zapier y mas",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#lista-de-verificacion-rapida",
-    "href": "datascience/claude-slides.html#lista-de-verificacion-rapida",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Lista de verificacion rapida",
-    "text": "Lista de verificacion rapida\nAntes de empezar: Identificar casos de uso, identificar herramientas, revisar la guia, planificar estructura de carpetas\nDurante el desarrollo: Carpeta en kebab-case, SKILL.md existe, frontmatter YAML valido, descripcion incluye QUE y CUANDO\nAntes de subir: Probar activacion, pruebas funcionales pasan, comprimido como .zip\nDespues de subir: Probar en conversaciones reales, monitorear activacion, recopilar retroalimentacion, iterar",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#referencia-de-frontmatter-yaml",
-    "href": "datascience/claude-slides.html#referencia-de-frontmatter-yaml",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Referencia de frontmatter YAML",
-    "text": "Referencia de frontmatter YAML\n---\nname: nombre-del-skill\ndescription: [descripcion requerida]\nlicense: MIT\nallowed-tools: \"Bash(python:*) WebFetch\"\nmetadata:\n  author: Nombre de la empresa\n  version: 1.0.0\n  mcp-server: nombre-del-servidor\n  category: productividad\n---",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
-    ]
-  },
-  {
-    "objectID": "datascience/claude-slides.html#gracias",
-    "href": "datascience/claude-slides.html#gracias",
-    "title": "Guia completa para construir Skills para Claude",
-    "section": "Gracias",
-    "text": "Gracias\nGuia completa para construir Skills para Claude\nclaude.ai",
-    "crumbs": [
-      "Ciencia de datos",
-      "Claude Skills (Slides)"
+      "Mapas",
+      "Mapa Interactivo (Observable / TopoJSON)"
     ]
   },
   {
@@ -4844,50 +4936,6 @@
     "crumbs": [
       "Ciencia de datos",
       "Google Colab"
-    ]
-  },
-  {
-    "objectID": "datascience/d3-experiment.html#pirámide-por-departamento",
-    "href": "datascience/d3-experiment.html#pirámide-por-departamento",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Pirámide por departamento",
-    "text": "Pirámide por departamento\n\n\nCode\ndatos_dep_raw = FileAttachment(\"data/piramide_dep.json\").json()\n\n\n\n\n\n\n\n\n\nCode\ndepartamentos_lista = [...new Set(datos_dep_raw.map(d =&gt; d.d))].sort()\n\nviewof depto_sel = Inputs.select(departamentos_lista, {\n  label: \"Departamento:\",\n  value: \"Antioquia\"\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nviewof año_dep = {\n  let year = 2024;\n  let playing = false;\n  let interval = null;\n\n  const container = html`&lt;div style=\"display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:6px 0\"&gt;\n    &lt;label style=\"font-size:13px;font-weight:600;color:#333\"&gt;Año:&lt;/label&gt;\n    &lt;button id=\"playbtn\" style=\"\n      padding:5px 16px;border-radius:4px;cursor:pointer;\n      background:#3a7abf;color:white;border:none;font-size:13px;font-weight:600\"&gt;\n      ▶ Play\n    &lt;/button&gt;\n    &lt;span id=\"yearlbl\" style=\"font-weight:700;font-size:16px;min-width:44px;color:#222\"&gt;${year}&lt;/span&gt;\n    &lt;input id=\"slider\" type=\"range\" min=\"2018\" max=\"2050\" step=\"1\" value=\"${year}\"\n      style=\"width:220px;accent-color:#3a7abf\"&gt;\n    &lt;span style=\"font-size:12px;color:#888\"&gt;2018 – 2050&lt;/span&gt;\n  &lt;/div&gt;`;\n\n  const btn    = container.querySelector('#playbtn');\n  const slider = container.querySelector('#slider');\n  const lbl    = container.querySelector('#yearlbl');\n\n  function update(y) {\n    year = y;\n    slider.value = y;\n    lbl.textContent = y;\n    container.value = y;\n    container.dispatchEvent(new CustomEvent('input'));\n  }\n\n  btn.addEventListener('click', () =&gt; {\n    playing = !playing;\n    btn.textContent = playing ? '⏸ Pausa' : '▶ Play';\n    btn.style.background = playing ? '#c0392b' : '#3a7abf';\n    if (playing) {\n      interval = setInterval(() =&gt; update(year &gt;= 2050 ? 2018 : year + 1), 600);\n    } else {\n      clearInterval(interval);\n    }\n  });\n\n  slider.addEventListener('input', () =&gt; update(+slider.value));\n\n  container.value = year;\n  return container;\n}\n\n\n\n\n\n\n\n\n\nCode\nviewof area_dep = Inputs.select([\"Total\", \"Cabecera Municipal\", \"Centros Poblados y Rural Disperso\"], {\n  label: \"Área geográfica:\"\n})\n\n\n\n\n\n\n\n\n\nCode\norden_dep = [\"0 - 4\",\"5 - 9\",\"10 - 14\",\"15 - 19\",\"20 - 24\",\"25 - 29\",\n             \"30 - 34\",\"35 - 39\",\"40 - 44\",\"45 - 49\",\"50 - 54\",\"55 - 59\",\n             \"60 - 64\",\"65 - 69\",\"70 - 74\",\"75 - 79\",\"80 +\"]\n\ndatos_dep_fil = datos_dep_raw\n  .filter(d =&gt; d.d === depto_sel && d.a === año_dep && d.ar === area_dep)\n  .sort((a, b) =&gt; a.o - b.o)\n\ntotal_dep = datos_dep_fil.length &gt; 0 ? datos_dep_fil[0].t : 0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nPlot.plot({\n  width: 560,\n  height: 480,\n  marginLeft: 70,\n  marginRight: 10,\n  marginBottom: 60,\n  style: { fontSize: \"12px\" },\n  x: {\n    tickFormat: d =&gt; `${Math.abs(d).toFixed(1)}`,\n    label: `Población en ${año_dep} (%)  (Total: ${total_dep.toLocaleString('de-DE')})`,\n    labelOffset: 50,\n    domain: [-5, 5],\n    grid: true\n  },\n  y: {\n    label: \"Rangos de edad\",\n    domain: orden_dep\n  },\n  color: {\n    domain: [\"Hombres\", \"Mujeres\"],\n    range: [\"#87CEEB\", \"#FFE066\"],\n    legend: true\n  },\n  marks: [\n    Plot.barX(\n      datos_dep_fil.flatMap(d =&gt; [\n        { grupo: d.g, sexo: \"Hombres\", pct: -(d.h / total_dep) * 100 },\n        { grupo: d.g, sexo: \"Mujeres\", pct:  (d.m / total_dep) * 100 }\n      ]),\n      { x: \"pct\", y: \"grupo\", fill: \"sexo\", tip: true }\n    ),\n    Plot.ruleX([0], { stroke: \"#555\", strokeWidth: 1.2 })\n  ]\n})\n\n\n\n\n\n\n\nPiramide en Plotly",
-    "crumbs": [
-      "Ciencia de datos",
-      "Experimento con D3"
-    ]
-  },
-  {
-    "objectID": "datascience/d3-experiment.html#piramide-poblacional-en-d3",
-    "href": "datascience/d3-experiment.html#piramide-poblacional-en-d3",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Piramide poblacional en D3",
-    "text": "Piramide poblacional en D3\nPirámide poblacional construida con las Proyecciones de Población DANE 2018-2070, por área geográfica y año.\n\n\n\n\n\n\n\nCode\nviewof año_pir = Inputs.range([2018, 2070], {\n  label: \"Año:\",\n  step: 1,\n  value: 2024\n})\n\n\n\n\n\n\n\n\n\nCode\nviewof area_pir = Inputs.select([\"Total\", \"Cabecera\", \"Centros Poblados y Rural Disperso\"], {\n  label: \"Área geográfica:\"\n})\n\n\n\n\n\n\n\n\n\nCode\norden_grupos = [\"0 - 4\",\"5 - 9\",\"10 - 14\",\"15 - 19\",\"20 - 24\",\"25 - 29\",\n                \"30 - 34\",\"35 - 39\",\"40 - 44\",\"45 - 49\",\"50 - 54\",\"55 - 59\",\n                \"60 - 64\",\"65 - 69\",\"70 - 74\",\"75 - 79\",\"80 +\"]\n\ndatos_filtrados = datos_piramide_colombia\n  .filter(d =&gt; d.año === año_pir && d.area === area_pir)\n  .sort((a, b) =&gt; a.orden - b.orden)\n\ntotal_pob = datos_filtrados.length &gt; 0 ? datos_filtrados[0].total_pob : 0\n\nfmt_num = n =&gt; n.toLocaleString('de-DE')\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nPlot.plot({\n  width: 560,\n  height: 480,\n  marginLeft: 70,\n  marginRight: 10,\n  marginBottom: 60,\n  style: { fontSize: \"12px\" },\n  x: {\n    tickFormat: d =&gt; `${Math.abs(d).toFixed(1)}`,\n    label: `Población en ${año_pir} (%)  (Total: ${fmt_num(total_pob)})`,\n    labelOffset: 50,\n    domain: [-5, 5],\n    grid: true\n  },\n  y: {\n    label: \"Rangos de edad\",\n    domain: orden_grupos\n  },\n  color: {\n    domain: [\"Hombres\", \"Mujeres\"],\n    range: [\"#87CEEB\", \"#FFE066\"],\n    legend: true\n  },\n  marks: [\n    Plot.barX(\n      datos_filtrados.flatMap(d =&gt; [\n        { grupo: d.grupo, sexo: \"Hombres\", pct: -(d.hombres / total_pob) * 100 },\n        { grupo: d.grupo, sexo: \"Mujeres\", pct:  (d.mujeres / total_pob) * 100 }\n      ]),\n      { x: \"pct\", y: \"grupo\", fill: \"sexo\", tip: true }\n    ),\n    Plot.ruleX([0], { stroke: \"#555\", strokeWidth: 1.2 })\n  ]\n})",
-    "crumbs": [
-      "Ciencia de datos",
-      "Experimento con D3"
-    ]
-  },
-  {
-    "objectID": "datascience/d3-experiment.html#proyecciones-y-retroproyecciones-de-población-departamental-para-el-periodo-1985-2017-y-2018-2050-con-base-en-el-cnpv-2018",
-    "href": "datascience/d3-experiment.html#proyecciones-y-retroproyecciones-de-población-departamental-para-el-periodo-1985-2017-y-2018-2050-con-base-en-el-cnpv-2018",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Proyecciones y retroproyecciones de población departamental para el periodo 1985-2017 y 2018-2050 con base en el CNPV 2018",
-    "text": "Proyecciones y retroproyecciones de población departamental para el periodo 1985-2017 y 2018-2050 con base en el CNPV 2018\n\n\nCode\ndatos_dep_raw = FileAttachment(\"data/piramide_dep.json\").json()\n\n\n\n\n\n\n\n\n\nCode\ndepartamentos_lista = [...new Set(datos_dep_raw.map(d =&gt; d.d))].sort()\n\nviewof depto_sel = Inputs.select(departamentos_lista, {\n  label: \"Departamento:\",\n  value: \"Córdoba\"\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nviewof año_dep = {\n  let year = 2024;\n  let playing = false;\n  let interval = null;\n\n  const container = html`&lt;div style=\"display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:6px 0\"&gt;\n    &lt;label style=\"font-size:13px;font-weight:600;color:#333\"&gt;Año:&lt;/label&gt;\n    &lt;button id=\"playbtn\" style=\"\n      padding:5px 16px;border-radius:4px;cursor:pointer;\n      background:#3a7abf;color:white;border:none;font-size:13px;font-weight:600\"&gt;\n      ▶ Play\n    &lt;/button&gt;\n    &lt;span id=\"yearlbl\" style=\"font-weight:700;font-size:16px;min-width:44px;color:#222\"&gt;${year}&lt;/span&gt;\n    &lt;input id=\"slider\" type=\"range\" min=\"2018\" max=\"2050\" step=\"1\" value=\"${year}\"\n      style=\"width:220px;accent-color:#3a7abf\"&gt;\n    &lt;span style=\"font-size:12px;color:#888\"&gt;2018 – 2050&lt;/span&gt;\n  &lt;/div&gt;`;\n\n  const btn    = container.querySelector('#playbtn');\n  const slider = container.querySelector('#slider');\n  const lbl    = container.querySelector('#yearlbl');\n\n  function update(y) {\n    year = y;\n    slider.value = y;\n    lbl.textContent = y;\n    container.value = y;\n    container.dispatchEvent(new CustomEvent('input'));\n  }\n\n  btn.addEventListener('click', () =&gt; {\n    playing = !playing;\n    btn.textContent = playing ? '⏸ Pausa' : '▶ Play';\n    btn.style.background = playing ? '#c0392b' : '#3a7abf';\n    if (playing) {\n      interval = setInterval(() =&gt; update(year &gt;= 2050 ? 2018 : year + 1), 600);\n    } else {\n      clearInterval(interval);\n    }\n  });\n\n  slider.addEventListener('input', () =&gt; update(+slider.value));\n\n  container.value = year;\n  return container;\n}\n\n\n\n\n\n\n\n\n\nCode\nviewof area_dep = Inputs.select([\"Total\", \"Cabecera Municipal\", \"Centros Poblados y Rural Disperso\"], {\n  label: \"Área geográfica:\"\n})\n\n\n\n\n\n\n\n\n\nCode\norden_dep = [\"0 - 4\",\"5 - 9\",\"10 - 14\",\"15 - 19\",\"20 - 24\",\"25 - 29\",\n             \"30 - 34\",\"35 - 39\",\"40 - 44\",\"45 - 49\",\"50 - 54\",\"55 - 59\",\n             \"60 - 64\",\"65 - 69\",\"70 - 74\",\"75 - 79\",\"80 +\"]\n\ndatos_dep_fil = datos_dep_raw\n  .filter(d =&gt; d.d === depto_sel && d.a === año_dep && d.ar === area_dep)\n  .sort((a, b) =&gt; a.o - b.o)\n\ntotal_dep = datos_dep_fil.length &gt; 0 ? datos_dep_fil[0].t : 0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nPlot.plot({\n  width: 560,\n  height: 480,\n  marginLeft: 70,\n  marginRight: 10,\n  marginBottom: 60,\n  style: { fontSize: \"12px\" },\n  x: {\n    tickFormat: d =&gt; `${Math.abs(d).toFixed(1)}`,\n    label: `Población en ${año_dep} (%)  (Total: ${total_dep.toLocaleString('de-DE')})`,\n    labelOffset: 50,\n    domain: [-5, 5],\n    grid: true\n  },\n  y: {\n    label: \"Rangos de edad\",\n    domain: orden_dep\n  },\n  color: {\n    domain: [\"Hombres\", \"Mujeres\"],\n    range: [\"#87CEEB\", \"#FFE066\"],\n    legend: true\n  },\n  marks: [\n    Plot.barX(\n      datos_dep_fil.flatMap(d =&gt; [\n        { grupo: d.g, sexo: \"Hombres\", pct: -(d.h / total_dep) * 100 },\n        { grupo: d.g, sexo: \"Mujeres\", pct:  (d.m / total_dep) * 100 }\n      ]),\n      { x: \"pct\", y: \"grupo\", fill: \"sexo\", tip: true }\n    ),\n    Plot.ruleX([0], { stroke: \"#555\", strokeWidth: 1.2 })\n  ]\n})",
-    "crumbs": [
-      "Ciencia de datos",
-      "Experimento con D3"
-    ]
-  },
-  {
-    "objectID": "datascience/d3-experiment.html#piramide-poblacional-en-plotly",
-    "href": "datascience/d3-experiment.html#piramide-poblacional-en-plotly",
-    "title": "Inversión Global en Investigación y Desarrollo",
-    "section": "Piramide poblacional en Plotly",
-    "text": "Piramide poblacional en Plotly\n\n\n                            \n                                            \n\n\nDocumento generado con Quarto y Observable JS",
-    "crumbs": [
-      "Ciencia de datos",
-      "Experimento con D3"
     ]
   }
 ]

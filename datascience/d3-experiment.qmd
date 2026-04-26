@@ -13,6 +13,7 @@ format:
 execute:
   echo: true
   warning: false
+  eval: false
 ---
 
 # Inversión Global en Investigación y Desarrollo. Análisis de Gastos Domésticos en I+D como Porcentaje del PIB

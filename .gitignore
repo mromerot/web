@@ -1,3 +1,12 @@
 /.quarto/
 
 **/*.quarto_ipynb
+
+# Datos geoespaciales grandes (regenerables al renderizar)
+datascience/mapas/data/col_municipios.geojson
+datascience/mapas/data/col_departamentos.geojson
+datascience/mapas/data/colombia.topojson
+datascience/mapas/data/colombia_simple.topojson
+datascience/mapas/data/col_municipios.pmtiles
+datascience/mapas/data/col_departamentos.pmtiles
+datascience/mapas/data/gadm/

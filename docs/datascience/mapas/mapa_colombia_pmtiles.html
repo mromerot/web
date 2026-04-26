@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.26">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>mapas – Inicio</title>
+<title>Mapa Interactivo de Colombia PMTiles – Inicio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-257311f31c353275a0fc9c1463d94e88.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-72e8e1b7314fcfb8a58b3470cb5b4da3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-257311f31c353275a0fc9c1463d94e88.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f2c84d5b958e7c82890aa1b85c880cc3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -55,17 +55,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -111,9 +111,11 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 </script>
 
 
-<meta property="og:title" content="mapas – Inicio">
+<meta property="og:title" content="Mapa Interactivo de Colombia PMTiles – Inicio">
+<meta property="og:description" content="Departamentos y Municipios · PMTiles + MapLibre GL · Fuente: IGAC / GADM v4.1">
 <meta property="og:site_name" content="Inicio">
-<meta name="twitter:title" content="mapas – Inicio">
+<meta name="twitter:title" content="Mapa Interactivo de Colombia PMTiles – Inicio">
+<meta name="twitter:description" content="Departamentos y Municipios · PMTiles + MapLibre GL · Fuente: IGAC / GADM v4.1">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -123,30 +125,30 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datascience/cienciadedatos.html">Ciencia de datos</a></li><li class="breadcrumb-item"><a href="../datascience/mapas.html">Mapas</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../datascience/cienciadedatos.html">Ciencia de datos</a></li><li class="breadcrumb-item"><a href="../../datascience/mapas/index.html">Mapas</a></li><li class="breadcrumb-item"><a href="../../datascience/mapas/mapa_colombia_pmtiles.html">Mapa Interactivo (PMTiles)</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Inicio</a> 
+      <a href="../../">Inicio</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Buscar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -155,50 +157,50 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Gestión del riesgo de desastres</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/gestiondelriesgo.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/gestiondelriesgo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gestión del riesgo de desastres</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/conocimientodelriesgo.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/conocimientodelriesgo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conocimiento del riesgo</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/conocimiento-indicadores.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/conocimiento-indicadores.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Indicadores de riesgo nacionales y mundiales</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/reducciondelriesgo.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/reducciondelriesgo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reducción del riesgo</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/manejodedesastres.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/manejodedesastres.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Manejo de desastres</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/cienciaytecnologia.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/cienciaytecnologia.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ciencia y tecnología</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/educacion.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/educacion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Educación</span></a>
   </div>
 </li>
@@ -206,26 +208,26 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Cursos, redes y recursos</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/cursos.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/cursos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cursos en GRD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/plataformas-redes.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/plataformas-redes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plataformas y redes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/repositorios.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/repositorios.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Repositorios FAIR</span></a>
   </div>
 </li>
@@ -233,40 +235,40 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/sat.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/sat.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sistemas de alerta temprana</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../grd/hidrol-meteorologicas/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../grd/hidrol-meteorologicas/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas hidrológicas y meteorológicas</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/hidrol-meteorologicas/elnino.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/hidrol-meteorologicas/elnino.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">El Niño / La Niña</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/hidrol-meteorologicas/huracanes.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/hidrol-meteorologicas/huracanes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Huracanes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/hidrol-meteorologicas/inundaciones.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/hidrol-meteorologicas/inundaciones.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Inundaciones</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/hidrol-meteorologicas/inundaciones-repentinas.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/hidrol-meteorologicas/inundaciones-repentinas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Inundaciones repentinas</span></a>
   </div>
 </li>
@@ -274,34 +276,34 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../grd/geologicas/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../grd/geologicas/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas geológicas</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/geologicas/falladeterreno.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/geologicas/falladeterreno.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Falla de terreno</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/geologicas/riesgosismico.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/geologicas/riesgosismico.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Riesgo sísmico</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/geologicas/tsunami.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/geologicas/tsunami.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tsunami</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/geologicas/volcanes.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/geologicas/volcanes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Volcanes</span></a>
   </div>
 </li>
@@ -309,22 +311,22 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../grd/ambientales/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../grd/ambientales/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas ambientales</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/ambientales/erosioncostera.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/ambientales/erosioncostera.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Erosión costera</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/ambientales/incendiosforestales.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/ambientales/incendiosforestales.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Incendios forestales</span></a>
   </div>
 </li>
@@ -332,16 +334,16 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../grd/biologicos/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../grd/biologicos/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas biológicas</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/biologicos/covid.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/biologicos/covid.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">COVID-19</span></a>
   </div>
 </li>
@@ -349,16 +351,16 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../grd/tecnologicas/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../grd/tecnologicas/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas tecnológicas</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/tecnologicas/amenazastecnol.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/tecnologicas/amenazastecnol.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas tecnológicas</span></a>
   </div>
 </li>
@@ -366,16 +368,16 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../grd/sociales/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../grd/sociales/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas sociales</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/sociales/migracion.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/sociales/migracion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Migración</span></a>
   </div>
 </li>
@@ -383,16 +385,16 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../grd/extraterrestre/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../grd/extraterrestre/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas extraterrestres</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/extraterrestre/amenazasextraterrestres.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/extraterrestre/amenazasextraterrestres.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas extraterrestres</span></a>
   </div>
 </li>
@@ -400,19 +402,19 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/amazonas.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/amazonas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amazonas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/ciudades.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/ciudades.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ciudades</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grd/glosario.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grd/glosario.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Terminología</span></a>
   </div>
 </li>
@@ -422,14 +424,14 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
  <span class="menu-text">Gestión del cambio climático</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../gcc/gestion-cambio-climatico.html" class="sidebar-item-text sidebar-link">
+  <a href="../../gcc/gestion-cambio-climatico.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gestión del cambio climático</span></a>
   </div>
 </li>
@@ -439,26 +441,26 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
  <span class="menu-text">Gestión de proyectos</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../gestiondeproyectos/gestionproyectosciencia.html" class="sidebar-item-text sidebar-link">
+  <a href="../../gestiondeproyectos/gestionproyectosciencia.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gestión de proyectos de CTeI</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../gestiondeproyectos/gestiontecnologiainnovacion.html" class="sidebar-item-text sidebar-link">
+  <a href="../../gestiondeproyectos/gestiontecnologiainnovacion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gestión de tecnología e innovación</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../gestiondeproyectos/projectmanagement.html" class="sidebar-item-text sidebar-link">
+  <a href="../../gestiondeproyectos/projectmanagement.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gestión de proyectos</span></a>
   </div>
 </li>
@@ -468,32 +470,32 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
  <span class="menu-text">Ciencia y tecnología</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../cyt/escrituraypublicacionacademica.html" class="sidebar-item-text sidebar-link">
+  <a href="../../cyt/escrituraypublicacionacademica.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Escritura y publicación académica</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../cyt/cienciareproduc.html" class="sidebar-item-text sidebar-link">
+  <a href="../../cyt/cienciareproduc.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ciencia reproducible</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../cyt/docenciaeducacion.html" class="sidebar-item-text sidebar-link">
+  <a href="../../cyt/docenciaeducacion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Docencia y educación</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../cyt/transdisciplina.html" class="sidebar-item-text sidebar-link">
+  <a href="../../cyt/transdisciplina.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ciencia transdiciplinar</span></a>
   </div>
 </li>
@@ -501,7 +503,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ecolyconserv/ecologiayconservacion.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ecolyconserv/ecologiayconservacion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ecología y conservación</span></a>
   </div>
 </li>
@@ -509,98 +511,127 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
  <span class="menu-text">Ciencia de datos</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/cienciadedatos.html" class="sidebar-item-text sidebar-link">
+  <a href="../../datascience/cienciadedatos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ciencia de datos</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="../../datascience/quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/myst.html" class="sidebar-item-text sidebar-link">
+  <a href="../../datascience/myst.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Myst</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/markdown.html" class="sidebar-item-text sidebar-link">
+  <a href="../../datascience/markdown.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Markdown</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/github.html" class="sidebar-item-text sidebar-link">
+  <a href="../../datascience/github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Github</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/google-colab.html" class="sidebar-item-text sidebar-link">
+  <a href="../../datascience/google-colab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Google Colab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/jupyter-notebook.html" class="sidebar-item-text sidebar-link">
+  <a href="../../datascience/jupyter-notebook.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Jupyter Notebook</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/graficas-python-r.html" class="sidebar-item-text sidebar-link">
+  <a href="../../datascience/graficas-python-r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Graficas Python y R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/arco.html" class="sidebar-item-text sidebar-link">
+  <a href="../../datascience/arco.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ARCO Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/ia.html" class="sidebar-item-text sidebar-link">
+  <a href="../../datascience/ia.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Inteligencia artificial</span></a>
   </div>
 </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../datascience/mapas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/mapas.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Mapas</span></a>
+  <a href="../../datascience/mapas/mapa_colombia_observable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (Observable / TopoJSON)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/d3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../datascience/mapas/mapa_colombia_pmtiles.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Mapa Interactivo (PMTiles)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/mapas/mapa_colombia_tiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (Tiles)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/mapas/mapa_colombia_nri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índice de Riesgo (NRI)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/d3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">D3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/d3-experiment.html" class="sidebar-item-text sidebar-link">
+  <a href="../../datascience/d3-experiment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Experimento con D3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/claude.html" class="sidebar-item-text sidebar-link">
+  <a href="../../datascience/claude.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Claude</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../datascience/claude-slides.html" class="sidebar-item-text sidebar-link">
+  <a href="../../datascience/claude-slides.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Claude Skills (Slides)</span></a>
   </div>
 </li>
@@ -608,34 +639,34 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math-stats/math-stats.html" class="sidebar-item-text sidebar-link">
+  <a href="../../math-stats/math-stats.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Matemáticas y estadística</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
  <span class="menu-text">Vida laboral</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../vidalaboral/cafe.html" class="sidebar-item-text sidebar-link">
+  <a href="../../vidalaboral/cafe.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Café</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../vidalaboral/vidalaboral.html" class="sidebar-item-text sidebar-link">
+  <a href="../../vidalaboral/vidalaboral.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vida laboral</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../vidalaboral/herramientas.html" class="sidebar-item-text sidebar-link">
+  <a href="../../vidalaboral/herramientas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Herramientas</span></a>
   </div>
 </li>
@@ -643,22 +674,22 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false">
  <span class="menu-text">Curriculum vitae</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../cv/cv.html" class="sidebar-item-text sidebar-link">
+  <a href="../../cv/cv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Curriculum vitae</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../cv/publicaciones.html" class="sidebar-item-text sidebar-link">
+  <a href="../../cv/publicaciones.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mis publicaciones</span></a>
   </div>
 </li>
@@ -669,28 +700,27 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contenidos</h2>
-   
-  <ul class="collapse">
-  <li><a href="#herramientas" id="toc-herramientas" class="nav-link active" data-scroll-target="#herramientas">Herramientas</a></li>
-  </ul>
-<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datascience/cienciadedatos.html">Ciencia de datos</a></li><li class="breadcrumb-item"><a href="../datascience/mapas.html">Mapas</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../datascience/cienciadedatos.html">Ciencia de datos</a></li><li class="breadcrumb-item"><a href="../../datascience/mapas/index.html">Mapas</a></li><li class="breadcrumb-item"><a href="../../datascience/mapas/mapa_colombia_pmtiles.html">Mapa Interactivo (PMTiles)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">mapas</h1>
+<h1 class="title">Mapa Interactivo de Colombia PMTiles</h1>
+<p class="subtitle lead">Departamentos y Municipios · PMTiles + MapLibre GL · Fuente: IGAC / GADM v4.1</p>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-right">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">25 de abril de 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -700,39 +730,277 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 </header>
 
 
-<section id="herramientas" class="level2">
-<h2 class="anchored" data-anchor-id="herramientas">Herramientas</h2>
-<ul>
-<li>Guide to creating PMTiles. <a href="https://www.icon-map.com/blog/creating-pmtiles"><em>Link</em></a>.</li>
-<li>Protomaps. <a href="https://docs.protomaps.com/"><em>Link</em></a>.</li>
-</ul>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/CCBTX2pI2fU" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> Introduction to D3 P1. <a href="https://docs.google.com/presentation/d/1IrZiaKZ86m0Ll25HsWHesEsEYbtsH_-TFIrBZBLMMfE/edit?slide=id.g282fb476d44_0_108#slide=id.g282fb476d44_0_108">Slides</a>.<p></p>
+<!-- ── Dependencias MapLibre GL + PMTiles (locales) ────────────────────── -->
+<link href="data/maplibre-gl.css" rel="stylesheet">
+<script src="data/maplibre-gl.js"></script>
+<script src="data/pmtiles.js"></script>
+
+<style>
+  #map-pmtiles {
+    width: 100%;
+    height: 78vh;
+    border-radius: 10px;
+    border: 1px solid #c8d6df;
+  }
+
+  /* Panel de info inferior */
+  #map-info {
+    background: rgba(26, 60, 94, 0.85);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 0 0 10px 10px;
+    font-size: 12px;
+    font-family: system-ui, sans-serif;
+    min-height: 28px;
+  }
+
+  /* Control de capas personalizado */
+  .layer-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-family: system-ui, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 10;
+    line-height: 1.8;
+  }
+  .layer-toggle label { cursor: pointer; }
+  .layer-toggle input  { margin-right: 6px; accent-color: #1a3c5e; }
+</style>
+
+<div style="position:relative;">
+  <div id="map-pmtiles"></div>
+
+  <!-- Control de capas -->
+  <div class="layer-toggle">
+    <b style="display:block;margin-bottom:4px;color:#1a3c5e">Capas</b>
+    <label><input type="checkbox" id="chk-dept" checked=""> Departamentos</label><br>
+    <label><input type="checkbox" id="chk-mun" checked=""> Municipios (zoom ≥ 7)</label>
+  </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/Crp8UX-eQB0" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> Introduction to D3 P2. <a href="https://docs.google.com/presentation/d/1IrZiaKZ86m0Ll25HsWHesEsEYbtsH_-TFIrBZBLMMfE/edit?slide=id.g281f7a52d26_0_298#slide=id.g281f7a52d26_0_298">Slides</a>.<p></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/30ZVbvVLQck" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> Introduction to D3 P3.<p></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/I3EH4E7s-HQ" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> Introduction to D3 P4.<p></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/DcMX8JiX80Y" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> Introduction to D3 P5.<p></p>
-</div>
-</div>
-</div>
-<pre><code></code></pre>
+
+<div id="map-info">Colombia · 33 departamentos · 1119 municipios · Fuente: IGAC / GADM v4.1</div>
+
+<script>
+(function () {
+  // ── 1. Registrar protocolo PMTiles ANTES de crear el mapa ──────────────
+  const protocol = new pmtiles.Protocol();
+  maplibregl.addProtocol("pmtiles", protocol.tile.bind(protocol));
+
+  // URL absoluta del archivo PMTiles (resuelve correctamente relativa a la página)
+  const pmtilesUrl = "pmtiles://" + new URL("data/colombia.pmtiles", window.location.href).href;
+
+  // ── 2. Inicializar mapa solo con basemap en el estilo inicial ───────────
+  const map = new maplibregl.Map({
+    container: "map-pmtiles",
+    style: {
+      version: 8,
+      sources: {
+        "carto-light": {
+          type: "raster",
+          tiles: [
+            "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+            "https://b.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+          ],
+          tileSize: 256,
+          attribution: "© <a href='https://carto.com/'>CartoDB</a> © <a href='https://openstreetmap.org'>OSM</a>"
+        }
+      },
+      layers: [
+        { id: "basemap", type: "raster", source: "carto-light" }
+      ]
+    },
+    center: [-74.3, 4.5],
+    zoom: 5.2,
+    minZoom: 3,
+    maxZoom: 16
+  });
+
+  map.addControl(new maplibregl.NavigationControl(), "top-left");
+  map.addControl(new maplibregl.ScaleControl({ unit: "metric" }), "bottom-left");
+
+  map.on("error", (e) => console.error("[MapLibre]", e.error));
+
+  // ── 3. Agregar fuente PMTiles y capas después del load ──────────────────
+  map.on("load", () => {
+
+    // Fuente PMTiles
+    map.addSource("colombia", {
+      type: "vector",
+      url: pmtilesUrl
+    });
+
+    // Relleno departamentos
+    map.addLayer({
+      id: "dept-fill",
+      type: "fill",
+      source: "colombia",
+      "source-layer": "departamentos",
+      paint: {
+        "fill-color": "#c8dce8",
+        "fill-opacity": 0.5
+      }
+    });
+
+    // Borde departamentos
+    map.addLayer({
+      id: "dept-line",
+      type: "line",
+      source: "colombia",
+      "source-layer": "departamentos",
+      paint: {
+        "line-color": "#1a3c5e",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 3, 0.7, 10, 2.0]
+      }
+    });
+
+    // Highlight hover departamento
+    map.addLayer({
+      id: "dept-hover",
+      type: "fill",
+      source: "colombia",
+      "source-layer": "departamentos",
+      paint: {
+        "fill-color": "#2c6fa6",
+        "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 0.55, 0]
+      }
+    });
+
+    // Relleno municipios (visible desde zoom 7)
+    map.addLayer({
+      id: "mun-fill",
+      type: "fill",
+      source: "colombia",
+      "source-layer": "municipios",
+      minzoom: 7,
+      paint: {
+        "fill-color": "#f59e0b",
+        "fill-opacity": 0.25
+      }
+    });
+
+    // Borde municipios
+    map.addLayer({
+      id: "mun-line",
+      type: "line",
+      source: "colombia",
+      "source-layer": "municipios",
+      minzoom: 7,
+      paint: {
+        "line-color": "#92400e",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 7, 0.4, 14, 1.2]
+      }
+    });
+
+    // Highlight hover municipio
+    map.addLayer({
+      id: "mun-hover",
+      type: "fill",
+      source: "colombia",
+      "source-layer": "municipios",
+      minzoom: 7,
+      paint: {
+        "fill-color": "#b45309",
+        "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 0.55, 0]
+      }
+    });
+
+    // ── 4. Control de visibilidad de capas ────────────────────────────────
+    document.getElementById("chk-dept").addEventListener("change", (e) => {
+      const vis = e.target.checked ? "visible" : "none";
+      ["dept-fill", "dept-line", "dept-hover"].forEach(id => map.setLayoutProperty(id, "visibility", vis));
+    });
+
+    document.getElementById("chk-mun").addEventListener("change", (e) => {
+      const vis = e.target.checked ? "visible" : "none";
+      ["mun-fill", "mun-line", "mun-hover"].forEach(id => map.setLayoutProperty(id, "visibility", vis));
+    });
+  });
+
+  // ── 5. Hover interactivo ────────────────────────────────────────────────
+  let hoveredDept = null;
+  let hoveredMun  = null;
+  const infoEl = document.getElementById("map-info");
+
+  function clearHover(source, sourceLayer, id) {
+    if (id !== null) map.setFeatureState({ source, sourceLayer, id }, { hover: false });
+  }
+  function applyHover(source, sourceLayer, id) {
+    if (id !== null) map.setFeatureState({ source, sourceLayer, id }, { hover: true });
+  }
+
+  map.on("mousemove", "dept-hover", (e) => {
+    if (!e.features.length) return;
+    const feat = e.features[0];
+    if (hoveredDept !== null && hoveredDept !== feat.id)
+      clearHover("colombia", "departamentos", hoveredDept);
+    hoveredDept = feat.id;
+    applyHover("colombia", "departamentos", hoveredDept);
+    map.getCanvas().style.cursor = "pointer";
+    infoEl.innerHTML = `<b>${feat.properties.departamento}</b> &nbsp;·&nbsp; ${feat.properties.codigo_hasc || ""}`;
+  });
+
+  map.on("mouseleave", "dept-hover", () => {
+    clearHover("colombia", "departamentos", hoveredDept);
+    hoveredDept = null;
+    map.getCanvas().style.cursor = "";
+    infoEl.textContent = "Colombia · 33 departamentos · 1119 municipios · Fuente: IGAC / GADM v4.1";
+  });
+
+  map.on("mousemove", "mun-hover", (e) => {
+    if (!e.features.length) return;
+    const feat = e.features[0];
+    if (hoveredMun !== null && hoveredMun !== feat.id)
+      clearHover("colombia", "municipios", hoveredMun);
+    hoveredMun = feat.id;
+    applyHover("colombia", "municipios", hoveredMun);
+    map.getCanvas().style.cursor = "pointer";
+    infoEl.innerHTML = `<b>${feat.properties.municipio}</b> &nbsp;·&nbsp; ${feat.properties.departamento}`;
+  });
+
+  map.on("mouseleave", "mun-hover", () => {
+    clearHover("colombia", "municipios", hoveredMun);
+    hoveredMun = null;
+    map.getCanvas().style.cursor = "";
+    infoEl.textContent = "Colombia · 33 departamentos · 1119 municipios · Fuente: IGAC / GADM v4.1";
+  });
+
+  // ── 6. Popup al hacer clic ──────────────────────────────────────────────
+  const popup = new maplibregl.Popup({ closeButton: false, maxWidth: "220px" });
+
+  map.on("click", (e) => {
+    const queryLayers = map.getZoom() >= 7
+      ? ["mun-hover", "dept-hover"]
+      : ["dept-hover"];
+
+    const feats = map.queryRenderedFeatures(e.point, { layers: queryLayers });
+    if (!feats.length) { popup.remove(); return; }
+
+    const f = feats[0];
+    const isMun = f.layer.id === "mun-hover";
+
+    popup
+      .setLngLat(e.lngLat)
+      .setHTML(isMun
+        ? `<b style="font-size:13px">${f.properties.municipio}</b>
+           <br><span style="font-size:11px;color:#555">${f.properties.departamento}</span>`
+        : `<b style="font-size:13px">${f.properties.departamento}</b>
+           <br><span style="font-size:11px;color:#555">${f.properties.codigo_hasc || ""}</span>`)
+      .addTo(map);
+  });
+
+})();
+</script>
+<hr>
+<blockquote class="blockquote">
+<p><strong>Nota metodológica:</strong> Los datos cartográficos corresponden a la división político-administrativa oficial de Colombia según el <a href="https://www.igac.gov.co">Instituto Geográfico Agustín Codazzi — IGAC</a> y el <a href="https://www.dane.gov.co">Marco Geoestadístico Nacional del DANE</a>, descargados mediante <a href="https://gadm.org">GADM v4.1</a> y convertidos al formato <a href="https://docs.protomaps.com">PMTiles</a> para distribución eficiente vía HTTP Range Requests.</p>
+</blockquote>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -760,12 +1028,12 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiado");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiado");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -1143,7 +1411,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
     </div>   
     <div class="nav-footer-center">
 <p>Made with ❤️ and Quarto</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Informar sobre problema</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

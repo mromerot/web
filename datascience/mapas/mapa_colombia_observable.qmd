@@ -1,0 +1,334 @@
+---
+title: "🗺️ Mapa Interactivo de Colombia"
+subtitle: "Departamentos y Municipios · TopoJSON · Fuente Oficial: IGAC / Marco Geoestadístico Nacional"
+author: "Instituto Geográfico Agustín Codazzi (IGAC) — DANE"
+date: today
+lang: es
+format:
+  html:
+    theme: cosmo
+    toc: false
+    page-layout: full
+    fig-align: center
+    include-in-header:
+      text: |
+        <script src="data/topojson.min.js"></script>
+---
+
+# Mapa Interactivo de Colombia en Observable
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+
+# ── Exportar cartografía a GeoJSON para Observable ────────────────────────
+suppressPackageStartupMessages({
+  library(sf)
+  library(dplyr)
+  library(geodata)
+})
+
+data_dir <- "data"
+
+dept_raw <- tryCatch(
+  geodata::gadm("COL", level = 1, path = data_dir, version = "4.1"),
+  error = function(e) geodata::gadm("COL", level = 1, path = data_dir)
+)
+
+mun_raw <- tryCatch(
+  geodata::gadm("COL", level = 2, path = data_dir, version = "4.1"),
+  error = function(e) geodata::gadm("COL", level = 2, path = data_dir)
+)
+
+dept_sf <- sf::st_as_sf(dept_raw) |>
+  dplyr::transmute(
+    departamento = NAME_1,
+    codigo_hasc  = HASC_1,
+    codigo_iso   = ISO_1
+  ) |>
+  sf::st_transform(crs = 4326)
+
+mun_sf <- sf::st_as_sf(mun_raw) |>
+  dplyr::transmute(
+    departamento = NAME_1,
+    municipio    = NAME_2
+  ) |>
+  sf::st_transform(crs = 4326)
+
+if (!file.exists("data/col_departamentos.geojson"))
+  sf::st_write(dept_sf, "data/col_departamentos.geojson", quiet = TRUE)
+if (!file.exists("data/col_municipios.geojson"))
+  sf::st_write(mun_sf,  "data/col_municipios.geojson",    quiet = TRUE)
+
+# ── Generar TopoJSON simplificado (P=0.05) si no existe ──────────────────
+if (!file.exists("data/colombia_moderate.topojson")) {
+  system2("geo2topo",
+    args = c(
+      "departamentos=data/col_departamentos.geojson",
+      "municipios=data/col_municipios.geojson",
+      "-o", "data/colombia_raw.topojson"
+    )
+  )
+  system2("toposimplify",
+    args = c("-P", "0.05", "-f",
+             "data/colombia_raw.topojson",
+             "-o", "data/colombia_moderate.topojson")
+  )
+  file.remove("data/colombia_raw.topojson")
+}
+```
+
+```{ojs}
+//| echo: false
+
+topojson = window.topojson
+
+// ── Datos: un solo archivo TopoJSON (3.4 MB vs 153 MB en GeoJSON) ─────────
+topo = FileAttachment("data/colombia_moderate.topojson").json()
+
+dept = topojson.feature(topo, topo.objects.departamentos)
+mun  = topojson.feature(topo, topo.objects.municipios)
+
+// ── Listas derivadas ──────────────────────────────────────────────────────
+nombres_deptos = ["— Colombia (todos) —",
+  ...new Set(dept.features.map(f => f.properties.departamento).sort())
+]
+```
+
+```{ojs}
+//| echo: false
+//| panel: input
+
+viewof depto_sel = Inputs.select(nombres_deptos, {
+  label: "📍 Departamento",
+  value: "— Colombia (todos) —"
+})
+```
+
+```{ojs}
+//| echo: false
+
+// ── Filtrado reactivo ─────────────────────────────────────────────────────
+dept_filtrado = depto_sel === "— Colombia (todos) —"
+  ? dept
+  : ({
+      type: "FeatureCollection",
+      features: dept.features.filter(
+        f => f.properties.departamento === depto_sel
+      )
+    })
+
+mun_filtrado = depto_sel === "— Colombia (todos) —"
+  ? null
+  : ({
+      type: "FeatureCollection",
+      features: mun.features.filter(
+        f => f.properties.departamento === depto_sel
+      )
+    })
+
+n_municipios = mun_filtrado ? mun_filtrado.features.length : null
+```
+
+```{ojs}
+//| echo: false
+
+// ── Paleta de colores para municipios ─────────────────────────────────────
+color_mun = mun_filtrado
+  ? d3.scaleOrdinal()
+      .domain(mun_filtrado.features.map(f => f.properties.municipio))
+      .range(d3.quantize(d3.interpolate("#fde68a", "#b45309"),
+                         Math.max(mun_filtrado.features.length, 2)))
+  : null
+```
+
+```{ojs}
+//| echo: false
+
+// ══════════════════════════════════════════════════════════════════════════
+//  MAPA D3
+// ══════════════════════════════════════════════════════════════════════════
+{
+  const width  = 860
+  const height = 680
+
+  // ── Contenedor principal ───────────────────────────────────────────────
+  const container = d3.create("div")
+    .style("position", "relative")
+    .style("font-family", "system-ui, sans-serif")
+
+  // ── SVG ────────────────────────────────────────────────────────────────
+  const svg = container.append("svg")
+    .attr("width",   "100%")
+    .attr("viewBox", `0 0 ${width} ${height}`)
+    .style("background", "#f0f4f8")
+    .style("border-radius", "12px")
+
+  // ── Proyección: ajustar al feature visible ────────────────────────────
+  const geo_base = depto_sel === "— Colombia (todos) —" ? dept : dept_filtrado
+
+  const projection = d3.geoMercator()
+    .fitExtent([[20, 20], [width - 20, height - 60]], geo_base)
+
+  const path = d3.geoPath().projection(projection)
+
+  // ── Grupo: departamentos base (fondo gris suave) ──────────────────────
+  svg.append("g")
+    .selectAll("path")
+    .data(dept.features)
+    .join("path")
+      .attr("d", path)
+      .attr("fill",   "#e8ddc4")
+      .attr("stroke", "#b8a98a")
+      .attr("stroke-width", 0.5)
+
+  // ── Grupo: municipios (si hay departamento seleccionado) ──────────────
+  if (mun_filtrado) {
+    svg.append("g")
+      .selectAll("path")
+      .data(mun_filtrado.features)
+      .join("path")
+        .attr("d", path)
+        .attr("fill",   d => color_mun(d.properties.municipio))
+        .attr("fill-opacity", 0.7)
+        .attr("stroke", "#92400e")
+        .attr("stroke-width", 0.7)
+      .append("title")
+        .text(d => d.properties.municipio)
+  }
+
+  // ── Etiquetas de municipios (solo si el polígono tiene área suficiente) ──
+  if (mun_filtrado) {
+    const MIN_AREA = 400
+    svg.append("g")
+      .attr("pointer-events", "none")
+      .selectAll("text")
+      .data(mun_filtrado.features.filter(d => {
+        const bounds = path.bounds(d)
+        const w = bounds[1][0] - bounds[0][0]
+        const h = bounds[1][1] - bounds[0][1]
+        return w * h > MIN_AREA
+      }))
+      .join("text")
+        .attr("x", d => path.centroid(d)[0])
+        .attr("y", d => path.centroid(d)[1])
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .attr("font-size", "9px")
+        .attr("font-family", "system-ui, sans-serif")
+        .attr("font-weight", "600")
+        .attr("fill", "#3b1f07")
+        .attr("paint-order", "stroke")
+        .attr("stroke", "white")
+        .attr("stroke-width", "2.5px")
+        .attr("stroke-linejoin", "round")
+        .text(d => d.properties.municipio)
+  }
+
+  // ── Grupo: contorno del departamento seleccionado ─────────────────────
+  if (depto_sel !== "— Colombia (todos) —") {
+    svg.append("g")
+      .selectAll("path")
+      .data(dept_filtrado.features)
+      .join("path")
+        .attr("d", path)
+        .attr("fill",         "none")
+        .attr("stroke",       "#c0392b")
+        .attr("stroke-width", 2.5)
+  }
+
+  // ── Tooltips con etiquetas de departamentos ───────────────────────────
+  if (depto_sel === "— Colombia (todos) —") {
+    const tooltip = container.append("div")
+      .style("position",       "absolute")
+      .style("pointer-events", "none")
+      .style("background",     "rgba(26,60,94,0.9)")
+      .style("color",          "white")
+      .style("padding",        "5px 10px")
+      .style("border-radius",  "6px")
+      .style("font-size",      "12px")
+      .style("font-weight",    "600")
+      .style("display",        "none")
+
+    svg.selectAll("path")
+      .on("mouseover", function(event, d) {
+        d3.select(this).attr("fill", "#b5975a").attr("fill-opacity", 0.85)
+        tooltip
+          .style("display", "block")
+          .text(d.properties?.departamento || "")
+      })
+      .on("mousemove", function(event) {
+        const [mx, my] = d3.pointer(event, container.node())
+        tooltip
+          .style("left", (mx + 12) + "px")
+          .style("top",  (my - 28) + "px")
+      })
+      .on("mouseout", function() {
+        d3.select(this)
+          .attr("fill", "#e8ddc4")
+          .attr("fill-opacity", 1)
+        tooltip.style("display", "none")
+      })
+  } else {
+    // Tooltips para municipios
+    const tooltip = container.append("div")
+      .style("position",       "absolute")
+      .style("pointer-events", "none")
+      .style("background",     "rgba(26,60,94,0.9)")
+      .style("color",          "white")
+      .style("padding",        "5px 10px")
+      .style("border-radius",  "6px")
+      .style("font-size",      "12px")
+      .style("display",        "none")
+
+    svg.selectAll("g:nth-child(2) path")
+      .on("mouseover", function(event, d) {
+        d3.select(this).attr("fill-opacity", 1).attr("stroke-width", 2)
+        tooltip
+          .style("display", "block")
+          .html(`<b>${d.properties.municipio}</b><br>
+                 <span style="font-size:10px;opacity:.8">${d.properties.departamento}</span>`)
+      })
+      .on("mousemove", function(event) {
+        const [mx, my] = d3.pointer(event, container.node())
+        tooltip
+          .style("left", (mx + 12) + "px")
+          .style("top",  (my - 40) + "px")
+      })
+      .on("mouseout", function(event, d) {
+        d3.select(this)
+          .attr("fill-opacity", 0.7)
+          .attr("stroke-width", 0.7)
+        tooltip.style("display", "none")
+      })
+  }
+
+  // ── Barra de información inferior ────────────────────────────────────
+  const info_y = height - 35
+  const infobar = svg.append("g")
+
+  infobar.append("rect")
+    .attr("x", 0).attr("y", info_y - 10)
+    .attr("width", width).attr("height", 50)
+    .attr("fill", "rgba(26,60,94,0.75)")
+
+  const info_text = depto_sel === "— Colombia (todos) —"
+    ? `Colombia · 33 departamentos · 1119 municipios · Fuente: IGAC / GADM v4.1`
+    : `${depto_sel} · ${n_municipios} municipio(s) · Fuente: IGAC / GADM v4.1`
+
+  infobar.append("text")
+    .attr("x", width / 2).attr("y", info_y + 12)
+    .attr("text-anchor", "middle")
+    .attr("fill", "white")
+    .attr("font-size", "11px")
+    .text(info_text)
+
+  return container.node()
+}
+```
+
+------------------------------------------------------------------------
+
+> **Nota metodológica:** Los datos cartográficos corresponden a la división político-administrativa oficial de Colombia según el [Instituto Geográfico Agustín Codazzi — IGAC](https://www.igac.gov.co) y el [Marco Geoestadístico Nacional del DANE](https://www.dane.gov.co), descargados mediante la base de datos geoespacial [GADM v4.1](https://gadm.org/country_page.html).
+

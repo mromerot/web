@@ -1,0 +1,268 @@
+---
+title: "Mapa Interactivo de Colombia"
+subtitle: "Departamentos y Municipios · Vegetación · Vías · Cuerpos de agua"
+date: today
+lang: es
+format:
+  html:
+    theme: cosmo
+    toc: false
+    page-layout: full
+    embed-resources: false
+---
+
+```{=html}
+<link  href="data/maplibre-gl.css" rel="stylesheet">
+<script src="data/maplibre-gl.js"></script>
+<script src="data/pmtiles.js"></script>
+
+<style>
+  #selector-bar {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 12px; background: #f4f6f9;
+    border: 1px solid #dde; border-radius: 8px 8px 0 0;
+    font: 13px system-ui;
+  }
+  #selector-bar label { color: #1a3c5e; font-weight: 600; white-space: nowrap; }
+  #dept-select {
+    flex: 1; max-width: 340px; padding: 4px 8px;
+    border: 1px solid #b0bcd0; border-radius: 5px;
+    font: 13px system-ui; color: #1a3c5e; background: white;
+  }
+  #btn-reset {
+    padding: 4px 12px; border: 1px solid #b0bcd0; border-radius: 5px;
+    background: white; font: 13px system-ui; cursor: pointer; color: #1a3c5e;
+  }
+  #btn-reset:hover { background: #e8eef5; }
+  #map-nri { width: 100%; height: 78vh; border-radius: 0; border: 1px solid #ccc; border-top: none; }
+  #info-bar {
+    background: rgba(30,40,55,0.82); color: white;
+    padding: 6px 14px; border-radius: 0 0 10px 10px;
+    font: 12px system-ui; min-height: 26px;
+  }
+  .layer-ctrl {
+    position: absolute; top: 10px; right: 10px;
+    background: white; border-radius: 8px; padding: 10px 14px;
+    font: 13px system-ui; box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    z-index: 10; line-height: 2;
+  }
+  .layer-ctrl input { margin-right: 6px; accent-color: #3b5e8a; }
+</style>
+
+<div id="selector-bar">
+  <label>📍 Departamento</label>
+  <select id="dept-select">
+    <option value="">— Colombia (todos) —</option>
+    <option>Amazonas</option><option>Antioquia</option><option>Arauca</option>
+    <option>Atlántico</option><option>Bogotá D.C.</option><option>Bolívar</option>
+    <option>Boyacá</option><option>Caldas</option><option>Caquetá</option>
+    <option>Casanare</option><option>Cauca</option><option>Cesar</option>
+    <option>Chocó</option><option>Córdoba</option><option>Cundinamarca</option>
+    <option>Guainía</option><option>Guaviare</option><option>Huila</option>
+    <option>La Guajira</option><option>Magdalena</option><option>Meta</option>
+    <option>Nariño</option><option>Norte de Santander</option><option>Putumayo</option>
+    <option>Quindío</option><option>Risaralda</option>
+    <option>San Andrés y Providencia</option><option>Santander</option>
+    <option>Sucre</option><option>Tolima</option><option>Valle del Cauca</option>
+    <option>Vaupés</option><option>Vichada</option>
+  </select>
+  <button id="btn-reset">↺ Ver Colombia</button>
+</div>
+
+<div style="position:relative">
+  <div id="map-nri"></div>
+  <div class="layer-ctrl">
+    <b style="display:block;margin-bottom:2px;color:#1a3c5e">Capas</b>
+    <label><input type="checkbox" id="chk-dept" checked> Departamentos</label><br>
+    <label><input type="checkbox" id="chk-mun"  checked> Municipios (zoom ≥ 8)</label>
+  </div>
+</div>
+<div id="info-bar">Colombia · 33 departamentos · 1119 municipios</div>
+
+<script>
+(function () {
+  const protocol = new pmtiles.Protocol();
+  maplibregl.addProtocol("pmtiles", protocol.tile.bind(protocol));
+
+  const pmUrl  = "pmtiles://" + new URL("data/colombia.pmtiles", window.location.href).href;
+  const HOME   = { center: [-74.3, 4.5], zoom: 5.2 };
+  const info   = document.getElementById("info-bar");
+  const sel    = document.getElementById("dept-select");
+
+  const map = new maplibregl.Map({
+    container: "map-nri",
+    style: {
+      version: 8,
+      sources: {
+        carto: {
+          type: "raster",
+          tiles: [
+            "https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png",
+            "https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png",
+            "https://c.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png"
+          ],
+          tileSize: 256,
+          attribution: "© <a href='https://carto.com/'>CartoDB</a> © <a href='https://openstreetmap.org'>OSM</a>"
+        }
+      },
+      layers: [{ id: "basemap", type: "raster", source: "carto" }]
+    },
+    ...HOME, minZoom: 3, maxZoom: 18
+  });
+
+  map.addControl(new maplibregl.NavigationControl(), "top-left");
+  map.addControl(new maplibregl.ScaleControl({ unit: "metric" }), "bottom-left");
+
+  // ── Bounding boxes de departamentos (se calculan al cargar) ────────────
+  const deptBounds = {};
+
+  function flatCoords(geom) {
+    if (geom.type === "Polygon")      return geom.coordinates.flat();
+    if (geom.type === "MultiPolygon") return geom.coordinates.flat(2);
+    return [];
+  }
+
+  function buildBounds(features) {
+    features.forEach(f => {
+      const name = f.properties.departamento;
+      if (deptBounds[name]) return;
+      const coords = flatCoords(f.geometry);
+      if (!coords.length) return;
+      const lngs = coords.map(c => c[0]);
+      const lats  = coords.map(c => c[1]);
+      deptBounds[name] = [
+        [Math.min(...lngs), Math.min(...lats)],
+        [Math.max(...lngs), Math.max(...lats)]
+      ];
+    });
+  }
+
+  map.on("load", () => {
+    map.addSource("col", { type: "vector", url: pmUrl });
+
+    map.addLayer({
+      id: "dept-fill",
+      type: "fill", source: "col", "source-layer": "departamentos",
+      paint: {
+        "fill-color": "#3b5e8a",
+        "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 0.28, 0.10]
+      }
+    });
+
+    // Highlight del departamento seleccionado en el selector
+    map.addLayer({
+      id: "dept-selected",
+      type: "fill", source: "col", "source-layer": "departamentos",
+      filter: ["==", ["get", "departamento"], ""],
+      paint: { "fill-color": "#e8a020", "fill-opacity": 0.20 }
+    });
+
+    map.addLayer({
+      id: "dept-line",
+      type: "line", source: "col", "source-layer": "departamentos",
+      paint: {
+        "line-color": "#1a3c5e",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 3, 0.8, 10, 2.2]
+      }
+    });
+
+    map.addLayer({
+      id: "mun-line",
+      type: "line", source: "col", "source-layer": "municipios",
+      minzoom: 8,
+      paint: {
+        "line-color": "#5a7fa8",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 8, 0.4, 14, 1.2],
+        "line-opacity": 0.7
+      }
+    });
+
+    // Calcular bounds al primer idle (Colombia visible completa)
+    map.once("idle", () => {
+      buildBounds(map.queryRenderedFeatures({ layers: ["dept-fill"] }));
+    });
+
+    // ── Selector de departamento ──────────────────────────────────────────
+    function applySelection(name) {
+      if (!name) {
+        map.setFilter("dept-selected", ["==", ["get", "departamento"], ""]);
+        map.setFilter("mun-line", null);
+        map.flyTo(HOME);
+        info.textContent = "Colombia · 33 departamentos · 1119 municipios";
+        return;
+      }
+      map.setFilter("dept-selected", ["==", ["get", "departamento"], name]);
+      map.setFilter("mun-line", ["==", ["get", "departamento"], name]);
+      if (deptBounds[name]) {
+        map.fitBounds(deptBounds[name], { padding: 60, maxZoom: 10 });
+      }
+      info.innerHTML = `<b>${name}</b>`;
+    }
+
+    sel.addEventListener("change", () => applySelection(sel.value));
+
+    document.getElementById("btn-reset").addEventListener("click", () => {
+      sel.value = "";
+      applySelection("");
+    });
+
+    // ── Controles de visibilidad ──────────────────────────────────────────
+    document.getElementById("chk-dept").addEventListener("change", e => {
+      const v = e.target.checked ? "visible" : "none";
+      ["dept-fill", "dept-selected", "dept-line"].forEach(id => map.setLayoutProperty(id, "visibility", v));
+    });
+    document.getElementById("chk-mun").addEventListener("change", e => {
+      map.setLayoutProperty("mun-line", "visibility", e.target.checked ? "visible" : "none");
+    });
+
+    // ── Hover ─────────────────────────────────────────────────────────────
+    let hovered = null;
+
+    map.on("mousemove", "dept-fill", e => {
+      if (!e.features.length) return;
+      const f = e.features[0];
+      if (hovered !== null && hovered !== f.id)
+        map.setFeatureState({ source: "col", sourceLayer: "departamentos", id: hovered }, { hover: false });
+      hovered = f.id;
+      map.setFeatureState({ source: "col", sourceLayer: "departamentos", id: hovered }, { hover: true });
+      map.getCanvas().style.cursor = "pointer";
+      const muns = map.queryRenderedFeatures(e.point, { layers: ["mun-line"] });
+      info.innerHTML = muns.length
+        ? `<b>${muns[0].properties.municipio}</b> &nbsp;·&nbsp; ${f.properties.departamento}`
+        : `<b>${f.properties.departamento}</b>`;
+    });
+
+    map.on("mouseleave", "dept-fill", () => {
+      if (hovered !== null)
+        map.setFeatureState({ source: "col", sourceLayer: "departamentos", id: hovered }, { hover: false });
+      hovered = null;
+      map.getCanvas().style.cursor = "";
+      const name = sel.value;
+      info.textContent = name
+        ? name
+        : "Colombia · 33 departamentos · 1119 municipios";
+    });
+
+    // ── Popup al hacer clic ───────────────────────────────────────────────
+    const popup = new maplibregl.Popup({ closeButton: false, maxWidth: "200px" });
+
+    map.on("click", "dept-fill", e => {
+      const f    = e.features[0];
+      const muns = map.queryRenderedFeatures(e.point, { layers: ["mun-line"] });
+      const html = muns.length
+        ? `<b style="font-size:13px">${muns[0].properties.municipio}</b>
+           <br><span style="font-size:11px;color:#555">${f.properties.departamento}</span>`
+        : `<b style="font-size:13px">${f.properties.departamento}</b>`;
+      popup.setLngLat(e.lngLat).setHTML(html).addTo(map);
+      // Sincroniza el selector al hacer clic
+      sel.value = f.properties.departamento;
+      applySelection(f.properties.departamento);
+    });
+  });
+})();
+</script>
+```
+
+---
+
+> **Fuente:** Cartografía oficial de Colombia — [IGAC](https://www.igac.gov.co) / [GADM v4.1](https://gadm.org). Mapa base: [CartoDB Voyager](https://carto.com) / [OpenStreetMap](https://openstreetmap.org).
