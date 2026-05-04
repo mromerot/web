@@ -77,6 +77,17 @@
     ]
   },
   {
+    "objectID": "datascience/d3.html#recursos",
+    "href": "datascience/d3.html#recursos",
+    "title": "D3, Observable y JS",
+    "section": "Recursos",
+    "text": "Recursos\n\nDiseña y visualiza con D3.js datos de siniestralidad en carretera. Link",
+    "crumbs": [
+      "Ciencia de datos",
+      "D3"
+    ]
+  },
+  {
     "objectID": "datascience/claude-slides.html#contenidos",
     "href": "datascience/claude-slides.html#contenidos",
     "title": "Guia completa para construir Skills para Claude",
@@ -2218,6 +2229,17 @@
     "title": "Conocimiento del riesgo de desastres",
     "section": "Herramientas para el análisis de riesgos",
     "text": "Herramientas para el análisis de riesgos\n\nThe CAPRA (Probabilistic Risk Assessment) Platform. Link.\nCuadernos de trabajo (ver repositorios)\nSoftware\n\nWORLD BANK CLIMATE AND DISASTER RISK SCREENING TOOLS. Link\nRisk Data Library. Country Climate & Disaster Risk Screening Tools. Link.\nRisk Changes. An open-source Spatial Decision Support tool for the analysis of Dynamic Multi-Hazard risk. Link.\n\nDocumentation. Link.\n\n\n\n\n\n\n Introduction\n\n\n Hazard\n\n\n\n\nArtículos científicos\n\nA review of risk analysis methods for natural disasters. Nat Hazards 100, 571–593. Sun, R. et al. 2020. Link\nHybrid loss exceedance curve (HLEC) for disaster risk assessment. Velazquez et al. 2020. Link\nAssessing global exposure and vulnerability towards natural hazards: the Disaster Risk Index. Peduzzi, et al. 2009, Nat. Hazards Earth Syst. Link\n\n\n\n\n\n Lesson 2：Six steps of disaster risk assessment\n\n\n Building resilience to compound and cascading disaster risks\n\n\n\n\n Webinar Modern Technology in Disaster Management: The Challenges\n\n\n Integrated Risk management in Civil Protection\n\n\n\n\n Modelo mundial de riesgo en la infraestructura\n\n\n Risk Analysis for Civil Protection\n\n\n\n\n Using Exceedance Probabilities for Disaster Management\n\n\nEvaluación del riesgo",
+    "crumbs": [
+      "Gestión del riesgo de desastres",
+      "Conocimiento del riesgo"
+    ]
+  },
+  {
+    "objectID": "grd/conocimientodelriesgo.html#evaluación-del-riesgo-en-la-infraestructura",
+    "href": "grd/conocimientodelriesgo.html#evaluación-del-riesgo-en-la-infraestructura",
+    "title": "Conocimiento del riesgo de desastres",
+    "section": "Evaluación del riesgo en la infraestructura",
+    "text": "Evaluación del riesgo en la infraestructura\n\nGlobal Infrastructure Risk Model and Resilience Index. Link",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Conocimiento del riesgo"
