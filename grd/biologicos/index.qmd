@@ -6,12 +6,16 @@ editor: visual
 
 ## ![Hazard information profiles 2025](/grd/images/hips2025.png){width="400"}
 
+## Recursos:
+
+-   Proyecto Harmonize, toolkits. [*Link*](https://www.harmonize-tools.org/toolkits)
+
 ## [**2025 Hazard Information Profiles (HIPs) online reference**](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type&order=title&sort=desc#biological)
 
-##  6 grupos de peligros y 83 peligros específicos
+## 6 grupos de peligros y 83 peligros específicos
 
-| [peligro específico  ](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=title&sort=asc "Ordenar por peligro específico") | [Identificador](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_notation&sort=asc "Ordenar por identificador") | [Grupo](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_cluster_type&sort=asc "Ordenar por clúster") |
-|----|----|----|
+| [peligro específico](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=title&sort=asc "Ordenar por peligro específico") | [Identificador](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_notation&sort=asc "Ordenar por identificador") | [Grupo](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type=&order=field_hip_cluster_type&sort=asc "Ordenar por clúster") |
+|------------------------|------------------------|------------------------|
 | [Enfermedades zoonóticas](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/bi0113) | BI0113 | Enfermedades infecciosas |
 | [Virus del Zika](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/bi0242) | BI0242 | Enfermedades infecciosas específicas de interés para la salud pública |
 | [Fiebre amarilla](https://www.preventionweb.net/understanding-disaster-risk/terminology/hips/bi0241) | BI0241 | Enfermedades infecciosas específicas de interés para la salud pública |

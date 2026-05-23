@@ -49,6 +49,7 @@ Amenaza por incendios forestales
 -   A wildfire risk assessment framework for land and resource management. US Forest Service. 2013. [*Link*](https://research.fs.usda.gov/treesearch/56265)
 -   USGS Wildfire Hazard and Risk Assessment Clearinghouse. [*Link*](https://apps.usgs.gov/wildfire_hazard_and_risk_assessment_clearinghouse/).
 -   Wildfire Risk Assessment. Copernicus. [*Link*](https://forest-fire.emergency.copernicus.eu/about-effis/technical-background/wildfire-risk-assesment)
+-   Wild Fire Risk. Carbon Plan. [*Link*](https://carbonplan.org/research/climate-risk?lat=34.25212&lng=-77.90774&zoom=11.31)
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/swr4NlX2bVE" >}}
@@ -65,7 +66,7 @@ Amenaza por incendios forestales
 ::: {.callout-important appearance="minimal"}
 ## Cuadernos reproducibles
 
-## 🔥 Probability of Fire Jupyter Book, ECMWF. [*Link*](https://ecmwf.github.io/AI-Probability-of-Fire/) 
+## 🔥 Probability of Fire Jupyter Book, ECMWF. [*Link*](https://ecmwf.github.io/AI-Probability-of-Fire/)
 
 ![](https://ecmwf.github.io/AI-Probability-of-Fire/build/PoF-light-5588beea6278b73afbd5578b3c5327d3.png){fig-align="center" width="252"}
 :::
