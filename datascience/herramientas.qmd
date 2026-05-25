@@ -1,0 +1,60 @@
+---
+title: "Herramientas"
+format: html
+editor: visual
+---
+
+# Lecturas y videos introductorios
+
+-   Configuring your computer to use Python for scientific computing. [*Link*](http://be150.caltech.edu/2020/content/lessons/00_setting_up_python_computing_environment.html)
+
+-   The Missing Semester of Your CS Education [*Link*](https://missing.csail.mit.edu/)
+
+    -   **1/12/26**: [Course Overview + Introduction to the Shell](https://missing.csail.mit.edu/2026/course-shell/)
+
+    -   **1/13/26**: [Command-line Environment](https://missing.csail.mit.edu/2026/command-line-environment/)
+
+    -   **1/14/26**: [Development Environment and Tools](https://missing.csail.mit.edu/2026/development-environment/)
+
+    -   **1/15/26**: [Debugging and Profiling](https://missing.csail.mit.edu/2026/debugging-profiling/)
+
+    -   **1/16/26**: [Version Control and Git](https://missing.csail.mit.edu/2026/version-control/)
+
+    -   **1/20/26**: [Packaging and Shipping Code](https://missing.csail.mit.edu/2026/shipping-code/)
+
+    -   **1/21/26**: [Agentic Coding](https://missing.csail.mit.edu/2026/agentic-coding/)
+
+    -   **1/22/26**: [Beyond the Code](https://missing.csail.mit.edu/2026/beyond-code/)
+
+    -   **1/23/26**: [Code Quality](https://missing.csail.mit.edu/2026/code-quality/)
+
+::: {layout-ncol="2"}
+{{< video https://youtu.be/MSgoeuMqUmU >}} {{< video https://youtu.be/ccBGsPedE9Q >}}
+:::
+
+# Virtualized Data
+
+-   Accelerating Science Using Virtualized Data at PO.DAAC*. [Slides](https://earthdata.nasa.gov/s3fs-public/2025-08/Virtualized%20Data_PO.DAAC_8.21.25.pdf)*
+
+{{< video https://youtu.be/K1FJyB0-XjY >}}
+
+## Analysis Ready, Cloud Optimized (ARCO) Data
+
+-   Introduction to the ARCO format. [*Link*](https://help.marine.copernicus.eu/en/articles/12332770-introduction-to-the-arco-format)
+
+::: {layout-ncol="2"}
+{{< video https://youtu.be/3mDjqIFtS6U >}} Analysis-Ready-Cloud-Optimized (ARCO) for Cloud Computing and Data Analytics to Support Open Science
+:::
+
+# 
+
+# Data and Digital Outputs Management Plan (DDOMP)
+
+-   Belmont forum DDOMP Guide. [*Link*](https://bfe-inf.github.io/toolkit/ddomp-preproposal.html)
+    -   ¿Qué tipos de conjuntos de datos y otros resultados digitales de valor a largo plazo espera que el proyecto produzca o reutilice?
+    -   ¿Qué miembro(s) de su equipo serán responsables de desarrollar, implementar, supervisar y actualizar el Plan de Gestión de Datos y Resultados Digitales?
+    -   ¿Cómo se han contabilizado los costes necesarios para gestionar los datos y los resultados digitales para garantizar la accesibilidad a largo plazo?
+
+# Binder
+
+-   Zero-to-Binder. [*Link*](https://book.the-turing-way.org/communication/binder/zero-to-binder.html)

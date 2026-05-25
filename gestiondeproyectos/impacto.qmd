@@ -1,0 +1,44 @@
+---
+title: "Impacto"
+format: html
+editor: visual
+---
+
+# Evaluación de impacto
+
+¿Planeas realizar una evaluación como parte de tu proyecto propuesto? A continuación se describen las principales opciones de evaluación de impacto, desde diseños experimentales rigurosos hasta evaluaciones de proceso.
+
+## 1. Evaluación de impacto: Ensayo controlado aleatorizado (RCT)
+
+Un **ensayo controlado aleatorizado** (Randomized Controlled Trial, RCT) es considerado el estándar de oro en la evaluación de impacto. Los participantes o unidades de análisis (personas, comunidades, organizaciones) se asignan de forma aleatoria a un grupo de tratamiento —que recibe la intervención— y a un grupo de control —que no la recibe—. La aleatorización garantiza que las diferencias observadas en los resultados puedan atribuirse causalmente a la intervención, eliminando sesgos de selección. Este diseño requiere planificación desde el inicio del proyecto, tamaños de muestra suficientes y, en muchos casos, aprobación ética. Es especialmente adecuado cuando existe incertidumbre genuina sobre el efecto de la intervención y cuando es éticamente viable asignar el tratamiento de forma aleatoria.
+
+## 2. Evaluación de impacto: Diseño cuasi-experimental
+
+Un **diseño cuasi-experimental** estima el impacto de una intervención sin aleatorización, aprovechando variaciones naturales o reglas de asignación existentes. Permite establecer inferencia causal cuando un RCT no es factible. Los métodos más utilizados incluyen:
+
+-   **Diferencias en diferencias (DiD):** compara la evolución de un grupo tratado frente a un grupo de control antes y después de la intervención.
+-   **Regresión discontinua (RD):** explota un umbral de elegibilidad para comparar unidades justo por encima y debajo del corte.
+-   **Pareamiento por puntaje de propensión (PSM):** construye un grupo de comparación estadísticamente similar al grupo tratado.
+-   **Variables instrumentales (IV):** usa una variable que afecta la participación en el tratamiento pero no el resultado directamente.
+
+La elección del método depende de la estructura de los datos, la regla de asignación de la intervención y los supuestos que sea razonable mantener.
+
+## 3. Pruebas A/B
+
+Las **pruebas A/B** (también llamadas experimentos en línea o pruebas de split) son una forma de experimento controlado ampliamente usada en entornos digitales, plataformas tecnológicas y productos de datos. Se asigna aleatoriamente a los usuarios entre dos versiones de un producto, mensaje o funcionalidad (versión A y versión B) y se mide cuál produce mejores resultados en una métrica predefinida. A diferencia de un RCT clásico, las pruebas A/B operan a gran escala, con asignación automatizada y resultados casi en tiempo real. Son especialmente útiles para optimizar comunicaciones, interfaces, algoritmos o políticas cuando el ciclo de iteración es corto y el volumen de usuarios es alto.
+
+## 4. Evaluación de proceso
+
+Una **evaluación de proceso** (también llamada evaluación de implementación) no busca medir el impacto causal de la intervención, sino entender *cómo* y *en qué medida* se implementó. Responde preguntas como: ¿se entregó la intervención según lo planeado?, ¿a quién llegó?, ¿con qué calidad?, ¿qué barreras u obstáculos surgieron? Combina métodos cualitativos (entrevistas, grupos focales, observación) y cuantitativos (registros administrativos, encuestas de seguimiento). Es especialmente valiosa en las etapas tempranas de un programa, cuando la prioridad es aprender y ajustar la teoría de cambio antes de invertir en una evaluación de impacto de mayor escala.
+
+# Lecturas de referencia
+
+## Lea esto 👇🏼
+
+::: panel-tabset
+### **The Road to Results**
+
+![](https://www.worldbank.org/content/dam/photos/780x439/2016/sep/IEinPractice2.jpg){fig-align="left" width="250"}
+
+[The Road to Results: Designing and Conducting Effective Development Evaluations. World Bank. 2016.](https://openknowledge.worldbank.org/entities/publication/9a5e27b6-9f82-590f-97a4-b6a14cd99954)
+:::

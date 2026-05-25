@@ -120,6 +120,8 @@ website:
             href: gestiondeproyectos/gestiontecnologiainnovacion.qmd
           - text: "Gestión de proyectos"
             href: gestiondeproyectos/projectmanagement.qmd
+          - text: "Impacto"
+            href: gestiondeproyectos/impacto.qmd
       # aqui viene la seccion de ciencia y tecnologia
       - section: "Ciencia y tecnología"
         contents:
@@ -155,6 +157,8 @@ website:
             href: datascience/graficas-python-r.qmd
           - text: "ARCO Data"
             href: datascience/arco.qmd
+          - text: "Herramientas"
+            href: datascience/herramientas.qmd
           - text: "Inteligencia artificial"
             href: datascience/ia.qmd
           - section: "Mapas"
