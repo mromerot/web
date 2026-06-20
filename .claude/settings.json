@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/mauricio/Documents/Data-science-local/MR-Web diff --stat HEAD)",
+      "Bash(git -C /Users/mauricio/Documents/Data-science-local/MR-Web log --oneline -3)",
+      "Bash(git -C /Users/mauricio/Documents/Data-science-local/MR-Web add grd/gestiondelriesgo.qmd grd/ciudades.qmd docs/grd/gestiondelriesgo.html docs/grd/ciudades.html docs/sitemap.xml)",
+      "Bash(git -C /Users/mauricio/Documents/Data-science-local/MR-Web commit -m ' *)",
+      "Bash(git -C /Users/mauricio/Documents/Data-science-local/MR-Web push origin main)",
+      "Bash(git -C /Users/mauricio/Documents/Data-science-local/MR-Web remote -v)",
+      "Bash(git -C /Users/mauricio/Documents/Data-science-local/MR-Web config user.name)",
+      "Bash(git -C /Users/mauricio/Documents/Data-science-local/MR-Web config user.email)"
+    ]
+  }
+}

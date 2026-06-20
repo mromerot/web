@@ -155,8 +155,6 @@ website:
             href: datascience/jupyter-notebook.ipynb
           - text: "Graficas Python y R"
             href: datascience/graficas-python-r.qmd
-          - text: "ARCO Data"
-            href: datascience/arco.qmd
           - text: "Herramientas"
             href: datascience/herramientas.qmd
           - text: "Inteligencia artificial"

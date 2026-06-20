@@ -120,6 +120,22 @@ Content for `Tab B`
 
 ------------------------------------------------------------------------
 
+## Cards
+
+::::: card
+::: {.card-header .bg-primary .text-white}
+📖 **The Road to Results**
+:::
+
+::: card-body
+![](https://www.worldbank.org/content/dam/photos/780x439/2016/sep/IEinPractice2.jpg){fig-align="left" width="250"}
+
+The Road to Results: Designing and Conducting Effective Development Evaluations. World Bank. 2016.
+
+[Ver publicación](https://openknowledge.worldbank.org/entities/publication/9a5e27b6-9f82-590f-97a4-b6a14cd99954)
+:::
+:::::
+
 ## Insertar elementos en dos columnas
 
 ``` {.Markdown style="color: gray"}
@@ -136,7 +152,7 @@ Texto de la caja (opcional)
 ``` {.Markdown style="color: gray"}
 Llamar con barra / e insertar `Shotcode`
 
-Entre corchetes colocar `video = "link"`
+Entre corchetes colocar video link
 
 Insertar video de un live: cambiar "live" por "embed"
 https://www.youtube.com/embed/srgbUPu9Mo4
