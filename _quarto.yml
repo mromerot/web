@@ -134,7 +134,7 @@ website:
           - text: "Ciencia transdiciplinar"
             href: cyt/transdisciplina.qmd
       # aqui viene la seccion de ecologia y conservacion
-      - text: "Ecología y conservación"
+      - text: "Ecología y conservación marina"
         href: ecolyconserv/ecologiayconservacion.qmd
       # aqui viene la seccion de ciencia de datos
       - section: "Ciencia de datos"
@@ -190,12 +190,6 @@ website:
             href: vidalaboral/vidalaboral.qmd
           - text: "Herramientas"
             href: vidalaboral/herramientas.qmd
-      - section: "Curriculum vitae"
-        contents:
-          - text: "Curriculum vitae"
-            href: cv/cv.qmd
-          - text: "Mis publicaciones"
-            href: cv/publicaciones.qmd
 
 format:
   html:

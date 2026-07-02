@@ -3227,7 +3227,7 @@
     "href": "grd/ambientales/incendiosforestales.html#lecturas",
     "title": "Incendios forestales",
     "section": "Lecturas",
-    "text": "Lecturas\n\nClimate change is increasingly affecting fires worldwide. Nature. 2024. Link\nWildfire Fighters, Unmasked in Toxic Smoke, Are Getting Sick and Dying. NYT. 2025. Link",
+    "text": "Lecturas\n\nClimate change is increasingly affecting fires worldwide. Nature. 2024. Link\nWildfire Fighters, Unmasked in Toxic Smoke, Are Getting Sick and Dying. NYT. 2025. Link\nWildfires in 2025. Nature Reviews Earth & Environment. 2026. Link.",
     "crumbs": [
       "Gestión del riesgo de desastres",
       "Amenazas ambientales",
@@ -3712,7 +3712,7 @@
     "section": "",
     "text": "Video introductorio\n\n\n El oceáno",
     "crumbs": [
-      "Ecología y conservación"
+      "Ecología y conservación marina"
     ]
   },
   {
@@ -3722,7 +3722,7 @@
     "section": "Cursos",
     "text": "Cursos\n\nPrinciples of Evolution, Ecology and Behavior. Stearns, S. Yale. Link.\nBioinformatic Methods I. Coursera. Link.\nBioinformatics: Life Sciences on Your Computer. Coursera. Link.\nCommunity structure and dispersal. Bio-570. Oregon State University. Link.\nIntroduction to Genetics and Evolution. Coursera. Link.\nShort Course on Species Distribution Modeling in Conservation Using R: From Start to Finish. Link.\nData Analysis for Life Sciences. Link. Link.",
     "crumbs": [
-      "Ecología y conservación"
+      "Ecología y conservación marina"
     ]
   },
   {
@@ -3732,7 +3732,7 @@
     "section": "Charlas",
     "text": "Charlas\n\nIn the Light of Evolution X: Comparative Phylogeography. Colloqia. National Academy of Sciences. Link.\nEvolutionary games. MIT opencourseware. Link\nEcological Neutral Theory: is it Madness or Misunderstood? (James Rosindell October 2013). Link\nThe neutral theory of biodiversity and other competitors to maximum entropy. Link\nPhylogenetic trees. NIMbioS. Link\nQuantitative genetic variance in metapopulations. NIMbioS. Link\nBrownian motion models, multiple characters and phylogenies. NIMbioS. Link.\nGeometric approaches to phylogenetic tree reconstruction. NIMbioS. Link\nBiodiversity measures and the role of species similarity. NIMbioS. Link.\nVideos for teaching ecology. Link.",
     "crumbs": [
-      "Ecología y conservación"
+      "Ecología y conservación marina"
     ]
   },
   {
@@ -3742,7 +3742,7 @@
     "section": "Lecturas",
     "text": "Lecturas\n\nThe ecologist’s field guide to sequence-based identification of biodiversity. Ecology and Evolution. 2016. Link.\nProcess, Mechanism, and Modeling in Macroecology. TREE. 2017. Link.\nKnowledge of Colombian biodiversity: published and indexed. Biodiversity and Conservation. 2013. Link.\nEssential Biodiversity Variables. Pereira, et al. Science, 2013. Link.",
     "crumbs": [
-      "Ecología y conservación"
+      "Ecología y conservación marina"
     ]
   },
   {
@@ -3752,7 +3752,7 @@
     "section": "Teorias en ecología",
     "text": "Teorias en ecología\n\nShou et. al. 2015. Research: Theory, models and biology. eLife 2015;4:e07158. Link.",
     "crumbs": [
-      "Ecología y conservación"
+      "Ecología y conservación marina"
     ]
   },
   {
@@ -3762,7 +3762,7 @@
     "section": "MOOCS",
     "text": "MOOCS\n\nTropical coastal ecosystems. Link. Videos.\nOpen Channel. Link.\nOpen2U. Marine Data and Science e-lectures. Link.",
     "crumbs": [
-      "Ecología y conservación"
+      "Ecología y conservación marina"
     ]
   },
   {
@@ -3875,11 +3875,7 @@
     "href": "cv/cv.html",
     "title": "Curriculum vitae",
     "section": "",
-    "text": "Curriculum vitae\n\n\nDescargar CV en PDF",
-    "crumbs": [
-      "Curriculum vitae",
-      "Curriculum vitae"
-    ]
+    "text": "Curriculum vitae\n\n\nDescargar CV en PDF"
   },
   {
     "objectID": "datascience/jupyter-notebook.html",
