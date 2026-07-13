@@ -8,7 +8,11 @@
       "Bash(git -C /Users/mauricio/Documents/Data-science-local/MR-Web push origin main)",
       "Bash(git -C /Users/mauricio/Documents/Data-science-local/MR-Web remote -v)",
       "Bash(git -C /Users/mauricio/Documents/Data-science-local/MR-Web config user.name)",
-      "Bash(git -C /Users/mauricio/Documents/Data-science-local/MR-Web config user.email)"
+      "Bash(git -C /Users/mauricio/Documents/Data-science-local/MR-Web config user.email)",
+      "WebFetch(domain:www.sciencedirect.com)",
+      "WebFetch(domain:shop.elsevier.com)",
+      "WebFetch(domain:www.preventionweb.net)",
+      "WebFetch(domain:www.irdrinternational.org)"
     ]
   }
 }
