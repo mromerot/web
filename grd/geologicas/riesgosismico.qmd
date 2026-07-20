@@ -10,18 +10,18 @@ editor: visual
 
 ## Instituciones nacionales
 
--   UNGRD. [*Link*](https://portal.gestiondelriesgo.gov.co/)
--   Servicio Geológico de Colombia. [*Link*](https://www2.sgc.gov.co/ProgramasDeInvestigacion/geoamenazas/Paginas/geoamenazas.aspx)
-    -   [**Sistema de Consulta de la Amenaza Sísmica de Colombia**](https://amenazasismica.sgc.gov.co/)
--   Asociación Colombiana de Ingeniería Sísmica - AIS. [*Link*](https://asosismica.org.co/).
+- UNGRD. [*Link*](https://portal.gestiondelriesgo.gov.co/)
+- Servicio Geológico de Colombia. [*Link*](https://www2.sgc.gov.co/ProgramasDeInvestigacion/geoamenazas/Paginas/geoamenazas.aspx)
+  - [**Sistema de Consulta de la Amenaza Sísmica de Colombia**](https://amenazasismica.sgc.gov.co/)
+- Asociación Colombiana de Ingeniería Sísmica - AIS. [*Link*](https://asosismica.org.co/).
 
 ## Instituciones internacionales
 
--   Global Earthquake Model Foundation. [*Link*](https://www.globalquakemodel.org/).
--   EPI Centre. UK. [*Link*](https://www.ucl.ac.uk/epicentre/)*.*
-    -   UNESCO Chair Online Course Series.[*Link*](https://youtube.com/playlist?list=PLONz_E1ldJZuY_SragFmfd9TYssZOAotW&si=-LoRqEitnWUqI7Ng)
+- Global Earthquake Model Foundation. [*Link*](https://www.globalquakemodel.org/).
+- EPI Centre. UK. [*Link*](https://www.ucl.ac.uk/epicentre/)*.*
+  - UNESCO Chair Online Course Series. [*Link*](https://youtube.com/playlist?list=PLONz_E1ldJZuY_SragFmfd9TYssZOAotW&si=-LoRqEitnWUqI7Ng)
 
-    -   EPICentre Seminars[*Link*](https://youtube.com/playlist?list=PLONz_E1ldJZtC3xDaTbXV26dXe07fydAT&si=5D9NLz8XlZNGlmY_)
+  - EPICentre Seminars. [*Link*](https://youtube.com/playlist?list=PLONz_E1ldJZtC3xDaTbXV26dXe07fydAT&si=5D9NLz8XlZNGlmY_)
 
 ::: {layout-ncol="2"}
 {{< video "https://youtube.com/playlist?list=PLONz_E1ldJZtC3xDaTbXV26dXe07fydAT&si=359FfXv-a6QQpWr5" >}} EPI Seminars
@@ -29,9 +29,9 @@ editor: visual
 
 ## Programas internacionales
 
--   OpenQuake - Plataforma. [*Link*](https://platform.openquake.org/).
--   Compilation and data manipulation scripts. [*Link*](https://github.com/OpenDRR/model-factory).
--   Geopoderes Webinar. [*Link*](http://www.geopoderes.com/webinars/).
+- OpenQuake - Plataforma. [*Link*](https://platform.openquake.org/).
+- Compilation and data manipulation scripts. [*Link*](https://github.com/OpenDRR/model-factory).
+- Geopoderes Webinar. [*Link*](http://www.geopoderes.com/webinars/).
 
 ## Escuelas seguras
 
@@ -41,17 +41,25 @@ editor: visual
 
 ## Amenaza sísmica
 
--   Modelo nacional de amenaza sísmica para Colombia. SGC. [*Link*](https://libros.sgc.gov.co/index.php/editorial/catalog/book/38#:~:text=En%20el%20modelo%2C%20la%20sismicidad,procedimiento%20propuesto%20por%20los%20autores.).
--   Modelo nacional de amenaza sísmica para Colombia. Bogotá: Servicio Geológico Colombiano y Fundación Global Earthquake Model. [*Link*](https://libros.sgc.gov.co/index.php/editorial/catalog/book/38). [*Link*](https://amenazasismica.sgc.gov.co/).
-    -   Perfil Colombia GEM. [*Link*](https://github.com/gem/risk-profiles/tree/master/South_America/Colombia)
--   Modelo de Amenaza Sísmica de Colombia. [*Link*](https://amenazasismica.sgc.gov.co/).
--   Modelación probabilista para la gestión del riesgo de desastre El caso de Bogotá, Colombia. Banco Mundial. Universidad de los Andes. 2013. [*Link*](https://www.gfdrr.org/sites/default/files/publication/modelacionprobabilistaparalagestiondelriesgodedesastre_elcasodebogotacolombia_reduced.pdf)
--   What is seismic hazard? What is a seismic hazard map? How are they made? How are they used? Why are there different maps, and which one should I use?. USGS. [*Link*](https://www.usgs.gov/faqs/what-seismic-hazard-what-seismic-hazard-map-how-are-they-made-how-are-they-used-why-are-there).
--   Earthquake Hazard Maps. FEMA. [*Link*](https://www.fema.gov/es/emergency-managers/risk-management/earthquake/hazard-maps).
--   Iris Earthquake Browser. [*Link*](http://ds.iris.edu/ieb/index.html?).
--   Geohazards Europa. [*Link*](https://geohazards-tep.eu/#!).
--   Mapping Global Earthquakes and Hurricane tracks with R. [*Link*](http://david-lallemant.com/mapping-global-earthquakes-and-hurricane-tracks-with-r-2/).
--   Probabilistic seismic hazard analysis for El Salvador. Bulletin of Earthquake Engineering. 2026. [*Link*](https://link.springer.com/article/10.1007/s10518-026-02394-z#Sec8)
+
+::: {.panel-tabset}
+### 📖 **Modelo nacional de amenaza sísmica para Colombia**
+![](https://libros.sgc.gov.co/public/presses/2/submission_38_38_coverImage_t.png){fig-align="left" width="250"}
+
+[Modelo nacional de amenaza sísmica para Colombia. 2021.](https://libros.sgc.gov.co/index.php/editorial/catalog/book/38)
+:::
+
+- Modelo nacional de amenaza sísmica para Colombia. Bogotá: Servicio Geológico Colombiano y Fundación Global Earthquake Model. [*Link*](https://libros.sgc.gov.co/index.php/editorial/catalog/book/38). [*Link*](https://amenazasismica.sgc.gov.co/).
+  - Perfil Colombia GEM. [*Link*](https://github.com/gem/risk-profiles/tree/master/South_America/Colombia)
+- Modelo de Amenaza Sísmica de Colombia. [*Link*](https://amenazasismica.sgc.gov.co/).
+- Modelación probabilista para la gestión del riesgo de desastre El caso de Bogotá, Colombia. Banco Mundial. Universidad de los Andes. 2013. [*Link*](https://www.gfdrr.org/sites/default/files/publication/modelacionprobabilistaparalagestiondelriesgodedesastre_elcasodebogotacolombia_reduced.pdf)
+- Evaluation of the seismic risk of the unreinforced masonry building stock in Antioquia, Colombia. 2017. [*Link*](https://ideas.repec.org/a/spr/nathaz/v86y2017i1d10.1007_s11069-016-2647-8.html)
+- What is seismic hazard? What is a seismic hazard map? How are they made? How are they used? Why are there different maps, and which one should I use?. USGS. [*Link*](https://www.usgs.gov/faqs/what-seismic-hazard-what-seismic-hazard-map-how-are-they-made-how-are-they-used-why-are-there).
+- Earthquake Hazard Maps. FEMA. [*Link*](https://www.fema.gov/es/emergency-managers/risk-management/earthquake/hazard-maps).
+- Iris Earthquake Browser. [*Link*](http://ds.iris.edu/ieb/index.html?).
+- Geohazards Europa. [*Link*](https://geohazards-tep.eu/#!).
+- Mapping Global Earthquakes and Hurricane tracks with R. [*Link*](http://david-lallemant.com/mapping-global-earthquakes-and-hurricane-tracks-with-r-2/).
+- Probabilistic seismic hazard analysis for El Salvador. Bulletin of Earthquake Engineering. 2026. [*Link*](https://link.springer.com/article/10.1007/s10518-026-02394-z#Sec8)
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/f40923_wegA" >}} Modelo Nacional de Riesgo Sísmico
@@ -69,7 +77,7 @@ Amenaza sísmica
 
 ## Evaluación del riesgo sísmico
 
--   Why is Probabilistic Seismic Hazard Analysis (PSHA) still used?. 2017. [*Link*](https://www.sciencedirect.com/science/article/pii/S0031920116303016)
+- Why is Probabilistic Seismic Hazard Analysis (PSHA) still used?. 2017. [*Link*](https://www.sciencedirect.com/science/article/pii/S0031920116303016)
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/bXNtr6lSKQI" >}} Earthquake hazard and risk assessment (Webinar)
@@ -83,7 +91,7 @@ Amenaza sísmica
 
 ## Reducción del riesgo
 
--   Reglamento Colombiano de Construcción Sismo Resistente NSR. [*Link*](https://www.idrd.gov.co/sitio/idrd/sites/default/files/imagenes/titulo-a-nsr-100.pdf).
+- Reglamento Colombiano de Construcción Sismo Resistente NSR. [*Link*](https://www.idrd.gov.co/sitio/idrd/sites/default/files/imagenes/titulo-a-nsr-100.pdf).
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/QVhEC4VwExM" >}} Cómo construir edificaciones sismo resistentes
@@ -93,7 +101,7 @@ Amenaza sísmica
 
 ## Lecturas
 
--   International Geoscience Programme (IGCP). [*Link*](https://en.unesco.org/international-geoscience-programme).
+- International Geoscience Programme (IGCP). [*Link*](https://en.unesco.org/international-geoscience-programme).
 
 ## **Entrenamiento**
 

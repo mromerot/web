@@ -4,11 +4,12 @@ format: html
 editor: visual
 ---
 
--   Amenaza y vulnerabilidad por erosión costera en Colombia: enfoque regional para la gestión del riesgo. 2018. Invemar. [*Link*](http://www.invemar.org.co/publicaciones#).
--   Lanzamiento del libro *Erosión costera en el litoral antioqueño*, 2022. [*Link*](https://fb.watch/aKuOH5xUGS/).
--   Present and Future Challenges of Coastal Erosion in Latin America. 2014. [*Link*](https://doi.org/10.2112/SI71-001.1)
--   Are We Managing in the Right Way the Coastal Erosion along the Caribbean Coast of Colombia? 2020. [*Link*](https://doi.org/10.2112/SI95-181.1).
--   Algunos expertos Colombia.
+- Plan Maestro de Erosión Costera para Colombia. [*Link*](https://www.minambiente.gov.co/asuntos-marinos-costeros-y-recursos-acuaticos/plan-maestro-de-erosion-costera/)
+- Amenaza y vulnerabilidad por erosión costera en Colombia: enfoque regional para la gestión del riesgo. 2018. Invemar. [*Link*](http://www.invemar.org.co/publicaciones#).
+- Lanzamiento del libro *Erosión costera en el litoral antioqueño*, 2022. [*Link*](https://fb.watch/aKuOH5xUGS/).
+- Present and Future Challenges of Coastal Erosion in Latin America. 2014. [*Link*](https://doi.org/10.2112/SI71-001.1)
+- Are We Managing in the Right Way the Coastal Erosion along the Caribbean Coast of Colombia? 2020. [*Link*](https://doi.org/10.2112/SI95-181.1).
+- Algunos expertos Colombia.
 
 ::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/watch?v=wMWO0NFO6YY" >}}
@@ -19,7 +20,6 @@ editor: visual
 :::
 
 ```         
-
 ```
 
 ```         
@@ -27,27 +27,27 @@ editor: visual
 
 # Instituciones nacionales
 
--   Invemar. [*Link*](https://www.invemar.org.co/)*.*
-    -   Costero. [*Link*](https://costero.invemar.org.co/)
+- Invemar. [*Link*](https://www.invemar.org.co/)*.*
+  - Costero. [*Link*](https://costero.invemar.org.co/)
 
 # Investigadores nacionales
 
--   Nelson Rangel. Universidad del Atlantico. [*Link*](https://scholar.google.com/citations?user=4vWZ7DsAAAAJ&hl=es&oi=sra).
--   Andrés Osorio. Universidad Nacional sede Medellin. [*Link*](https://scholar.google.com/citations?hl=es&user=uqyZzFcAAAAJ&view_op=list_works&sortby=pubdate).
--   Constanza Ricaurte. INVEMAR. [*Link*](https://aquadocs.org/handle/1834/15782).
--   Vladimir Toro. UdeA. [*Link*](https://scholar.google.com/citations?user=_oHi9U0AAAAJ&hl=es&oi=ao)
+- Nelson Rangel. Universidad del Atlantico. [*Link*](https://scholar.google.com/citations?user=4vWZ7DsAAAAJ&hl=es&oi=sra).
+- Andrés Osorio. Universidad Nacional sede Medellin. [*Link*](https://scholar.google.com/citations?hl=es&user=uqyZzFcAAAAJ&view_op=list_works&sortby=pubdate).
+- Constanza Ricaurte. INVEMAR. [*Link*](https://aquadocs.org/handle/1834/15782).
+- Vladimir Toro. UdeA. [*Link*](https://scholar.google.com/citations?user=_oHi9U0AAAAJ&hl=es&oi=ao)
 
 # Instituciones internacionales
 
 ## Redes
 
--   Coastal Hazards.net. [*Link*](https://www.coasthazar.eu/)*.*
+- Coastal Hazards.net. [*Link*](https://www.coasthazar.eu/)*.*
 
 # Amenaza por erosión costera
 
--   Programa Integral para el Monitoreo y Mitigación de la erosión Costera en el Litoral Antioqueño - PIMECLA-: Fases I y II
+- Programa Integral para el Monitoreo y Mitigación de la erosión Costera en el Litoral Antioqueño - PIMECLA-: Fases I y II
 
--   Costero. Invemar. [*Link*](https://costero.invemar.org.co/)
+- Costero. Invemar. [*Link*](https://costero.invemar.org.co/)
 
 ![Costero. El Sistema de información para el seguimiento de la Erosión Costera para el Caribe Colombiano - COSTERO, se define como la plataforma tecnológica que integra los conocimientos obtenidos a través de la ciencia sobre la dinámica de los litorales e instrumentaliza la gestión pública con el fin de contribuir a la implementación en la zona costera de estrategias de desarrollo sostenible a largo plazo en sus aspectos ambientales y socioeconómicos.](images/costero.png){width="300"}
 
@@ -69,14 +69,14 @@ editor: visual
 
 # Lecturas
 
--   The
+- The
 
 # **Entrenamiento**
 
--   Cope
+- Cope
 
 # Repositorios
 
--   Download
+- Download
 
 # Videos
