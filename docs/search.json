@@ -344,168 +344,135 @@
     ]
   },
   {
-    "objectID": "datascience/cienciadedatos.html",
-    "href": "datascience/cienciadedatos.html",
-    "title": "Ciencia de datos",
+    "objectID": "datascience/hugging-face.html",
+    "href": "datascience/hugging-face.html",
+    "title": "Hugging Face",
     "section": "",
-    "text": "Lectura introductoria. Curriculum Guidelines for Undergraduate Programs in Data Science. Annual Review of Statistics and Its Application. 2017. Link.\nShould Computer Science Be Required?. Link.\nFive reasons why researchers should learn to love the command line. Link.\nRStudio Webinars. Link.",
+    "text": "Hugging Face es una plataforma y comunidad de inteligencia artificial dedicada a la construcción de herramientas de aprendizaje automático de código abierto. A menudo se le describe como el “GitHub del machine learning”, ya que permite alojar, compartir y descubrir modelos, conjuntos de datos y aplicaciones creadas por miles de investigadores, empresas y desarrolladores en todo el mundo.\nSu ecosistema se organiza principalmente en tres pilares: Models (modelos preentrenados listos para usar), Datasets (conjuntos de datos para entrenar y evaluar modelos) y Spaces (aplicaciones y demos interactivas). A esto se suma su famosa librería transformers, que estandarizó el acceso a modelos de última generación en procesamiento de lenguaje natural, visión por computador y audio.\n What is Hugging Face? - Models, Datasets & Spaces",
     "crumbs": [
       "Ciencia de datos",
-      "Ciencia de datos"
+      "Hugging Face"
     ]
   },
   {
-    "objectID": "datascience/cienciadedatos.html#python",
-    "href": "datascience/cienciadedatos.html#python",
-    "title": "Ciencia de datos",
-    "section": "Python",
-    "text": "Python\n\nGoogle Colab. Link.\n\nAI hub. Link.\nQue es. Link\nIntroduction to Google Colab. Link.\nGoogle Colab 101 Tutorial with Python — Tips, Tricks, and FAQ. Link.\n\nAnaconda. Link.\nSpyder. Link",
+    "objectID": "datascience/hugging-face.html#qué-es-hugging-face",
+    "href": "datascience/hugging-face.html#qué-es-hugging-face",
+    "title": "Hugging Face",
+    "section": "",
+    "text": "Hugging Face es una plataforma y comunidad de inteligencia artificial dedicada a la construcción de herramientas de aprendizaje automático de código abierto. A menudo se le describe como el “GitHub del machine learning”, ya que permite alojar, compartir y descubrir modelos, conjuntos de datos y aplicaciones creadas por miles de investigadores, empresas y desarrolladores en todo el mundo.\nSu ecosistema se organiza principalmente en tres pilares: Models (modelos preentrenados listos para usar), Datasets (conjuntos de datos para entrenar y evaluar modelos) y Spaces (aplicaciones y demos interactivas). A esto se suma su famosa librería transformers, que estandarizó el acceso a modelos de última generación en procesamiento de lenguaje natural, visión por computador y audio.\n What is Hugging Face? - Models, Datasets & Spaces",
     "crumbs": [
       "Ciencia de datos",
-      "Ciencia de datos"
+      "Hugging Face"
     ]
   },
   {
-    "objectID": "datascience/cienciadedatos.html#visual-code",
-    "href": "datascience/cienciadedatos.html#visual-code",
-    "title": "Ciencia de datos",
-    "section": "Visual Code",
-    "text": "Visual Code\n\nVisual Code Studio. Link. Link.",
+    "objectID": "datascience/hugging-face.html#el-hub-modelos-datasets-y-spaces",
+    "href": "datascience/hugging-face.html#el-hub-modelos-datasets-y-spaces",
+    "title": "Hugging Face",
+    "section": "El Hub: Modelos, Datasets y Spaces",
+    "text": "El Hub: Modelos, Datasets y Spaces\nEl Hugging Face Hub es el repositorio central de la plataforma, con cientos de miles de modelos y decenas de miles de datasets disponibles públicamente. Cada modelo cuenta con una “model card” que documenta su arquitectura, su uso previsto, sus limitaciones y ejemplos de código para implementarlo en pocas líneas.\nLos Spaces permiten publicar demos interactivas usando frameworks como Gradio o Streamlit, de forma gratuita y sin necesidad de gestionar infraestructura propia, lo que facilita mostrar el funcionamiento de un modelo a cualquier persona directamente desde el navegador.\n Navigating the Model Hub",
     "crumbs": [
       "Ciencia de datos",
-      "Ciencia de datos"
+      "Hugging Face"
     ]
   },
   {
-    "objectID": "datascience/cienciadedatos.html#herramientas-y-ayuda",
-    "href": "datascience/cienciadedatos.html#herramientas-y-ayuda",
-    "title": "Ciencia de datos",
-    "section": "Herramientas y ayuda",
-    "text": "Herramientas y ayuda\n\nStackblitz. Link\nSoftware carpentry. Link. Link. Link.\nKaggle. Link.\nFreecode camp. Link.\nStack Overflow. Link.***\nOur coding club. Link. Link.\nHow do I? Link.\nCarpentries para Latinoamérica. Link.\n\nUpcomming workshops. Link.\n\nUnimelbourne\n\nResbaz (Git, Matlab, R, Python, Shell, Nltk, Authorea). Link\nResearch Computing Services Training at GitLab. Link.\n\nStyle guide. Link. Google Style Guide. Link.\nGoogle’s R Style Guide. Link.\nR-Universe. Link.\nEjemplos AI. Link.\nTraductor de lenguajes. Link.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIDEs",
+    "objectID": "datascience/hugging-face.html#la-librería-transformers-y-el-pipeline",
+    "href": "datascience/hugging-face.html#la-librería-transformers-y-el-pipeline",
+    "title": "Hugging Face",
+    "section": "La librería Transformers y el pipeline",
+    "text": "La librería Transformers y el pipeline\nLa librería transformers de Hugging Face ofrece una interfaz unificada para descargar y usar miles de modelos preentrenados con muy poco código. Su componente más sencillo es la función pipeline(), que encapsula todo el flujo de trabajo (preprocesamiento del texto, inferencia del modelo y posprocesamiento de resultados) en una sola llamada, permitiendo tareas como clasificación de texto, traducción, generación de texto o reconocimiento de entidades en pocas líneas de código.\nPor debajo de esta simplicidad, la librería es compatible con los principales frameworks de deep learning (PyTorch, TensorFlow y JAX), lo que da flexibilidad tanto a quienes solo quieren usar un modelo como a quienes desean entrenarlo o ajustarlo (fine-tuning).\n What happens inside the pipeline function? (PyTorch)",
     "crumbs": [
       "Ciencia de datos",
-      "Ciencia de datos"
+      "Hugging Face"
     ]
   },
   {
-    "objectID": "datascience/cienciadedatos.html#buscar-ayuda-y-aprender",
-    "href": "datascience/cienciadedatos.html#buscar-ayuda-y-aprender",
-    "title": "Ciencia de datos",
-    "section": "Buscar ayuda y aprender",
-    "text": "Buscar ayuda y aprender\n\nCloud. Link.\nTeaching R online with RStudio Cloud. Link.\nComputing in the Cloud with Google and RStudio. Link.\nRTutor AI. Link.\nCrantastic. Link.Datacamp. Link.***Elementary Statistics With R. Link Quick-R. Link. ***R-bloggers. Link.Learnr4free. Link.Lista de paquetes. Link.R Programming Tutorials. Link.Rseek. Link.RStudio Cloud in the Classroom. Link.RStudio Cheat Sheets. Link.Tidyverse.org. Link.Programiz. Link.R documentation. Link.\n\nRTutor. Link.\nSwirl. Link.\nTryR. Link.\n\nRStudio Cheatsheets. Link.\nRStudio IDE cheatsheet. Link.\nData import. Link\nData visualization with ggplot2 cheatsheet. Link.\nLibros\n\nBook down. Link.Best Coding Practices for R. Link Free R Reading Material. Link.\nL El arte de programar en R: un lenguaje para la estadística. Link.\nR Cookbook. Proven Recipes for Data Analysis, Statistics, and Graphics. Link.\nR in a Nutshell. Link.\n\n\n\nBásico\n\nMateriales de RStudio en Español. Link.\n\nR para Ciencia de Datos. Link.\nR para profesionales de los datos. Link.\nIntroduction to R. Datacamp. Link.\nLearning R. Lynda.com. Link.\nAprendeR. Miriada X. Link.\nIntroduction to R for Data Science. Edx. Link.\nIntroduction to Data Science with R and Tidyverse. Link.\nQuick R. Link.\nSwirl. Link.\nCode School. Link.\nDo More with R. Link.\nR for Data Science. Grolemund & Wickham. Link\nR para Ciencia de Datos. Link.\nApplied R in the Classroom. Link.\nrstudio4edu. A Handbook for Teaching and Learning with R and RStudio. Link.\n\n\n\n\nIntermedio\n\nData Science. Lynda.com. Link\nIntermediate R. Datacamp. Link.R for Data Science. Link.\nR-Statistics-Essential-Training. Lynda.com. Link.\nR Programming. Coursera. Link.\nR Workshop for Social Scientist NOAA. Link.\nRStudio IDE cheatsheet\nHarvard WorkShop. Link.\nR-Bootcamp. Link.**\nAwesome R Learning Resources. Link.\n\n\n\nAvanzado\n\nAdvanced statistics. Stat tools. Link.\nEcological Models and Data in R. Link.\nAdvanced R. Hadley Wickham. Link.\nMastering Software Development in R. Link.\nData Science in Education Using R. Link.\n\n\n\nTydiverse\n\nRemaster the Tidyverse. Link.\nEl paquete dplyr. Link.\nDive into dplyr (tutorial). Link.\nTidyTuesday***. Link.\nAn educator’s perspective of the tidyverse. 2022. Link.\n\nRStudio Cheatsheets. Link.\n\nRStudio IDE cheatsheet. Link.\nBase R. Link\nData import. Link\nData visualization with ggplot2 cheatsheet. Link.\n\n\n\n\n Data wrangling\n\n\n How to connect to chatGPT with R\n\n\n\n\nEjercicios aplicados\n\nMean trophic levels of a genera from FishBase. Seascape models. Link. Link.\nCoral reef degradation is not correlated with local human population density. Scientific Reports. 2016. Link. Code.\nMacro Ecology and Spatial Statistics. Link.\nR-packages for oceanographic data visualisation. Link.\nForecasting El Niño-Southern Oscillation (ENSO). Link.\nR programming tools for conservation scientists. Link.\nConservation programming in R. Link.\n\nTablas en R\n\nR Data.table. Link.\nR gt package. Link\n10+ Guidelines for Better Tables in R. Link.\nData.Table Tutorial (with 50 Examples). Link.\nAggregation and Restructuring data (from “R in Action”). Link.\n\nGráficas en R\n\nr-graph gallery. Link.\nA Compendium of Clean Graphs in R. Link.\nR Graphics Cookbook, 2nd edition. Link.\n3D ggplots with rayshader - RStudio Rayshader. Link.\nRayrender. Link.\nData Visualization. Link.\nData Visualization in R. DataCamp. Link.\nGraphs. QuickR. Link.\nCreating memorable data visualisations using the R programming language - Chris Brown. Winter School Online Lectures. Link.\nFrom data to viz. Link.\nInteractive web-based data visualization with R, plotly, and shiny. Link.\ndygraphs for R. Time series. Link.\nBBC Visual and Data Journalism cookbook for R graphics. Link\nGraphics Global Warming. IPCC. Link.\n\nOtros temas\n\nFor en R. Link.\nEasy and efficient data manipulation. Link.\n\nggplot2\n\nggplot2: Elegant Graphics for Data Analysis. 3rd edition. Link.Overview. Link. Reference. Link.Visualización de Datos usando ggplot2 Guía Rápida. Link.Elegant Graphics for Data Analysis. Link.***\nTidyverse Basics. Link.\nCoursera. Link.\n\nVideos: Link. Link. Link. Link.\n\nDataCamp. Link (transcrip Link. Link).\nExploring ggplot2 boxplots - Defining limits and adjusting style. Link.\nOtros videos\n\nLink.\n\nAnimated plots - gganimate. Link.\nA ggplot2 grammar guide. Link.\nPatchwork. To combine separate ggplots. Link.\nSimple Gantt charts in R with ggplot2. Link.\nTop 50 ggplot2 Visualizations. Link.\n\nShiny\n\na gRadual intRoduction to Shiny. Link.\nMastering Shiny. Link.\nShiny tutorial. *** Link. Link. Link\nShiny gallery. Link.\nShiny widget gallery. Link\nEjemplos Shiny apps\n\nGCMCompareR. Link.\n\n\n\nShiny. Link\n\nBayesian Statistics\n\nLearning Bayesian Statistics Course. Link.\nBayes Rules! An Introduction to Bayesian Modeling with R. Link.\nBayesian Data Analysis course at Aalto. github. Link.\nStatistical Rethinking: A Bayesian Course (with Code Examples in R/Stan/Python/Julia). Link.\n\n\n Learning bayesian statistics",
+    "objectID": "datascience/hugging-face.html#tokenizers",
+    "href": "datascience/hugging-face.html#tokenizers",
+    "title": "Hugging Face",
+    "section": "Tokenizers",
+    "text": "Tokenizers\nAntes de que un modelo de lenguaje pueda procesar texto, este debe convertirse en números mediante un tokenizer. Hugging Face ofrece la librería tokenizers, escrita en Rust para lograr un rendimiento muy alto, que se encarga de dividir el texto en tokens (palabras, subpalabras o caracteres), asignarles identificadores numéricos y aplicar el relleno (padding) y truncamiento necesarios para que los modelos puedan procesarlos en lotes.\nCada modelo preentrenado en el Hub incluye su propio tokenizer asociado, garantizando que el texto se procese exactamente igual que durante el entrenamiento original del modelo, lo cual es clave para obtener buenos resultados.\n Fast tokenizer superpowers",
     "crumbs": [
       "Ciencia de datos",
-      "Ciencia de datos"
+      "Hugging Face"
     ]
   },
   {
-    "objectID": "datascience/cienciadedatos.html#julia",
-    "href": "datascience/cienciadedatos.html#julia",
-    "title": "Ciencia de datos",
-    "section": "Julia",
-    "text": "Julia\n\nJulia. Link.\nJulia: come for the syntax, stay for the speed. Nature 2019. Link.\n\n Introduction to Julia",
+    "objectID": "datascience/hugging-face.html#el-curso-oficial-de-hugging-face",
+    "href": "datascience/hugging-face.html#el-curso-oficial-de-hugging-face",
+    "title": "Hugging Face",
+    "section": "El curso oficial de Hugging Face",
+    "text": "El curso oficial de Hugging Face\nHugging Face ofrece un curso gratuito en línea (el Hugging Face Course) pensado para aprender a usar el ecosistema de NLP y machine learning de la plataforma desde cero. Cubre desde los fundamentos de la librería transformers y los tokenizers, hasta el entrenamiento y ajuste fino de modelos, el uso de datasets para manejar grandes volúmenes de datos, y la publicación de modelos y demos en el Hub.\nEl curso combina lecciones escritas disponibles en la documentación con una serie de videos cortos en el canal oficial de YouTube de Hugging Face, y está disponible en varios frameworks (PyTorch y TensorFlow) y en varios idiomas.\n Welcome to the Hugging Face course",
     "crumbs": [
       "Ciencia de datos",
-      "Ciencia de datos"
+      "Hugging Face"
     ]
   },
   {
-    "objectID": "datascience/cienciadedatos.html#matlab",
-    "href": "datascience/cienciadedatos.html#matlab",
-    "title": "Ciencia de datos",
-    "section": "Matlab",
-    "text": "Matlab\n\nMatlab online. Link.\nMATLAB Academy. Link.\nMatlab Unimelbourne. Link.\nAprende a programar con Matlab. Tutellus app. Link.\nComputer Programming with MATLAB. Fitzpatrick and Ledeczi. Link\nMatlab Wiki. Link.\nMATLAB and Octave for Beginners. Edx. Link.\nHighlights of Calculus. Prof. Gilbert Strang. Link.\n\nGilbert Strang site. Link.\n\nThe Climate Data Toolbox for MATLAB. Link.",
+    "objectID": "datascience/vs-code.html",
+    "href": "datascience/vs-code.html",
+    "title": "VS Code",
+    "section": "",
+    "text": "Visual Studio Code (VS Code) es un editor de código fuente gratuito y de código abierto desarrollado por Microsoft. Es liviano pero muy potente, funciona en Windows, macOS y Linux, y se ha convertido en el editor más usado por desarrolladores de software según encuestas anuales como la de Stack Overflow.\nSus características principales incluyen resaltado de sintaxis para prácticamente cualquier lenguaje, autocompletado inteligente (IntelliSense), depuración integrada, control de versiones con Git incorporado, una terminal integrada y un enorme ecosistema de extensiones que permiten adaptarlo a cualquier flujo de trabajo, desde ciencia de datos hasta desarrollo web o escritura de documentos.\n Learn Visual Studio Code in 15 minutes: 2026 Official Beginner Tutorial",
     "crumbs": [
       "Ciencia de datos",
-      "Ciencia de datos"
+      "VS Code"
     ]
   },
   {
-    "objectID": "datascience/cienciadedatos.html#git",
-    "href": "datascience/cienciadedatos.html#git",
-    "title": "Ciencia de datos",
-    "section": "GIT",
-    "text": "GIT\n\nGit Book (en español). Link.***\nGitHub Skills. Link. ***\nHappy Git and GitHub for the useR. Link.***\nEl Control de Versiones con Git. Link.\nGit and GitHub. Link.\nHow to Use Git and GitHub. Class Central. Link. Udacity. Link.\nReproducible Analysis With R. Link.***\nGithub Guides. Link.\nGitHub Pages. Link.\nBuilding a Website with Blogdown, Hugo and Github Pages. Link.\nGitHub Learning Lab. Link.\nOtros servicios\n\nGitlab. Link.\nZenHub. Link (for managing GitHub issues).\nGit Kraken. Link.\n\n\n\n\n\n Git y Github | Curso Práctico de Git y Github Desde Cero\n\n\n NOAA Social Science R Workshop. Getting starting with git and GitHub using RStudio NOAA. Link.\n\n\n\n\n Linus Torvalds on Git\n\n\n Intro to GIT\n\n\n\n\nGIT",
+    "objectID": "datascience/vs-code.html#qué-es-visual-studio-code",
+    "href": "datascience/vs-code.html#qué-es-visual-studio-code",
+    "title": "VS Code",
+    "section": "",
+    "text": "Visual Studio Code (VS Code) es un editor de código fuente gratuito y de código abierto desarrollado por Microsoft. Es liviano pero muy potente, funciona en Windows, macOS y Linux, y se ha convertido en el editor más usado por desarrolladores de software según encuestas anuales como la de Stack Overflow.\nSus características principales incluyen resaltado de sintaxis para prácticamente cualquier lenguaje, autocompletado inteligente (IntelliSense), depuración integrada, control de versiones con Git incorporado, una terminal integrada y un enorme ecosistema de extensiones que permiten adaptarlo a cualquier flujo de trabajo, desde ciencia de datos hasta desarrollo web o escritura de documentos.\n Learn Visual Studio Code in 15 minutes: 2026 Official Beginner Tutorial",
     "crumbs": [
       "Ciencia de datos",
-      "Ciencia de datos"
+      "VS Code"
     ]
   },
   {
-    "objectID": "datascience/cienciadedatos.html#recursos-web",
-    "href": "datascience/cienciadedatos.html#recursos-web",
-    "title": "Ciencia de datos",
-    "section": "RECURSOS WEB",
-    "text": "RECURSOS WEB\n\nGoogle\n\nDocument AI. Link.\n\nLimpieza de datos\n\nData curator. Link **\n\nBlogs a seguir\n\nFrom the bottom of the heap. Link.\nRecology. Link.\nMethods in Ecology and Evolution. Link.\nSea Scape Models. Link.\nAndrew Parnell. Talks. Link.\n\nEventos académicos\n\nThe second annual Symposium on Data Science and Statistics. Link.\nLinks to slides from rstudio::conf 2019. Link.\nRStudio Webinars. Link.\n\nRStudio: A Single Home for R & Python. Link.",
+    "objectID": "datascience/vs-code.html#edición-de-código-e-intellisense",
+    "href": "datascience/vs-code.html#edición-de-código-e-intellisense",
+    "title": "VS Code",
+    "section": "Edición de código e IntelliSense",
+    "text": "Edición de código e IntelliSense\nEl corazón de VS Code es su editor de texto, diseñado para que escribir y navegar código sea rápido y cómodo. Incluye IntelliSense, un motor de autocompletado que sugiere variables, funciones y métodos según el lenguaje, además de mostrar información de tipos y documentación en línea mientras se escribe.\nOtras características de edición destacadas son el resaltado de sintaxis, el plegado de código (code folding), la búsqueda y reemplazo con expresiones regulares, la edición multicursor, y la navegación rápida a definiciones y referencias (Go to Definition / Find All References), lo que agiliza el trabajo en proyectos grandes.\n Edit and Run Code in Visual Studio Code",
     "crumbs": [
       "Ciencia de datos",
-      "Ciencia de datos"
+      "VS Code"
     ]
   },
   {
-    "objectID": "datascience/cienciadedatos.html#analisis-espacial",
-    "href": "datascience/cienciadedatos.html#analisis-espacial",
-    "title": "Ciencia de datos",
-    "section": "ANALISIS ESPACIAL",
-    "text": "ANALISIS ESPACIAL\n\nNEON code. Link.\nQGIS Tutorials and Tips. Link.\nEarthCube 2021 Notebooks ¶. Link.\nGeocomputation with R. Link.\nRemote Sensing Image Analysis. Link.\nSpatial Data Science with R. Link.\nGeoscripting. Wageningen U. Link.\nConverting HDFs to ArcGIS Rasters. Link.\nEarth - Spatial data manipulation software. Link.\nMaps in R. Link.\nSpatial data in R: Using R as a GIS. Link.\nSpatial data manipulation. Link.\nAn Introduction to Spatial Analysis in R. Seascape models. Link.\nWorking with Geospatial Data in R. Data Camp. Link.\nSpatial ly. Link.\nAn Introduction to Spatial Data Analysis and Visualisation in R. Link.\nARE. Spatial data. Link.\nRSToolbox. Link.\nTidy spatial data analysis. R Studio. Link.\nCrop mapping with Sentinel-2 focusing on algorithms. Link.\nAverage seasonal colors of the USA. Link.\nArtificial Intelligence (AI) for Earth Monitoring. Link.\nR for Geographic Data Science. Link.\nNetwork Common Data Form- NetCDF\n\nUnidata. Link.\nNetCDF metadata conventions. Link.\nNetCDF and CF: The Basics. Link.\nNetCDF in R. Link.\nU Oregon. Geographic Data Analysis and Visualization: Topics and Examples. . NetCDF Link.\nAn Ecologist’s Guide to Working with Daymet and other NetCDF formatted Data. Video Link. Rpubs Link.\nWorking with NetCDF files. Link.\nHow to open and work with NetCDF data in R. Link.\nNetCDF Ninja Software. Link.\nUrban Demographics. Link.\nARE 202. Spatial data. Link.",
+    "objectID": "datascience/vs-code.html#depuración-de-código",
+    "href": "datascience/vs-code.html#depuración-de-código",
+    "title": "VS Code",
+    "section": "Depuración de código",
+    "text": "Depuración de código\nVS Code incluye un depurador (debugger) integrado que permite ejecutar el código paso a paso, inspeccionar variables, establecer puntos de interrupción (breakpoints) y evaluar expresiones en tiempo real, sin necesidad de salir del editor.\nEsta funcionalidad es compatible de forma nativa con Node.js y, mediante extensiones, con la mayoría de los lenguajes populares como Python, Java, C++ o Go. La configuración de depuración se guarda en un archivo launch.json, lo que facilita reutilizar y compartir configuraciones entre miembros de un equipo.\n Getting Started with Debugging in VS Code (Official Beginner Guide)",
     "crumbs": [
       "Ciencia de datos",
-      "Ciencia de datos"
+      "VS Code"
     ]
   },
   {
-    "objectID": "datascience/cienciadedatos.html#google-earth-engine",
-    "href": "datascience/cienciadedatos.html#google-earth-engine",
-    "title": "Ciencia de datos",
-    "section": "GOOGLE EARTH ENGINE",
-    "text": "GOOGLE EARTH ENGINE\n\nMapping sugarcane in Thailand using transfer learning, a lightweight convolutional neural network, NICFI high resolution satellite imagery and Google Earth Engine. 2021. Link.",
+    "objectID": "datascience/vs-code.html#control-de-versiones-con-git-integrado",
+    "href": "datascience/vs-code.html#control-de-versiones-con-git-integrado",
+    "title": "VS Code",
+    "section": "Control de versiones con Git integrado",
+    "text": "Control de versiones con Git integrado\nVS Code integra Git de forma nativa a través de la vista de Control de código fuente (Source Control), lo que permite ver los cambios realizados, hacer stage de archivos, crear commits, cambiar de rama, fusionar y resolver conflictos directamente desde la interfaz gráfica, sin depender exclusivamente de la línea de comandos.\nTambién ofrece indicadores visuales en el margen del editor (gutter) que muestran líneas añadidas, modificadas o eliminadas respecto al último commit, y se integra con plataformas como GitHub para publicar (push), clonar repositorios y gestionar pull requests desde el mismo editor.\n Using Git with Visual Studio Code (Official Beginner Tutorial)",
     "crumbs": [
       "Ciencia de datos",
-      "Ciencia de datos"
+      "VS Code"
     ]
   },
   {
-    "objectID": "datascience/cienciadedatos.html#algebra-lineal",
-    "href": "datascience/cienciadedatos.html#algebra-lineal",
-    "title": "Ciencia de datos",
-    "section": "ALGEBRA LINEAL",
-    "text": "ALGEBRA LINEAL\n\nMIT Open Courseware.\n\nFundamentals of linear algebra. Link. Resources. Link.\nMatrix Methods in Data Analysis, Signal Processing, and Machine Learning. Link.\nA 2020 Vision of Linear Algebra. MIT. Link.\n\nDifferential Equations and Linear Algebra. Matlab. Gilbert Strang. Link. Link.Link.\nEigenvectors and Eigenvalues. Link.\nLAFF: Linear Algebra - Foundations to Frontiers. EdX Link. Youtube.\nComputational Linear Algebra for Coders. Link.\nThe Feyman lectures on physics. Link. Algebra. Link.\nTeoría de redes\n\nD# Graph Theory. Link.\nNetworks. MIT. Link.\nEssential graph theory for biologists. Winter School Online Lectures. Link.\nMIT Matlab Tools for Network Analysis. Link.\nNetworked and Social Systems Engineering (NETS) by Michael Kearns. Link.\nNetworked Life by Michael Kearns. Coursera. Link.\nSocial Network Analysis. Coursera. Link.\nNetworks, Crowds, and Markets. Link.\nNetwork Science by Albert-László Barabási. Link.\nMining Massive Datasets. Coursera. Link.\nArcGis. OD cost matrix analysis. Link.\nThe Department of Network and Data Science at Central European University. Link.\nCódigo\n\nNetwork visualization. Link.\nNetwork Analysis and Visualization with R and igraph. Link.\nSystems Biology and Evolution Toolbox. Matlab. Link. Link.\nStatic and dynamic network visualization with R. Link.\nBrain ConnectivityToolbox. Matlab. Link.\nNetwork visualization with R. Link.\n\nLecturas\n\nNewman M. 2010. Networks: An Introduction. Link.\nFrom Graphs to Spatial Graphs. AREES. 2010. Link.",
+    "objectID": "datascience/vs-code.html#vs-code-para-no-desarrolladores",
+    "href": "datascience/vs-code.html#vs-code-para-no-desarrolladores",
+    "title": "VS Code",
+    "section": "VS Code para no desarrolladores",
+    "text": "VS Code para no desarrolladores\nAunque nació como un editor para programar, VS Code se ha convertido en una herramienta de propósito general útil incluso para quienes nunca han escrito una línea de código. Sirve para redactar documentos en Markdown, organizar notas, llevar control de versiones de escritos con Git, gestionar archivos de proyectos, e incluso trabajar con asistentes de IA integrados para tareas creativas o de escritura.\nGracias a su extensísimo marketplace de extensiones, cualquier persona puede personalizar VS Code para tareas muy específicas: temas visuales, resaltado para formatos como YAML o CSV, correctores ortográficos, integración con Google Drive, y mucho más, todo sin necesidad de conocimientos de programación.\n VS Code For Non-Developers",
     "crumbs": [
       "Ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "datascience/cienciadedatos.html#estadística",
-    "href": "datascience/cienciadedatos.html#estadística",
-    "title": "Ciencia de datos",
-    "section": "ESTADÍSTICA",
-    "text": "ESTADÍSTICA\n\nIntroduction to Modern Statistics, First Edition. Link.\nGraduate Statistics in R. Statstools.com. Link.***\nOnline Statistics Education: An Interactive Multimedia Course of Study. Link.***\nFoundations of Data Analysis - Part 2. EdX. Link\nExplore Statistics with R. EdX.Link\nEstadística inferencial. Khan Academy. Link\nCálculo poder estadístico alfa y beta. Gpower. Link\nProbability. MIT Open Courseware. Link.\nSeeing Theory. Brown University. Link.\n\n**Probabilidad básica. Link\n\nIntroduction to Statistical Genomics. Joshua Akey Spring 2008. Link.\nStatistics for Biologists, Nature Points of Significance. Link.\nStatistics for applications. Link.\nStatistical Rethinking. Link.\nStatistical rethinking with brms, ggplot2, and the tidyverse. Link.\nGraduate Statistics in R. Statstools.com. Link.***\nJASP Software Link, and Center for Open Science Link.\nOnline Statistics Education: An Interactive Multimedia Course of Study. Link.***\nFoundations of Data Analysis - Part 2. EdX. Link\nExplore Statistics with R. EdX.Link\nEstadística inferencial. Khan Academy. Link\nCálculo poder estadístico alfa y beta. Gpower. Link\nProbability. MIT Open Courseware. Link.\nSeeing Theory. Brown University. Link.\nIntroduction to Statistical Genomics. Joshua Akey Spring 2008. Link.\nStatistics for Biologists, Nature Points of Significance. Link.\nStatistics for applications. Link.\nStatistical Rethinking. Link.\nProbabilidad Básica. Introducción a los conceptos básicos de probabilidad. BrownU. Link.\nBIOST561 “Computational Skills for Biostatistics. Link.\n\nVarios\n\nCentral Limit Theorem. Link\nLa potencia y el tamaño del efecto. Link.\n\nAnálisis de varianza\n\nANOVA 1 - Calculando la Suma Total de Cuadrados (STC). Link.\nANOVA 2 - Calculando suma total de cuadrados dentro y entre (SCD y SCE). Link.\nANOVA 3 – Prueba de hipótesis con estadístico F. Link.\n\nANOVA medidas repetidas\n\nAnálisis de varianza factorial medidas repetidas (ANOVA). Link.\nR - One Way Repeated Measures ANOVA. Link.\nLearn R One Way Repeated Measures ANOVA Lecture 1. Link.\nRepeated Measures in R. Link.\nRepeated Measures and Longitudinal Data. Penn State. Link.\nNotes on the use of R for psychology experiments and questionnaires Jonathan Baron. Link.\n\nRegresión\n\nRegression Modeling in Practice. Coursera. Link.\nLinear algebra: Projections, least squares and best straight line. *Lec 15,**Lec 16.*\n\nAnálisis de componentes principales\n\nWhat is principal component analysis?. Nature Biotechnology. 2008. Link.\nA layman’s introduction to principal component analysis. Video. Link.\n\nDiseño de experimentos\n\nDesigning, Running, and Analyzing Experiments. Coursera. Link.\n\nModelos lineales generalizados (GLM) y modelos mixtos\n\nResources:\n\nMixed models. GLMM FAQ Ben Bolker and others. Link.\nIntroduction to Linear Models with R. Link.\nLinear regression in R. Link.\nChoosing R packages for mixed effects modelling based on the car you drive. Link.\nIntroducción a los modelos mixtos. Link. Link.\nGeneralized Linear Models in R. Datacamp. Link.\nGeneralized Linear Models: understanding the link function. Link.\nGeneralized Additive Models in R. Link.\nIntroduction to Generalized Additive Models. Link.\nAn Introduction to Hierarchical Modeling. Link\n\nVideos:\n\nMaximum Likelihood, clearly explained. Videos: Link. Link. Link.\nMixed effects models with R. Videos: Link. Link.\nThe Power of Mixed Effects Models. Week 9. Designing, Running, and Analyzing Experiments. Coursera. Link.\n\nBooks:\n\nZuur, et al. 2009. Mixed Effects Models and Extensions in Ecology with R. Link.\nCorrea Morales, Juan Carlos; Salazar Uribe Juan Carlos. Introducción a los modelos mixtos / Medellín: Universidad Nacional de Colombia. Link.\nPinheiro José C.; Bates Douglas M. Mixed-Effects Models in S and S-PLUS. Link.\n\nReadings:\nA brief introduction to mixed effects modelling and multi-model inference in ecology. PeerJ. Link.\n\nGeneralized additive models (GAMs)\n\nGeneralized additive models for large data sets. Link.\n\n GAMs\nARTE EN CÓDIGO\n\naRtsy: Generative Art with R  and  ggplot2. Link.\n\nFUN PROJECTS\n\nDeep fakes. Link.\n\nSERIES DE TIEMPO\n\nTime Series for Ecologists and Climatologists: course timetable. Link.\nAccounting for autocorrelation in R. Link.\nManipulating Time Series Data in R: Case Studies. Datacamp. Link.\nTime Series Analysis. MIT. Link.\nApplied Time Series Analysis. Penn State U. Link.\n\nSTAN\n\nIntroduction to Bayesian Inference with Stan. Link\nRobust Bayesian linear regression with Stan in R. Link.\nStanCon 2018. Link. Materials from StanCon. Link.\n**Statistical Rethinking: A Bayesian Course Using R and Stan. Link.\n\nTemas varios\n\nNonparametric Tests of Group Differences. Link.\nThe Statistical Bootstrap and Other Resampling Methods. Link. Link. Link.\nTen Simple Rules for Effective Statistical Practice. PLOS. 2016 Link.\nStatisticians issue warning over misuse of P values. Nature. 2016. Link\n\nOpen software for statistical analysis\n\nJASP. Link and Center for Open Science Link.\nSAS University Edition. Link.\n\nMeta-Analisis and data papers\n\nIntroduction to Systematic Review and Meta-Analysis. Coursera. Link.\nFixed effects vs Random effects. Meta-analysis-workshops.com Link.\nSoftware: RevMan.Cochrane. Link.\nWhat are data papers? Data and metadata. Ecology. Link.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "datascience/cienciadedatos.html#cienciometria",
-    "href": "datascience/cienciadedatos.html#cienciometria",
-    "title": "Ciencia de datos",
-    "section": "CIENCIOMETRIA",
-    "text": "CIENCIOMETRIA\n\nCRExplorer. Link.\nHistCite. Link.\nLoet Leydesdorff. Link.\nCited References Explorer. Link.\nBibliometrics for Librarians. Link.**\nHandbook of Graphs and Networks in People Analytics: With Examples in R and Python. Link\nPaquetes de R:\n\nPackage ‘bibliometrix’. Link. Link.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Ciencia de datos"
-    ]
-  },
-  {
-    "objectID": "datascience/cienciadedatos.html#varios-temas",
-    "href": "datascience/cienciadedatos.html#varios-temas",
-    "title": "Ciencia de datos",
-    "section": "VARIOS TEMAS",
-    "text": "VARIOS TEMAS\n\nDatos\n\nUN Office on Drugs and Crime. Link.\n\nImagenes\n\nImageJ. Link.\nDigitizing data from old figures with ImageJ. Link.\nWebPlotDigitizer. Link.\nTabula. A tool for liberating data tables locked inside PDF files. Link.\n\nOntologías\n\nCoral traits data base.\n\nProcedures. Nature Paper. OBOE.\n\nSemantic Web Applications in Neuromedicine (SWAN) Ontology. Link. Link.\n\nOtras lecturas\n\nMay, R.M. 2004. Uses and Abuses of Mathematics in Biology. Science. (303) 5659: 790-793. Link.\nOreskes N, et al. 1994. Verification, Validation, and Confirmation of Numerical Models in the Earth Sciences. Science. Link.",
-    "crumbs": [
-      "Ciencia de datos",
-      "Ciencia de datos"
+      "VS Code"
     ]
   },
   {
@@ -4073,6 +4040,171 @@
     "crumbs": [
       "Ciencia de datos",
       "Markdown"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html",
+    "href": "datascience/cienciadedatos.html",
+    "title": "Ciencia de datos",
+    "section": "",
+    "text": "Lectura introductoria. Curriculum Guidelines for Undergraduate Programs in Data Science. Annual Review of Statistics and Its Application. 2017. Link.\nShould Computer Science Be Required?. Link.\nFive reasons why researchers should learn to love the command line. Link.\nRStudio Webinars. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#python",
+    "href": "datascience/cienciadedatos.html#python",
+    "title": "Ciencia de datos",
+    "section": "Python",
+    "text": "Python\n\nGoogle Colab. Link.\n\nAI hub. Link.\nQue es. Link\nIntroduction to Google Colab. Link.\nGoogle Colab 101 Tutorial with Python — Tips, Tricks, and FAQ. Link.\n\nAnaconda. Link.\nSpyder. Link",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#visual-code",
+    "href": "datascience/cienciadedatos.html#visual-code",
+    "title": "Ciencia de datos",
+    "section": "Visual Code",
+    "text": "Visual Code\n\nVisual Code Studio. Link. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#herramientas-y-ayuda",
+    "href": "datascience/cienciadedatos.html#herramientas-y-ayuda",
+    "title": "Ciencia de datos",
+    "section": "Herramientas y ayuda",
+    "text": "Herramientas y ayuda\n\nStackblitz. Link\nSoftware carpentry. Link. Link. Link.\nKaggle. Link.\nFreecode camp. Link.\nStack Overflow. Link.***\nOur coding club. Link. Link.\nHow do I? Link.\nCarpentries para Latinoamérica. Link.\n\nUpcomming workshops. Link.\n\nUnimelbourne\n\nResbaz (Git, Matlab, R, Python, Shell, Nltk, Authorea). Link\nResearch Computing Services Training at GitLab. Link.\n\nStyle guide. Link. Google Style Guide. Link.\nGoogle’s R Style Guide. Link.\nR-Universe. Link.\nEjemplos AI. Link.\nTraductor de lenguajes. Link.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIDEs",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#buscar-ayuda-y-aprender",
+    "href": "datascience/cienciadedatos.html#buscar-ayuda-y-aprender",
+    "title": "Ciencia de datos",
+    "section": "Buscar ayuda y aprender",
+    "text": "Buscar ayuda y aprender\n\nCloud. Link.\nTeaching R online with RStudio Cloud. Link.\nComputing in the Cloud with Google and RStudio. Link.\nRTutor AI. Link.\nCrantastic. Link.Datacamp. Link.***Elementary Statistics With R. Link Quick-R. Link. ***R-bloggers. Link.Learnr4free. Link.Lista de paquetes. Link.R Programming Tutorials. Link.Rseek. Link.RStudio Cloud in the Classroom. Link.RStudio Cheat Sheets. Link.Tidyverse.org. Link.Programiz. Link.R documentation. Link.\n\nRTutor. Link.\nSwirl. Link.\nTryR. Link.\n\nRStudio Cheatsheets. Link.\nRStudio IDE cheatsheet. Link.\nData import. Link\nData visualization with ggplot2 cheatsheet. Link.\nLibros\n\nBook down. Link.Best Coding Practices for R. Link Free R Reading Material. Link.\nL El arte de programar en R: un lenguaje para la estadística. Link.\nR Cookbook. Proven Recipes for Data Analysis, Statistics, and Graphics. Link.\nR in a Nutshell. Link.\n\n\n\nBásico\n\nMateriales de RStudio en Español. Link.\n\nR para Ciencia de Datos. Link.\nR para profesionales de los datos. Link.\nIntroduction to R. Datacamp. Link.\nLearning R. Lynda.com. Link.\nAprendeR. Miriada X. Link.\nIntroduction to R for Data Science. Edx. Link.\nIntroduction to Data Science with R and Tidyverse. Link.\nQuick R. Link.\nSwirl. Link.\nCode School. Link.\nDo More with R. Link.\nR for Data Science. Grolemund & Wickham. Link\nR para Ciencia de Datos. Link.\nApplied R in the Classroom. Link.\nrstudio4edu. A Handbook for Teaching and Learning with R and RStudio. Link.\n\n\n\n\nIntermedio\n\nData Science. Lynda.com. Link\nIntermediate R. Datacamp. Link.R for Data Science. Link.\nR-Statistics-Essential-Training. Lynda.com. Link.\nR Programming. Coursera. Link.\nR Workshop for Social Scientist NOAA. Link.\nRStudio IDE cheatsheet\nHarvard WorkShop. Link.\nR-Bootcamp. Link.**\nAwesome R Learning Resources. Link.\n\n\n\nAvanzado\n\nAdvanced statistics. Stat tools. Link.\nEcological Models and Data in R. Link.\nAdvanced R. Hadley Wickham. Link.\nMastering Software Development in R. Link.\nData Science in Education Using R. Link.\n\n\n\nTydiverse\n\nRemaster the Tidyverse. Link.\nEl paquete dplyr. Link.\nDive into dplyr (tutorial). Link.\nTidyTuesday***. Link.\nAn educator’s perspective of the tidyverse. 2022. Link.\n\nRStudio Cheatsheets. Link.\n\nRStudio IDE cheatsheet. Link.\nBase R. Link\nData import. Link\nData visualization with ggplot2 cheatsheet. Link.\n\n\n\n\n Data wrangling\n\n\n How to connect to chatGPT with R\n\n\n\n\nEjercicios aplicados\n\nMean trophic levels of a genera from FishBase. Seascape models. Link. Link.\nCoral reef degradation is not correlated with local human population density. Scientific Reports. 2016. Link. Code.\nMacro Ecology and Spatial Statistics. Link.\nR-packages for oceanographic data visualisation. Link.\nForecasting El Niño-Southern Oscillation (ENSO). Link.\nR programming tools for conservation scientists. Link.\nConservation programming in R. Link.\n\nTablas en R\n\nR Data.table. Link.\nR gt package. Link\n10+ Guidelines for Better Tables in R. Link.\nData.Table Tutorial (with 50 Examples). Link.\nAggregation and Restructuring data (from “R in Action”). Link.\n\nGráficas en R\n\nr-graph gallery. Link.\nA Compendium of Clean Graphs in R. Link.\nR Graphics Cookbook, 2nd edition. Link.\n3D ggplots with rayshader - RStudio Rayshader. Link.\nRayrender. Link.\nData Visualization. Link.\nData Visualization in R. DataCamp. Link.\nGraphs. QuickR. Link.\nCreating memorable data visualisations using the R programming language - Chris Brown. Winter School Online Lectures. Link.\nFrom data to viz. Link.\nInteractive web-based data visualization with R, plotly, and shiny. Link.\ndygraphs for R. Time series. Link.\nBBC Visual and Data Journalism cookbook for R graphics. Link\nGraphics Global Warming. IPCC. Link.\n\nOtros temas\n\nFor en R. Link.\nEasy and efficient data manipulation. Link.\n\nggplot2\n\nggplot2: Elegant Graphics for Data Analysis. 3rd edition. Link.Overview. Link. Reference. Link.Visualización de Datos usando ggplot2 Guía Rápida. Link.Elegant Graphics for Data Analysis. Link.***\nTidyverse Basics. Link.\nCoursera. Link.\n\nVideos: Link. Link. Link. Link.\n\nDataCamp. Link (transcrip Link. Link).\nExploring ggplot2 boxplots - Defining limits and adjusting style. Link.\nOtros videos\n\nLink.\n\nAnimated plots - gganimate. Link.\nA ggplot2 grammar guide. Link.\nPatchwork. To combine separate ggplots. Link.\nSimple Gantt charts in R with ggplot2. Link.\nTop 50 ggplot2 Visualizations. Link.\n\nShiny\n\na gRadual intRoduction to Shiny. Link.\nMastering Shiny. Link.\nShiny tutorial. *** Link. Link. Link\nShiny gallery. Link.\nShiny widget gallery. Link\nEjemplos Shiny apps\n\nGCMCompareR. Link.\n\n\n\nShiny. Link\n\nBayesian Statistics\n\nLearning Bayesian Statistics Course. Link.\nBayes Rules! An Introduction to Bayesian Modeling with R. Link.\nBayesian Data Analysis course at Aalto. github. Link.\nStatistical Rethinking: A Bayesian Course (with Code Examples in R/Stan/Python/Julia). Link.\n\n\n Learning bayesian statistics",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#julia",
+    "href": "datascience/cienciadedatos.html#julia",
+    "title": "Ciencia de datos",
+    "section": "Julia",
+    "text": "Julia\n\nJulia. Link.\nJulia: come for the syntax, stay for the speed. Nature 2019. Link.\n\n Introduction to Julia",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#matlab",
+    "href": "datascience/cienciadedatos.html#matlab",
+    "title": "Ciencia de datos",
+    "section": "Matlab",
+    "text": "Matlab\n\nMatlab online. Link.\nMATLAB Academy. Link.\nMatlab Unimelbourne. Link.\nAprende a programar con Matlab. Tutellus app. Link.\nComputer Programming with MATLAB. Fitzpatrick and Ledeczi. Link\nMatlab Wiki. Link.\nMATLAB and Octave for Beginners. Edx. Link.\nHighlights of Calculus. Prof. Gilbert Strang. Link.\n\nGilbert Strang site. Link.\n\nThe Climate Data Toolbox for MATLAB. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#git",
+    "href": "datascience/cienciadedatos.html#git",
+    "title": "Ciencia de datos",
+    "section": "GIT",
+    "text": "GIT\n\nGit Book (en español). Link.***\nGitHub Skills. Link. ***\nHappy Git and GitHub for the useR. Link.***\nEl Control de Versiones con Git. Link.\nGit and GitHub. Link.\nHow to Use Git and GitHub. Class Central. Link. Udacity. Link.\nReproducible Analysis With R. Link.***\nGithub Guides. Link.\nGitHub Pages. Link.\nBuilding a Website with Blogdown, Hugo and Github Pages. Link.\nGitHub Learning Lab. Link.\nOtros servicios\n\nGitlab. Link.\nZenHub. Link (for managing GitHub issues).\nGit Kraken. Link.\n\n\n\n\n\n Git y Github | Curso Práctico de Git y Github Desde Cero\n\n\n NOAA Social Science R Workshop. Getting starting with git and GitHub using RStudio NOAA. Link.\n\n\n\n\n Linus Torvalds on Git\n\n\n Intro to GIT\n\n\n\n\nGIT",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#recursos-web",
+    "href": "datascience/cienciadedatos.html#recursos-web",
+    "title": "Ciencia de datos",
+    "section": "RECURSOS WEB",
+    "text": "RECURSOS WEB\n\nGoogle\n\nDocument AI. Link.\n\nLimpieza de datos\n\nData curator. Link **\n\nBlogs a seguir\n\nFrom the bottom of the heap. Link.\nRecology. Link.\nMethods in Ecology and Evolution. Link.\nSea Scape Models. Link.\nAndrew Parnell. Talks. Link.\n\nEventos académicos\n\nThe second annual Symposium on Data Science and Statistics. Link.\nLinks to slides from rstudio::conf 2019. Link.\nRStudio Webinars. Link.\n\nRStudio: A Single Home for R & Python. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#analisis-espacial",
+    "href": "datascience/cienciadedatos.html#analisis-espacial",
+    "title": "Ciencia de datos",
+    "section": "ANALISIS ESPACIAL",
+    "text": "ANALISIS ESPACIAL\n\nNEON code. Link.\nQGIS Tutorials and Tips. Link.\nEarthCube 2021 Notebooks ¶. Link.\nGeocomputation with R. Link.\nRemote Sensing Image Analysis. Link.\nSpatial Data Science with R. Link.\nGeoscripting. Wageningen U. Link.\nConverting HDFs to ArcGIS Rasters. Link.\nEarth - Spatial data manipulation software. Link.\nMaps in R. Link.\nSpatial data in R: Using R as a GIS. Link.\nSpatial data manipulation. Link.\nAn Introduction to Spatial Analysis in R. Seascape models. Link.\nWorking with Geospatial Data in R. Data Camp. Link.\nSpatial ly. Link.\nAn Introduction to Spatial Data Analysis and Visualisation in R. Link.\nARE. Spatial data. Link.\nRSToolbox. Link.\nTidy spatial data analysis. R Studio. Link.\nCrop mapping with Sentinel-2 focusing on algorithms. Link.\nAverage seasonal colors of the USA. Link.\nArtificial Intelligence (AI) for Earth Monitoring. Link.\nR for Geographic Data Science. Link.\nNetwork Common Data Form- NetCDF\n\nUnidata. Link.\nNetCDF metadata conventions. Link.\nNetCDF and CF: The Basics. Link.\nNetCDF in R. Link.\nU Oregon. Geographic Data Analysis and Visualization: Topics and Examples. . NetCDF Link.\nAn Ecologist’s Guide to Working with Daymet and other NetCDF formatted Data. Video Link. Rpubs Link.\nWorking with NetCDF files. Link.\nHow to open and work with NetCDF data in R. Link.\nNetCDF Ninja Software. Link.\nUrban Demographics. Link.\nARE 202. Spatial data. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#google-earth-engine",
+    "href": "datascience/cienciadedatos.html#google-earth-engine",
+    "title": "Ciencia de datos",
+    "section": "GOOGLE EARTH ENGINE",
+    "text": "GOOGLE EARTH ENGINE\n\nMapping sugarcane in Thailand using transfer learning, a lightweight convolutional neural network, NICFI high resolution satellite imagery and Google Earth Engine. 2021. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#algebra-lineal",
+    "href": "datascience/cienciadedatos.html#algebra-lineal",
+    "title": "Ciencia de datos",
+    "section": "ALGEBRA LINEAL",
+    "text": "ALGEBRA LINEAL\n\nMIT Open Courseware.\n\nFundamentals of linear algebra. Link. Resources. Link.\nMatrix Methods in Data Analysis, Signal Processing, and Machine Learning. Link.\nA 2020 Vision of Linear Algebra. MIT. Link.\n\nDifferential Equations and Linear Algebra. Matlab. Gilbert Strang. Link. Link.Link.\nEigenvectors and Eigenvalues. Link.\nLAFF: Linear Algebra - Foundations to Frontiers. EdX Link. Youtube.\nComputational Linear Algebra for Coders. Link.\nThe Feyman lectures on physics. Link. Algebra. Link.\nTeoría de redes\n\nD# Graph Theory. Link.\nNetworks. MIT. Link.\nEssential graph theory for biologists. Winter School Online Lectures. Link.\nMIT Matlab Tools for Network Analysis. Link.\nNetworked and Social Systems Engineering (NETS) by Michael Kearns. Link.\nNetworked Life by Michael Kearns. Coursera. Link.\nSocial Network Analysis. Coursera. Link.\nNetworks, Crowds, and Markets. Link.\nNetwork Science by Albert-László Barabási. Link.\nMining Massive Datasets. Coursera. Link.\nArcGis. OD cost matrix analysis. Link.\nThe Department of Network and Data Science at Central European University. Link.\nCódigo\n\nNetwork visualization. Link.\nNetwork Analysis and Visualization with R and igraph. Link.\nSystems Biology and Evolution Toolbox. Matlab. Link. Link.\nStatic and dynamic network visualization with R. Link.\nBrain ConnectivityToolbox. Matlab. Link.\nNetwork visualization with R. Link.\n\nLecturas\n\nNewman M. 2010. Networks: An Introduction. Link.\nFrom Graphs to Spatial Graphs. AREES. 2010. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#estadística",
+    "href": "datascience/cienciadedatos.html#estadística",
+    "title": "Ciencia de datos",
+    "section": "ESTADÍSTICA",
+    "text": "ESTADÍSTICA\n\nIntroduction to Modern Statistics, First Edition. Link.\nGraduate Statistics in R. Statstools.com. Link.***\nOnline Statistics Education: An Interactive Multimedia Course of Study. Link.***\nFoundations of Data Analysis - Part 2. EdX. Link\nExplore Statistics with R. EdX.Link\nEstadística inferencial. Khan Academy. Link\nCálculo poder estadístico alfa y beta. Gpower. Link\nProbability. MIT Open Courseware. Link.\nSeeing Theory. Brown University. Link.\n\n**Probabilidad básica. Link\n\nIntroduction to Statistical Genomics. Joshua Akey Spring 2008. Link.\nStatistics for Biologists, Nature Points of Significance. Link.\nStatistics for applications. Link.\nStatistical Rethinking. Link.\nStatistical rethinking with brms, ggplot2, and the tidyverse. Link.\nGraduate Statistics in R. Statstools.com. Link.***\nJASP Software Link, and Center for Open Science Link.\nOnline Statistics Education: An Interactive Multimedia Course of Study. Link.***\nFoundations of Data Analysis - Part 2. EdX. Link\nExplore Statistics with R. EdX.Link\nEstadística inferencial. Khan Academy. Link\nCálculo poder estadístico alfa y beta. Gpower. Link\nProbability. MIT Open Courseware. Link.\nSeeing Theory. Brown University. Link.\nIntroduction to Statistical Genomics. Joshua Akey Spring 2008. Link.\nStatistics for Biologists, Nature Points of Significance. Link.\nStatistics for applications. Link.\nStatistical Rethinking. Link.\nProbabilidad Básica. Introducción a los conceptos básicos de probabilidad. BrownU. Link.\nBIOST561 “Computational Skills for Biostatistics. Link.\n\nVarios\n\nCentral Limit Theorem. Link\nLa potencia y el tamaño del efecto. Link.\n\nAnálisis de varianza\n\nANOVA 1 - Calculando la Suma Total de Cuadrados (STC). Link.\nANOVA 2 - Calculando suma total de cuadrados dentro y entre (SCD y SCE). Link.\nANOVA 3 – Prueba de hipótesis con estadístico F. Link.\n\nANOVA medidas repetidas\n\nAnálisis de varianza factorial medidas repetidas (ANOVA). Link.\nR - One Way Repeated Measures ANOVA. Link.\nLearn R One Way Repeated Measures ANOVA Lecture 1. Link.\nRepeated Measures in R. Link.\nRepeated Measures and Longitudinal Data. Penn State. Link.\nNotes on the use of R for psychology experiments and questionnaires Jonathan Baron. Link.\n\nRegresión\n\nRegression Modeling in Practice. Coursera. Link.\nLinear algebra: Projections, least squares and best straight line. *Lec 15,**Lec 16.*\n\nAnálisis de componentes principales\n\nWhat is principal component analysis?. Nature Biotechnology. 2008. Link.\nA layman’s introduction to principal component analysis. Video. Link.\n\nDiseño de experimentos\n\nDesigning, Running, and Analyzing Experiments. Coursera. Link.\n\nModelos lineales generalizados (GLM) y modelos mixtos\n\nResources:\n\nMixed models. GLMM FAQ Ben Bolker and others. Link.\nIntroduction to Linear Models with R. Link.\nLinear regression in R. Link.\nChoosing R packages for mixed effects modelling based on the car you drive. Link.\nIntroducción a los modelos mixtos. Link. Link.\nGeneralized Linear Models in R. Datacamp. Link.\nGeneralized Linear Models: understanding the link function. Link.\nGeneralized Additive Models in R. Link.\nIntroduction to Generalized Additive Models. Link.\nAn Introduction to Hierarchical Modeling. Link\n\nVideos:\n\nMaximum Likelihood, clearly explained. Videos: Link. Link. Link.\nMixed effects models with R. Videos: Link. Link.\nThe Power of Mixed Effects Models. Week 9. Designing, Running, and Analyzing Experiments. Coursera. Link.\n\nBooks:\n\nZuur, et al. 2009. Mixed Effects Models and Extensions in Ecology with R. Link.\nCorrea Morales, Juan Carlos; Salazar Uribe Juan Carlos. Introducción a los modelos mixtos / Medellín: Universidad Nacional de Colombia. Link.\nPinheiro José C.; Bates Douglas M. Mixed-Effects Models in S and S-PLUS. Link.\n\nReadings:\nA brief introduction to mixed effects modelling and multi-model inference in ecology. PeerJ. Link.\n\nGeneralized additive models (GAMs)\n\nGeneralized additive models for large data sets. Link.\n\n GAMs\nARTE EN CÓDIGO\n\naRtsy: Generative Art with R  and  ggplot2. Link.\n\nFUN PROJECTS\n\nDeep fakes. Link.\n\nSERIES DE TIEMPO\n\nTime Series for Ecologists and Climatologists: course timetable. Link.\nAccounting for autocorrelation in R. Link.\nManipulating Time Series Data in R: Case Studies. Datacamp. Link.\nTime Series Analysis. MIT. Link.\nApplied Time Series Analysis. Penn State U. Link.\n\nSTAN\n\nIntroduction to Bayesian Inference with Stan. Link\nRobust Bayesian linear regression with Stan in R. Link.\nStanCon 2018. Link. Materials from StanCon. Link.\n**Statistical Rethinking: A Bayesian Course Using R and Stan. Link.\n\nTemas varios\n\nNonparametric Tests of Group Differences. Link.\nThe Statistical Bootstrap and Other Resampling Methods. Link. Link. Link.\nTen Simple Rules for Effective Statistical Practice. PLOS. 2016 Link.\nStatisticians issue warning over misuse of P values. Nature. 2016. Link\n\nOpen software for statistical analysis\n\nJASP. Link and Center for Open Science Link.\nSAS University Edition. Link.\n\nMeta-Analisis and data papers\n\nIntroduction to Systematic Review and Meta-Analysis. Coursera. Link.\nFixed effects vs Random effects. Meta-analysis-workshops.com Link.\nSoftware: RevMan.Cochrane. Link.\nWhat are data papers? Data and metadata. Ecology. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#cienciometria",
+    "href": "datascience/cienciadedatos.html#cienciometria",
+    "title": "Ciencia de datos",
+    "section": "CIENCIOMETRIA",
+    "text": "CIENCIOMETRIA\n\nCRExplorer. Link.\nHistCite. Link.\nLoet Leydesdorff. Link.\nCited References Explorer. Link.\nBibliometrics for Librarians. Link.**\nHandbook of Graphs and Networks in People Analytics: With Examples in R and Python. Link\nPaquetes de R:\n\nPackage ‘bibliometrix’. Link. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
+    ]
+  },
+  {
+    "objectID": "datascience/cienciadedatos.html#varios-temas",
+    "href": "datascience/cienciadedatos.html#varios-temas",
+    "title": "Ciencia de datos",
+    "section": "VARIOS TEMAS",
+    "text": "VARIOS TEMAS\n\nDatos\n\nUN Office on Drugs and Crime. Link.\n\nImagenes\n\nImageJ. Link.\nDigitizing data from old figures with ImageJ. Link.\nWebPlotDigitizer. Link.\nTabula. A tool for liberating data tables locked inside PDF files. Link.\n\nOntologías\n\nCoral traits data base.\n\nProcedures. Nature Paper. OBOE.\n\nSemantic Web Applications in Neuromedicine (SWAN) Ontology. Link. Link.\n\nOtras lecturas\n\nMay, R.M. 2004. Uses and Abuses of Mathematics in Biology. Science. (303) 5659: 790-793. Link.\nOreskes N, et al. 1994. Verification, Validation, and Confirmation of Numerical Models in the Earth Sciences. Science. Link.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Ciencia de datos"
     ]
   },
   {

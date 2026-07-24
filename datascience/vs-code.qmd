@@ -1,0 +1,45 @@
+---
+title: "VS Code"
+format: html
+editor: visual
+---
+
+## ¿Qué es Visual Studio Code?
+
+Visual Studio Code (VS Code) es un editor de código fuente gratuito y de código abierto desarrollado por Microsoft. Es liviano pero muy potente, funciona en Windows, macOS y Linux, y se ha convertido en el editor más usado por desarrolladores de software según encuestas anuales como la de Stack Overflow.
+
+Sus características principales incluyen resaltado de sintaxis para prácticamente cualquier lenguaje, autocompletado inteligente (IntelliSense), depuración integrada, control de versiones con Git incorporado, una terminal integrada y un enorme ecosistema de extensiones que permiten adaptarlo a cualquier flujo de trabajo, desde ciencia de datos hasta desarrollo web o escritura de documentos.
+
+{{< video "https://youtu.be/f8_uF_IDV50" >}} Learn Visual Studio Code in 15 minutes: 2026 Official Beginner Tutorial
+
+## Edición de código e IntelliSense
+
+El corazón de VS Code es su editor de texto, diseñado para que escribir y navegar código sea rápido y cómodo. Incluye **IntelliSense**, un motor de autocompletado que sugiere variables, funciones y métodos según el lenguaje, además de mostrar información de tipos y documentación en línea mientras se escribe.
+
+Otras características de edición destacadas son el resaltado de sintaxis, el plegado de código (code folding), la búsqueda y reemplazo con expresiones regulares, la edición multicursor, y la navegación rápida a definiciones y referencias (Go to Definition / Find All References), lo que agiliza el trabajo en proyectos grandes.
+
+{{< video "https://youtu.be/MNBwGGwvvKE" >}} Edit and Run Code in Visual Studio Code
+
+## Depuración de código
+
+VS Code incluye un depurador (debugger) integrado que permite ejecutar el código paso a paso, inspeccionar variables, establecer puntos de interrupción (breakpoints) y evaluar expresiones en tiempo real, sin necesidad de salir del editor.
+
+Esta funcionalidad es compatible de forma nativa con Node.js y, mediante extensiones, con la mayoría de los lenguajes populares como Python, Java, C++ o Go. La configuración de depuración se guarda en un archivo `launch.json`, lo que facilita reutilizar y compartir configuraciones entre miembros de un equipo.
+
+{{< video "https://youtu.be/3HiLLByBWkg" >}} Getting Started with Debugging in VS Code (Official Beginner Guide)
+
+## Control de versiones con Git integrado
+
+VS Code integra Git de forma nativa a través de la vista de **Control de código fuente** (Source Control), lo que permite ver los cambios realizados, hacer *stage* de archivos, crear commits, cambiar de rama, fusionar y resolver conflictos directamente desde la interfaz gráfica, sin depender exclusivamente de la línea de comandos.
+
+También ofrece indicadores visuales en el margen del editor (gutter) que muestran líneas añadidas, modificadas o eliminadas respecto al último commit, y se integra con plataformas como GitHub para publicar (push), clonar repositorios y gestionar *pull requests* desde el mismo editor.
+
+{{< video "https://youtu.be/i_23KUAEtUM" >}} Using Git with Visual Studio Code (Official Beginner Tutorial)
+
+## VS Code para no desarrolladores
+
+Aunque nació como un editor para programar, VS Code se ha convertido en una herramienta de propósito general útil incluso para quienes nunca han escrito una línea de código. Sirve para redactar documentos en Markdown, organizar notas, llevar control de versiones de escritos con Git, gestionar archivos de proyectos, e incluso trabajar con asistentes de IA integrados para tareas creativas o de escritura.
+
+Gracias a su extensísimo marketplace de extensiones, cualquier persona puede personalizar VS Code para tareas muy específicas: temas visuales, resaltado para formatos como YAML o CSV, correctores ortográficos, integración con Google Drive, y mucho más, todo sin necesidad de conocimientos de programación.
+
+{{< video "https://youtu.be/uQV8uEzgxHo" >}} VS Code For Non-Developers

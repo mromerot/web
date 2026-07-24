@@ -2,366 +2,374 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mromerot.github.io/web/datascience/ia.html</loc>
-    <lastmod>2025-09-16T03:03:29.303Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.721Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/d3.html</loc>
-    <lastmod>2026-04-26T01:29:58.749Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.699Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/mapas/mapa_colombia_observable.html</loc>
-    <lastmod>2026-04-26T00:05:14.048Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.102Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/mapas/mapa_colombia_nri.html</loc>
-    <lastmod>2026-04-26T00:41:12.689Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.101Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/mapas/mapa_colombia_tiles.html</loc>
-    <lastmod>2026-04-25T23:27:02.998Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.103Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/d3-experiment.html</loc>
-    <lastmod>2026-04-26T00:44:54.675Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.699Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/myst.html</loc>
-    <lastmod>2026-01-10T17:55:30.623Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.104Z</lastmod>
   </url>
   <url>
-    <loc>https://mromerot.github.io/web/datascience/cienciadedatos.html</loc>
-    <lastmod>2025-09-16T02:15:06.677Z</lastmod>
+    <loc>https://mromerot.github.io/web/datascience/hugging-face.html</loc>
+    <lastmod>2026-07-24T04:33:59.170Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mromerot.github.io/web/datascience/vs-code.html</loc>
+    <lastmod>2026-07-24T04:33:36.600Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/github.html</loc>
-    <lastmod>2026-01-14T16:29:47.578Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.712Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/graficas-python-r.html</loc>
-    <lastmod>2026-01-14T16:30:50.732Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.715Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/cv/publicaciones.html</loc>
-    <lastmod>2025-05-21T13:42:05.801Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.688Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/gestiondeproyectos/gestionproyectosciencia.html</loc>
-    <lastmod>2026-05-11T01:16:17.722Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.769Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/gestiondeproyectos/impacto.html</loc>
-    <lastmod>2026-05-25T01:40:31.649Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.773Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/blog/second-post/index.html</loc>
-    <lastmod>2025-03-23T03:23:57.263Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.685Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/blog/third-post/index.html</loc>
-    <lastmod>2025-03-23T03:23:57.263Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.685Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/index.html</loc>
-    <lastmod>2026-03-29T18:14:48.885Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.894Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/vidalaboral/cafe.html</loc>
-    <lastmod>2025-08-04T01:54:52.309Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.900Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/vidalaboral/vidalaboral.html</loc>
-    <lastmod>2025-11-09T20:44:14.421Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.901Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/source/gestiondeproyectos/gestionproyectosciencia.html</loc>
-    <lastmod>2025-03-24T02:23:23.875Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.897Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/source/ecolyconserv/ecologiayconservacion.html</loc>
-    <lastmod>2025-03-24T02:23:23.874Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.897Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/source/vidalaboral/vidalaboral.html</loc>
-    <lastmod>2025-03-24T02:23:23.887Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.898Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/source/grd/manejodedesastres.html</loc>
-    <lastmod>2025-03-24T02:23:23.875Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.897Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/source/cyt/cienciareproduc.html</loc>
-    <lastmod>2025-03-24T02:23:23.874Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.896Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/source/cyt/docenciaeducacion.html</loc>
-    <lastmod>2025-03-24T02:23:23.874Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.897Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/source/matemdatascience/cienciadedatos.html</loc>
-    <lastmod>2025-03-24T02:23:23.875Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.897Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/projects/index.html</loc>
-    <lastmod>2025-05-17T18:29:58.500Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.896Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/gestiondelriesgo.html</loc>
-    <lastmod>2026-06-15T21:47:58.082Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.789Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/repositorios.html</loc>
-    <lastmod>2026-06-20T02:25:15.693Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.891Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/amazonas.html</loc>
-    <lastmod>2026-03-24T03:24:39.496Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.774Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/ambientales/index.html</loc>
-    <lastmod>2025-10-13T01:25:44.403Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.781Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/hidrol-meteorologicas/inundaciones-repentinas.html</loc>
-    <lastmod>2025-11-16T03:04:38.855Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.807Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/hidrol-meteorologicas/olasdecalor.html</loc>
-    <lastmod>2025-12-11T14:57:43.505Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.808Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/hidrol-meteorologicas/inundaciones.html</loc>
-    <lastmod>2026-06-20T02:34:46.998Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.807Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/manejodedesastres.html</loc>
-    <lastmod>2026-04-10T23:33:22.743Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.890Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/conocimiento-indicadores.html</loc>
-    <lastmod>2026-06-20T02:34:40.763Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.784Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/biologicos/covid.html</loc>
-    <lastmod>2025-11-11T20:44:43.016Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.783Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/ciudades.html</loc>
-    <lastmod>2026-06-15T21:55:43.485Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.784Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/tecnologicas/amenazastecnol.html</loc>
-    <lastmod>2025-08-21T14:48:08.957Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.894Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/sociales/index.html</loc>
-    <lastmod>2025-09-28T14:00:03.624Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.893Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/extraterrestre/index.html</loc>
-    <lastmod>2026-03-19T17:03:57.278Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.786Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/educacion.html</loc>
-    <lastmod>2025-08-28T20:25:20.628Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.785Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/geologicas/volcanes.html</loc>
-    <lastmod>2025-08-09T02:20:58.819Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.789Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/geologicas/riesgosismico.html</loc>
-    <lastmod>2026-07-20T15:30:56.723Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.788Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/geologicas/falladeterreno.html</loc>
-    <lastmod>2025-10-13T01:22:22.420Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.787Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/cyt/transdisciplina.html</loc>
-    <lastmod>2025-07-01T00:06:12.628Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.693Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/cyt/docenciaeducacion.html</loc>
-    <lastmod>2026-06-15T15:42:06.897Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.689Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/cyt/escrituraypublicacionacademica.html</loc>
-    <lastmod>2026-06-20T01:54:11.168Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.690Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/cyt/cienciareproduc.html</loc>
-    <lastmod>2026-04-05T16:40:37.770Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.688Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/geologicas/index.html</loc>
-    <lastmod>2025-09-16T02:39:18.338Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.787Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/geologicas/tsunami.html</loc>
-    <lastmod>2026-05-23T19:36:56.268Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.789Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/cienciaytecnologia.html</loc>
-    <lastmod>2026-07-20T15:21:29.006Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.783Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/extraterrestre/amenazasextraterrestres.html</loc>
-    <lastmod>2026-05-25T01:46:24.732Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.786Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/sociales/migracion.html</loc>
-    <lastmod>2025-11-08T02:01:10.686Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.893Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/sat.html</loc>
-    <lastmod>2025-10-13T01:12:08.773Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.892Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/tecnologicas/index.html</loc>
-    <lastmod>2025-09-16T02:39:13.477Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.894Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/biologicos/index.html</loc>
-    <lastmod>2026-05-23T16:50:13.626Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.783Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/cursos.html</loc>
-    <lastmod>2025-11-16T00:09:41.710Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.785Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/conocimientodelriesgo.html</loc>
-    <lastmod>2026-07-20T15:27:02.576Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.785Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/hidrol-meteorologicas/elnino.html</loc>
-    <lastmod>2026-05-23T16:01:54.459Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.790Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/hidrol-meteorologicas/index.html</loc>
-    <lastmod>2025-10-08T00:16:10.437Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.806Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/hidrol-meteorologicas/huracanes.html</loc>
-    <lastmod>2025-10-24T15:47:29.785Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.791Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/ambientales/incendiosforestales.html</loc>
-    <lastmod>2026-06-29T13:04:50.085Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.780Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/ambientales/erosioncostera.html</loc>
-    <lastmod>2026-07-20T19:25:30.163Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.775Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/glosario.html</loc>
-    <lastmod>2026-06-20T02:02:48.940Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.790Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/plataformas-redes.html</loc>
-    <lastmod>2026-06-20T02:25:18.572Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.891Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/grd/reducciondelriesgo.html</loc>
-    <lastmod>2025-11-16T00:15:51.826Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.891Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/source/amazonas/amazonas.html</loc>
-    <lastmod>2025-03-24T02:23:23.865Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.896Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/source/matemdatascience/estadisticaymatematicas.html</loc>
-    <lastmod>2025-03-24T02:23:23.875Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.897Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/source/cyt/escrituraypublicacionacademica.html</loc>
-    <lastmod>2025-03-24T02:23:23.874Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.897Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/source/grd/conocimientodelriesgo.html</loc>
-    <lastmod>2025-03-24T02:23:23.875Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.897Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/source/grd/reducciondelriesgo.html</loc>
-    <lastmod>2025-03-24T02:23:23.875Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.897Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/source/vidalaboral/cafe.html</loc>
-    <lastmod>2025-03-24T02:23:23.887Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.898Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/source/gestiondeproyectos/projectmanagement.html</loc>
-    <lastmod>2025-03-24T02:23:23.875Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.897Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/source/mispublicaciones/publicaciones.html</loc>
-    <lastmod>2025-03-24T02:23:23.875Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.898Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/vidalaboral/herramientas.html</loc>
-    <lastmod>2025-12-02T13:56:04.868Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.900Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/gcc/gestion-cambio-climatico.html</loc>
-    <lastmod>2025-10-14T19:05:04.898Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.764Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/ecolyconserv/ecologiayconservacion.html</loc>
-    <lastmod>2026-06-29T13:00:43.337Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.764Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/blog/first-post/index.html</loc>
-    <lastmod>2025-11-09T20:40:06.512Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.681Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/gestiondeproyectos/projectmanagement.html</loc>
-    <lastmod>2025-06-26T19:41:38.561Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.773Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/gestiondeproyectos/gestiontecnologiainnovacion.html</loc>
-    <lastmod>2026-06-20T01:57:56.098Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.771Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/math-stats/math-stats.html</loc>
-    <lastmod>2025-06-22T22:53:23.937Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.894Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/cv/cv.html</loc>
-    <lastmod>2025-06-09T13:54:37.410Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.688Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/jupyter-notebook.html</loc>
-    <lastmod>2026-01-14T21:55:37.658Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.730Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/markdown.html</loc>
-    <lastmod>2026-01-13T21:52:03.838Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.103Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mromerot.github.io/web/datascience/cienciadedatos.html</loc>
+    <lastmod>2026-07-20T19:40:46.698Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/claude.html</loc>
-    <lastmod>2026-02-10T13:42:49.872Z</lastmod>
+    <lastmod>2026-07-23T13:12:53.745Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/herramientas.html</loc>
-    <lastmod>2026-05-25T01:25:24.558Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.720Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/quarto.html</loc>
-    <lastmod>2026-07-20T15:22:15.015Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.104Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/mapas/index.html</loc>
-    <lastmod>2026-04-25T23:40:08.762Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.101Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/mapas/mapa_colombia_pmtiles.html</loc>
-    <lastmod>2026-04-25T23:49:07.688Z</lastmod>
+    <lastmod>2026-07-20T19:40:47.102Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/claude-slides.html</loc>
-    <lastmod>2026-02-10T13:41:59.876Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.698Z</lastmod>
   </url>
   <url>
     <loc>https://mromerot.github.io/web/datascience/google-colab.html</loc>
-    <lastmod>2025-11-22T23:03:41.698Z</lastmod>
+    <lastmod>2026-07-20T19:40:46.714Z</lastmod>
   </url>
 </urlset>

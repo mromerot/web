@@ -159,6 +159,10 @@ website:
             href: datascience/herramientas.qmd
           - text: "Inteligencia artificial"
             href: datascience/ia.qmd
+          - text: "VS Code"
+            href: datascience/vs-code.qmd
+          - text: "Hugging Face"
+            href: datascience/hugging-face.qmd
           - section: "Mapas"
             href: datascience/mapas/index.qmd
             contents:

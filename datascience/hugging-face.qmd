@@ -1,0 +1,45 @@
+---
+title: "Hugging Face"
+format: html
+editor: visual
+---
+
+## ¿Qué es Hugging Face?
+
+Hugging Face es una plataforma y comunidad de inteligencia artificial dedicada a la construcción de herramientas de aprendizaje automático de código abierto. A menudo se le describe como el "GitHub del machine learning", ya que permite alojar, compartir y descubrir modelos, conjuntos de datos y aplicaciones creadas por miles de investigadores, empresas y desarrolladores en todo el mundo.
+
+Su ecosistema se organiza principalmente en tres pilares: **Models** (modelos preentrenados listos para usar), **Datasets** (conjuntos de datos para entrenar y evaluar modelos) y **Spaces** (aplicaciones y demos interactivas). A esto se suma su famosa librería `transformers`, que estandarizó el acceso a modelos de última generación en procesamiento de lenguaje natural, visión por computador y audio.
+
+{{< video "https://youtu.be/qP9mbY3wuWk" >}} What is Hugging Face? - Models, Datasets & Spaces
+
+## El Hub: Modelos, Datasets y Spaces
+
+El **Hugging Face Hub** es el repositorio central de la plataforma, con cientos de miles de modelos y decenas de miles de datasets disponibles públicamente. Cada modelo cuenta con una "model card" que documenta su arquitectura, su uso previsto, sus limitaciones y ejemplos de código para implementarlo en pocas líneas.
+
+Los **Spaces** permiten publicar demos interactivas usando frameworks como Gradio o Streamlit, de forma gratuita y sin necesidad de gestionar infraestructura propia, lo que facilita mostrar el funcionamiento de un modelo a cualquier persona directamente desde el navegador.
+
+{{< video "https://youtu.be/XvSGPZFEjDY" >}} Navigating the Model Hub
+
+## La librería Transformers y el pipeline
+
+La librería `transformers` de Hugging Face ofrece una interfaz unificada para descargar y usar miles de modelos preentrenados con muy poco código. Su componente más sencillo es la función `pipeline()`, que encapsula todo el flujo de trabajo (preprocesamiento del texto, inferencia del modelo y posprocesamiento de resultados) en una sola llamada, permitiendo tareas como clasificación de texto, traducción, generación de texto o reconocimiento de entidades en pocas líneas de código.
+
+Por debajo de esta simplicidad, la librería es compatible con los principales frameworks de deep learning (PyTorch, TensorFlow y JAX), lo que da flexibilidad tanto a quienes solo quieren usar un modelo como a quienes desean entrenarlo o ajustarlo (fine-tuning).
+
+{{< video "https://youtu.be/1pedAIvTWXk" >}} What happens inside the pipeline function? (PyTorch)
+
+## Tokenizers
+
+Antes de que un modelo de lenguaje pueda procesar texto, este debe convertirse en números mediante un **tokenizer**. Hugging Face ofrece la librería `tokenizers`, escrita en Rust para lograr un rendimiento muy alto, que se encarga de dividir el texto en tokens (palabras, subpalabras o caracteres), asignarles identificadores numéricos y aplicar el relleno (padding) y truncamiento necesarios para que los modelos puedan procesarlos en lotes.
+
+Cada modelo preentrenado en el Hub incluye su propio tokenizer asociado, garantizando que el texto se procese exactamente igual que durante el entrenamiento original del modelo, lo cual es clave para obtener buenos resultados.
+
+{{< video "https://youtu.be/3umI3tm27Vw" >}} Fast tokenizer superpowers
+
+## El curso oficial de Hugging Face
+
+Hugging Face ofrece un curso gratuito en línea (el **Hugging Face Course**) pensado para aprender a usar el ecosistema de NLP y machine learning de la plataforma desde cero. Cubre desde los fundamentos de la librería `transformers` y los tokenizers, hasta el entrenamiento y ajuste fino de modelos, el uso de `datasets` para manejar grandes volúmenes de datos, y la publicación de modelos y demos en el Hub.
+
+El curso combina lecciones escritas disponibles en la documentación con una serie de videos cortos en el canal oficial de YouTube de Hugging Face, y está disponible en varios frameworks (PyTorch y TensorFlow) y en varios idiomas.
+
+{{< video "https://youtu.be/00GKzGyWFEs" >}} Welcome to the Hugging Face course
