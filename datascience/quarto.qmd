@@ -99,7 +99,7 @@ Observe que:
 | pear   | 1.37   |
 | orange | 3.09   |
 
-: [Precios promedio de frutas.]{style="color: black; font-family: Arial, sans-serif;"}
+: [Precios promedio de frutas.]{style="color: black; font-family: Arial, sans-serif;"} {#tbl-frutas .striped .hover tbl-colwidths="[75,25]"}
 :::
 
 En la @tbl-frutas se observa el precio promedio de las frutas (así se generan referencias cruzadas).

@@ -8,12 +8,12 @@ editor: visual
 
 ### Lecturas
 
--   Deep learning enables city-wide climate projections of street-level heat stress. Urban Climate 2025. [*Link*](https://www.sciencedirect.com/science/article/pii/S2212095525002809?via%3Dihub)
+- Deep learning enables city-wide climate projections of street-level heat stress. Urban Climate 2025. [*Link*](https://www.sciencedirect.com/science/article/pii/S2212095525002809?via%3Dihub)
 
 ## Cartografia
 
--   GlobalBuildingAtlas: An Open Global and Complete Dataset of Building Polygons, Heights and LoD1 3D Models. 2025. [*Link*](https://mediatum.ub.tum.de/1782307)
--   The World's 2.75B Buildings. *Link*
+- GlobalBuildingAtlas: An Open Global and Complete Dataset of Building Polygons, Heights and LoD1 3D Models. 2025. [*Link*](https://mediatum.ub.tum.de/1782307)
+- The World's 2.75B Buildings. *Link*
 
 ![](https://tech.marksblogg.com/theme/images/gba/qgis-bin_6Y0A3doBbl.jpg){fig-align="center" width="300"}
 
@@ -23,22 +23,57 @@ editor: visual
 
 # **GRD Ciudades capitales**
 
--   [Armenia](https://armenia.gov.co/paginas-sin-categoria/omgerd) — Oficina Municipal de Gestión del Riesgo (OMGERD)
--   [Barranquilla](https://barranquilla.gov.co/gestion-del-riesgo) — Oficina de Gestión del Riesgo
--   [Bogotá](https://www.idiger.gov.co/) — Instituto Distrital de Gestión de Riesgos y Cambio Climático (IDIGER)
--   [Bucaramanga](https://www.bucaramanga.gov.co/gobierno-ciudadanos-1/secretarias/unidad-municipal-de-gestion-del-riesgo-del-desastre/) — Unidad Municipal de Gestión del Riesgo del Desastre
--   [Cali](https://www.cali.gov.co/gestiondelriesgo/) — Secretaría de Gestión del Riesgo de Emergencias y Desastres
--   [Cartagena de Indias](https://www.cartagena.gov.co/OAGRD) — Oficina Asesora para la Gestión del Riesgo de Desastres (OAGRD)
--   [Cúcuta](https://cucuta.gov.co/secretaria-de-gestion-de-riesgo-y-desastres-sql/) — Secretaría de Gestión de Riesgo y Desastres
--   [Florencia](https://www.florencia-caqueta.gov.co/directorio-institucional/unidad-de-gestion-del-riesgo-de-desastres) — Unidad de Gestión del Riesgo de Desastres
--   [Ibagué](https://cimpp.ibague.gov.co/gestion-del-riesgo/) — Dirección de Gestión del Riesgo y Atención de Desastres
--   [Manizales](https://manizales.gov.co/unidad-de-gestion-del-riesgo/) — Unidad de Gestión del Riesgo (UGR)
--   [Medellín](https://www.medellin.gov.co/es/dagrd/) — Departamento Administrativo de Gestión del Riesgo de Desastres (DAGRD)
--   [Neiva](https://www.alcaldianeiva.gov.co/NuestraAlcaldia/Dependencias/Paginas/Oficina-de-Gesti%C3%B3n-de-Riesgo.aspx) — Oficina de Gestión del Riesgo
--   [Pasto](https://www.pasto.gov.co/index.php/component/content/category/20-nuestra-entidad/32-direcciones/75-direccion-para-la-gestion-del-riesgo-de-desastres-dgrd?Itemid=101) — Dirección para la Gestión del Riesgo de Desastres (DGRD)
--   [Pereira](https://www.pereira.gov.co/documentos/1170/gestion-del-riesgo-diger/) — Dirección de Gestión del Riesgo (DIGER)
--   [Popayán](https://www.popayan.gov.co/SecretariasyEntidades/Paginas/Oficina-Asesora-Gesti%C3%B3n-del-Riesgo.aspx) — Oficina Asesora de Gestión del Riesgo
--   [Santa Marta](https://www.santamarta.gov.co/oficina-de-gestion-del-riesgo-de-desastre) — Oficina de Gestión del Riesgo de Desastres
--   [Villavicencio](https://villavicencio.gov.co/alcaldia/oficinas/gestion-del-riesgo/) — Oficina de Gestión del Riesgo
--   [Yopal](https://www.yopal-casanare.gov.co/directivos-alcaldia-de-yopal-994546/oficina-territorial-de-gestion-del-riesgo-de-desastres) — Oficina Territorial de Gestión del Riesgo de Desastres
+- [Armenia](https://armenia.gov.co/paginas-sin-categoria/omgerd) — Oficina Municipal de Gestión del Riesgo (OMGERD)
+- [Barranquilla](https://barranquilla.gov.co/gestion-del-riesgo) — Oficina de Gestión del Riesgo
+- [Bogotá](https://www.idiger.gov.co/) — Instituto Distrital de Gestión de Riesgos y Cambio Climático (IDIGER)
+- [Bucaramanga](https://www.bucaramanga.gov.co/gobierno-ciudadanos-1/secretarias/unidad-municipal-de-gestion-del-riesgo-del-desastre/) — Unidad Municipal de Gestión del Riesgo del Desastre
+- [Cali](https://www.cali.gov.co/gestiondelriesgo/) — Secretaría de Gestión del Riesgo de Emergencias y Desastres
+- [Cartagena de Indias](https://www.cartagena.gov.co/OAGRD) — Oficina Asesora para la Gestión del Riesgo de Desastres (OAGRD)
+- [Cúcuta](https://cucuta.gov.co/secretaria-de-gestion-de-riesgo-y-desastres-sql/) — Secretaría de Gestión de Riesgo y Desastres
+- [Florencia](https://www.florencia-caqueta.gov.co/directorio-institucional/unidad-de-gestion-del-riesgo-de-desastres) — Unidad de Gestión del Riesgo de Desastres
+- [Ibagué](https://cimpp.ibague.gov.co/gestion-del-riesgo/) — Dirección de Gestión del Riesgo y Atención de Desastres
+- [Manizales](https://manizales.gov.co/unidad-de-gestion-del-riesgo/) — Unidad de Gestión del Riesgo (UGR)
+- [Medellín](https://www.medellin.gov.co/es/dagrd/) — Departamento Administrativo de Gestión del Riesgo de Desastres (DAGRD)
+- [Neiva](https://www.alcaldianeiva.gov.co/NuestraAlcaldia/Dependencias/Paginas/Oficina-de-Gesti%C3%B3n-de-Riesgo.aspx) — Oficina de Gestión del Riesgo
+- [Pasto](https://www.pasto.gov.co/index.php/component/content/category/20-nuestra-entidad/32-direcciones/75-direccion-para-la-gestion-del-riesgo-de-desastres-dgrd?Itemid=101) — Dirección para la Gestión del Riesgo de Desastres (DGRD)
+- [Pereira](https://www.pereira.gov.co/documentos/1170/gestion-del-riesgo-diger/) — Dirección de Gestión del Riesgo (DIGER)
+- [Popayán](https://www.popayan.gov.co/SecretariasyEntidades/Paginas/Oficina-Asesora-Gesti%C3%B3n-del-Riesgo.aspx) — Oficina Asesora de Gestión del Riesgo
+- [Santa Marta](https://www.santamarta.gov.co/oficina-de-gestion-del-riesgo-de-desastre) — Oficina de Gestión del Riesgo de Desastres
+- [Villavicencio](https://villavicencio.gov.co/alcaldia/oficinas/gestion-del-riesgo/) — Oficina de Gestión del Riesgo
+- [Yopal](https://www.yopal-casanare.gov.co/directivos-alcaldia-de-yopal-994546/oficina-territorial-de-gestion-del-riesgo-de-desastres) — Oficina Territorial de Gestión del Riesgo de Desastres
+
+# **GRD departamentos**
+
+- [Amazonas](https://www.amazonas.gov.co/noticias/prevencion-en-riesgos-y-desastres--cdgrd) — Coordinación Departamental para la Gestión del Riesgo y Desastres (CDGRD)
+- [Antioquia](https://dagran.antioquia.gov.co/) — Departamento Administrativo de Gestión del Riesgo de Antioquia (DAGRAN) · [PDGRD](https://antioquia.gov.co/images/pdf/Plan-Departamental.pdf)
+- [Arauca](https://arauca.gov.co/directorio-telefonico-dependencias/) — Unidad Departamental de Gestión del Riesgo
+- [Atlántico](https://www.atlantico.gov.co/index.php/funcionesinterior) — Subsecretaría de Prevención y Atención de Desastres · [PDGRD](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/392)
+- [Bolívar](https://www.bolivar.gov.co/web/secretaria/oficina-de-gestion-del-riego-de-desastre/) — Oficina de Gestión del Riesgo de Desastres · [PDGRD](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/395)
+- [Boyacá](https://www.boyaca.gov.co/despachogobernador/director-unidad-administradora-especial-para-gestion-del-riesgo-de-desastres/) — Unidad Administrativa Especial para la Gestión del Riesgo de Desastres · [PDGRD](https://www.susacon-boyaca.gov.co/noticias/plan-departamental-de-gestion-del-riesgo-de-desastres)
+- [Caldas](https://caldas.gov.co/index.php/component/sppagebuilder/?view=page&id=108&Itemid=1509) — Unidad Departamental para la Gestión del Riesgo de Desastres (UDEGER) · [PDGRD](http://repositorio.gestiondelriesgo.gov.co/bitstream/handle/20.500.11762/22558/Plan%20departamental%20gestion%20dle%20riesgo%202017%20-caldas.pdf?sequence=1&isAllowed=y)
+- [Caquetá](https://www.caqueta.gov.co/publicaciones-del-departamento/plan-departamental-de-gestion-del-riego-de-desastres) — Gestión del Riesgo de Desastres · [PDGRD](https://www.caqueta.gov.co/publicaciones-del-departamento/plan-departamental-de-gestion-del-riego-de-desastres)
+- [Casanare](https://www.casanare.gov.co/micro-site/secretaria-de-gobierno-convivencia-y-seguridad-ciudadana/direccion-de-gestion-de-riesgos-y-desastres) — Dirección de Gestión de Riesgos y Desastres · [PDGRD](https://casanare.gov.co/Dependencias/Gobierno/PublishingImages/Paginas/Plan-Departamental-Para-la-Gestion-del-Riesgo-de-Casanare-DGRD/PDGRD%20Casanare%202016%20-%202025%20(1).pdf)
+- [Cauca](https://www.cauca.gov.co/AtencionalCiudadano/Paginas/Directorio-de-Dependencias.aspx) — Oficina Asesora de Gestión del Riesgo de Desastres · [PDGRD](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/28873)
+- [Cesar](https://cesar.gov.co/d/es/nosotros/la-gobernacion/asesores-despacho/riesgo) — Oficina para la Gestión del Riesgo y Cambio Climático · [PDGRD](https://cesar.gov.co/d/filesmain/gesriesgo/pdgr_cesar_2023_2030.pdf)
+- [Chocó](https://www.choco.gov.co/noticias/coordinacion-de-gestion-del-riesgo-departamental-realiza) — Coordinación de Gestión del Riesgo Departamental
+- [Córdoba](https://www.cordoba.gov.co/publicaciones/1868/directorio-institucional-incluyendo-sedes-oficinas-sucursales-o-regionales-y-dependencias/) — Dirección Técnica de Ambiente y Gestión del Riesgo de Desastres · [PDGRD](https://www.cordoba.gov.co/documentos/2420/plan-departamental-para-la-gestion-del-riesgo-de-desastres-2022-2031-pdgrd/)
+- [Cundinamarca](https://www.cundinamarca.gov.co/dependencias/gestiondelriesgo) — Unidad Administrativa Especial para la Gestión del Riesgo de Desastres · [PDGRD](https://www.cundinamarca.gov.co/wcm/connect/e5b11f8b-3f25-4800-bed8-09e1137cc5c4/Plan_Departamental_Gesti%C3%B3n_del_Riesgo-2016-2020.pdf?MOD=AJPERES&CVID=nSOc.WL)
+- [Guainía](https://www.guainia.gov.co/tema/directorio-institucional) — Coordinación Departamental para la Gestión del Riesgo
+- [Guaviare](https://www.guaviare.gov.co/sedes-y-horarios-de-atencion/secretaria-de-gobierno-317591) — Consejo Departamental para la Gestión del Riesgo de Desastres (CODEGRID) · [PDGRD](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/27651)
+- [Huila](https://www.huila.gov.co/publicaciones/16129/directorio-institucional/) — Oficina para la Gestión del Riesgo de Desastres · [PDGRD](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/20239)
+- [La Guajira](https://www.laguajira.gov.co/NuestraGestion/Paginas/Directorio-institucional.aspx) — Dirección Operativa Departamental para la Gestión del Riesgo de Desastres · [PDGRD](http://repositorio.gestiondelriesgo.gov.co/bitstream/handle/20.500.11762/381/PDGR%20La%20Guajira.pdf?sequence=1&isAllowed=y)
+- [Magdalena](https://www.gobernaciondelmagdalena.gov.co/oficina-para-la-gestion-de-desastres/) — Oficina para la Gestión del Riesgo de Desastres · [PDGRD](http://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/385)
+- [Meta](https://meta.gov.co/pagina/direcci%C3%B3n-de-gesti%C3%B3n-del-riesgo-y-desastres/21) — Dirección de Gestión del Riesgo y Desastres · [PDGRD](https://devx.meta.gov.co/media/pagina/documentacion/2024/05/08/PDGRD_2023.pdf)
+- [Nariño](https://sitio.narino.gov.co/direccion-de-gestion-de-riesgo/) — Dirección de Gestión del Riesgo · [PDGRD](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/382)
+- [Norte de Santander](https://administrador.nortedesantander.gov.co/admin-departamental/consejeria-departamental-de-gestion-del-riesgo/) — Secretaría de Gestión del Riesgo de Desastres
+- [Putumayo](https://www.putumayo.gov.co/index.php/informacion-institucional2/directorios/directorio-de-entidades) — Gestión del Riesgo de Desastres
+- [Quindío](https://www.quindio.gov.co/unidad-departamental-para-la-gestion-del-riesgo-de-desastres-udegerd-quindio) — Unidad Departamental para la Gestión del Riesgo de Desastres (UDEGERD) · [PDGRD](https://quindio.gov.co/home/docs/items/item_107/PLAN_DEPARTAMENTAL_DE_GESTION_DEL_RIESGO_DE_DESASTRES_QUINDIO_2023_-_2032.pdf)
+- [Risaralda](https://www.risaralda.gov.co/salud/publicaciones/100112/gestion-del-riesgo/) — Coordinación Departamental de Gestión del Riesgo (CDGRD)
+- [San Andrés, Providencia y Santa Catalina](https://grd.sanandres.gov.co/) — Secretaría de Gestión del Riesgo de Desastres · [PDGRD](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/383)
+- [Santander](https://santander.gov.co/publicaciones/8130/oficina-para-la-gestion-del-riesgo-de-desastres/) — Oficina para la Gestión del Riesgo de Desastres · [PDGRD](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/29004)
+- [Sucre](https://www.sucre.gov.co/procesos-y-procedimientos/gestion-de-riesgos-de-desastres) — Gestión de Riesgos de Desastres
+- [Tolima](https://tolima.gov.co/secretarias/secretaria-del-ambiente-y-gestion-del-riesgo/1213-direccion-de-gestion-y-riesgo-de-desastres) — Dirección de Gestión y Riesgo de Desastres · [PDGRD](http://repositorio.gestiondelriesgo.gov.co/bitstream/handle/20.500.11762/384/PDGR%20Tolima.pdf?sequence=1&isAllowed=y)
+- [Valle del Cauca](https://www.valledelcauca.gov.co/riesgo/) — Secretaría de Gestión del Riesgo de Desastres · [PDGRD (Libro II Diagnóstico)](https://www.valledelcauca.gov.co/documentos/15142/libro-ii-diagnostico-plan-departamental-de-gestion-del-riesgo-de-desastres-valle-del-cauca-2024-2035/)
+- [Vaupés](https://www.vaupes.gov.co/unidad-de-gestion-del-riesgo/la-unidad-nacional-para-la-gestion-del-riesgo-de-desastres) — Unidad de Gestión del Riesgo
+- [Vichada](https://www.vichada.gov.co/directorio-institucional/secretaria-de-gobierno) — Secretaría de Gobierno (Gestión del Riesgo) · [PDGRD](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/27628)
 
