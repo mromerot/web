@@ -4,26 +4,49 @@ format: html
 editor: visual
 ---
 
-::: panel-tabset
-## Data sets
-
-[![\[Global risk data sets Making better use of global risk data and analytics\](https://www.preventionweb.net/understanding-disaster-risk/disaster-losses-and-statistics/global-risk-data-sets)](images/datasets.png){width="250"}](https://www.preventionweb.net/understanding-disaster-risk/disaster-losses-and-statistics/global-risk-data-sets)
-
-## Flood observatory
-
-[![\[Space-based Measurement, Mapping, and Modeling of Surface Water For Research, Humanitarian, and Water Resources Applications\](https://floodobservatory.colorado.edu/index.html)](images/floodobserv.png){width="250"}](https://floodobservatory.colorado.edu/index.html)
-:::
-
-# Atlas de Riesgo de Colombia
+# Clasificación de riesgo departamental y municipal de Colombia
 
 - Atlas de Riesgo de Colombia: revelando los desastres latentes. Unidad Nacional para la Gestión del Riesgo de Desastres. 2018. [*Link*](https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/27179).
 - COLOMBIA – Censo Nacional de Población y Vivienda – CNPV – 2018. [*Link*](http://microdatos.dane.gov.co/index.php/catalog/643/get_microdata).
+- Datos del Consolidado de atención a emergencias. UNGRD. [*Link*](http://portal.gestiondelriesgo.gov.co/Paginas/Consolidado-Atencion-de-Emergencias.aspx).
+- DESINVENTAR. Base de datos de pérdidas históricas en Colombia (período 1970-2011). [*Link*](http://online.desinventar.org/).
+- CIPE. Colombia Risk Analysis: Subnational and Regional Risk Indices.[*Link*](https://www.cipe.org/resources/colombia-risk-analysis-special-report/). [*Link*](https://www.colombiariskanalysis.com/)*.*
 
-# Perfiles de riesgo de Colombia
+::: panel-tabset
+## INFORM subnational model of Colombia 2015
+
+![INFORM subnational model of Colombia 2015 Link.](https://drmkc.jrc.ec.europa.eu/inform-index/portals/0/InfoRM/2016/INFORM%20Graphics%202016/INFORM%20Subnational%20Graphics/INFORM_Colombia_2015_v2_HAZARDS.png){fig-align="left" width="300"}
+
+## Riesgo Departamental Multiamenaza PDA
+
+Colombia: National Disaster Preparedness Baseline Assessment - A data-driven tool for assessing risk and building lasting resilience. [*Link*](https://reliefweb.int/report/colombia/colombia-national-disaster-preparedness-baseline-assessment-data-driven-tool-assessing-risk-and-building-lasting-resilience)
+
+![](images/Riesgo%20departamental%20multiamenaza.png)
+
+## Riesgo Municipal Multiamenaza PDA
+
+Colombia: National Disaster Preparedness Baseline Assessment - A data-driven tool for assessing risk and building lasting resilience. [*Link*](https://reliefweb.int/report/colombia/colombia-national-disaster-preparedness-baseline-assessment-data-driven-tool-assessing-risk-and-building-lasting-resilience)
+
+![](images/Riesgo%municipal%multiamenaza.png)
+
+
+:::
+
+# Clasificaciones internacionales: Perfil de riesgo de Colombia
 
 Colombia es un país con **riesgo mundial de desastres medio alto a muy alto (Tabla 1)** debido principalmente a su elevada exposición y vulnerabilidad.
 
 La diferencia entre los resultados no representa necesariamente una contradicción. El WorldRiskIndex mide riesgo estructural de desastre; INFORM incorpora crisis humanitarias y capacidad de respuesta; Germanwatch mide daños meteorológicos ya ocurridos; ND-GAIN evalúa vulnerabilidad y preparación climática; y PDC se utiliza principalmente para análisis multiamenaza territorial y planificación operativa.
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Colombia en Índices de Riesgo de Desastres</title>
 
 ```{=html}
 <style>
@@ -162,6 +185,10 @@ La diferencia entre los resultados no representa necesariamente una contradicci�
 </style>
 ```
 
+</head>
+
+<body>
+
 ::: header
 <h1>Colombia en índices internacionales de riesgo de desastres</h1>
 
@@ -172,43 +199,31 @@ La diferencia entre los resultados no representa necesariamente una contradicci�
 Riesgo de desastres y multiamenaza
 :::
 
-+---------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
-| Índice                                                                                | Indicador / dimensión                                                                                                  | Colombia                                                                                               |
-+=======================================================================================+========================================================================================================================+========================================================================================================+
-| WorldRiskIndex 2024 Bündnis Entwicklung Hilft / Univ. Bochum                          | Riesgo de desastre por amenazas naturales: combina exposición, vulnerabilidad, capacidad de afrontamiento y adaptación | Muy alto #4 de 193 países · score 37,8 Mayor riesgo en las Américas                                    |
-+---------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
-| INFORM Risk Index 2026 European Commission JRC / DRMKC                                | Riesgo de crisis humanitaria y desastre: hazards y exposición, vulnerabilidad y capacidad de respuesta institucional   | Alto Score \~5,3 / 10 · posición media-alta Hazard humano (conflicto): muy alto                        |
-+---------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
-| Pacific Disaster Center GRVI 2024 PDC – Global Risk & Vulnerability Index             | Riesgo multiamenaza: combina exposición a múltiples amenazas, vulnerabilidad y capacidad de afrontamiento              | Moderado-alto Clase de riesgo moderada a alta Alta exposición; capacidad coping media                  |
-+---------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
-| ThinkHazard! (GFDRR / World Bank) Global Facility for Disaster Reduction and Recovery | Nivel de amenaza por tipo de peligro natural a nivel nacional                                                          | Alto en 10 amenazas Inundación, sismo, deslizamiento, tsunami, volcán, ciclón, calor extremo, incendio |
-+---------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+| Índice | Indicador / dimensión | Colombia |
+|----|----|----|
+| WorldRiskIndex 2024 Bündnis Entwicklung Hilft / Univ. Bochum | Riesgo de desastre por amenazas naturales: combina exposición, vulnerabilidad, capacidad de afrontamiento y adaptación | Muy alto #4 de 193 países · score 37,8 Mayor riesgo en las Américas |
+| INFORM Risk Index 2026 European Commission JRC / DRMKC | Riesgo de crisis humanitaria y desastre: hazards y exposición, vulnerabilidad y capacidad de respuesta institucional | Alto Score \~5,3 / 10 · posición media-alta Hazard humano (conflicto): muy alto |
+| Pacific Disaster Center GRVI 2024 PDC – Global Risk & Vulnerability Index | Riesgo multiamenaza: combina exposición a múltiples amenazas, vulnerabilidad y capacidad de afrontamiento | Moderado-alto Clase de riesgo moderada a alta Alta exposición; capacidad coping media |
+| ThinkHazard! (GFDRR / World Bank) Global Facility for Disaster Reduction and Recovery | Nivel de amenaza por tipo de peligro natural a nivel nacional | Alto en 10 amenazas Inundación, sismo, deslizamiento, tsunami, volcán, ciclón, calor extremo, incendio |
 
 ::: section-label
 Riesgo climático y adaptación
 :::
 
-+------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
-| Índice                                               | Indicador / dimensión                                                                                                                     | Colombia                                                                                                 |
-+======================================================+===========================================================================================================================================+==========================================================================================================+
-| Climate Risk Index 2026 Germanwatch                  | Impacto acumulado de eventos meteorológicos extremos (1995–2024): muertes, afectados y pérdidas económicas absolutas y relativas          | Alto riesgo crónico No entre top-20 globales; afectaciones recurrentes por inundaciones y deslizamientos |
-+------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
-| ND-GAIN Country Index 2022 University of Notre Dame  | Vulnerabilidad al cambio climático y preparación (readiness) para adaptarse: combina 45 indicadores de vulnerabilidad y 36 de preparación | Moderado-favorable #92 de 182 países · score 48,7 Vulnerabilidad baja-media; readiness media             |
-+------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
-| World Bank Climate Knowledge Portal World Bank Group | Riesgo económico por múltiples amenazas: porcentaje de población y activos expuestos a dos o más peligros simultáneos                     | Muy alto #10 global en riesgo económico multiamenaza 84% poblac. / 86% activos en zona ≥2 amenazas       |
-+------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
+| Índice | Indicador / dimensión | Colombia |
+|----|----|----|
+| Climate Risk Index 2026 Germanwatch | Impacto acumulado de eventos meteorológicos extremos (1995–2024): muertes, afectados y pérdidas económicas absolutas y relativas | Alto riesgo crónico No entre top-20 globales; afectaciones recurrentes por inundaciones y deslizamientos |
+| ND-GAIN Country Index 2022 University of Notre Dame | Vulnerabilidad al cambio climático y preparación (readiness) para adaptarse: combina 45 indicadores de vulnerabilidad y 36 de preparación | Moderado-favorable #92 de 182 países · score 48,7 Vulnerabilidad baja-media; readiness media |
+| World Bank Climate Knowledge Portal World Bank Group | Riesgo económico por múltiples amenazas: porcentaje de población y activos expuestos a dos o más peligros simultáneos | Muy alto #10 global en riesgo económico multiamenaza 84% poblac. / 86% activos en zona ≥2 amenazas |
 
 ::: section-label
 Paz, fragilidad y capacidad institucional
 :::
 
-+-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
-| Índice                                                            | Indicador / dimensión                                                                                                                      | Colombia                                                                                  |
-+===================================================================+============================================================================================================================================+===========================================================================================+
-| Global Peace Index 2026 Institute for Economics & Peace           | Nivel de paz societal, conflicto activo y militarización; incide en la capacidad de respuesta ante desastres y conflictos socioambientales | Bajo (poco pacífico) #140 de 163 países · score 2,735 Peor desempeño de América del Sur   |
-+-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
-| INFORM Severity Index (mayo 2026) ACAPS / European Commission JRC | Severidad de crisis humanitarias activas: impacto, condiciones de afectados y complejidad del contexto                                     | Severo Crisis activa catalogada por desplazamiento interno y conflicto armado persistente |
-+-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
+| Índice | Indicador / dimensión | Colombia |
+|----|----|----|
+| Global Peace Index 2026 Institute for Economics & Peace | Nivel de paz societal, conflicto activo y militarización; incide en la capacidad de respuesta ante desastres y conflictos socioambientales | Bajo (poco pacífico) #140 de 163 países · score 2,735 Peor desempeño de América del Sur |
+| INFORM Severity Index (mayo 2026) ACAPS / European Commission JRC | Severidad de crisis humanitarias activas: impacto, condiciones de afectados y complejidad del contexto | Severo Crisis activa catalogada por desplazamiento interno y conflicto armado persistente |
 
 :::::::: legend
 ::: legend-item
@@ -236,6 +251,10 @@ Bajo-moderado
 <strong>Notas metodológicas.</strong> El WorldRiskIndex 2024 ubica a Colombia como el país de las Américas con mayor riesgo de desastre (#4 global), con un score de 37,8 sobre 100, impulsado principalmente por su altísima exposición a amenazas múltiples (31,5) y su vulnerabilidad moderada-alta (45,3). El INFORM Risk Index clasifica a Colombia con riesgo "Alto" (\~5,3/10), con la dimensión de amenaza humana —conflicto armado— como la más crítica (score muy alto). El ND-GAIN coloca a Colombia en una posición relativamente favorable respecto a otros países de la región en términos de preparación para adaptarse, aunque con desafíos en infraestructura y preparación ante desastres (score 0 en disaster preparedness). ThinkHazard! registra nivel "Alto" en 10 de 11 amenazas evaluadas, incluyendo inundación fluvial y urbana, costera, sismo, deslizamiento, tsunami, volcán, ciclón, calor extremo e incendio forestal. Datos con fecha de corte 2024–2026.
 :::
 
+</body>
+
+</html>
+
 ------------------------------------------------------------------------
 
 ## Pacific Disaster Center
@@ -243,8 +262,6 @@ Bajo-moderado
 - Colombia’s data-driven approach to creating safer, more resilient communities. [*Link*](https://www.pdc.org/colombias-data-driven-approach-to-safer-resilient-communities/).
 - NDPBA Colombia Final Report. 2025. [*Link*](https://www.pdc.org/document/ndpba-colombia-final-report/)*.*
 - Pacific Disaster Center Multi Risk index 2024. [*Link*](https://analytics.pdc.org/global-risk-index/)*.*
-
-![](images/PDC.png){width="400"}
 
 ------------------------------------------------------------------------
 
@@ -259,17 +276,17 @@ Bajo-moderado
 ::: panel-tabset
 ## INFORM Subnational Risk
 
-![INFORM Subnational Risk](https://drmkc.jrc.ec.europa.eu/inform-index/portals/0/InfoRM/2016/INFORM%20Graphics%202016/INFORM%20Subnational%20Graphics/Subnational%20Conceptual%20Framework%202016.png){alt="INFORM Subnational Risk" fig-align="left" width="300"}
+![INFORM Subnational Risk](https://drmkc.jrc.ec.europa.eu/inform-index/portals/0/InfoRM/2016/INFORM%20Graphics%202016/INFORM%20Subnational%20Graphics/Subnational%20Conceptual%20Framework%202016.png){fig-align="left" width="300"}
 
 ## INFORM Colombia subnational model
 
-![INFORM subnational model of Colombia 2015 [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Subnational-Risk/Colombia).](https://drmkc.jrc.ec.europa.eu/inform-index/portals/0/InfoRM/2016/INFORM%20Graphics%202016/INFORM%20Subnational%20Graphics/INFORM_Colombia_2015_v2_HAZARDS.png){alt="INFORM subnational model of Colombia 2015 Link." fig-align="left" width="300"}
+![INFORM subnational model of Colombia 2015 Link.](https://drmkc.jrc.ec.europa.eu/inform-index/portals/0/InfoRM/2016/INFORM%20Graphics%202016/INFORM%20Subnational%20Graphics/INFORM_Colombia_2015_v2_HAZARDS.png){fig-align="left" width="300"}
 
 ## INFORM Colombia profile
 
 INFORM Risk - Country Risk Profile: Colombia. Dashboard interactivo con el detalle de riesgo, peligro y exposición, vulnerabilidad y falta de capacidad de respuesta. [*Link*](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Risk/Country-Risk-Profile).
 
-![Colombia World Risk Report](images/Colombia-World-Risk-Report.png){alt="Colombia World Risk Report" fig-align="left" width="400"}
+![Colombia World Risk Report](images/Colombia-World-Risk-Report.png){fig-align="left" width="400"}
 :::
 
 ------------------------------------------------------------------------
@@ -278,7 +295,7 @@ INFORM Risk - Country Risk Profile: Colombia. Dashboard interactivo con el detal
 
 Banco Mundial. Think hazard. Perfil de Colombia. [*Link*](https://thinkhazard.org/es/report/57-colombia)
 
-![Think hazard World Bank](images/World-Bank.png){width="400"}
+/![Think hazard World Bank](images/World-Bank.png){width="400"}
 
 ------------------------------------------------------------------------
 
@@ -294,7 +311,13 @@ Banco Mundial. Think hazard. Perfil de Colombia. [*Link*](https://thinkhazard.or
 
 ![](https://weltrisikobericht.de/wp-content/uploads/2024/09/WorldRiskIndex-2024.webp){width="400"}
 
-![The World Risk Report](https://weltrisikobericht.de/wp-content/uploads/2024/09/The-Structure-of-the-WorldRiskIndex_big.webp){alt="The World Risk Report" width="400"}
+![The World Risk Report](https://weltrisikobericht.de/wp-content/uploads/2024/09/The-Structure-of-the-WorldRiskIndex_big.webp){width="400"}
+
+## Pacific Disaster Center
+
+- Multi-Hazard Risk (2024). [*Link*](https://analytics.pdc.org/global-risk-index/)
+
+![](images/PDC.png){width="400"}
 
 ## World Economic Forum
 
@@ -312,25 +335,27 @@ The Climate Risk Index (CRI) ranks countries by the human and economic toll of e
 
 </iframe>
 
-- Datos del Consolidado de atención a emergencias. UNGRD. [*Link*](http://portal.gestiondelriesgo.gov.co/Paginas/Consolidado-Atencion-de-Emergencias.aspx).
+# Otras clasificaciones, recursos, e Índicadores mundiales
 
-- DESINVENTAR. Base de datos de pérdidas históricas en Colombia (período 1970-2011). [*Link*](http://online.desinventar.org/).
+- ND-GAIN Country Index. Perfil de Colombia. University of Notre Dame. [*Link*](https://gain-new.crc.nd.edu/country/colombia).
+- ODS. [*Link*](https://unstats.un.org/sdgs/report/2024/)
+- United Nations Global Risk Report. [*Link*](https://unglobalriskreport.org/)
+- Mapbiomas. [*Link*](https://plataforma.mapbiomas.org/)
 
-- Otros riesgos.
+::: panel-tabset
+## Data sets
 
-  - CIPE. Colombia Risk Analysis: Subnational and Regional Risk Indices.[*Link*](https://www.cipe.org/resources/colombia-risk-analysis-special-report/). [*Link*](https://www.colombiariskanalysis.com/)*.*
+[![\[Global risk data sets Making better use of global risk data and analytics\](https://www.preventionweb.net/understanding-disaster-risk/disaster-losses-and-statistics/global-risk-data-sets)](images/datasets.png){width="250"}](https://www.preventionweb.net/understanding-disaster-risk/disaster-losses-and-statistics/global-risk-data-sets)
 
-[![\[Mapbiomas\](https://plataforma.mapbiomas.org/)](images/mapbiomas.png){width="250"}](https://plataforma.mapbiomas.org/)
+## Flood observatory
+
+[![\[Space-based Measurement, Mapping, and Modeling of Surface Water For Research, Humanitarian, and Water Resources Applications\](https://floodobservatory.colorado.edu/index.html)](images/floodobserv.png){width="250"}](https://floodobservatory.colorado.edu/index.html)
+:::
 
 # Indicadores regionales
 
 - BID. [*Link*](https://www.iadb.org/es/quienes-somos/temas/ambiente-y-desastres-naturales/iniciativas/preparados-y-resilientes-en-las-americas)
   - Risk Monitor. BID. [*Link*](https://riskmonitor.iadb.org/disaster-risk-profiles)
-
-# Indicadores mundiales
-
-- ODS. [*Link*](https://unstats.un.org/sdgs/report/2024/)
-- United Nations Global Risk Report. [*Link*](https://unglobalriskreport.org/)
 
 ## Lecturas
 
@@ -383,7 +408,7 @@ The Climate Risk Index (CRI) ranks countries by the human and economic toll of e
 - NatCatSERVICE Database. [*Link*](https://www.munichre.com/en/solutions/for-industry-clients/natcatservice.html).
 - SIGMA (Swiss Re). [*Link*](https://www.sigma-explorer.com/).
 - GLobal unique disaster IDEntifier (GLIDE). [*Link*](https://glidenumber.net/glide/public/about.jsp).
-- Metabuscador Climate Adapt. [*Link*](https://climate-adapt.eea.europa.eu/en/).
+- Metabuscador Climate Adapt. [*Link*](https://climate-adapt.eea.europa.eu/data-and-downloads/?source=%7B%22query%22%3A%7B%22function_score%22%3A%7B%22query%22%3A%7B%22bool%22%3A%7B%22must%22%3A%7B%22bool%22%3A%7B%22must%22%3A%5B%7B%22term%22%3A%7B%22hasWorkflowState%22%3A%22published%22%7D%7D%5D%7D%7D%2C%22filter%22%3A%7B%22bool%22%3A%7B%22should%22%3A%5B%7B%22term%22%3A%7B%22typeOfData%22%3A%22Information%20portals%22%7D%7D%5D%7D%7D%7D%7D%2C%22functions%22%3A%5B%7B%22gauss%22%3A%7B%22issued%22%3A%7B%22scale%22%3A%2214d%22%7D%7D%7D%5D%2C%22score_mode%22%3A%22sum%22%7D%7D%2C%22display_type%22%3A%22list%22%2C%22sort%22%3A%5B%7B%22issued%22%3A%7B%22order%22%3A%22desc%22%7D%7D%5D%2C%22highlight%22%3A%7B%22fields%22%3A%7B%22*%22%3A%7B%7D%7D%7D%7D).
 - GDIS, a global dataset of geocoded disaster locations. Scientific Data. 2021. [*Link*](https://www.nature.com/articles/s41597-021-00846-6).
 - World tectonic plates and boundaries. Github. [*Link*](https://github.com/fraxen/tectonicplates/)
 - The Lloyd’s Register Foundation World Risk Poll. [*Link*](https://wrp.lrfoundation.org.uk/data-resources/a-world-of-risk-country-overviews/).
