@@ -356,10 +356,62 @@ The Climate Risk Index (CRI) ranks countries by the human and economic toll of e
 [![\[Space-based Measurement, Mapping, and Modeling of Surface Water For Research, Humanitarian, and Water Resources Applications\](https://floodobservatory.colorado.edu/index.html)](images/floodobserv.png){width="250"}](https://floodobservatory.colorado.edu/index.html)
 :::
 
-# Indicadores regionales
+# Indicadores latinoamericanos
 
 - BID. [*Link*](https://www.iadb.org/es/quienes-somos/temas/ambiente-y-desastres-naturales/iniciativas/preparados-y-resilientes-en-las-americas)
   - Risk Monitor. BID. [*Link*](https://riskmonitor.iadb.org/disaster-risk-profiles)
+- Atlas de riesgos. Secretaría de Gestión Integral de Riesgos y Protección Civil, Gobierno de la Ciudad de México. [*Link*](https://www.atlas.cdmx.gob.mx/principal/inicio)
+
+## EmDat
+
+- EM-DAT International Disaster Database. [*Link*](https://www.emdat.be/)*.*
+  - EM-DAT Documentation. [*Link*](https://doc.emdat.be/docs/).
+  - EM-DAT: the Emergency Events Database. [*Link*](https://www.sciencedirect.com/science/article/pii/S2212420925003334?via%3Dihub)
+
+![EmDat](https://github.com/em-dat/EM-VIEW/raw/master/images/emview_preview.png){width="500" height="175"}
+
+{{< video "https://youtu.be/zuWp3oSNc8g" >}} EmDat
+
+# Videos
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/debgvIuycn4">}} World Risk Index
+
+{{< video "https://youtu.be/AcpFRBk9AO4">}} INFORM Subnational Risk Index in Europe & Central Asia
+
+{{< video "https://youtu.be/_Q5HrQuvzLA">}} INFORM Subnational Risk Analysis Training - Module 1
+:::
+
+# Otras fuentes de datos en riesgo de desastres
+
+::: panel-tabset
+## GAR
+
+[Global Assessment Report on Disaster Risk Reduction (GAR)](https://www.undrr.org/gar)
+
+[![https://www.undrr.org/gar](images/GAR.png){width="300"}](https://www.undrr.org/gar)
+
+## WMO
+:::
+
+- Plataforma para las Américas. [*Link*](https://eird.org/pr18/eng/).
+- Atlas de Riesgos Climáticos para Chile. [*Link*](https://arclim.mma.gob.cl/).
+- Mapa digital de amenazas y desastres de Chile. [*Link*](https://chileterritorioenmovimiento.cl/mapa-interactivo/).
+- NatCatSERVICE Database. [*Link*](https://www.munichre.com/en/solutions/for-industry-clients/natcatservice.html).
+- SIGMA (Swiss Re). [*Link*](https://www.sigma-explorer.com/).
+- The Lloyd’s Register Foundation World Risk Poll. [*Link*](https://wrp.lrfoundation.org.uk/data-resources/a-world-of-risk-country-overviews/).
+- GLobal unique disaster IDEntifier (GLIDE). [*Link*](https://glidenumber.net/glide/public/about.jsp).
+- Metabuscador Climate Adapt. [*Link*](https://climate-adapt.eea.europa.eu/data-and-downloads/?source=%7B%22query%22%3A%7B%22function_score%22%3A%7B%22query%22%3A%7B%22bool%22%3A%7B%22must%22%3A%7B%22bool%22%3A%7B%22must%22%3A%5B%7B%22term%22%3A%7B%22hasWorkflowState%22%3A%22published%22%7D%7D%5D%7D%7D%2C%22filter%22%3A%7B%22bool%22%3A%7B%22should%22%3A%5B%7B%22term%22%3A%7B%22typeOfData%22%3A%22Information%20portals%22%7D%7D%5D%7D%7D%7D%7D%2C%22functions%22%3A%5B%7B%22gauss%22%3A%7B%22issued%22%3A%7B%22scale%22%3A%2214d%22%7D%7D%7D%5D%2C%22score_mode%22%3A%22sum%22%7D%7D%2C%22display_type%22%3A%22list%22%2C%22sort%22%3A%5B%7B%22issued%22%3A%7B%22order%22%3A%22desc%22%7D%7D%5D%2C%22highlight%22%3A%7B%22fields%22%3A%7B%22*%22%3A%7B%7D%7D%7D%7D).
+- GDIS, a global dataset of geocoded disaster locations. Scientific Data. 2021. [*Link*](https://www.nature.com/articles/s41597-021-00846-6).
+- World tectonic plates and boundaries. Github. [*Link*](https://github.com/fraxen/tectonicplates/)
+- LEILA – Librería de calidad de datos. DNP. [*Link*](https://ucd-dnp.github.io/leila/index.html)
+- OECD. [*Link*](https://www.oecd.org/).
+  - OECD One. [*Link*](https://one.oecd.org/). [*Link*](https://login.oecd.org/?appId=293718&targetAppId=18060&referer=https%3A%2F%2Fone.oecd.org%2F). [*Tutorials*](https://community.oecd.org/community/one-feedback/tutorials). [Co-creation project](https://community.oecd.org/community/cstp/tip/cocreation)
+- United Nations Climate Change. [*Link*](https://www4.unfccc.int/sites/nwpstaging/pages/Search.aspx).
+- **Lecturas**:
+  - Worldwide disaster loss and damage databases: A systematic review. 2021. [*Link*](https://www.jehp.net/article.asp?issn=2277-9531;year=2021;volume=10;issue=1;spage=329;epage=329;aulast=Mazhin).
+- Ejemplos de indicadores estatales o departamentales
+  - Natural Hazard Risk Assessment. Weather.gov. [*Link*](https://www.weather.gov/rlx/HazardRiskAssessment)
 
 ## Lecturas
 
@@ -380,47 +432,4 @@ The Climate Risk Index (CRI) ranks countries by the human and economic toll of e
 <iframe src="https://ourworldindata.org/grapher/natural-disasters-reported-by-deaths?tab=line" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
 ```
 
-## EmDat
-
-- EM-DAT International Disaster Database. [*Link*](https://www.emdat.be/)*.*
-  - EM-DAT Documentation. [*Link*](https://doc.emdat.be/docs/).
-  - EM-DAT: the Emergency Events Database. [*Link*](https://www.sciencedirect.com/science/article/pii/S2212420925003334?via%3Dihub)
-
-![EmDat](https://github.com/em-dat/EM-VIEW/raw/master/images/emview_preview.png){width="500" height="175"}
-
-{{< video "https://youtu.be/zuWp3oSNc8g" >}} EmDat
-
-# Indicadores latinoamericanos
-
-- Atlas de riesgos. Secretaría de Gestión Integral de Riesgos y Protección Civil, Gobierno de la Ciudad de México. [*Link*](https://www.atlas.cdmx.gob.mx/principal/inicio)
-
-# Videos
-
-::: {layout-ncol="2"}
-{{< video "https://youtu.be/debgvIuycn4">}} World Risk Index
-
-{{< video "https://youtu.be/AcpFRBk9AO4">}} INFORM Subnational Risk Index in Europe & Central Asia
-
-{{< video "https://youtu.be/_Q5HrQuvzLA">}} INFORM Subnational Risk Analysis Training - Module 1
-:::
-
-# Otras bases de datos
-
-- Plataforma para las Américas. [*Link*](https://eird.org/pr18/eng/).
-- Atlas de Riesgos Climáticos para Chile. [*Link*](https://arclim.mma.gob.cl/).
-- Mapa digital de amenazas y desastres de Chile. [*Link*](https://chileterritorioenmovimiento.cl/mapa-interactivo/).
-- NatCatSERVICE Database. [*Link*](https://www.munichre.com/en/solutions/for-industry-clients/natcatservice.html).
-- SIGMA (Swiss Re). [*Link*](https://www.sigma-explorer.com/).
-- GLobal unique disaster IDEntifier (GLIDE). [*Link*](https://glidenumber.net/glide/public/about.jsp).
-- Metabuscador Climate Adapt. [*Link*](https://climate-adapt.eea.europa.eu/data-and-downloads/?source=%7B%22query%22%3A%7B%22function_score%22%3A%7B%22query%22%3A%7B%22bool%22%3A%7B%22must%22%3A%7B%22bool%22%3A%7B%22must%22%3A%5B%7B%22term%22%3A%7B%22hasWorkflowState%22%3A%22published%22%7D%7D%5D%7D%7D%2C%22filter%22%3A%7B%22bool%22%3A%7B%22should%22%3A%5B%7B%22term%22%3A%7B%22typeOfData%22%3A%22Information%20portals%22%7D%7D%5D%7D%7D%7D%7D%2C%22functions%22%3A%5B%7B%22gauss%22%3A%7B%22issued%22%3A%7B%22scale%22%3A%2214d%22%7D%7D%7D%5D%2C%22score_mode%22%3A%22sum%22%7D%7D%2C%22display_type%22%3A%22list%22%2C%22sort%22%3A%5B%7B%22issued%22%3A%7B%22order%22%3A%22desc%22%7D%7D%5D%2C%22highlight%22%3A%7B%22fields%22%3A%7B%22*%22%3A%7B%7D%7D%7D%7D).
-- GDIS, a global dataset of geocoded disaster locations. Scientific Data. 2021. [*Link*](https://www.nature.com/articles/s41597-021-00846-6).
-- World tectonic plates and boundaries. Github. [*Link*](https://github.com/fraxen/tectonicplates/)
-- The Lloyd’s Register Foundation World Risk Poll. [*Link*](https://wrp.lrfoundation.org.uk/data-resources/a-world-of-risk-country-overviews/).
-- LEILA – Librería de calidad de datos. DNP. [*Link*](https://ucd-dnp.github.io/leila/index.html)
-- OECD. [*Link*](https://www.oecd.org/).
-  - OECD One. [*Link*](https://one.oecd.org/). [*Link*](https://login.oecd.org/?appId=293718&targetAppId=18060&referer=https%3A%2F%2Fone.oecd.org%2F). [*Tutorials*](https://community.oecd.org/community/one-feedback/tutorials). [Co-creation project](https://community.oecd.org/community/cstp/tip/cocreation)
-- United Nations Climate Change. [*Link*](https://www4.unfccc.int/sites/nwpstaging/pages/Search.aspx).
-- **Lecturas**:
-  - Worldwide disaster loss and damage databases: A systematic review. 2021. [*Link*](https://www.jehp.net/article.asp?issn=2277-9531;year=2021;volume=10;issue=1;spage=329;epage=329;aulast=Mazhin).
-- Ejemplos de indicadores estatales o departamentales
-  - Natural Hazard Risk Assessment. Weather.gov. [*Link*](https://www.weather.gov/rlx/HazardRiskAssessment)
+##
