@@ -2293,6 +2293,61 @@
     ]
   },
   {
+    "objectID": "cyt/ova/index.html",
+    "href": "cyt/ova/index.html",
+    "title": "Objetos virtuales de aprendizaje (OVA)",
+    "section": "",
+    "text": "Un Objeto Virtual de Aprendizaje (OVA), en inglés learning object, es un recurso digital autocontenible y reutilizable diseñado con un propósito educativo específico. Un OVA típico integra al menos tres componentes: contenidos, actividades de aprendizaje y elementos de contextualización (evaluación, metadatos, guía de uso), de modo que pueda usarse de forma independiente en distintos cursos y plataformas.\n\nAutonomía: puede utilizarse de forma independiente, sin depender de otros materiales.\nReusabilidad: se diseña para emplearse en diferentes contextos y propuestas pedagógicas.\nInteroperabilidad: es compatible con distintas plataformas (LMS) gracias a estándares de empaquetado y metadatos.\nGranularidad: va desde un activo simple (una imagen, un video) hasta un curso completo compuesto por varios objetos.\n\n\n\nLa posibilidad de indexar, describir y reutilizar OVA entre repositorios depende de estándares de metadatos, en particular IEEE LOM (Learning Object Metadata) y el empaquetado SCORM, que surgieron en buena parte del trabajo de proyectos europeos de finales de los años 90.\n\nARIADNE Foundation. Infraestructura europea pionera (1996) para compartir y reutilizar objetos de aprendizaje mediante repositorios federados y metadatos LOM. Link.\nIEEE Learning Object Metadata (LOM). Estándar de metadatos usado para describir OVA. Link.\n\n\n\n\n\nGuía para el diseño de objetos virtuales de aprendizaje. SCIELO Colombia, 2016. Link.\nObjetos Virtuales de Aprendizaje (OVA): qué son, cómo crearlos y mejores prácticas. BeezNest, 2025. Link.\nOVA. Ávaco, Universidad de Ibagué. Link.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Objetos virtuales de aprendizaje (OVA)"
+    ]
+  },
+  {
+    "objectID": "cyt/ova/index.html#estándares-y-metadatos",
+    "href": "cyt/ova/index.html#estándares-y-metadatos",
+    "title": "Objetos virtuales de aprendizaje (OVA)",
+    "section": "",
+    "text": "La posibilidad de indexar, describir y reutilizar OVA entre repositorios depende de estándares de metadatos, en particular IEEE LOM (Learning Object Metadata) y el empaquetado SCORM, que surgieron en buena parte del trabajo de proyectos europeos de finales de los años 90.\n\nARIADNE Foundation. Infraestructura europea pionera (1996) para compartir y reutilizar objetos de aprendizaje mediante repositorios federados y metadatos LOM. Link.\nIEEE Learning Object Metadata (LOM). Estándar de metadatos usado para describir OVA. Link.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Objetos virtuales de aprendizaje (OVA)"
+    ]
+  },
+  {
+    "objectID": "cyt/ova/index.html#algunas-definiciones-de-referencia",
+    "href": "cyt/ova/index.html#algunas-definiciones-de-referencia",
+    "title": "Objetos virtuales de aprendizaje (OVA)",
+    "section": "",
+    "text": "Guía para el diseño de objetos virtuales de aprendizaje. SCIELO Colombia, 2016. Link.\nObjetos Virtuales de Aprendizaje (OVA): qué son, cómo crearlos y mejores prácticas. BeezNest, 2025. Link.\nOVA. Ávaco, Universidad de Ibagué. Link.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Objetos virtuales de aprendizaje (OVA)"
+    ]
+  },
+  {
+    "objectID": "cyt/ova/index.html#por-función-pedagógica",
+    "href": "cyt/ova/index.html#por-función-pedagógica",
+    "title": "Objetos virtuales de aprendizaje (OVA)",
+    "section": "Por función pedagógica",
+    "text": "Por función pedagógica\n\nInformativos: presentan contenidos (texto, imágenes, video) sin actividades de evaluación explícitas; buscan transmitir información.\nInstructivos: incluyen actividades guiadas y retroalimentación; conducen al estudiante a través de un proceso de aprendizaje con un objetivo claro.\nExperimentales o de simulación: reproducen fenómenos, laboratorios o procesos mediante simulaciones interactivas que permiten manipular variables.\nEvaluativos: cuestionarios, ejercicios de práctica y autoevaluaciones diseñados para medir el aprendizaje.\nColaborativos: herramientas y espacios (foros, wikis, proyectos compartidos) orientados a la construcción conjunta de conocimiento.\nPropuesta para la clasificación de los objetos virtuales de aprendizaje interactivos. Revista Virtual Universidad Católica del Norte. Link.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Objetos virtuales de aprendizaje (OVA)"
+    ]
+  },
+  {
+    "objectID": "cyt/ova/index.html#por-formato-y-repositorio",
+    "href": "cyt/ova/index.html#por-formato-y-repositorio",
+    "title": "Objetos virtuales de aprendizaje (OVA)",
+    "section": "Por formato y repositorio",
+    "text": "Por formato y repositorio\n\nVideo-lecciones activas: segmentos de video cortos combinados con ejercicios en clase. MIT BLOSSOMS (Blended Learning Open Source Science or Math Studies) es un ejemplo de referencia: más de 200 lecciones abiertas de matemáticas y ciencias, con guía docente y materiales descargables.\nCursos abiertos completos (OpenCourseWare): conjuntos de OVA organizados como un curso universitario, publicados bajo licencia abierta. MIT OpenCourseWare es el proyecto pionero de este formato, con más de 2.500 cursos disponibles.\nUnidades y módulos de un MOOC: objetos reutilizables dentro de cursos masivos abiertos, como los de OpenLearn de la Open University (Reino Unido).\nCatálogos y agregadores de OVA: no almacenan el material sino que referencian metadatos de OVA alojados en múltiples repositorios.\n\nLearning Resource Exchange (LRE) de European Schoolnet: cataloga más de 300.000 recursos educativos abiertos de distintos países y proveedores europeos.\nEuropeana Education. Integra colecciones patrimoniales europeas a la LRE para uso educativo.\nMERLOT. Repositorio con revisión por pares de OVA para educación superior.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Objetos virtuales de aprendizaje (OVA)"
+    ]
+  },
+  {
     "objectID": "cyt/escrituraypublicacionacademica.html",
     "href": "cyt/escrituraypublicacionacademica.html",
     "title": "Escritura y publicación académica",

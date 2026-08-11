@@ -6,13 +6,13 @@ editor: visual
 
 ## D3
 
--   Observable HQ. [*Link*](https://observablehq.com/)*.*
-    -   Hands-on Tutorials. [*Link*](https://observablehq.com/collection/%40observablehq/tutorial?utm_source=chatgpt.com)
-    -   Notebooks. [*Link*](https://observablehq.com/documentation/notebooks/?utm_source=chatgpt.com)
-    -   Observable Notebook Kit. [*Link*](https://observablehq.com/notebook-kit/kit)
-    -   Input: Table. [*Link*](https://observablehq.com/@observablehq/input-table)
-    -   Gallery. [*Link*](https://observablehq.com/@d3/gallery)
--   Quarto and Observable. [*Link*](https://quarto.org/docs/interactive/ojs/index.html). [*Link*](https://observablehq.com/@observablehq/plot-gallery)
+- Observable HQ. [*Link*](https://observablehq.com/)*.*
+  - Hands-on Tutorials. [*Link*](https://observablehq.com/collection/%40observablehq/tutorial?utm_source=chatgpt.com)
+  - Notebooks. [*Link*](https://observablehq.com/documentation/notebooks/?utm_source=chatgpt.com)
+  - Observable Notebook Kit. [*Link*](https://observablehq.com/notebook-kit/kit)
+  - Input: Table. [*Link*](https://observablehq.com/@observablehq/input-table)
+  - Gallery. [*Link*](https://observablehq.com/@d3/gallery)
+- Quarto and Observable. [*Link*](https://quarto.org/docs/interactive/ojs/index.html). [*Link*](https://observablehq.com/@observablehq/plot-gallery)
 
 ::: {layout-ncol="2"}
 {{< video "https://www.youtube.com/embed/CCBTX2pI2fU" >}} Introduction to D3 P1. [Slides](https://docs.google.com/presentation/d/1IrZiaKZ86m0Ll25HsWHesEsEYbtsH_-TFIrBZBLMMfE/edit?slide=id.g282fb476d44_0_108#slide=id.g282fb476d44_0_108).
@@ -31,4 +31,37 @@ editor: visual
 
 ## Recursos
 
--   Diseña y visualiza con D3.js datos de siniestralidad en carretera. [*Link*](https://datos.gob.es/es/conocimiento/disena-y-visualiza-con-d3js-datos-de-siniestralidad-en-carretera)
+- Diseña y visualiza con D3.js datos de siniestralidad en carretera. [*Link*](https://datos.gob.es/es/conocimiento/disena-y-visualiza-con-d3js-datos-de-siniestralidad-en-carretera)
+
+## Gráfica de barras OJS
+
+```{ojs}
+data = [
+  ["Chocó", 42],
+  ["Valle del Cauca", 16],
+  ["Risaralda", 6],
+  ["Antioquia", 3]
+]
+
+html`<style>
+.bar-chart{display:flex;flex-direction:column;gap:8px;font-family:sans-serif;font-size:14px}
+.bar-row{display:grid;grid-template-columns:140px 1fr 70px;align-items:center;gap:10px}
+.bar-row .name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-row .track{background:#eef1f5;border-radius:6px;height:14px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:6px}
+.bar-row .val{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+</style>
+<div class="bar-chart">
+${(() => {
+  const max = Math.max(...data.map(r => r[1])) || 1;
+  return data.map(r => {
+    const w = (r[1] / max * 100).toFixed(1);
+    return html`<div class="bar-row">
+      <span class="name" title="${r[0]}">${r[0]}</span>
+      <div class="track"><div class="fill" style="width:${w}%;background:linear-gradient(90deg,#e0413f,#D8232A)"></div></div>
+      <span class="val">${r[1].toLocaleString("es-CO")}</span>
+    </div>`;
+  });
+})()}
+</div>`
+```
