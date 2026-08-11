@@ -13,7 +13,6 @@ format:
 execute:
   echo: true
   warning: false
-  eval: false
 ---
 
 # Inversión Global en Investigación y Desarrollo. Análisis de Gastos Domésticos en I+D como Porcentaje del PIB
@@ -574,6 +573,7 @@ Pirámide poblacional construida con las [Proyecciones de Población DANE 2018-2
 #| label: setup-piramide
 #| echo: false
 #| message: false
+#| eval: false
 
 import pandas as pd
 
