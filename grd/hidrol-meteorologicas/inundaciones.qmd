@@ -6,34 +6,36 @@ editor: visual
 
 ## Instituciones nacionales
 
--   UNGRD. [*Link*](https://portal.gestiondelriesgo.gov.co/)
--   IDEAM. *Link*
--   Minambiente. *Link*
--   Fondo Adaptación
--   Bomberos de Colombia. *Link*
+- UNGRD. [*Link*](https://portal.gestiondelriesgo.gov.co/)
+- IDEAM. *Link*
+- Minambiente. *Link*
+- Fondo Adaptación
+- Bomberos de Colombia. *Link*
 
 ## Instituciones internacionales
 
--   Emergency Copernicus. [*Link*](https://emergency.copernicus.eu/)
-    -   Glofas forecasting. [*Link*](https://global-flood.emergency.copernicus.eu/accounts/login/?next=/glofas-forecasting/)
--   European Commission. River Flood Hazard Maps at European and Global Scale. [*Link*](https://data.jrc.ec.europa.eu/collection/id-0054).
--   European Flood Awareness System. [*Link*](https://european-flood.emergency.copernicus.eu/en)
+- Emergency Copernicus. [*Link*](https://emergency.copernicus.eu/)
+  - Glofas forecasting. [*Link*](https://global-flood.emergency.copernicus.eu/accounts/login/?next=/glofas-forecasting/)
+- European Commission. River Flood Hazard Maps at European and Global Scale. [*Link*](https://data.jrc.ec.europa.eu/collection/id-0054).
+- European Flood Awareness System. [*Link*](https://european-flood.emergency.copernicus.eu/en)
 
 ## Amenaza por inundaciones
 
--   Manchas de inundación Cordoba. Fondo Adaptación. [*Link*](https://experience.arcgis.com/experience/ac4c70eea5744589bfe36708582f4cb2/page/Inundaciones-C%C3%B3rdoba-2026)
+- Manchas de inundación Cordoba. Fondo Adaptación. [*Link*](https://experience.arcgis.com/experience/ac4c70eea5744589bfe36708582f4cb2/page/Inundaciones-C%C3%B3rdoba-2026)
 
--   Inundaciones en La Mojana: cómo los servicios de observación de la Tierra están transformando la gestión de riesgos en Colombia. Copernicus. [*Link*](https://www.copernicuslac-panama.eu/blog-es/inundaciones-en-la-mojana-como-los-servicios-de-observacion-de-la-tierra-estan-transformando-la-gestion-de-riesgos-en-colombia/)
+- Inundaciones en La Mojana: cómo los servicios de observación de la Tierra están transformando la gestión de riesgos en Colombia. Copernicus. [*Link*](https://www.copernicuslac-panama.eu/blog-es/inundaciones-en-la-mojana-como-los-servicios-de-observacion-de-la-tierra-estan-transformando-la-gestion-de-riesgos-en-colombia/)
 
 [![\[Space-based Measurement, Mapping, and Modeling of Surface Water For Research, Humanitarian, and Water Resources Applications\](https://floodobservatory.colorado.edu/index.html)](images/floodobserv.png){width="250"}](https://floodobservatory.colorado.edu/index.html)
 
--   FEMA. Hazus. [*Link*](https://www.fema.gov/flood-maps/products-tools/hazus)
--   Europe floods: new tool to estimate water depth and extent. 2024. [*Link*](https://joint-research-centre.ec.europa.eu/jrc-news-and-updates/europe-floods-new-tool-estimate-water-depth-and-extent-2024-09-20_en).
--   Satellite imaging reveals increased proportion of population exposed to floods. Nature, 2021. [*Link*](https://www.nature.com/articles/s41586-021-03695-w).
--   The fraction of the global population at risk of floods is growing. Nature News. 2021. [*Link*](https://www.nature.com/articles/d41586-021-01974-0).
--   ARSET – Monitoring and Modeling Floods using Earth Observations. NASA. [*Link*](https://appliedsciences.nasa.gov/join-mission/training/english/arset-monitoring-and-modeling-floods-using-earth-observations).
--   Global Floods. [*Link*](https://www.globalfloods.eu/) - What’s in Floodwaters? [*Link*](https://www.scientificamerican.com/article/whats-in-floodwaters/?utm_source=twitter&utm_medium=social&utm_campaign=socialflow).
--   \*\*\*Overview of Web Maps for Flood Monitoring. [*Link*](https://www.un-spider.org/links-and-resources/data-sources/daotm-flood-web-maps)
+- Google Flood Hub. [*Link*](https://sites.research.google/floods/l/5.3575199708240095/-71.1670406542645/6.239875).
+
+- FEMA. Hazus. [*Link*](https://www.fema.gov/flood-maps/products-tools/hazus)
+- Europe floods: new tool to estimate water depth and extent. 2024. [*Link*](https://joint-research-centre.ec.europa.eu/jrc-news-and-updates/europe-floods-new-tool-estimate-water-depth-and-extent-2024-09-20_en).
+- Satellite imaging reveals increased proportion of population exposed to floods. Nature, 2021. [*Link*](https://www.nature.com/articles/s41586-021-03695-w).
+- The fraction of the global population at risk of floods is growing. Nature News. 2021. [*Link*](https://www.nature.com/articles/d41586-021-01974-0).
+- ARSET – Monitoring and Modeling Floods using Earth Observations. NASA. [*Link*](https://appliedsciences.nasa.gov/join-mission/training/english/arset-monitoring-and-modeling-floods-using-earth-observations).
+- Global Floods. [*Link*](https://www.globalfloods.eu/) - What’s in Floodwaters? [*Link*](https://www.scientificamerican.com/article/whats-in-floodwaters/?utm_source=twitter&utm_medium=social&utm_campaign=socialflow).
+- \*\*\*Overview of Web Maps for Flood Monitoring. [*Link*](https://www.un-spider.org/links-and-resources/data-sources/daotm-flood-web-maps)
 
 ![The share of people living in high-risk flood zones. Source: Rentschler, J, Salhab, M and Jafino, B. 2022. Flood Exposure and Poverty in 188 Countries. Nature Communications. [*Link*](https://blogs.worldbank.org/en/climatechange/flood-risk-already-affects-181-billion-people-climate-change-and-unplanned).](https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/The_share_of_people_living_in_high-risk_flood_zones.png){width="400"}
 
@@ -63,11 +65,11 @@ editor: visual
 
 ## Comunicación del riesgo por inundaciones
 
--   Flood risk communication: a fundamental tool for disaster risk management. Prevention web. [*Link*](https://www.preventionweb.net/publication/flood-risk-communication-fundamental-tool-disaster-risk-management)
+- Flood risk communication: a fundamental tool for disaster risk management. Prevention web. [*Link*](https://www.preventionweb.net/publication/flood-risk-communication-fundamental-tool-disaster-risk-management)
 
--   Flood Risk Communication Toolbox. US Army Corps of Engineers. [*Link*](https://www.iwr.usace.army.mil/Missions/Risk-Analysis-Gateway/Flood-Risk-Communication-Toolbox/).
+- Flood Risk Communication Toolbox. US Army Corps of Engineers. [*Link*](https://www.iwr.usace.army.mil/Missions/Risk-Analysis-Gateway/Flood-Risk-Communication-Toolbox/).
 
--   Bridging the gap in flood risk communication: a comparative study of community and organizational social media posts using natural language processing. 2025. [*Link*](https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2025.1553746/full)
+- Bridging the gap in flood risk communication: a comparative study of community and organizational social media posts using natural language processing. 2025. [*Link*](https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2025.1553746/full)
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/B0hObr47J7s" >}} How to Communicate Flood Risk to the Public
@@ -85,16 +87,16 @@ editor: visual
 
 ## Lecturas
 
--   How to Know Your Flood Risk. NYT. 2025. [*Link*](https://www.nytimes.com/2025/07/15/climate/how-to-know-your-flood-risk.html).
--   Flood hazard potential reveals global floodplain settlement patterns. Nature Comms. 2023. [*Link*](https://www.nature.com/articles/s41467-023-38297-9)
+- How to Know Your Flood Risk. NYT. 2025. [*Link*](https://www.nytimes.com/2025/07/15/climate/how-to-know-your-flood-risk.html).
+- Flood hazard potential reveals global floodplain settlement patterns. Nature Comms. 2023. [*Link*](https://www.nature.com/articles/s41467-023-38297-9)
 
 ## **Entrenamiento**
 
--   NASA: ARSET - Monitoring and Modeling Floods using Earth Observations. [*Link*](https://appliedsciences.nasa.gov/get-involved/training/english/arset-monitoring-and-modeling-floods-using-earth-observations)
+- NASA: ARSET - Monitoring and Modeling Floods using Earth Observations. [*Link*](https://appliedsciences.nasa.gov/get-involved/training/english/arset-monitoring-and-modeling-floods-using-earth-observations)
 
 ## Repositorios
 
--   A Collection of NASA ARSET Courses for Flood Mapping and Synthetic Aperture Radar (SAR). [*Link*](https://github.com/mebauer/floodmapping-sar).
+- A Collection of NASA ARSET Courses for Flood Mapping and Synthetic Aperture Radar (SAR). [*Link*](https://github.com/mebauer/floodmapping-sar).
 
 ## Videos
 

@@ -8,50 +8,50 @@ editor: visual
 
 Un Objeto Virtual de Aprendizaje (OVA), en inglés *learning object*, es un recurso digital autocontenible y reutilizable diseñado con un propósito educativo específico. Un OVA típico integra al menos tres componentes: contenidos, actividades de aprendizaje y elementos de contextualización (evaluación, metadatos, guía de uso), de modo que pueda usarse de forma independiente en distintos cursos y plataformas.
 
--   **Autonomía**: puede utilizarse de forma independiente, sin depender de otros materiales.
--   **Reusabilidad**: se diseña para emplearse en diferentes contextos y propuestas pedagógicas.
--   **Interoperabilidad**: es compatible con distintas plataformas (LMS) gracias a estándares de empaquetado y metadatos.
--   **Granularidad**: va desde un activo simple (una imagen, un video) hasta un curso completo compuesto por varios objetos.
+- **Autonomía**: puede utilizarse de forma independiente, sin depender de otros materiales.
+- **Reusabilidad**: se diseña para emplearse en diferentes contextos y propuestas pedagógicas.
+- **Interoperabilidad**: es compatible con distintas plataformas (LMS) gracias a estándares de empaquetado y metadatos.
+- **Granularidad**: va desde un activo simple (una imagen, un video) hasta un curso completo compuesto por varios objetos.
 
 ## Estándares y metadatos
 
 La posibilidad de indexar, describir y reutilizar OVA entre repositorios depende de estándares de metadatos, en particular **IEEE LOM (Learning Object Metadata)** y el empaquetado **SCORM**, que surgieron en buena parte del trabajo de proyectos europeos de finales de los años 90.
 
--   ARIADNE Foundation. Infraestructura europea pionera (1996) para compartir y reutilizar objetos de aprendizaje mediante repositorios federados y metadatos LOM. [*Link*](https://www.researchgate.net/publication/221549663_How_to_Share_and_Reuse_Learning_Resources_The_ARIADNE_Experience).
--   IEEE Learning Object Metadata (LOM). Estándar de metadatos usado para describir OVA. [*Link*](https://en.wikipedia.org/wiki/Learning_object_metadata).
+- ARIADNE Foundation. Infraestructura europea pionera (1996) para compartir y reutilizar objetos de aprendizaje mediante repositorios federados y metadatos LOM. [*Link*](https://www.researchgate.net/publication/221549663_How_to_Share_and_Reuse_Learning_Resources_The_ARIADNE_Experience).
+- IEEE Learning Object Metadata (LOM). Estándar de metadatos usado para describir OVA. [*Link*](https://en.wikipedia.org/wiki/Learning_object_metadata).
 
 ## Algunas definiciones de referencia
 
--   Guía para el diseño de objetos virtuales de aprendizaje. SCIELO Colombia, 2016. [*Link*](http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S1900-65862016000200008).
--   Objetos Virtuales de Aprendizaje (OVA): qué son, cómo crearlos y mejores prácticas. BeezNest, 2025. [*Link*](https://beeznest.com/es/2025/08/12/objetos-virtuales-aprendizaje-ova-educacion-digital).
--   OVA. Ávaco, Universidad de Ibagué. [*Link*](https://avaco.unibague.edu.co/creacion/objetos-virtuales-de-aprendizaje).
+- Guía para el diseño de objetos virtuales de aprendizaje. SCIELO Colombia, 2016. [*Link*](http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S1900-65862016000200008).
+- Objetos Virtuales de Aprendizaje (OVA): qué son, cómo crearlos y mejores prácticas. BeezNest, 2025. [*Link*](https://beeznest.com/es/2025/08/12/objetos-virtuales-aprendizaje-ova-educacion-digital).
+- OVA. Ávaco, Universidad de Ibagué. [*Link*](https://avaco.unibague.edu.co/creacion/objetos-virtuales-de-aprendizaje).
 
 # Principales tipos de OVA
 
 ## Por función pedagógica
 
--   **Informativos**: presentan contenidos (texto, imágenes, video) sin actividades de evaluación explícitas; buscan transmitir información.
--   **Instructivos**: incluyen actividades guiadas y retroalimentación; conducen al estudiante a través de un proceso de aprendizaje con un objetivo claro.
--   **Experimentales o de simulación**: reproducen fenómenos, laboratorios o procesos mediante simulaciones interactivas que permiten manipular variables.
--   **Evaluativos**: cuestionarios, ejercicios de práctica y autoevaluaciones diseñados para medir el aprendizaje.
--   **Colaborativos**: herramientas y espacios (foros, wikis, proyectos compartidos) orientados a la construcción conjunta de conocimiento.
--   Propuesta para la clasificación de los objetos virtuales de aprendizaje interactivos. Revista Virtual Universidad Católica del Norte. [*Link*](https://revistavirtual.ucn.edu.co/index.php/RevistaUCN/article/view/1389).
+- **Informativos**: presentan contenidos (texto, imágenes, video) sin actividades de evaluación explícitas; buscan transmitir información.
+- **Instructivos**: incluyen actividades guiadas y retroalimentación; conducen al estudiante a través de un proceso de aprendizaje con un objetivo claro.
+- **Experimentales o de simulación**: reproducen fenómenos, laboratorios o procesos mediante simulaciones interactivas que permiten manipular variables.
+- **Evaluativos**: cuestionarios, ejercicios de práctica y autoevaluaciones diseñados para medir el aprendizaje.
+- **Colaborativos**: herramientas y espacios (foros, wikis, proyectos compartidos) orientados a la construcción conjunta de conocimiento.
+- Propuesta para la clasificación de los objetos virtuales de aprendizaje interactivos. Revista Virtual Universidad Católica del Norte. [*Link*](https://revistavirtual.ucn.edu.co/index.php/RevistaUCN/article/view/1389).
 
 ## Por formato y repositorio
 
--   **Video-lecciones activas**: segmentos de video cortos combinados con ejercicios en clase. [MIT BLOSSOMS](https://web.mit.edu/blossoms/) (Blended Learning Open Source Science or Math Studies) es un ejemplo de referencia: más de 200 lecciones abiertas de matemáticas y ciencias, con guía docente y materiales descargables.
--   **Cursos abiertos completos (OpenCourseWare)**: conjuntos de OVA organizados como un curso universitario, publicados bajo licencia abierta. [MIT OpenCourseWare](https://ocw.mit.edu/) es el proyecto pionero de este formato, con más de 2.500 cursos disponibles.
--   **Unidades y módulos de un MOOC**: objetos reutilizables dentro de cursos masivos abiertos, como los de [OpenLearn](https://www.open.edu/openlearn/) de la Open University (Reino Unido).
--   **Catálogos y agregadores de OVA**: no almacenan el material sino que referencian metadatos de OVA alojados en múltiples repositorios.
-    -   [Learning Resource Exchange (LRE)](https://lre.eun.org/) de European Schoolnet: cataloga más de 300.000 recursos educativos abiertos de distintos países y proveedores europeos.
-    -   [Europeana Education](https://pro.europeana.eu/post/introducing-europeana-to-the-learning-resource-exchange). Integra colecciones patrimoniales europeas a la LRE para uso educativo.
-    -   [MERLOT](https://www.merlot.org/). Repositorio con revisión por pares de OVA para educación superior.
+- **Video-lecciones activas**: segmentos de video cortos combinados con ejercicios en clase. [MIT BLOSSOMS](https://web.mit.edu/blossoms/) (Blended Learning Open Source Science or Math Studies) es un ejemplo de referencia: más de 200 lecciones abiertas de matemáticas y ciencias, con guía docente y materiales descargables.
+- **Cursos abiertos completos (OpenCourseWare)**: conjuntos de OVA organizados como un curso universitario, publicados bajo licencia abierta. [MIT OpenCourseWare](https://ocw.mit.edu/) es el proyecto pionero de este formato, con más de 2.500 cursos disponibles.
+- **Unidades y módulos de un MOOC**: objetos reutilizables dentro de cursos masivos abiertos, como los de [OpenLearn](https://www.open.edu/openlearn/) de la Open University (Reino Unido).
+- **Catálogos y agregadores de OVA**: no almacenan el material sino que referencian metadatos de OVA alojados en múltiples repositorios.
+  - [Learning Resource Exchange (LRE)](https://lre.eun.org/) de European Schoolnet: cataloga más de 300.000 recursos educativos abiertos de distintos países y proveedores europeos.
+  - [Europeana Education](https://pro.europeana.eu/post/introducing-europeana-to-the-learning-resource-exchange). Integra colecciones patrimoniales europeas a la LRE para uso educativo.
+  - [MERLOT](https://www.merlot.org/). Repositorio con revisión por pares de OVA para educación superior.
 
 # Repositorios y proyectos para explorar
 
--   MIT OpenCourseWare. [*Link*](https://ocw.mit.edu/).
--   MIT BLOSSOMS. [*Link*](https://web.mit.edu/blossoms/).
--   ARIADNE Foundation. [*Link*](https://www.researchgate.net/publication/232639855_The_Ariadne_Infrastructure_for_Managing_and_Storing_Metadata).
--   Learning Resource Exchange (European Schoolnet). [*Link*](https://lre.eun.org/).
--   OpenLearn, Open University (Reino Unido). [*Link*](https://www.open.edu/openlearn/).
--   MERLOT. [*Link*](https://www.merlot.org/).
+- MIT OpenCourseWare. [*Link*](https://ocw.mit.edu/).
+- MIT BLOSSOMS. [*Link*](https://web.mit.edu/blossoms/).
+- ARIADNE Foundation. [*Link*](https://www.researchgate.net/publication/232639855_The_Ariadne_Infrastructure_for_Managing_and_Storing_Metadata).
+- Learning Resource Exchange (European Schoolnet). [*Link*](https://lre.eun.org/).
+- OpenLearn, Open University (Reino Unido). [*Link*](https://www.open.edu/openlearn/).
+- MERLOT. [*Link*](https://www.merlot.org/).
