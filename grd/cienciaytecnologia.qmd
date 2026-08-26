@@ -6,25 +6,70 @@ editor: visual
 
 ## Ciencia y Tecnología
 
-- A framework for global science in support of risk-informed sustainable development and planetary health. 2021. [*Link*](https://www.undrr.org/publication/framework-global-science-support-risk-informed-sustainable-development-and-planetary).
-- A Science Plan for Integrated Research on Disaster Risk. International Science Council. [*Link*](https://council.science/publications/a-science-plan-for-integrated-research-on-disaster-risk/).
-- UNDRR. [*Link*](https://www.undrr.org/implementing-sendai-framework-partners-and-stakeholders/science-and-technology-action-group).
-- GFDRR Innovation. [*Link*](https://www.gfdrr.org/en/innovation)
-- APRU Multi-Hazards. [*Link*](https://apru.org/our-work/pacific-rim-challenges/multi-hazards/).
+Evolución de la agenda internacional de ciencia, tecnología e innovación para la reducción del riesgo de desastres en el marco del Marco de Sendai, 2015–2026. La secuencia muestra la transición desde la formulación de la Science & Technology Roadmap (2016) y su compromiso voluntario de implementación (2016–2021), hacia una agenda transversal orientada a la aplicación de conocimiento, datos, tecnologías emergentes, inteligencia artificial, innovación, sistemas de alerta temprana, conocimiento local y gobernanza del riesgo. El registro del compromiso como «Completed» en 2021 corresponde al cierre de dicho compromiso específico y no a la terminación de la Roadmap ni de la agenda de ciencia y tecnología del Marco de Sendai. Las fuentes enlazadas corresponden a documentos, plataformas y productos oficiales de UNDRR.
+
+| Año | Hito / instrumento | Papel de ciencia, tecnología e innovación | Fuente oficial |
+|-----------------|-----------------|---------------------|-----------------|
+| **2015** | **Marco de Sendai para la RRD 2015–2030** | Establece la base política internacional para el uso de ciencia y tecnología, conocimiento científico, metodologías y herramientas, y para fortalecer la interfaz ciencia–política en la RRD. | [Marco de Sendai 2015–2030 – UNDRR](https://www.undrr.org/implementing-sendai-framework?utm_source=chatgpt.com) |
+| **2016** | **Science & Technology Roadmap** | La comunidad científica y tecnológica establece una hoja de ruta para contribuir a las cuatro prioridades del Sendai mediante producción, síntesis, comunicación y utilización de evidencia científica y fortalecimiento de capacidades. | [Science & Technology Roadmap – UNDRR](https://sendaicommitments.undrr.org/system/files/sfvc/6c5a932e-0db5-4a8d-b2ad-0adb3cb1c6a0.pdf?utm_source=chatgpt.com) |
+| **2016–2021** | **Science & Technology Commitment / STAG** | Se operacionaliza la Roadmap mediante un compromiso voluntario y la movilización de la comunidad científica y tecnológica internacional. | [Science Technology Commitment – UNDRR](https://sendaicommitments.undrr.org/commitment/science-technology-commitment-support-implementation-sendai-framework?utm_source=chatgpt.com) |
+| **2021** | **Cierre del Science & Technology Commitment** | El compromiso voluntario es registrado como *Completed*. Esto **no significa que haya terminado la Roadmap ni la agenda de ciencia y tecnología del Sendai**; finaliza el compromiso específico. | [Science Technology Commitment – UNDRR](https://sendaicommitments.undrr.org/commitment/science-technology-commitment-support-implementation-sendai-framework?utm_source=chatgpt.com) |
+| **2022** | **Evaluación y preparación del Midterm Review** | Se intensifica la evaluación de los avances, brechas y condiciones necesarias para que la ciencia y tecnología contribuyan efectivamente a la implementación del Sendai. | [MTR Sendai – contribuciones y documentos](https://sendaiframework-mtr.undrr.org/2023/mtr-sf-submissions-and-reports?utm_source=chatgpt.com) |
+| **2023** | **Midterm Review del Sendai Framework** | Se produce un cambio conceptual: la cuestión deja de ser solamente generar conocimiento y pasa a ser **integrar la RRD en decisiones, inversiones y comportamiento**, atravesando sectores, disciplinas, geografías y escalas. | [Midterm Review – UNDRR](https://sendaiframework-mtr.undrr.org/publication/report-midterm-review-implementation-sendai-framework-disaster-risk-reduction-2015-2030?utm_source=chatgpt.com) |
+| **2023** | **Early Warnings for All** | Ciencia, tecnología, datos, observación, predicción y comunicaciones pasan a integrarse en una iniciativa operacional global para que todas las personas estén protegidas por sistemas de alerta temprana multiamenaza. | [Early Warnings for All – UNDRR](https://www.undrr.org/early-warnings-for-all?utm_source=chatgpt.com) |
+| **2024** | **Status of Science and Technology in DRR in Asia-Pacific 2024** | UNDRR continúa evaluando explícitamente la implementación de la **Science & Technology Roadmap**, pero ahora junto con EW4All, localización, innovación, infraestructura resiliente y emprendimiento. | [Status of Science and Technology in DRR Asia-Pacific 2024 – UNDRR](https://www.undrr.org/publication/status-science-and-technology-disaster-risk-reduction-asia-pacific-2024?utm_source=chatgpt.com) |
+| **2024** | **Roorkee Declaration on Science and Technology for DRR** | La agenda científica y tecnológica se amplía hacia alerta temprana, localización, inclusión, gobernanza, ciudades, infraestructura resiliente, innovación y emprendimiento. | [Roorkee Declaration – UNDRR](https://www.undrr.org/publication/roorkee-declaration-science-and-technology-disaster-risk-reduction-2024?utm_source=chatgpt.com) |
+| **2025** | **Global Platform for DRR 2025** | Ciencia y tecnología aparecen como **aceleradores de la implementación** del Sendai: datos, inteligencia para decisiones, tecnologías emergentes, IA, innovación, sistemas de alerta y *leapfrogging*. | [Global Platform 2025 – UNDRR](https://globalplatform.undrr.org/2025/?utm_source=chatgpt.com) |
+| **2025** | **Sesión: Implementation of Sendai Framework – Role of Science and Technology** | La ciencia y tecnología se vinculan directamente con la **implementación local**, integrando IA, imágenes satelitales, GIS, modelos predictivos, sistemas de alerta, conocimiento local, gobernanza e inversión. | [Sesión Science & Technology – Global Platform 2025](https://globalplatform.undrr.org/2025/conference-event/implementation-sendai-framework-drr-role-science-and-technology-strengthening?utm_source=chatgpt.com) |
+| **2025** | **From Data to Action** | El énfasis pasa de disponer de datos a transformarlos en **inteligencia para la toma de decisiones**, mediante interoperabilidad, gobernanza y colaboración. | [TS1-2 From Data to Action – Global Platform 2025](https://globalplatform.undrr.org/2025/conference-event/ts1-2-data-action-strengthening-understanding-disaster-impact-data-and-its?utm_source=chatgpt.com) |
+| **2025** | **Development and Adoption of Technologies to Accelerate DRR** | Las tecnologías emergentes se presentan como instrumentos para **acelerar y corregir el rumbo** de la implementación del Sendai, incluyendo IA, transformación digital e innovación. | [TS1-3 Technologies – Global Platform 2025](https://globalplatform.undrr.org/2025/conference-event/ts1-3-development-and-adoption-technologies-accelerate-disaster-risk-reduction?utm_source=chatgpt.com) |
+| **2025** | **Tech4DRR – Reporte Especial sobre el uso de la tecnología en la RRD** | **Nuevo hito clave.** La tecnología se aborda desde una perspectiva aplicada y contextual: observación de la Tierra, SAT, IA, aprendizaje automático, modelación y datos, pero también *low-tech*, accesibilidad, capacidades locales, conocimiento indígena y co-creación. El informe advierte que **la tecnología por sí sola no resuelve los desafíos de la RRD**. | [Reporte Especial sobre el uso de la tecnología en la RRD – UNDRR](https://www.undrr.org/es/publication/documents-and-publications/reporte-especial-sobre-el-uso-de-la-tecnologia-en-la?utm_source=chatgpt.com) |
+| **2025** | **Geneva Call for Disaster Risk Reduction** | La GP2025 incorpora políticamente el uso de tecnologías emergentes, incluida IA, como mecanismo para **acelerar la RRD**, con énfasis en uso ético, acceso, inclusión y comunidades de última milla. | [Geneva Call for Disaster Risk Reduction – UNDRR](https://globalplatform.undrr.org/2025/publication/global-platform-2025-co-chairs-summary-geneva-call-disaster-risk-reduction?utm_source=chatgpt.com) |
+| **2026** | **Fase de aceleración hacia 2030** | La agenda resultante es transversal: **ciencia + datos + IA + tecnología + innovación + conocimiento local + alerta temprana + gobernanza + financiación**, orientada a acelerar la segunda mitad de la implementación del Sendai. | [Science and Technology Community – UNDRR](https://www.undrr.org/implementing-sendai-framework/partners-and-stakeholders/science-and-technology-community?utm_source=chatgpt.com) |
+
+### **Marco de Sendai**
+
+El Marco de Sendai contiene varias referencias a . Por ejemplo:
+
+- El párrafo 36(b) solicita: «Que la academia, las entidades y redes científicas y de investigación se centren en los factores y escenarios de riesgo de desastre, incluidos los riesgos emergentes, a mediano y largo plazo; incrementen la investigación para su aplicación regional, nacional y local; apoyen la acción de las comunidades y autoridades locales; y fomenten la interacción entre la política y la ciencia para la toma de decisiones».
+
+- El párrafo 25(g) establece: "Mejorar la labor científica y técnica en materia de reducción del riesgo de desastres y su movilización mediante la coordinación de las redes existentes y las instituciones de investigación científica en todos los niveles y regiones, con el apoyo del Grupo Asesor Científico y Técnico de la UNISDR, con el fin de: fortalecer la base de evidencia que respalda la implementación de este marco; promover la investigación científica sobre los patrones, causas y efectos del riesgo de desastres; difundir información sobre riesgos, aprovechando al máximo la tecnología de la información geoespacial; brindar orientación sobre metodologías y estándares para la evaluación de riesgos, la modelización del riesgo de desastres y el uso de datos; identificar brechas en la investigación y la tecnología, y establecer recomendaciones para las áreas prioritarias de investigación en la reducción del riesgo de desastres; promover y apoyar la disponibilidad y aplicación de la ciencia y la tecnología en la toma de decisiones; contribuir a la actualización de la Terminología de la UNISDR de 2009 sobre Reducción del Riesgo de Desastres; utilizarla después de un desastre. "Las revisiones como oportunidades para mejorar el aprendizaje y las políticas públicas, y difundir estudios."
+
+### **Hoja de Ruta de Ciencia y Tecnología para Apoyar la Implementación del Marco de Sendai para la Reducción del Riesgo de Desastres 2015-2030.**
+
+La comunidad científica y tecnológica, junto con otras partes interesadas, se reunieron en la Conferencia de Ciencia y Tecnología de la Oficina de las Naciones Unidas para la Reducción del Riesgo de Desastres (UNISDR), celebrada del 27 al 29 de enero de 2016 en Ginebra. La Conferencia produjo la «Hoja de Ruta de Ciencia y Tecnología para Apoyar la Implementación del Marco de Sendai para la Reducción del Riesgo de Desastres 2015-2030» y las alianzas correspondientes como resultado principal. La Hoja de Ruta es un mecanismo para «fomentar la colaboración entre las comunidades científicas y otras partes interesadas a través de mecanismos e instituciones globales y regionales para la implementación y la coherencia de los instrumentos y herramientas pertinentes para la reducción del riesgo de desastres» en torno a objetivos y acciones comunes.
+
 - The science and technology roadmap to support the implementation of the Sendai Framework for Disaster Risk Reduction 2015-2030. [*Link*](https://www.google.com/search?q=he+science+and+technology+roadmap+to+support+the+implementation+of+the+Sendai+Framework+for+Disaster+Risk+Reduction+2015-2030.&rlz=1C5OZZY_enCO1132CO1132&sourceid=chrome&ie=UTF-8#:~:text=The%20Science%20and,%E2%80%BA%20files%20%E2%80%BA%2065131_file).
-- Prevention Web Science and Technology. [*Link*](https://www.preventionweb.net/themes/view/761#hits=20&sortby=default&view=pw&filter=themes%3A%5E%22Science+and+Technology%22%24).
-- **30 innovations**
-  - Disaster risk reduction and innovations. *Progress in Disaster Science*, 2019. [*Link*](https://www.sciencedirect.com/science/article/pii/S259006171930033X).
-  - 30 Innovations linking disaster risk reduction with sustainable development goals. [*Link*](https://www.preventionweb.net/publications/view/70713).
-  - 30 innovations for disaster risk reduction. [*Link*](https://www.preventionweb.net/publications/view/64473).
-  - Applications of artificial intelligence for disaster management. *Natural Hazards,* 2020. [*Link*](https://link.springer.com/article/10.1007/s11069-020-04124-3).
-- Disruptive technologies and their use in disaster risk reduction and management. ITU, 2019. [*Link*](https://www.preventionweb.net/publication/disruptive-technologies-and-their-use-disaster-risk-reduction-and-management).
-- Building a safer society through science and technology: a compendium of Korea's science and technology-based disaster management. [*Link*](https://www.preventionweb.net/publication/documents-and-publications/building-safer-society-through-science-and-technology).
+
+{{< video "https://youtu.be/T4TVVT2_x3M?si=CeOPnOOjRvzZqk7z" >}}
+
+### Scientific and Technical Advisory Group (STAG)
+
+El propósito del [Grupo Asesor Científico y Técnico de la UNDRR](https://www.preventionweb.net/organization/scientific-and-technical-advisory-group?page=1) es brindar asesoramiento y apoyo técnico sustantivo para la formulación e implementación de las actividades llevadas a cabo por la amplia comunidad de la Estrategia Internacional para la Reducción del Riesgo de Desastres.
+
+El Grupo Asesor Científico y Técnico se formó en 2012, sucediendo al Comité Científico y Técnico (CCT). Sus miembros provienen de todo el mundo y de diversas disciplinas científicas; la lista de miembros actuales se encuentra aquí.
+
+**Objetivo de Reducción de Desastres.** La labor del Grupo Asesor Científico y Técnico abarca todos los aspectos de las dimensiones científicas y técnicas de la reducción de riesgos, con especial énfasis en las necesidades de los países en desarrollo. Específicamente, el Grupo Asesor Científico y Técnico se centrará en:
+
+- Una mejor integración de la ciencia y la tecnología en las políticas.
+- Mayor interacción entre las disciplinas científicas y técnicas.
+- Promover una mayor colaboración internacional.
+- Fortalecimiento de capacidades.
+- Una perspectiva a largo plazo (de 30 a 40 años) sobre el riesgo.
+- Modelización, mapeo y análisis de riesgos.
+- Utilización de la evidencia sobre acciones de reducción de riesgos para facilitar la toma de decisiones.
+- Percepción y comunicación del riesgo.
+
+[**Science Technology Commitment to support implementation of Sendai Framework.**](https://sendaicommitments.undrr.org/commitment/science-technology-commitment-support-implementation-sendai-framework)
+
+**Resultados esperados.** Los resultados esperados son los productos finales de la iniciativa/compromiso, que pueden incluir publicaciones o productos de conocimiento, resultados de talleres, programas de capacitación, videos, enlaces, fotografías, etc.
+
+<!-- -->
 
 ::: panel-tabset
 ### **Prevention Web**
 
-[![\[Science and technology\](https://www.preventionweb.net/knowledge-base/themes/science-knowledge-and-advocacy/science-and-technology) This theme adresses how science and technology can contribute to DRR, including approaches and initiatives to bring scientific and technical knowledge into practice and policy, approaches for multidisciplinary engagement, good practice in scientific and technical aspects of DRR, and citizen science.](images/preventionwebscience.png){width="250"}](https://www.preventionweb.net/knowledge-base/themes/science-knowledge-and-advocacy/science-and-technology)
+[![\[\[Science and technology Prevention Web\]\](https://www.preventionweb.net/knowledge-base/themes/science-knowledge-and-advocacy/science-and-technology))](images/preventionwebscience.png){width="250"}](https://www.preventionweb.net/knowledge-base/themes/science-knowledge-and-advocacy/science-and-technology)
 
 ### **Framework Global Science**
 
@@ -49,7 +94,29 @@ editor: visual
 [![](images/dcna.png){width="250"}](https://gadri.net/events/Austria_DCNA%20Science%20Plan%20EN.pdf)
 
 SCIENCE PLAN 2030+ DISASTER RISK REDUCTION DCNA
+
+### **STAG - PreventionWeb**
+
+[![](images/stag-preventionweb.jpg){width="250"}](https://www.preventionweb.net/organization/scientific-and-technical-advisory-group?page=1)
+
+Scientific and Technical Advisory Group (STAG) en PreventionWeb
 :::
+
+## Documentos de interés
+
+- A framework for global science in support of risk-informed sustainable development and planetary health. 2021. [*Link*](https://www.undrr.org/publication/framework-global-science-support-risk-informed-sustainable-development-and-planetary).
+- A Science Plan for Integrated Research on Disaster Risk. International Science Council. [*Link*](https://council.science/publications/a-science-plan-for-integrated-research-on-disaster-risk/).
+- Implemetación del Marco de Sendai. UNDRR. [*Link*](https://www.undrr.org/implementing-sendai-framework-partners-and-stakeholders/science-and-technology-action-group).
+- GFDRR Innovation. [*Link*](https://www.gfdrr.org/en/innovation)
+- APRU Multi-Hazards. [*Link*](https://apru.org/our-work/pacific-rim-challenges/multi-hazards/).
+- Prevention Web Science and Technology. [*Link*](https://www.preventionweb.net/themes/view/761#hits=20&sortby=default&view=pw&filter=themes%3A%5E%22Science+and+Technology%22%24).
+- **30 innovations**
+  - Disaster risk reduction and innovations. *Progress in Disaster Science*, 2019. [*Link*](https://www.sciencedirect.com/science/article/pii/S259006171930033X).
+  - 30 Innovations linking disaster risk reduction with sustainable development goals. [*Link*](https://www.preventionweb.net/publications/view/70713).
+  - 30 innovations for disaster risk reduction. [*Link*](https://www.preventionweb.net/publications/view/64473).
+  - Applications of artificial intelligence for disaster management. *Natural Hazards,* 2020. [*Link*](https://link.springer.com/article/10.1007/s11069-020-04124-3).
+- Disruptive technologies and their use in disaster risk reduction and management. ITU, 2019. [*Link*](https://www.preventionweb.net/publication/disruptive-technologies-and-their-use-disaster-risk-reduction-and-management).
+- Building a safer society through science and technology: a compendium of Korea's science and technology-based disaster management. [*Link*](https://www.preventionweb.net/publication/documents-and-publications/building-safer-society-through-science-and-technology).
 
 ## **Lecturas**
 
