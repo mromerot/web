@@ -1,0 +1,86 @@
+---
+title: "Estado de la ciencia 2024"
+format: html
+editor: visual
+---
+
+## Estado de la ciencia y la tecnología en la reducción del riesgo de desastres
+
+Síntesis en español, elaborada a partir del informe original en inglés *"Status of Science and Technology in Disaster Risk Reduction in Asia Pacific"* (UNDRR y AP-STAG, 2024, 86 páginas). El documento completo, en su idioma original, puede consultarse en [undrr.org](https://www.undrr.org/publication/status-science-and-technology-disaster-risk-reduction-asia-pacific-2024).
+
+> UNDRR y AP-STAG (2024). *Status of Science and Technology in Disaster Risk Reduction in Asia Pacific*. Bangkok: UNDRR, 86 páginas.
+
+### Sobre el informe
+
+El informe fue elaborado por el Grupo Asesor Científico y Tecnológico de Asia-Pacífico de UNDRR (AP-STAG), con aportes de los copresidentes de sesión de la Conferencia Asia-Pacífico de Ciencia y Tecnología para la Reducción del Riesgo de Desastres (APSTCDRR) 2024, y de científicos e investigadores de la región. Se basa en una revisión documental y una encuesta cualitativa sobre la aplicación de la ciencia y la tecnología a la reducción del riesgo de desastres, en relación con las cuatro Prioridades de Acción del Marco de Sendai.
+
+Se organiza en dos partes:
+
+- **Parte 1:** análisis regional, basado en encuesta, del avance de la *Science and Technology Roadmap* para la RRD.
+- **Parte 2:** revisión regional de seis temas: (1) alertas tempranas para todos, (2) localización, inclusión y gobernanza, (3) vínculo entre sistemas de alerta temprana y localización, (4) ciudades e infraestructura resiliente ante el cambio climático, (5) innovación y emprendimiento para la resiliencia, (6) avances en innovación para la RRD, y (7) el papel de la juventud y la innovación.
+
+### Hallazgos principales
+
+**Encuesta regional y metodología**
+
+Una encuesta en línea del AP-STAG recibió 151 respuestas de actores de 35 países (sociedad civil, sector privado, academia, gobiernos y organismos intergubernamentales), centrada en las cuatro prioridades del Marco de Sendai: comprender el riesgo, fortalecer la gobernanza del riesgo, invertir en RRD para la resiliencia, y mejorar la preparación para una respuesta eficaz.
+
+**Implementación y avance regional**
+
+El mayor avance percibido se dio en la Prioridad 4 (preparación para una respuesta eficaz). La cobertura de sistemas de alerta temprana multiamenaza (MHEWS) mejoró de forma notable: 26 países de la región reportan tenerlos implementados, un aumento del 116 % respecto a 2015 (cuando eran 12).
+
+**Estrategias tecnológicas e innovación**
+
+La integración de inteligencia artificial (IA), sistemas de información geográfica (SIG) e Internet de las Cosas (IoT) en alertas tempranas y gestión de desastres muestra resultados prometedores. Ejemplos citados: scripts en Python para pronóstico meteorológico en Himachal Pradesh (India), sensores ultrasónicos de nivel para gestión de desbordamientos de lagos glaciares en Sikkim, y redes de sensores inalámbricos para predicción de inundaciones en Bengala Occidental.
+
+**Enfoques inclusivos y colaborativos**
+
+Se destaca la necesidad de que las alertas tempranas sean accesibles para personas con discapacidad y con menor nivel de alfabetización. La iniciativa *Women's Weather Watch* en Fiyi se menciona como ejemplo de participación comunitaria efectiva a través de redes de mujeres líderes rurales.
+
+**Retos pendientes**
+
+Persisten brechas en el conocimiento del riesgo y en la cobertura integral de los MHEWS en toda la región. Se subraya la necesidad de fortalecimiento continuo de capacidades, cooperación regional e intercambio de conocimiento.
+
+### Recomendaciones del informe
+
+1. **Fortalecer el conocimiento del riesgo:** invertir en recolección, análisis y difusión de datos, incorporando ciencia ciudadana y conocimiento local, indígena y tradicional (CLIT).
+2. **Mejorar los sistemas de alerta temprana:** ampliar la cobertura de los MHEWS aprovechando nuevas tecnologías y garantizando su accesibilidad universal.
+3. **Fomentar una gobernanza inclusiva y la participación comunitaria**, considerando las necesidades diferenciadas de mujeres, personas de diversas identidades de género, personas mayores, jóvenes y personas con discapacidad.
+4. **Promover la cooperación regional**, incluyendo mecanismos de financiamiento conjunto para CTI en RRD en Asia-Pacífico.
+5. **Fortalecer la gobernanza de datos**, usando IA, big data y aprendizaje automático para mejorar la precisión de las evaluaciones de riesgo, y estableciendo plataformas regionales de datos abiertos.
+6. **Impulsar la investigación y el desarrollo**, incluyendo alianzas público-privadas e intercambios entre científicos, tecnólogos y jóvenes investigadores.
+7. **Fomentar la cooperación multiactor**, fortaleciendo la participación interdisciplinaria y desarrollando herramientas de fácil acceso para todos los actores.
+
+### Parte 2 — Síntesis temática
+
+**1. Alertas tempranas para todos (EW4All)**
+
+La iniciativa del Secretario General de la ONU busca que toda persona esté protegida por un sistema de alerta temprana multiamenaza para 2027, estructurada en cuatro pilares: (1) conocimiento del riesgo de desastres (UNDRR), (2) observación y pronóstico (OMM), (3) difusión y comunicación (UIT) y (4) preparación y respuesta (FICR). En Asia-Pacífico, 26 de los países de la región (dos tercios) reportan contar con MHEWS, aunque persisten brechas notables en los países menos adelantados y los pequeños estados insulares. El pilar más fuerte en la región es el de difusión y comunicación; el que más requiere fortalecimiento es el de conocimiento del riesgo. Se documentan buenas prácticas como el Portal de Riesgo y Resiliencia de la CESPAP, sistemas de alerta temprana de sismos, deslizamientos e inundaciones en el Himalaya indio (con sensores MEMS, redes inalámbricas e IA), y el uso de protocolos como el CAP (*Common Alerting Protocol*) en el Pacífico.
+
+**2. Localización, inclusión y gobernanza**
+
+La localización, la gobernanza y la inclusión están estrechamente vinculadas: sin localización no hay inclusión real. Entre los retos identificados están la persistencia de la idea de que la RRD es responsabilidad exclusiva del gobierno, las dificultades de acceso a alertas tempranas y comunicación de riesgo poco clara, y el mayor interés gubernamental en la respuesta post-desastre que en la reducción de riesgo previa. Se destacan casos como el proyecto SeDAR en Malasia (fortalecimiento de capacidades comunitarias de RRD) y el marco australiano de Reducción del Riesgo de Desastres Inclusiva de la Discapacidad (DIDRR).
+
+**3. Vínculo entre alertas tempranas y localización**
+
+Se identifican cuatro áreas de reforma necesarias: participación comunitaria, gobernanza, desarrollo de infraestructura y avances tecnológicos. La localización de los sistemas de alerta temprana —lenguas locales, canales de comunicación conocidos por la comunidad, conocimiento tradicional— fortalece la percepción del riesgo, la apropiación comunitaria y la efectividad de la respuesta.
+
+**4. Ciudades e infraestructura resiliente ante el cambio climático**
+
+Asia-Pacífico concentra cerca del 60 % de la población mundial (4.700 millones de personas en 2022) y enfrenta una urbanización acelerada junto a riesgos climáticos crecientes: tifones más frecuentes en Filipinas, inundaciones urbanas en Yakarta, Bangkok y Ho Chi Minh, sequías en Australia y aumento del nivel del mar en Maldivas. Se documentan tecnologías para la adaptación: IA aplicada al clima, observación satelital (misión NISAR de NASA-ISRO), computación avanzada, captura y almacenamiento de carbono (proyecto Gorgon en Australia), IoT para gestión de agua e infraestructura, almacenamiento de energía renovable, infraestructura azul-verde y soluciones basadas en la naturaleza (reforestación en Leyte, Filipinas).
+
+**5. Innovación y emprendimiento para la resiliencia**
+
+La iniciativa iCARE (Adaptación y Resiliencia Climática para Asia del Sur), apoyada por el Banco Mundial e implementada por el ADPC, financió más de 30 innovaciones piloto en Bangladesh, Bután, India, Maldivas, Pakistán y Sri Lanka desde 2021, con tecnologías que van de IoT y drones a agricultura climáticamente inteligente. Las lecciones aprendidas subrayan la importancia de partir de la demanda local, fortalecer capacidades institucionales y construir alianzas locales sostenibles para escalar las soluciones.
+
+**6. Avances en innovación para la RRD**
+
+Asia-Pacífico concentra cerca del 60 % de las muertes por desastres a nivel mundial desde 1970. La Coalición para la Infraestructura Resiliente ante Desastres (CDRI) impulsa, a través de su Programa de Becas, soluciones lideradas por investigadores jóvenes: mapeo de riesgo de deslizamientos en Bután, modelos de clasificación de ciclones en Bangladesh, detección de socavación en puentes en Japón, entre otras. Entre los principales retos para la innovación en RRD se señalan el financiamiento limitado, la insuficiente colaboración intersectorial, la escasa disponibilidad de datos y la brecha digital.
+
+**7. El papel de la juventud y la innovación**
+
+Redes como el Programa de Jóvenes Científicos de IRDR (YSP) y la alianza U-Inspire —que pasó de 8 a 14 países— canalizan la participación de jóvenes profesionales en ciencia y tecnología para la RRD. Se destacan hackatones de innovación climática y de RRD organizados con la Universidad de Tsinghua, IRDR y UNESCO, con más de 60 grupos de trabajo juveniles y 30 premios otorgados en 2023-2024. Ecosistemas de innovación y emprendimiento en India, Singapur y Australia se mencionan como referentes regionales para canalizar el talento joven hacia soluciones de resiliencia.
+
+### Nota metodológica
+
+Este texto es una síntesis elaborada para este sitio a partir del informe original en inglés, con el fin de dar contexto en español a los hallazgos y recomendaciones más relevantes. No sustituye la lectura del documento completo, que incluye tablas de implementación detalladas por prioridad de acción, cifras desagregadas por país y la lista completa de referencias. Se recomienda consultar el [informe original en UNDRR](https://www.undrr.org/publication/status-science-and-technology-disaster-risk-reduction-asia-pacific-2024) para citar cifras exactas o profundizar en algún tema.

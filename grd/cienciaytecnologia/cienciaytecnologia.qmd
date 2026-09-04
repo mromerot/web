@@ -9,7 +9,7 @@ editor: visual
 Evolución de la agenda internacional de ciencia, tecnología e innovación para la reducción del riesgo de desastres en el marco del Marco de Sendai, 2015–2026. La secuencia muestra la transición desde la formulación de la Science & Technology Roadmap (2016) y su compromiso voluntario de implementación (2016–2021), hacia una agenda transversal orientada a la aplicación de conocimiento, datos, tecnologías emergentes, inteligencia artificial, innovación, sistemas de alerta temprana, conocimiento local y gobernanza del riesgo. El registro del compromiso como «Completed» en 2021 corresponde al cierre de dicho compromiso específico y no a la terminación de la Roadmap ni de la agenda de ciencia y tecnología del Marco de Sendai. Las fuentes enlazadas corresponden a documentos, plataformas y productos oficiales de UNDRR.
 
 | Año | Hito / instrumento | Papel de ciencia, tecnología e innovación | Fuente oficial |
-|-----------------|-----------------|---------------------|-----------------|
+|-----------------|-----------------|--------------------|-----------------|
 | **2015** | **Marco de Sendai para la RRD 2015–2030** | Establece la base política internacional para el uso de ciencia y tecnología, conocimiento científico, metodologías y herramientas, y para fortalecer la interfaz ciencia–política en la RRD. | [Marco de Sendai 2015–2030 – UNDRR](https://www.undrr.org/implementing-sendai-framework?utm_source=chatgpt.com) |
 | **2016** | **Science & Technology Roadmap** | La comunidad científica y tecnológica establece una hoja de ruta para contribuir a las cuatro prioridades del Sendai mediante producción, síntesis, comunicación y utilización de evidencia científica y fortalecimiento de capacidades. | [Science & Technology Roadmap – UNDRR](https://sendaicommitments.undrr.org/system/files/sfvc/6c5a932e-0db5-4a8d-b2ad-0adb3cb1c6a0.pdf?utm_source=chatgpt.com) |
 | **2016–2021** | **Science & Technology Commitment / STAG** | Se operacionaliza la Roadmap mediante un compromiso voluntario y la movilización de la comunidad científica y tecnológica internacional. | [Science Technology Commitment – UNDRR](https://sendaicommitments.undrr.org/commitment/science-technology-commitment-support-implementation-sendai-framework?utm_source=chatgpt.com) |
@@ -69,7 +69,7 @@ El Grupo Asesor Científico y Técnico se formó en 2012, sucediendo al Comité 
 ::: panel-tabset
 ### **Prevention Web**
 
-[![\[\[Science and technology Prevention Web\]\](https://www.preventionweb.net/knowledge-base/themes/science-knowledge-and-advocacy/science-and-technology))](images/preventionwebscience.png){width="250"}](https://www.preventionweb.net/knowledge-base/themes/science-knowledge-and-advocacy/science-and-technology)
+[![\[\[Science and technology Prevention Web\]\](https://www.preventionweb.net/knowledge-base/themes/science-knowledge-and-advocacy/science-and-technology))](../images/preventionwebscience.png){width="250"}](https://www.preventionweb.net/knowledge-base/themes/science-knowledge-and-advocacy/science-and-technology)
 
 ### **Framework Global Science**
 
@@ -91,13 +91,13 @@ El Grupo Asesor Científico y Técnico se formó en 2012, sucediendo al Comité 
 
 ### **Science Plan Austria**
 
-[![](images/dcna.png){width="250"}](https://gadri.net/events/Austria_DCNA%20Science%20Plan%20EN.pdf)
+[![](../images/dcna.png){width="250"}](https://gadri.net/events/Austria_DCNA%20Science%20Plan%20EN.pdf)
 
 SCIENCE PLAN 2030+ DISASTER RISK REDUCTION DCNA
 
 ### **STAG - PreventionWeb**
 
-[![](images/stag-preventionweb.jpg){width="250"}](https://www.preventionweb.net/organization/scientific-and-technical-advisory-group?page=1)
+[![](../images/stag-preventionweb.jpg){width="250"}](https://www.preventionweb.net/organization/scientific-and-technical-advisory-group?page=1)
 
 Scientific and Technical Advisory Group (STAG) en PreventionWeb
 :::

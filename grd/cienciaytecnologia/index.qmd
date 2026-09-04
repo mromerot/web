@@ -1,0 +1,35 @@
+---
+title: "Ciencia y tecnología"
+format: html
+editor: visual
+---
+
+## Ciencia y tecnología en la gestión del riesgo de desastres
+
+Esta sección reúne los recursos sobre el papel de la ciencia, la tecnología y la innovación (CTI) en la reducción del riesgo de desastres: la agenda internacional impulsada por UNDRR en el marco de Sendai, y el estado actual de su implementación regional.
+
+:::::: mrw-cards-grid
+::: mrw-card
+::: mrw-card-header
+[Ciencia y tecnología](cienciaytecnologia.qmd)
+:::
+
+::: mrw-card-body
+![](../images/preventionwebscience.png){.mrw-card-img}
+
+Evolución de la agenda internacional de ciencia, tecnología e innovación para la RRD en el marco de Sendai (2015–2026): hoja de ruta, compromisos, revisión de medio término y alertas tempranas para todos.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Estado de la ciencia 2024](estado-ciencia.qmd)
+:::
+
+::: mrw-card-body
+![](https://www.undrr.org/sites/default/files/styles/por/public/2024-09/AP-STAG-2024-Report-cover.jpg?itok=uqsW5Ki7){.mrw-card-img}
+
+Síntesis en español del informe *Status of Science and Technology in Disaster Risk Reduction in Asia Pacific* (UNDRR y AP-STAG, 2024): hallazgos, avance por prioridades de Sendai y recomendaciones.
+:::
+:::
+::::::

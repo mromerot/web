@@ -37,8 +37,13 @@ website:
             href: grd/reducciondelriesgo.qmd
           - text: "Manejo de desastres"
             href: grd/manejodedesastres.qmd
-          - text: "Ciencia y tecnología"
-            href: grd/cienciaytecnologia.qmd
+          - section: "Ciencia y tecnología"
+            href: grd/cienciaytecnologia/index.qmd
+            contents:
+              - text: "Ciencia y tecnología"
+                href: grd/cienciaytecnologia/cienciaytecnologia.qmd
+              - text: "Estado de la ciencia 2024"
+                href: grd/cienciaytecnologia/estado-ciencia.qmd
           - text: "Educación"
             href: grd/educacion.qmd
           - section: "Cursos, redes y recursos"
