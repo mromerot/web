@@ -44,6 +44,8 @@ website:
                 href: grd/cienciaytecnologia/cienciaytecnologia.qmd
               - text: "Estado de la ciencia 2024"
                 href: grd/cienciaytecnologia/estado-ciencia.qmd
+              - text: "Hoja de ruta de ciencia y tecnología"
+                href: grd/cienciaytecnologia/hoja-de-ruta-ct.qmd
           - text: "Educación"
             href: grd/educacion.qmd
           - section: "Cursos, redes y recursos"
