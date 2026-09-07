@@ -1,0 +1,116 @@
+---
+title: "Párrafos"
+format: html
+editor: visual
+---
+
+## Oración temática o topic sentence
+
+### ¿Qué es una oración temática?
+
+La oración temática es la oración que expresa la idea controladora de un párrafo: una especie de "mini-tesis" que funciona como punto de encuentro para todas las oraciones de apoyo. Así como la tesis organiza un ensayo completo, la oración temática organiza un párrafo: plantea una afirmación limitada y específica que el resto del párrafo debe explicar, ejemplificar o sustentar.
+
+### Funciones de la oración temática
+
+Una oración temática bien construida cumple tres funciones a la vez:
+
+1. **Sostiene la idea central** del texto: presenta con claridad uno de los puntos que respaldan el argumento general.
+2. **Anuncia el tema** del párrafo: le indica al lector de qué tratará la discusión que sigue.
+3. **Controla el contenido** del párrafo: todo lo que aparezca después —ejemplos, datos, explicaciones— debe relacionarse directamente con ella. Si una oración no apoya la oración temática, no pertenece a ese párrafo.
+
+### Cómo enfocar una oración temática
+
+Una oración temática vaga o de doble foco produce un párrafo que se queda en la superficie o que se dispersa. Una oración temática enfocada, en cambio, ayuda tanto al lector a entender el punto como al propio autor a seleccionar y organizar el material de apoyo.
+
+| Vaga | Enfocada |
+|---|---|
+| La gestión del riesgo en Colombia tiene varios problemas. | La débil articulación entre el nivel nacional y el municipal limita la implementación de la gestión del riesgo en Colombia. |
+| Los desastres afectan mucho al desarrollo. | Los desastres recurrentes de baja intensidad erosionan silenciosamente el desarrollo económico de los municipios más vulnerables. |
+| Hay que mejorar los sistemas de alerta temprana. | Los sistemas de alerta temprana en cuencas hidrográficas pequeñas siguen dependiendo de observadores comunitarios sin respaldo tecnológico. |
+
+En cada caso, la versión enfocada precisa *qué* aspecto del tema se va a discutir y *en qué sentido*, dejando claro qué información pertenece al párrafo y cuál no.
+
+### Dónde ubicar la oración temática
+
+La posición de la oración temática depende de lo que se quiera lograr en el párrafo:
+
+- **Al inicio.** La más frecuente, sobre todo en escritura académica y técnica: el lector conoce el punto desde el principio y el resto del párrafo construye sobre esa base.
+- **Al final.** El párrafo presenta primero los detalles y cierra con la afirmación que los resume; genera un efecto de conclusión o énfasis.
+- **Al inicio y al final.** La idea se plantea al comienzo y se retoma, con otras palabras, al cierre, útil para remarcar un punto especialmente importante.
+- **En el medio.** Un primer bloque de oraciones da contexto, la oración temática marca el giro hacia la idea central, y un segundo bloque la desarrolla.
+- **Implícita.** En textos narrativos o descriptivos, ninguna oración enuncia la idea central de forma explícita; todas las oraciones apuntan hacia ella y el lector debe inferirla. Es un recurso más arriesgado: en escritura académica conviene reservarlo para casos puntuales y, si hay duda, es más seguro escribir la oración temática de forma explícita.
+
+### Un error común
+
+Un error frecuente es ubicar al final de un párrafo una oración que en realidad es la oración temática del párrafo *siguiente*. Por ejemplo, si un párrafo describe las responsabilidades de un cargo, no debería cerrar con una oración como "Otro aspecto destacable de este trabajo fue el programa de capacitación": esa oración pertenece al párrafo que sigue, como su oración temática, no como el cierre del anterior. La regla práctica es que cada oración temática debe colocarse en el párrafo al que pertenece por contenido, nunca al final del párrafo anterior a modo de anticipo.
+
+### Un rasgo adicional en escritura científica: el calificador de confianza
+
+En informes científicos que siguen un lenguaje de incertidumbre calibrado —como los del Panel Intergubernamental sobre Cambio Climático (IPCC)— la oración temática suele incorporar, además de las tres funciones ya vistas, un calificador explícito del grado de certeza de la afirmación (por ejemplo, "es prácticamente seguro que…", "con alta confianza", "es muy probable que…"). Ese calificador no es un adorno: forma parte de lo que la oración "controla", porque fija qué tan categórica puede ser la evidencia que sigue y qué tanto margen de duda es aceptable en el resto del párrafo.
+
+Una consecuencia frecuente de esta convención es que el párrafo cierre con una oración que reconoce los límites de esa evidencia (por ejemplo, qué regiones o qué periodos no se pudieron evaluar con la misma certeza), en lugar de repetir la idea central. Es una variante técnica del patrón "al inicio y al final": el cierre no reafirma la oración temática, sino que la matiza.
+
+### Ejemplo aplicado: gestión del riesgo en Colombia
+
+Los siguientes párrafos, traducidos y adaptados del informe *Análisis de la gestión del riesgo de desastres en Colombia: un aporte para la construcción de políticas públicas* (Banco Mundial / GFDRR, 2011), muestran el patrón en un texto técnico real sobre gestión del riesgo, el mismo campo de este sitio.
+
+::: {.callout-tip appearance="minimal"}
+**Ejemplo 1 — oración temática al inicio, con desarrollo por contraste**
+
+**Los desastres ocurren en todo el mundo, pero sus repercusiones económicas, sociales y ambientales han venido en aumento constante, con mayores impactos en los países en desarrollo.** Los desastres pueden opacar años de inversión en estos países, aunque al mismo tiempo el riesgo que los origina suele tener raíces en errores y problemas de los mismos procesos que frenan su desarrollo.
+
+La oración en negrita cumple las tres funciones: plantea la afirmación general (el impacto desigual de los desastres), anuncia el tema del párrafo (esa desigualdad) y controla lo que sigue (la explicación de por qué ocurre).
+:::
+
+::: {.callout-tip appearance="minimal"}
+**Ejemplo 2 — oración temática al inicio, seguida de contraste**
+
+**Colombia ha sido pionera en América Latina en el desarrollo de una visión integral de la gestión del riesgo de desastres, lo que se ha traducido en una disminución relativa de víctimas.** Sin embargo, los daños en bienes, infraestructura y medios de vida continúan en aumento, lo que evidencia que estos esfuerzos no han sido suficientes frente al incremento de las condiciones de vulnerabilidad.
+
+Aquí la oración temática formula un logro, y el resto del párrafo lo matiza: una estructura habitual en textos de política pública que buscan reconocer avances sin perder la mirada crítica.
+:::
+
+::: {.callout-tip appearance="minimal"}
+**Ejemplo 3 — oración temática seguida de datos de soporte**
+
+**En los últimos cuarenta años, los desastres en Colombia han generado pérdidas acumuladas por US$7.100 millones, es decir, un promedio anual de US$177 millones.** Entre 1970 y 2011, el país registró más de 28.000 eventos de desastre, de los cuales cerca del 60 % se reportaron a partir de la década de 1990. Solo entre 2010 y 2011, en apenas quince meses, se registró una cifra de fallecidos equivalente a una cuarta parte de los registrados en la década anterior.
+
+Este es un ejemplo casi de manual: la oración temática enuncia una afirmación general (el monto acumulado de pérdidas) y cada oración siguiente aporta un dato numérico que la sustenta, sin desviarse hacia otros temas.
+:::
+
+El resumen ejecutivo completo del informe (60 páginas) se puede consultar aquí:
+
+<iframe src="https://docs.google.com/viewer?url=https%3A%2F%2Fdocuments1.worldbank.org%2Fcurated%2Fen%2F648501468241191283%2Fpdf%2FNonAsciiFileName0.pdf&embedded=true" width="100%" height="700" frameborder="0"></iframe>
+
+El informe completo (428 páginas) es demasiado pesado para previsualizarse embebido; puede descargarse directamente desde el [sitio del Banco Mundial](https://documents1.worldbank.org/curated/en/658361468018050201/pdf/NonAsciiFileName0.pdf).
+
+### Ejemplo aplicado: cambio climático (IPCC AR6)
+
+Los siguientes párrafos, traducidos del Resumen Ejecutivo del Capítulo 11 del Sexto Informe de Evaluación del IPCC —*Weather and Climate Extreme Events in a Changing Climate* (Seneviratne et al., 2021)—, muestran cómo opera el calificador de confianza dentro de la oración temática.
+
+::: {.callout-tip appearance="minimal"}
+**Ejemplo 4 — oración temática con calificador de confianza, cierre con matiz de evidencia**
+
+**La frecuencia y la intensidad de los extremos cálidos (incluidas las olas de calor) han aumentado, y las de los extremos fríos han disminuido a escala global desde 1950 (es prácticamente seguro).** Esto también se cumple a escala regional, con más del 80 % de las regiones del AR6 mostrando cambios similares evaluados como al menos probables. En algunas regiones, la evidencia limitada (de datos o de literatura) impide estimar las tendencias de forma confiable.
+
+La oración en negrita cumple las tres funciones de siempre, pero además fija el nivel de certeza de la afirmación ("es prácticamente seguro"). El párrafo cierra reconociendo dónde esa certeza no aplica igual, en vez de repetir la idea central: el cierre técnico descrito arriba.
+:::
+
+::: {.callout-tip appearance="minimal"}
+**Ejemplo 5 — oración temática que organiza una cadena de evidencia con confianza distinta en cada punto**
+
+**Los cambios regionales en la intensidad y frecuencia de los extremos climáticos se relacionan, en general, con el calentamiento global.** En particular, esto aplica a los extremos de temperatura (muy probable), la intensificación de la precipitación intensa (alta confianza) —incluida la asociada a ciclones tropicales (confianza media)— y el empeoramiento de las sequías en algunas regiones (alta confianza).
+
+Aquí la oración temática controla el contenido de un párrafo que enumera varios fenómenos distintos, pero cada uno aparece con su propio calificador de confianza: la oración temática no solo anuncia el tema (el vínculo con el calentamiento global), también anticipa que el párrafo matizará, caso por caso, qué tan sólida es la evidencia para cada fenómeno.
+:::
+
+El capítulo completo (254 páginas) se puede consultar aquí:
+
+<iframe src="https://docs.google.com/viewer?url=https%3A%2F%2Fwww.ipcc.ch%2Freport%2Far6%2Fwg1%2Fdownloads%2Freport%2FIPCC_AR6_WGI_Chapter11.pdf&embedded=true" width="100%" height="700" frameborder="0"></iframe>
+
+### Fuentes
+
+-   Wyrick, J. (2011). *Steps to Writing Well with Additional Readings* (8.ª ed.). Wadsworth/Cengage Learning. Sección "The Topic Sentence".
+-   Anker, S. (2016). *Strategies for Successful Writing* (11.ª ed.). Pearson. Sección "The Topic Sentence".
+-   Campos G., A., Holm-Nielsen, N., Díaz G., C., Rubiano V., D. M., Costa P., C. R., Ramírez C., F., y Dickson, E. (eds.) (2011). *Análisis de la gestión del riesgo de desastres en Colombia: un aporte para la construcción de políticas públicas*. Banco Mundial / GFDRR. [Resumen ejecutivo (PDF)](https://documents1.worldbank.org/curated/en/648501468241191283/pdf/NonAsciiFileName0.pdf) · [Informe completo (PDF)](https://documents1.worldbank.org/curated/en/658361468018050201/pdf/NonAsciiFileName0.pdf)
+-   Seneviratne, S. I., Zhang, X., Adnan, M., Badi, W., Dereczynski, C., Di Luca, A., et al. (2021). Weather and Climate Extreme Events in a Changing Climate. En: *Climate Change 2021: The Physical Science Basis*. Contribución del Grupo de Trabajo I al Sexto Informe de Evaluación del IPCC. Cambridge University Press, pp. 1513–1766. [PDF](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter11.pdf)

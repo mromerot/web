@@ -132,8 +132,13 @@ website:
       # aqui viene la seccion de ciencia y tecnologia
       - section: "Ciencia y tecnología"
         contents:
-          - text: "Escritura y publicación académica"
-            href: cyt/escrituraypublicacionacademica.qmd
+          - section: "Escritura y publicación académica"
+            href: cyt/escrituraypublicacionacademica/index.qmd
+            contents:
+              - text: "Escritura y publicación académica"
+                href: cyt/escrituraypublicacionacademica/escrituraypublicacionacademica.qmd
+              - text: "Párrafos"
+                href: cyt/escrituraypublicacionacademica/parrafos.qmd
           - text: "Ciencia reproducible"
             href: cyt/cienciareproduc.qmd
           - text: "Docencia y educación"

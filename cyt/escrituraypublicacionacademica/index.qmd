@@ -1,0 +1,31 @@
+---
+title: "Escritura y publicación académica"
+format: html
+editor: visual
+---
+
+## Escritura y publicación académica
+
+Esta sección reúne recursos sobre el proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.
+
+:::::: mrw-cards-grid
+::: mrw-card
+::: mrw-card-header
+[Escritura y publicación académica](escrituraypublicacionacademica.qmd)
+:::
+
+::: mrw-card-body
+Guía integral sobre lectura y escritura científica: la oración, el párrafo, el estilo científico, el papel del editor, herramientas de escritura, bibliometría, estructura del artículo (título, resumen, introducción, métodos, resultados, discusión), revisión por pares, ética en la publicación y divulgación.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Párrafos](parrafos.qmd)
+:::
+
+::: mrw-card-body
+Recursos sobre la construcción del párrafo académico, comenzando por la oración temática o *topic sentence* que organiza y anticipa el contenido del párrafo.
+:::
+:::
+::::::
