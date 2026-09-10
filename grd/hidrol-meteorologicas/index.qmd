@@ -4,6 +4,70 @@ format: html
 editor: visual
 ---
 
+## Amenazas hidrológicas y meteorológicas
+
+:::::: mrw-cards-grid
+::: mrw-card
+::: mrw-card-header
+[El Niño / La Niña](elnino.qmd)
+:::
+
+::: mrw-card-body
+![](images/hips2025.png){.mrw-card-img}
+
+El fenómeno El Niño-Oscilación del Sur (ENOS) y sus fases cálida y fría: mecanismos climáticos, impactos regionales y monitoreo en Colombia.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Huracanes](huracanes.qmd)
+:::
+
+::: mrw-card-body
+![](images/Real%20Time%20Tropical%20Cyclones.png){.mrw-card-img}
+
+Ciclones tropicales: histórico, monitoreo en tiempo real y su relevancia para el Caribe y el Pacífico colombiano.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Inundaciones](inundaciones.qmd)
+:::
+
+::: mrw-card-body
+![](images/floodobserv.png){.mrw-card-img}
+
+Inundaciones fluviales y urbanas: instituciones nacionales, sistemas de monitoreo y observatorios globales de inundación.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Inundaciones repentinas](inundaciones-repentinas.qmd)
+:::
+
+::: mrw-card-body
+![](images/hips2025.png){.mrw-card-img}
+
+Inundaciones repentinas y avenidas torrenciales: dinámica hidrológica, alerta temprana y lecturas de referencia.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Olas de calor](olasdecalor.qmd)
+:::
+
+::: mrw-card-body
+![](images/hips2025.png){.mrw-card-img}
+
+Olas de calor: definición, impactos en salud pública y su intensificación asociada al cambio climático.
+:::
+:::
+::::::
+
 ## ![Hazard information profiles 2025](images/hips2025.png){width="400"}
 
 # ESRI Disaster Response Program

@@ -4,6 +4,22 @@ format: html
 editor: visual
 ---
 
+## Amenazas tecnológicas
+
+:::::: mrw-cards-grid
+::: mrw-card
+::: mrw-card-header
+[Amenazas tecnológicas](amenazastecnol.qmd)
+:::
+
+::: mrw-card-body
+![](/grd/images/hips2025.png){.mrw-card-img}
+
+Amenazas tecnológicas: fallas industriales, de infraestructura y otros riesgos de origen antrópico.
+:::
+:::
+::::::
+
 ## [**Technological**](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type&order=title&sort=desc#technological)
 
 6 hazard clusters and 50 specific hazards

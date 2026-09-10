@@ -4,6 +4,22 @@ format: html
 editor: visual
 ---
 
+## Amenazas extraterrestres
+
+:::::: mrw-cards-grid
+::: mrw-card
+::: mrw-card-header
+[Amenazas extraterrestres](amenazasextraterrestres.qmd)
+:::
+
+::: mrw-card-body
+![](/grd/images/hips2025.png){.mrw-card-img}
+
+Amenazas extraterrestres: clima espacial, objetos cercanos a la Tierra e instituciones de monitoreo.
+:::
+:::
+::::::
+
 ## ![Hazard information profiles 2025](/grd/images/hips2025.png){width="400"}
 
 ## [**2025 Hazard Information Profiles (HIPs) online reference**](https://www.preventionweb.net/drr-glossary/hips#meteorological)

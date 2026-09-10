@@ -4,6 +4,34 @@ format: html
 editor: visual
 ---
 
+## Amenazas ambientales
+
+:::::: mrw-cards-grid
+::: mrw-card
+::: mrw-card-header
+[Erosión costera](erosioncostera.qmd)
+:::
+
+::: mrw-card-body
+![](images/costero.png){.mrw-card-img}
+
+Erosión costera: dinámica litoral, redes de monitoreo y recursos sobre la línea de costa colombiana.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Incendios forestales](incendiosforestales.qmd)
+:::
+
+::: mrw-card-body
+![](/grd/hidrol-meteorologicas/images/hips2025.png){.mrw-card-img}
+
+Incendios forestales: instituciones nacionales, condiciones de riesgo y recursos de monitoreo en Colombia.
+:::
+:::
+::::::
+
 ![](/grd/hidrol-meteorologicas/images/hips2025.png){width="400"}
 
 [![Integrating disaster risk reduction and biodiversity into national strategies and their implementation: Recommendations and guidance for governments. \[Link\](https://www.undrr.org/publication/documents-and-publications/integrating-disaster-risk-reduction-and-biodiversity).](https://www.undrr.org/sites/default/files/styles/por/public/document_thumbnails/94561.jpg?h=6a9e38f6&itok=Xd3LiX_K){width="250"}](https://www.undrr.org/publication/documents-and-publications/integrating-disaster-risk-reduction-and-biodiversity)

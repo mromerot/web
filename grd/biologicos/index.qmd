@@ -4,6 +4,22 @@ format: html
 editor: visual
 ---
 
+## Amenazas biológicas
+
+:::::: mrw-cards-grid
+::: mrw-card
+::: mrw-card-header
+[Covid](covid.qmd)
+:::
+
+::: mrw-card-body
+![](/grd/images/hips2025.png){.mrw-card-img}
+
+COVID-19 como amenaza biológica: instituciones nacionales, vigilancia epidemiológica y recursos de referencia.
+:::
+:::
+::::::
+
 ## ![Hazard information profiles 2025](/grd/images/hips2025.png){width="400"}
 
 ## Recursos:

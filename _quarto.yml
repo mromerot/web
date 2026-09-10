@@ -46,6 +46,8 @@ website:
                 href: grd/cienciaytecnologia/estado-ciencia.qmd
               - text: "Hoja de ruta de ciencia y tecnología"
                 href: grd/cienciaytecnologia/hoja-de-ruta-ct.qmd
+              - text: "Marco de Sendai"
+                href: grd/cienciaytecnologia/marco-sendai.qmd
           - text: "Educación"
             href: grd/educacion.qmd
           - section: "Cursos, redes y recursos"

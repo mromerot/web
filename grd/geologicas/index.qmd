@@ -4,6 +4,58 @@ format: html
 editor: visual
 ---
 
+## Amenazas geológicas
+
+:::::: mrw-cards-grid
+::: mrw-card
+::: mrw-card-header
+[Falla de terreno](falladeterreno.qmd)
+:::
+
+::: mrw-card-body
+![](/grd/images/hips2025.png){.mrw-card-img}
+
+Movimientos en masa y falla de terreno en Colombia: susceptibilidad, monitoreo y referencias bibliográficas.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Riesgo sísmico](riesgosismico.qmd)
+:::
+
+::: mrw-card-body
+![](/grd/images/hips2025.png){.mrw-card-img}
+
+Amenaza y riesgo sísmico: instituciones nacionales, redes de monitoreo y recursos sobre terremotos en Colombia.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Tsunami](tsunami.qmd)
+:::
+
+::: mrw-card-body
+![](/grd/images/hips2025.png){.mrw-card-img}
+
+Tsunamis: generación, alerta temprana y el caso histórico del tsunami de Tumaco de 1979.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Riesgo volcánico](volcanes.qmd)
+:::
+
+::: mrw-card-body
+![](/grd/images/hips2025.png){.mrw-card-img}
+
+Riesgo volcánico: instituciones nacionales de monitoreo, actividad reciente y recursos sobre amenaza volcánica en Colombia.
+:::
+:::
+::::::
+
 ![](/grd/hidrol-meteorologicas/images/hips2025.png){width="400"}
 
 ## [**Geológico**](https://www.preventionweb.net/drr-glossary/hips?combine=&hips_cluster_type=All&node_type&order=title&sort=desc)
