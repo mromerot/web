@@ -1,0 +1,318 @@
+---
+title: "PESTEL"
+format: html
+editor: visual
+---
+
+## Qué es el análisis PESTEL
+
+El análisis PESTEL (Político, Económico, Social, Tecnológico, Ecológico y Legal), conocido también como PESTLE en inglés, es una herramienta de análisis estratégico que examina el macroentorno de una organización, un proyecto o un sector, es decir, las fuerzas externas sobre las que no se tiene control directo pero que pueden condicionar sus resultados. A diferencia de otras herramientas que miran hacia adentro, el PESTEL se concentra exclusivamente en el contexto externo, explorándolo desde seis dimensiones complementarias:
+
+- **Político**: estabilidad de gobierno, políticas públicas, relaciones internacionales, procesos electorales y niveles de corrupción.
+- **Económico**: crecimiento, inflación, tasas de interés, tipo de cambio, desempleo y ciclos económicos.
+- **Social**: demografía, cultura, hábitos de consumo, nivel educativo y actitudes hacia el trabajo o la innovación.
+- **Tecnológico**: ritmo de innovación, automatización, acceso a infraestructura digital y disrupciones tecnológicas del sector.
+- **Ecológico**: normativa ambiental, disponibilidad de recursos naturales, riesgos climáticos y presión social por la sostenibilidad.
+- **Legal**: legislación laboral, protección de datos, propiedad intelectual, regulación sectorial y cumplimiento normativo.
+
+El origen de esta metodología suele atribuirse al académico Francis J. Aguilar, quien en 1967 propuso un marco de escaneo del entorno (ETPS, por sus siglas en inglés) centrado en factores Económicos, Técnicos, Políticos y Sociales. Con el tiempo, distintos autores incorporaron la dimensión Legal y, más adelante, la Ecológica, dando lugar al acrónimo PESTEL que se usa hoy. Su lógica es la misma que motivó el trabajo original de Aguilar: ninguna organización planea en el vacío, y buena parte de lo que determina su éxito o fracaso ocurre fuera de su control directo.
+
+Por su alcance, el PESTEL suele presentarse como el complemento externo natural de la matriz DOFA: mientras el DOFA distingue entre lo interno y lo externo, el PESTEL profundiza específicamente en el segundo eje, aportando insumos verificables para las categorías de oportunidades y amenazas, como se explica en el [artículo sobre la matriz DOFA](dofa.qmd).
+
+{{< video "https://www.youtube.com/watch?v=HVkfg1hlhns" >}} Análisis PESTEL: qué es y cómo funciona para entender el contexto externo.
+
+## Metodología para su construcción
+
+Construir un análisis PESTEL riguroso no consiste en llenar seis categorías con impresiones generales, sino en levantar evidencia verificable sobre el entorno. Un proceso típico incluye:
+
+1.  **Definir el objetivo y el horizonte temporal del análisis.** No es lo mismo evaluar el entorno de una organización a un año que proyectar el contexto de un sector a cinco o diez años; el horizonte determina qué tan especulativas pueden ser las fuentes.
+2.  **Identificar fuentes confiables por cada factor**: informes de organismos multilaterales y bancos centrales para lo económico, normativa y jurisprudencia para lo legal, estudios demográficos para lo social, vigilancia tecnológica para lo tecnológico, reportes ambientales para lo ecológico, y análisis de coyuntura para lo político.
+3.  **Recolectar hechos y tendencias, no opiniones**, registrando eventos concretos, cifras y cambios normativos verificables en lugar de afirmaciones genéricas como "el entorno económico es incierto".
+4.  **Evaluar la probabilidad y el impacto de cada factor** sobre el objetivo definido en el primer paso, distinguiendo entre tendencias estructurales de largo plazo y eventos coyunturales de corto plazo.
+5.  **Clasificar cada factor como oportunidad o amenaza** en función de si favorece o dificulta el logro de los objetivos, dejando explícito el razonamiento detrás de esa clasificación.
+6.  **Consolidar los hallazgos en una matriz o tablero** que facilite su actualización periódica, ya sea en un documento compartido, una plantilla digital o directamente como insumo de la matriz DOFA.
+
+Un error metodológico frecuente es tratar el PESTEL como un ejercicio de opinión colectiva desconectado de fuentes externas, lo que lo convierte en una lista de supuestos en lugar de un diagnóstico verificable. También es común confundir tendencias estructurales (por ejemplo, el envejecimiento poblacional) con eventos coyunturales (por ejemplo, un cambio de gobierno), lo que lleva a sobreestimar o subestimar su relevancia dentro de la planeación.
+
+{{< video "https://www.youtube.com/watch?v=6K1J8i30seo" >}} Qué es y cómo hacer un análisis PEST-PESTEL paso a paso, con ejemplos.
+
+## Uso de sus dimensiones en planificación
+
+El valor estratégico del PESTEL aparece cuando sus seis dimensiones dejan de ser un listado descriptivo y se convierten en insumo directo para la toma de decisiones. Esto ocurre principalmente por dos vías:
+
+- **Alimentando la matriz DOFA**: cada factor PESTEL clasificado como favorable se convierte en una posible oportunidad, y cada factor desfavorable en una posible amenaza. Por ejemplo, una nueva línea de cooperación internacional (factor político) puede registrarse como oportunidad, mientras un endurecimiento de la regulación ambiental (factor legal/ecológico) puede registrarse como amenaza. Esta conexión se desarrolla con más detalle en el [artículo sobre la matriz DOFA](dofa.qmd).
+- **Informando escenarios y planes de contingencia**: dado que varios factores PESTEL involucran incertidumbre de mediano y largo plazo (ciclos económicos, cambios regulatorios, disrupciones tecnológicas), es común usarlos como base para construir escenarios alternativos y definir qué señales de alerta temprana debe monitorear la organización.
+
+Al igual que con otras herramientas de diagnóstico, el PESTEL pierde valor si se hace una sola vez y se archiva. El macroentorno cambia de forma continua, por lo que actualizar el análisis periódicamente permite verificar si las oportunidades y amenazas identificadas siguen vigentes o si aparecieron factores nuevos que la planeación debe incorporar. Esto es especialmente relevante en la gestión de proyectos y en la gestión del riesgo, donde cambios normativos, económicos o climáticos pueden alterar rápidamente la viabilidad de lo planeado.
+
+Es también frecuente combinar el PESTEL con otras herramientas de análisis externo, como las cinco fuerzas de Porter (que profundizan en la dinámica competitiva de un sector específico) o el benchmarking (que compara el desempeño propio frente a referentes). El PESTEL aporta la mirada más amplia del macroentorno, mientras estas otras herramientas afinan el análisis a nivel de sector o de competencia directa.
+
+{{< video "https://www.youtube.com/watch?v=Cr2iYn-MOes" >}} Estrategia empresarial: el análisis PESTEL dentro del proceso de planificación.
+
+## Infografía: el análisis PESTEL en un vistazo
+
+```{=html}
+<div class="pestel-info">
+<div class="pi-header">
+<div class="pi-title">
+<h4>El análisis PESTEL</h4>
+<p>Seis lentes sobre el entorno externo</p>
+</div>
+<div class="pi-callout">
+Solo mira hacia <strong>afuera</strong>: fuerzas que la organización no controla, pero debe anticipar.
+</div>
+<div class="pi-note">Del macroentorno<br>al plan de acción.</div>
+</div>
+<div class="pi-quadrants">
+<div class="pi-card" style="--qc:#5b3ea6">
+<div class="pi-card-top">
+<span class="pi-icon"><svg viewBox="0 0 24 24"><path d="M6 3 V21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M6 4 H18 L15 7 L18 10 H6 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+<div>
+<div class="pi-card-label">Político</div>
+<div class="pi-card-tag">Gobierno &middot; institucionalidad</div>
+</div>
+</div>
+<p>Estabilidad de gobierno, políticas públicas y relaciones internacionales.</p>
+<div class="pi-example">Ej: nueva línea de cooperación internacional.</div>
+</div>
+<div class="pi-card" style="--qc:#1baf7a">
+<div class="pi-card-top">
+<span class="pi-icon"><svg viewBox="0 0 24 24"><path d="M4 20 H20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M6 20V14M11 20V9M16 20V5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+<div>
+<div class="pi-card-label">Económico</div>
+<div class="pi-card-tag">Crecimiento &middot; ciclos</div>
+</div>
+</div>
+<p>Inflación, tasas de interés, tipo de cambio y ciclos económicos.</p>
+<div class="pi-example">Ej: reducción sostenida de la tasa de interés.</div>
+</div>
+<div class="pi-card" style="--qc:#eda100">
+<div class="pi-card-top">
+<span class="pi-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 19c0-3 2.2-5.2 5-5.2s5 2.2 5 5.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="17.5" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M14.8 19c.2-2.3 1.7-4 3.6-4.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+<div>
+<div class="pi-card-label">Social</div>
+<div class="pi-card-tag">Demografía &middot; cultura</div>
+</div>
+</div>
+<p>Demografía, hábitos de consumo y actitudes frente a la innovación.</p>
+<div class="pi-example">Ej: envejecimiento acelerado de la población.</div>
+</div>
+<div class="pi-card" style="--qc:#2a78d6">
+<div class="pi-card-top">
+<span class="pi-icon"><svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 7V4M12 7V4M15 7V4M9 20v-3M12 20v-3M15 20v-3M7 9H4M7 12H4M7 15H4M20 9h-3M20 12h-3M20 15h-3" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+<div>
+<div class="pi-card-label">Tecnológico</div>
+<div class="pi-card-tag">Innovación &middot; disrupción</div>
+</div>
+</div>
+<p>Ritmo de innovación, automatización y disrupciones del sector.</p>
+<div class="pi-example">Ej: irrupción de una nueva tecnología sustituta.</div>
+</div>
+<div class="pi-card" style="--qc:#0d9488">
+<div class="pi-card-top">
+<span class="pi-icon"><svg viewBox="0 0 24 24"><path d="M20 4C10 4 4 10 4 18c8 0 14-6 14-14Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6.5 17.5C10 13.5 14 9.5 17.5 6.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+<div>
+<div class="pi-card-label">Ecológico</div>
+<div class="pi-card-tag">Ambiente &middot; recursos</div>
+</div>
+</div>
+<p>Normativa ambiental, recursos naturales y riesgos climáticos.</p>
+<div class="pi-example">Ej: restricción en el uso de un recurso hídrico clave.</div>
+</div>
+<div class="pi-card" style="--qc:#475569">
+<div class="pi-card-top">
+<span class="pi-icon"><svg viewBox="0 0 24 24"><path d="M12 3v18M7 21h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M4 7h6M14 7h6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M4 7l-2.6 5.2a2.6 2.6 0 0 0 5.2 0Z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M20 7l-2.6 5.2a2.6 2.6 0 0 0 5.2 0Z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+<div>
+<div class="pi-card-label">Legal</div>
+<div class="pi-card-tag">Normativa &middot; cumplimiento</div>
+</div>
+</div>
+<p>Legislación laboral, protección de datos y regulación sectorial.</p>
+<div class="pi-example">Ej: nueva ley de protección de datos personales.</div>
+</div>
+</div>
+<div class="pi-cross">
+<h5>Así alimenta cada factor la matriz DOFA</h5>
+<div class="pi-table-wrap">
+<table>
+<thead>
+<tr><th>Factor</th><th>Qué examina</th><th>Pregunta clave</th><th>Aporta al DOFA como</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="pi-chip"><i style="background:#5b3ea6"></i>Político</span></td>
+<td>Gobierno, políticas públicas, relaciones internacionales</td>
+<td>¿Qué decisiones de gobierno afectan mi objetivo?</td>
+<td>Oportunidad: nueva convocatoria de cooperación.</td>
+</tr>
+<tr>
+<td><span class="pi-chip"><i style="background:#1baf7a"></i>Económico</span></td>
+<td>Crecimiento, inflación, tasas, ciclos</td>
+<td>¿Cómo se mueve el dinero en mi entorno?</td>
+<td>Amenaza: contracción del presupuesto disponible.</td>
+</tr>
+<tr>
+<td><span class="pi-chip"><i style="background:#eda100"></i>Social</span></td>
+<td>Demografía, cultura, hábitos</td>
+<td>¿Cómo cambian las personas a las que sirvo?</td>
+<td>Oportunidad: mayor demanda por un servicio específico.</td>
+</tr>
+<tr>
+<td><span class="pi-chip"><i style="background:#2a78d6"></i>Tecnológico</span></td>
+<td>Innovación, automatización, disrupción</td>
+<td>¿Qué tecnología puede volver obsoleto lo actual?</td>
+<td>Amenaza: sustitución tecnológica del servicio actual.</td>
+</tr>
+<tr>
+<td><span class="pi-chip"><i style="background:#0d9488"></i>Ecológico</span></td>
+<td>Normativa ambiental, recursos, clima</td>
+<td>¿Qué presión ambiental afecta la operación?</td>
+<td>Amenaza: restricción normativa sobre un insumo clave.</td>
+</tr>
+<tr>
+<td><span class="pi-chip"><i style="background:#475569"></i>Legal</span></td>
+<td>Legislación, regulación, cumplimiento</td>
+<td>¿Qué obligación legal nueva debo cumplir?</td>
+<td>Oportunidad: marco regulatorio que favorece al sector.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="pi-flow">
+<div class="pi-flow-step"><span>1</span>Explorar cada factor con fuentes confiables</div>
+<div class="pi-arrow">&#8594;</div>
+<div class="pi-flow-step"><span>2</span>Registrar hechos y tendencias verificables</div>
+<div class="pi-arrow">&#8594;</div>
+<div class="pi-flow-step"><span>3</span>Evaluar probabilidad e impacto</div>
+<div class="pi-arrow">&#8594;</div>
+<div class="pi-flow-step"><span>4</span>Clasificar como oportunidad o amenaza en el DOFA</div>
+</div>
+<div class="pi-formula">
+<span>Político</span><i>+</i><span>Económico</span><i>+</i><span>Social</span><i>+</i><span>Tecnológico</span><i>+</i><span>Ecológico</span><i>+</i><span>Legal</span><i>=</i><strong>Diagnóstico externo para la planificación</strong>
+</div>
+<div class="pi-footnote">El PESTEL identifica el entorno; el DOFA lo convierte en decisiones.</div>
+</div>
+<style>
+.pestel-info{
+  --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+  font-family: inherit;
+  color: var(--ink);
+  background:#fcfcfb;
+  border:1px solid rgba(0,58,112,0.12);
+  border-radius:12px;
+  padding:0 0 22px 0;
+  margin:24px 0 8px 0;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,0.06);
+}
+.pestel-info h4, .pestel-info h5{ margin:0; }
+.pestel-info p{ margin:0; }
+.pi-header{
+  background:#003A70;
+  color:#fff;
+  padding:22px 24px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:16px;
+  justify-content:space-between;
+}
+.pi-title h4{ font-size:1.35rem; font-weight:900; letter-spacing:.2px; }
+.pi-title p{ font-size:.92rem; opacity:.9; margin-top:2px; }
+.pi-callout{
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:8px;
+  padding:10px 14px;
+  font-size:.85rem;
+  max-width:340px;
+  line-height:1.4;
+}
+.pi-note{
+  font-style:italic;
+  font-size:.82rem;
+  opacity:.85;
+  text-align:right;
+  line-height:1.3;
+  min-width:150px;
+}
+.pi-quadrants{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  padding:22px 24px 6px 24px;
+}
+.pi-card{
+  background:color-mix(in srgb, var(--qc) 7%, #fcfcfb);
+  border:1px solid color-mix(in srgb, var(--qc) 35%, transparent);
+  border-left:5px solid var(--qc);
+  border-radius:10px;
+  padding:14px 16px;
+}
+.pi-card-top{ display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.pi-icon{ color:var(--qc); flex:0 0 auto; }
+.pi-icon svg{ width:26px; height:26px; display:block; }
+.pi-card-label{ font-weight:800; font-size:1.02rem; color:var(--ink); }
+.pi-card-tag{ font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); font-weight:600; }
+.pi-card p{ font-size:.88rem; color:var(--ink-2); line-height:1.4; margin-bottom:6px; }
+.pi-example{ font-size:.8rem; color:var(--ink); background:rgba(255,255,255,0.6); border:1px dashed color-mix(in srgb, var(--qc) 45%, transparent); border-radius:6px; padding:6px 8px; }
+.pi-cross{ padding:18px 24px 4px 24px; }
+.pi-cross h5{ font-size:1rem; font-weight:800; color:#003A70; margin-bottom:10px; }
+.pi-table-wrap{ overflow-x:auto; }
+.pestel-info table{ width:100%; border-collapse:collapse; font-size:.85rem; }
+.pestel-info table th{ text-align:left; color:#fff; background:#003A70; padding:8px 10px; font-weight:700; white-space:nowrap; }
+.pestel-info table td{ padding:9px 10px; border-bottom:1px solid #e1e0d9; color:var(--ink-2); vertical-align:top; }
+.pestel-info table tr:last-child td{ border-bottom:none; }
+.pi-chip{ display:inline-flex; align-items:center; gap:5px; font-weight:800; color:var(--ink); white-space:nowrap; }
+.pi-chip i{ width:9px; height:9px; border-radius:50%; display:inline-block; }
+.pi-flow{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  gap:8px;
+  padding:20px 24px 4px 24px;
+}
+.pi-flow-step{
+  flex:1 1 150px;
+  background:#f3f6f9;
+  border:1px solid rgba(0,58,112,0.15);
+  border-radius:8px;
+  padding:10px 12px;
+  font-size:.82rem;
+  color:var(--ink-2);
+  font-weight:600;
+}
+.pi-flow-step span{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:20px; height:20px; border-radius:50%;
+  background:#003A70; color:#fff; font-size:.72rem; font-weight:800;
+  margin-right:6px;
+}
+.pi-arrow{ align-self:center; color:#003A70; font-weight:900; font-size:1.1rem; flex:0 0 auto; }
+.pi-formula{
+  margin:18px 24px 0 24px;
+  background:#f3f6f9;
+  border-radius:8px;
+  padding:12px 16px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  font-size:.85rem;
+}
+.pi-formula span{ background:#fff; border:1px solid rgba(0,58,112,0.2); border-radius:6px; padding:4px 9px; font-weight:700; color:#003A70; }
+.pi-formula i{ font-style:normal; color:var(--muted); font-weight:900; }
+.pi-formula strong{ color:var(--ink); }
+.pi-footnote{ margin:14px 24px 0 24px; font-size:.78rem; font-style:italic; color:var(--muted); }
+@media (max-width:900px){
+  .pi-quadrants{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:640px){
+  .pi-quadrants{ grid-template-columns:1fr; }
+  .pi-header{ flex-direction:column; align-items:flex-start; }
+  .pi-note{ text-align:left; }
+  .pi-arrow{ transform:rotate(90deg); }
+}
+</style>
+```
