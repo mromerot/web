@@ -4,6 +4,20 @@ format: html
 editor: visual
 ---
 
+## [Curso: Introduction to agent skills](https://anthropic.skilljar.com/introduction-to-agent-skills)
+
+## ¿Qué son los skills?
+
+- A skill is a markdown file that teaches Claude \[music\] how to do something once, and Claude applies that knowledge automatically whenever it's relevant.
+- Agent skills are folders of instructions, scripts, and resources that agents can discover and use to do things more accurately and efficiently.
+- The skill MD file: The description is how Claw decides whether to use the skill.
+- Personal skills lives in the home directory cloud/skills and follow you across all your project.
+- Skills work best for specialized knowledge that applies to specific tasks, code review standards your team follows, commit message formats that you prefer, brand guidelines of your organization.
+
+{{< video "https://youtu.be/bjdBVZa66oU?si=tTGdTsVnjZkCppDM" >}}
+
+- Lista de videos completa. [*Link*](https://www.youtube.com/watch?v=bjdBVZa66oU&list=PLmWCw1CzcFim_hkruZSlABOUOAAQ5JMyo).
+
 ## The Complete Guide to Building Skills for Claude
 
 Esta presentacion cubre la guia completa para construir Skills para Claude, incluyendo fundamentos, planificacion, pruebas, distribucion, patrones y recursos.

@@ -72,6 +72,8 @@ website:
                 href: grd/hidrol-meteorologicas/inundaciones.qmd
               - text: "Inundaciones repentinas"
                 href: grd/hidrol-meteorologicas/inundaciones-repentinas.qmd
+              - text: "Olas de calor"
+                href: grd/hidrol-meteorologicas/olasdecalor.qmd
           - section: "Amenazas geológicas"
             href: grd/geologicas/index.qmd
             contents:
@@ -131,6 +133,8 @@ website:
             href: gestiondeproyectos/projectmanagement.qmd
           - text: "Impacto"
             href: gestiondeproyectos/impacto.qmd
+          - text: "DOFA"
+            href: gestiondeproyectos/dofa.qmd
       # aqui viene la seccion de ciencia y tecnologia
       - section: "Ciencia y tecnología"
         contents:

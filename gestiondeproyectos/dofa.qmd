@@ -1,0 +1,288 @@
+---
+title: "DOFA"
+format: html
+editor: visual
+---
+
+## Qué es la matriz DOFA
+
+La matriz DOFA (Debilidades, Oportunidades, Fortalezas y Amenazas), conocida también como FODA en varios países de habla hispana y como SWOT en inglés (*Strengths, Weaknesses, Opportunities, Threats*), es una herramienta de análisis estratégico que organiza en cuatro categorías los factores que afectan a una organización, un proyecto o incluso una persona. Su utilidad principal es distinguir entre dos ejes: el origen del factor (interno o externo) y su efecto (favorable o desfavorable).
+
+- **Fortalezas**: capacidades y recursos internos que dan ventaja frente a los objetivos planteados.
+- **Debilidades**: limitaciones o carencias internas que dificultan alcanzar esos objetivos.
+- **Oportunidades**: condiciones externas favorables que se pueden aprovechar.
+- **Amenazas**: condiciones externas desfavorables que pueden afectar negativamente los resultados.
+
+Al cruzar estos dos ejes (interno/externo y favorable/desfavorable) se obtiene una matriz de cuatro cuadrantes que permite pasar de un simple diagnóstico a una lectura estructurada de la situación de partida antes de planear.
+
+El origen de esta metodología suele atribuirse a los trabajos de planeación corporativa realizados en el Stanford Research Institute durante los años sesenta y setenta, en los que investigadores como Albert Humphrey participaron en el desarrollo de modelos para evaluar por qué fallaba la planeación corporativa de largo plazo en las empresas. Desde entonces, la herramienta se popularizó por su simplicidad y se extendió mucho más allá del ámbito empresarial: hoy se usa en planeación institucional, gestión de proyectos, políticas públicas, procesos de emprendimiento e incluso en ejercicios de desarrollo personal o profesional.
+
+Parte de la popularidad de la matriz DOFA radica en que no exige herramientas sofisticadas ni conocimientos técnicos avanzados: basta con información confiable sobre el contexto interno y externo, y un ejercicio disciplinado de análisis colectivo. Sin embargo, esa misma simplicidad es también su principal riesgo. Cuando se construye de forma apresurada o sin evidencia, la matriz puede convertirse en una lista de opiniones subjetivas en vez de un insumo riguroso para la toma de decisiones. Por eso, buena parte de la literatura sobre el tema insiste en que la DOFA no es un fin en sí misma, sino un punto de partida que debe alimentarse con información verificable y complementarse con otras herramientas de análisis, como se aborda en la siguiente sección.
+
+{{< video "https://www.youtube.com/watch?v=NJqAEWgtjl0" >}} Qué es la Matriz DOFA: características, factores y ejemplos.
+
+## Metodologías y herramientas para su construcción
+
+Construir una matriz DOFA rigurosa implica varios pasos que van más allá de llenar cuatro casillas. Un proceso típico incluye:
+
+1.  **Definir el objetivo y el alcance del análisis.** No es lo mismo analizar una organización completa que un proyecto específico o una línea de negocio; el alcance determina qué información es relevante.
+2.  **Levantar información sobre el entorno interno**, para identificar fortalezas y debilidades: capacidades del equipo, recursos financieros, procesos, tecnología, cultura organizacional. Aquí son útiles auditorías internas, entrevistas con el equipo y revisión de indicadores de desempeño.
+3.  **Levantar información sobre el entorno externo**, para identificar oportunidades y amenazas. Esta es la parte donde suelen apoyarse otras metodologías de análisis estratégico:
+    -   **Análisis PESTEL**, que examina factores Políticos, Económicos, Sociales, Tecnológicos, Ecológicos y Legales del macroentorno.
+    -   **Las cinco fuerzas de Porter**, para entender la competencia, el poder de negociación de proveedores y clientes, y las barreras de entrada o sustitución en un sector.
+    -   **Benchmarking**, para comparar el desempeño propio con el de referentes o competidores.
+4.  **Recolectar y depurar factores mediante trabajo colectivo**, típicamente talleres o sesiones de lluvia de ideas con las personas que conocen de primera mano la operación y el contexto, evitando que la matriz refleje solo la perspectiva de quien la elabora.
+5.  **Priorizar y validar los factores**, descartando duplicados o elementos poco relevantes, y asegurando que cada factor esté redactado de forma específica y verificable en vez de como una afirmación genérica.
+6.  **Organizar la información en la matriz**, ya sea en el formato clásico de cuatro cuadrantes o en plantillas digitales (Miro, Canva, hojas de cálculo) que facilitan el trabajo colaborativo y la actualización periódica.
+
+Un error metodológico frecuente es confundir hechos con opiniones: por ejemplo, registrar "el equipo es bueno" en lugar de "el equipo cuenta con certificación en gestión de proyectos" o "el 80% del personal tiene más de cinco años de experiencia en el área". Mientras más específicos y verificables sean los factores, más útil será la matriz para las etapas siguientes del proceso de planeación.
+
+Vale la pena anotar que la matriz DOFA, por sí sola, es una herramienta descriptiva: organiza la información pero no genera automáticamente decisiones. Su verdadero valor estratégico aparece cuando se cruzan sus dimensiones para formular líneas de acción concretas, que es el tema de la siguiente sección.
+
+{{< video "https://www.youtube.com/watch?v=WnvVNmio1OI" >}} Qué es y cómo se hace un análisis FODA en 9 pasos, con ejemplo práctico.
+
+## Uso de sus dimensiones en planificación
+
+El paso de la matriz DOFA a un ejercicio de planificación estratégica ocurre cuando se cruzan sistemáticamente sus cuatro dimensiones, dando lugar a lo que suele llamarse matriz DOFA cruzada o matriz TOWS. En lugar de leer cada cuadrante por separado, se combinan de dos en dos para formular cuatro tipos de estrategia:
+
+-   **Estrategias FO (Fortalezas-Oportunidades)**: estrategias ofensivas o de crecimiento, que usan las fortalezas internas para aprovechar oportunidades externas. Por ejemplo, usar una capacidad técnica consolidada para entrar a un mercado o convocatoria que recién se abre.
+-   **Estrategias DO (Debilidades-Oportunidades)**: estrategias de reorientación, que buscan superar debilidades internas aprovechando oportunidades externas. Por ejemplo, aliarse con un socio externo para suplir una capacidad que la organización no tiene, mientras se aprovecha una oportunidad de financiación.
+-   **Estrategias FA (Fortalezas-Amenazas)**: estrategias defensivas, que usan las fortalezas internas para reducir el impacto de amenazas externas. Por ejemplo, apoyarse en una reputación institucional sólida para enfrentar un contexto regulatorio más exigente.
+-   **Estrategias DA (Debilidades-Amenazas)**: estrategias de supervivencia, orientadas a minimizar debilidades internas y evitar amenazas externas simultáneamente. Suelen ser las más difíciles de resolver y muchas veces implican decisiones de reducción de alcance, cierre de líneas de trabajo o búsqueda urgente de recursos.
+
+Esta lectura cruzada convierte un diagnóstico estático en un insumo directamente utilizable para la planificación: cada estrategia resultante puede traducirse en objetivos, indicadores y responsables dentro de un plan estratégico, un plan de proyecto o un plan de acción institucional. Además, permite priorizar: no todas las combinaciones son igual de relevantes, y los equipos de planeación suelen enfocar sus recursos en las estrategias FO (para crecer) y DA (para no comprometer la viabilidad de la organización), sin descuidar del todo las DO y FA.
+
+Otro uso frecuente en planificación es el seguimiento en el tiempo: dado que fortalezas, debilidades, oportunidades y amenazas cambian, actualizar la matriz DOFA periódicamente permite verificar si las estrategias definidas siguen siendo pertinentes o si el contexto exige ajustarlas. Esto es particularmente relevante en la gestión de proyectos y en la gestión de riesgos, donde el entorno externo (regulatorio, financiero, social) puede modificarse con rapidez y donde una matriz desactualizada puede llevar a mantener estrategias que ya no responden a la realidad.
+
+{{< video "https://www.youtube.com/watch?v=7FuIjOPbMH4" >}} Matriz FODA y formulación de las estrategias correspondientes al análisis.
+
+## Infografía: la matriz DOFA en un vistazo
+
+```{=html}
+<div class="dofa-info">
+<div class="di-header">
+<div class="di-title">
+<h4>La matriz DOFA</h4>
+<p>De cuatro factores a estrategias accionables</p>
+</div>
+<div class="di-callout">
+<strong>Interno</strong> = Fortalezas y Debilidades &nbsp;&middot;&nbsp; <strong>Externo</strong> = Oportunidades y Amenazas
+</div>
+<div class="di-note">Mismos cuatro factores,<br>mejores decisiones.</div>
+</div>
+<div class="di-quadrants">
+<div class="di-card" style="--qc:#1baf7a">
+<div class="di-card-top">
+<span class="di-icon"><svg viewBox="0 0 24 24"><path d="M12 2 L20 6 V12 C20 17 16.5 20.5 12 22 C7.5 20.5 4 17 4 12 V6 Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12.5 L11 15 L16 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<div>
+<div class="di-card-label">Fortalezas</div>
+<div class="di-card-tag">Interno &middot; favorable</div>
+</div>
+</div>
+<p>Capacidades y recursos propios que dan ventaja frente a los objetivos.</p>
+<div class="di-example">Ej: equipo certificado en gestión de proyectos.</div>
+</div>
+<div class="di-card" style="--qc:#2a78d6">
+<div class="di-card-top">
+<span class="di-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg></span>
+<div>
+<div class="di-card-label">Oportunidades</div>
+<div class="di-card-tag">Externo &middot; favorable</div>
+</div>
+</div>
+<p>Condiciones del entorno que se pueden aprovechar para avanzar.</p>
+<div class="di-example">Ej: nueva línea de financiación internacional.</div>
+</div>
+<div class="di-card" style="--qc:#eda100">
+<div class="di-card-top">
+<span class="di-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7 V14 M9 11.5 L12 14.5 L15 11.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<div>
+<div class="di-card-label">Debilidades</div>
+<div class="di-card-tag">Interno &middot; desfavorable</div>
+</div>
+</div>
+<p>Carencias o limitaciones internas que frenan los objetivos.</p>
+<div class="di-example">Ej: falta de personal especializado en el área.</div>
+</div>
+<div class="di-card" style="--qc:#e34948">
+<div class="di-card-top">
+<span class="di-icon"><svg viewBox="0 0 24 24"><path d="M12 3 L22 20 H2 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><line x1="12" y1="9" x2="12" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="currentColor"/></svg></span>
+<div>
+<div class="di-card-label">Amenazas</div>
+<div class="di-card-tag">Externo &middot; desfavorable</div>
+</div>
+</div>
+<p>Condiciones del entorno que pueden afectar negativamente los resultados.</p>
+<div class="di-example">Ej: cambios regulatorios que restringen la operación.</div>
+</div>
+</div>
+<div class="di-cross">
+<h5>Así se cruzan sus dimensiones</h5>
+<div class="di-table-wrap">
+<table>
+<thead>
+<tr><th>Cruce</th><th>Tipo de estrategia</th><th>Pregunta que responde</th><th>Ejemplo</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="di-chip"><i style="background:#1baf7a"></i><i style="background:#2a78d6"></i>FO</span></td>
+<td>Ofensiva</td>
+<td>¿Cómo uso lo que tengo para crecer?</td>
+<td>Usar la certificación del equipo para postular a la nueva convocatoria.</td>
+</tr>
+<tr>
+<td><span class="di-chip"><i style="background:#eda100"></i><i style="background:#2a78d6"></i>DO</span></td>
+<td>Reorientación</td>
+<td>¿Cómo supero mis carencias con lo que ofrece el entorno?</td>
+<td>Aliarse con un socio externo para acceder a la financiación.</td>
+</tr>
+<tr>
+<td><span class="di-chip"><i style="background:#1baf7a"></i><i style="background:#e34948"></i>FA</span></td>
+<td>Defensiva</td>
+<td>¿Cómo uso lo que tengo para protegerme?</td>
+<td>Usar la reputación institucional para enfrentar el nuevo marco regulatorio.</td>
+</tr>
+<tr>
+<td><span class="di-chip"><i style="background:#eda100"></i><i style="background:#e34948"></i>DA</span></td>
+<td>Supervivencia</td>
+<td>¿Cómo evito que mis carencias y el entorno se combinen en mi contra?</td>
+<td>Reducir el alcance del proyecto mientras se consigue personal especializado.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="di-flow">
+<div class="di-flow-step"><span>1</span>Diagnóstico interno y externo</div>
+<div class="di-arrow">&#8594;</div>
+<div class="di-flow-step"><span>2</span>Listar y priorizar factores (F&middot;O&middot;D&middot;A)</div>
+<div class="di-arrow">&#8594;</div>
+<div class="di-flow-step"><span>3</span>Cruzar dimensiones (FO&middot;DO&middot;FA&middot;DA)</div>
+<div class="di-arrow">&#8594;</div>
+<div class="di-flow-step"><span>4</span>Plan de acción con objetivos y responsables</div>
+</div>
+<div class="di-formula">
+<span>Fortalezas</span><i>+</i><span>Oportunidades</span><i>+</i><span>Debilidades</span><i>+</i><span>Amenazas</span><i>=</i><strong>Estrategias accionables para la planificación</strong>
+</div>
+<div class="di-footnote">Sin cruzar las dimensiones, la matriz DOFA es solo un diagnóstico; el cruce es lo que la convierte en planificación.</div>
+</div>
+<style>
+.dofa-info{
+  --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+  font-family: inherit;
+  color: var(--ink);
+  background:#fcfcfb;
+  border:1px solid rgba(0,58,112,0.12);
+  border-radius:12px;
+  padding:0 0 22px 0;
+  margin:24px 0 8px 0;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,0.06);
+}
+.dofa-info h4, .dofa-info h5{ margin:0; }
+.dofa-info p{ margin:0; }
+.di-header{
+  background:#003A70;
+  color:#fff;
+  padding:22px 24px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:16px;
+  justify-content:space-between;
+}
+.di-title h4{ font-size:1.35rem; font-weight:900; letter-spacing:.2px; }
+.di-title p{ font-size:.92rem; opacity:.9; margin-top:2px; }
+.di-callout{
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:8px;
+  padding:10px 14px;
+  font-size:.85rem;
+  max-width:340px;
+  line-height:1.4;
+}
+.di-note{
+  font-style:italic;
+  font-size:.82rem;
+  opacity:.85;
+  text-align:right;
+  line-height:1.3;
+  min-width:150px;
+}
+.di-quadrants{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  padding:22px 24px 6px 24px;
+}
+.di-card{
+  background:color-mix(in srgb, var(--qc) 7%, #fcfcfb);
+  border:1px solid color-mix(in srgb, var(--qc) 35%, transparent);
+  border-left:5px solid var(--qc);
+  border-radius:10px;
+  padding:14px 16px;
+}
+.di-card-top{ display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.di-icon{ color:var(--qc); flex:0 0 auto; }
+.di-icon svg{ width:26px; height:26px; display:block; }
+.di-card-label{ font-weight:800; font-size:1.02rem; color:var(--ink); }
+.di-card-tag{ font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); font-weight:600; }
+.di-card p{ font-size:.88rem; color:var(--ink-2); line-height:1.4; margin-bottom:6px; }
+.di-example{ font-size:.8rem; color:var(--ink); background:rgba(255,255,255,0.6); border:1px dashed color-mix(in srgb, var(--qc) 45%, transparent); border-radius:6px; padding:6px 8px; }
+.di-cross{ padding:18px 24px 4px 24px; }
+.di-cross h5{ font-size:1rem; font-weight:800; color:#003A70; margin-bottom:10px; }
+.di-table-wrap{ overflow-x:auto; }
+.dofa-info table{ width:100%; border-collapse:collapse; font-size:.85rem; }
+.dofa-info table th{ text-align:left; color:#fff; background:#003A70; padding:8px 10px; font-weight:700; white-space:nowrap; }
+.dofa-info table td{ padding:9px 10px; border-bottom:1px solid #e1e0d9; color:var(--ink-2); vertical-align:top; }
+.dofa-info table tr:last-child td{ border-bottom:none; }
+.di-chip{ display:inline-flex; align-items:center; gap:5px; font-weight:800; color:var(--ink); white-space:nowrap; }
+.di-chip i{ width:9px; height:9px; border-radius:50%; display:inline-block; }
+.di-flow{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  gap:8px;
+  padding:20px 24px 4px 24px;
+}
+.di-flow-step{
+  flex:1 1 150px;
+  background:#f3f6f9;
+  border:1px solid rgba(0,58,112,0.15);
+  border-radius:8px;
+  padding:10px 12px;
+  font-size:.82rem;
+  color:var(--ink-2);
+  font-weight:600;
+}
+.di-flow-step span{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:20px; height:20px; border-radius:50%;
+  background:#003A70; color:#fff; font-size:.72rem; font-weight:800;
+  margin-right:6px;
+}
+.di-arrow{ align-self:center; color:#003A70; font-weight:900; font-size:1.1rem; flex:0 0 auto; }
+.di-formula{
+  margin:18px 24px 0 24px;
+  background:#f3f6f9;
+  border-radius:8px;
+  padding:12px 16px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  font-size:.85rem;
+}
+.di-formula span{ background:#fff; border:1px solid rgba(0,58,112,0.2); border-radius:6px; padding:4px 9px; font-weight:700; color:#003A70; }
+.di-formula i{ font-style:normal; color:var(--muted); font-weight:900; }
+.di-formula strong{ color:var(--ink); }
+.di-footnote{ margin:14px 24px 0 24px; font-size:.78rem; font-style:italic; color:var(--muted); }
+@media (max-width:640px){
+  .di-quadrants{ grid-template-columns:1fr; }
+  .di-header{ flex-direction:column; align-items:flex-start; }
+  .di-note{ text-align:left; }
+  .di-arrow{ transform:rotate(90deg); }
+}
+</style>
+```
