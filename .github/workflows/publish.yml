@@ -1,0 +1,67 @@
+name: Render y desplegar sitio Quarto
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: quarto-publish
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  render-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Instalar Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Instalar R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Instalar dependencias de R (sf, geodata, leaflet, ...)
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::sf
+            any::dplyr
+            any::geodata
+            any::leaflet
+            any::rmapshaper
+
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias de Python
+        run: pip install jupyter pandas plotly openpyxl requests
+
+      # Evita volver a descargar los límites administrativos de GADM
+      # (Colombia, niveles 1 y 2) en cada ejecución.
+      - name: Cache de datos GADM
+        uses: actions/cache@v4
+        with:
+          path: datascience/mapas/data/gadm
+          key: gadm-colombia-v4.1
+
+      - name: Render del sitio
+        run: quarto render
+
+      - name: Commit y push del sitio renderizado
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: render sitio con Quarto [skip ci]"
+          file_pattern: "docs/** _freeze/**"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"

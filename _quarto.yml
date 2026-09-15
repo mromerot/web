@@ -2,12 +2,16 @@
 project:
   type: website
   output-dir: docs
+  execute-dir: file
   resources:
     - datascience/mapas/data/topojson.min.js
     - datascience/mapas/data/maplibre-gl.js
     - datascience/mapas/data/maplibre-gl.css
     - datascience/mapas/data/pmtiles.js
     - datascience/mapas/data/colombia.pmtiles
+
+execute:
+  freeze: auto
 
 website:
   title: "Inicio"
