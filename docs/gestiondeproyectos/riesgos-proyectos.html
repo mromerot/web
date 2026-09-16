@@ -792,6 +792,8 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   <ul class="collapse">
   <li><a href="#qué-es-la-matriz-de-riesgos-de-un-proyecto" id="toc-qué-es-la-matriz-de-riesgos-de-un-proyecto" class="nav-link active" data-scroll-target="#qué-es-la-matriz-de-riesgos-de-un-proyecto">Qué es la matriz de riesgos de un proyecto</a></li>
   <li><a href="#cómo-se-construye-paso-a-paso" id="toc-cómo-se-construye-paso-a-paso" class="nav-link" data-scroll-target="#cómo-se-construye-paso-a-paso">Cómo se construye paso a paso</a></li>
+  <li><a href="#cómo-aborda-el-pmbok-la-gestión-de-riesgos" id="toc-cómo-aborda-el-pmbok-la-gestión-de-riesgos" class="nav-link" data-scroll-target="#cómo-aborda-el-pmbok-la-gestión-de-riesgos">Cómo aborda el PMBOK la gestión de riesgos</a></li>
+  <li><a href="#principales-riesgos-por-categoría-en-un-proyecto-de-desarrollo" id="toc-principales-riesgos-por-categoría-en-un-proyecto-de-desarrollo" class="nav-link" data-scroll-target="#principales-riesgos-por-categoría-en-un-proyecto-de-desarrollo">Principales riesgos por categoría en un proyecto de desarrollo</a></li>
   <li><a href="#hay-varios-tipos-de-matriz-de-riesgo" id="toc-hay-varios-tipos-de-matriz-de-riesgo" class="nav-link" data-scroll-target="#hay-varios-tipos-de-matriz-de-riesgo">¿Hay varios tipos de matriz de riesgo?</a></li>
   <li><a href="#qué-decisiones-se-toman-con-la-matriz" id="toc-qué-decisiones-se-toman-con-la-matriz" class="nav-link" data-scroll-target="#qué-decisiones-se-toman-con-la-matriz">Qué decisiones se toman con la matriz</a></li>
   <li><a href="#ejemplo-matriz-de-riesgos-de-un-proyecto-de-reducción-del-riesgo-de-inundación" id="toc-ejemplo-matriz-de-riesgos-de-un-proyecto-de-reducción-del-riesgo-de-inundación" class="nav-link" data-scroll-target="#ejemplo-matriz-de-riesgos-de-un-proyecto-de-reducción-del-riesgo-de-inundación">Ejemplo: matriz de riesgos de un proyecto de reducción del riesgo de inundación</a></li>
@@ -837,6 +839,157 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <li><strong>Calcular el nivel de riesgo y ubicarlo en la matriz.</strong> El nivel de riesgo resulta, en su forma más simple, de multiplicar probabilidad por impacto (P × I), y ese puntaje determina en qué celda de la matriz —y en qué zona de color— queda cada riesgo.</li>
 <li><strong>Priorizar y definir la estrategia de respuesta.</strong> Con los riesgos ya ubicados en la matriz, se priorizan los de las zonas más altas y se les asigna una estrategia: <strong>evitar</strong> (eliminar la causa, incluso rediseñando el proyecto), <strong>mitigar</strong> (reducir la probabilidad o el impacto), <strong>transferir</strong> (trasladarlo a un tercero, por ejemplo mediante un seguro o una cláusula contractual) o <strong>aceptar</strong> (asumirlo conscientemente, a veces con una reserva de contingencia). El PMBOK añade una quinta opción, <strong>escalar</strong>, para los riesgos cuya magnitud excede el nivel de decisión del equipo del proyecto y deben subir a un comité directivo o al financiador.</li>
 <li><strong>Asignar responsable y monitorear.</strong> Cada riesgo priorizado necesita un dueño (no un comité difuso) y una fecha de revisión. La matriz de riesgos es un documento vivo: se actualiza en cada hito importante del proyecto, no solo al inicio, porque probabilidades e impactos cambian a medida que el proyecto avanza y el contexto se mueve.</li>
+</ol>
+<section id="qué-significa-en-la-práctica-probabilidad-de-que-ocurra" class="level3">
+<h3 class="anchored" data-anchor-id="qué-significa-en-la-práctica-probabilidad-de-que-ocurra">Qué significa, en la práctica, “probabilidad de que ocurra”</h3>
+<p>El punto 3 merece detenerse, porque “probabilidad” es la variable que con más frecuencia se califica mal: se confunde con una intuición (“me parece poco probable”) en vez de tratarse como una estimación que debe poder justificarse. En la práctica, esa estimación se construye de dos maneras, según la información disponible.</p>
+<p>Cuando existe información histórica suficiente —un proyecto similar ya ejecutado, series climáticas, indicadores de ejecución presupuestal de años anteriores—, la probabilidad puede estimarse de forma <strong>frecuentista</strong>: qué proporción de casos comparables terminó materializando ese riesgo. Por ejemplo, si de diez proyectos de obra civil ejecutados por una misma entidad en los últimos cinco años, seis sufrieron retrasos por temporada de lluvias, la probabilidad de referencia para ese riesgo ronda el 60 %, no una impresión subjetiva.</p>
+<p>Cuando no hay datos históricos suficientes —lo más común en riesgos institucionales, políticos o sociales—, la probabilidad se estima mediante <strong>juicio experto estructurado</strong>: se le pide a varias personas con conocimiento directo del proyecto o del contexto que califiquen el riesgo de forma independiente, se contrastan esas calificaciones y se discuten los desacuerdos hasta llegar a una estimación de consenso (una versión simplificada del método Delphi). Lo importante no es que el número sea exacto, sino que quede documentado <em>en qué se basó</em> esa estimación, para poder revisarla cuando la matriz se actualice.</p>
+<p>En cualquiera de los dos casos, conviene anclar la escala cualitativa a un rango numérico aproximado, de modo que “probable” signifique lo mismo para todo el equipo:</p>
+<table class="table-striped caption-top table">
+<caption>Ejemplo de escala de probabilidad calibrada con rangos numéricos</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nivel</th>
+<th>Descriptor</th>
+<th>Probabilidad estimada</th>
+<th>Cómo se sustenta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Raro</td>
+<td>Menor al 10 %</td>
+<td>No hay antecedentes conocidos; el riesgo es teóricamente posible</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Improbable</td>
+<td>Entre 10 % y 30 %</td>
+<td>Ha ocurrido de forma aislada en proyectos comparables</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Posible</td>
+<td>Entre 30 % y 50 %</td>
+<td>Existen antecedentes recientes o condiciones que lo favorecen</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Probable</td>
+<td>Entre 50 % y 70 %</td>
+<td>Ha ocurrido en la mayoría de los casos comparables recientes</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Casi certero</td>
+<td>Mayor al 70 %</td>
+<td>Las condiciones que lo generan ya están presentes en el proyecto</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="cómo-aborda-el-pmbok-la-gestión-de-riesgos" class="level2">
+<h2 class="anchored" data-anchor-id="cómo-aborda-el-pmbok-la-gestión-de-riesgos">Cómo aborda el PMBOK la gestión de riesgos</h2>
+<p>El PMBOK (<em>Project Management Body of Knowledge</em>), la guía de estándares del Project Management Institute (PMI), es probablemente la referencia más citada en gestión de riesgos de proyectos, y buena parte del vocabulario usado en las secciones anteriores —registro de riesgos, matriz de probabilidad e impacto, estrategias de respuesta— proviene directamente de ella. Vale la pena precisar, sin embargo, que el PMBOK ha cambiado de enfoque entre sus dos ediciones más recientes.</p>
+<p>La <strong>sexta edición</strong> (2017) trata la gestión de riesgos como un área de conocimiento independiente, “Gestión de los Riesgos del Proyecto”, organizada en siete procesos secuenciales: planificar la gestión de riesgos, identificar los riesgos, realizar el análisis cualitativo de riesgos, realizar el análisis cuantitativo de riesgos, planificar la respuesta a los riesgos, implementar la respuesta a los riesgos, y monitorear los riesgos. La matriz de probabilidad e impacto es, dentro de este esquema, la herramienta central del tercer proceso —el análisis cualitativo—, y se complementa con dos artefactos que van más allá de la matriz: la <strong>estructura de desglose de riesgos</strong> (RBS, por sus siglas en inglés), que organiza las categorías de riesgo de forma jerárquica en vez de como una lista plana, y el <strong>registro de riesgos</strong>, que documenta cada riesgo individual con su descripción, causa, categoría, calificación, dueño y estrategia de respuesta a lo largo de todo el proyecto.</p>
+<p>La <strong>séptima edición</strong> (2021) da un giro: elimina las áreas de conocimiento y los procesos secuenciales, y organiza la guía en ocho “dominios de desempeño”. La gestión de riesgos queda absorbida por el dominio de <strong>incertidumbre</strong> (<em>Uncertainty Performance Domain</em>), que es deliberadamente más amplio que el riesgo tradicional: no solo cubre eventos discretos con una probabilidad estimable, sino también la ambigüedad (cuando no está claro qué está pasando o qué significa), la complejidad (cuando hay demasiadas partes interconectadas para predecir el comportamiento del sistema) y la volatilidad del entorno del proyecto —una forma de reconocer que no todo lo que puede afectar a un proyecto de desarrollo cabe en una fila de una matriz de probabilidad e impacto—.</p>
+<p>Dos conceptos del PMBOK, presentes en ambas ediciones, son especialmente útiles para un proyecto de desarrollo y no siempre se explicitan en la matriz:</p>
+<ul>
+<li><strong>Riesgos individuales frente al riesgo global del proyecto.</strong> El PMBOK distingue entre los riesgos puntuales que aparecen en la matriz (un retraso, un sobrecosto) y el <strong>riesgo global del proyecto</strong> (<em>overall project risk</em>): el efecto acumulado de la incertidumbre sobre el proyecto como un todo, que puede ser alto incluso si ningún riesgo individual califica como extremo, simplemente porque hay muchos riesgos moderados actuando a la vez. Es la misma lógica que usa el SORT del Banco Mundial para calificar una operación completa (ver la sección siguiente).</li>
+<li><strong>Riesgos positivos y negativos.</strong> El PMBOK no limita la matriz a las amenazas: también contempla <strong>oportunidades</strong>, es decir, eventos inciertos que, de ocurrir, beneficiarían al proyecto (por ejemplo, que un insumo baje de precio o que una comunidad se vincule como aliada más allá de lo previsto). Frente a una amenaza, las estrategias son evitar, mitigar, transferir o aceptar; frente a una oportunidad, sus equivalentes simétricos son <strong>explotar</strong> (asegurar que ocurra), <strong>mejorar</strong> (aumentar su probabilidad o su efecto positivo), <strong>compartir</strong> (asociarse con un tercero mejor posicionado para aprovecharla) o <strong>aceptar</strong> (no actuar activamente, pero estar atento si aparece).</li>
+</ul>
+</section>
+<section id="principales-riesgos-por-categoría-en-un-proyecto-de-desarrollo" class="level2">
+<h2 class="anchored" data-anchor-id="principales-riesgos-por-categoría-en-un-proyecto-de-desarrollo">Principales riesgos por categoría en un proyecto de desarrollo</h2>
+<p>La siguiente lista retoma las categorías del paso 2 y propone, para cada una, cinco riesgos típicos de un proyecto de desarrollo. No pretende ser exhaustiva —cada proyecto tiene los suyos—, pero sirve como lista de verificación de partida al construir el registro de riesgos.</p>
+<p><strong>Técnicos</strong></p>
+<ol type="1">
+<li>Diseños de ingeniería incompletos o con errores que obligan a rediseñar durante la ejecución.</li>
+<li>Tecnología o método constructivo seleccionado sin experiencia previa demostrada en el contexto local.</li>
+<li>Especificaciones técnicas incompatibles con la normativa técnica vigente (sismorresistencia, ambiental, sanitaria).</li>
+<li>Estudios previos de suelos, hidrología o topografía que subestiman las condiciones reales del sitio.</li>
+<li>Obsolescencia del equipo o del sistema adquirido antes de terminar de implementarlo.</li>
+</ol>
+<p><strong>Financieros</strong></p>
+<ol type="1">
+<li>Sobrecostos por errores en la estimación inicial del presupuesto.</li>
+<li>Desembolsos del financiador más lentos de lo previsto, que generan problemas de liquidez.</li>
+<li>Variación del tipo de cambio en insumos o equipos importados.</li>
+<li>Recortes presupuestales de la entidad ejecutora por cambios en las prioridades fiscales.</li>
+<li>Incremento no previsto en el costo de materiales o de mano de obra.</li>
+</ol>
+<p><strong>Operativos</strong></p>
+<ol type="1">
+<li>Retrasos en los procesos de contratación de obras, bienes o servicios.</li>
+<li>Rotación alta del personal clave del equipo ejecutor.</li>
+<li>Fallas logísticas para transportar materiales o equipos a zonas de difícil acceso.</li>
+<li>Deficiente coordinación entre las entidades corresponsables de distintos componentes.</li>
+<li>Capacidad insuficiente del contratista o del operador para cumplir el cronograma pactado.</li>
+</ol>
+<p><strong>Ambientales</strong></p>
+<ol type="1">
+<li>Impactos no previstos sobre ecosistemas sensibles o áreas protegidas cercanas a las obras.</li>
+<li>Eventos climáticos extremos (lluvias intensas, sequías) que afectan el cronograma o la infraestructura.</li>
+<li>Generación de residuos o vertimientos que incumplen la normativa ambiental vigente.</li>
+<li>Necesidad de licencias o permisos ambientales adicionales no contemplados en la planeación inicial.</li>
+<li>Supuestos de diseño (por ejemplo, niveles de inundación) que quedan desactualizados frente al cambio climático.</li>
+</ol>
+<p><strong>Sociales</strong></p>
+<ol type="1">
+<li>Oposición de comunidades afectadas o reasentadas por las obras del proyecto.</li>
+<li>Conflictos por el uso o la tenencia de la tierra donde se ejecutará el proyecto.</li>
+<li>Exclusión de grupos vulnerables en los beneficios o en la participación del proyecto.</li>
+<li>Expectativas de la comunidad que superan el alcance real del proyecto.</li>
+<li>Mecanismo de quejas y reclamos débil o inexistente, que deriva en protestas o bloqueos.</li>
+</ol>
+<p><strong>Institucionales</strong></p>
+<ol type="1">
+<li>Baja capacidad técnica o administrativa de la entidad ejecutora para gestionar el proyecto.</li>
+<li>Debilidad en los sistemas de monitoreo, evaluación e información de la entidad.</li>
+<li>Falta de continuidad del equipo técnico responsable entre fases del proyecto.</li>
+<li>Ausencia de arreglos institucionales claros entre entidades que comparten responsabilidades.</li>
+<li>Resistencia interna al cambio frente a nuevos procesos, sistemas o tecnologías.</li>
+</ol>
+<p><strong>Políticos</strong></p>
+<ol type="1">
+<li>Cambio de administración o de prioridades de gobierno que reduce el respaldo al proyecto.</li>
+<li>Cambios normativos o regulatorios que alteran las condiciones bajo las que se diseñó el proyecto.</li>
+<li>Inestabilidad política o de orden público en la zona de ejecución.</li>
+<li>Presión política para modificar la focalización o el alcance del proyecto sin sustento técnico.</li>
+<li>Conflictos de competencias entre niveles de gobierno (nacional, departamental, municipal).</li>
+</ol>
+<p><strong>Fiduciarios</strong></p>
+<ol type="1">
+<li>Debilidades en los controles internos de la entidad ejecutora para el manejo de los recursos.</li>
+<li>Riesgo de uso indebido o de corrupción en el manejo de los fondos del proyecto.</li>
+<li>Incumplimiento de las normas de adquisiciones exigidas por el financiador.</li>
+<li>Retrasos o deficiencias en la rendición de cuentas y en las auditorías financieras.</li>
+<li>Debilidad de los sistemas contables o de información financiera para reportar al financiador.</li>
+</ol>
+<p><strong>De mercado</strong></p>
+<ol type="1">
+<li>Variación en los precios de insumos clave por fluctuaciones del mercado internacional.</li>
+<li>Escasez de proveedores calificados para bienes o servicios especializados del proyecto.</li>
+<li>Cambios en la demanda del bien o servicio que el proyecto busca proveer.</li>
+<li>Competencia de otros proyectos por los mismos recursos, proveedores o mano de obra especializada.</li>
+<li>Interrupciones en la cadena de suministro de materiales o equipos importados.</li>
+</ol>
+<p><strong>Climáticos</strong></p>
+<ol type="1">
+<li>Temporadas de lluvia o de sequía más intensas o prolongadas de lo esperado.</li>
+<li>Eventos extremos (huracanes, inundaciones, deslizamientos) que afectan directamente las obras.</li>
+<li>Cambios en los patrones climáticos que invalidan los supuestos de diseño de la infraestructura.</li>
+<li>Restricciones de acceso a los sitios de obra por condiciones climáticas adversas.</li>
+<li>Afectaciones a la salud de la mano de obra vinculadas a la variabilidad climática, que retrasan la ejecución.</li>
 </ol>
 </section>
 <section id="hay-varios-tipos-de-matriz-de-riesgo" class="level2">

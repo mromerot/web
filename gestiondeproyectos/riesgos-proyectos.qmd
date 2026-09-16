@@ -23,6 +23,123 @@ Construir una matriz de riesgos rigurosa sigue, en la práctica totalidad de las
 5.  **Priorizar y definir la estrategia de respuesta.** Con los riesgos ya ubicados en la matriz, se priorizan los de las zonas más altas y se les asigna una estrategia: **evitar** (eliminar la causa, incluso rediseñando el proyecto), **mitigar** (reducir la probabilidad o el impacto), **transferir** (trasladarlo a un tercero, por ejemplo mediante un seguro o una cláusula contractual) o **aceptar** (asumirlo conscientemente, a veces con una reserva de contingencia). El PMBOK añade una quinta opción, **escalar**, para los riesgos cuya magnitud excede el nivel de decisión del equipo del proyecto y deben subir a un comité directivo o al financiador.
 6.  **Asignar responsable y monitorear.** Cada riesgo priorizado necesita un dueño (no un comité difuso) y una fecha de revisión. La matriz de riesgos es un documento vivo: se actualiza en cada hito importante del proyecto, no solo al inicio, porque probabilidades e impactos cambian a medida que el proyecto avanza y el contexto se mueve.
 
+### Qué significa, en la práctica, "probabilidad de que ocurra"
+
+El punto 3 merece detenerse, porque "probabilidad" es la variable que con más frecuencia se califica mal: se confunde con una intuición ("me parece poco probable") en vez de tratarse como una estimación que debe poder justificarse. En la práctica, esa estimación se construye de dos maneras, según la información disponible.
+
+Cuando existe información histórica suficiente —un proyecto similar ya ejecutado, series climáticas, indicadores de ejecución presupuestal de años anteriores—, la probabilidad puede estimarse de forma **frecuentista**: qué proporción de casos comparables terminó materializando ese riesgo. Por ejemplo, si de diez proyectos de obra civil ejecutados por una misma entidad en los últimos cinco años, seis sufrieron retrasos por temporada de lluvias, la probabilidad de referencia para ese riesgo ronda el 60 %, no una impresión subjetiva.
+
+Cuando no hay datos históricos suficientes —lo más común en riesgos institucionales, políticos o sociales—, la probabilidad se estima mediante **juicio experto estructurado**: se le pide a varias personas con conocimiento directo del proyecto o del contexto que califiquen el riesgo de forma independiente, se contrastan esas calificaciones y se discuten los desacuerdos hasta llegar a una estimación de consenso (una versión simplificada del método Delphi). Lo importante no es que el número sea exacto, sino que quede documentado *en qué se basó* esa estimación, para poder revisarla cuando la matriz se actualice.
+
+En cualquiera de los dos casos, conviene anclar la escala cualitativa a un rango numérico aproximado, de modo que "probable" signifique lo mismo para todo el equipo:
+
+| Nivel | Descriptor | Probabilidad estimada | Cómo se sustenta |
+|----|----|----|----|
+| 1 | Raro | Menor al 10 % | No hay antecedentes conocidos; el riesgo es teóricamente posible |
+| 2 | Improbable | Entre 10 % y 30 % | Ha ocurrido de forma aislada en proyectos comparables |
+| 3 | Posible | Entre 30 % y 50 % | Existen antecedentes recientes o condiciones que lo favorecen |
+| 4 | Probable | Entre 50 % y 70 % | Ha ocurrido en la mayoría de los casos comparables recientes |
+| 5 | Casi certero | Mayor al 70 % | Las condiciones que lo generan ya están presentes en el proyecto |
+
+: Ejemplo de escala de probabilidad calibrada con rangos numéricos {.striped}
+
+## Cómo aborda el PMBOK la gestión de riesgos
+
+El PMBOK (*Project Management Body of Knowledge*), la guía de estándares del Project Management Institute (PMI), es probablemente la referencia más citada en gestión de riesgos de proyectos, y buena parte del vocabulario usado en las secciones anteriores —registro de riesgos, matriz de probabilidad e impacto, estrategias de respuesta— proviene directamente de ella. Vale la pena precisar, sin embargo, que el PMBOK ha cambiado de enfoque entre sus dos ediciones más recientes.
+
+La **sexta edición** (2017) trata la gestión de riesgos como un área de conocimiento independiente, "Gestión de los Riesgos del Proyecto", organizada en siete procesos secuenciales: planificar la gestión de riesgos, identificar los riesgos, realizar el análisis cualitativo de riesgos, realizar el análisis cuantitativo de riesgos, planificar la respuesta a los riesgos, implementar la respuesta a los riesgos, y monitorear los riesgos. La matriz de probabilidad e impacto es, dentro de este esquema, la herramienta central del tercer proceso —el análisis cualitativo—, y se complementa con dos artefactos que van más allá de la matriz: la **estructura de desglose de riesgos** (RBS, por sus siglas en inglés), que organiza las categorías de riesgo de forma jerárquica en vez de como una lista plana, y el **registro de riesgos**, que documenta cada riesgo individual con su descripción, causa, categoría, calificación, dueño y estrategia de respuesta a lo largo de todo el proyecto.
+
+La **séptima edición** (2021) da un giro: elimina las áreas de conocimiento y los procesos secuenciales, y organiza la guía en ocho "dominios de desempeño". La gestión de riesgos queda absorbida por el dominio de **incertidumbre** (*Uncertainty Performance Domain*), que es deliberadamente más amplio que el riesgo tradicional: no solo cubre eventos discretos con una probabilidad estimable, sino también la ambigüedad (cuando no está claro qué está pasando o qué significa), la complejidad (cuando hay demasiadas partes interconectadas para predecir el comportamiento del sistema) y la volatilidad del entorno del proyecto —una forma de reconocer que no todo lo que puede afectar a un proyecto de desarrollo cabe en una fila de una matriz de probabilidad e impacto—.
+
+Dos conceptos del PMBOK, presentes en ambas ediciones, son especialmente útiles para un proyecto de desarrollo y no siempre se explicitan en la matriz:
+
+-   **Riesgos individuales frente al riesgo global del proyecto.** El PMBOK distingue entre los riesgos puntuales que aparecen en la matriz (un retraso, un sobrecosto) y el **riesgo global del proyecto** (*overall project risk*): el efecto acumulado de la incertidumbre sobre el proyecto como un todo, que puede ser alto incluso si ningún riesgo individual califica como extremo, simplemente porque hay muchos riesgos moderados actuando a la vez. Es la misma lógica que usa el SORT del Banco Mundial para calificar una operación completa (ver la sección siguiente).
+-   **Riesgos positivos y negativos.** El PMBOK no limita la matriz a las amenazas: también contempla **oportunidades**, es decir, eventos inciertos que, de ocurrir, beneficiarían al proyecto (por ejemplo, que un insumo baje de precio o que una comunidad se vincule como aliada más allá de lo previsto). Frente a una amenaza, las estrategias son evitar, mitigar, transferir o aceptar; frente a una oportunidad, sus equivalentes simétricos son **explotar** (asegurar que ocurra), **mejorar** (aumentar su probabilidad o su efecto positivo), **compartir** (asociarse con un tercero mejor posicionado para aprovecharla) o **aceptar** (no actuar activamente, pero estar atento si aparece).
+
+## Principales riesgos por categoría en un proyecto de desarrollo
+
+La siguiente lista retoma las categorías del paso 2 y propone, para cada una, cinco riesgos típicos de un proyecto de desarrollo. No pretende ser exhaustiva —cada proyecto tiene los suyos—, pero sirve como lista de verificación de partida al construir el registro de riesgos.
+
+**Técnicos**
+
+1.  Diseños de ingeniería incompletos o con errores que obligan a rediseñar durante la ejecución.
+2.  Tecnología o método constructivo seleccionado sin experiencia previa demostrada en el contexto local.
+3.  Especificaciones técnicas incompatibles con la normativa técnica vigente (sismorresistencia, ambiental, sanitaria).
+4.  Estudios previos de suelos, hidrología o topografía que subestiman las condiciones reales del sitio.
+5.  Obsolescencia del equipo o del sistema adquirido antes de terminar de implementarlo.
+
+**Financieros**
+
+1.  Sobrecostos por errores en la estimación inicial del presupuesto.
+2.  Desembolsos del financiador más lentos de lo previsto, que generan problemas de liquidez.
+3.  Variación del tipo de cambio en insumos o equipos importados.
+4.  Recortes presupuestales de la entidad ejecutora por cambios en las prioridades fiscales.
+5.  Incremento no previsto en el costo de materiales o de mano de obra.
+
+**Operativos**
+
+1.  Retrasos en los procesos de contratación de obras, bienes o servicios.
+2.  Rotación alta del personal clave del equipo ejecutor.
+3.  Fallas logísticas para transportar materiales o equipos a zonas de difícil acceso.
+4.  Deficiente coordinación entre las entidades corresponsables de distintos componentes.
+5.  Capacidad insuficiente del contratista o del operador para cumplir el cronograma pactado.
+
+**Ambientales**
+
+1.  Impactos no previstos sobre ecosistemas sensibles o áreas protegidas cercanas a las obras.
+2.  Eventos climáticos extremos (lluvias intensas, sequías) que afectan el cronograma o la infraestructura.
+3.  Generación de residuos o vertimientos que incumplen la normativa ambiental vigente.
+4.  Necesidad de licencias o permisos ambientales adicionales no contemplados en la planeación inicial.
+5.  Supuestos de diseño (por ejemplo, niveles de inundación) que quedan desactualizados frente al cambio climático.
+
+**Sociales**
+
+1.  Oposición de comunidades afectadas o reasentadas por las obras del proyecto.
+2.  Conflictos por el uso o la tenencia de la tierra donde se ejecutará el proyecto.
+3.  Exclusión de grupos vulnerables en los beneficios o en la participación del proyecto.
+4.  Expectativas de la comunidad que superan el alcance real del proyecto.
+5.  Mecanismo de quejas y reclamos débil o inexistente, que deriva en protestas o bloqueos.
+
+**Institucionales**
+
+1.  Baja capacidad técnica o administrativa de la entidad ejecutora para gestionar el proyecto.
+2.  Debilidad en los sistemas de monitoreo, evaluación e información de la entidad.
+3.  Falta de continuidad del equipo técnico responsable entre fases del proyecto.
+4.  Ausencia de arreglos institucionales claros entre entidades que comparten responsabilidades.
+5.  Resistencia interna al cambio frente a nuevos procesos, sistemas o tecnologías.
+
+**Políticos**
+
+1.  Cambio de administración o de prioridades de gobierno que reduce el respaldo al proyecto.
+2.  Cambios normativos o regulatorios que alteran las condiciones bajo las que se diseñó el proyecto.
+3.  Inestabilidad política o de orden público en la zona de ejecución.
+4.  Presión política para modificar la focalización o el alcance del proyecto sin sustento técnico.
+5.  Conflictos de competencias entre niveles de gobierno (nacional, departamental, municipal).
+
+**Fiduciarios**
+
+1.  Debilidades en los controles internos de la entidad ejecutora para el manejo de los recursos.
+2.  Riesgo de uso indebido o de corrupción en el manejo de los fondos del proyecto.
+3.  Incumplimiento de las normas de adquisiciones exigidas por el financiador.
+4.  Retrasos o deficiencias en la rendición de cuentas y en las auditorías financieras.
+5.  Debilidad de los sistemas contables o de información financiera para reportar al financiador.
+
+**De mercado**
+
+1.  Variación en los precios de insumos clave por fluctuaciones del mercado internacional.
+2.  Escasez de proveedores calificados para bienes o servicios especializados del proyecto.
+3.  Cambios en la demanda del bien o servicio que el proyecto busca proveer.
+4.  Competencia de otros proyectos por los mismos recursos, proveedores o mano de obra especializada.
+5.  Interrupciones en la cadena de suministro de materiales o equipos importados.
+
+**Climáticos**
+
+1.  Temporadas de lluvia o de sequía más intensas o prolongadas de lo esperado.
+2.  Eventos extremos (huracanes, inundaciones, deslizamientos) que afectan directamente las obras.
+3.  Cambios en los patrones climáticos que invalidan los supuestos de diseño de la infraestructura.
+4.  Restricciones de acceso a los sitios de obra por condiciones climáticas adversas.
+5.  Afectaciones a la salud de la mano de obra vinculadas a la variabilidad climática, que retrasan la ejecución.
+
 ## ¿Hay varios tipos de matriz de riesgo?
 
 Sí, y la diferencia entre ellos no es solo de presentación, sino de cuánta evidencia numérica exigen antes de calificar un riesgo.
