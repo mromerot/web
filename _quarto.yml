@@ -139,6 +139,8 @@ website:
             href: gestiondeproyectos/pestel.qmd
           - text: "SWOT"
             href: gestiondeproyectos/swot.qmd
+          - text: "CONPES"
+            href: gestiondeproyectos/conpes.qmd
       # aqui viene la seccion de ciencia y tecnologia
       - section: "Ciencia y tecnología"
         contents:
