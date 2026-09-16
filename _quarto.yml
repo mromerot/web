@@ -141,6 +141,8 @@ website:
             href: gestiondeproyectos/swot.qmd
           - text: "CONPES"
             href: gestiondeproyectos/conpes.qmd
+          - text: "Riesgos en proyectos"
+            href: gestiondeproyectos/riesgos-proyectos.qmd
       # aqui viene la seccion de ciencia y tecnologia
       - section: "Ciencia y tecnología"
         contents:

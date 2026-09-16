@@ -1,0 +1,325 @@
+---
+title: "Riesgos en proyectos"
+format: html
+editor: visual
+---
+
+## Qué es la matriz de riesgos de un proyecto
+
+Todo proyecto —y con más razón un **proyecto de desarrollo**, entendido como aquel orientado a producir un cambio social, económico o ambiental verificable, con financiación pública, de cooperación internacional o de banca multilateral— se ejecuta bajo incertidumbre: eventos que aún no han ocurrido pero que, de materializarse, pueden afectar sus objetivos, su cronograma o su presupuesto. La **matriz de riesgos** es la herramienta que convierte esa incertidumbre difusa en información manejable: clasifica cada riesgo identificado según dos variables —la **probabilidad** de que ocurra y el **impacto** que tendría sobre el proyecto si ocurre—, y lo ubica en una cuadrícula que permite compararlo de un vistazo con los demás riesgos del proyecto.
+
+La matriz no es, en sí misma, todo el proceso de gestión de riesgos: es el instrumento de análisis y evaluación dentro de un ciclo más amplio —identificar, analizar, evaluar, tratar y monitorear— que sigue la misma lógica que propone la norma ISO 31000 para la gestión del riesgo en cualquier tipo de organización. Lo distintivo de un proyecto de desarrollo es que ese ciclo no se hace solo una vez: se repite en cada hito relevante del proyecto, porque el contexto —normativo, social, climático, institucional— en el que se ejecuta suele cambiar más rápido que en un proyecto puramente técnico o comercial.
+
+Vale la pena anotar que esta lógica de probabilidad e impacto no es exclusiva de la gestión de proyectos "clásica": el propio [Manual metodológico para la elaboración de documentos CONPES](conpes.qmd) del DNP recomienda a las entidades responsables de un Plan de Acción y Seguimiento (PAS) que "realicen un ejercicio interno de identificación de riesgos, estimando su probabilidad e impacto en el rezago o incumplimiento de las acciones planteadas en los documentos CONPES", precisamente para poder "definir estrategias de prevención y mitigación" antes de que el rezago ocurra. Es el mismo vocabulario, aplicado a la ejecución de una política pública en vez de a un proyecto puntual.
+
+## Cómo se construye paso a paso
+
+Construir una matriz de riesgos rigurosa sigue, en la práctica totalidad de las metodologías de gestión de proyectos, la misma secuencia de seis pasos.
+
+1.  **Identificar los riesgos.** Se levanta un listado inicial —el *registro de riesgos*— mediante lluvia de ideas con el equipo, entrevistas con los actores del proyecto, listas de verificación de riesgos típicos del sector, lecciones aprendidas de proyectos similares y, cuando ya existe, el análisis del contexto hecho con herramientas como la [matriz DOFA](dofa.qmd) o el [análisis PESTEL](pestel.qmd) —las amenazas y debilidades identificadas allí son, muchas veces, la primera fuente de riesgos del proyecto—. Cada riesgo debe redactarse de forma específica y verificable, no como una preocupación genérica: es más útil registrar "debido a la coincidencia del cronograma de obra con la temporada de lluvias, existe el riesgo de retrasos en la construcción de las obras de mitigación" que simplemente "puede haber retrasos".
+2.  **Clasificar los riesgos por categorías.** Agrupar los riesgos en una estructura de categorías —técnicos, financieros, operativos, ambientales, sociales, institucionales, políticos, fiduciarios, de mercado o climáticos, entre otros— evita que la lista quede desordenada y ayuda a detectar si el proyecto está sobreexpuesto a un solo tipo de riesgo.
+3.  **Definir las escalas de probabilidad y de impacto.** Antes de calificar un solo riesgo, el equipo debe acordar qué significa cada nivel de la escala —normalmente de tres a cinco niveles— para ese proyecto en particular. Una escala de impacto genérica ("bajo, medio, alto") es poco útil; una escala anclada en cifras concretas del proyecto sí lo es: por ejemplo, que "impacto mayor" signifique un sobrecosto de más del 15 % del presupuesto o un retraso de más de tres meses. Sin esa calibración previa, dos personas pueden calificar el mismo riesgo de forma completamente distinta.
+4.  **Calcular el nivel de riesgo y ubicarlo en la matriz.** El nivel de riesgo resulta, en su forma más simple, de multiplicar probabilidad por impacto (P × I), y ese puntaje determina en qué celda de la matriz —y en qué zona de color— queda cada riesgo.
+5.  **Priorizar y definir la estrategia de respuesta.** Con los riesgos ya ubicados en la matriz, se priorizan los de las zonas más altas y se les asigna una estrategia: **evitar** (eliminar la causa, incluso rediseñando el proyecto), **mitigar** (reducir la probabilidad o el impacto), **transferir** (trasladarlo a un tercero, por ejemplo mediante un seguro o una cláusula contractual) o **aceptar** (asumirlo conscientemente, a veces con una reserva de contingencia). El PMBOK añade una quinta opción, **escalar**, para los riesgos cuya magnitud excede el nivel de decisión del equipo del proyecto y deben subir a un comité directivo o al financiador.
+6.  **Asignar responsable y monitorear.** Cada riesgo priorizado necesita un dueño (no un comité difuso) y una fecha de revisión. La matriz de riesgos es un documento vivo: se actualiza en cada hito importante del proyecto, no solo al inicio, porque probabilidades e impactos cambian a medida que el proyecto avanza y el contexto se mueve.
+
+## ¿Hay varios tipos de matriz de riesgo?
+
+Sí, y la diferencia entre ellos no es solo de presentación, sino de cuánta evidencia numérica exigen antes de calificar un riesgo.
+
+-   **Matriz cualitativa de probabilidad e impacto.** Es la más común y la que describe el PMBOK para el análisis cualitativo de riesgos: usa escalas descriptivas (por ejemplo, raro/improbable/posible/probable/casi certero) y produce una cuadrícula de colores. Es rápida de construir y suficiente para la mayoría de los proyectos.
+-   **Matriz semicuantitativa.** Traduce esas mismas escalas descriptivas a valores numéricos (1 a 5, por ejemplo) para poder calcular un puntaje (P × I) y comparar riesgos con más precisión, aunque las escalas sigan basándose en juicio experto y no en modelos estadísticos.
+-   **Matriz cuantitativa.** Reservada para proyectos de gran envergadura o alto valor, expresa el riesgo en términos monetarios —el valor monetario esperado de cada riesgo— o mediante técnicas como el análisis de sensibilidad o la simulación de Montecarlo, que modelan miles de escenarios posibles para el cronograma o el presupuesto.
+-   **La matriz de riesgos dentro del marco lógico.** En proyectos de desarrollo financiados por cooperación internacional o banca multilateral, la matriz de marco lógico —la herramienta que organiza el Fin, el Propósito, los Componentes y las Actividades del proyecto en una tabla con indicadores y medios de verificación— incluye una columna de **supuestos**: los factores externos, fuera del control del equipo, que deben cumplirse para que el proyecto avance de un nivel al siguiente. Esa columna es, en esencia, una matriz de riesgos organizada por nivel de objetivo en vez de por categoría temática, y obliga a preguntarse explícitamente qué puede impedir que las actividades se traduzcan en componentes, los componentes en el propósito, y el propósito en el fin del proyecto.
+-   **Herramientas institucionales agregadas de la banca multilateral.** El Banco Mundial, por ejemplo, califica el riesgo de sus operaciones con el SORT (*Systematic Operations Risk-rating Tool*), que evalúa entre ocho y diez categorías fijas —riesgo político y de gobernanza, macroeconómico, de las estrategias y políticas sectoriales, de diseño técnico del proyecto, de capacidad institucional para la implementación y la sostenibilidad, fiduciario, ambiental y social, y de las partes interesadas, entre otras— en una escala de cuatro niveles (bajo, moderado, sustancial, alto) que combina probabilidad y severidad, y que produce una calificación agregada del riesgo de toda la operación, no solo de un riesgo individual.
+-   **Matrices de riesgo ambiental y social (salvaguardas).** Un tipo especializado, propio de proyectos con financiación multilateral, que clasifica el proyecto completo —no cada riesgo por separado— en categorías de riesgo (por ejemplo, alto, sustancial, moderado o bajo) según sus posibles impactos ambientales y sociales, y esa categorización determina cuánta diligencia debida, consulta previa o documentación ambiental exige el financiador antes de aprobar el desembolso.
+
+## Qué decisiones se toman con la matriz
+
+La matriz de riesgos no es un ejercicio documental: cada una de sus zonas y calificaciones alimenta decisiones concretas a lo largo del ciclo del proyecto.
+
+-   **Decisiones de diseño.** Un riesgo que cae en la zona roja durante la etapa de formulación puede llevar a rediseñar un componente completo del proyecto —por ejemplo, cambiar la ubicación de una obra, ajustar la población objetivo o modificar el cronograma— antes incluso de que el proyecto sea aprobado.
+-   **Asignación de reservas de contingencia.** El presupuesto y el cronograma de contingencia no se calculan de forma arbitraria: se dimensionan en función de los riesgos priorizados en la matriz, de modo que los proyectos con más riesgos en zona alta reciben reservas proporcionalmente mayores.
+-   **Umbrales de escalamiento.** La matriz define qué riesgos se gestionan al nivel del equipo del proyecto, cuáles requieren la atención de un comité directivo y cuáles deben informarse al financiador o a la junta —una decisión de gobernanza que evita que la alta dirección se sature de riesgos menores o que, al contrario, un riesgo mayor pase inadvertido.
+-   **Intensidad de la supervisión y el monitoreo.** Los proyectos —o los componentes de un proyecto— con calificaciones de riesgo más altas reciben visitas de supervisión más frecuentes, informes más detallados y, en el caso de la banca multilateral, misiones de revisión adicionales.
+-   **Categorización del proyecto ante el financiador.** En proyectos con financiación multilateral, la calificación agregada de riesgo (como la del SORT o la de las matrices de salvaguardas ambientales y sociales) determina requisitos formales: el tipo de instrumento ambiental que se exige, la frecuencia de los informes de avance o, en los casos más extremos, si el proyecto es viable de financiar.
+-   **Estrategia de respuesta y su costo.** Decidir entre evitar, mitigar, transferir o aceptar un riesgo tiene implicaciones presupuestales directas —contratar un seguro, incluir una cláusula contractual, invertir en fortalecimiento institucional— que deben quedar reflejadas en el presupuesto del proyecto, no solo en la matriz.
+
+## Ejemplo: matriz de riesgos de un proyecto de reducción del riesgo de inundación
+
+El siguiente ejemplo, simplificado con fines ilustrativos, corresponde a un proyecto hipotético de reducción del riesgo de inundación urbana, ejecutado por un municipio con financiación de cooperación internacional —un caso típico de proyecto de desarrollo en el campo de la gestión del riesgo de desastres.
+
+| Riesgo | Categoría | Probabilidad (1-5) | Impacto (1-5) | Puntaje | Nivel | Estrategia de respuesta |
+|----|----|----|----|----|----|----|
+| Retrasos en la construcción de obras de mitigación por coincidencia con la temporada de lluvias | Operativo / climático | 4 | 3 | 12 | Alto | Mitigar: ajustar el cronograma de obra civil fuera de la temporada más lluviosa |
+| Baja capacidad institucional del municipio ejecutor para el manejo de los recursos de cooperación | Institucional / fiduciario | 3 | 4 | 12 | Alto | Mitigar: asistencia técnica y cofinanciación con una entidad de mayor capacidad |
+| Oposición social de las comunidades que serían reasentadas por las obras | Social | 3 | 5 | 15 | Extremo | Evitar / mitigar: plan de reasentamiento con consulta previa y mecanismo de quejas y reclamos |
+| Variación del tipo de cambio que incrementa el costo de insumos importados | Financiero / macroeconómico | 2 | 3 | 6 | Moderado | Transferir: cobertura cambiaria, o aceptar con reserva de contingencia |
+| Cambio de administración municipal que reduzca el respaldo político al proyecto | Político / institucional | 3 | 3 | 9 | Moderado | Mitigar: formalizar los compromisos mediante convenio u ordenanza, no solo voluntad política |
+
+: Ejemplo de matriz de riesgos para un proyecto de gestión del riesgo de desastres {.striped}
+
+## Infografía: cómo leer una matriz de riesgos
+
+```{=html}
+<div class="riskm-info">
+<div class="rq-header">
+<div class="rq-title">
+<h4>La matriz de riesgos</h4>
+<p>De la incertidumbre difusa a decisiones priorizadas</p>
+</div>
+<div class="rq-callout">
+Nivel de riesgo = <strong>Probabilidad</strong> &times; <strong>Impacto</strong>
+</div>
+<div class="rq-note">No se hace una vez:<br>se actualiza en cada hito.</div>
+</div>
+<div class="rq-quadrants">
+<div class="rq-card" style="--qc:#2a78d6">
+<div class="rq-card-top">
+<span class="rq-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="16.2" y1="16.2" x2="21" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+<div>
+<div class="rq-card-label">1. Identificar y clasificar</div>
+<div class="rq-card-tag">Registro de riesgos</div>
+</div>
+</div>
+<p>Riesgos concretos y verificables, agrupados en categorías (técnico, financiero, social, ambiental...).</p>
+<div class="rq-example">Ej: retraso en obra por temporada de lluvias.</div>
+</div>
+<div class="rq-card" style="--qc:#eda100">
+<div class="rq-card-top">
+<span class="rq-icon"><svg viewBox="0 0 24 24"><path d="M4 19 V9 M9 19 V5 M14 19 V12 M19 19 V7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+<div>
+<div class="rq-card-label">2. Analizar</div>
+<div class="rq-card-tag">Probabilidad &middot; impacto</div>
+</div>
+</div>
+<p>Escalas calibradas al proyecto: qué significa, en cifras, un impacto "mayor" o una probabilidad "alta".</p>
+<div class="rq-example">Ej: impacto mayor = sobrecosto &gt;15 %.</div>
+</div>
+<div class="rq-card" style="--qc:#e34948">
+<div class="rq-card-top">
+<span class="rq-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="4" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="4" y="13" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="13" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+<div>
+<div class="rq-card-label">3. Evaluar y priorizar</div>
+<div class="rq-card-tag">Zonas de la matriz</div>
+</div>
+</div>
+<p>Cada riesgo se ubica en la cuadrícula probabilidad-impacto; las zonas altas se atienden primero.</p>
+<div class="rq-example">Ej: puntaje 15 de 25 → zona roja.</div>
+</div>
+<div class="rq-card" style="--qc:#1baf7a">
+<div class="rq-card-top">
+<span class="rq-icon"><svg viewBox="0 0 24 24"><path d="M4 12 L10 18 L20 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<div>
+<div class="rq-card-label">4. Responder y monitorear</div>
+<div class="rq-card-tag">Evitar &middot; mitigar &middot; transferir &middot; aceptar</div>
+</div>
+</div>
+<p>Cada riesgo priorizado tiene un dueño, una estrategia y una fecha de revisión.</p>
+<div class="rq-example">Ej: riesgo social → plan de reasentamiento con consulta previa.</div>
+</div>
+</div>
+<div class="rq-matrix-wrap">
+<h5>La cuadrícula probabilidad &times; impacto (escala 1-5)</h5>
+<div class="rq-matrix">
+<div class="rq-yaxis">Probabilidad</div>
+<div class="rq-grid">
+<div class="rq-cell rq-axis"></div>
+<div class="rq-cell rq-axis">1</div>
+<div class="rq-cell rq-axis">2</div>
+<div class="rq-cell rq-axis">3</div>
+<div class="rq-cell rq-axis">4</div>
+<div class="rq-cell rq-axis">5</div>
+
+<div class="rq-cell rq-axis">5</div>
+<div class="rq-cell rq-lvl2">5</div>
+<div class="rq-cell rq-lvl3">10</div>
+<div class="rq-cell rq-lvl4">15</div>
+<div class="rq-cell rq-lvl4">20</div>
+<div class="rq-cell rq-lvl4">25</div>
+
+<div class="rq-cell rq-axis">4</div>
+<div class="rq-cell rq-lvl1">4</div>
+<div class="rq-cell rq-lvl2">8</div>
+<div class="rq-cell rq-lvl3">12</div>
+<div class="rq-cell rq-lvl4">16</div>
+<div class="rq-cell rq-lvl4">20</div>
+
+<div class="rq-cell rq-axis">3</div>
+<div class="rq-cell rq-lvl1">3</div>
+<div class="rq-cell rq-lvl2">6</div>
+<div class="rq-cell rq-lvl2">9</div>
+<div class="rq-cell rq-lvl3">12</div>
+<div class="rq-cell rq-lvl4">15</div>
+
+<div class="rq-cell rq-axis">2</div>
+<div class="rq-cell rq-lvl1">2</div>
+<div class="rq-cell rq-lvl1">4</div>
+<div class="rq-cell rq-lvl2">6</div>
+<div class="rq-cell rq-lvl2">8</div>
+<div class="rq-cell rq-lvl3">10</div>
+
+<div class="rq-cell rq-axis">1</div>
+<div class="rq-cell rq-lvl1">1</div>
+<div class="rq-cell rq-lvl1">2</div>
+<div class="rq-cell rq-lvl1">3</div>
+<div class="rq-cell rq-lvl1">4</div>
+<div class="rq-cell rq-lvl2">5</div>
+</div>
+</div>
+<div class="rq-xaxis">Impacto</div>
+<div class="rq-legend">
+<span><i style="background:#1baf7a"></i>Bajo (1-4)</span>
+<span><i style="background:#eda100"></i>Moderado (5-9)</span>
+<span><i style="background:#e8892f"></i>Alto (10-14)</span>
+<span><i style="background:#e34948"></i>Extremo (15-25)</span>
+</div>
+</div>
+<div class="rq-formula">
+<span>Identificar</span><i>+</i><span>Analizar</span><i>+</i><span>Evaluar</span><i>+</i><span>Responder</span><i>+</i><span>Monitorear</span><i>=</i><strong>Riesgos gestionados, no solo listados</strong>
+</div>
+<div class="rq-footnote">Las escalas y los umbrales de color deben calibrarse para cada proyecto: un puntaje de 12 no significa lo mismo en un proyecto de bajo presupuesto que en uno de infraestructura mayor.</div>
+</div>
+<style>
+.riskm-info{
+  --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+  font-family: inherit;
+  color: var(--ink);
+  background:#fcfcfb;
+  border:1px solid rgba(0,58,112,0.12);
+  border-radius:12px;
+  padding:0 0 22px 0;
+  margin:24px 0 8px 0;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,0.06);
+}
+.riskm-info h4, .riskm-info h5{ margin:0; }
+.riskm-info p{ margin:0; }
+.rq-header{
+  background:#003A70;
+  color:#fff;
+  padding:22px 24px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:16px;
+  justify-content:space-between;
+}
+.rq-title h4{ font-size:1.35rem; font-weight:900; letter-spacing:.2px; }
+.rq-title p{ font-size:.92rem; opacity:.9; margin-top:2px; }
+.rq-callout{
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:8px;
+  padding:10px 14px;
+  font-size:.85rem;
+  max-width:340px;
+  line-height:1.4;
+}
+.rq-note{
+  font-style:italic;
+  font-size:.82rem;
+  opacity:.85;
+  text-align:right;
+  line-height:1.3;
+  min-width:150px;
+}
+.rq-quadrants{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  padding:22px 24px 6px 24px;
+}
+.rq-card{
+  background:color-mix(in srgb, var(--qc) 7%, #fcfcfb);
+  border:1px solid color-mix(in srgb, var(--qc) 35%, transparent);
+  border-left:5px solid var(--qc);
+  border-radius:10px;
+  padding:14px 16px;
+}
+.rq-card-top{ display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.rq-icon{ color:var(--qc); flex:0 0 auto; }
+.rq-icon svg{ width:26px; height:26px; display:block; }
+.rq-card-label{ font-weight:800; font-size:1.02rem; color:var(--ink); }
+.rq-card-tag{ font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); font-weight:600; }
+.rq-card p{ font-size:.88rem; color:var(--ink-2); line-height:1.4; margin-bottom:6px; }
+.rq-example{ font-size:.8rem; color:var(--ink); background:rgba(255,255,255,0.6); border:1px dashed color-mix(in srgb, var(--qc) 45%, transparent); border-radius:6px; padding:6px 8px; }
+.rq-matrix-wrap{ padding:20px 24px 4px 24px; }
+.rq-matrix-wrap h5{ font-size:1rem; font-weight:800; color:#003A70; margin-bottom:12px; text-align:center; }
+.rq-matrix{ display:flex; align-items:center; gap:8px; justify-content:center; }
+.rq-yaxis{
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size:.78rem;
+  font-weight:700;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+.rq-grid{
+  display:grid;
+  grid-template-columns: 28px repeat(5, minmax(38px,52px));
+  grid-auto-rows: minmax(38px,52px);
+  gap:4px;
+}
+.rq-cell{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:6px;
+  font-size:.78rem;
+  font-weight:700;
+  color:#fff;
+}
+.rq-cell.rq-axis{
+  background:transparent;
+  color:var(--ink-2);
+  font-weight:700;
+}
+.rq-lvl1{ background:#1baf7a; }
+.rq-lvl2{ background:#eda100; }
+.rq-lvl3{ background:#e8892f; }
+.rq-lvl4{ background:#e34948; }
+.rq-xaxis{
+  text-align:center;
+  font-size:.78rem;
+  font-weight:700;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  margin-top:6px;
+}
+.rq-legend{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+  margin:14px 24px 0 24px;
+  font-size:.8rem;
+  color:var(--ink-2);
+}
+.rq-legend span{ display:inline-flex; align-items:center; gap:6px; }
+.rq-legend i{ width:11px; height:11px; border-radius:3px; display:inline-block; }
+.rq-formula{
+  margin:18px 24px 0 24px;
+  background:#f3f6f9;
+  border-radius:8px;
+  padding:12px 16px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  font-size:.85rem;
+}
+.rq-formula span{ background:#fff; border:1px solid rgba(0,58,112,0.2); border-radius:6px; padding:4px 9px; font-weight:700; color:#003A70; }
+.rq-formula i{ font-style:normal; color:var(--muted); font-weight:900; }
+.rq-formula strong{ color:var(--ink); }
+.rq-footnote{ margin:14px 24px 0 24px; font-size:.78rem; font-style:italic; color:var(--muted); }
+@media (max-width:640px){
+  .rq-quadrants{ grid-template-columns:1fr; }
+  .rq-header{ flex-direction:column; align-items:flex-start; }
+  .rq-note{ text-align:left; }
+  .rq-grid{ grid-template-columns: 22px repeat(5, minmax(30px,40px)); grid-auto-rows: minmax(30px,40px); }
+}
+</style>
+```
