@@ -1,0 +1,51 @@
+---
+title: "Ciencia y tecnología"
+format: html
+editor: visual
+---
+
+## Ciencia y tecnología
+
+Esta sección reúne recursos sobre la práctica de la ciencia: la escritura y publicación académica, la ciencia reproducible y abierta, la ciencia transdisciplinar y la interfaz entre ciencia, política y sociedad.
+
+:::::: mrw-cards-grid
+::: mrw-card
+::: mrw-card-header
+[Escritura y publicación académica](escrituraypublicacionacademica/index.qmd)
+:::
+
+::: mrw-card-body
+El proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Ciencia reproducible](cienciareproduc.qmd)
+:::
+
+::: mrw-card-body
+Qué es la ciencia reproducible y la ciencia abierta, y por qué son relevantes para la calidad y la confiabilidad de la investigación.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Ciencia transdiciplinar](transdisciplina.qmd)
+:::
+
+::: mrw-card-body
+Qué es la ciencia transdisciplinar: características, potencial y desafíos de la investigación que integra conocimiento académico y no académico.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Interfaz ciencia-política-sociedad](interfaz-cps.qmd)
+:::
+
+::: mrw-card-body
+Qué es la interfaz ciencia-política-sociedad: los espacios, procesos y organizaciones donde el conocimiento científico, la decisión pública y las demandas sociales se traducen y negocian mutuamente.
+:::
+:::
+::::::

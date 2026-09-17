@@ -1,0 +1,41 @@
+---
+title: "Vida laboral"
+format: html
+editor: visual
+---
+
+## Vida laboral
+
+Esta sección reúne recursos sobre el día a día del trabajo: trabajo en equipo, herramientas de productividad y un espacio dedicado al café.
+
+:::::: mrw-cards-grid
+::: mrw-card
+::: mrw-card-header
+[Café](cafe.qmd)
+:::
+
+::: mrw-card-body
+Calidad y evaluación del café: cafés especiales y recursos de referencia.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Vida laboral](vidalaboral.qmd)
+:::
+
+::: mrw-card-body
+Trabajo en equipo, reuniones y otros aspectos de la vida laboral cotidiana.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Herramientas](herramientas.qmd)
+:::
+
+::: mrw-card-body
+Herramientas de trabajo: infografías y otras aplicaciones de productividad.
+:::
+:::
+::::::

@@ -26,6 +26,7 @@ website:
     contents:
       # Esto es la seccion mas grande, GRD
       - section: "Gestión del riesgo de desastres"
+        href: grd/index.qmd
         contents:
           - text: "Gestión del riesgo de desastres"
             href: grd/gestiondelriesgo.qmd
@@ -120,6 +121,7 @@ website:
             href: grd/glosario.qmd
       # aqui viene la seccion de cambio climatico
       - section: "Gestión del cambio climático"
+        href: gcc/index.qmd
         contents:
           - text: "Gestión del cambio climático"
             href: gcc/gestion-cambio-climatico.qmd
@@ -156,6 +158,7 @@ website:
             href: gestiondeproyectos/riesgos-proyectos.qmd
       # aqui viene la seccion de ciencia y tecnologia
       - section: "Ciencia y tecnología"
+        href: cyt/index.qmd
         contents:
           - section: "Escritura y publicación académica"
             href: cyt/escrituraypublicacionacademica/index.qmd
@@ -183,6 +186,7 @@ website:
         href: ecolyconserv/ecologiayconservacion.qmd
       # aqui viene la seccion de ciencia de datos
       - section: "Ciencia de datos"
+        href: datascience/index.qmd
         contents:
           - text: "Ciencia de datos"
             href: datascience/cienciadedatos.qmd
@@ -232,6 +236,7 @@ website:
         href: math-stats/math-stats.qmd
 # Aqui viene la seccion de vida laboral y cv
       - section: "Vida laboral"
+        href: vidalaboral/index.qmd
         contents:
           - text: "Café"
             href: vidalaboral/cafe.qmd

@@ -1,0 +1,21 @@
+---
+title: "Gestión del cambio climático"
+format: html
+editor: visual
+---
+
+## Gestión del cambio climático
+
+Esta sección reúne recursos sobre la gestión del cambio climático y su relación con la gestión del riesgo de desastres.
+
+:::::: mrw-cards-grid
+::: mrw-card
+::: mrw-card-header
+[Gestión del cambio climático](gestion-cambio-climatico.qmd)
+:::
+
+::: mrw-card-body
+Instituciones internacionales y nacionales de referencia en cambio climático —Naciones Unidas, IPCC— y el marco normativo colombiano de gestión del cambio climático.
+:::
+:::
+::::::
