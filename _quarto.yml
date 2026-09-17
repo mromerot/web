@@ -124,6 +124,7 @@ website:
           - text: "Gestión del cambio climático"
             href: gcc/gestion-cambio-climatico.qmd
       - section: "Gestión de proyectos"
+        href: gestiondeproyectos/index.qmd
         contents:
           - text: "Gestión de proyectos de CTeI"
             href: gestiondeproyectos/gestionproyectosciencia.qmd
