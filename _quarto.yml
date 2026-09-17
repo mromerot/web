@@ -135,6 +135,8 @@ website:
             href: gestiondeproyectos/impacto.qmd
           - text: "DOFA"
             href: gestiondeproyectos/dofa.qmd
+          - text: "Mapa de actores"
+            href: gestiondeproyectos/mapa-actores.qmd
           - text: "PESTEL"
             href: gestiondeproyectos/pestel.qmd
           - text: "SWOT"

@@ -1,0 +1,394 @@
+---
+title: "Mapa de actores"
+format: html
+editor: visual
+---
+
+## Qué es el mapa de actores
+
+El **mapa de actores** (también llamado *mapeo de actores*, *análisis de actores* o, en la literatura anglosajona, *stakeholder analysis* o *stakeholder mapping*) es la herramienta que permite identificar, caracterizar y comprender a las personas, organizaciones e instituciones que tienen algún tipo de relación con un territorio, un problema o una intervención antes de que esa intervención se formule. Su punto de partida conceptual suele ubicarse en la **teoría de los stakeholders** propuesta por Freeman (1984), que desplazó la pregunta clásica de a quién le rinde cuentas una organización —tradicionalmente, solo a sus accionistas— hacia una pregunta más amplia: quién puede afectar o ser afectado por sus decisiones. Aplicada a proyectos de desarrollo, esa pregunta se traduce en identificar quién vive en el territorio, quién toma decisiones, quién influye, quién se beneficia, quién puede verse afectado y quién puede facilitar o bloquear una intervención.
+
+Analizar actores es comprender el sistema de poder, intereses, relaciones, conflictos y oportunidades que puede determinar la viabilidad de un proyecto. No se trata de elaborar una lista de nombres y organizaciones —eso es apenas el primer paso—, sino de entender cómo se relacionan entre sí esos actores, qué los mueve, qué capacidad tienen de incidir en el proyecto y qué tan afectados pueden verse por él, incluso cuando esa afectación no se corresponde con ningún poder formal.
+
+A diferencia de otras herramientas de diagnóstico que se centran en el territorio, el problema o el contexto institucional —como el [análisis PESTEL](pestel.qmd) o la [matriz DOFA](dofa.qmd)—, el mapa de actores centra la mirada en las **personas y organizaciones**: quiénes son, qué relación tienen entre sí y con el territorio, y qué papel pueden jugar antes, durante y después de la intervención. Por eso suele considerarse un insumo previo —y no posterior— a la formulación del proyecto: un proyecto no debería comenzar únicamente con una buena idea, sino con una comprensión razonablemente sólida del territorio y de quienes lo habitan.
+
+{{< video "https://www.youtube.com/watch?v=hDZ0uu0H1wc" >}} Análisis de interesados y matriz poder-interés, según el enfoque del PMI.
+
+## Para qué sirve
+
+El mapa de actores cumple varias funciones a lo largo del ciclo de un proyecto de desarrollo, y no se agota en la etapa de formulación:
+
+-   **Informa el diseño de la intervención.** Antes de decidir qué proyecto ejecutar, es necesario comprender quiénes viven en el territorio, quiénes toman decisiones, quiénes influyen, quiénes pueden verse afectados y quiénes pueden hacer viable o bloquear una intervención. Sin ese conocimiento previo, el proyecto corre el riesgo de responder a un diagnóstico incompleto o sesgado.
+-   **Previene conflictos.** Identificar tempranamente posiciones encontradas, relaciones de tensión o intereses contrapuestos permite anticipar puntos de fricción antes de que se materialicen durante la ejecución, cuando resulta mucho más costoso resolverlos.
+-   **Identifica aliados y capacidades locales.** No todos los actores representan un riesgo: muchos pueden convertirse en aliados, aportar legitimidad, movilizar recursos o facilitar la implementación si se vinculan de la manera adecuada desde el principio.
+-   **Orienta la estrategia de participación.** Permite definir, de forma diferenciada y no genérica, cómo relacionarse con cada actor: a quién informar, a quién consultar, a quién involucrar activamente en la toma de decisiones y a quién simplemente monitorear.
+-   **Da legitimidad y sostenibilidad al proyecto.** Los proyectos sostenibles no se construyen solamente para las personas; se construyen con las personas. Un proyecto formulado sin el conocimiento y la participación de sus actores clave difícilmente logra apropiación local ni continuidad una vez termina el financiamiento externo.
+
+Un error metodológico frecuente es diseñar primero el proyecto y preguntar después a los actores, tratando la consulta como un trámite posterior a decisiones ya tomadas. La buena práctica es la inversa: comprender primero el territorio y sus actores, y formular después la intervención, de modo que el diseño responda a esa comprensión y no al revés.
+
+### Quiénes deben identificarse
+
+Antes de formular una intervención, conviene mapear de forma amplia —para luego priorizar— categorías de actores como las siguientes, sin asumir de entrada que unas son más relevantes que otras:
+
+-   Comunidades y organizaciones locales
+-   Pueblos y nacionalidades indígenas
+-   Mujeres y sus organizaciones
+-   Productores y asociaciones
+-   Jóvenes
+-   Gobiernos e instituciones públicas (de los distintos niveles territoriales)
+-   Sector privado
+-   ONG y organizaciones de la sociedad civil
+-   Cooperación internacional
+-   Academia y centros de investigación
+
+Pero identificar actores no significa solamente elaborar una lista de estas categorías. El valor del ejercicio está en las preguntas que se hacen sobre cada uno de ellos, tema de la siguiente sección.
+
+## Metodologías y enfoques para el análisis de actores
+
+No existe un único método estandarizado de análisis de actores; distintas disciplinas y organizaciones han propuesto marcos que, en la práctica, se complementan más de lo que compiten:
+
+-   **Teoría de los stakeholders (Freeman).** El marco conceptual original, que define un stakeholder como cualquier grupo o individuo que puede afectar o ser afectado por el logro de los objetivos de una organización o, por extensión, de un proyecto.
+-   **Identificación y análisis de actores (Bryson).** Bryson propone un conjunto de técnicas —desde listados básicos hasta el análisis "poder frente a interés"— para identificar actores en contextos públicos y sin ánimo de lucro, y advierte que distintas técnicas revelan distintos actores, por lo que conviene combinar varias en vez de apoyarse en una sola.
+-   **Análisis de actores para el manejo de recursos naturales (Reed et al.).** Aporta una revisión sistemática de métodos —desde entrevistas y grupos focales hasta técnicas de mapeo de redes sociales— particularmente relevante cuando el proyecto involucra recursos compartidos o de uso colectivo, como agua, bosques o territorios con tenencia colectiva de la tierra.
+-   **Marco Ambiental y Social del Banco Mundial (*Stakeholder Engagement*, ESS10).** Exige, para las operaciones que financia, un plan de participación de las partes interesadas que distinga entre partes afectadas por el proyecto y otras partes interesadas, con énfasis particular en grupos vulnerables o desatendidos.
+-   **Manual de buenas prácticas de la IFC (*Stakeholder Engagement*).** Enfocado en el sector privado, ofrece pautas operativas sobre cómo identificar, priorizar y mantener relaciones continuas con actores a lo largo del ciclo de vida de un proyecto, en particular cuando hay impactos ambientales o sociales.
+-   **Enfoques participativos y de desarrollo territorial (FAO).** Insisten en anclar el análisis de actores al territorio, no solo al proyecto: entender primero las dinámicas territoriales existentes —productivas, culturales, de gobernanza— y ubicar la intervención dentro de ellas.
+-   **Gobernanza y participación de actores (OCDE, PNUD).** Aportan una mirada institucional: cómo los mecanismos de gobernanza abierta e inclusiva condicionan qué actores tienen voz efectiva en las decisiones públicas que afectan un territorio, más allá de su presencia formal en un mapeo.
+-   **Guías latinoamericanas de mapeo de actores (como la de Tapella, 2007, muy citada en la región).** Sistematizan el ejercicio para el contexto de proyectos de desarrollo y evaluación participativa en América Latina, con énfasis en técnicas accesibles para equipos de campo sin capacidad técnica especializada.
+
+Pese a esta diversidad de enfoques, casi todos convergen en una misma herramienta central para clasificar actores una vez identificados: la **matriz poder × interés**, que cruza dos variables —cuánto poder o influencia tiene un actor sobre el proyecto, y cuánto interés tiene en él— para definir estrategias de relacionamiento diferenciadas:
+
+-   **Alto poder + alto interés → actores clave.** Se gestionan de cerca y se involucran activamente en las decisiones.
+-   **Alto poder + bajo interés → actores influyentes.** Se mantienen satisfechos y se consultan estratégicamente, aunque no estén movilizados por el proyecto.
+-   **Bajo poder + alto interés → actores interesados.** Se informan, se fortalecen sus capacidades y se promueve su participación.
+-   **Bajo poder + bajo interés → actores secundarios.** Se monitorean, sin que ello signifique ignorarlos por completo.
+
+Sin embargo, hay una consideración fundamental que la matriz poder-interés, usada de forma aislada, no captura: un actor puede tener poco poder institucional y, al mismo tiempo, ser uno de los más afectados por el proyecto. Por eso, además del poder y el interés, el análisis debe considerar dimensiones adicionales —**afectación, vulnerabilidad, representatividad, legitimidad, inclusión y capacidad de participación**— que son precisamente las que distinguen un análisis de actores riguroso de un simple ejercicio de gestión de influencias.
+
+## Cómo se hace, paso a paso
+
+Aunque las metodologías anteriores difieren en énfasis y en el vocabulario que usan, en la práctica coinciden en una secuencia similar:
+
+1.  **Delimitar el territorio y el alcance del análisis.** Antes de nombrar un solo actor, es necesario tener claro sobre qué territorio, problema o sector se está indagando: un análisis de actores no tiene sentido en abstracto, sino referido a un contexto específico.
+2.  **Identificar a los actores presentes en el territorio.** Se elabora un listado inicial por categorías —comunidades y organizaciones locales, pueblos y nacionalidades indígenas, mujeres y sus organizaciones, productores y asociaciones, jóvenes, gobiernos e instituciones públicas, sector privado, ONG y sociedad civil, cooperación internacional, academia y centros de investigación—, apoyándose en fuentes secundarias (censos, directorios institucionales, estudios previos) y en informantes clave del territorio.
+3.  **Analizar intereses, expectativas y relaciones existentes.** Para cada actor identificado se indaga qué espera del territorio o del posible proyecto, qué relaciones y alianzas ya existen entre los distintos actores, y en qué puntos esas relaciones son de cooperación o de tensión.
+4.  **Clasificar por poder e influencia.** Se ubica a cada actor en la matriz poder × interés, preguntando explícitamente quién tiene poder e influencia, quién tiene mayor interés, quién será directamente afectado, quién puede convertirse en aliado, dónde pueden surgir conflictos y quién tiene capacidad para movilizar personas o recursos.
+5.  **Profundizar el análisis de cada actor.** Más allá del poder y el interés, se examina su nivel de afectación y vulnerabilidad frente al proyecto, su representatividad y legitimidad territorial, su capacidad de cooperación o de generar conflictos, y las relaciones y redes en las que participa.
+6.  **Identificar conflictos y alianzas.** Se hace explícito dónde puede haber disputas —por ejemplo, por uso del suelo, acceso a recursos o legitimidad de representación— y dónde existen o pueden construirse alianzas que fortalezcan la viabilidad del proyecto.
+7.  **Definir estrategias de relacionamiento diferenciadas.** A partir del análisis anterior, se asigna a cada actor o grupo de actores una estrategia concreta —informar, consultar, involucrar, gestionar de cerca, construir alianzas, empoderar— y no un tratamiento uniforme para todos.
+8.  **Solo entonces, identificar problemas, necesidades y formular el proyecto.** El análisis de actores es un insumo del diagnóstico territorial, no un trámite posterior: la secuencia recomendada va del territorio a los actores, de los actores a sus intereses y relaciones, de ahí al poder y la influencia, luego a los conflictos y alianzas, después a las estrategias de participación, y solo al final a los problemas, las necesidades y el proyecto propiamente dicho.
+
+{{< video "https://www.youtube.com/watch?v=GrA9kBHZAcA" >}} Cómo hacer un mapa de actores o stakeholders, con ejemplos prácticos.
+
+## Infografía: análisis de actores en un vistazo
+
+```{=html}
+<div class="actores-info">
+<div class="ma-header">
+<div class="ma-title">
+<h4>Análisis de actores</h4>
+<p>Antes de formular un proyecto de desarrollo</p>
+</div>
+<div class="ma-callout">
+Comprender el <strong>territorio</strong> y a sus <strong>actores</strong> antes de diseñar la intervención
+</div>
+<div class="ma-note">No es hacer una lista de personas:<br>es comprender un sistema de poder y relaciones.</div>
+</div>
+<div class="ma-quadrants">
+<div class="ma-card" style="--qc:#2a78d6">
+<div class="ma-card-top">
+<span class="ma-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 19 C3.5 15 6 13 9 13 C12 13 14.5 15 14.5 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M14.8 14.2 C17.3 14.3 19.8 15.9 20.5 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+<div>
+<div class="ma-card-label">1. Identificar actores</div>
+<div class="ma-card-tag">¿Quiénes están en el territorio?</div>
+</div>
+</div>
+<p>Comunidades, pueblos indígenas, mujeres, productores, jóvenes, gobiernos, sector privado, ONG, cooperación y academia.</p>
+<div class="ma-example">Ej: listado inicial por categorías, validado con informantes clave.</div>
+</div>
+<div class="ma-card" style="--qc:#eda100">
+<div class="ma-card-top">
+<span class="ma-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="4" width="7" height="7" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="4" y="13" width="7" height="7" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="13" width="7" height="7" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+<div>
+<div class="ma-card-label">2. Poder e interés</div>
+<div class="ma-card-tag">Matriz poder &times; interés</div>
+</div>
+</div>
+<p>¿Quién tiene poder e influencia? ¿Quién tiene mayor interés? ¿Quién será directamente afectado?</p>
+<div class="ma-example">Ej: actor con alto poder y bajo interés → mantener satisfecho.</div>
+</div>
+<div class="ma-card" style="--qc:#e34948">
+<div class="ma-card-top">
+<span class="ma-icon"><svg viewBox="0 0 24 24"><path d="M12 2 L20 6 V12 C20 17 16.5 20.5 12 22 C7.5 20.5 4 17 4 12 V6 Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12.5 L11 15 L16 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<div>
+<div class="ma-card-label">3. Profundizar</div>
+<div class="ma-card-tag">Afectación &middot; vulnerabilidad &middot; legitimidad</div>
+</div>
+</div>
+<p>Un actor con poco poder institucional puede ser de los más afectados por el proyecto.</p>
+<div class="ma-example">Ej: grupos vulnerables con alta afectación → empoderar e involucrar.</div>
+</div>
+<div class="ma-card" style="--qc:#1baf7a">
+<div class="ma-card-top">
+<span class="ma-icon"><svg viewBox="0 0 24 24"><path d="M4 12 L10 18 L20 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<div>
+<div class="ma-card-label">4. Estrategia de relacionamiento</div>
+<div class="ma-card-tag">Del análisis a la acción</div>
+</div>
+</div>
+<p>Informar, consultar, involucrar, gestionar de cerca, construir alianzas o empoderar, según cada actor.</p>
+<div class="ma-example">Ej: ONG con capacidad técnica → construir alianzas.</div>
+</div>
+</div>
+<div class="ma-matrix-wrap">
+<h5>Matriz poder &times; interés</h5>
+<div class="ma-matrix">
+<div class="ma-yaxis">Interés en el proyecto</div>
+<div class="ma-grid">
+<div class="ma-cell ma-q ma-q2">
+<strong>Actores interesados</strong>
+<span>Mantener informados, fortalecer capacidades y promover participación</span>
+</div>
+<div class="ma-cell ma-q ma-q1">
+<strong>Actores clave</strong>
+<span>Gestionar de cerca e involucrar en decisiones</span>
+</div>
+<div class="ma-cell ma-q ma-q4">
+<strong>Actores secundarios</strong>
+<span>Monitorear e informar cuando corresponda</span>
+</div>
+<div class="ma-cell ma-q ma-q3">
+<strong>Actores influyentes</strong>
+<span>Mantener satisfechos y consultar estratégicamente</span>
+</div>
+</div>
+</div>
+<div class="ma-xaxis">Poder / Influencia</div>
+</div>
+<div class="ma-cross">
+<h5>Estrategia por tipo de actor</h5>
+<div class="ma-table-wrap">
+<table>
+<thead>
+<tr><th>Actor</th><th>Categoría / situación</th><th>Estrategia</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Comunidades locales</td>
+<td>Alta afectación + alto interés</td>
+<td>Participación activa: talleres, consulta y toma de decisiones</td>
+</tr>
+<tr>
+<td>Gobierno local</td>
+<td>Alto poder + alto interés</td>
+<td>Gestionar de cerca: coordinación institucional y acuerdos</td>
+</tr>
+<tr>
+<td>Empresa privada</td>
+<td>Alto poder + interés variable</td>
+<td>Mantener satisfecha / negociar: mesas de diálogo</td>
+</tr>
+<tr>
+<td>ONG / cooperación</td>
+<td>Interés alto + capacidad técnica</td>
+<td>Construir alianzas: cooperación técnica y movilización de recursos</td>
+</tr>
+<tr>
+<td>Grupos vulnerables</td>
+<td>Menor poder + alta afectación</td>
+<td>Empoderar e involucrar: mecanismos para que su voz incida</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="ma-flow">
+<div class="ma-flow-step"><span>1</span>Territorio</div>
+<div class="ma-arrow">&#8594;</div>
+<div class="ma-flow-step"><span>2</span>Actores</div>
+<div class="ma-arrow">&#8594;</div>
+<div class="ma-flow-step"><span>3</span>Intereses y relaciones</div>
+<div class="ma-arrow">&#8594;</div>
+<div class="ma-flow-step"><span>4</span>Poder e influencia</div>
+<div class="ma-arrow">&#8594;</div>
+<div class="ma-flow-step"><span>5</span>Conflictos y alianzas</div>
+<div class="ma-arrow">&#8594;</div>
+<div class="ma-flow-step"><span>6</span>Estrategias de participación</div>
+<div class="ma-arrow">&#8594;</div>
+<div class="ma-flow-step"><span>7</span>Problemas y necesidades</div>
+<div class="ma-arrow">&#8594;</div>
+<div class="ma-flow-step"><span>8</span>Proyecto</div>
+</div>
+<div class="ma-formula">
+<span>Territorio</span><i>+</i><span>Actores</span><i>+</i><span>Poder e interés</span><i>+</i><span>Afectación y legitimidad</span><i>=</i><strong>Estrategias de participación, no solo una lista</strong>
+</div>
+<div class="ma-footnote">Los proyectos sostenibles no se construyen solamente para las personas: se construyen con las personas.</div>
+</div>
+<style>
+.actores-info{
+  --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+  font-family: inherit;
+  color: var(--ink);
+  background:#fcfcfb;
+  border:1px solid rgba(0,58,112,0.12);
+  border-radius:12px;
+  padding:0 0 22px 0;
+  margin:24px 0 8px 0;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,0.06);
+}
+.actores-info h4, .actores-info h5{ margin:0; }
+.actores-info p{ margin:0; }
+.ma-header{
+  background:#003A70;
+  color:#fff;
+  padding:22px 24px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:16px;
+  justify-content:space-between;
+}
+.ma-title h4{ font-size:1.35rem; font-weight:900; letter-spacing:.2px; }
+.ma-title p{ font-size:.92rem; opacity:.9; margin-top:2px; }
+.ma-callout{
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:8px;
+  padding:10px 14px;
+  font-size:.85rem;
+  max-width:340px;
+  line-height:1.4;
+}
+.ma-note{
+  font-style:italic;
+  font-size:.82rem;
+  opacity:.85;
+  text-align:right;
+  line-height:1.3;
+  min-width:170px;
+}
+.ma-quadrants{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  padding:22px 24px 6px 24px;
+}
+.ma-card{
+  background:color-mix(in srgb, var(--qc) 7%, #fcfcfb);
+  border:1px solid color-mix(in srgb, var(--qc) 35%, transparent);
+  border-left:5px solid var(--qc);
+  border-radius:10px;
+  padding:14px 16px;
+}
+.ma-card-top{ display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.ma-icon{ color:var(--qc); flex:0 0 auto; }
+.ma-icon svg{ width:26px; height:26px; display:block; }
+.ma-card-label{ font-weight:800; font-size:1.02rem; color:var(--ink); }
+.ma-card-tag{ font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); font-weight:600; }
+.ma-card p{ font-size:.88rem; color:var(--ink-2); line-height:1.4; margin-bottom:6px; }
+.ma-example{ font-size:.8rem; color:var(--ink); background:rgba(255,255,255,0.6); border:1px dashed color-mix(in srgb, var(--qc) 45%, transparent); border-radius:6px; padding:6px 8px; }
+.ma-matrix-wrap{ padding:20px 24px 4px 24px; }
+.ma-matrix-wrap h5{ font-size:1rem; font-weight:800; color:#003A70; margin-bottom:12px; text-align:center; }
+.ma-matrix{ display:flex; align-items:stretch; gap:8px; }
+.ma-yaxis{
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size:.78rem;
+  font-weight:700;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.ma-grid{
+  flex:1;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-template-rows:repeat(2,1fr);
+  gap:10px;
+}
+.ma-cell.ma-q{
+  border-radius:10px;
+  padding:14px 16px;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  min-height:90px;
+  justify-content:center;
+}
+.ma-cell.ma-q strong{ font-size:.92rem; font-weight:800; }
+.ma-cell.ma-q span{ font-size:.78rem; opacity:.95; line-height:1.35; }
+.ma-q1{ background:#e34948; }
+.ma-q2{ background:#1baf7a; }
+.ma-q3{ background:#eda100; }
+.ma-q4{ background:#8a8f98; }
+.ma-xaxis{
+  text-align:center;
+  font-size:.78rem;
+  font-weight:700;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  margin-top:8px;
+}
+.ma-cross{ padding:18px 24px 4px 24px; }
+.ma-cross h5{ font-size:1rem; font-weight:800; color:#003A70; margin-bottom:10px; }
+.ma-table-wrap{ overflow-x:auto; }
+.actores-info table{ width:100%; border-collapse:collapse; font-size:.85rem; }
+.actores-info table th{ text-align:left; color:#fff; background:#003A70; padding:8px 10px; font-weight:700; white-space:nowrap; }
+.actores-info table td{ padding:9px 10px; border-bottom:1px solid #e1e0d9; color:var(--ink-2); vertical-align:top; }
+.actores-info table tr:last-child td{ border-bottom:none; }
+.ma-flow{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  gap:8px;
+  padding:20px 24px 4px 24px;
+}
+.ma-flow-step{
+  flex:1 1 110px;
+  background:#f3f6f9;
+  border:1px solid rgba(0,58,112,0.15);
+  border-radius:8px;
+  padding:10px 10px;
+  font-size:.78rem;
+  color:var(--ink-2);
+  font-weight:600;
+}
+.ma-flow-step span{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:20px; height:20px; border-radius:50%;
+  background:#003A70; color:#fff; font-size:.72rem; font-weight:800;
+  margin-right:6px;
+}
+.ma-arrow{ align-self:center; color:#003A70; font-weight:900; font-size:1.1rem; flex:0 0 auto; }
+.ma-formula{
+  margin:18px 24px 0 24px;
+  background:#f3f6f9;
+  border-radius:8px;
+  padding:12px 16px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  font-size:.85rem;
+}
+.ma-formula span{ background:#fff; border:1px solid rgba(0,58,112,0.2); border-radius:6px; padding:4px 9px; font-weight:700; color:#003A70; }
+.ma-formula i{ font-style:normal; color:var(--muted); font-weight:900; }
+.ma-formula strong{ color:var(--ink); }
+.ma-footnote{ margin:14px 24px 0 24px; font-size:.78rem; font-style:italic; color:var(--muted); }
+@media (max-width:640px){
+  .ma-quadrants{ grid-template-columns:1fr; }
+  .ma-header{ flex-direction:column; align-items:flex-start; }
+  .ma-note{ text-align:left; }
+  .ma-matrix{ flex-direction:column; }
+  .ma-yaxis{ writing-mode:horizontal-tb; transform:none; }
+  .ma-flow-step{ flex:1 1 100%; }
+  .ma-arrow{ transform:rotate(90deg); }
+}
+</style>
+```
