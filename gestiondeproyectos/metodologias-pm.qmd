@@ -1,0 +1,274 @@
+---
+title: "Metodologías de gestión de proyectos"
+format: html
+editor: visual
+---
+
+## Qué son las metodologías de gestión de proyectos
+
+Una metodología de gestión de proyectos es un conjunto estructurado de procesos, roles, plantillas y buenas prácticas que ordenan la forma en que un proyecto se inicia, se planea, se ejecuta, se controla y se cierra. Dos de las referencias más usadas a nivel global son el PMP y PRINCE2. El PMP (*Project Management Professional*) es la certificación insignia del PMI (*Project Management Institute*), fundado en Estados Unidos en 1969, y se apoya en el PMBOK (*Project Management Body of Knowledge*), una guía organizada por procesos y áreas de conocimiento. PRINCE2 (*PRojects IN Controlled Environments*), por su parte, es un método —no solo una guía de conocimientos— desarrollado originalmente por el gobierno del Reino Unido en 1989 y revisado en 1996, ampliamente adoptado en el sector público británico y, desde entonces, en organizaciones de todo el mundo.
+
+{{< video "https://youtu.be/5BGJYWfamcY" >}} Qué es PMP y PMI
+
+## Enfoques y certificaciones: PMP y PRINCE2
+
+El PMP y PRINCE2 comparten el objetivo de estandarizar la gestión de proyectos, pero parten de lógicas distintas. El PMP organiza el conocimiento en cinco grupos de procesos (inicio, planificación, ejecución, monitoreo y control, cierre) y diez áreas de conocimiento (alcance, cronograma, costos, calidad, recursos, comunicaciones, riesgos, adquisiciones, interesados e integración), y su certificación exige experiencia comprobada además de un examen. PRINCE2 es más prescriptivo en su método: define siete principios, siete temas y siete procesos que se deben adaptar —nunca omitir— al tamaño y la complejidad de cada proyecto, y su certificación se organiza en dos niveles (*Foundation* y *Practitioner*) sin exigir experiencia previa para el primero.
+
+En la práctica, ninguna de las dos metodologías es incompatible con enfoques ágiles: tanto el PMI como Axelos (la organización que administra PRINCE2) han publicado extensiones ágiles de sus marcos, reconociendo que buena parte de los proyectos actuales combinan procesos de control con ciclos iterativos de entrega.
+
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=mtyFWCs2YUU" >}}
+
+{{< video "https://www.youtube.com/watch?v=bxrFzZ4-fCA" >}}
+
+{{< video "https://www.youtube.com/watch?v=6SjDZTmQrUE" >}}
+
+{{< video https://www.youtube.com/watch?v=P56JvgLolLs >}}
+
+{{< video https://www.youtube.com/watch?v=7TbksimbtiE >}}
+
+{{< video https://www.youtube.com/watch?v=rCdEKocayuI >}}
+
+{{< video https://www.youtube.com/watch?v=b9Jdj2Iu7NI >}}
+
+{{< video https://www.youtube.com/watch?v=5KT94veOQ_8 >}}
+
+PRINCE2, PMP
+:::
+
+## Uso de las metodologías en la gestión de proyectos
+
+La elección entre PMP, PRINCE2, un enfoque ágil o el marco lógico —este último frecuente en proyectos de cooperación internacional y en la [gestión de proyectos de CTeI](gestionproyectosciencia.qmd)— depende del tipo de proyecto, el sector y el marco institucional en el que se ejecuta. Un proyecto financiado por un organismo multilateral suele exigir una matriz de marco lógico con indicadores y una [línea base](Linea-base.qmd) bien definida; una entidad pública que reporta a un ente de control puede beneficiarse de la trazabilidad documental de PRINCE2; y un equipo de desarrollo de producto con requisitos cambiantes puede necesitar la flexibilidad de un marco ágil.
+
+Estas metodologías no reemplazan las herramientas de diagnóstico y decisión ya vistas en esta sección: una vez elegida la metodología, sigue siendo necesario levantar el [mapa de actores](mapa-actores.qmd), analizar los [riesgos del proyecto](riesgos-proyectos.qmd) y anclar las decisiones en un diagnóstico como la [matriz DOFA](dofa.qmd). La metodología ordena el cómo se ejecuta; el diagnóstico y la estrategia siguen definiendo el qué y el porqué.
+
+## Infografía: metodologías de gestión de proyectos en un vistazo
+
+```{=html}
+<div class="metodologias-info">
+<div class="mp-header">
+<div class="mp-title">
+<h4>Metodologías de gestión de proyectos</h4>
+<p>Distintas lógicas para ordenar la ejecución</p>
+</div>
+<div class="mp-callout">
+Ninguna metodología es universal: la elección depende del <strong>tipo de proyecto</strong> y el <strong>marco institucional</strong>.
+</div>
+<div class="mp-note">Del método<br>a la ejecución.</div>
+</div>
+<div class="mp-quadrants">
+<div class="mp-card" style="--qc:#2a78d6">
+<div class="mp-card-top">
+<span class="mp-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 13.5 L7.5 21 L12 18.5 L16.5 21 L15 13.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
+<div>
+<div class="mp-card-label">PMP (PMI)</div>
+<div class="mp-card-tag">Guía por procesos</div>
+</div>
+</div>
+<p>Guía de conocimientos (PMBOK) organizada en procesos y áreas de conocimiento.</p>
+<div class="mp-example">Ej: certificación reconocida globalmente, exige experiencia comprobada.</div>
+</div>
+<div class="mp-card" style="--qc:#5b3ea6">
+<div class="mp-card-top">
+<span class="mp-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="6" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="15" y="4" width="6" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="9" y="15" width="6" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6 9v3h12V9M12 12v3" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
+<div>
+<div class="mp-card-label">PRINCE2</div>
+<div class="mp-card-tag">Método por principios</div>
+</div>
+</div>
+<p>Método basado en principios, temas y procesos, con roles y documentos de control definidos.</p>
+<div class="mp-example">Ej: origen en el gobierno del Reino Unido, muy usado en el sector público.</div>
+</div>
+<div class="mp-card" style="--qc:#1baf7a">
+<div class="mp-card-top">
+<span class="mp-icon"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M20 4v4h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<div>
+<div class="mp-card-label">Ágil</div>
+<div class="mp-card-tag">Iterativo &middot; incremental</div>
+</div>
+</div>
+<p>Entregas iterativas e incrementales que se ajustan a requisitos cambiantes.</p>
+<div class="mp-example">Ej: sprints y tableros tipo Scrum o Kanban.</div>
+</div>
+<div class="mp-card" style="--qc:#eda100">
+<div class="mp-card-top">
+<span class="mp-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M4 10h16M4 16h16M10 4v16M16 4v16" stroke="currentColor" stroke-width="1.1"/></svg></span>
+<div>
+<div class="mp-card-label">Marco lógico</div>
+<div class="mp-card-tag">Objetivos &middot; indicadores</div>
+</div>
+</div>
+<p>Matriz de objetivos, indicadores y supuestos, frecuente en cooperación internacional.</p>
+<div class="mp-example">Ej: proyectos financiados por organismos multilaterales.</div>
+</div>
+</div>
+<div class="mp-cross">
+<h5>Cuándo conviene cada una</h5>
+<div class="mp-table-wrap">
+<table>
+<thead>
+<tr><th>Metodología</th><th>Origen</th><th>Enfoque</th><th>Cuándo usarla</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="mp-chip"><i style="background:#2a78d6"></i>PMP</span></td>
+<td>PMI, Estados Unidos, 1969</td>
+<td>Procesos y áreas de conocimiento</td>
+<td>Proyectos que buscan un estándar internacional flexible.</td>
+</tr>
+<tr>
+<td><span class="mp-chip"><i style="background:#5b3ea6"></i>PRINCE2</span></td>
+<td>Gobierno del Reino Unido, 1989/1996</td>
+<td>Principios, temas y procesos prescriptivos</td>
+<td>Entidades públicas que requieren trazabilidad documental.</td>
+</tr>
+<tr>
+<td><span class="mp-chip"><i style="background:#1baf7a"></i>Ágil</span></td>
+<td>Manifiesto Ágil, 2001</td>
+<td>Ciclos iterativos e incrementales</td>
+<td>Proyectos con requisitos cambiantes o alta incertidumbre.</td>
+</tr>
+<tr>
+<td><span class="mp-chip"><i style="background:#eda100"></i>Marco lógico</span></td>
+<td>USAID, años setenta</td>
+<td>Matriz de objetivos e indicadores</td>
+<td>Proyectos de cooperación internacional y desarrollo.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="mp-flow">
+<div class="mp-flow-step"><span>1</span>Definir el tipo de proyecto y su contexto</div>
+<div class="mp-arrow">&#8594;</div>
+<div class="mp-flow-step"><span>2</span>Elegir la metodología o combinación de metodologías</div>
+<div class="mp-arrow">&#8594;</div>
+<div class="mp-flow-step"><span>3</span>Adaptar procesos, roles y plantillas</div>
+<div class="mp-arrow">&#8594;</div>
+<div class="mp-flow-step"><span>4</span>Ejecutar y ajustar la metodología con el tiempo</div>
+</div>
+<div class="mp-formula">
+<span>PMP</span><i>+</i><span>PRINCE2</span><i>+</i><span>Ágil</span><i>+</i><span>Marco lógico</span><i>=</i><strong>Caja de herramientas del gestor de proyectos</strong>
+</div>
+<div class="mp-footnote">La metodología ordena el cómo; el diagnóstico y la estrategia del proyecto siguen definiendo el qué y el porqué.</div>
+</div>
+<style>
+.metodologias-info{
+  --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+  font-family: inherit;
+  color: var(--ink);
+  background:#fcfcfb;
+  border:1px solid rgba(0,58,112,0.12);
+  border-radius:12px;
+  padding:0 0 22px 0;
+  margin:24px 0 8px 0;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,0.06);
+}
+.metodologias-info h4, .metodologias-info h5{ margin:0; }
+.metodologias-info p{ margin:0; }
+.mp-header{
+  background:#003A70;
+  color:#fff;
+  padding:22px 24px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:16px;
+  justify-content:space-between;
+}
+.mp-title h4{ font-size:1.35rem; font-weight:900; letter-spacing:.2px; }
+.mp-title p{ font-size:.92rem; opacity:.9; margin-top:2px; }
+.mp-callout{
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:8px;
+  padding:10px 14px;
+  font-size:.85rem;
+  max-width:340px;
+  line-height:1.4;
+}
+.mp-note{
+  font-style:italic;
+  font-size:.82rem;
+  opacity:.85;
+  text-align:right;
+  line-height:1.3;
+  min-width:150px;
+}
+.mp-quadrants{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  padding:22px 24px 6px 24px;
+}
+.mp-card{
+  background:color-mix(in srgb, var(--qc) 7%, #fcfcfb);
+  border:1px solid color-mix(in srgb, var(--qc) 35%, transparent);
+  border-left:5px solid var(--qc);
+  border-radius:10px;
+  padding:14px 16px;
+}
+.mp-card-top{ display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.mp-icon{ color:var(--qc); flex:0 0 auto; }
+.mp-icon svg{ width:26px; height:26px; display:block; }
+.mp-card-label{ font-weight:800; font-size:1.02rem; color:var(--ink); }
+.mp-card-tag{ font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); font-weight:600; }
+.mp-card p{ font-size:.88rem; color:var(--ink-2); line-height:1.4; margin-bottom:6px; }
+.mp-example{ font-size:.8rem; color:var(--ink); background:rgba(255,255,255,0.6); border:1px dashed color-mix(in srgb, var(--qc) 45%, transparent); border-radius:6px; padding:6px 8px; }
+.mp-cross{ padding:18px 24px 4px 24px; }
+.mp-cross h5{ font-size:1rem; font-weight:800; color:#003A70; margin-bottom:10px; }
+.mp-table-wrap{ overflow-x:auto; }
+.metodologias-info table{ width:100%; border-collapse:collapse; font-size:.85rem; }
+.metodologias-info table th{ text-align:left; color:#fff; background:#003A70; padding:8px 10px; font-weight:700; white-space:nowrap; }
+.metodologias-info table td{ padding:9px 10px; border-bottom:1px solid #e1e0d9; color:var(--ink-2); vertical-align:top; }
+.metodologias-info table tr:last-child td{ border-bottom:none; }
+.mp-chip{ display:inline-flex; align-items:center; gap:5px; font-weight:800; color:var(--ink); white-space:nowrap; }
+.mp-chip i{ width:9px; height:9px; border-radius:50%; display:inline-block; }
+.mp-flow{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  gap:8px;
+  padding:20px 24px 4px 24px;
+}
+.mp-flow-step{
+  flex:1 1 150px;
+  background:#f3f6f9;
+  border:1px solid rgba(0,58,112,0.15);
+  border-radius:8px;
+  padding:10px 12px;
+  font-size:.82rem;
+  color:var(--ink-2);
+  font-weight:600;
+}
+.mp-flow-step span{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:20px; height:20px; border-radius:50%;
+  background:#003A70; color:#fff; font-size:.72rem; font-weight:800;
+  margin-right:6px;
+}
+.mp-arrow{ align-self:center; color:#003A70; font-weight:900; font-size:1.1rem; flex:0 0 auto; }
+.mp-formula{
+  margin:18px 24px 0 24px;
+  background:#f3f6f9;
+  border-radius:8px;
+  padding:12px 16px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  font-size:.85rem;
+}
+.mp-formula span{ background:#fff; border:1px solid rgba(0,58,112,0.2); border-radius:6px; padding:4px 9px; font-weight:700; color:#003A70; }
+.mp-formula i{ font-style:normal; color:var(--muted); font-weight:900; }
+.mp-formula strong{ color:var(--ink); }
+.mp-footnote{ margin:14px 24px 0 24px; font-size:.78rem; font-style:italic; color:var(--muted); }
+@media (max-width:640px){
+  .mp-quadrants{ grid-template-columns:1fr; }
+  .mp-header{ flex-direction:column; align-items:flex-start; }
+  .mp-note{ text-align:left; }
+  .mp-arrow{ transform:rotate(90deg); }
+}
+</style>
+```

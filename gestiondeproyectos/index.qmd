@@ -11,11 +11,31 @@ Esta sección reúne recursos sobre la gestión de proyectos de desarrollo, cien
 :::::: mrw-cards-grid
 ::: mrw-card
 ::: mrw-card-header
-[Gestión de proyectos](projectmanagement.qmd)
+[Liderazgo](liderazgo.qmd)
 :::
 
 ::: mrw-card-body
-Fundamentos de la gestión de proyectos: ciclo de vida, áreas de conocimiento y principales enfoques metodológicos (PMBOK, marco lógico, ágil) para planear, ejecutar y cerrar un proyecto.
+Qué distingue al liderazgo de la administración, los principios de liderazgo de referentes como Drucker y Amazon, y su papel en la gestión de proyectos.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Estrategia](estrategia.qmd)
+:::
+
+::: mrw-card-body
+Qué es la estrategia según Porter, la diferencia entre estrategia deliberada y emergente (Mintzberg), y su uso para conectar el diagnóstico de un proyecto con la acción.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Metodologías de gestión de proyectos](metodologias-pm.qmd)
+:::
+
+::: mrw-card-body
+PMP y PRINCE2 frente a frente, su relación con enfoques ágiles y el marco lógico, y criterios para elegir la metodología según el tipo de proyecto.
 :::
 :::
 

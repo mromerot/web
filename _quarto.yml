@@ -130,8 +130,12 @@ website:
             href: gestiondeproyectos/gestionproyectosciencia.qmd
           - text: "Gestión de tecnología e innovación"
             href: gestiondeproyectos/gestiontecnologiainnovacion.qmd
-          - text: "Gestión de proyectos"
-            href: gestiondeproyectos/projectmanagement.qmd
+          - text: "Liderazgo"
+            href: gestiondeproyectos/liderazgo.qmd
+          - text: "Estrategia"
+            href: gestiondeproyectos/estrategia.qmd
+          - text: "Metodologías de gestión de proyectos"
+            href: gestiondeproyectos/metodologias-pm.qmd
           - text: "Impacto"
             href: gestiondeproyectos/impacto.qmd
           - text: "DOFA"
