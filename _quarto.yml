@@ -170,6 +170,8 @@ website:
             href: cyt/docenciaeducacion.qmd
           - text: "Ciencia transdiciplinar"
             href: cyt/transdisciplina.qmd
+          - text: "Interfaz ciencia-política-sociedad"
+            href: cyt/interfaz-cps.qmd
           - text: "Objetos virtuales de aprendizaje (OVA)"
             href: cyt/ova/index.qmd
       # aqui viene la seccion de ecologia y conservacion

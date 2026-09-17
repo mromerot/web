@@ -1,0 +1,284 @@
+---
+title: "Interfaz ciencia-política-sociedad"
+format: html
+editor: visual
+---
+
+## Qué es la interfaz ciencia-política-sociedad
+
+La interfaz ciencia-política-sociedad es el conjunto de espacios, procesos y organizaciones donde el conocimiento científico, la toma de decisiones públicas y las demandas y valores de la sociedad se encuentran, se traducen entre sí y se negocian mutuamente. El término aparece de forma explícita en la literatura reciente sobre gobernanza ambiental: un artículo de referencia en el *Annual Review of Environment and Resources* la describe como el espacio donde confluyen múltiples fuentes de conocimiento y las capacidades de distintos actores, con el propósito de co-crear conocimiento e información que informen la decisión. **Co-Producing Sustainability: Reordering the Governance of Science, Policy, and Practice**. Wyborn *et al*. Annual Review of Environment and Resources. 2019. [*Link*](https://www.annualreviews.org/content/journals/10.1146/annurev-environ-101718-033103).
+
+Esta idea es más amplia que el viejo "modelo lineal", según el cual la ciencia produce conocimiento objetivo que los tomadores de decisión simplemente aplican. La revista *Science* cuestiona directamente ese supuesto: la evidencia científica compite con otros tipos de conocimiento, intereses y valores en el proceso de decisión, y su peso depende de qué tan creíble, relevante y legítima resulte para quienes deciden. **The science–policy interface**. Van den Hove. Science. 2007. [*Link*](https://www.science.org/doi/10.1126/science.aai8837). Esa condición triple —credibilidad, relevancia y legitimidad (CRELE)— proviene del concepto de **organización puente** (*boundary organization*), propuesto por David Guston para describir las instituciones que estabilizan la frontera entre ciencia y política y permiten que ambas partes cumplan sus objetivos sin que una reemplace a la otra. **Boundary Organizations in Environmental Policy and Science: An Introduction**. Guston. Science, Technology, & Human Values. 2001. [*Link*](https://journals.sagepub.com/doi/10.1177/016224390102600401).
+
+- **Ciencia**: produce y sintetiza evidencia, identifica riesgos y opciones, y evalúa su nivel de certidumbre.
+- **Política**: decide, regula y asigna recursos a partir de esa evidencia, junto con otros criterios legítimos (valores, intereses, viabilidad).
+- **Sociedad**: valida socialmente el proceso, aporta conocimientos y prioridades propias, y legitima —o cuestiona— tanto la evidencia como la decisión.
+
+Dos instituciones intergubernamentales creadas explícitamente como interfaces ciencia-política ilustran el concepto a escala global: el Panel Intergubernamental de Cambio Climático (IPCC), que sintetiza la ciencia climática para las negociaciones de la Convención Marco de Cambio Climático, y la Plataforma Intergubernamental sobre Biodiversidad y Servicios Ecosistémicos (IPBES), que cumple una función equivalente para la biodiversidad. **Conceptual Framework**. IPBES secretariat. [*Link*](https://www.ipbes.net/conceptual-framework). En ambos casos la dimensión "sociedad" es parte explícita del mandato: sus evaluaciones buscan legitimidad no solo ante los gobiernos, sino ante la ciudadanía y los actores no estatales cuyo bienestar depende de esas decisiones.
+
+{{< video "https://www.youtube.com/watch?v=XP6rhcQUmOs" >}} What is the IPCC? Video oficial del Panel Intergubernamental de Cambio Climático.
+
+## Cómo se construye la interfaz: mecanismos y organizaciones puente
+
+Una interfaz ciencia-política-sociedad efectiva no surge de forma espontánea: requiere mecanismos e instituciones diseñadas específicamente para ese propósito. La literatura reciente identifica funciones concretas de **corretaje** (*brokerage*) que estas organizaciones deben cumplir: traducir el conocimiento técnico a un lenguaje útil para la decisión, convocar a los actores relevantes, mediar entre visiones distintas del problema y dar legitimidad al proceso ante audiencias diversas. **Brokerage at the science–policy interface: from conceptual framework to practical guidance**. Humanities and Social Sciences Communications (Nature). 2021. [*Link*](https://www.nature.com/articles/s41599-021-00756-3). Un trabajo relacionado propone un marco de competencias —analíticas, comunicativas, relacionales y políticas— que deberían desarrollar quienes trabajan en esta frontera. **Building capacity at the science-policy interface: a competencies framework**. Humanities and Social Sciences Communications (Nature). 2025. [*Link*](https://www.nature.com/articles/s41599-025-06403-5).
+
+Un proceso típico para construir esta interfaz incluye:
+
+1.  **Identificar la pregunta de política relevante** y el ciclo de decisión al que debe responder la evidencia: una ventana regulatoria, una negociación internacional o una crisis.
+2.  **Sintetizar el conocimiento disponible en una evaluación (assessment)** manejable para quienes deciden, sin simplificar al punto de perder matices críticos: el modelo que siguen tanto el IPCC como IPBES en sus resúmenes para tomadores de decisiones.
+3.  **Involucrar a actores de múltiples niveles** (gobiernos, comunidad científica, sector privado, sociedad civil) desde el diseño de la pregunta y no solo al final del proceso, siguiendo el enfoque de coproducción de conocimiento.
+4.  **Negociar el mensaje final con los actores políticos**: en el caso del IPCC, esto ocurre en sesiones plenarias donde delegados de gobierno aprueban línea por línea el Resumen para Responsables de Políticas.
+5.  **Sostener la función con estructuras permanentes de asesoría científica**, como las redes de asesores científicos jefes que promueve la Red Internacional de Asesoramiento Científico Gubernamental (INGSA), fundada en 2014 bajo la dirección de Sir Peter Gluckman.
+
+Un error frecuente es confundir esta construcción institucional con un ejercicio de relaciones públicas de la ciencia: la credibilidad de la interfaz depende de que la evidencia mantenga independencia técnica incluso cuando su mensaje final se negocia políticamente, y de que la organización puente sea percibida como legítima por todas las partes, no solo por la comunidad científica.
+
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=lAJAithQVNU" >}} Sir Peter Gluckman: Science Advice to Government.
+
+{{< video "https://www.youtube.com/watch?v=oOiGio7YU-M" >}} Introduction to IPBES.
+:::
+
+## Uso de la interfaz en la sociedad: comunicación, diplomacia científica y confianza pública
+
+La dimensión "sociedad" de esta interfaz va más allá de que la ciudadanía reciba pasivamente los resultados de la ciencia y la política: implica participación, comunicación en doble vía y construcción de confianza pública. La Recomendación sobre la Ciencia y los Investigadores Científicos de la UNESCO (2017), ratificada por 195 Estados miembros, es explícita en este punto: reconoce el papel de la ciencia en la política y la toma de decisiones nacionales, y subraya la necesidad de que la ciencia interactúe de forma significativa con la sociedad y viceversa. **Recommendation on Science and Scientific Researchers**. UNESCO. 2017. [*Link*](https://www.unesco.org/en/recommendation-science).
+
+Esta misma lógica opera a escala internacional a través de la **diplomacia científica**, que usa la cooperación científica como puente entre países cuando los canales políticos tradicionales están limitados o son insuficientes, y que ha sido un componente explícito de procesos como la propia Convención Marco de Cambio Climático o los Objetivos de Desarrollo Sostenible. El Consejo Internacional de Ciencia (ISC) ha aplicado este enfoque de tres actores —ciencia, política y sociedad— de forma explícita frente a desafíos concretos: su informe de política sobre contaminación por plásticos se titula justamente **Creating a Strong Interface between Science, Policy and Society to Tackle Global Plastic Pollution**. ISC. 2023. [*Link*](https://council.science/publications/policy-brief-tackle-global-plastic-pollution/); y su plan de acción dedica un eje completo a fortalecer las interfaces ciencia-política en procesos globales como los ODS. **UN and global policy processes**. ISC Action Plan. [*Link*](https://council.science/actionplan/3-1-science-policy-interfaces-at-the-global-level/).
+
+Comunicar la evidencia de forma comprensible y confiable para audiencias no especializadas es, en ese sentido, una función tan crítica como producirla: sin esa traducción, incluso la evidencia más sólida puede perder legitimidad social antes de convertirse en decisión. Esta función de traducción conecta con el trabajo sobre [coproducción de conocimiento](transdisciplina.qmd) y ciencia transdisciplinar descrito en esta misma sección, y con la [gestión de riesgos en proyectos](../gestiondeproyectos/riesgos-proyectos.qmd), donde la comunicación de la incertidumbre científica a actores no técnicos es igualmente central.
+
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/watch?v=qLlAMgBQ4wg" >}} AAAS y la diplomacia científica.
+
+{{< video "https://www.youtube.com/watch?v=8WRcovE4-7M" >}} ¿Cómo comunicar la evidencia científica para tomar decisiones? Charlas Científicas INS 2024.
+:::
+
+## Infografía: la interfaz ciencia-política-sociedad en un vistazo
+
+```{=html}
+<div class="interfazcps-info">
+<div class="icps-header">
+<div class="icps-title">
+<h4>La interfaz ciencia-política-sociedad</h4>
+<p>De la evidencia a la decisión legítima</p>
+</div>
+<div class="icps-callout">
+No es un modelo lineal: <strong>ciencia</strong>, <strong>política</strong> y <strong>sociedad</strong> se traducen y negocian entre sí.
+</div>
+<div class="icps-note">Credible, relevante<br>y legítimo (CRELE).</div>
+</div>
+<div class="icps-quadrants">
+<div class="icps-card" style="--qc:#2a78d6">
+<div class="icps-card-top">
+<span class="icps-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1l2.1-2.1M17 7l2.1-2.1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+<div>
+<div class="icps-card-label">Ciencia</div>
+<div class="icps-card-tag">Evidencia &middot; síntesis</div>
+</div>
+</div>
+<p>Produce y sintetiza evidencia, y evalúa su nivel de certidumbre para quienes deciden.</p>
+<div class="icps-example">Ej: los informes de evaluación del IPCC y de IPBES.</div>
+</div>
+<div class="icps-card" style="--qc:#5b3ea6">
+<div class="icps-card-top">
+<span class="icps-icon"><svg viewBox="0 0 24 24"><path d="M6 3 V21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M6 4 H18 L15 7 L18 10 H6 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+<div>
+<div class="icps-card-label">Política</div>
+<div class="icps-card-tag">Decisión &middot; regulación</div>
+</div>
+</div>
+<p>Decide y regula a partir de la evidencia, junto con otros criterios legítimos de decisión.</p>
+<div class="icps-example">Ej: el Resumen para Responsables de Políticas negociado por gobiernos.</div>
+</div>
+<div class="icps-card" style="--qc:#1baf7a">
+<div class="icps-card-top">
+<span class="icps-icon"><svg viewBox="0 0 24 24"><circle cx="8.5" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 19c0-3 2.4-5.2 5.5-5.2S14 16 14 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="16.5" cy="8.5" r="2.3" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M14.5 19c.1-2.4 1.8-4.2 3.9-4.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+<div>
+<div class="icps-card-label">Sociedad</div>
+<div class="icps-card-tag">Confianza &middot; participación</div>
+</div>
+</div>
+<p>Valida socialmente el proceso, aporta conocimientos y prioridades propias.</p>
+<div class="icps-example">Ej: consulta pública y comunicación de la evidencia a audiencias no técnicas.</div>
+</div>
+<div class="icps-card" style="--qc:#eda100">
+<div class="icps-card-top">
+<span class="icps-icon"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="8" height="8" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="8" width="8" height="8" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+<div>
+<div class="icps-card-label">Organizaciones puente</div>
+<div class="icps-card-tag">Brokerage &middot; legitimidad</div>
+</div>
+</div>
+<p>Traducen, convocan y median entre las tres partes para sostener la interfaz en el tiempo.</p>
+<div class="icps-example">Ej: IPCC, IPBES, redes de asesores científicos (INGSA).</div>
+</div>
+</div>
+<div class="icps-cross">
+<h5>Mecanismos que sostienen la interfaz</h5>
+<div class="icps-table-wrap">
+<table>
+<thead>
+<tr><th>Mecanismo</th><th>Qué conecta</th><th>Pregunta clave</th><th>Ejemplo</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="icps-chip"><i style="background:#2a78d6"></i>Panel científico</span></td>
+<td>Ciencia &harr; Política</td>
+<td>¿Qué dice la evidencia y con qué certeza?</td>
+<td>IPCC (clima), IPBES (biodiversidad).</td>
+</tr>
+<tr>
+<td><span class="icps-chip"><i style="background:#5b3ea6"></i>Asesoría científica</span></td>
+<td>Ciencia &harr; Gobierno</td>
+<td>¿Cómo llega la evidencia a quien decide?</td>
+<td>Asesores científicos jefes, red INGSA.</td>
+</tr>
+<tr>
+<td><span class="icps-chip"><i style="background:#1baf7a"></i>Diplomacia científica</span></td>
+<td>Ciencia &harr; Relaciones internacionales</td>
+<td>¿Cómo coopera la ciencia entre países?</td>
+<td>Negociaciones climáticas y de los ODS.</td>
+</tr>
+<tr>
+<td><span class="icps-chip"><i style="background:#eda100"></i>Comunicación pública</span></td>
+<td>Ciencia/Política &harr; Sociedad</td>
+<td>¿La sociedad entiende y confía en la decisión?</td>
+<td>Charlas y campañas de comunicación de evidencia.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="icps-flow">
+<div class="icps-flow-step"><span>1</span>Identificar la pregunta de política relevante</div>
+<div class="icps-arrow">&#8594;</div>
+<div class="icps-flow-step"><span>2</span>Sintetizar la evidencia en una evaluación manejable</div>
+<div class="icps-arrow">&#8594;</div>
+<div class="icps-flow-step"><span>3</span>Involucrar actores y coproducir el mensaje</div>
+<div class="icps-arrow">&#8594;</div>
+<div class="icps-flow-step"><span>4</span>Negociar, comunicar y sostener la confianza</div>
+</div>
+<div class="icps-formula">
+<span>Ciencia</span><i>+</i><span>Política</span><i>+</i><span>Sociedad</span><i>=</i><strong>Decisiones creíbles, relevantes y legítimas</strong>
+</div>
+<div class="icps-footnote">Sin organizaciones puente que la sostengan, la interfaz ciencia-política-sociedad se rompe en el eslabón más débil: la confianza.</div>
+</div>
+<style>
+.interfazcps-info{
+  --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+  font-family: inherit;
+  color: var(--ink);
+  background:#fcfcfb;
+  border:1px solid rgba(0,58,112,0.12);
+  border-radius:12px;
+  padding:0 0 22px 0;
+  margin:24px 0 8px 0;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,0.06);
+}
+.interfazcps-info h4, .interfazcps-info h5{ margin:0; }
+.interfazcps-info p{ margin:0; }
+.icps-header{
+  background:#003A70;
+  color:#fff;
+  padding:22px 24px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:16px;
+  justify-content:space-between;
+}
+.icps-title h4{ font-size:1.35rem; font-weight:900; letter-spacing:.2px; }
+.icps-title p{ font-size:.92rem; opacity:.9; margin-top:2px; }
+.icps-callout{
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:8px;
+  padding:10px 14px;
+  font-size:.85rem;
+  max-width:340px;
+  line-height:1.4;
+}
+.icps-note{
+  font-style:italic;
+  font-size:.82rem;
+  opacity:.85;
+  text-align:right;
+  line-height:1.3;
+  min-width:150px;
+}
+.icps-quadrants{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  padding:22px 24px 6px 24px;
+}
+.icps-card{
+  background:color-mix(in srgb, var(--qc) 7%, #fcfcfb);
+  border:1px solid color-mix(in srgb, var(--qc) 35%, transparent);
+  border-left:5px solid var(--qc);
+  border-radius:10px;
+  padding:14px 16px;
+}
+.icps-card-top{ display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.icps-icon{ color:var(--qc); flex:0 0 auto; }
+.icps-icon svg{ width:26px; height:26px; display:block; }
+.icps-card-label{ font-weight:800; font-size:1.02rem; color:var(--ink); }
+.icps-card-tag{ font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); font-weight:600; }
+.icps-card p{ font-size:.88rem; color:var(--ink-2); line-height:1.4; margin-bottom:6px; }
+.icps-example{ font-size:.8rem; color:var(--ink); background:rgba(255,255,255,0.6); border:1px dashed color-mix(in srgb, var(--qc) 45%, transparent); border-radius:6px; padding:6px 8px; }
+.icps-cross{ padding:18px 24px 4px 24px; }
+.icps-cross h5{ font-size:1rem; font-weight:800; color:#003A70; margin-bottom:10px; }
+.icps-table-wrap{ overflow-x:auto; }
+.interfazcps-info table{ width:100%; border-collapse:collapse; font-size:.85rem; }
+.interfazcps-info table th{ text-align:left; color:#fff; background:#003A70; padding:8px 10px; font-weight:700; white-space:nowrap; }
+.interfazcps-info table td{ padding:9px 10px; border-bottom:1px solid #e1e0d9; color:var(--ink-2); vertical-align:top; }
+.interfazcps-info table tr:last-child td{ border-bottom:none; }
+.icps-chip{ display:inline-flex; align-items:center; gap:5px; font-weight:800; color:var(--ink); white-space:nowrap; }
+.icps-chip i{ width:9px; height:9px; border-radius:50%; display:inline-block; }
+.icps-flow{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  gap:8px;
+  padding:20px 24px 4px 24px;
+}
+.icps-flow-step{
+  flex:1 1 150px;
+  background:#f3f6f9;
+  border:1px solid rgba(0,58,112,0.15);
+  border-radius:8px;
+  padding:10px 12px;
+  font-size:.82rem;
+  color:var(--ink-2);
+  font-weight:600;
+}
+.icps-flow-step span{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:20px; height:20px; border-radius:50%;
+  background:#003A70; color:#fff; font-size:.72rem; font-weight:800;
+  margin-right:6px;
+}
+.icps-arrow{ align-self:center; color:#003A70; font-weight:900; font-size:1.1rem; flex:0 0 auto; }
+.icps-formula{
+  margin:18px 24px 0 24px;
+  background:#f3f6f9;
+  border-radius:8px;
+  padding:12px 16px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  font-size:.85rem;
+}
+.icps-formula span{ background:#fff; border:1px solid rgba(0,58,112,0.2); border-radius:6px; padding:4px 9px; font-weight:700; color:#003A70; }
+.icps-formula i{ font-style:normal; color:var(--muted); font-weight:900; }
+.icps-formula strong{ color:var(--ink); }
+.icps-footnote{ margin:14px 24px 0 24px; font-size:.78rem; font-style:italic; color:var(--muted); }
+@media (max-width:640px){
+  .icps-quadrants{ grid-template-columns:1fr; }
+  .icps-header{ flex-direction:column; align-items:flex-start; }
+  .icps-note{ text-align:left; }
+  .icps-arrow{ transform:rotate(90deg); }
+}
+</style>
+```
