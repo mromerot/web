@@ -43,6 +43,24 @@ En cualquiera de los dos casos, conviene anclar la escala cualitativa a un rango
 
 : Ejemplo de escala de probabilidad calibrada con rangos numéricos {.striped}
 
+### Qué significa, en la práctica, "impacto"
+
+Si la probabilidad responde a la pregunta "¿qué tan posible es que ocurra?", el **impacto** responde a una distinta: "si ocurre, ¿qué tan grave es para el proyecto?". Es la magnitud del efecto que tendría el riesgo sobre los objetivos del proyecto —costo, cronograma, alcance o calidad—, medida sin importar cuán probable sea que ese riesgo se materialice. Un riesgo con probabilidad baja puede, aun así, calificar como de impacto extremo: es justamente lo que ocurre con un sismo de gran magnitud o con la oposición social irreductible de una comunidad reasentada.
+
+Como con la probabilidad, calificar el impacto solo con un adjetivo ("alto", "grave") no basta: el paso 3 de la construcción de la matriz exige anclar cada nivel de impacto a un umbral medible, y ese umbral casi nunca es uno solo, porque el mismo riesgo puede afectar simultáneamente el presupuesto, el cronograma, el alcance y la calidad del proyecto en proporciones distintas. Por eso las matrices más rigurosas —y es el enfoque que recomienda el PMBOK— definen una escala de impacto por cada una de esas dimensiones, y luego toman el nivel más alto entre ellas (o un promedio ponderado, según la metodología del proyecto) como el impacto final del riesgo:
+
+| Nivel | Descriptor | Costo | Cronograma | Alcance | Calidad |
+|----|----|----|----|----|----|
+| 1 | Insignificante | Sobrecosto menor al 3 % | Retraso menor a 2 semanas | Ajustes menores, apenas perceptibles | Degradación apenas perceptible |
+| 2 | Menor | Sobrecosto entre 3 % y 7 % | Retraso entre 2 semanas y 1 mes | Afecta componentes secundarios | Requiere aprobación adicional del cliente |
+| 3 | Moderado | Sobrecosto entre 7 % y 15 % | Retraso entre 1 y 3 meses | Reducción del alcance que el cliente debe aprobar | Reducción de calidad que el cliente debe aprobar |
+| 4 | Mayor | Sobrecosto mayor al 15 % | Retraso mayor a 3 meses | Reducción de alcance inaceptable para el cliente o el financiador | Reducción de calidad inaceptable para el cliente o el financiador |
+| 5 | Extremo | Pone en riesgo la viabilidad financiera del proyecto | Pone en riesgo la fecha de cierre o de desembolso final | El producto resultante deja de cumplir su propósito | El producto resultante es inutilizable o inseguro |
+
+: Ejemplo de escala de impacto calibrada por dimensión del proyecto {.striped}
+
+Retomando el ejemplo del proyecto de reducción del riesgo de inundación de la sección final: el riesgo de "oposición social de las comunidades que serían reasentadas" tiene un impacto calificado en 5 (extremo) no porque sea el riesgo más costoso en términos absolutos, sino porque, de materializarse sin contenerse, puede paralizar por completo la ejecución de las obras —el producto del proyecto deja de poder construirse donde se planeó—, mientras que la "variación del tipo de cambio" queda en un impacto de 3 (moderado): encarece el proyecto, pero un sobrecosto de insumos importados rara vez pone en riesgo su viabilidad completa. Es esa diferencia de magnitud, no de probabilidad, la que explica por qué dos riesgos con calificaciones de probabilidad parecidas terminan en zonas muy distintas de la matriz.
+
 ## Cómo aborda el PMBOK la gestión de riesgos
 
 El PMBOK (*Project Management Body of Knowledge*), la guía de estándares del Project Management Institute (PMI), es probablemente la referencia más citada en gestión de riesgos de proyectos, y buena parte del vocabulario usado en las secciones anteriores —registro de riesgos, matriz de probabilidad e impacto, estrategias de respuesta— proviene directamente de ella. Vale la pena precisar, sin embargo, que el PMBOK ha cambiado de enfoque entre sus dos ediciones más recientes.
