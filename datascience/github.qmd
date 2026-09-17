@@ -4,7 +4,7 @@ format: html
 editor: visual
 ---
 
-![Git Commands](images/git-commands.png)
+![Comandos de Git más usados, organizados por etapa del flujo de trabajo: configuración, control de cambios, ramas y colaboración con el remoto.](images/git-commands.png)
 
 {{< video "https://youtu.be/pBy1zgt0XPc" >}} Qué es GitHub?
 
@@ -12,7 +12,7 @@ editor: visual
 
 Github es una plataforma de desarrollo colaborativo y un sistema de control de versiones de proyectos y sus archivos.
 
-El sistema de control de versiones es una herramienta que rastrea cada modificación en el código, creando un historial completo del proyecto. Se tiene la posibilidad de volver atrás a versiones preliminares.
+El sistema de control de versiones es una herramienta que rastrea cada modificación en el código, creando un historial completo del proyecto. Se tiene la posibilidad de volver atrás a versiones preliminares. La imagen anterior resume, en una sola vista, casi todos los comandos que se explican en este artículo: los primeros para configurar Git, los del centro para registrar cambios (`add`, `commit`, `push`) y los de la derecha para trabajar con ramas y con el repositorio remoto.
 
 **Git** (sistema de control, Git) difiere de la plataforma (GitHub) en aspectos como:
 
@@ -40,12 +40,16 @@ El sistema de control de versiones es una herramienta que rastrea cada modificac
 
 {{< video "https://youtu.be/r8jQ9hVA2qs">}} A brief introduction to Git for beginners \| GitHub
 
-# **Configuración**
+# Configuración
+
+Antes de usar Git hay que decirle quién eres: cada commit queda firmado con el nombre y el correo configurados en tu máquina, así que este es siempre el primer paso.
 
 -   Puedes comenzar a aprender aquí: <https://github.com/skills/introduction-to-github>
 -   Configuración inicial: `git config` (nombre de usuario y correo).
 
 ## Recursos de ayuda
+
+Estos son los recursos oficiales de GitHub para aprender el flujo de trabajo paso a paso, resolver dudas puntuales de sintaxis y configurar Git por primera vez desde la terminal:
 
 -   GitHub Skills. [*Link*](https://skills.github.com/) *\<— recomendado para aprender el flujo de trabajo!*
     -   [Introduction to GitHub](https://github.com/skills/introduction-to-github)
@@ -61,7 +65,7 @@ El sistema de control de versiones es una herramienta que rastrea cada modificac
 
 ## Definiciones
 
-Puede encontrar un glosario oficial [aquí](https://docs.github.com/en/get-started/learning-about-github/github-glossary#branch).
+Antes de entrar en los comandos, conviene fijar el vocabulario: repositorio, commit, rama, pull request y las demás piezas que se combinan en un flujo de trabajo con Git y GitHub aparecen definidas en la sección **Repositorios**, a continuación, y en el glosario oficial [aquí](https://docs.github.com/en/get-started/learning-about-github/github-glossary#branch).
 
 ## Repositorios
 
@@ -108,7 +112,162 @@ Puede encontrar un glosario oficial [aquí](https://docs.github.com/en/get-start
 
 **HEAD** (siempre en mayúsculas): un nombre de referencia para la última confirmación, para evitar que tenga que escribir los identificadores de las confirmaciones.
 
+## Infografía: el flujo de trabajo de Git y GitHub
+
+Todas las definiciones anteriores encajan en un mismo recorrido. Un cambio nace en tu directorio de trabajo, pasa por el área de preparación y el repositorio local, y termina en el repositorio remoto; y cuando ese cambio se hace en una rama, se integra a `main` a través de un pull request. El siguiente diagrama resume ambos recorridos.
+
+```{=html}
+<div class="ghf-info">
+<div class="ghf-header">
+<div class="ghf-title">
+<h4>Del archivo al repositorio remoto</h4>
+<p>El recorrido de un cambio, del directorio de trabajo a GitHub</p>
+</div>
+</div>
+<div class="ghf-flow">
+<div class="ghf-stage" style="--sc:#2a78d6">
+<div class="ghf-stage-label">Directorio de trabajo</div>
+<div class="ghf-stage-desc">Los archivos tal como los editas.</div>
+</div>
+<div class="ghf-arrow"><div class="ghf-arrow-glyph">&rarr;</div><span>git add</span></div>
+<div class="ghf-stage" style="--sc:#eda100">
+<div class="ghf-stage-label">Área de preparación<br>(staging)</div>
+<div class="ghf-stage-desc">Los cambios listos para el próximo commit.</div>
+</div>
+<div class="ghf-arrow"><div class="ghf-arrow-glyph">&rarr;</div><span>git commit</span></div>
+<div class="ghf-stage" style="--sc:#7c3aed">
+<div class="ghf-stage-label">Repositorio local</div>
+<div class="ghf-stage-desc">El historial de commits en tu computador.</div>
+</div>
+<div class="ghf-arrow"><div class="ghf-arrow-glyph">&harr;</div><span>git push</span><span>git pull / fetch</span></div>
+<div class="ghf-stage" style="--sc:#1baf7a">
+<div class="ghf-stage-label">Repositorio remoto<br>(GitHub)</div>
+<div class="ghf-stage-desc">La copia compartida con el equipo.</div>
+</div>
+</div>
+<div class="ghf-header ghf-header-2">
+<div class="ghf-title">
+<h4>De la rama al merge</h4>
+<p>Cómo se integra el trabajo de una rama a <code>main</code></p>
+</div>
+</div>
+<div class="ghf-steps">
+<div class="ghf-step"><span class="ghf-step-n">1</span><div><strong>Crear la rama</strong><br><code>git checkout -b</code></div></div>
+<div class="ghf-step"><span class="ghf-step-n">2</span><div><strong>Confirmar cambios</strong><br><code>git commit</code></div></div>
+<div class="ghf-step"><span class="ghf-step-n">3</span><div><strong>Subir la rama</strong><br><code>git push</code></div></div>
+<div class="ghf-step"><span class="ghf-step-n">4</span><div><strong>Abrir pull request</strong><br>proponer los cambios</div></div>
+<div class="ghf-step"><span class="ghf-step-n">5</span><div><strong>Revisar y aprobar</strong><br>code review</div></div>
+<div class="ghf-step"><span class="ghf-step-n">6</span><div><strong>Fusionar</strong><br><code>git merge</code></div></div>
+</div>
+<div class="ghf-footnote">Cada flecha corresponde a un comando definido en la sección "Repositorios" de este artículo, y desarrollado en detalle en "Comandos comunes de Git" y en la chuleta por nivel de dificultad, más abajo.</div>
+</div>
+<style>
+.ghf-info{
+  font-family: inherit;
+  color:#0b0b0b;
+  background:#fcfcfb;
+  border:1px solid rgba(13,17,23,0.12);
+  border-radius:12px;
+  padding:0 0 20px 0;
+  margin:24px 0 8px 0;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,0.06);
+}
+.ghf-info h4, .ghf-info p{ margin:0; }
+.ghf-header{
+  background:#0d1117;
+  color:#fff;
+  padding:16px 24px;
+}
+.ghf-header-2{ margin-top:6px; }
+.ghf-title h4{ font-size:1.15rem; font-weight:900; letter-spacing:.2px; }
+.ghf-title p{ font-size:.86rem; opacity:.85; margin-top:2px; }
+.ghf-title code{ background:rgba(255,255,255,0.15); padding:1px 5px; border-radius:4px; }
+.ghf-flow{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  gap:6px;
+  padding:20px 20px 4px 20px;
+  justify-content:center;
+}
+.ghf-stage{
+  flex:1 1 150px;
+  max-width:190px;
+  background:color-mix(in srgb, var(--sc) 8%, #fcfcfb);
+  border:1px solid color-mix(in srgb, var(--sc) 35%, transparent);
+  border-top:4px solid var(--sc);
+  border-radius:10px;
+  padding:14px 12px;
+  text-align:center;
+}
+.ghf-stage-label{ font-weight:800; font-size:.9rem; margin-bottom:6px; color:#0b0b0b; }
+.ghf-stage-desc{ font-size:.76rem; color:#52514e; line-height:1.35; }
+.ghf-arrow{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-size:.7rem;
+  font-weight:700;
+  color:#52514e;
+  min-width:64px;
+  text-align:center;
+}
+.ghf-arrow-glyph{ font-size:1.5rem; color:#0d1117; line-height:1; margin-bottom:2px; }
+.ghf-arrow span{
+  background:#fff;
+  border:1px solid rgba(13,17,23,0.15);
+  border-radius:6px;
+  padding:2px 7px;
+  margin:1px 0;
+  white-space:nowrap;
+}
+.ghf-steps{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  padding:20px 20px 4px 20px;
+  justify-content:center;
+}
+.ghf-step{
+  flex:1 1 140px;
+  max-width:170px;
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  background:#f3f6f9;
+  border-radius:10px;
+  padding:10px 12px;
+}
+.ghf-step-n{
+  flex:0 0 auto;
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  background:#0d1117;
+  color:#fff;
+  font-size:.75rem;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.ghf-step strong{ font-size:.84rem; display:block; margin-bottom:2px; color:#0b0b0b; }
+.ghf-step code{ font-size:.74rem; background:rgba(0,0,0,0.06); padding:1px 4px; border-radius:4px; }
+.ghf-footnote{ margin:16px 24px 0 24px; font-size:.78rem; font-style:italic; color:#898781; }
+@media (max-width:640px){
+  .ghf-flow{ flex-direction:column; }
+  .ghf-arrow{ flex-direction:row; gap:6px; }
+  .ghf-stage{ max-width:100%; }
+  .ghf-step{ max-width:100%; }
+}
+</style>
+```
+
 ## Comandos comunes de Git usados en distintas situaciones
+
+Esta clasificación sigue la que usa el propio `git help`, agrupando los comandos según el momento del flujo de trabajo en el que se usan: iniciar un espacio de trabajo, trabajar sobre el cambio actual, examinar el historial, hacer crecer el historial común y colaborar con un repositorio remoto.
 
 ::: callout-important
 Iniciar un área de trabajo\
@@ -196,6 +355,8 @@ Colaborar\
 :::
 
 # Comandos de Git por nivel de dificultad
+
+Esta chuleta organiza los comandos de Git y GitHub CLI en orden de complejidad creciente: del nivel básico —configurar Git y hacer tu primer commit— al intermedio, con ramas, conflictos, rebase y automatización con GitHub Actions.
 
 ## Nivel básico
 
@@ -573,9 +734,13 @@ git push origin gh-pages
 
 ## Otros temas
 
+Git no fue pensado originalmente para archivos binarios grandes ni para el formato JSON de los notebooks de Jupyter; por eso GitHub documenta un tratamiento especial para diferenciarlos y revisarlos correctamente:
+
 -   [**Working with Jupyter Notebook files on GitHub**](https://docs.github.com/en/repositories/working-with-files/using-files/working-with-non-code-files#working-with-jupyter-notebook-files-on-github)
 
 ## Videos tutoriales recomendados
+
+Una selección de video-tutoriales en inglés, organizados por nivel, para complementar los comandos anteriores con explicaciones paso a paso:
 
 ### Nivel básico
 
@@ -597,6 +762,8 @@ git push origin gh-pages
 
 ## Proyectos destacados en GitHub
 
+Más allá de la documentación oficial, estos repositorios de código abierto son referencias prácticas y de uso frecuente en la comunidad de Git y GitHub, agrupados por lo que resuelven.
+
 ### Recursos de aprendizaje
 
 -   **first-contributions** - Guía para tu primera contribución [*Link*](https://github.com/firstcontributions/first-contributions)
@@ -605,22 +772,30 @@ git push origin gh-pages
 
 ### Herramientas Git/GitHub
 
+Utilidades de línea de comandos que extienden lo que Git hace por defecto:
+
 -   **git-extras** - Comandos extra para Git [*Link*](https://github.com/tj/git-extras)
 -   **hub** - Extensión de línea de comandos para GitHub [*Link*](https://github.com/github/hub)
 -   **gitignore.io** - Generador de .gitignore [*Link*](https://github.com/toptal/gitignore.io)
 
 ### GitHub Actions
 
+Complementan la sección de GitHub Actions básico, más arriba, con ejemplos ya construidos y con el conjunto de herramientas para crear tus propias Actions:
+
 -   **awesome-actions** - Lista de GitHub Actions [*Link*](https://github.com/sdras/awesome-actions)
 -   **actions-toolkit** - Toolkit para crear Actions [*Link*](https://github.com/actions/toolkit)
 
 ### Automatización y CI/CD
+
+Herramientas que automatizan tareas del flujo de trabajo colaborativo que, de otro modo, dependen de recordar hacerlas manualmente en cada commit o cada release:
 
 -   **pre-commit** - Framework para git hooks [*Link*](https://github.com/pre-commit/pre-commit)
 -   **semantic-release** - Versionado semántico automático [*Link*](https://github.com/semantic-release/semantic-release)
 -   **release-drafter** - Automatizar release notes [*Link*](https://github.com/release-drafter/release-drafter)
 
 ### Perfiles y documentación
+
+Para la cara visible de un repositorio o de un perfil de GitHub:
 
 -   **github-profile-readme-generator** - Generador de README perfil [*Link*](https://github.com/rahuldkjain/github-profile-readme-generator)
 -   **awesome-readme** - Ejemplos de READMEs increíbles [*Link*](https://github.com/matiassingers/awesome-readme)
@@ -630,10 +805,14 @@ git push origin gh-pages
 
 ## GitHub Copilot
 
+GitHub Copilot es el asistente de programación con IA integrado en el editor (VS Code, JetBrains, Neovim, o directamente en github.com), que sugiere líneas o bloques de código completos a partir del contexto del archivo y responde preguntas sobre el repositorio en un chat integrado:
+
 -   What is GitHub Copilot?. [*Link*](https://docs.github.com/en/copilot/get-started/what-is-github-copilot)
 -   GitHub Copilot Documentation. [*Link*](https://docs.github.com/en/copilot)
 
 ## Recursos adicionales
+
+Para profundizar más allá de esta introducción:
 
 -   Pro Git Book (gratuito). [*Link*](https://git-scm.com/book/en/v2)
 -   GitHub Learning Lab. [*Link*](https://lab.github.com/)

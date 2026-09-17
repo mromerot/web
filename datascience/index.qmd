@@ -57,7 +57,7 @@ Introducción a la sintaxis de Markdown.
 ::: mrw-card-body
 ![](images/git-commands.png){.mrw-card-img}
 
-Comandos y flujo de trabajo básico de Git y GitHub.
+Git y GitHub desde cero: conceptos clave, infografía del flujo de trabajo (staging, commit, push, pull requests) y una chuleta de comandos por nivel de dificultad.
 :::
 :::
 

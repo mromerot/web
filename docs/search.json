@@ -139,7 +139,7 @@
     "href": "datascience/index.html",
     "title": "Ciencia de datos",
     "section": "",
-    "text": "Esta sección reúne recursos de ciencia de datos: herramientas de trabajo (Quarto, Markdown, Github, VS Code, Google Colab, Jupyter), visualización de datos y mapas interactivos, inteligencia artificial y modelos de lenguaje.\n\n\n\nCiencia de datos\n\n\nLecturas de referencia sobre ciencia de datos.\n\n\n\n\nQuarto\n\n\nAtajos y recursos de ayuda para trabajar con Quarto.\n\n\n\n\nMyst\n\n\nMyst como alternativa a Quarto para publicación científica reproducible.\n\n\n\n\nMarkdown\n\n\nIntroducción a la sintaxis de Markdown.\n\n\n\n\nGithub\n\n\n\nComandos y flujo de trabajo básico de Git y GitHub.\n\n\n\n\nGoogle Colab\n\n\nRecursos de ayuda para trabajar con Google Colab.\n\n\n\n\nJupyter Notebook\n\n\nIntroducción al uso de Jupyter Notebook para ciencia de datos.\n\n\n\n\nGraficas Python y R\n\n\nRecursos de visualización de datos con Python y R.\n\n\n\n\nHerramientas\n\n\nLecturas y videos introductorios sobre herramientas de ciencia de datos.\n\n\n\n\nInteligencia artificial\n\n\nRecursos de inteligencia artificial para el trabajo diario.\n\n\n\n\nVS Code\n\n\nQué es Visual Studio Code y cómo aprovecharlo para ciencia de datos.\n\n\n\n\nHugging Face\n\n\nQué es Hugging Face y su papel en el ecosistema de modelos de aprendizaje automático.\n\n\n\n\nMapas\n\n\nMapas interactivos de Colombia con distintas tecnologías (Observable/TopoJSON, PMTiles, Tiles) y el Índice de Riesgo Nacional (NRI).\n\n\n\n\nD3\n\n\nD3, Observable y JavaScript para visualización de datos en la web.\n\n\n\n\nExperimento con D3\n\n\nEjercicios prácticos con D3.js en Observable.\n\n\n\n\nClaude\n\n\nRecursos y cursos sobre Claude y la construcción de agent skills.\n\n\n\n\nClaude Skills (Slides)\n\n\nGuía completa para construir Skills para Claude, en formato de presentación.",
+    "text": "Esta sección reúne recursos de ciencia de datos: herramientas de trabajo (Quarto, Markdown, Github, VS Code, Google Colab, Jupyter), visualización de datos y mapas interactivos, inteligencia artificial y modelos de lenguaje.\n\n\n\nCiencia de datos\n\n\nLecturas de referencia sobre ciencia de datos.\n\n\n\n\nQuarto\n\n\nAtajos y recursos de ayuda para trabajar con Quarto.\n\n\n\n\nMyst\n\n\nMyst como alternativa a Quarto para publicación científica reproducible.\n\n\n\n\nMarkdown\n\n\nIntroducción a la sintaxis de Markdown.\n\n\n\n\nGithub\n\n\n\nGit y GitHub desde cero: conceptos clave, infografía del flujo de trabajo (staging, commit, push, pull requests) y una chuleta de comandos por nivel de dificultad.\n\n\n\n\nGoogle Colab\n\n\nRecursos de ayuda para trabajar con Google Colab.\n\n\n\n\nJupyter Notebook\n\n\nIntroducción al uso de Jupyter Notebook para ciencia de datos.\n\n\n\n\nGraficas Python y R\n\n\nRecursos de visualización de datos con Python y R.\n\n\n\n\nHerramientas\n\n\nLecturas y videos introductorios sobre herramientas de ciencia de datos.\n\n\n\n\nInteligencia artificial\n\n\nRecursos de inteligencia artificial para el trabajo diario.\n\n\n\n\nVS Code\n\n\nQué es Visual Studio Code y cómo aprovecharlo para ciencia de datos.\n\n\n\n\nHugging Face\n\n\nQué es Hugging Face y su papel en el ecosistema de modelos de aprendizaje automático.\n\n\n\n\nMapas\n\n\nMapas interactivos de Colombia con distintas tecnologías (Observable/TopoJSON, PMTiles, Tiles) y el Índice de Riesgo Nacional (NRI).\n\n\n\n\nD3\n\n\nD3, Observable y JavaScript para visualización de datos en la web.\n\n\n\n\nExperimento con D3\n\n\nEjercicios prácticos con D3.js en Observable.\n\n\n\n\nClaude\n\n\nRecursos y cursos sobre Claude y la construcción de agent skills.\n\n\n\n\nClaude Skills (Slides)\n\n\nGuía completa para construir Skills para Claude, en formato de presentación.",
     "crumbs": [
       "Ciencia de datos"
     ]
@@ -149,7 +149,7 @@
     "href": "datascience/index.html#ciencia-de-datos",
     "title": "Ciencia de datos",
     "section": "",
-    "text": "Esta sección reúne recursos de ciencia de datos: herramientas de trabajo (Quarto, Markdown, Github, VS Code, Google Colab, Jupyter), visualización de datos y mapas interactivos, inteligencia artificial y modelos de lenguaje.\n\n\n\nCiencia de datos\n\n\nLecturas de referencia sobre ciencia de datos.\n\n\n\n\nQuarto\n\n\nAtajos y recursos de ayuda para trabajar con Quarto.\n\n\n\n\nMyst\n\n\nMyst como alternativa a Quarto para publicación científica reproducible.\n\n\n\n\nMarkdown\n\n\nIntroducción a la sintaxis de Markdown.\n\n\n\n\nGithub\n\n\n\nComandos y flujo de trabajo básico de Git y GitHub.\n\n\n\n\nGoogle Colab\n\n\nRecursos de ayuda para trabajar con Google Colab.\n\n\n\n\nJupyter Notebook\n\n\nIntroducción al uso de Jupyter Notebook para ciencia de datos.\n\n\n\n\nGraficas Python y R\n\n\nRecursos de visualización de datos con Python y R.\n\n\n\n\nHerramientas\n\n\nLecturas y videos introductorios sobre herramientas de ciencia de datos.\n\n\n\n\nInteligencia artificial\n\n\nRecursos de inteligencia artificial para el trabajo diario.\n\n\n\n\nVS Code\n\n\nQué es Visual Studio Code y cómo aprovecharlo para ciencia de datos.\n\n\n\n\nHugging Face\n\n\nQué es Hugging Face y su papel en el ecosistema de modelos de aprendizaje automático.\n\n\n\n\nMapas\n\n\nMapas interactivos de Colombia con distintas tecnologías (Observable/TopoJSON, PMTiles, Tiles) y el Índice de Riesgo Nacional (NRI).\n\n\n\n\nD3\n\n\nD3, Observable y JavaScript para visualización de datos en la web.\n\n\n\n\nExperimento con D3\n\n\nEjercicios prácticos con D3.js en Observable.\n\n\n\n\nClaude\n\n\nRecursos y cursos sobre Claude y la construcción de agent skills.\n\n\n\n\nClaude Skills (Slides)\n\n\nGuía completa para construir Skills para Claude, en formato de presentación.",
+    "text": "Esta sección reúne recursos de ciencia de datos: herramientas de trabajo (Quarto, Markdown, Github, VS Code, Google Colab, Jupyter), visualización de datos y mapas interactivos, inteligencia artificial y modelos de lenguaje.\n\n\n\nCiencia de datos\n\n\nLecturas de referencia sobre ciencia de datos.\n\n\n\n\nQuarto\n\n\nAtajos y recursos de ayuda para trabajar con Quarto.\n\n\n\n\nMyst\n\n\nMyst como alternativa a Quarto para publicación científica reproducible.\n\n\n\n\nMarkdown\n\n\nIntroducción a la sintaxis de Markdown.\n\n\n\n\nGithub\n\n\n\nGit y GitHub desde cero: conceptos clave, infografía del flujo de trabajo (staging, commit, push, pull requests) y una chuleta de comandos por nivel de dificultad.\n\n\n\n\nGoogle Colab\n\n\nRecursos de ayuda para trabajar con Google Colab.\n\n\n\n\nJupyter Notebook\n\n\nIntroducción al uso de Jupyter Notebook para ciencia de datos.\n\n\n\n\nGraficas Python y R\n\n\nRecursos de visualización de datos con Python y R.\n\n\n\n\nHerramientas\n\n\nLecturas y videos introductorios sobre herramientas de ciencia de datos.\n\n\n\n\nInteligencia artificial\n\n\nRecursos de inteligencia artificial para el trabajo diario.\n\n\n\n\nVS Code\n\n\nQué es Visual Studio Code y cómo aprovecharlo para ciencia de datos.\n\n\n\n\nHugging Face\n\n\nQué es Hugging Face y su papel en el ecosistema de modelos de aprendizaje automático.\n\n\n\n\nMapas\n\n\nMapas interactivos de Colombia con distintas tecnologías (Observable/TopoJSON, PMTiles, Tiles) y el Índice de Riesgo Nacional (NRI).\n\n\n\n\nD3\n\n\nD3, Observable y JavaScript para visualización de datos en la web.\n\n\n\n\nExperimento con D3\n\n\nEjercicios prácticos con D3.js en Observable.\n\n\n\n\nClaude\n\n\nRecursos y cursos sobre Claude y la construcción de agent skills.\n\n\n\n\nClaude Skills (Slides)\n\n\nGuía completa para construir Skills para Claude, en formato de presentación.",
     "crumbs": [
       "Ciencia de datos"
     ]
@@ -5297,7 +5297,7 @@
     "href": "datascience/github.html",
     "title": "Github",
     "section": "",
-    "text": "Git Commands",
+    "text": "Comandos de Git más usados, organizados por etapa del flujo de trabajo: configuración, control de cambios, ramas y colaboración con el remoto.",
     "crumbs": [
       "Ciencia de datos",
       "Github"
@@ -5308,7 +5308,7 @@
     "href": "datascience/github.html#recursos-de-ayuda",
     "title": "Github",
     "section": "Recursos de ayuda",
-    "text": "Recursos de ayuda\n\nGitHub Skills. Link &lt;— recomendado para aprender el flujo de trabajo!\n\nIntroduction to GitHub\nHello GitHub Actions\nGitHub Pages\nReview pull requests\nBasic writing and formatting syntax\n\nGitHub Documentation. Link\nGitHub Community. Link\nInstalación y Configuración (Git SCM Book)\n\n Banco Interamericano de Desarollo Code4Dev: ¿Cómo optimizar tu repositorio de código abierto con Git y GitHub?",
+    "text": "Recursos de ayuda\nEstos son los recursos oficiales de GitHub para aprender el flujo de trabajo paso a paso, resolver dudas puntuales de sintaxis y configurar Git por primera vez desde la terminal:\n\nGitHub Skills. Link &lt;— recomendado para aprender el flujo de trabajo!\n\nIntroduction to GitHub\nHello GitHub Actions\nGitHub Pages\nReview pull requests\nBasic writing and formatting syntax\n\nGitHub Documentation. Link\nGitHub Community. Link\nInstalación y Configuración (Git SCM Book)\n\n Banco Interamericano de Desarollo Code4Dev: ¿Cómo optimizar tu repositorio de código abierto con Git y GitHub?",
     "crumbs": [
       "Ciencia de datos",
       "Github"
@@ -5319,7 +5319,7 @@
     "href": "datascience/github.html#definiciones",
     "title": "Github",
     "section": "Definiciones",
-    "text": "Definiciones\nPuede encontrar un glosario oficial aquí.",
+    "text": "Definiciones\nAntes de entrar en los comandos, conviene fijar el vocabulario: repositorio, commit, rama, pull request y las demás piezas que se combinan en un flujo de trabajo con Git y GitHub aparecen definidas en la sección Repositorios, a continuación, y en el glosario oficial aquí.",
     "crumbs": [
       "Ciencia de datos",
       "Github"
@@ -5337,11 +5337,22 @@
     ]
   },
   {
+    "objectID": "datascience/github.html#infografía-el-flujo-de-trabajo-de-git-y-github",
+    "href": "datascience/github.html#infografía-el-flujo-de-trabajo-de-git-y-github",
+    "title": "Github",
+    "section": "Infografía: el flujo de trabajo de Git y GitHub",
+    "text": "Infografía: el flujo de trabajo de Git y GitHub\nTodas las definiciones anteriores encajan en un mismo recorrido. Un cambio nace en tu directorio de trabajo, pasa por el área de preparación y el repositorio local, y termina en el repositorio remoto; y cuando ese cambio se hace en una rama, se integra a main a través de un pull request. El siguiente diagrama resume ambos recorridos.\n\n\n\nDel archivo al repositorio remoto\nEl recorrido de un cambio, del directorio de trabajo a GitHub\n\n\n\n\nDirectorio de trabajo\nLos archivos tal como los editas.\n\n→git add\n\nÁrea de preparación(staging)\nLos cambios listos para el próximo commit.\n\n→git commit\n\nRepositorio local\nEl historial de commits en tu computador.\n\n↔git pushgit pull / fetch\n\nRepositorio remoto(GitHub)\nLa copia compartida con el equipo.\n\n\n\n\nDe la rama al merge\nCómo se integra el trabajo de una rama a main\n\n\n\n1Crear la ramagit checkout -b\n2Confirmar cambiosgit commit\n3Subir la ramagit push\n4Abrir pull requestproponer los cambios\n5Revisar y aprobarcode review\n6Fusionargit merge\n\nCada flecha corresponde a un comando definido en la sección \"Repositorios\" de este artículo, y desarrollado en detalle en \"Comandos comunes de Git\" y en la chuleta por nivel de dificultad, más abajo.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Github"
+    ]
+  },
+  {
     "objectID": "datascience/github.html#comandos-comunes-de-git-usados-en-distintas-situaciones",
     "href": "datascience/github.html#comandos-comunes-de-git-usados-en-distintas-situaciones",
     "title": "Github",
     "section": "Comandos comunes de Git usados en distintas situaciones",
-    "text": "Comandos comunes de Git usados en distintas situaciones\n\n\n\n\n\n\nImportant\n\n\n\nIniciar un área de trabajo\n(ver también: git help tutorial)\n\ngit clone\nClona un repositorio en un nuevo directorio.\ngit init\nCrea un repositorio Git vacío o reinicializa uno existente.\n\nTrabajar sobre el cambio actual\n(ver también: git help everyday)\n\ngit add\nAñade el contenido de archivos al índice (staging area).\ngit mv\nMueve o renombra un archivo, un directorio o un enlace simbólico.\ngit restore\nRestaura archivos del árbol de trabajo.\ngit rm\nElimina archivos del árbol de trabajo y del índice.\n\nExaminar el historial y el estado\n(ver también: git help revisions)\n\ngit bisect\nUsa búsqueda binaria para encontrar el commit que introdujo un error.\ngit diff\nMuestra los cambios entre commits, entre un commit y el árbol de trabajo, etc.\ngit grep\nImprime las líneas que coinciden con un patrón.\ngit log\nMuestra el historial de commits.\ngit show\nMuestra distintos tipos de objetos.\ngit status\nMuestra el estado del árbol de trabajo.\n\nHacer crecer, marcar y ajustar el historial común\n\ngit backfill\nDescarga objetos faltantes en un clon parcial.\ngit branch\nLista, crea o elimina ramas.\ngit commit\nRegistra cambios en el repositorio.\ngit merge\nUne dos o más historiales de desarrollo.\ngit rebase\nReaplica commits sobre la punta de otra base.\ngit reset\nRestablece el HEAD actual al estado especificado.\ngit switch\nCambia entre ramas.\ngit tag\nCrea, lista, elimina o verifica una etiqueta firmada con GPG.\n\nColaborar\n(ver también: git help workflows)\n\ngit fetch\nDescarga objetos y referencias desde otro repositorio.\ngit pull\nObtiene cambios e integra desde otro repositorio o una rama local.\ngit push\nActualiza referencias remotas junto con los objetos asociados.",
+    "text": "Comandos comunes de Git usados en distintas situaciones\nEsta clasificación sigue la que usa el propio git help, agrupando los comandos según el momento del flujo de trabajo en el que se usan: iniciar un espacio de trabajo, trabajar sobre el cambio actual, examinar el historial, hacer crecer el historial común y colaborar con un repositorio remoto.\n\n\n\n\n\n\nImportant\n\n\n\nIniciar un área de trabajo\n(ver también: git help tutorial)\n\ngit clone\nClona un repositorio en un nuevo directorio.\ngit init\nCrea un repositorio Git vacío o reinicializa uno existente.\n\nTrabajar sobre el cambio actual\n(ver también: git help everyday)\n\ngit add\nAñade el contenido de archivos al índice (staging area).\ngit mv\nMueve o renombra un archivo, un directorio o un enlace simbólico.\ngit restore\nRestaura archivos del árbol de trabajo.\ngit rm\nElimina archivos del árbol de trabajo y del índice.\n\nExaminar el historial y el estado\n(ver también: git help revisions)\n\ngit bisect\nUsa búsqueda binaria para encontrar el commit que introdujo un error.\ngit diff\nMuestra los cambios entre commits, entre un commit y el árbol de trabajo, etc.\ngit grep\nImprime las líneas que coinciden con un patrón.\ngit log\nMuestra el historial de commits.\ngit show\nMuestra distintos tipos de objetos.\ngit status\nMuestra el estado del árbol de trabajo.\n\nHacer crecer, marcar y ajustar el historial común\n\ngit backfill\nDescarga objetos faltantes en un clon parcial.\ngit branch\nLista, crea o elimina ramas.\ngit commit\nRegistra cambios en el repositorio.\ngit merge\nUne dos o más historiales de desarrollo.\ngit rebase\nReaplica commits sobre la punta de otra base.\ngit reset\nRestablece el HEAD actual al estado especificado.\ngit switch\nCambia entre ramas.\ngit tag\nCrea, lista, elimina o verifica una etiqueta firmada con GPG.\n\nColaborar\n(ver también: git help workflows)\n\ngit fetch\nDescarga objetos y referencias desde otro repositorio.\ngit pull\nObtiene cambios e integra desde otro repositorio o una rama local.\ngit push\nActualiza referencias remotas junto con los objetos asociados.",
     "crumbs": [
       "Ciencia de datos",
       "Github"
@@ -5374,7 +5385,7 @@
     "href": "datascience/github.html#otros-temas",
     "title": "Github",
     "section": "Otros temas",
-    "text": "Otros temas\n\nWorking with Jupyter Notebook files on GitHub",
+    "text": "Otros temas\nGit no fue pensado originalmente para archivos binarios grandes ni para el formato JSON de los notebooks de Jupyter; por eso GitHub documenta un tratamiento especial para diferenciarlos y revisarlos correctamente:\n\nWorking with Jupyter Notebook files on GitHub",
     "crumbs": [
       "Ciencia de datos",
       "Github"
@@ -5385,7 +5396,7 @@
     "href": "datascience/github.html#videos-tutoriales-recomendados",
     "title": "Github",
     "section": "Videos tutoriales recomendados",
-    "text": "Videos tutoriales recomendados\n\nNivel básico\n\nGit and GitHub for Beginners - freeCodeCamp.org Link\nGit Tutorial for Beginners - Programming with Mosh Link\n\n\n\nNivel intermedio\n\nGit Branching and Merging - Traversy Media Link\nAdvanced Git Tutorial - Academind Link\nGit Rebase vs Merge - DevTips Link\n\n\n\nGitHub específico\n\nGitHub Actions Tutorial - TechWorld with Nana Link\nPull Requests Explained - Fireship Link",
+    "text": "Videos tutoriales recomendados\nUna selección de video-tutoriales en inglés, organizados por nivel, para complementar los comandos anteriores con explicaciones paso a paso:\n\nNivel básico\n\nGit and GitHub for Beginners - freeCodeCamp.org Link\nGit Tutorial for Beginners - Programming with Mosh Link\n\n\n\nNivel intermedio\n\nGit Branching and Merging - Traversy Media Link\nAdvanced Git Tutorial - Academind Link\nGit Rebase vs Merge - DevTips Link\n\n\n\nGitHub específico\n\nGitHub Actions Tutorial - TechWorld with Nana Link\nPull Requests Explained - Fireship Link",
     "crumbs": [
       "Ciencia de datos",
       "Github"
@@ -5396,7 +5407,7 @@
     "href": "datascience/github.html#proyectos-destacados-en-github",
     "title": "Github",
     "section": "Proyectos destacados en GitHub",
-    "text": "Proyectos destacados en GitHub\n\nRecursos de aprendizaje\n\nfirst-contributions - Guía para tu primera contribución Link\ngithub-cheat-sheet - Trucos y comandos útiles Link\nawesome-github - Lista curada de recursos GitHub Link\n\n\n\nHerramientas Git/GitHub\n\ngit-extras - Comandos extra para Git Link\nhub - Extensión de línea de comandos para GitHub Link\ngitignore.io - Generador de .gitignore Link\n\n\n\nGitHub Actions\n\nawesome-actions - Lista de GitHub Actions Link\nactions-toolkit - Toolkit para crear Actions Link\n\n\n\nAutomatización y CI/CD\n\npre-commit - Framework para git hooks Link\nsemantic-release - Versionado semántico automático Link\nrelease-drafter - Automatizar release notes Link\n\n\n\nPerfiles y documentación\n\ngithub-profile-readme-generator - Generador de README perfil Link\nawesome-readme - Ejemplos de READMEs increíbles Link\nshields - Badges para repositorios Link",
+    "text": "Proyectos destacados en GitHub\nMás allá de la documentación oficial, estos repositorios de código abierto son referencias prácticas y de uso frecuente en la comunidad de Git y GitHub, agrupados por lo que resuelven.\n\nRecursos de aprendizaje\n\nfirst-contributions - Guía para tu primera contribución Link\ngithub-cheat-sheet - Trucos y comandos útiles Link\nawesome-github - Lista curada de recursos GitHub Link\n\n\n\nHerramientas Git/GitHub\nUtilidades de línea de comandos que extienden lo que Git hace por defecto:\n\ngit-extras - Comandos extra para Git Link\nhub - Extensión de línea de comandos para GitHub Link\ngitignore.io - Generador de .gitignore Link\n\n\n\nGitHub Actions\nComplementan la sección de GitHub Actions básico, más arriba, con ejemplos ya construidos y con el conjunto de herramientas para crear tus propias Actions:\n\nawesome-actions - Lista de GitHub Actions Link\nactions-toolkit - Toolkit para crear Actions Link\n\n\n\nAutomatización y CI/CD\nHerramientas que automatizan tareas del flujo de trabajo colaborativo que, de otro modo, dependen de recordar hacerlas manualmente en cada commit o cada release:\n\npre-commit - Framework para git hooks Link\nsemantic-release - Versionado semántico automático Link\nrelease-drafter - Automatizar release notes Link\n\n\n\nPerfiles y documentación\nPara la cara visible de un repositorio o de un perfil de GitHub:\n\ngithub-profile-readme-generator - Generador de README perfil Link\nawesome-readme - Ejemplos de READMEs increíbles Link\nshields - Badges para repositorios Link",
     "crumbs": [
       "Ciencia de datos",
       "Github"
@@ -5407,7 +5418,7 @@
     "href": "datascience/github.html#github-copilot",
     "title": "Github",
     "section": "GitHub Copilot",
-    "text": "GitHub Copilot\n\nWhat is GitHub Copilot?. Link\nGitHub Copilot Documentation. Link",
+    "text": "GitHub Copilot\nGitHub Copilot es el asistente de programación con IA integrado en el editor (VS Code, JetBrains, Neovim, o directamente en github.com), que sugiere líneas o bloques de código completos a partir del contexto del archivo y responde preguntas sobre el repositorio en un chat integrado:\n\nWhat is GitHub Copilot?. Link\nGitHub Copilot Documentation. Link",
     "crumbs": [
       "Ciencia de datos",
       "Github"
@@ -5418,7 +5429,7 @@
     "href": "datascience/github.html#recursos-adicionales",
     "title": "Github",
     "section": "Recursos adicionales",
-    "text": "Recursos adicionales\n\nPro Git Book (gratuito). Link\nGitHub Learning Lab. Link\nGitHub Student Developer Pack. Link\nConventional Commits. Link",
+    "text": "Recursos adicionales\nPara profundizar más allá de esta introducción:\n\nPro Git Book (gratuito). Link\nGitHub Learning Lab. Link\nGitHub Student Developer Pack. Link\nConventional Commits. Link",
     "crumbs": [
       "Ciencia de datos",
       "Github"
