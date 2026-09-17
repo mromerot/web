@@ -1,0 +1,272 @@
+---
+title: "Línea base"
+format: html
+editor: visual
+---
+
+## Qué es la línea base
+
+La **línea base** (o línea de base) es la medición del valor que toma un indicador antes de que comience una intervención: el punto de partida contra el cual se compara el cambio que un proyecto busca producir. Sin ese punto de referencia, un indicador solo dice cuál es la situación al final del proyecto, pero no permite establecer si esa situación mejoró, empeoró o se mantuvo igual como consecuencia de la intervención.
+
+La línea base cobra sentido dentro de una tríada de conceptos que conviene distinguir con claridad, porque suelen confundirse en la práctica:
+
+-   **Línea base**: dónde estamos al inicio. Es el valor que toma el indicador antes de que arranque el proyecto.
+-   **Indicador**: qué vamos a medir. Es la variable —expresada normalmente como una proporción, una tasa, un promedio o un conteo— que permite observar el cambio a lo largo del tiempo.
+-   **Meta**: hasta dónde queremos llegar. Es el valor que se espera que alcance el indicador al finalizar el proyecto, o en un horizonte de tiempo determinado.
+
+Estos tres elementos, a su vez, se insertan en un ciclo más amplio de seguimiento y evaluación:
+
+-   **Línea base** → ¿Dónde estamos ahora?
+-   **Indicador** → ¿Qué vamos a medir?
+-   **Meta** → ¿A dónde queremos llegar?
+-   **Seguimiento** → ¿Cómo estamos avanzando?
+-   **Evaluación** → ¿Cuánto cambió realmente la situación?
+
+Un ejemplo simple ilustra la lógica: si un proyecto busca aumentar el acceso de familias rurales a agua segura, y la línea base muestra que solo el 35 % de las familias consume agua segura al inicio, el indicador —porcentaje de familias que consume agua segura— permite observar cómo cambia esa cifra durante el proyecto, y la meta puede fijarse en 80 % al finalizar. El cambio esperado, entonces, es de +45 puntos porcentuales: un resultado concreto, cuantificable y verificable, no una simple declaración de intenciones.
+
+## Para qué sirve
+
+-   **Permite medir el cambio atribuible a la intervención.** Sin una línea base es difícil interpretar correctamente un indicador: un valor final del 80 % no dice nada por sí solo si no se sabe de dónde partió el proyecto.
+-   **Obliga a un diagnóstico riguroso desde el inicio.** Levantar la línea base exige estudiar y entender la situación de la población objetivo antes de intervenir, lo que mejora el diseño mismo del proyecto.
+-   **Sustenta la rendición de cuentas.** Un proyecto no solo debe demostrar lo que hizo (actividades ejecutadas, productos entregados); debe demostrar qué cambió gracias a su intervención, y eso solo es posible si existe un punto de comparación creíble.
+-   **Informa el establecimiento de metas realistas.** Fijar una meta sin conocer la línea base suele producir metas arbitrarias, demasiado ambiciosas o demasiado conservadoras frente a la situación real de partida.
+-   **Habilita el seguimiento y la evaluación posteriores.** La línea base es el primer dato de una serie que se construye durante la ejecución (seguimiento) y que se cierra al final del proyecto (evaluación), permitiendo trazar la trayectoria completa del cambio.
+
+## Relación con la matriz de marco lógico
+
+La **Matriz de Marco Lógico** (MML) es la herramienta más usada en proyectos de desarrollo para organizar, en una sola tabla, los objetivos de un proyecto en distintos niveles —Fin, Propósito, Componentes y Actividades—, junto con los indicadores que permiten verificar su cumplimiento, los medios de verificación de esos indicadores, y los supuestos externos que deben cumplirse para que la lógica del proyecto funcione.
+
+La columna de **indicadores** de la matriz es, precisamente, donde la línea base se vuelve indispensable: un indicador bien formulado en el marco lógico no se limita a nombrar la variable que se va a medir, sino que especifica también su línea base, su meta y el plazo en el que se espera alcanzarla. Un indicador sin línea base —por ejemplo, "aumentar el acceso a agua segura"— es una declaración de dirección, pero no es medible ni verificable; solo se vuelve un indicador completo cuando se formula como "el porcentaje de familias que consume agua segura pasa de 35 % (línea base, año 0) a 80 % (meta, año 3)".
+
+Por eso, dentro del ciclo del proyecto, la línea base debe levantarse en la etapa de **diagnóstico y formulación**, no después de que la ejecución ya comenzó: si el proyecto arranca sin haber medido la situación inicial, ya no habrá manera de reconstruir ese dato de forma confiable más adelante, y el equipo quedará sin capacidad de demostrar el cambio producido, por buenos que hayan sido los resultados.
+
+{{< video "https://www.youtube.com/watch?v=K2yCrokrBv4" >}} El marco lógico y su utilidad en la evaluación de proyectos.
+
+## Cómo se construye una línea base, paso a paso
+
+1.  **Revisar los indicadores definidos en la matriz de marco lógico.** El punto de partida no es salir a medir cualquier variable disponible, sino identificar exactamente qué indicadores —de Fin, Propósito y Componentes— requieren un valor de línea base, y con qué nivel de desagregación (por sexo, edad, zona geográfica, grupo étnico) se necesita esa información para el análisis posterior.
+2.  **Definir la metodología de recolección.** Según el tipo de indicador, la línea base puede construirse a partir de encuestas propias, registros administrativos de entidades públicas, revisión de fuentes secundarias (censos, estudios previos) o una combinación de estas fuentes; la elección debe documentarse porque condiciona la comparabilidad con las mediciones futuras.
+3.  **Diseñar los instrumentos y, si aplica, la muestra.** Cuando la línea base se levanta mediante encuesta, es necesario diseñar cuestionarios validados y definir una muestra estadísticamente representativa de la población objetivo, de modo que los resultados puedan generalizarse con un margen de error conocido.
+4.  **Levantar la información en campo antes de iniciar la intervención.** Este es el paso más sensible desde el punto de vista metodológico: la línea base debe recogerse antes de que el proyecto empiece a producir efectos sobre la población, para que refleje la situación real "sin proyecto".
+5.  **Procesar y validar los datos.** Revisar consistencia, depurar valores atípicos o inconsistentes, y verificar que la información recolectada corresponda efectivamente a la población y al indicador definidos en la matriz de marco lógico.
+6.  **Establecer el valor de referencia de cada indicador y documentar su fuente.** El resultado de este paso es un valor numérico concreto por indicador —por ejemplo, "35 % de las familias consume agua segura"—, acompañado de la fecha de medición, la fuente y el método usado, de modo que la medición pueda replicarse en el futuro.
+7.  **Definir la meta a partir de la línea base.** Con el punto de partida ya establecido, se fija cuánto se espera que cambie el indicador y en qué plazo, evitando metas desconectadas de la situación real de la población objetivo.
+8.  **Programar el seguimiento periódico y la evaluación final.** La línea base es apenas el primer punto de una serie: es necesario definir desde el inicio cuándo se harán las mediciones intermedias de seguimiento y cuándo la medición final de evaluación, para poder trazar la trayectoria completa del cambio.
+
+## Dos ejemplos de línea base, indicador y meta
+
+Los siguientes ejemplos, de naturaleza distinta —uno de acceso a un servicio básico, otro de ingresos productivos—, muestran cómo se aplica la misma lógica de línea base, indicador y meta.
+
+**Ejemplo 1: acceso a agua segura**
+
+| Elemento | Pregunta que responde | Valor | Rol en el proyecto |
+|----|----|----|----|
+| Línea base | ¿Dónde estamos ahora? | 35 % de las familias consume agua segura | Punto de partida para medir el cambio |
+| Indicador | ¿Qué vamos a medir? | Porcentaje de familias que consume agua segura | Define la variable que se medirá |
+| Meta | ¿A dónde queremos llegar? | 80 % de las familias | Establece el resultado esperado |
+| Cambio esperado | ¿Cuánto se espera cambiar? | +45 puntos porcentuales | Magnitud del cambio atribuible al proyecto |
+
+: Ejemplo de línea base, indicador y meta para un proyecto de acceso a agua segura {.striped}
+
+**Ejemplo 2: familias productoras de cacao**
+
+| Elemento | Pregunta que responde | Valor | Rol en el proyecto |
+|----|----|----|----|
+| Línea base | ¿Dónde estamos ahora? | USD 250 mensuales | Ingreso promedio actual de las familias |
+| Indicador | ¿Qué vamos a medir? | Ingreso promedio mensual de las familias productoras de cacao | Define la variable que se medirá |
+| Meta | ¿A dónde queremos llegar? | USD 400 mensuales | Establece el resultado esperado |
+| Cambio esperado | ¿Cuánto se espera cambiar? | +USD 150 mensuales (incremento del 60 %) | Magnitud del cambio atribuible al proyecto |
+
+: Ejemplo de línea base, indicador y meta para un proyecto de ingresos productivos {.striped}
+
+La idea clave detrás de ambos ejemplos es la misma: línea base + indicador + meta = cambio esperado y medible. Sin una buena línea base es difícil saber cuánto cambió realmente un indicador, y un proyecto no solo debe demostrar lo que hizo, sino qué cambió gracias a su intervención.
+
+{{< video "https://www.youtube.com/watch?v=TJcZjvElB88" >}} Indicadores para la construcción de una línea de base.
+
+## Errores frecuentes al construir la línea base
+
+-   **Levantar la línea base después de haber iniciado la intervención**, o incluso al final del proyecto reconstruyéndola "de memoria", lo que invalida cualquier comparación posterior porque ya no refleja la situación real de partida.
+-   **Definir metas sin conocer la línea base**, fijando cifras arbitrarias que no guardan relación con la capacidad real de cambio del proyecto ni con la situación de la población objetivo.
+-   **Usar una muestra no representativa** o un tamaño de muestra insuficiente, lo que produce un valor de línea base poco confiable y difícil de comparar en la evaluación final.
+-   **No documentar la metodología de medición**, de modo que, al momento de la evaluación, no es posible saber si un cambio observado se debe a la intervención o a que la línea base y la medición final se midieron de formas distintas.
+-   **Confundir línea base con diagnóstico general.** El diagnóstico puede ser cualitativo y amplio; la línea base debe ser específica, cuantitativa (o cuantificable) y directamente vinculada a los indicadores de la matriz de marco lógico.
+
+{{< video "https://www.youtube.com/watch?v=hzIsxXPeCwU" >}} Desarrollo de un proyecto con la metodología de marco lógico en 10 pasos.
+
+## Infografía: de la línea base al cambio esperado
+
+```{=html}
+<div class="lineabase-info">
+<div class="lb-header">
+<div class="lb-title">
+<h4>Línea base, indicador y meta</h4>
+<p>En la Matriz de Marco Lógico</p>
+</div>
+<div class="lb-callout">
+La línea base dice <strong>dónde estamos</strong>; el indicador, <strong>qué medimos</strong>; la meta, <strong>hasta dónde queremos llegar</strong>
+</div>
+<div class="lb-note">Sin línea base,<br>un indicador no dice nada.</div>
+</div>
+<div class="lb-quadrants">
+<div class="lb-card" style="--qc:#e34948">
+<div class="lb-card-top">
+<span class="lb-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg></span>
+<div>
+<div class="lb-card-label">1. Línea base</div>
+<div class="lb-card-tag">¿Dónde estamos ahora?</div>
+</div>
+</div>
+<p>El valor del indicador antes de que inicie la intervención.</p>
+<div class="lb-example">Ej: 35 % de las familias consume agua segura.</div>
+</div>
+<div class="lb-card" style="--qc:#2a78d6">
+<div class="lb-card-top">
+<span class="lb-icon"><svg viewBox="0 0 24 24"><path d="M4 19 V9 M9 19 V5 M14 19 V12 M19 19 V7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+<div>
+<div class="lb-card-label">2. Indicador</div>
+<div class="lb-card-tag">¿Qué vamos a medir?</div>
+</div>
+</div>
+<p>La variable que permite observar el cambio a lo largo del proyecto.</p>
+<div class="lb-example">Ej: % de familias que consume agua segura.</div>
+</div>
+<div class="lb-card" style="--qc:#1baf7a">
+<div class="lb-card-top">
+<span class="lb-icon"><svg viewBox="0 0 24 24"><path d="M5 21 L5 3 M5 3 L21 3 M5 12 L21 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="6" r="2" fill="currentColor"/></svg></span>
+<div>
+<div class="lb-card-label">3. Meta</div>
+<div class="lb-card-tag">¿A dónde queremos llegar?</div>
+</div>
+</div>
+<p>El valor esperado del indicador al finalizar el proyecto.</p>
+<div class="lb-example">Ej: 80 % de las familias, al cierre del proyecto.</div>
+</div>
+<div class="lb-card" style="--qc:#eda100">
+<div class="lb-card-top">
+<span class="lb-icon"><svg viewBox="0 0 24 24"><path d="M4 12 L10 18 L20 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<div>
+<div class="lb-card-label">4. Seguimiento y evaluación</div>
+<div class="lb-card-tag">¿Cómo avanzamos? ¿Cuánto cambió?</div>
+</div>
+</div>
+<p>Mediciones intermedias durante la ejecución y una medición final que compara contra la línea base.</p>
+<div class="lb-example">Ej: 55 % al primer año; 80 % al cierre del proyecto.</div>
+</div>
+</div>
+<div class="lb-change">
+<div class="lb-change-item">
+<span class="lb-change-label">Agua segura</span>
+<div class="lb-change-bar"><i style="--from:35%; --to:80%"></i></div>
+<div class="lb-change-vals"><b>35 %</b><em>&#8594;</em><b>80 %</b><strong>+45 pp</strong></div>
+</div>
+<div class="lb-change-item">
+<span class="lb-change-label">Ingreso cacao</span>
+<div class="lb-change-bar"><i style="--from:62%; --to:100%"></i></div>
+<div class="lb-change-vals"><b>USD 250</b><em>&#8594;</em><b>USD 400</b><strong>+60 %</strong></div>
+</div>
+</div>
+<div class="lb-formula">
+<span>Línea base</span><i>+</i><span>Indicador</span><i>+</i><span>Meta</span><i>=</i><strong>Cambio esperado y medible</strong>
+</div>
+<div class="lb-footnote">Sin una buena línea base es difícil saber cuánto cambió realmente un indicador: un proyecto no solo debe demostrar lo que hizo, debe demostrar qué cambió gracias a su intervención.</div>
+</div>
+<style>
+.lineabase-info{
+  --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+  font-family: inherit;
+  color: var(--ink);
+  background:#fcfcfb;
+  border:1px solid rgba(0,58,112,0.12);
+  border-radius:12px;
+  padding:0 0 22px 0;
+  margin:24px 0 8px 0;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,0.06);
+}
+.lineabase-info h4, .lineabase-info h5{ margin:0; }
+.lineabase-info p{ margin:0; }
+.lb-header{
+  background:#003A70;
+  color:#fff;
+  padding:22px 24px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:16px;
+  justify-content:space-between;
+}
+.lb-title h4{ font-size:1.35rem; font-weight:900; letter-spacing:.2px; }
+.lb-title p{ font-size:.92rem; opacity:.9; margin-top:2px; }
+.lb-callout{
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:8px;
+  padding:10px 14px;
+  font-size:.85rem;
+  max-width:360px;
+  line-height:1.4;
+}
+.lb-note{
+  font-style:italic;
+  font-size:.82rem;
+  opacity:.85;
+  text-align:right;
+  line-height:1.3;
+  min-width:150px;
+}
+.lb-quadrants{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  padding:22px 24px 6px 24px;
+}
+.lb-card{
+  background:color-mix(in srgb, var(--qc) 7%, #fcfcfb);
+  border:1px solid color-mix(in srgb, var(--qc) 35%, transparent);
+  border-left:5px solid var(--qc);
+  border-radius:10px;
+  padding:14px 16px;
+}
+.lb-card-top{ display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.lb-icon{ color:var(--qc); flex:0 0 auto; }
+.lb-icon svg{ width:26px; height:26px; display:block; }
+.lb-card-label{ font-weight:800; font-size:1.02rem; color:var(--ink); }
+.lb-card-tag{ font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); font-weight:600; }
+.lb-card p{ font-size:.88rem; color:var(--ink-2); line-height:1.4; margin-bottom:6px; }
+.lb-example{ font-size:.8rem; color:var(--ink); background:rgba(255,255,255,0.6); border:1px dashed color-mix(in srgb, var(--qc) 45%, transparent); border-radius:6px; padding:6px 8px; }
+.lb-change{ padding:20px 24px 4px 24px; display:flex; flex-direction:column; gap:16px; }
+.lb-change-item{ display:flex; flex-direction:column; gap:6px; }
+.lb-change-label{ font-size:.82rem; font-weight:800; color:#003A70; }
+.lb-change-bar{ position:relative; height:10px; background:#e6e5e0; border-radius:6px; overflow:hidden; }
+.lb-change-bar i{
+  position:absolute; left:0; top:0; bottom:0;
+  width:var(--to);
+  border-radius:6px;
+  background:linear-gradient(90deg, #eda100, #1baf7a);
+}
+.lb-change-vals{ display:flex; align-items:center; gap:8px; font-size:.82rem; color:var(--ink-2); }
+.lb-change-vals b{ color:var(--ink); font-weight:800; }
+.lb-change-vals em{ font-style:normal; color:var(--muted); }
+.lb-change-vals strong{ margin-left:auto; color:#1baf7a; font-weight:800; background:rgba(27,175,122,0.12); border-radius:6px; padding:2px 8px; }
+.lb-formula{
+  margin:18px 24px 0 24px;
+  background:#f3f6f9;
+  border-radius:8px;
+  padding:12px 16px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  font-size:.85rem;
+}
+.lb-formula span{ background:#fff; border:1px solid rgba(0,58,112,0.2); border-radius:6px; padding:4px 9px; font-weight:700; color:#003A70; }
+.lb-formula i{ font-style:normal; color:var(--muted); font-weight:900; }
+.lb-formula strong{ color:var(--ink); }
+.lb-footnote{ margin:14px 24px 0 24px; font-size:.78rem; font-style:italic; color:var(--muted); }
+@media (max-width:640px){
+  .lb-quadrants{ grid-template-columns:1fr; }
+  .lb-header{ flex-direction:column; align-items:flex-start; }
+  .lb-note{ text-align:left; }
+}
+</style>
+```

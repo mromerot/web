@@ -137,6 +137,10 @@ website:
             href: gestiondeproyectos/dofa.qmd
           - text: "Mapa de actores"
             href: gestiondeproyectos/mapa-actores.qmd
+          - text: "Gestión del conocimiento"
+            href: gestiondeproyectos/gestion-conocimiento.qmd
+          - text: "Línea base"
+            href: gestiondeproyectos/Linea-base.qmd
           - text: "PESTEL"
             href: gestiondeproyectos/pestel.qmd
           - text: "SWOT"

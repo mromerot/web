@@ -1,0 +1,313 @@
+---
+title: "Gestión del conocimiento"
+format: html
+editor: visual
+---
+
+## Qué es la gestión del conocimiento
+
+La **gestión del conocimiento** (*knowledge management*) es el conjunto de procesos mediante los cuales una organización identifica, captura, organiza, almacena, comparte y aplica el conocimiento que genera y que posee su gente, con el propósito de tomar mejores decisiones, evitar reinventar lo ya aprendido y sostener su desempeño más allá de la permanencia de una persona en particular. Davenport y Prusak (1998), en una de las definiciones más citadas del campo, describen el conocimiento organizacional como una mezcla fluida de experiencia, valores, información contextual y juicio experto que ofrece un marco para evaluar e incorporar nuevas experiencias e información, y que en las organizaciones no solo queda contenido en documentos, sino también en las rutinas, procesos, prácticas y normas institucionales.
+
+Para entender qué gestiona exactamente esta disciplina, conviene distinguir cuatro niveles que suelen confundirse:
+
+-   **Datos**: hechos discretos y sin procesar (por ejemplo, "35 %").
+-   **Información**: datos organizados con un propósito ("35 % de las familias consume agua segura").
+-   **Conocimiento**: información interpretada a la luz de la experiencia, que permite actuar (saber qué intervención probablemente aumente ese porcentaje y por qué).
+-   **Sabiduría o criterio experto**: la capacidad de aplicar ese conocimiento de forma juiciosa en contextos nuevos o inciertos.
+
+Esta progresión —conocida como la jerarquía DIKW (*Data, Information, Knowledge, Wisdom*)— explica por qué digitalizar documentos o construir un repositorio no equivale, por sí solo, a gestionar el conocimiento: mover información de un lugar a otro no genera automáticamente la capacidad de actuar mejor con ella.
+
+Otra distinción central, propuesta originalmente por el filósofo Michael Polanyi y retomada por Nonaka y Takeuchi (1995) en su modelo de creación de conocimiento organizacional, separa el conocimiento en dos tipos:
+
+-   **Conocimiento explícito**: el que puede codificarse, escribirse y transmitirse fácilmente en manuales, procedimientos, bases de datos o informes.
+-   **Conocimiento tácito**: el que reside en la experiencia, la intuición y el saber hacer de las personas, y que resulta difícil de poner por escrito —por ejemplo, la manera en que un funcionario experimentado detecta un problema en un proyecto antes de que aparezca en los indicadores—.
+
+Nonaka y Takeuchi proponen que el conocimiento organizacional se crea mediante una **espiral** de cuatro modos de conversión entre estos dos tipos, conocida como el modelo SECI:
+
+1.  **Socialización** (tácito a tácito): compartir experiencia directamente, por ejemplo mediante observación, acompañamiento o mentoría.
+2.  **Exteriorización** (tácito a explícito): articular ese conocimiento tácito en conceptos, metáforas o documentos que otros puedan comprender.
+3.  **Combinación** (explícito a explícito): sistematizar y combinar distintas piezas de conocimiento explícito en un cuerpo más complejo y útil.
+4.  **Interiorización** (explícito a tácito): que las personas aprendan e incorporen ese conocimiento explícito hasta volverlo parte de su propia práctica, cerrando el ciclo y comenzando una nueva espiral.
+
+{{< video "https://www.youtube.com/watch?v=YqKtka1iajs" >}} Gestión del conocimiento: el modelo de Nonaka y Takeuchi.
+
+## Para qué sirve
+
+La gestión del conocimiento no es un fin en sí mismo, sino un medio para resolver problemas muy concretos de cualquier organización, incluidas las entidades públicas y los equipos que ejecutan proyectos de desarrollo:
+
+-   **Evita la pérdida de memoria institucional.** Cuando una persona clave se retira o rota de cargo, buena parte de lo aprendido se va con ella si nunca quedó documentado ni transferido; la gestión del conocimiento busca que ese saber permanezca en la organización.
+-   **Evita reinventar lo ya resuelto.** Sin mecanismos para capturar lecciones aprendidas, equipos distintos de una misma organización terminan resolviendo el mismo problema desde cero, con el costo de tiempo y recursos que eso implica.
+-   **Mejora la toma de decisiones.** Decisiones basadas en la experiencia sistematizada y en evidencia acumulada tienden a ser más acertadas que las que se toman de manera aislada o intuitiva.
+-   **Impulsa la innovación.** Combinar conocimiento existente de formas nuevas —y no solo generar conocimiento desde cero— es, de hecho, una de las fuentes más frecuentes de innovación dentro de las organizaciones.
+-   **Fortalece la capacidad de respuesta.** Las organizaciones que aprenden de su propia experiencia se adaptan más rápido a cambios en su entorno, porque no dependen exclusivamente de la memoria individual de unas pocas personas.
+-   **Mejora los productos y servicios que se entregan a los ciudadanos o beneficiarios.** Cuando el conocimiento fluye entre dependencias y niveles jerárquicos, es más probable que las soluciones respondan a lo que realmente se necesita, en vez de repetir prácticas desactualizadas.
+
+## El ciclo de gestión del conocimiento
+
+Aunque distintos autores y modelos institucionales usan etiquetas distintas, el ciclo de gestión del conocimiento suele recorrer una secuencia parecida:
+
+1.  **Identificar.** Determinar qué conocimiento es crítico para la organización o para un proyecto en particular —qué se necesita saber para cumplir los objetivos— y dónde reside actualmente ese conocimiento: en personas, documentos, sistemas o procesos.
+2.  **Capturar y generar.** Convertir en explícito el conocimiento tácito relevante mediante entrevistas, talleres, revisiones de proyecto (*after action reviews*), lecciones aprendidas o documentación de buenas prácticas; y generar conocimiento nuevo mediante investigación, experimentación e innovación.
+3.  **Organizar y almacenar.** Clasificar, estructurar y depositar ese conocimiento en repositorios, bases de datos, wikis o mapas de conocimiento, de forma que sea fácil de ubicar cuando se necesite.
+4.  **Compartir y difundir.** Poner ese conocimiento al alcance de quienes lo necesitan mediante comunidades de práctica, redes de conocimiento, capacitaciones, mentorías o espacios de intercambio entre pares.
+5.  **Aplicar.** Usar efectivamente ese conocimiento en la toma de decisiones, el diseño de nuevos proyectos o la resolución de problemas concretos; un conocimiento que nunca se aplica no genera valor, por bien documentado que esté.
+6.  **Evaluar y actualizar.** Revisar periódicamente si el conocimiento almacenado sigue vigente, retirar o actualizar lo obsoleto, e incorporar lo aprendido en cada nuevo ciclo, de modo que el proceso vuelva a comenzar de forma continua.
+
+## Herramientas y prácticas frecuentes
+
+La gestión del conocimiento se apoya en un repertorio amplio de herramientas, que conviene combinar según el tipo de conocimiento que se quiera capturar:
+
+-   **Repositorios documentales y bases de datos**, para almacenar y facilitar la búsqueda de conocimiento explícito (informes, manuales, evaluaciones, estudios).
+-   **Mapas de conocimiento**, que identifican quién sabe qué dentro de la organización, de modo que ese saber pueda ubicarse y transferirse antes de que la persona se retire.
+-   **Comunidades de práctica**, grupos de personas con un interés o función común que intercambian experiencia de forma continua, más allá de la estructura jerárquica formal.
+-   **Lecciones aprendidas y revisiones después de la acción** (*after action reviews*), ejercicios estructurados al cierre de un proyecto o un hito para documentar qué funcionó, qué no, y por qué.
+-   **Mentoría y acompañamiento entre pares**, el mecanismo más directo para transferir conocimiento tácito de una persona con experiencia a otra que se está formando.
+-   **Wikis y plataformas colaborativas**, que permiten que el conocimiento se construya y actualice de forma distribuida, en vez de depender de un único responsable.
+-   **Narrativas y estudios de caso** (*storytelling*), útiles para transmitir conocimiento tácito complejo —el porqué detrás de una decisión, no solo el qué— de una manera memorable.
+-   **Analítica de datos e indicadores de gestión**, que convierten información dispersa en evidencia sistematizada para la toma de decisiones, cerrando el ciclo entre datos y conocimiento aplicable.
+
+## La gestión del conocimiento en la Función Pública de Colombia
+
+En Colombia, la gestión del conocimiento no es solo una buena práctica recomendada, sino una **política pública formal** dentro del Modelo Integrado de Planeación y Gestión (MIPG), el marco de referencia que el Departamento Administrativo de la Función Pública (DAFP) —conocido como Función Pública— usa para que las entidades del Estado planeen, ejecuten, hagan seguimiento y evalúen su gestión institucional.
+
+MIPG organiza su implementación en siete dimensiones, y la **Gestión del Conocimiento y la Innovación** es la sexta de ellas. A diferencia de las demás dimensiones, que se enfocan en procesos específicos (talento humano, planeación, control interno, entre otros), esta dimensión tiene un carácter **transversal**: el conocimiento que se genera en una entidad es un insumo para el funcionamiento de todas las demás, por lo que fortalecerlo repercute en el desempeño del resto del modelo.
+
+Según Función Pública, la política se estructura alrededor de cuatro ejes o componentes:
+
+1.  **Generación y producción.** Contempla el desarrollo de nuevas ideas dentro de las entidades mediante mecanismos y herramientas orientados a la ideación, la investigación, la experimentación y la innovación.
+2.  **Herramientas para el uso y la apropiación.** Busca identificar procesos que permitan obtener, organizar, sistematizar, almacenar y compartir fácilmente datos e información a través de herramientas tecnológicas confiables, de modo que el conocimiento quede disponible para su uso dentro y fuera de la entidad.
+3.  **Analítica institucional.** Es el proceso de seguimiento y evaluación del conocimiento que se realiza al interior de la entidad: el análisis y la visualización de datos e información permiten determinar qué acciones se requieren para lograr los resultados esperados, y se convierte en insumo directo para el direccionamiento estratégico y la planeación.
+4.  **Cultura de compartir y difundir.** Implica desarrollar una visión estratégica de comunicación, consolidar redes y promover procesos de enseñanza-aprendizaje para difundir y reforzar la gestión del conocimiento, de manera que la experiencia compartida fortalezca la memoria institucional. Uno de sus propósitos explícitos es levantar mapas de conocimiento para que, cuando un servidor público se retire de la entidad, el saber acumulado permanezca y el conocimiento quede disponible para quienes continúan.
+
+Función Pública ha reportado avances medibles de esta política: en la vigencia 2020, la dimensión de Gestión del Conocimiento se posicionó como la primera a nivel nacional con un puntaje de 84,2 puntos, y como la segunda política de las dieciocho que integran el MIPG, con 84,3 puntos —una señal de que, más allá del marco normativo, las entidades públicas colombianas vienen apropiándose activamente de esta dimensión.
+
+{{< video "https://www.youtube.com/watch?v=yEpX6CpVov4" >}} MIPG: Dimensión 6 - Gestión del Conocimiento y la Innovación.
+
+## Infografía: el ciclo de la gestión del conocimiento
+
+```{=html}
+<div class="conocimiento-info">
+<div class="gc-header">
+<div class="gc-title">
+<h4>Gestión del conocimiento</h4>
+<p>De la experiencia individual al aprendizaje organizacional</p>
+</div>
+<div class="gc-callout">
+<strong>Tácito</strong> = saber hacer de las personas &nbsp;&middot;&nbsp; <strong>Explícito</strong> = conocimiento documentado
+</div>
+<div class="gc-note">El conocimiento que no se comparte<br>se pierde con quien se va.</div>
+</div>
+<div class="gc-quadrants">
+<div class="gc-card" style="--qc:#2a78d6">
+<div class="gc-card-top">
+<span class="gc-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="16.2" y1="16.2" x2="21" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+<div>
+<div class="gc-card-label">1. Identificar</div>
+<div class="gc-card-tag">Qué conocimiento es crítico</div>
+</div>
+</div>
+<p>Qué se necesita saber y dónde reside: en personas, documentos, sistemas o procesos.</p>
+<div class="gc-example">Ej: solo dos personas saben resolver el problema técnico recurrente del proyecto.</div>
+</div>
+<div class="gc-card" style="--qc:#eda100">
+<div class="gc-card-top">
+<span class="gc-icon"><svg viewBox="0 0 24 24"><path d="M12 2 L20 6 V12 C20 17 16.5 20.5 12 22 C7.5 20.5 4 17 4 12 V6 Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12.5 L11 15 L16 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<div>
+<div class="gc-card-label">2. Capturar y organizar</div>
+<div class="gc-card-tag">De tácito a explícito</div>
+</div>
+</div>
+<p>Documentar lecciones aprendidas y almacenarlas en repositorios o mapas de conocimiento.</p>
+<div class="gc-example">Ej: informe de cierre con lo que funcionó y lo que no.</div>
+</div>
+<div class="gc-card" style="--qc:#1baf7a">
+<div class="gc-card-top">
+<span class="gc-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="6" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="18" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="8.2" y1="7.2" x2="10.2" y2="15.8" stroke="currentColor" stroke-width="1.5"/><line x1="15.8" y1="7.2" x2="13.8" y2="15.8" stroke="currentColor" stroke-width="1.5"/><line x1="8.6" y1="6" x2="15.4" y2="6" stroke="currentColor" stroke-width="1.5"/></svg></span>
+<div>
+<div class="gc-card-label">3. Compartir</div>
+<div class="gc-card-tag">Comunidades de práctica</div>
+</div>
+</div>
+<p>Poner el conocimiento al alcance de quien lo necesita, más allá de la jerarquía formal.</p>
+<div class="gc-example">Ej: mentoría entre un funcionario nuevo y uno experimentado.</div>
+</div>
+<div class="gc-card" style="--qc:#e34948">
+<div class="gc-card-top">
+<span class="gc-icon"><svg viewBox="0 0 24 24"><path d="M4 12 L10 18 L20 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<div>
+<div class="gc-card-label">4. Aplicar y evaluar</div>
+<div class="gc-card-tag">Decisiones basadas en evidencia</div>
+</div>
+</div>
+<p>Usar el conocimiento en decisiones reales y revisar periódicamente si sigue vigente.</p>
+<div class="gc-example">Ej: rediseñar un proceso a partir de lecciones de proyectos anteriores.</div>
+</div>
+</div>
+<div class="gc-cross">
+<h5>Los cuatro ejes de la política de Gestión del Conocimiento y la Innovación (MIPG - Función Pública)</h5>
+<div class="gc-table-wrap">
+<table>
+<thead>
+<tr><th>Eje</th><th>Qué busca</th><th>Ejemplo</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Generación y producción</td>
+<td>Ideación, investigación, experimentación e innovación</td>
+<td>Laboratorios de innovación pública</td>
+</tr>
+<tr>
+<td>Herramientas para el uso y apropiación</td>
+<td>Obtener, organizar y compartir datos con tecnología confiable</td>
+<td>Repositorios institucionales y bases de conocimiento</td>
+</tr>
+<tr>
+<td>Analítica institucional</td>
+<td>Seguimiento y evaluación del conocimiento generado</td>
+<td>Tableros de indicadores para la toma de decisiones</td>
+</tr>
+<tr>
+<td>Cultura de compartir y difundir</td>
+<td>Redes, comunicación y aprendizaje continuo</td>
+<td>Mapas de conocimiento antes de que un servidor se retire</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="gc-flow">
+<div class="gc-flow-step"><span>1</span>Identificar</div>
+<div class="gc-arrow">&#8594;</div>
+<div class="gc-flow-step"><span>2</span>Capturar y generar</div>
+<div class="gc-arrow">&#8594;</div>
+<div class="gc-flow-step"><span>3</span>Organizar y almacenar</div>
+<div class="gc-arrow">&#8594;</div>
+<div class="gc-flow-step"><span>4</span>Compartir y difundir</div>
+<div class="gc-arrow">&#8594;</div>
+<div class="gc-flow-step"><span>5</span>Aplicar</div>
+<div class="gc-arrow">&#8594;</div>
+<div class="gc-flow-step"><span>6</span>Evaluar y actualizar</div>
+</div>
+<div class="gc-formula">
+<span>Conocimiento tácito</span><i>+</i><span>Conocimiento explícito</span><i>+</i><span>Cultura de compartir</span><i>=</i><strong>Memoria institucional que sobrevive a la rotación de personal</strong>
+</div>
+<div class="gc-footnote">El conocimiento que se genera en una entidad es insumo transversal para todas las demás dimensiones de su gestión: por eso no basta con documentarlo, hay que hacerlo circular.</div>
+</div>
+<style>
+.conocimiento-info{
+  --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+  font-family: inherit;
+  color: var(--ink);
+  background:#fcfcfb;
+  border:1px solid rgba(0,58,112,0.12);
+  border-radius:12px;
+  padding:0 0 22px 0;
+  margin:24px 0 8px 0;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,0.06);
+}
+.conocimiento-info h4, .conocimiento-info h5{ margin:0; }
+.conocimiento-info p{ margin:0; }
+.gc-header{
+  background:#003A70;
+  color:#fff;
+  padding:22px 24px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:16px;
+  justify-content:space-between;
+}
+.gc-title h4{ font-size:1.35rem; font-weight:900; letter-spacing:.2px; }
+.gc-title p{ font-size:.92rem; opacity:.9; margin-top:2px; }
+.gc-callout{
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:8px;
+  padding:10px 14px;
+  font-size:.85rem;
+  max-width:340px;
+  line-height:1.4;
+}
+.gc-note{
+  font-style:italic;
+  font-size:.82rem;
+  opacity:.85;
+  text-align:right;
+  line-height:1.3;
+  min-width:170px;
+}
+.gc-quadrants{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  padding:22px 24px 6px 24px;
+}
+.gc-card{
+  background:color-mix(in srgb, var(--qc) 7%, #fcfcfb);
+  border:1px solid color-mix(in srgb, var(--qc) 35%, transparent);
+  border-left:5px solid var(--qc);
+  border-radius:10px;
+  padding:14px 16px;
+}
+.gc-card-top{ display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.gc-icon{ color:var(--qc); flex:0 0 auto; }
+.gc-icon svg{ width:26px; height:26px; display:block; }
+.gc-card-label{ font-weight:800; font-size:1.02rem; color:var(--ink); }
+.gc-card-tag{ font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); font-weight:600; }
+.gc-card p{ font-size:.88rem; color:var(--ink-2); line-height:1.4; margin-bottom:6px; }
+.gc-example{ font-size:.8rem; color:var(--ink); background:rgba(255,255,255,0.6); border:1px dashed color-mix(in srgb, var(--qc) 45%, transparent); border-radius:6px; padding:6px 8px; }
+.gc-cross{ padding:18px 24px 4px 24px; }
+.gc-cross h5{ font-size:1rem; font-weight:800; color:#003A70; margin-bottom:10px; }
+.gc-table-wrap{ overflow-x:auto; }
+.conocimiento-info table{ width:100%; border-collapse:collapse; font-size:.85rem; }
+.conocimiento-info table th{ text-align:left; color:#fff; background:#003A70; padding:8px 10px; font-weight:700; white-space:nowrap; }
+.conocimiento-info table td{ padding:9px 10px; border-bottom:1px solid #e1e0d9; color:var(--ink-2); vertical-align:top; }
+.conocimiento-info table tr:last-child td{ border-bottom:none; }
+.gc-flow{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  gap:8px;
+  padding:20px 24px 4px 24px;
+}
+.gc-flow-step{
+  flex:1 1 130px;
+  background:#f3f6f9;
+  border:1px solid rgba(0,58,112,0.15);
+  border-radius:8px;
+  padding:10px 12px;
+  font-size:.8rem;
+  color:var(--ink-2);
+  font-weight:600;
+}
+.gc-flow-step span{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:20px; height:20px; border-radius:50%;
+  background:#003A70; color:#fff; font-size:.72rem; font-weight:800;
+  margin-right:6px;
+}
+.gc-arrow{ align-self:center; color:#003A70; font-weight:900; font-size:1.1rem; flex:0 0 auto; }
+.gc-formula{
+  margin:18px 24px 0 24px;
+  background:#f3f6f9;
+  border-radius:8px;
+  padding:12px 16px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  font-size:.85rem;
+}
+.gc-formula span{ background:#fff; border:1px solid rgba(0,58,112,0.2); border-radius:6px; padding:4px 9px; font-weight:700; color:#003A70; }
+.gc-formula i{ font-style:normal; color:var(--muted); font-weight:900; }
+.gc-formula strong{ color:var(--ink); }
+.gc-footnote{ margin:14px 24px 0 24px; font-size:.78rem; font-style:italic; color:var(--muted); }
+@media (max-width:640px){
+  .gc-quadrants{ grid-template-columns:1fr; }
+  .gc-header{ flex-direction:column; align-items:flex-start; }
+  .gc-note{ text-align:left; }
+  .gc-arrow{ transform:rotate(90deg); }
+}
+</style>
+```
