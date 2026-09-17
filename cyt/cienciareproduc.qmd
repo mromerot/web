@@ -4,32 +4,39 @@ format: html
 editor: visual
 ---
 
-# Qué es la ciencia reproducible
+## Qué es la ciencia reproducible
 
--   Definición de ciencia abierta
+La ciencia reproducible es la práctica de documentar y compartir los datos, el código y los métodos de una investigación de forma que otra persona —o el mismo investigador, meses después— pueda repetir el análisis y llegar a los mismos resultados. No es lo mismo que la *replicabilidad*, que exige repetir todo el estudio (incluida la recolección de datos) y obtener conclusiones equivalentes: la reproducibilidad se refiere estrictamente a poder reconstruir el análisis a partir de los mismos datos. La distinción importa porque, según una encuesta de *Nature* a más de 1.500 investigadores, más del 70 % ha intentado sin éxito reproducir el experimento de otro científico, y más de la mitad ha fallado en reproducir sus propios experimentos —una de las referencias más citadas sobre la llamada "crisis de reproducibilidad" en ciencia. [*Link*](https://www.nature.com/articles/533452a)
 
-<!-- -->
+La **ciencia abierta** es el marco más amplio en el que se inscribe la reproducibilidad: no solo busca que un análisis pueda repetirse, sino que todo el ciclo de la investigación —datos, métodos, software, publicaciones— sea accesible para quien quiera revisarlo, reutilizarlo o construir sobre él. La **Recomendación sobre Ciencia Abierta de la UNESCO** (2021), el primer instrumento normativo internacional sobre la materia, adoptado por unanimidad por 193 países, ofrece la definición y los principios compartidos de referencia. [*Link*](https://www.unesco.org/en/open-science/about) El **Consejo Internacional de Ciencia (ISC)** —la organización que agrupa a las principales academias y uniones científicas del mundo— respaldó esa recomendación y sostiene su propia declaración sobre ciencia abierta como parte de su visión de la ciencia como bien público global. [*Link*](https://council.science/statement-on-open-science/)
 
-# Recursos para ciencia abierta
+En la práctica, que unos datos sean "abiertos" no basta: también deben ser utilizables. Los **principios FAIR** (*Findable, Accessible, Interoperable, Reusable*), formulados por Wilkinson y colegas en *Scientific Data* (2016), son el estándar de referencia para que los datos científicos —abiertos o no— puedan encontrarse, accederse, integrarse y reutilizarse de forma sistemática. [*Link*](https://www.nature.com/articles/sdata201618)
 
--   U de Arizona. Training. [*Link*](https://data.library.arizona.edu/data-management/workshops-events/workshop-slides-recordings).
--   MANTRA, free online course for those who manage digital data as part of their research project. [*Link*](https://mantra.ed.ac.uk/).
--   NASA Open Science 101. [*Link*](https://science.nasa.gov/open-science/tops/), [*Link*](https://nasa.github.io/Transform-to-Open-Science/take-os101/), [*GIT*](https://github.com/nasa/Transform-to-Open-Science/tree/main)
-    -   [Newsletter releases](https://nasa.github.io/Transform-to-Open-Science/signup/#:~:text=past%20newsletter%20releases.)
+## Recursos para ciencia abierta
 
-# Cómo crear una propuesta para el de manejo de datos
+Varias instituciones ofrecen formación abierta y gratuita en ciencia abierta y gestión de datos de investigación:
+
+-   La Universidad de Arizona pone a disposición las grabaciones y diapositivas de sus talleres de gestión de datos. [*Link*](https://data.library.arizona.edu/data-management/workshops-events/workshop-slides-recordings).
+-   **MANTRA**, de la Universidad de Edimburgo, es un curso en línea gratuito para quienes gestionan datos digitales como parte de un proyecto de investigación. [*Link*](https://mantra.ed.ac.uk/).
+-   **NASA Open Science 101 (TOPS)**, el curso introductorio de la NASA sobre ciencia abierta, disponible como curso ([*Link*](https://science.nasa.gov/open-science/tops/)) y como módulo interactivo ([*Link*](https://nasa.github.io/Transform-to-Open-Science/take-os101/)), con su repositorio abierto en GitHub ([*GIT*](https://github.com/nasa/Transform-to-Open-Science/tree/main)) y un [boletín de noticias](https://nasa.github.io/Transform-to-Open-Science/signup/#:~:text=past%20newsletter%20releases.) con sus actualizaciones.
+
+A escala global, dos infraestructuras complementan esta formación. El **Center for Open Science (COS)** y su plataforma **OSF (Open Science Framework)** permiten preregistrar estudios, alojar datos y materiales, y publicar preprints de forma gratuita. [*Link*](https://www.cos.io/) · [*Link*](https://osf.io/) La **Research Data Alliance (RDA)** —el foro internacional impulsado originalmente por la Comisión Europea, la NSF de Estados Unidos y el gobierno australiano— es la red donde más de 11.000 profesionales de datos de investigación de 145 países desarrollan estándares comunes de interoperabilidad, incluida la adopción práctica de los principios FAIR. [*Link*](https://www.rd-alliance.org/)
+
+## Cómo crear una propuesta para el manejo de datos
 
 Un plan de gestión de datos (DMP) es un documento que describe cómo tratará sus datos durante un proyecto y qué sucede con los datos una vez finalizado el proyecto. Dichos planes generalmente cubren todo o parte del ciclo de vida de los datos, desde el descubrimiento, la recopilación y la organización de datos, hasta el aseguramiento de la calidad / control de calidad, la documentación y el uso de la información (Michener, 2015).
 
 -   Ten Simple Rules for Creating a Good Data Management Plan. PloS. 2015. [*Link*](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004525).
-
-<!-- -->
-
 -   IPBES Data Management Tutorials. [*Link*](https://zenodo.org/record/4020374#.YZrpsb3MJuX).
+-   **DMPTool**, la herramienta gratuita de la California Digital Library para redactar un DMP a partir de plantillas específicas por financiador —incluidas las de NSF y NIH—, con orientación pregunta por pregunta y opción de agregar colaboradores al plan. [*Link*](https://dmptool.org/).
 
-# Publicación reproducible
+## Publicación reproducible
 
-## **Quarto**
+La publicación reproducible extiende la misma lógica de la ciencia abierta al artículo final: en lugar de un PDF estático, el manuscrito, sus figuras y sus resultados se generan directamente a partir del código y los datos, de modo que todo el proceso de análisis y de escritura puede auditarse y volver a ejecutarse. Herramientas como Quarto, Typst, MyST y Shiny sostienen hoy esa práctica, y revistas y plataformas como la *Journal of Open Source Software* (JOSS) —que exige artefactos de software revisados por pares junto con cada publicación— muestran cómo esa lógica ya opera en la publicación científica real. [*Link*](https://joss.theoj.org/)
+
+### **Quarto**
+
+Quarto es el sistema de publicación científica reproducible de Posit (antes RStudio): combina texto, código —en R, Python, Julia u Observable JS— y resultados en un mismo documento fuente, exportable a HTML, PDF, sitios web, libros o presentaciones (este mismo sitio está construido con Quarto). Los siguientes recursos cubren desde la introducción al sistema hasta flujos de publicación completos:
 
 -   What is Quarto. [*Link*](https://ucsb-meds.github.io/creating-quarto-websites/).
 -   Quarto Guide. [*Link*](https://quarto.org/docs/guide/).\*\*\*
@@ -61,7 +68,9 @@ Un plan de gestión de datos (DMP) es un documento que describe cómo tratará s
 {{< video "https://youtu.be/iOmMjcciKRA" >}} Citaciones
 :::
 
-## Typst
+### Typst
+
+Typst es un sistema de composición tipográfica (*typesetting*) más reciente, pensado como alternativa más rápida y simple a LaTeX, y ya integrado como motor de salida en PDF dentro de Quarto:
 
 -   Typst web page. [*Link*](https://typst.app/home).
 -   Typst with quarto. [*Link*](https://quarto.org/docs/blog/posts/2026-03-31-typst-books-and-more/)
@@ -78,7 +87,9 @@ Un plan de gestión de datos (DMP) es un documento que describe cómo tratará s
 {{< video "https://youtu.be/idgZjnDIS1s" >}}
 :::
 
-## Myst and Curvenote
+### Myst and Curvenote
+
+MyST (*Markedly Structured Text*) es el motor de publicación reproducible que impulsa, entre otros, el programa de cuadernos reproducibles *Notebooks Now* de la AGU (American Geophysical Union); Curvenote es la plataforma construida sobre ese mismo ecosistema para publicar artículos y cuadernos ejecutables:
 
 -   Curvenote. [*Link*](https://curvenote.com/)
 -   AGU Notebooks. La Palma Seismicity 2021. [*Link*](https://notebooks-now.github.io/submission-myst-full/)
@@ -89,7 +100,9 @@ Un plan de gestión de datos (DMP) es un documento que describe cómo tratará s
 {{< video "https://youtu.be/LviMD9zE3FM" >}}
 :::
 
-## Shiny
+### Shiny
+
+Shiny permite construir aplicaciones web interactivas directamente desde R o Python, útil para exponer un análisis reproducible como una herramienta que otros pueden explorar sin necesidad de ejecutar el código:
 
 -   Shiny assistant. [*Link*](https://gallery.shinyapps.io/assistant).
     -   Info [*Link*](https://shiny.posit.co/blog/posts/shiny-assistant/)
@@ -102,9 +115,9 @@ Un plan de gestión de datos (DMP) es un documento que describe cómo tratará s
 Shiny
 :::
 
-## Markdown
+### Markdown
 
-Revise la sección: **datascience/markdown**
+Revise también la sección [Markdown](../datascience/markdown.md) de Ciencia de datos.
 
 Markdown es un lenguaje de marcado ligero que permite añadir elementos de formato a documentos de texto sin formato. Creado por [John Gruber](https://daringfireball.net/projects/markdown/) en 2004, Markdown es actualmente uno de los lenguajes de marcado más populares del mundo. Markdown se puede usar para todo. Se usa para crear sitios web, documentos, notas, libros, presentaciones, correos electrónicos y documentación técnica. Markdown es independiente de la plataforma.
 
@@ -118,7 +131,9 @@ Markdown es un lenguaje de marcado ligero que permite añadir elementos de forma
     -   Prosemirror. [*Link*](https://prosemirror.net/).
     -   StackEdit. [*Link*](https://stackedit.io/)
 
-## Static site generators
+### Static site generators
+
+Un generador de sitios estáticos construye páginas HTML a partir de archivos de texto plano —a menudo Markdown—, sin depender de una base de datos ni de procesamiento en el servidor: el mismo principio detrás de este sitio, construido con Quarto. Estos son otros generadores y comparativas de referencia:
 
 -   Mkdocs. Project documentation with Markdown. [*Link*](https://www.mkdocs.org/)*.*
     -   Materials for Mkdocs. [*Link*](https://squidfunk.github.io/mkdocs-material/)*.*
@@ -142,7 +157,9 @@ Markdown es un lenguaje de marcado ligero que permite añadir elementos de forma
 {{< video "https://youtu.be/YGzBF-2wAWU" >}} SciPy Proceedings 2025. MyST Markdown and Curvenote
 :::
 
-# Diagramas
+## Diagramas
+
+Los diagramas son parte de la documentación reproducible cuando, en lugar de insertarse como una imagen estática, se generan a partir de texto plano versionable junto con el resto del documento —el mismo principio que sostiene el código y los datos reproducibles. Mermaid y Graphviz son las dos herramientas de referencia para esto:
 
 -   Mermaid. [*Link*](https://mermaid.js.org/)
 -   Graphviz. [*Link*](https://graphviz.org/)

@@ -2598,73 +2598,62 @@
     "href": "cyt/cienciareproduc.html",
     "title": "Ciencia reproducible",
     "section": "",
-    "text": "Definición de ciencia abierta",
+    "text": "La ciencia reproducible es la práctica de documentar y compartir los datos, el código y los métodos de una investigación de forma que otra persona —o el mismo investigador, meses después— pueda repetir el análisis y llegar a los mismos resultados. No es lo mismo que la replicabilidad, que exige repetir todo el estudio (incluida la recolección de datos) y obtener conclusiones equivalentes: la reproducibilidad se refiere estrictamente a poder reconstruir el análisis a partir de los mismos datos. La distinción importa porque, según una encuesta de Nature a más de 1.500 investigadores, más del 70 % ha intentado sin éxito reproducir el experimento de otro científico, y más de la mitad ha fallado en reproducir sus propios experimentos —una de las referencias más citadas sobre la llamada “crisis de reproducibilidad” en ciencia. Link\nLa ciencia abierta es el marco más amplio en el que se inscribe la reproducibilidad: no solo busca que un análisis pueda repetirse, sino que todo el ciclo de la investigación —datos, métodos, software, publicaciones— sea accesible para quien quiera revisarlo, reutilizarlo o construir sobre él. La Recomendación sobre Ciencia Abierta de la UNESCO (2021), el primer instrumento normativo internacional sobre la materia, adoptado por unanimidad por 193 países, ofrece la definición y los principios compartidos de referencia. Link El Consejo Internacional de Ciencia (ISC) —la organización que agrupa a las principales academias y uniones científicas del mundo— respaldó esa recomendación y sostiene su propia declaración sobre ciencia abierta como parte de su visión de la ciencia como bien público global. Link\nEn la práctica, que unos datos sean “abiertos” no basta: también deben ser utilizables. Los principios FAIR (Findable, Accessible, Interoperable, Reusable), formulados por Wilkinson y colegas en Scientific Data (2016), son el estándar de referencia para que los datos científicos —abiertos o no— puedan encontrarse, accederse, integrarse y reutilizarse de forma sistemática. Link",
     "crumbs": [
       "Ciencia y tecnología",
       "Ciencia reproducible"
     ]
   },
   {
-    "objectID": "cyt/cienciareproduc.html#quarto",
-    "href": "cyt/cienciareproduc.html#quarto",
+    "objectID": "cyt/cienciareproduc.html#qué-es-la-ciencia-reproducible",
+    "href": "cyt/cienciareproduc.html#qué-es-la-ciencia-reproducible",
     "title": "Ciencia reproducible",
-    "section": "Quarto",
-    "text": "Quarto\n\nWhat is Quarto. Link.\nQuarto Guide. Link.***\nSlides. Reproducible Publications w/ Python and Quarto. Tom Mock. Link\nResources nrennie. Link.\nPosit workshops. Link.\nIsabella Velasquez. Link\nQuartificate is to transform Google Docs into Quarto books. Link.\nAwsome Quarto. The most up to date curated list of Quarto® docs, talks, tools, examples & articles the internet has to offer. Link\nReproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link\n\n\n\n\n Reproducible Manuscripts with Quarto - posit::conf(2023)\n\n\nGet started with Quarto | Mine Çetinkaya-Rundel\n\n\n\n\n Publishing a Quarto website through GitHub Pages (updated)\n\n\nBioC 2022 - Hello, Quarto!\n\n\n\n\nWelcome to Quarto Workshop! | Led by Tom Mock, RStudio\n\n\n Introducing Positron, a new data science IDE - posit conf 2024\n\n\n\n\n Quarto blogs\n\n\n Quarto books\n\n\n\n\n Citaciones",
+    "section": "",
+    "text": "La ciencia reproducible es la práctica de documentar y compartir los datos, el código y los métodos de una investigación de forma que otra persona —o el mismo investigador, meses después— pueda repetir el análisis y llegar a los mismos resultados. No es lo mismo que la replicabilidad, que exige repetir todo el estudio (incluida la recolección de datos) y obtener conclusiones equivalentes: la reproducibilidad se refiere estrictamente a poder reconstruir el análisis a partir de los mismos datos. La distinción importa porque, según una encuesta de Nature a más de 1.500 investigadores, más del 70 % ha intentado sin éxito reproducir el experimento de otro científico, y más de la mitad ha fallado en reproducir sus propios experimentos —una de las referencias más citadas sobre la llamada “crisis de reproducibilidad” en ciencia. Link\nLa ciencia abierta es el marco más amplio en el que se inscribe la reproducibilidad: no solo busca que un análisis pueda repetirse, sino que todo el ciclo de la investigación —datos, métodos, software, publicaciones— sea accesible para quien quiera revisarlo, reutilizarlo o construir sobre él. La Recomendación sobre Ciencia Abierta de la UNESCO (2021), el primer instrumento normativo internacional sobre la materia, adoptado por unanimidad por 193 países, ofrece la definición y los principios compartidos de referencia. Link El Consejo Internacional de Ciencia (ISC) —la organización que agrupa a las principales academias y uniones científicas del mundo— respaldó esa recomendación y sostiene su propia declaración sobre ciencia abierta como parte de su visión de la ciencia como bien público global. Link\nEn la práctica, que unos datos sean “abiertos” no basta: también deben ser utilizables. Los principios FAIR (Findable, Accessible, Interoperable, Reusable), formulados por Wilkinson y colegas en Scientific Data (2016), son el estándar de referencia para que los datos científicos —abiertos o no— puedan encontrarse, accederse, integrarse y reutilizarse de forma sistemática. Link",
     "crumbs": [
       "Ciencia y tecnología",
       "Ciencia reproducible"
     ]
   },
   {
-    "objectID": "cyt/cienciareproduc.html#typst",
-    "href": "cyt/cienciareproduc.html#typst",
+    "objectID": "cyt/cienciareproduc.html#recursos-para-ciencia-abierta",
+    "href": "cyt/cienciareproduc.html#recursos-para-ciencia-abierta",
     "title": "Ciencia reproducible",
-    "section": "Typst",
-    "text": "Typst\n\nTypst web page. Link.\nTypst with quarto. Link\n\n\n\n\n What is Typst? | A new markup-based typesetting system\n\n\n Typst: La Herramienta Definitiva para Documentos Modernos\n\n\n\n\n How to Make High Quality PDFs with Quarto and Typst\n\n\n Typst: A New Markup-Based Typesetting System | Posit Conf 2024",
+    "section": "Recursos para ciencia abierta",
+    "text": "Recursos para ciencia abierta\nVarias instituciones ofrecen formación abierta y gratuita en ciencia abierta y gestión de datos de investigación:\n\nLa Universidad de Arizona pone a disposición las grabaciones y diapositivas de sus talleres de gestión de datos. Link.\nMANTRA, de la Universidad de Edimburgo, es un curso en línea gratuito para quienes gestionan datos digitales como parte de un proyecto de investigación. Link.\nNASA Open Science 101 (TOPS), el curso introductorio de la NASA sobre ciencia abierta, disponible como curso (Link) y como módulo interactivo (Link), con su repositorio abierto en GitHub (GIT) y un boletín de noticias con sus actualizaciones.\n\nA escala global, dos infraestructuras complementan esta formación. El Center for Open Science (COS) y su plataforma OSF (Open Science Framework) permiten preregistrar estudios, alojar datos y materiales, y publicar preprints de forma gratuita. Link · Link La Research Data Alliance (RDA) —el foro internacional impulsado originalmente por la Comisión Europea, la NSF de Estados Unidos y el gobierno australiano— es la red donde más de 11.000 profesionales de datos de investigación de 145 países desarrollan estándares comunes de interoperabilidad, incluida la adopción práctica de los principios FAIR. Link",
     "crumbs": [
       "Ciencia y tecnología",
       "Ciencia reproducible"
     ]
   },
   {
-    "objectID": "cyt/cienciareproduc.html#myst-and-curvenote",
-    "href": "cyt/cienciareproduc.html#myst-and-curvenote",
+    "objectID": "cyt/cienciareproduc.html#cómo-crear-una-propuesta-para-el-manejo-de-datos",
+    "href": "cyt/cienciareproduc.html#cómo-crear-una-propuesta-para-el-manejo-de-datos",
     "title": "Ciencia reproducible",
-    "section": "Myst and Curvenote",
-    "text": "Myst and Curvenote\n\nCurvenote. Link\nAGU Notebooks. La Palma Seismicity 2021. Link",
+    "section": "Cómo crear una propuesta para el manejo de datos",
+    "text": "Cómo crear una propuesta para el manejo de datos\nUn plan de gestión de datos (DMP) es un documento que describe cómo tratará sus datos durante un proyecto y qué sucede con los datos una vez finalizado el proyecto. Dichos planes generalmente cubren todo o parte del ciclo de vida de los datos, desde el descubrimiento, la recopilación y la organización de datos, hasta el aseguramiento de la calidad / control de calidad, la documentación y el uso de la información (Michener, 2015).\n\nTen Simple Rules for Creating a Good Data Management Plan. PloS. 2015. Link.\nIPBES Data Management Tutorials. Link.\nDMPTool, la herramienta gratuita de la California Digital Library para redactar un DMP a partir de plantillas específicas por financiador —incluidas las de NSF y NIH—, con orientación pregunta por pregunta y opción de agregar colaboradores al plan. Link.",
     "crumbs": [
       "Ciencia y tecnología",
       "Ciencia reproducible"
     ]
   },
   {
-    "objectID": "cyt/cienciareproduc.html#shiny",
-    "href": "cyt/cienciareproduc.html#shiny",
+    "objectID": "cyt/cienciareproduc.html#publicación-reproducible",
+    "href": "cyt/cienciareproduc.html#publicación-reproducible",
     "title": "Ciencia reproducible",
-    "section": "Shiny",
-    "text": "Shiny\n\nShiny assistant. Link.\n\nInfo Link\n\n\n\n\n\n\n\n\n\n\n\n\n\nShiny",
+    "section": "Publicación reproducible",
+    "text": "Publicación reproducible\nLa publicación reproducible extiende la misma lógica de la ciencia abierta al artículo final: en lugar de un PDF estático, el manuscrito, sus figuras y sus resultados se generan directamente a partir del código y los datos, de modo que todo el proceso de análisis y de escritura puede auditarse y volver a ejecutarse. Herramientas como Quarto, Typst, MyST y Shiny sostienen hoy esa práctica, y revistas y plataformas como la Journal of Open Source Software (JOSS) —que exige artefactos de software revisados por pares junto con cada publicación— muestran cómo esa lógica ya opera en la publicación científica real. Link\n\nQuarto\nQuarto es el sistema de publicación científica reproducible de Posit (antes RStudio): combina texto, código —en R, Python, Julia u Observable JS— y resultados en un mismo documento fuente, exportable a HTML, PDF, sitios web, libros o presentaciones (este mismo sitio está construido con Quarto). Los siguientes recursos cubren desde la introducción al sistema hasta flujos de publicación completos:\n\nWhat is Quarto. Link.\nQuarto Guide. Link.***\nSlides. Reproducible Publications w/ Python and Quarto. Tom Mock. Link\nResources nrennie. Link.\nPosit workshops. Link.\nIsabella Velasquez. Link\nQuartificate is to transform Google Docs into Quarto books. Link.\nAwsome Quarto. The most up to date curated list of Quarto® docs, talks, tools, examples & articles the internet has to offer. Link\nReproducible, dynamic, and elegant books with Quarto. Mine Centinkaya. Link\n\n\n\n\n Reproducible Manuscripts with Quarto - posit::conf(2023)\n\n\nGet started with Quarto | Mine Çetinkaya-Rundel\n\n\n\n\n Publishing a Quarto website through GitHub Pages (updated)\n\n\nBioC 2022 - Hello, Quarto!\n\n\n\n\nWelcome to Quarto Workshop! | Led by Tom Mock, RStudio\n\n\n Introducing Positron, a new data science IDE - posit conf 2024\n\n\n\n\n Quarto blogs\n\n\n Quarto books\n\n\n\n\n Citaciones\n\n\n\n\n\nTypst\nTypst es un sistema de composición tipográfica (typesetting) más reciente, pensado como alternativa más rápida y simple a LaTeX, y ya integrado como motor de salida en PDF dentro de Quarto:\n\nTypst web page. Link.\nTypst with quarto. Link\n\n\n\n\n What is Typst? | A new markup-based typesetting system\n\n\n Typst: La Herramienta Definitiva para Documentos Modernos\n\n\n\n\n How to Make High Quality PDFs with Quarto and Typst\n\n\n Typst: A New Markup-Based Typesetting System | Posit Conf 2024\n\n\n\n\n\n\n\n\n\n\nMyst and Curvenote\nMyST (Markedly Structured Text) es el motor de publicación reproducible que impulsa, entre otros, el programa de cuadernos reproducibles Notebooks Now de la AGU (American Geophysical Union); Curvenote es la plataforma construida sobre ese mismo ecosistema para publicar artículos y cuadernos ejecutables:\n\nCurvenote. Link\nAGU Notebooks. La Palma Seismicity 2021. Link\n\n\n\n\n\n\n\n\n\n\n\n\n\nShiny\nShiny permite construir aplicaciones web interactivas directamente desde R o Python, útil para exponer un análisis reproducible como una herramienta que otros pueden explorar sin necesidad de ejecutar el código:\n\nShiny assistant. Link.\n\nInfo Link\n\n\n\n\n\n\n\n\n\n\n\n\n\nShiny\n\n\n\n\n\nMarkdown\nRevise también la sección Markdown de Ciencia de datos.\nMarkdown es un lenguaje de marcado ligero que permite añadir elementos de formato a documentos de texto sin formato. Creado por John Gruber en 2004, Markdown es actualmente uno de los lenguajes de marcado más populares del mundo. Markdown se puede usar para todo. Se usa para crear sitios web, documentos, notas, libros, presentaciones, correos electrónicos y documentación técnica. Markdown es independiente de la plataforma.\n\n\nMarkdown Guide Org. Link ***\nThe Markdown Guide. Link.\nMarkdown Cheatsheets. Link\nRich content editors. Link\n\nDillinger. Link.\nProsemirror. Link.\nStackEdit. Link\n\n\n\n\nStatic site generators\nUn generador de sitios estáticos construye páginas HTML a partir de archivos de texto plano —a menudo Markdown—, sin depender de una base de datos ni de procesamiento en el servidor: el mismo principio detrás de este sitio, construido con Quarto. Estos son otros generadores y comparativas de referencia:\n\nMkdocs. Project documentation with Markdown. Link.\n\nMaterials for Mkdocs. Link.\n\nSphinx. Link.\nJekyll. Link\nFast Api. Link.\nMyST. Link.\nQuarto. Link\nBooks\n\nQuire. Link\n\nAwesome Static Web Site Generators. Link.\nIntroduction to Static Site Generators. Link.\nHow to choose the right static site generator. Link.\nThe top five static site generators for 2025. Link.\n\n\n\n\n How To Create STUNNING Code Documentation With MkDocs Material Theme\n\n\n Material for MkDocs: Full Tutorial To Build And Deploy Your Docs Portal\n\n\n\n\n SciPy Proceedings 2025. MyST Markdown and Curvenote",
     "crumbs": [
       "Ciencia y tecnología",
       "Ciencia reproducible"
     ]
   },
   {
-    "objectID": "cyt/cienciareproduc.html#markdown",
-    "href": "cyt/cienciareproduc.html#markdown",
+    "objectID": "cyt/cienciareproduc.html#diagramas",
+    "href": "cyt/cienciareproduc.html#diagramas",
     "title": "Ciencia reproducible",
-    "section": "Markdown",
-    "text": "Markdown\nRevise la sección: datascience/markdown\nMarkdown es un lenguaje de marcado ligero que permite añadir elementos de formato a documentos de texto sin formato. Creado por John Gruber en 2004, Markdown es actualmente uno de los lenguajes de marcado más populares del mundo. Markdown se puede usar para todo. Se usa para crear sitios web, documentos, notas, libros, presentaciones, correos electrónicos y documentación técnica. Markdown es independiente de la plataforma.\n\n\nMarkdown Guide Org. Link ***\nThe Markdown Guide. Link.\nMarkdown Cheatsheets. Link\nRich content editors. Link\n\nDillinger. Link.\nProsemirror. Link.\nStackEdit. Link",
-    "crumbs": [
-      "Ciencia y tecnología",
-      "Ciencia reproducible"
-    ]
-  },
-  {
-    "objectID": "cyt/cienciareproduc.html#static-site-generators",
-    "href": "cyt/cienciareproduc.html#static-site-generators",
-    "title": "Ciencia reproducible",
-    "section": "Static site generators",
-    "text": "Static site generators\n\nMkdocs. Project documentation with Markdown. Link.\n\nMaterials for Mkdocs. Link.\n\nSphinx. Link.\nJekyll. Link\nFast Api. Link.\nMyST. Link.\nQuarto. Link\nBooks\n\nQuire. Link\n\nAwesome Static Web Site Generators. Link.\nIntroduction to Static Site Generators. Link.\nHow to choose the right static site generator. Link.\nThe top five static site generators for 2025. Link.\n\n\n\n\n How To Create STUNNING Code Documentation With MkDocs Material Theme\n\n\n Material for MkDocs: Full Tutorial To Build And Deploy Your Docs Portal\n\n\n\n\n SciPy Proceedings 2025. MyST Markdown and Curvenote",
+    "section": "Diagramas",
+    "text": "Diagramas\nLos diagramas son parte de la documentación reproducible cuando, en lugar de insertarse como una imagen estática, se generan a partir de texto plano versionable junto con el resto del documento —el mismo principio que sostiene el código y los datos reproducibles. Mermaid y Graphviz son las dos herramientas de referencia para esto:\n\nMermaid. Link\nGraphviz. Link\n\n\n\n\n Mermaid\n\n\n Graphviz\n\n\n\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]",
     "crumbs": [
       "Ciencia y tecnología",
       "Ciencia reproducible"
@@ -2950,7 +2939,7 @@
     "href": "cyt/index.html",
     "title": "Ciencia y tecnología",
     "section": "",
-    "text": "Esta sección reúne recursos sobre la práctica de la ciencia: la escritura y publicación académica, la ciencia reproducible y abierta, la ciencia transdisciplinar y la interfaz entre ciencia, política y sociedad.\n\n\n\nEscritura y publicación académica\n\n\nEl proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.\n\n\n\n\nCiencia reproducible\n\n\nQué es la ciencia reproducible y la ciencia abierta, y por qué son relevantes para la calidad y la confiabilidad de la investigación.\n\n\n\n\nCiencia transdiciplinar\n\n\nQué es la ciencia transdisciplinar, cómo se construyen proyectos TD paso a paso, sus conceptos clave y ejemplos de convocatorias, y su relación con la ciencia convergente y la ciencia de la implementación.\n\n\n\n\nInterfaz ciencia-política-sociedad\n\n\nQué es la interfaz ciencia-política-sociedad: los espacios, procesos y organizaciones donde el conocimiento científico, la decisión pública y las demandas sociales se traducen y negocian mutuamente.",
+    "text": "Esta sección reúne recursos sobre la práctica de la ciencia: la escritura y publicación académica, la ciencia reproducible y abierta, la ciencia transdisciplinar y la interfaz entre ciencia, política y sociedad.\n\n\n\nEscritura y publicación académica\n\n\nEl proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.\n\n\n\n\nCiencia reproducible\n\n\nQué es la ciencia reproducible y la ciencia abierta (UNESCO, FAIR), cómo construir un plan de manejo de datos, y las herramientas de publicación reproducible (Quarto, Typst, MyST, Shiny).\n\n\n\n\nCiencia transdiciplinar\n\n\nQué es la ciencia transdisciplinar, cómo se construyen proyectos TD paso a paso, sus conceptos clave y ejemplos de convocatorias, y su relación con la ciencia convergente y la ciencia de la implementación.\n\n\n\n\nInterfaz ciencia-política-sociedad\n\n\nQué es la interfaz ciencia-política-sociedad: los espacios, procesos y organizaciones donde el conocimiento científico, la decisión pública y las demandas sociales se traducen y negocian mutuamente.",
     "crumbs": [
       "Ciencia y tecnología"
     ]
@@ -2960,7 +2949,7 @@
     "href": "cyt/index.html#ciencia-y-tecnología",
     "title": "Ciencia y tecnología",
     "section": "",
-    "text": "Esta sección reúne recursos sobre la práctica de la ciencia: la escritura y publicación académica, la ciencia reproducible y abierta, la ciencia transdisciplinar y la interfaz entre ciencia, política y sociedad.\n\n\n\nEscritura y publicación académica\n\n\nEl proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.\n\n\n\n\nCiencia reproducible\n\n\nQué es la ciencia reproducible y la ciencia abierta, y por qué son relevantes para la calidad y la confiabilidad de la investigación.\n\n\n\n\nCiencia transdiciplinar\n\n\nQué es la ciencia transdisciplinar, cómo se construyen proyectos TD paso a paso, sus conceptos clave y ejemplos de convocatorias, y su relación con la ciencia convergente y la ciencia de la implementación.\n\n\n\n\nInterfaz ciencia-política-sociedad\n\n\nQué es la interfaz ciencia-política-sociedad: los espacios, procesos y organizaciones donde el conocimiento científico, la decisión pública y las demandas sociales se traducen y negocian mutuamente.",
+    "text": "Esta sección reúne recursos sobre la práctica de la ciencia: la escritura y publicación académica, la ciencia reproducible y abierta, la ciencia transdisciplinar y la interfaz entre ciencia, política y sociedad.\n\n\n\nEscritura y publicación académica\n\n\nEl proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.\n\n\n\n\nCiencia reproducible\n\n\nQué es la ciencia reproducible y la ciencia abierta (UNESCO, FAIR), cómo construir un plan de manejo de datos, y las herramientas de publicación reproducible (Quarto, Typst, MyST, Shiny).\n\n\n\n\nCiencia transdiciplinar\n\n\nQué es la ciencia transdisciplinar, cómo se construyen proyectos TD paso a paso, sus conceptos clave y ejemplos de convocatorias, y su relación con la ciencia convergente y la ciencia de la implementación.\n\n\n\n\nInterfaz ciencia-política-sociedad\n\n\nQué es la interfaz ciencia-política-sociedad: los espacios, procesos y organizaciones donde el conocimiento científico, la decisión pública y las demandas sociales se traducen y negocian mutuamente.",
     "crumbs": [
       "Ciencia y tecnología"
     ]
