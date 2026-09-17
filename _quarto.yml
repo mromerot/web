@@ -166,14 +166,18 @@ website:
                 href: cyt/escrituraypublicacionacademica/parrafos.qmd
           - text: "Ciencia reproducible"
             href: cyt/cienciareproduc.qmd
-          - text: "Docencia y educación"
-            href: cyt/docenciaeducacion.qmd
           - text: "Ciencia transdiciplinar"
             href: cyt/transdisciplina.qmd
           - text: "Interfaz ciencia-política-sociedad"
             href: cyt/interfaz-cps.qmd
+      # aqui viene la seccion de educacion
+      - section: "Educación"
+        href: educacion/index.qmd
+        contents:
+          - text: "Docencia y educación"
+            href: educacion/docenciaeducacion.qmd
           - text: "Objetos virtuales de aprendizaje (OVA)"
-            href: cyt/ova/index.qmd
+            href: educacion/ova/index.qmd
       # aqui viene la seccion de ecologia y conservacion
       - text: "Ecología y conservación marina"
         href: ecolyconserv/ecologiayconservacion.qmd

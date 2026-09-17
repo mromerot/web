@@ -1,0 +1,31 @@
+---
+title: "Educación"
+format: html
+editor: visual
+---
+
+## Educación
+
+Esta sección reúne recursos sobre enseñanza y aprendizaje: estrategias de docencia universitaria, aprendizaje activo y basado en problemas, y el diseño de objetos virtuales de aprendizaje (OVA) como recurso digital reutilizable.
+
+:::::: mrw-cards-grid
+::: mrw-card
+::: mrw-card-header
+[Docencia y educación](docenciaeducacion.qmd)
+:::
+
+::: mrw-card-body
+Libros, revistas y estrategias de enseñanza —aprendizaje activo, aprendizaje basado en problemas, técnicas de aprendizaje y metacognición— además de aplicaciones para el aula y recursos sobre educación STEM y ciencia ciudadana.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Objetos virtuales de aprendizaje (OVA)](ova/index.qmd)
+:::
+
+::: mrw-card-body
+Qué es un Objeto Virtual de Aprendizaje, sus estándares de metadatos (IEEE LOM, SCORM), principales tipos por función pedagógica y formato, y repositorios de referencia como MIT OpenCourseWare o MERLOT.
+:::
+:::
+::::::
