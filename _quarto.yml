@@ -138,6 +138,8 @@ website:
             href: gestiondeproyectos/estrategia.qmd
           - text: "Metodologías de gestión de proyectos"
             href: gestiondeproyectos/metodologias-pm.qmd
+          - text: "Competencias clave en la gestión de proyectos"
+            href: gestiondeproyectos/skills-proyectos.qmd
           - text: "Impacto"
             href: gestiondeproyectos/impacto.qmd
           - text: "DOFA"

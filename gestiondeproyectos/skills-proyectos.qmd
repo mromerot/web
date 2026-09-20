@@ -1,0 +1,69 @@
+---
+title: "Competencias clave en la gestión de proyectos"
+format: html
+editor: visual
+---
+
+## Introducción
+
+Gestionar un proyecto de desarrollo, cooperación o CTeI exige un conjunto de competencias que van más allá de la planeación clásica: gestionar resultados, movilizar recursos, reportar a donantes, incidir en política pública o construir capacidades en otros son funciones que aparecen sistemáticamente en los términos de referencia de estos cargos. Esta página reúne, en orden alfabético, quince de esas competencias con definiciones de alto nivel —del PMI, la OCDE, el PNUD, *Harvard Business Review* y otros organismos de referencia—, sus fases o etapas típicas, cómo se mide su calidad o cumplimiento, y cómo suelen clasificarse.
+
+## Aseguramiento de calidad (Quality Assurance)
+
+El PMBOK del PMI define el aseguramiento de calidad como el proceso de auditar los requisitos de calidad y los resultados del control de calidad para garantizar que se usan estándares y definiciones operativas apropiados. Sus etapas siguen el ciclo de gestión de la calidad: planificar la calidad (definir estándares e indicadores), gestionar la calidad (auditorías y mejora de procesos) y controlar la calidad (inspección de entregables). Se mide mediante auditorías de calidad, análisis de procesos y el costo de la calidad (prevención y evaluación frente a fallas internas y externas). Se clasifica, siguiendo al propio PMI, en aseguramiento (preventivo, orientado al proceso) y control (correctivo, orientado al producto).
+
+## Colaboración en incidencia (Advocacy Collaboration)
+
+La colaboración en incidencia es el trabajo conjunto entre organizaciones para influir en una decisión o política pública compartiendo una agenda común, un concepto que la teoría de política pública formaliza en el *Advocacy Coalition Framework* de Paul Sabatier. Sus etapas típicas son: identificar una agenda compartida, construir la coalición, definir una estrategia y mensajes conjuntos, ejecutar la acción coordinada (campañas, cabildeo, alianzas mediáticas) y monitorear el cambio de política logrado. La calidad se mide por la coherencia del mensaje entre aliados, la cohesión de la coalición y, en última instancia, el cambio de política alcanzado. Se clasifica en incidencia "de adentro" (diálogo directo con tomadores de decisión) frente a "de afuera" (presión pública y movilización).
+
+## Contenido estratégico (Strategic Content)
+
+El *Content Marketing Institute* define el contenido estratégico como la producción y distribución de contenido valioso y consistente, alineado con los objetivos institucionales, para informar o persuadir a una audiencia definida. Sus etapas son: definir la estrategia y los mensajes clave, planear el calendario editorial, producir el contenido, distribuirlo por los canales adecuados y evaluar su desempeño. La calidad se mide por la coherencia con la estrategia institucional (adherencia al manual de marca y mensajes clave) y por métricas de alcance y engagement de la audiencia. Se clasifica por audiencia (interna o externa), por formato (informes, notas de política, multimedia) o por etapa del embudo de comunicación (conocimiento, interés, acción).
+
+## Cumplimiento normativo (Compliance)
+
+La norma ISO 37301 define el cumplimiento como la adhesión sistemática a las obligaciones legales, contractuales y normativas aplicables a una organización. Su ciclo de gestión sigue el modelo PDCA: identificar las obligaciones aplicables, evaluar el riesgo de incumplimiento, implementar controles, monitorear y auditar, y aplicar acciones correctivas. La calidad del cumplimiento se mide con hallazgos de auditoría, la tasa de incidentes de incumplimiento y el tiempo de resolución de estos. Se clasifica en cumplimiento legal o regulatorio, cumplimiento contractual o de donante (reglas de adquisiciones, elegibilidad de gastos) y cumplimiento de políticas internas o éticas.
+
+## Desarrollo de propuestas (Proposal Development)
+
+La *Association of Proposal Management Professionals* (APMP) define el desarrollo de propuestas como el ciclo de vida completo que convierte una oportunidad de financiación en una propuesta presentada. Sus fases son: desarrollo de negocio previo a la convocatoria, análisis de los términos de referencia, planeación y asignación de responsables, redacción, revisiones por color (rosa, roja y dorada, según el estándar de la APMP) y producción final. La calidad se mide con la matriz de cumplimiento frente a los requisitos del donante y, a mediano plazo, con la tasa de éxito (*win rate*). Se clasifica en propuestas solicitadas frente a no solicitadas, y en notas conceptuales frente a propuestas completas.
+
+## Fortalecimiento de capacidades (Capacity Building)
+
+El PNUD define el fortalecimiento de capacidades como el proceso mediante el cual individuos, organizaciones y sociedades obtienen, fortalecen y mantienen las capacidades necesarias para definir y alcanzar sus propios objetivos de desarrollo en el tiempo. El PNUD distingue tres niveles: individual, organizacional y del entorno habilitante (marco normativo e institucional). Las etapas típicas son: diagnóstico de capacidades, diseño de la estrategia, implementación (formación, mentoría, fortalecimiento de sistemas) y seguimiento del cambio. La calidad se mide con herramientas de línea base y seguimiento como el *Organizational Capacity Assessment Tool* (OCAT), usado ampliamente por USAID, que compara el puntaje de capacidad antes y después de la intervención.
+
+## Gestión basada en resultados (RBM)
+
+El glosario de evaluación de la OCDE-CAD define la gestión basada en resultados como una estrategia de gestión centrada en el desempeño y en el logro de productos, efectos e impactos. Sus etapas son: construir la cadena de resultados o teoría del cambio, planear indicadores y metas, implementar con monitoreo continuo, evaluar y usar el aprendizaje para ajustar la estrategia. Se clasifica siguiendo la cadena de resultados: insumos, actividades, productos, efectos e impacto. La calidad se mide con la solidez de los indicadores (criterio SMART) y la verificación independiente de los resultados reportados frente al marco de resultados.
+
+## Gestión de cronogramas (Timeline Management)
+
+El PMBOK del PMI agrupa esta competencia en el área de gestión del cronograma, con seis procesos: planificar la gestión del cronograma, definir y secuenciar actividades, estimar su duración, desarrollar el cronograma y controlarlo. La calidad y el cumplimiento se miden con el Índice de Desempeño del Cronograma (SPI) de la gestión del valor ganado, el análisis de ruta crítica y las gráficas de tendencia de hitos. Se clasifica según la técnica usada: método de la ruta crítica (CPM), cadena crítica, o planeación progresiva (*rolling wave*) propia de entornos ágiles, cada una adecuada a distintos niveles de incertidumbre del proyecto.
+
+## Gestión de relaciones (Relationship Management)
+
+El PMBOK del PMI la desarrolla como gestión de interesados (*stakeholders*), con cuatro procesos: identificar interesados, planificar su involucramiento, gestionarlo y monitorearlo. El PMI clasifica a los interesados en una matriz de poder e interés (gestionar de cerca, mantener satisfecho, mantener informado, monitorear) que determina el nivel de esfuerzo de relacionamiento. La calidad se mide con una matriz de evaluación del involucramiento que ubica a cada interesado entre desconocedor, resistente, neutral, partidario o líder del cambio, y con encuestas de satisfacción de los aliados clave del proyecto.
+
+## Inteligencia de alianzas públicas (Public Partnership Intelligence)
+
+Esta función aplica al sector público y a los donantes la disciplina de inteligencia competitiva que define la *Strategic and Competitive Intelligence Professionals* (SCIP): la recolección y el análisis sistemático de información sobre el entorno para anticipar oportunidades de alianza y financiación. Sigue el ciclo clásico de inteligencia: planeación y dirección, recolección de información, análisis, difusión a quien decide, y retroalimentación. La calidad se mide por la oportunidad y precisión de la información entregada, y por su efecto posterior en la tasa de éxito de las propuestas presentadas. Se clasifica en inteligencia estratégica (de mediano y largo plazo) y táctica (para una oportunidad específica).
+
+## Intercambio de conocimiento (Knowledge Sharing)
+
+El modelo SECI de Nonaka y Takeuchi describe el intercambio de conocimiento como la conversión entre conocimiento tácito y explícito mediante cuatro modos: socialización, exteriorización, combinación e interiorización. El *American Productivity and Quality Center* (APQC) lo organiza en un ciclo de gestión: crear o capturar, organizar, compartir y aplicar el conocimiento. Se clasifica en intercambio formal (repositorios, lecciones aprendidas documentadas) e informal (comunidades de práctica, mentoría). La calidad se mide con la tasa de reutilización del conocimiento almacenado y el nivel de actividad de las comunidades de práctica. Ver también [gestión del conocimiento](gestion-conocimiento.qmd) en esta misma sección.
+
+## Marco lógico (Logical Framework Approach)
+
+El manual de NORAD define el marco lógico como una herramienta analítica, de presentación y de gestión que ayuda a estructurar lógicamente los elementos clave de un proyecto. Su producto es una matriz 4x4 que cruza el resumen narrativo (fin, propósito, componentes, actividades) con indicadores objetivamente verificables, medios de verificación y supuestos. Se construye en etapas: análisis de problemas, análisis de objetivos, análisis de estrategias y construcción de la matriz. La calidad se mide comprobando su lógica vertical (la relación causal si-entonces entre niveles) y su lógica horizontal (coherencia entre indicador, medio de verificación y supuesto).
+
+## Movilización de recursos (Resource Mobilization Support)
+
+Naciones Unidas y el PNUD definen la movilización de recursos como el proceso de asegurar recursos financieros, humanos y materiales nuevos y adicionales, además de usar con más eficiencia los ya existentes. Sus etapas son: mapear el panorama de donantes y financiadores potenciales, definir una estrategia de posicionamiento, gestionar la relación y presentar propuestas, negociar el acuerdo, y administrar (dar cuenta de) los recursos obtenidos para sostener la relación. Se mide por el monto y la diversidad de recursos captados frente a la meta institucional. Se clasifica en movilización de recursos financieros frente a técnicos o en especie, y en financiación tradicional frente a mecanismos innovadores como la financiación mixta (*blended finance*).
+
+## Reporte a donantes (Donor Reporting)
+
+Las guías de gestión de donantes de agencias como USAID o la Unión Europea definen el reporte a donantes como la obligación contractual de dar cuenta narrativa y financiera del avance de un proyecto frente a su marco de resultados o marco lógico. Sus etapas son: definir el calendario de reportes según el convenio, recolectar datos frente a los indicadores, redactar el informe narrativo y financiero, revisarlo internamente, enviarlo y atender la retroalimentación del donante. La calidad se mide por la puntualidad, la coherencia entre lo narrado y lo ejecutado presupuestalmente, y los hallazgos de auditoría. Se clasifica en informes narrativos frente a financieros, e interinos frente a finales.
+
+## Trabajo colaborativo (Collaborative Work)
+
+El artículo de *Harvard Business Review* "Collaborative Overload" (Cross, Rebele y Grant, 2016) distingue tres tipos de colaboración en equipos: informacional (compartir conocimiento), social (construir relaciones) e individual o emocional (apoyo personal), y advierte que un exceso de colaboración mal distribuida agota a quienes más colaboran. En un proyecto, el trabajo colaborativo suele seguir las etapas clásicas de Tuckman: formación, conflicto, normalización, desempeño y cierre del equipo. Su calidad se mide con análisis de redes organizacionales (quién colabora con quién y con qué carga) y con evaluaciones de desempeño de equipo, más que con el desempeño individual aislado.
