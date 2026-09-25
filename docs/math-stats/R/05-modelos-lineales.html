@@ -1,0 +1,2557 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mauricio Romero">
+<meta name="dcterms.date" content="2026-09-25">
+<meta name="description" content="Modelos lineales, diagnósticos, predicción, ANOVA de una y dos vías, pruebas post hoc y medias marginales, con la teoría de la partición de la varianza.">
+
+<title>Regresión lineal y ANOVA – Inicio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c0268bb2cd26ea8ad2ddef1ccaf3bc3a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4910f9121cc0cf878839b371e47b8836.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
+</script>
+<!-- Google Site Verification -->
+<!-- Reemplaza XXXXX con tu código de verificación de Google Search Console -->
+<!-- <meta name="google-site-verification" content="XXXXX" /> -->
+
+<!-- Meta tags adicionales para SEO -->
+<meta name="author" content="Mauricio Romero Torres">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@mauricioromerot">
+
+<!-- Schema.org markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mauricio Romero Torres",
+  "jobTitle": "Gestor de ciencia y tecnología",
+  "url": "https://mromerot.github.io/web/",
+  "sameAs": [
+    "https://x.com/mauricioromerot",
+    "https://www.linkedin.com/in/mauricio-romero-torres-1b33b95/",
+    "https://scholar.google.com/citations?user=n484vskAAAAJ"
+  ]
+}
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Regresión lineal y ANOVA – Inicio">
+<meta property="og:description" content="Modelos lineales, diagnósticos, predicción, ANOVA de una y dos vías, pruebas post hoc y medias marginales, con la teoría de la partición de la varianza.">
+<meta property="og:image" content="https://mromerot.github.io/web/math-stats/R/05-modelos-lineales_files/figure-html/fig-lm-simple-1.png">
+<meta property="og:site_name" content="Inicio">
+<meta property="og:image:height" content="1020">
+<meta property="og:image:width" content="2100">
+<meta name="twitter:title" content="Regresión lineal y ANOVA – Inicio">
+<meta name="twitter:description" content="Modelos lineales, diagnósticos, predicción, ANOVA de una y dos vías, pruebas post hoc y medias marginales, con la teoría de la partición de la varianza.">
+<meta name="twitter:image" content="https://mromerot.github.io/web/math-stats/R/05-modelos-lineales_files/figure-html/fig-lm-simple-1.png">
+<meta name="twitter:image-height" content="1020">
+<meta name="twitter:image-width" content="2100">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../math-stats/math-stats.html">Matemáticas y estadística</a></li><li class="breadcrumb-item"><a href="../../math-stats/R/index.html">R: minicurso</a></li><li class="breadcrumb-item"><a href="../../math-stats/R/05-modelos-lineales.html">Módulo 5. Regresión lineal y ANOVA</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Inicio</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/gestiondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/conocimientodelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conocimiento del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/conocimiento-indicadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indicadores de riesgo nacionales y mundiales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/reducciondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reducción del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/manejodedesastres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manejo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/cienciaytecnologia/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/cienciaytecnologia/cienciaytecnologia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/cienciaytecnologia/estado-ciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estado de la ciencia 2024</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/cienciaytecnologia/hoja-de-ruta-ct.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hoja de ruta de ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/cienciaytecnologia/marco-sendai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Marco de Sendai</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/educacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Cursos, redes y recursos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/cursos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cursos en GRD</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/plataformas-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plataformas y redes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/repositorios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repositorios FAIR</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/sat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sistemas de alerta temprana</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/hidrol-meteorologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas hidrológicas y meteorológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/hidrol-meteorologicas/elnino.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">El Niño / La Niña</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/hidrol-meteorologicas/huracanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Huracanes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/hidrol-meteorologicas/inundaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/hidrol-meteorologicas/inundaciones-repentinas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones repentinas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/hidrol-meteorologicas/olasdecalor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Olas de calor</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/geologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas geológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/geologicas/falladeterreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Falla de terreno</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/geologicas/riesgosismico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgo sísmico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/geologicas/tsunami.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tsunami</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/geologicas/volcanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Volcanes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/ambientales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas ambientales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/ambientales/erosioncostera.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Erosión costera</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/ambientales/incendiosforestales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Incendios forestales</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/biologicos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas biológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/biologicos/covid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">COVID-19</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/tecnologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/tecnologicas/amenazastecnol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/sociales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas sociales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/sociales/migracion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Migración</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/extraterrestre/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/extraterrestre/amenazasextraterrestres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/amazonas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amazonas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/ciudades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciudades</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/glosario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Terminología</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../gcc/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gcc/gestion-cambio-climatico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../gestiondeproyectos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/gestionproyectosciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos de CTeI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/gestiontecnologiainnovacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de tecnología e innovación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/liderazgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Liderazgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/estrategia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estrategia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/metodologias-pm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metodologías de gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/skills-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Competencias clave en la gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/impacto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Impacto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/dofa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DOFA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/mapa-actores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa de actores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/gestion-conocimiento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del conocimiento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/Linea-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Línea base</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/pestel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PESTEL</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/swot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SWOT</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/conpes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CONPES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/riesgos-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgos en proyectos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../cyt/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../cyt/escrituraypublicacionacademica/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cyt/escrituraypublicacionacademica/escrituraypublicacionacademica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cyt/escrituraypublicacionacademica/parrafos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Párrafos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cyt/cienciareproduc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia reproducible</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cyt/transdisciplina.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia transdiciplinar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cyt/interfaz-cps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interfaz ciencia-política-sociedad</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../educacion/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../educacion/docenciaeducacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Docencia y educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../educacion/ova/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Objetos virtuales de aprendizaje (OVA)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ecolyconserv/ecologiayconservacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ecología y conservación marina</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../datascience/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/cienciadedatos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/myst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Myst</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/markdown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Markdown</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Github</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/google-colab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Google Colab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/jupyter-notebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter Notebook</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/graficas-python-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Graficas Python y R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/ia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inteligencia artificial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/vs-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/hugging-face.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hugging Face</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../datascience/mapas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/mapas/mapa_colombia_observable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (Observable / TopoJSON)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/mapas/mapa_colombia_pmtiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (PMTiles)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/mapas/mapa_colombia_tiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (Tiles)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/mapas/mapa_colombia_nri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índice de Riesgo (NRI)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/d3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/d3-experiment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Experimento con D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/claude.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/claude-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude Skills (Slides)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../math-stats/math-stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matemáticas y estadística</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../math-stats/R/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R: minicurso</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/00-fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 0. Fundamentos de R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/01-programacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 1. Programación: flujo, bucles y funciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/02-datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 2. Manejo de datos con tidyverse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/03-visualizacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 3. Visualización con ggplot2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/04-estadistica-basica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 4. Estadística básica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/05-modelos-lineales.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Módulo 5. Regresión lineal y ANOVA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/06-modelos-mixtos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 6. Modelos mixtos y medidas repetidas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/07-gam-series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 7. GAM y series de tiempo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/08-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 8. Análisis de redes con igraph</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/09-espacial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 9. Análisis espacial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/10-aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 10. Aplicaciones y proyectos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../vidalaboral/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../vidalaboral/cafe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Café</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../vidalaboral/vidalaboral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../vidalaboral/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul class="collapse">
+  <li><a href="#objetivos-de-aprendizaje" id="toc-objetivos-de-aprendizaje" class="nav-link active" data-scroll-target="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
+  <li><a href="#teoría-el-modelo-lineal" id="toc-teoría-el-modelo-lineal" class="nav-link" data-scroll-target="#teoría-el-modelo-lineal">1. Teoría: el modelo lineal</a></li>
+  <li><a href="#regresión-lineal-simple" id="toc-regresión-lineal-simple" class="nav-link" data-scroll-target="#regresión-lineal-simple">2. Regresión lineal simple</a></li>
+  <li><a href="#regresión-múltiple" id="toc-regresión-múltiple" class="nav-link" data-scroll-target="#regresión-múltiple">3. Regresión múltiple</a></li>
+  <li><a href="#teoría-el-anova-como-partición-de-la-varianza" id="toc-teoría-el-anova-como-partición-de-la-varianza" class="nav-link" data-scroll-target="#teoría-el-anova-como-partición-de-la-varianza">4. Teoría: el ANOVA como partición de la varianza</a></li>
+  <li><a href="#anova-de-una-vía" id="toc-anova-de-una-vía" class="nav-link" data-scroll-target="#anova-de-una-vía">5. ANOVA de una vía</a></li>
+  <li><a href="#anova-de-dos-vías-e-interacción" id="toc-anova-de-dos-vías-e-interacción" class="nav-link" data-scroll-target="#anova-de-dos-vías-e-interacción">6. ANOVA de dos vías e interacción</a></li>
+  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a></li>
+  <li><a href="#para-profundizar" id="toc-para-profundizar" class="nav-link" data-scroll-target="#para-profundizar">Para profundizar</a></li>
+  </ul>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../math-stats/math-stats.html">Matemáticas y estadística</a></li><li class="breadcrumb-item"><a href="../../math-stats/R/index.html">R: minicurso</a></li><li class="breadcrumb-item"><a href="../../math-stats/R/05-modelos-lineales.html">Módulo 5. Regresión lineal y ANOVA</a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Regresión lineal y ANOVA</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Minicurso de R · Módulo 5</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">regresión</div>
+    <div class="quarto-category">ANOVA</div>
+    <div class="quarto-category">modelos lineales</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Modelos lineales, diagnósticos, predicción, ANOVA de una y dos vías, pruebas post hoc y medias marginales, con la teoría de la partición de la varianza.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mauricio Romero </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 25, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Duración estimada:</strong> 4 horas · <strong>Nivel:</strong> intermedio · <strong>Prerrequisitos:</strong> Módulo 4 (pruebas de hipótesis y supuestos).</p>
+</div>
+</div>
+</div>
+<section id="objetivos-de-aprendizaje" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos-de-aprendizaje">Objetivos de aprendizaje</h2>
+<p>Al terminar este cuaderno podrás:</p>
+<ol type="1">
+<li>Ajustar e interpretar una <strong>regresión lineal</strong> simple y múltiple con <code>lm()</code>.</li>
+<li>Diagnosticar un modelo revisando sus <strong>supuestos</strong> con gráficos de residuos.</li>
+<li>Generar <strong>predicciones</strong> con intervalos de confianza y de predicción.</li>
+<li>Explicar el <strong>ANOVA</strong> como partición de la varianza y aplicar el de una y dos vías.</li>
+<li>Hacer comparaciones <strong>post hoc</strong> y calcular medias marginales con <code>emmeans</code>.</li>
+<li>Comparar modelos con AIC y pruebas F.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)        <span class="co"># Levene, VIF, ANOVA tipo II/III</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)    <span class="co"># medias marginales y comparaciones</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2026</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>pd <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span> <span class="fu">drop_na</span>(body_mass_g, flipper_length_mm, sex)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="teoría-el-modelo-lineal" class="level2">
+<h2 class="anchored" data-anchor-id="teoría-el-modelo-lineal">1. Teoría: el modelo lineal</h2>
+<p>Un <strong>modelo lineal</strong> explica una variable respuesta <span class="math inline">\(y\)</span> como una combinación lineal de predictores más un error:</p>
+<p><span class="math display">\[
+y_i = \beta_0 + \beta_1 x_{1i} + \dots + \beta_p x_{pi} + \varepsilon_i, \qquad \varepsilon_i \sim N(0, \sigma^2)
+\]</span></p>
+<p>Los coeficientes <span class="math inline">\(\beta\)</span> se estiman por <strong>mínimos cuadrados</strong>: se elige la recta que minimiza la suma de los cuadrados de los residuos (las distancias verticales entre los datos y la recta). Los supuestos, que hay que revisar, son:</p>
+<ol type="1">
+<li><strong>Linealidad</strong>: la relación entre predictores y <span class="math inline">\(y\)</span> es lineal.</li>
+<li><strong>Independencia</strong> de los errores.</li>
+<li><strong>Normalidad</strong> de los residuos.</li>
+<li><strong>Homocedasticidad</strong>: la varianza de los residuos es constante.</li>
+</ol>
+<p>(La normalidad se aplica a los <strong>residuos</strong>, no a la variable <span class="math inline">\(y\)</span>.)</p>
+</section>
+<section id="regresión-lineal-simple" class="level2">
+<h2 class="anchored" data-anchor-id="regresión-lineal-simple">2. Regresión lineal simple</h2>
+<p>¿Cuánto aumenta la masa de un pingüino por cada milímetro adicional de aleta?</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g <span class="sc">~</span> flipper_length_mm, <span class="at">data =</span> pd)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = body_mass_g ~ flipper_length_mm, data = pd)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1057.33  -259.79   -12.24   242.97  1293.89 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)       -5872.09     310.29  -18.93   &lt;2e-16 ***
+flipper_length_mm    50.15       1.54   32.56   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 393.3 on 331 degrees of freedom
+Multiple R-squared:  0.7621,    Adjusted R-squared:  0.7614 
+F-statistic:  1060 on 1 and 331 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>Cómo leer el resultado:</p>
+<ul>
+<li><strong>Intercepto</strong>: masa esperada cuando la aleta mide 0 mm (aquí no tiene sentido físico, solo ancla la recta).</li>
+<li><strong>Pendiente</strong> (<code>flipper_length_mm</code>): cada milímetro extra de aleta se asocia con un aumento medio de la masa de unos 50 g.</li>
+<li><strong><span class="math inline">\(R^2\)</span></strong>: fracción de la variabilidad de la masa explicada por la aleta.</li>
+<li><strong>Error estándar residual</strong>: desviación típica de los errores, en gramos.</li>
+</ul>
+<p><code>broom</code> devuelve estos resultados como tablas fáciles de manipular:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(m1, <span class="at">conf.int =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 7
+  term              estimate std.error statistic   p.value conf.low conf.high
+  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 (Intercept)        -5872.     310.       -18.9 1.18e- 54  -6482.    -5262. 
+2 flipper_length_mm     50.2      1.54      32.6 3.13e-105     47.1      53.2</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(m1) <span class="sc">|&gt;</span> <span class="fu">select</span>(r.squared, adj.r.squared, sigma, AIC, nobs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 5
+  r.squared adj.r.squared sigma   AIC  nobs
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;
+1     0.762         0.761  393. 4928.   333</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pd, <span class="fu">aes</span>(flipper_length_mm, body_mass_g)) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"grey30"</span>) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">colour =</span> <span class="st">"#e76f51"</span>, <span class="at">fill =</span> <span class="st">"#e76f51"</span>, <span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Largo de la aleta (mm)"</span>, <span class="at">y =</span> <span class="st">"Masa corporal (g)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-lm-simple" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lm-simple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="05-modelos-lineales_files/figure-html/fig-lm-simple-1.png" class="img-fluid figure-img" width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lm-simple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Regresión de la masa sobre el largo de la aleta. La banda gris es el intervalo de confianza de la recta.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="diagnóstico-de-los-supuestos" class="level3">
+<h3 class="anchored" data-anchor-id="diagnóstico-de-los-supuestos">Diagnóstico de los supuestos</h3>
+<p>Con <code>augment()</code> se obtienen los valores ajustados y los residuos para dibujar los gráficos de diagnóstico:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">augment</span>(m1)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(.fitted, .resid)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">linewidth =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Ajustados"</span>, <span class="at">y =</span> <span class="st">"Residuos"</span>, <span class="at">title =</span> <span class="st">"Residuos vs. ajustados"</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>g2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="at">sample =</span> .std.resid)) <span class="sc">+</span> <span class="fu">stat_qq</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> <span class="fu">stat_qq_line</span>(<span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Teóricos"</span>, <span class="at">y =</span> <span class="st">"Residuos estandarizados"</span>, <span class="at">title =</span> <span class="st">"Q-Q"</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>g3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(.fitted, <span class="fu">sqrt</span>(<span class="fu">abs</span>(.std.resid)))) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">linewidth =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Ajustados"</span>, <span class="at">y =</span> <span class="st">"√|residuos estand.|"</span>, <span class="at">title =</span> <span class="st">"Escala-ubicación"</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>g1 <span class="sc">|</span> g2 <span class="sc">|</span> g3</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-diagnostico" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diagnostico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="05-modelos-lineales_files/figure-html/fig-diagnostico-1.png" class="img-fluid figure-img" width="1500">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagnostico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Gráficos de diagnóstico. Izquierda: residuos contra valores ajustados (buscamos una nube sin patrón). Centro: Q-Q de los residuos (buscamos puntos sobre la recta). Derecha: escala-ubicación (buscamos una banda horizontal, señal de varianza constante).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Además de los gráficos, los puntos <strong>influyentes</strong> (que cambian mucho el ajuste si se quitan) se detectan con la <strong>distancia de Cook</strong>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">augment</span>(m1) <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fila =</span> <span class="fu">row_number</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(.cooksd, <span class="at">n =</span> <span class="dv">3</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(fila, body_mass_g, flipper_length_mm, .cooksd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+   fila body_mass_g flipper_length_mm .cooksd
+  &lt;int&gt;       &lt;int&gt;             &lt;int&gt;   &lt;dbl&gt;
+1    35        4650               184  0.0407
+2   164        6300               221  0.0357
+3    27        3900               178  0.0262</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Si un supuesto falla
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Curvatura</strong> en los residuos: agrega un término cuadrático (<code>poly(x, 2)</code>) o usa un GAM (Módulo 7).</li>
+<li><strong>Varianza creciente</strong> con el valor ajustado: transforma la respuesta (<code>log(y)</code>) o usa modelos que permitan varianzas distintas.</li>
+<li><strong>Residuos no normales</strong> con muestras grandes: el modelo es robusto; con muestras pequeñas, transforma o usa bootstrap.</li>
+<li><strong>Dependencia</strong> entre observaciones (mismos individuos, sitios repetidos): usa modelos mixtos (Módulo 6).</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="predicción" class="level3">
+<h3 class="anchored" data-anchor-id="predicción">Predicción</h3>
+<p>Hay dos intervalos distintos: el de <strong>confianza</strong> (incertidumbre sobre la <em>media</em> de <span class="math inline">\(y\)</span> para un valor de <span class="math inline">\(x\)</span>) y el de <strong>predicción</strong> (incertidumbre sobre una <em>observación individual</em>, siempre más ancho).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>nuevo <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">flipper_length_mm =</span> <span class="fu">seq</span>(<span class="dv">172</span>, <span class="dv">231</span>, <span class="at">length.out =</span> <span class="dv">100</span>))</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(nuevo,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">as_tibble</span>(<span class="fu">predict</span>(m1, nuevo, <span class="at">interval =</span> <span class="st">"confidence"</span>)) <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">ic_inf =</span> lwr, <span class="at">ic_sup =</span> upr),</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">as_tibble</span>(<span class="fu">predict</span>(m1, nuevo, <span class="at">interval =</span> <span class="st">"prediction"</span>)) <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="at">ip_inf =</span> lwr, <span class="at">ip_sup =</span> upr))</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pred, <span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> ip_inf, <span class="at">ymax =</span> ip_sup), <span class="at">fill =</span> <span class="st">"#264653"</span>, <span class="at">alpha =</span> <span class="fl">0.15</span>) <span class="sc">+</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> ic_inf, <span class="at">ymax =</span> ic_sup), <span class="at">fill =</span> <span class="st">"#264653"</span>, <span class="at">alpha =</span> <span class="fl">0.35</span>) <span class="sc">+</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> fit), <span class="at">colour =</span> <span class="st">"#264653"</span>) <span class="sc">+</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> pd, <span class="fu">aes</span>(<span class="at">y =</span> body_mass_g), <span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Largo de la aleta (mm)"</span>, <span class="at">y =</span> <span class="st">"Masa corporal (g)"</span>)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(m1, <span class="fu">tibble</span>(<span class="at">flipper_length_mm =</span> <span class="dv">200</span>), <span class="at">interval =</span> <span class="st">"prediction"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       fit      lwr      upr
+1 4158.561 3383.626 4933.495</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-prediccion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-prediccion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="05-modelos-lineales_files/figure-html/fig-prediccion-1.png" class="img-fluid figure-img" width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-prediccion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Intervalo de confianza (banda oscura) e intervalo de predicción (banda clara) para la masa según el largo de la aleta.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="regresión-múltiple" class="level2">
+<h2 class="anchored" data-anchor-id="regresión-múltiple">3. Regresión múltiple</h2>
+<p>Con varios predictores, cada coeficiente se interpreta <strong>manteniendo los demás constantes</strong>. Agreguemos la especie (categórica) y el sexo:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> species <span class="sc">+</span> sex, <span class="at">data =</span> pd)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(m2, <span class="at">conf.int =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), \(x) <span class="fu">round</span>(x, <span class="dv">2</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 7
+  term              estimate std.error statistic p.value conf.low conf.high
+  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 (Intercept)         -366.     532.       -0.69    0.49  -1412.     681.  
+2 flipper_length_mm     20.0      2.85      7.04    0        14.4     25.6 
+3 speciesChinstrap     -87.6     46.4      -1.89    0.06   -179.       3.54
+4 speciesGentoo        836.      85.2       9.82    0       669.    1004.  
+5 sexmale              530.      37.8      14.0     0       456      605.  </code></pre>
+</div>
+</div>
+<p>Las variables categóricas se codifican con <strong>variables indicadoras</strong> respecto a un nivel de referencia (aquí <code>Adelie</code> y <code>female</code>). Así, el coeficiente de <code>sexmale</code> es la diferencia media entre machos y hembras de la misma especie y con la misma aleta.</p>
+<section id="multicolinealidad" class="level3">
+<h3 class="anchored" data-anchor-id="multicolinealidad">Multicolinealidad</h3>
+<p>Si los predictores están muy correlacionados entre sí, los coeficientes se vuelven inestables. Se mide con el <strong>factor de inflación de la varianza</strong> (VIF); valores mayores que 5–10 son señal de alerta:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(m2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                      GVIF Df GVIF^(1/(2*Df))
+flipper_length_mm 6.045957  1        2.458853
+species           5.653123  2        1.541956
+sex               1.362260  1        1.167159</code></pre>
+</div>
+</div>
+<p>Aquí la aleta y la especie tienen un VIF cercano a 6: es esperable, porque las especies difieren en tamaño y por eso la aleta y la especie comparten información. Es un valor moderado, pero conviene interpretar esos dos coeficientes con cautela.</p>
+</section>
+<section id="comparar-modelos" class="level3">
+<h3 class="anchored" data-anchor-id="comparar-modelos">Comparar modelos</h3>
+<p>Con la <strong>prueba F</strong> se compara un modelo con otro anidado y con el <strong>criterio de Akaike (AIC)</strong> se compara cualquier grupo de modelos (menor AIC = mejor equilibrio entre ajuste y complejidad):</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> pd)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">*</span> species <span class="sc">+</span> sex, <span class="at">data =</span> pd)   <span class="co"># con interacción</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m1, m2, m3)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Variance Table
+
+Model 1: body_mass_g ~ flipper_length_mm
+Model 2: body_mass_g ~ flipper_length_mm + species + sex
+Model 3: body_mass_g ~ flipper_length_mm * species + sex
+  Res.Df      RSS Df Sum of Sq       F  Pr(&gt;F)    
+1    331 51211963                                 
+2    328 28653568  3  22558395 86.8892 &lt; 2e-16 ***
+3    326 28212325  2    441243  2.5493 0.07969 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">AIC</span>(m0, m1, m2, m3)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   df      AIC
+m0  2 5404.291
+m1  3 4928.146
+m2  6 4740.774
+m3  8 4739.606</code></pre>
+</div>
+</div>
+<p>Un <strong>efecto de interacción</strong> (<code>*</code>) permite que la pendiente cambie según el grupo:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pd, <span class="fu">aes</span>(flipper_length_mm, body_mass_g, <span class="at">colour =</span> species)) <span class="sc">+</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_brewer</span>(<span class="at">palette =</span> <span class="st">"Set2"</span>, <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Largo de la aleta (mm)"</span>, <span class="at">y =</span> <span class="st">"Masa corporal (g)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-interaccion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-interaccion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="05-modelos-lineales_files/figure-html/fig-interaccion-1.png" class="img-fluid figure-img" width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-interaccion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Modelo con interacción: cada especie tiene su propia pendiente entre aleta y masa.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="teoría-el-anova-como-partición-de-la-varianza" class="level2">
+<h2 class="anchored" data-anchor-id="teoría-el-anova-como-partición-de-la-varianza">4. Teoría: el ANOVA como partición de la varianza</h2>
+<p>El <strong>análisis de varianza (ANOVA)</strong> compara las medias de <strong>tres o más grupos</strong>. Su idea es descomponer la variabilidad total de los datos en dos partes:</p>
+<p><span class="math display">\[
+\underbrace{SS_{total}}_{\text{variación total}} = \underbrace{SS_{entre}}_{\text{entre grupos}} + \underbrace{SS_{dentro}}_{\text{dentro de grupos}}
+\]</span></p>
+<p>El estadístico <span class="math inline">\(F\)</span> compara ambas fuentes, ajustadas por sus grados de libertad:</p>
+<p><span class="math display">\[
+F = \frac{SS_{entre}/(k-1)}{SS_{dentro}/(N-k)}
+\]</span></p>
+<p>Si las medias de los grupos fueran iguales (<span class="math inline">\(H_0\)</span>), la variación entre grupos sería similar a la variación dentro de ellos y <span class="math inline">\(F \approx 1\)</span>. Un <span class="math inline">\(F\)</span> grande indica que <strong>al menos un grupo</strong> difiere de los demás.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>¿Por qué no hacer varias pruebas t?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Con 3 grupos habría 3 pruebas t; con 6 grupos, 15. Cada prueba adicional infla la probabilidad de un falso positivo. El ANOVA hace <strong>una sola</strong> prueba global; después se hacen las comparaciones por pares con corrección.</p>
+</div>
+</div>
+<p>Lo vemos con dos escenarios simulados: con las mismas medias de grupo pero con más o menos ruido dentro de los grupos:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>sim_anova <span class="ot">&lt;-</span> <span class="cf">function</span>(sd_dentro) {</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">grupo =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>), <span class="at">each =</span> <span class="dv">15</span>),</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="fu">rnorm</span>(<span class="dv">45</span>, <span class="at">mean =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">14</span>), <span class="at">each =</span> <span class="dv">15</span>), <span class="at">sd =</span> sd_dentro))</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(<span class="fu">mutate</span>(<span class="fu">sim_anova</span>(<span class="dv">1</span>), <span class="at">caso =</span> <span class="st">"Poco ruido"</span>), <span class="fu">mutate</span>(<span class="fu">sim_anova</span>(<span class="dv">5</span>), <span class="at">caso =</span> <span class="st">"Mucho ruido"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">caso =</span> <span class="fu">fct_inorder</span>(caso)) <span class="sc">|&gt;</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(grupo, y, <span class="at">colour =</span> grupo)) <span class="sc">+</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.12</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"crossbar"</span>, <span class="at">width =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linewidth =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_brewer</span>(<span class="at">palette =</span> <span class="st">"Set2"</span>, <span class="at">guide =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> caso) <span class="sc">+</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Valor"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-anova-idea" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-anova-idea-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="05-modelos-lineales_files/figure-html/fig-anova-idea-1.png" class="img-fluid figure-img" width="1350">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anova-idea-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Las medias de los tres grupos son idénticas en ambos paneles. Con poca variación interna (izquierda) las diferencias son evidentes y F es grande; con mucha (derecha) se pierden en el ruido.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="anova-de-una-vía" class="level2">
+<h2 class="anchored" data-anchor-id="anova-de-una-vía">5. ANOVA de una vía</h2>
+<p>¿La masa corporal difiere entre las tres especies de pingüinos?</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>m_aov <span class="ot">&lt;-</span> <span class="fu">aov</span>(body_mass_g <span class="sc">~</span> species, <span class="at">data =</span> pd)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_aov)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             Df    Sum Sq  Mean Sq F value Pr(&gt;F)    
+species       2 145190219 72595110   341.9 &lt;2e-16 ***
+Residuals   330  70069447   212332                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>El <span class="math inline">\(F\)</span> es muy grande y el valor p diminuto: al menos una especie difiere en masa. Para saber <strong>cuáles</strong>, se usan comparaciones por pares que corrigen por múltiples pruebas, como la prueba de <strong>Tukey</strong>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">TukeyHSD</span>(m_aov)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = body_mass_g ~ species, data = pd)
+
+$species
+                       diff       lwr       upr    p adj
+Chinstrap-Adelie   26.92385 -132.3528  186.2005 0.916431
+Gentoo-Adelie    1386.27259 1252.2897 1520.2554 0.000000
+Gentoo-Chinstrap 1359.34874 1194.4304 1524.2671 0.000000</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(<span class="fu">TukeyHSD</span>(m_aov)) <span class="sc">|&gt;</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(estimate, contrast)) <span class="sc">+</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_pointrange</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> conf.low, <span class="at">xmax =</span> conf.high), <span class="at">colour =</span> <span class="st">"#264653"</span>) <span class="sc">+</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Diferencia de masa (g)"</span>, <span class="at">y =</span> <span class="cn">NULL</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-tukey" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tukey-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="05-modelos-lineales_files/figure-html/fig-tukey-1.png" class="img-fluid figure-img" width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tukey-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Diferencias entre pares de especies con su intervalo de confianza simultáneo del 95 %. Los intervalos que no cruzan el cero indican diferencias significativas.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="supuestos-del-anova" class="level3">
+<h3 class="anchored" data-anchor-id="supuestos-del-anova">Supuestos del ANOVA</h3>
+<p>Son los mismos que los de la regresión, aplicados a los <strong>residuos</strong>: normalidad, homogeneidad de varianzas e independencia.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(<span class="fu">residuals</span>(m_aov))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  residuals(m_aov)
+W = 0.9922, p-value = 0.07835</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(body_mass_g <span class="sc">~</span> species, <span class="at">data =</span> pd)     <span class="co"># homogeneidad de varianzas</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Levene's Test for Homogeneity of Variance (center = median)
+       Df F value   Pr(&gt;F)   
+group   2  5.1349 0.006367 **
+      330                    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>En este caso Levene detecta varianzas distintas entre especies (<span class="math inline">\(p = 0.006\)</span>). Si las varianzas no son homogéneas, usa el ANOVA de <strong>Welch</strong> (<code>oneway.test(..., var.equal = FALSE)</code>) y si además falla la normalidad con muestras pequeñas la alternativa no paramétrica, la prueba de <strong>Kruskal-Wallis</strong>. Aquí ambas llevan a la misma conclusión que el ANOVA clásico:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">oneway.test</span>(body_mass_g <span class="sc">~</span> species, <span class="at">data =</span> pd)     <span class="co"># Welch</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    One-way analysis of means (not assuming equal variances)
+
+data:  body_mass_g and species
+F = 316.5, num df = 2.00, denom df = 187.68, p-value &lt; 2.2e-16</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kruskal.test</span>(body_mass_g <span class="sc">~</span> species, <span class="at">data =</span> pd)    <span class="co"># no paramétrica</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Kruskal-Wallis rank sum test
+
+data:  body_mass_g by species
+Kruskal-Wallis chi-squared = 212.09, df = 2, p-value &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="anova-de-dos-vías-e-interacción" class="level2">
+<h2 class="anchored" data-anchor-id="anova-de-dos-vías-e-interacción">6. ANOVA de dos vías e interacción</h2>
+<p>Cuando hay <strong>dos factores</strong>, además de sus efectos principales interesa su <strong>interacción</strong>: si el efecto de un factor depende del nivel del otro.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>m_dos <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g <span class="sc">~</span> species <span class="sc">*</span> sex, <span class="at">data =</span> pd)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(m_dos, <span class="at">type =</span> <span class="st">"II"</span>)     <span class="co"># tipo II: recomendable cuando los grupos tienen tamaños distintos</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Anova Table (Type II tests)
+
+Response: body_mass_g
+               Sum Sq  Df F value    Pr(&gt;F)    
+species     143401584   2 749.016 &lt; 2.2e-16 ***
+sex          37090262   1 387.460 &lt; 2.2e-16 ***
+species:sex   1676557   2   8.757 0.0001973 ***
+Residuals    31302628 327                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>pd <span class="sc">|&gt;</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species, sex) <span class="sc">|&gt;</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">media =</span> <span class="fu">mean</span>(body_mass_g), <span class="at">ee =</span> <span class="fu">sd</span>(body_mass_g) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">n</span>()), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(species, media, <span class="at">colour =</span> sex, <span class="at">group =</span> sex)) <span class="sc">+</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_pointrange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> media <span class="sc">-</span> ee, <span class="at">ymax =</span> media <span class="sc">+</span> ee), <span class="at">size =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="at">female =</span> <span class="st">"#e76f51"</span>, <span class="at">male =</span> <span class="st">"#264653"</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Hembra"</span>, <span class="st">"Macho"</span>), <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Masa media (g) ± error estándar"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-interaccion-anova" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-interaccion-anova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="05-modelos-lineales_files/figure-html/fig-interaccion-anova-1.png" class="img-fluid figure-img" width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-interaccion-anova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Gráfico de interacción: medias por especie y sexo. Los machos pesan más en las tres especies, pero las líneas no son paralelas: la diferencia entre sexos es menor en Chinstrap (412 g) que en Gentoo (805 g), lo que se refleja en una interacción significativa.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="medias-marginales-estimadas-y-comparaciones" class="level3">
+<h3 class="anchored" data-anchor-id="medias-marginales-estimadas-y-comparaciones">Medias marginales estimadas y comparaciones</h3>
+<p><code>emmeans</code> calcula las medias del modelo y hace las comparaciones que interesan con corrección automática:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>em <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(m_dos, <span class="sc">~</span> sex <span class="sc">|</span> species)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>em</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>species = Adelie:
+ sex    emmean   SE  df lower.CL upper.CL
+ female   3369 36.2 327     3298     3440
+ male     4043 36.2 327     3972     4115
+
+species = Chinstrap:
+ sex    emmean   SE  df lower.CL upper.CL
+ female   3527 53.1 327     3423     3632
+ male     3939 53.1 327     3835     4043
+
+species = Gentoo:
+ sex    emmean   SE  df lower.CL upper.CL
+ female   4680 40.6 327     4600     4760
+ male     5485 39.6 327     5407     5563
+
+Confidence level used: 0.95 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(em)                          <span class="co"># macho - hembra dentro de cada especie</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>species = Adelie:
+ contrast      estimate   SE  df t.ratio p.value
+ female - male     -675 51.2 327 -13.174 &lt;0.0001
+
+species = Chinstrap:
+ contrast      estimate   SE  df t.ratio p.value
+ female - male     -412 75.0 327  -5.487 &lt;0.0001
+
+species = Gentoo:
+ contrast      estimate   SE  df t.ratio p.value
+ female - male     -805 56.7 327 -14.188 &lt;0.0001</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">emmeans</span>(m_dos, pairwise <span class="sc">~</span> species, <span class="at">adjust =</span> <span class="st">"tukey"</span>)<span class="sc">$</span>contrasts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> contrast           estimate   SE  df t.ratio p.value
+ Adelie - Chinstrap    -26.9 45.4 327  -0.593  0.8241
+ Adelie - Gentoo     -1376.1 38.2 327 -36.007 &lt;0.0001
+ Chinstrap - Gentoo  -1349.2 47.0 327 -28.682 &lt;0.0001
+
+Results are averaged over the levels of: sex 
+P value adjustment: tukey method for comparing a family of 3 estimates </code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="ejercicios" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
+<ol type="1">
+<li><strong>Regresión.</strong> Ajusta <code>lm(bill_length_mm ~ body_mass_g, data = penguins)</code>. Interpreta la pendiente y el <span class="math inline">\(R^2\)</span>. ¿Se cumplen los supuestos?</li>
+<li><strong>Múltiple.</strong> Agrega <code>species</code> al modelo anterior. ¿Cambia el coeficiente de <code>body_mass_g</code>? ¿Por qué?</li>
+<li><strong>Predicción.</strong> Con el modelo <code>m1</code>, calcula el IC de predicción del 95 % para un pingüino de aleta 190 mm. ¿Es más ancho que el IC de la media? ¿Por qué?</li>
+<li><strong>ANOVA.</strong> Compara el largo de la aleta entre islas con un ANOVA de una vía. Verifica supuestos y haz Tukey.</li>
+<li><strong>Interacción.</strong> ¿Hay interacción entre <code>species</code> y <code>island</code> sobre la masa? Nota: no todas las combinaciones existen; revisa con <code>table()</code>.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Soluciones sugeridas
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 y 2</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">lm</span>(bill_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins)</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">lm</span>(bill_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> species, <span class="at">data =</span> penguins)</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(<span class="at">simple =</span> <span class="fu">coef</span>(a)[<span class="st">"body_mass_g"</span>], <span class="at">con_especie =</span> <span class="fu">coef</span>(b)[<span class="st">"body_mass_g"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            body_mass_g
+simple      0.004051417
+con_especie 0.003748497</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># La pendiente baja levemente (de 0,0041 a 0,0037 mm/g, cerca de un 7 %): sin la especie,</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="co"># la masa "absorbe" parte de las diferencias de pico entre especies.</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 3</span></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(m1, <span class="fu">tibble</span>(<span class="at">flipper_length_mm =</span> <span class="dv">190</span>), <span class="at">interval =</span> <span class="st">"confidence"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       fit      lwr      upr
+1 3657.028 3603.157 3710.899</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(m1, <span class="fu">tibble</span>(<span class="at">flipper_length_mm =</span> <span class="dv">190</span>), <span class="at">interval =</span> <span class="st">"prediction"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       fit      lwr      upr
+1 3657.028 2881.387 4432.669</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 4</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>a4 <span class="ot">&lt;-</span> <span class="fu">aov</span>(flipper_length_mm <span class="sc">~</span> island, <span class="at">data =</span> penguins)</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(a4); <span class="fu">TukeyHSD</span>(a4)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             Df Sum Sq Mean Sq F value Pr(&gt;F)    
+island        2  25352   12676   102.1 &lt;2e-16 ***
+Residuals   339  42075     124                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+2 observations deleted due to missingness</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = flipper_length_mm ~ island, data = penguins)
+
+$island
+                       diff        lwr        upr     p adj
+Dream-Biscoe     -16.634006 -19.742902 -13.525110 0.0000000
+Torgersen-Biscoe -18.510508 -22.706298 -14.314719 0.0000000
+Torgersen-Dream   -1.876502  -6.239167   2.486163 0.5694419</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 5</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(penguins<span class="sc">$</span>species, penguins<span class="sc">$</span>island)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           
+            Biscoe Dream Torgersen
+  Adelie        44    56        52
+  Chinstrap      0    68         0
+  Gentoo       124     0         0</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="para-profundizar" class="level2">
+<h2 class="anchored" data-anchor-id="para-profundizar">Para profundizar</h2>
+<ul>
+<li>Fox, J. y Weisberg, S. (2019). <em>An R Companion to Applied Regression</em> (3.ª ed.). Sage.</li>
+<li>Gelman, A., Hill, J. y Vehtari, A. (2020). <em>Regression and Other Stories</em>. Cambridge University Press.</li>
+<li>Zuur, A. F., Ieno, E. N. y Elphick, C. S. (2010). A protocol for data exploration to avoid common statistical problems. <em>Methods in Ecology and Evolution</em>, 1(1), 3–14.</li>
+<li>Lenth, R. V. Documentación de <a href="https://rvlenth.github.io/emmeans/">emmeans</a>.</li>
+</ul>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reproducibilidad
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este cuaderno se ejecutó con R 4.5.2.</p>
+</div>
+</div>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mromerot\.github\.io\/web\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb57" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Regresión lineal y ANOVA"</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Minicurso de R · Módulo 5"</span></span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Modelos lineales, diagnósticos, predicción, ANOVA de una y dos vías, pruebas post hoc y medias marginales, con la teoría de la partición de la varianza."</span></span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Mauricio Romero"</span></span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2026-09-25</span></span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [R, regresión, ANOVA, modelos lineales]</span></span>
+<span id="cb57-10"><a href="#cb57-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb57-11"><a href="#cb57-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-12"><a href="#cb57-12" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="minimal"}</span>
+<span id="cb57-13"><a href="#cb57-13" aria-hidden="true" tabindex="-1"></a>**Duración estimada:** 4 horas · **Nivel:** intermedio · **Prerrequisitos:** Módulo 4 (pruebas de hipótesis y supuestos).</span>
+<span id="cb57-14"><a href="#cb57-14" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb57-15"><a href="#cb57-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-16"><a href="#cb57-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objetivos de aprendizaje</span></span>
+<span id="cb57-17"><a href="#cb57-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-18"><a href="#cb57-18" aria-hidden="true" tabindex="-1"></a>Al terminar este cuaderno podrás:</span>
+<span id="cb57-19"><a href="#cb57-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-20"><a href="#cb57-20" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Ajustar e interpretar una **regresión lineal** simple y múltiple con <span class="in">`lm()`</span>.</span>
+<span id="cb57-21"><a href="#cb57-21" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Diagnosticar un modelo revisando sus **supuestos** con gráficos de residuos.</span>
+<span id="cb57-22"><a href="#cb57-22" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Generar **predicciones** con intervalos de confianza y de predicción.</span>
+<span id="cb57-23"><a href="#cb57-23" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Explicar el **ANOVA** como partición de la varianza y aplicar el de una y dos vías.</span>
+<span id="cb57-24"><a href="#cb57-24" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Hacer comparaciones **post hoc** y calcular medias marginales con <span class="in">`emmeans`</span>.</span>
+<span id="cb57-25"><a href="#cb57-25" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Comparar modelos con AIC y pruebas F.</span>
+<span id="cb57-26"><a href="#cb57-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-29"><a href="#cb57-29" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-30"><a href="#cb57-30" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: paquetes</span></span>
+<span id="cb57-31"><a href="#cb57-31" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb57-32"><a href="#cb57-32" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb57-33"><a href="#cb57-33" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
+<span id="cb57-34"><a href="#cb57-34" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)        <span class="co"># Levene, VIF, ANOVA tipo II/III</span></span>
+<span id="cb57-35"><a href="#cb57-35" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)    <span class="co"># medias marginales y comparaciones</span></span>
+<span id="cb57-36"><a href="#cb57-36" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb57-37"><a href="#cb57-37" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2026</span>)</span>
+<span id="cb57-38"><a href="#cb57-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-39"><a href="#cb57-39" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()))</span>
+<span id="cb57-40"><a href="#cb57-40" aria-hidden="true" tabindex="-1"></a>pd <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span> <span class="fu">drop_na</span>(body_mass_g, flipper_length_mm, sex)</span>
+<span id="cb57-41"><a href="#cb57-41" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-42"><a href="#cb57-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-43"><a href="#cb57-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Teoría: el modelo lineal</span></span>
+<span id="cb57-44"><a href="#cb57-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-45"><a href="#cb57-45" aria-hidden="true" tabindex="-1"></a>Un **modelo lineal** explica una variable respuesta $y$ como una combinación lineal de predictores más un error:</span>
+<span id="cb57-46"><a href="#cb57-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-47"><a href="#cb57-47" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb57-48"><a href="#cb57-48" aria-hidden="true" tabindex="-1"></a>y_i = \beta_0 + \beta_1 x_{1i} + \dots + \beta_p x_{pi} + \varepsilon_i, \qquad \varepsilon_i \sim N(0, \sigma^2)</span>
+<span id="cb57-49"><a href="#cb57-49" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb57-50"><a href="#cb57-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-51"><a href="#cb57-51" aria-hidden="true" tabindex="-1"></a>Los coeficientes $\beta$ se estiman por **mínimos cuadrados**: se elige la recta que minimiza la suma de los cuadrados de los residuos (las distancias verticales entre los datos y la recta). Los supuestos, que hay que revisar, son:</span>
+<span id="cb57-52"><a href="#cb57-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-53"><a href="#cb57-53" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Linealidad**: la relación entre predictores y $y$ es lineal.</span>
+<span id="cb57-54"><a href="#cb57-54" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Independencia** de los errores.</span>
+<span id="cb57-55"><a href="#cb57-55" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Normalidad** de los residuos.</span>
+<span id="cb57-56"><a href="#cb57-56" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Homocedasticidad**: la varianza de los residuos es constante.</span>
+<span id="cb57-57"><a href="#cb57-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-58"><a href="#cb57-58" aria-hidden="true" tabindex="-1"></a>(La normalidad se aplica a los **residuos**, no a la variable $y$.)</span>
+<span id="cb57-59"><a href="#cb57-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-60"><a href="#cb57-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Regresión lineal simple</span></span>
+<span id="cb57-61"><a href="#cb57-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-62"><a href="#cb57-62" aria-hidden="true" tabindex="-1"></a>¿Cuánto aumenta la masa de un pingüino por cada milímetro adicional de aleta?</span>
+<span id="cb57-63"><a href="#cb57-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-66"><a href="#cb57-66" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-67"><a href="#cb57-67" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: lm-simple</span></span>
+<span id="cb57-68"><a href="#cb57-68" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g <span class="sc">~</span> flipper_length_mm, <span class="at">data =</span> pd)</span>
+<span id="cb57-69"><a href="#cb57-69" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m1)</span>
+<span id="cb57-70"><a href="#cb57-70" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-71"><a href="#cb57-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-72"><a href="#cb57-72" aria-hidden="true" tabindex="-1"></a>Cómo leer el resultado:</span>
+<span id="cb57-73"><a href="#cb57-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-74"><a href="#cb57-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Intercepto**: masa esperada cuando la aleta mide 0 mm (aquí no tiene sentido físico, solo ancla la recta).</span>
+<span id="cb57-75"><a href="#cb57-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Pendiente** (<span class="in">`flipper_length_mm`</span>): cada milímetro extra de aleta se asocia con un aumento medio de la masa de unos 50 g.</span>
+<span id="cb57-76"><a href="#cb57-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**$R^2$**: fracción de la variabilidad de la masa explicada por la aleta.</span>
+<span id="cb57-77"><a href="#cb57-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Error estándar residual**: desviación típica de los errores, en gramos.</span>
+<span id="cb57-78"><a href="#cb57-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-79"><a href="#cb57-79" aria-hidden="true" tabindex="-1"></a><span class="in">`broom`</span> devuelve estos resultados como tablas fáciles de manipular:</span>
+<span id="cb57-80"><a href="#cb57-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-83"><a href="#cb57-83" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-84"><a href="#cb57-84" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: broom</span></span>
+<span id="cb57-85"><a href="#cb57-85" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(m1, <span class="at">conf.int =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb57-86"><a href="#cb57-86" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(m1) <span class="sc">|&gt;</span> <span class="fu">select</span>(r.squared, adj.r.squared, sigma, AIC, nobs)</span>
+<span id="cb57-87"><a href="#cb57-87" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-88"><a href="#cb57-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-91"><a href="#cb57-91" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-92"><a href="#cb57-92" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-lm-simple</span></span>
+<span id="cb57-93"><a href="#cb57-93" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Regresión de la masa sobre el largo de la aleta. La banda gris es el intervalo de confianza de la recta."</span></span>
+<span id="cb57-94"><a href="#cb57-94" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.4</span></span>
+<span id="cb57-95"><a href="#cb57-95" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pd, <span class="fu">aes</span>(flipper_length_mm, body_mass_g)) <span class="sc">+</span></span>
+<span id="cb57-96"><a href="#cb57-96" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"grey30"</span>) <span class="sc">+</span></span>
+<span id="cb57-97"><a href="#cb57-97" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">colour =</span> <span class="st">"#e76f51"</span>, <span class="at">fill =</span> <span class="st">"#e76f51"</span>, <span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb57-98"><a href="#cb57-98" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Largo de la aleta (mm)"</span>, <span class="at">y =</span> <span class="st">"Masa corporal (g)"</span>)</span>
+<span id="cb57-99"><a href="#cb57-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-100"><a href="#cb57-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-101"><a href="#cb57-101" aria-hidden="true" tabindex="-1"></a><span class="fu">### Diagnóstico de los supuestos</span></span>
+<span id="cb57-102"><a href="#cb57-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-103"><a href="#cb57-103" aria-hidden="true" tabindex="-1"></a>Con <span class="in">`augment()`</span> se obtienen los valores ajustados y los residuos para dibujar los gráficos de diagnóstico:</span>
+<span id="cb57-104"><a href="#cb57-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-107"><a href="#cb57-107" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-108"><a href="#cb57-108" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-diagnostico</span></span>
+<span id="cb57-109"><a href="#cb57-109" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Gráficos de diagnóstico. Izquierda: residuos contra valores ajustados (buscamos una nube sin patrón). Centro: Q-Q de los residuos (buscamos puntos sobre la recta). Derecha: escala-ubicación (buscamos una banda horizontal, señal de varianza constante)."</span></span>
+<span id="cb57-110"><a href="#cb57-110" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.2</span></span>
+<span id="cb57-111"><a href="#cb57-111" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 10</span></span>
+<span id="cb57-112"><a href="#cb57-112" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">augment</span>(m1)</span>
+<span id="cb57-113"><a href="#cb57-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-114"><a href="#cb57-114" aria-hidden="true" tabindex="-1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(.fitted, .resid)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb57-115"><a href="#cb57-115" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">linewidth =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb57-116"><a href="#cb57-116" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Ajustados"</span>, <span class="at">y =</span> <span class="st">"Residuos"</span>, <span class="at">title =</span> <span class="st">"Residuos vs. ajustados"</span>)</span>
+<span id="cb57-117"><a href="#cb57-117" aria-hidden="true" tabindex="-1"></a>g2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="at">sample =</span> .std.resid)) <span class="sc">+</span> <span class="fu">stat_qq</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> <span class="fu">stat_qq_line</span>(<span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb57-118"><a href="#cb57-118" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Teóricos"</span>, <span class="at">y =</span> <span class="st">"Residuos estandarizados"</span>, <span class="at">title =</span> <span class="st">"Q-Q"</span>)</span>
+<span id="cb57-119"><a href="#cb57-119" aria-hidden="true" tabindex="-1"></a>g3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(.fitted, <span class="fu">sqrt</span>(<span class="fu">abs</span>(.std.resid)))) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb57-120"><a href="#cb57-120" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">linewidth =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb57-121"><a href="#cb57-121" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Ajustados"</span>, <span class="at">y =</span> <span class="st">"√|residuos estand.|"</span>, <span class="at">title =</span> <span class="st">"Escala-ubicación"</span>)</span>
+<span id="cb57-122"><a href="#cb57-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-123"><a href="#cb57-123" aria-hidden="true" tabindex="-1"></a>g1 <span class="sc">|</span> g2 <span class="sc">|</span> g3</span>
+<span id="cb57-124"><a href="#cb57-124" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-125"><a href="#cb57-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-126"><a href="#cb57-126" aria-hidden="true" tabindex="-1"></a>Además de los gráficos, los puntos **influyentes** (que cambian mucho el ajuste si se quitan) se detectan con la **distancia de Cook**:</span>
+<span id="cb57-127"><a href="#cb57-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-130"><a href="#cb57-130" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-131"><a href="#cb57-131" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: cook</span></span>
+<span id="cb57-132"><a href="#cb57-132" aria-hidden="true" tabindex="-1"></a><span class="fu">augment</span>(m1) <span class="sc">|&gt;</span></span>
+<span id="cb57-133"><a href="#cb57-133" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">fila =</span> <span class="fu">row_number</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb57-134"><a href="#cb57-134" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(.cooksd, <span class="at">n =</span> <span class="dv">3</span>) <span class="sc">|&gt;</span></span>
+<span id="cb57-135"><a href="#cb57-135" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(fila, body_mass_g, flipper_length_mm, .cooksd)</span>
+<span id="cb57-136"><a href="#cb57-136" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-137"><a href="#cb57-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-138"><a href="#cb57-138" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb57-139"><a href="#cb57-139" aria-hidden="true" tabindex="-1"></a><span class="fu">## Si un supuesto falla</span></span>
+<span id="cb57-140"><a href="#cb57-140" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Curvatura** en los residuos: agrega un término cuadrático (<span class="in">`poly(x, 2)`</span>) o usa un GAM (Módulo 7).</span>
+<span id="cb57-141"><a href="#cb57-141" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Varianza creciente** con el valor ajustado: transforma la respuesta (<span class="in">`log(y)`</span>) o usa modelos que permitan varianzas distintas.</span>
+<span id="cb57-142"><a href="#cb57-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Residuos no normales** con muestras grandes: el modelo es robusto; con muestras pequeñas, transforma o usa bootstrap.</span>
+<span id="cb57-143"><a href="#cb57-143" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Dependencia** entre observaciones (mismos individuos, sitios repetidos): usa modelos mixtos (Módulo 6).</span>
+<span id="cb57-144"><a href="#cb57-144" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb57-145"><a href="#cb57-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-146"><a href="#cb57-146" aria-hidden="true" tabindex="-1"></a><span class="fu">### Predicción</span></span>
+<span id="cb57-147"><a href="#cb57-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-148"><a href="#cb57-148" aria-hidden="true" tabindex="-1"></a>Hay dos intervalos distintos: el de **confianza** (incertidumbre sobre la *media* de $y$ para un valor de $x$) y el de **predicción** (incertidumbre sobre una *observación individual*, siempre más ancho).</span>
+<span id="cb57-149"><a href="#cb57-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-152"><a href="#cb57-152" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-153"><a href="#cb57-153" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-prediccion</span></span>
+<span id="cb57-154"><a href="#cb57-154" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Intervalo de confianza (banda oscura) e intervalo de predicción (banda clara) para la masa según el largo de la aleta."</span></span>
+<span id="cb57-155"><a href="#cb57-155" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.4</span></span>
+<span id="cb57-156"><a href="#cb57-156" aria-hidden="true" tabindex="-1"></a>nuevo <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">flipper_length_mm =</span> <span class="fu">seq</span>(<span class="dv">172</span>, <span class="dv">231</span>, <span class="at">length.out =</span> <span class="dv">100</span>))</span>
+<span id="cb57-157"><a href="#cb57-157" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(nuevo,</span>
+<span id="cb57-158"><a href="#cb57-158" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">as_tibble</span>(<span class="fu">predict</span>(m1, nuevo, <span class="at">interval =</span> <span class="st">"confidence"</span>)) <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">ic_inf =</span> lwr, <span class="at">ic_sup =</span> upr),</span>
+<span id="cb57-159"><a href="#cb57-159" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">as_tibble</span>(<span class="fu">predict</span>(m1, nuevo, <span class="at">interval =</span> <span class="st">"prediction"</span>)) <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="at">ip_inf =</span> lwr, <span class="at">ip_sup =</span> upr))</span>
+<span id="cb57-160"><a href="#cb57-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-161"><a href="#cb57-161" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pred, <span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span></span>
+<span id="cb57-162"><a href="#cb57-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> ip_inf, <span class="at">ymax =</span> ip_sup), <span class="at">fill =</span> <span class="st">"#264653"</span>, <span class="at">alpha =</span> <span class="fl">0.15</span>) <span class="sc">+</span></span>
+<span id="cb57-163"><a href="#cb57-163" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> ic_inf, <span class="at">ymax =</span> ic_sup), <span class="at">fill =</span> <span class="st">"#264653"</span>, <span class="at">alpha =</span> <span class="fl">0.35</span>) <span class="sc">+</span></span>
+<span id="cb57-164"><a href="#cb57-164" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> fit), <span class="at">colour =</span> <span class="st">"#264653"</span>) <span class="sc">+</span></span>
+<span id="cb57-165"><a href="#cb57-165" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> pd, <span class="fu">aes</span>(<span class="at">y =</span> body_mass_g), <span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb57-166"><a href="#cb57-166" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Largo de la aleta (mm)"</span>, <span class="at">y =</span> <span class="st">"Masa corporal (g)"</span>)</span>
+<span id="cb57-167"><a href="#cb57-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-168"><a href="#cb57-168" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(m1, <span class="fu">tibble</span>(<span class="at">flipper_length_mm =</span> <span class="dv">200</span>), <span class="at">interval =</span> <span class="st">"prediction"</span>)</span>
+<span id="cb57-169"><a href="#cb57-169" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-170"><a href="#cb57-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-171"><a href="#cb57-171" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Regresión múltiple</span></span>
+<span id="cb57-172"><a href="#cb57-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-173"><a href="#cb57-173" aria-hidden="true" tabindex="-1"></a>Con varios predictores, cada coeficiente se interpreta **manteniendo los demás constantes**. Agreguemos la especie (categórica) y el sexo:</span>
+<span id="cb57-174"><a href="#cb57-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-177"><a href="#cb57-177" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-178"><a href="#cb57-178" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: lm-multiple</span></span>
+<span id="cb57-179"><a href="#cb57-179" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> species <span class="sc">+</span> sex, <span class="at">data =</span> pd)</span>
+<span id="cb57-180"><a href="#cb57-180" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(m2, <span class="at">conf.int =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), \(x) <span class="fu">round</span>(x, <span class="dv">2</span>)))</span>
+<span id="cb57-181"><a href="#cb57-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-182"><a href="#cb57-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-183"><a href="#cb57-183" aria-hidden="true" tabindex="-1"></a>Las variables categóricas se codifican con **variables indicadoras** respecto a un nivel de referencia (aquí <span class="in">`Adelie`</span> y <span class="in">`female`</span>). Así, el coeficiente de <span class="in">`sexmale`</span> es la diferencia media entre machos y hembras de la misma especie y con la misma aleta.</span>
+<span id="cb57-184"><a href="#cb57-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-185"><a href="#cb57-185" aria-hidden="true" tabindex="-1"></a><span class="fu">### Multicolinealidad</span></span>
+<span id="cb57-186"><a href="#cb57-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-187"><a href="#cb57-187" aria-hidden="true" tabindex="-1"></a>Si los predictores están muy correlacionados entre sí, los coeficientes se vuelven inestables. Se mide con el **factor de inflación de la varianza** (VIF); valores mayores que 5–10 son señal de alerta:</span>
+<span id="cb57-188"><a href="#cb57-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-191"><a href="#cb57-191" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-192"><a href="#cb57-192" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: vif</span></span>
+<span id="cb57-193"><a href="#cb57-193" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(m2)</span>
+<span id="cb57-194"><a href="#cb57-194" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-195"><a href="#cb57-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-196"><a href="#cb57-196" aria-hidden="true" tabindex="-1"></a>Aquí la aleta y la especie tienen un VIF cercano a 6: es esperable, porque las especies difieren en tamaño y por eso la aleta y la especie comparten información. Es un valor moderado, pero conviene interpretar esos dos coeficientes con cautela.</span>
+<span id="cb57-197"><a href="#cb57-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-198"><a href="#cb57-198" aria-hidden="true" tabindex="-1"></a><span class="fu">### Comparar modelos</span></span>
+<span id="cb57-199"><a href="#cb57-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-200"><a href="#cb57-200" aria-hidden="true" tabindex="-1"></a>Con la **prueba F** se compara un modelo con otro anidado y con el **criterio de Akaike (AIC)** se compara cualquier grupo de modelos (menor AIC = mejor equilibrio entre ajuste y complejidad):</span>
+<span id="cb57-201"><a href="#cb57-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-204"><a href="#cb57-204" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-205"><a href="#cb57-205" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: comparar</span></span>
+<span id="cb57-206"><a href="#cb57-206" aria-hidden="true" tabindex="-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> pd)</span>
+<span id="cb57-207"><a href="#cb57-207" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">*</span> species <span class="sc">+</span> sex, <span class="at">data =</span> pd)   <span class="co"># con interacción</span></span>
+<span id="cb57-208"><a href="#cb57-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-209"><a href="#cb57-209" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m1, m2, m3)</span>
+<span id="cb57-210"><a href="#cb57-210" aria-hidden="true" tabindex="-1"></a><span class="fu">AIC</span>(m0, m1, m2, m3)</span>
+<span id="cb57-211"><a href="#cb57-211" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-212"><a href="#cb57-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-213"><a href="#cb57-213" aria-hidden="true" tabindex="-1"></a>Un **efecto de interacción** (<span class="in">`*`</span>) permite que la pendiente cambie según el grupo:</span>
+<span id="cb57-214"><a href="#cb57-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-217"><a href="#cb57-217" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-218"><a href="#cb57-218" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-interaccion</span></span>
+<span id="cb57-219"><a href="#cb57-219" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Modelo con interacción: cada especie tiene su propia pendiente entre aleta y masa."</span></span>
+<span id="cb57-220"><a href="#cb57-220" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.2</span></span>
+<span id="cb57-221"><a href="#cb57-221" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pd, <span class="fu">aes</span>(flipper_length_mm, body_mass_g, <span class="at">colour =</span> species)) <span class="sc">+</span></span>
+<span id="cb57-222"><a href="#cb57-222" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
+<span id="cb57-223"><a href="#cb57-223" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb57-224"><a href="#cb57-224" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_brewer</span>(<span class="at">palette =</span> <span class="st">"Set2"</span>, <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb57-225"><a href="#cb57-225" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Largo de la aleta (mm)"</span>, <span class="at">y =</span> <span class="st">"Masa corporal (g)"</span>)</span>
+<span id="cb57-226"><a href="#cb57-226" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-227"><a href="#cb57-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-228"><a href="#cb57-228" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Teoría: el ANOVA como partición de la varianza</span></span>
+<span id="cb57-229"><a href="#cb57-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-230"><a href="#cb57-230" aria-hidden="true" tabindex="-1"></a>El **análisis de varianza (ANOVA)** compara las medias de **tres o más grupos**. Su idea es descomponer la variabilidad total de los datos en dos partes:</span>
+<span id="cb57-231"><a href="#cb57-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-232"><a href="#cb57-232" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb57-233"><a href="#cb57-233" aria-hidden="true" tabindex="-1"></a>\underbrace{SS_{total}}_{\text{variación total}} = \underbrace{SS_{entre}}_{\text{entre grupos}} + \underbrace{SS_{dentro}}_{\text{dentro de grupos}}</span>
+<span id="cb57-234"><a href="#cb57-234" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb57-235"><a href="#cb57-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-236"><a href="#cb57-236" aria-hidden="true" tabindex="-1"></a>El estadístico $F$ compara ambas fuentes, ajustadas por sus grados de libertad:</span>
+<span id="cb57-237"><a href="#cb57-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-238"><a href="#cb57-238" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb57-239"><a href="#cb57-239" aria-hidden="true" tabindex="-1"></a>F = \frac{SS_{entre}/(k-1)}{SS_{dentro}/(N-k)}</span>
+<span id="cb57-240"><a href="#cb57-240" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb57-241"><a href="#cb57-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-242"><a href="#cb57-242" aria-hidden="true" tabindex="-1"></a>Si las medias de los grupos fueran iguales ($H_0$), la variación entre grupos sería similar a la variación dentro de ellos y $F \approx 1$. Un $F$ grande indica que **al menos un grupo** difiere de los demás.</span>
+<span id="cb57-243"><a href="#cb57-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-244"><a href="#cb57-244" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb57-245"><a href="#cb57-245" aria-hidden="true" tabindex="-1"></a><span class="fu">## ¿Por qué no hacer varias pruebas t?</span></span>
+<span id="cb57-246"><a href="#cb57-246" aria-hidden="true" tabindex="-1"></a>Con 3 grupos habría 3 pruebas t; con 6 grupos, 15. Cada prueba adicional infla la probabilidad de un falso positivo. El ANOVA hace **una sola** prueba global; después se hacen las comparaciones por pares con corrección.</span>
+<span id="cb57-247"><a href="#cb57-247" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb57-248"><a href="#cb57-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-249"><a href="#cb57-249" aria-hidden="true" tabindex="-1"></a>Lo vemos con dos escenarios simulados: con las mismas medias de grupo pero con más o menos ruido dentro de los grupos:</span>
+<span id="cb57-250"><a href="#cb57-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-253"><a href="#cb57-253" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-254"><a href="#cb57-254" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-anova-idea</span></span>
+<span id="cb57-255"><a href="#cb57-255" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Las medias de los tres grupos son idénticas en ambos paneles. Con poca variación interna (izquierda) las diferencias son evidentes y F es grande; con mucha (derecha) se pierden en el ruido."</span></span>
+<span id="cb57-256"><a href="#cb57-256" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.2</span></span>
+<span id="cb57-257"><a href="#cb57-257" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 9</span></span>
+<span id="cb57-258"><a href="#cb57-258" aria-hidden="true" tabindex="-1"></a>sim_anova <span class="ot">&lt;-</span> <span class="cf">function</span>(sd_dentro) {</span>
+<span id="cb57-259"><a href="#cb57-259" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">grupo =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>), <span class="at">each =</span> <span class="dv">15</span>),</span>
+<span id="cb57-260"><a href="#cb57-260" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="fu">rnorm</span>(<span class="dv">45</span>, <span class="at">mean =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">14</span>), <span class="at">each =</span> <span class="dv">15</span>), <span class="at">sd =</span> sd_dentro))</span>
+<span id="cb57-261"><a href="#cb57-261" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb57-262"><a href="#cb57-262" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(<span class="fu">mutate</span>(<span class="fu">sim_anova</span>(<span class="dv">1</span>), <span class="at">caso =</span> <span class="st">"Poco ruido"</span>), <span class="fu">mutate</span>(<span class="fu">sim_anova</span>(<span class="dv">5</span>), <span class="at">caso =</span> <span class="st">"Mucho ruido"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb57-263"><a href="#cb57-263" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">caso =</span> <span class="fu">fct_inorder</span>(caso)) <span class="sc">|&gt;</span></span>
+<span id="cb57-264"><a href="#cb57-264" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(grupo, y, <span class="at">colour =</span> grupo)) <span class="sc">+</span></span>
+<span id="cb57-265"><a href="#cb57-265" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.12</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb57-266"><a href="#cb57-266" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"crossbar"</span>, <span class="at">width =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linewidth =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb57-267"><a href="#cb57-267" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_brewer</span>(<span class="at">palette =</span> <span class="st">"Set2"</span>, <span class="at">guide =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb57-268"><a href="#cb57-268" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> caso) <span class="sc">+</span></span>
+<span id="cb57-269"><a href="#cb57-269" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Valor"</span>)</span>
+<span id="cb57-270"><a href="#cb57-270" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-271"><a href="#cb57-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-272"><a href="#cb57-272" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. ANOVA de una vía</span></span>
+<span id="cb57-273"><a href="#cb57-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-274"><a href="#cb57-274" aria-hidden="true" tabindex="-1"></a>¿La masa corporal difiere entre las tres especies de pingüinos?</span>
+<span id="cb57-275"><a href="#cb57-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-278"><a href="#cb57-278" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-279"><a href="#cb57-279" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: anova</span></span>
+<span id="cb57-280"><a href="#cb57-280" aria-hidden="true" tabindex="-1"></a>m_aov <span class="ot">&lt;-</span> <span class="fu">aov</span>(body_mass_g <span class="sc">~</span> species, <span class="at">data =</span> pd)</span>
+<span id="cb57-281"><a href="#cb57-281" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_aov)</span>
+<span id="cb57-282"><a href="#cb57-282" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-283"><a href="#cb57-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-284"><a href="#cb57-284" aria-hidden="true" tabindex="-1"></a>El $F$ es muy grande y el valor p diminuto: al menos una especie difiere en masa. Para saber **cuáles**, se usan comparaciones por pares que corrigen por múltiples pruebas, como la prueba de **Tukey**:</span>
+<span id="cb57-285"><a href="#cb57-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-288"><a href="#cb57-288" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-289"><a href="#cb57-289" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tukey</span></span>
+<span id="cb57-290"><a href="#cb57-290" aria-hidden="true" tabindex="-1"></a><span class="fu">TukeyHSD</span>(m_aov)</span>
+<span id="cb57-291"><a href="#cb57-291" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-292"><a href="#cb57-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-295"><a href="#cb57-295" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-296"><a href="#cb57-296" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-tukey</span></span>
+<span id="cb57-297"><a href="#cb57-297" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Diferencias entre pares de especies con su intervalo de confianza simultáneo del 95 %. Los intervalos que no cruzan el cero indican diferencias significativas."</span></span>
+<span id="cb57-298"><a href="#cb57-298" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 2.6</span></span>
+<span id="cb57-299"><a href="#cb57-299" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(<span class="fu">TukeyHSD</span>(m_aov)) <span class="sc">|&gt;</span></span>
+<span id="cb57-300"><a href="#cb57-300" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(estimate, contrast)) <span class="sc">+</span></span>
+<span id="cb57-301"><a href="#cb57-301" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_pointrange</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> conf.low, <span class="at">xmax =</span> conf.high), <span class="at">colour =</span> <span class="st">"#264653"</span>) <span class="sc">+</span></span>
+<span id="cb57-302"><a href="#cb57-302" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb57-303"><a href="#cb57-303" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Diferencia de masa (g)"</span>, <span class="at">y =</span> <span class="cn">NULL</span>)</span>
+<span id="cb57-304"><a href="#cb57-304" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-305"><a href="#cb57-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-306"><a href="#cb57-306" aria-hidden="true" tabindex="-1"></a><span class="fu">### Supuestos del ANOVA</span></span>
+<span id="cb57-307"><a href="#cb57-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-308"><a href="#cb57-308" aria-hidden="true" tabindex="-1"></a>Son los mismos que los de la regresión, aplicados a los **residuos**: normalidad, homogeneidad de varianzas e independencia.</span>
+<span id="cb57-309"><a href="#cb57-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-312"><a href="#cb57-312" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-313"><a href="#cb57-313" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: supuestos-anova</span></span>
+<span id="cb57-314"><a href="#cb57-314" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(<span class="fu">residuals</span>(m_aov))</span>
+<span id="cb57-315"><a href="#cb57-315" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(body_mass_g <span class="sc">~</span> species, <span class="at">data =</span> pd)     <span class="co"># homogeneidad de varianzas</span></span>
+<span id="cb57-316"><a href="#cb57-316" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-317"><a href="#cb57-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-318"><a href="#cb57-318" aria-hidden="true" tabindex="-1"></a>En este caso Levene detecta varianzas distintas entre especies ($p = 0.006$). Si las varianzas no son homogéneas, usa el ANOVA de **Welch** (`oneway.test(..., var.equal = FALSE)`) y si además falla la normalidad con muestras pequeñas la alternativa no paramétrica, la prueba de **Kruskal-Wallis**. Aquí ambas llevan a la misma conclusión que el ANOVA clásico:</span>
+<span id="cb57-319"><a href="#cb57-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-322"><a href="#cb57-322" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-323"><a href="#cb57-323" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: alternativas</span></span>
+<span id="cb57-324"><a href="#cb57-324" aria-hidden="true" tabindex="-1"></a><span class="fu">oneway.test</span>(body_mass_g <span class="sc">~</span> species, <span class="at">data =</span> pd)     <span class="co"># Welch</span></span>
+<span id="cb57-325"><a href="#cb57-325" aria-hidden="true" tabindex="-1"></a><span class="fu">kruskal.test</span>(body_mass_g <span class="sc">~</span> species, <span class="at">data =</span> pd)    <span class="co"># no paramétrica</span></span>
+<span id="cb57-326"><a href="#cb57-326" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-327"><a href="#cb57-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-328"><a href="#cb57-328" aria-hidden="true" tabindex="-1"></a><span class="fu">## 6. ANOVA de dos vías e interacción</span></span>
+<span id="cb57-329"><a href="#cb57-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-330"><a href="#cb57-330" aria-hidden="true" tabindex="-1"></a>Cuando hay **dos factores**, además de sus efectos principales interesa su **interacción**: si el efecto de un factor depende del nivel del otro.</span>
+<span id="cb57-331"><a href="#cb57-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-334"><a href="#cb57-334" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-335"><a href="#cb57-335" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: anova-dos</span></span>
+<span id="cb57-336"><a href="#cb57-336" aria-hidden="true" tabindex="-1"></a>m_dos <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g <span class="sc">~</span> species <span class="sc">*</span> sex, <span class="at">data =</span> pd)</span>
+<span id="cb57-337"><a href="#cb57-337" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(m_dos, <span class="at">type =</span> <span class="st">"II"</span>)     <span class="co"># tipo II: recomendable cuando los grupos tienen tamaños distintos</span></span>
+<span id="cb57-338"><a href="#cb57-338" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-339"><a href="#cb57-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-342"><a href="#cb57-342" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-343"><a href="#cb57-343" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-interaccion-anova</span></span>
+<span id="cb57-344"><a href="#cb57-344" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Gráfico de interacción: medias por especie y sexo. Los machos pesan más en las tres especies, pero las líneas no son paralelas: la diferencia entre sexos es menor en Chinstrap (412 g) que en Gentoo (805 g), lo que se refleja en una interacción significativa."</span></span>
+<span id="cb57-345"><a href="#cb57-345" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3</span></span>
+<span id="cb57-346"><a href="#cb57-346" aria-hidden="true" tabindex="-1"></a>pd <span class="sc">|&gt;</span></span>
+<span id="cb57-347"><a href="#cb57-347" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species, sex) <span class="sc">|&gt;</span></span>
+<span id="cb57-348"><a href="#cb57-348" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">media =</span> <span class="fu">mean</span>(body_mass_g), <span class="at">ee =</span> <span class="fu">sd</span>(body_mass_g) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">n</span>()), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb57-349"><a href="#cb57-349" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(species, media, <span class="at">colour =</span> sex, <span class="at">group =</span> sex)) <span class="sc">+</span></span>
+<span id="cb57-350"><a href="#cb57-350" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb57-351"><a href="#cb57-351" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_pointrange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> media <span class="sc">-</span> ee, <span class="at">ymax =</span> media <span class="sc">+</span> ee), <span class="at">size =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb57-352"><a href="#cb57-352" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="at">female =</span> <span class="st">"#e76f51"</span>, <span class="at">male =</span> <span class="st">"#264653"</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Hembra"</span>, <span class="st">"Macho"</span>), <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb57-353"><a href="#cb57-353" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Masa media (g) ± error estándar"</span>)</span>
+<span id="cb57-354"><a href="#cb57-354" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-355"><a href="#cb57-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-356"><a href="#cb57-356" aria-hidden="true" tabindex="-1"></a><span class="fu">### Medias marginales estimadas y comparaciones</span></span>
+<span id="cb57-357"><a href="#cb57-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-358"><a href="#cb57-358" aria-hidden="true" tabindex="-1"></a><span class="in">`emmeans`</span> calcula las medias del modelo y hace las comparaciones que interesan con corrección automática:</span>
+<span id="cb57-359"><a href="#cb57-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-362"><a href="#cb57-362" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-363"><a href="#cb57-363" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: emmeans</span></span>
+<span id="cb57-364"><a href="#cb57-364" aria-hidden="true" tabindex="-1"></a>em <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(m_dos, <span class="sc">~</span> sex <span class="sc">|</span> species)</span>
+<span id="cb57-365"><a href="#cb57-365" aria-hidden="true" tabindex="-1"></a>em</span>
+<span id="cb57-366"><a href="#cb57-366" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(em)                          <span class="co"># macho - hembra dentro de cada especie</span></span>
+<span id="cb57-367"><a href="#cb57-367" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-368"><a href="#cb57-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-371"><a href="#cb57-371" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-372"><a href="#cb57-372" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: emmeans-especie</span></span>
+<span id="cb57-373"><a href="#cb57-373" aria-hidden="true" tabindex="-1"></a><span class="fu">emmeans</span>(m_dos, pairwise <span class="sc">~</span> species, <span class="at">adjust =</span> <span class="st">"tukey"</span>)<span class="sc">$</span>contrasts</span>
+<span id="cb57-374"><a href="#cb57-374" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-375"><a href="#cb57-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-376"><a href="#cb57-376" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejercicios</span></span>
+<span id="cb57-377"><a href="#cb57-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-378"><a href="#cb57-378" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Regresión.** Ajusta <span class="in">`lm(bill_length_mm ~ body_mass_g, data = penguins)`</span>. Interpreta la pendiente y el $R^2$. ¿Se cumplen los supuestos?</span>
+<span id="cb57-379"><a href="#cb57-379" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Múltiple.** Agrega <span class="in">`species`</span> al modelo anterior. ¿Cambia el coeficiente de <span class="in">`body_mass_g`</span>? ¿Por qué?</span>
+<span id="cb57-380"><a href="#cb57-380" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Predicción.** Con el modelo <span class="in">`m1`</span>, calcula el IC de predicción del 95 % para un pingüino de aleta 190 mm. ¿Es más ancho que el IC de la media? ¿Por qué?</span>
+<span id="cb57-381"><a href="#cb57-381" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**ANOVA.** Compara el largo de la aleta entre islas con un ANOVA de una vía. Verifica supuestos y haz Tukey.</span>
+<span id="cb57-382"><a href="#cb57-382" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Interacción.** ¿Hay interacción entre <span class="in">`species`</span> y <span class="in">`island`</span> sobre la masa? Nota: no todas las combinaciones existen; revisa con <span class="in">`table()`</span>.</span>
+<span id="cb57-383"><a href="#cb57-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-384"><a href="#cb57-384" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
+<span id="cb57-385"><a href="#cb57-385" aria-hidden="true" tabindex="-1"></a><span class="fu">## Soluciones sugeridas</span></span>
+<span id="cb57-386"><a href="#cb57-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-389"><a href="#cb57-389" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb57-390"><a href="#cb57-390" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: soluciones</span></span>
+<span id="cb57-391"><a href="#cb57-391" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 y 2</span></span>
+<span id="cb57-392"><a href="#cb57-392" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">lm</span>(bill_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins)</span>
+<span id="cb57-393"><a href="#cb57-393" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">lm</span>(bill_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> species, <span class="at">data =</span> penguins)</span>
+<span id="cb57-394"><a href="#cb57-394" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(<span class="at">simple =</span> <span class="fu">coef</span>(a)[<span class="st">"body_mass_g"</span>], <span class="at">con_especie =</span> <span class="fu">coef</span>(b)[<span class="st">"body_mass_g"</span>])</span>
+<span id="cb57-395"><a href="#cb57-395" aria-hidden="true" tabindex="-1"></a><span class="co"># La pendiente baja levemente (de 0,0041 a 0,0037 mm/g, cerca de un 7 %): sin la especie,</span></span>
+<span id="cb57-396"><a href="#cb57-396" aria-hidden="true" tabindex="-1"></a><span class="co"># la masa "absorbe" parte de las diferencias de pico entre especies.</span></span>
+<span id="cb57-397"><a href="#cb57-397" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-398"><a href="#cb57-398" aria-hidden="true" tabindex="-1"></a><span class="co"># 3</span></span>
+<span id="cb57-399"><a href="#cb57-399" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(m1, <span class="fu">tibble</span>(<span class="at">flipper_length_mm =</span> <span class="dv">190</span>), <span class="at">interval =</span> <span class="st">"confidence"</span>)</span>
+<span id="cb57-400"><a href="#cb57-400" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(m1, <span class="fu">tibble</span>(<span class="at">flipper_length_mm =</span> <span class="dv">190</span>), <span class="at">interval =</span> <span class="st">"prediction"</span>)</span>
+<span id="cb57-401"><a href="#cb57-401" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-402"><a href="#cb57-402" aria-hidden="true" tabindex="-1"></a><span class="co"># 4</span></span>
+<span id="cb57-403"><a href="#cb57-403" aria-hidden="true" tabindex="-1"></a>a4 <span class="ot">&lt;-</span> <span class="fu">aov</span>(flipper_length_mm <span class="sc">~</span> island, <span class="at">data =</span> penguins)</span>
+<span id="cb57-404"><a href="#cb57-404" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(a4); <span class="fu">TukeyHSD</span>(a4)</span>
+<span id="cb57-405"><a href="#cb57-405" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-406"><a href="#cb57-406" aria-hidden="true" tabindex="-1"></a><span class="co"># 5</span></span>
+<span id="cb57-407"><a href="#cb57-407" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(penguins<span class="sc">$</span>species, penguins<span class="sc">$</span>island)</span>
+<span id="cb57-408"><a href="#cb57-408" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb57-409"><a href="#cb57-409" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb57-410"><a href="#cb57-410" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-411"><a href="#cb57-411" aria-hidden="true" tabindex="-1"></a><span class="fu">## Para profundizar</span></span>
+<span id="cb57-412"><a href="#cb57-412" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-413"><a href="#cb57-413" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Fox, J. y Weisberg, S. (2019). *An R Companion to Applied Regression* (3.ª ed.). Sage.</span>
+<span id="cb57-414"><a href="#cb57-414" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Gelman, A., Hill, J. y Vehtari, A. (2020). *Regression and Other Stories*. Cambridge University Press.</span>
+<span id="cb57-415"><a href="#cb57-415" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Zuur, A. F., Ieno, E. N. y Elphick, C. S. (2010). A protocol for data exploration to avoid common statistical problems. *Methods in Ecology and Evolution*, 1(1), 3–14.</span>
+<span id="cb57-416"><a href="#cb57-416" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Lenth, R. V. Documentación de <span class="co">[</span><span class="ot">emmeans</span><span class="co">](https://rvlenth.github.io/emmeans/)</span>.</span>
+<span id="cb57-417"><a href="#cb57-417" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-418"><a href="#cb57-418" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="minimal"}</span>
+<span id="cb57-419"><a href="#cb57-419" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reproducibilidad</span></span>
+<span id="cb57-420"><a href="#cb57-420" aria-hidden="true" tabindex="-1"></a>Este cuaderno se ejecutó con R <span class="in">`r paste(R.version$major, R.version$minor, sep = ".")`</span>.</span>
+<span id="cb57-421"><a href="#cb57-421" aria-hidden="true" tabindex="-1"></a>:::</span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Made with ❤️ and Quarto</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

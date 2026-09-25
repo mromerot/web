@@ -1,0 +1,202 @@
+---
+title: "R: minicurso de análisis de datos y estadística"
+description: "Once cuadernos reproducibles en español para aprender R desde cero hasta modelos mixtos, series de tiempo, redes y análisis espacial."
+format: html
+editor: visual
+---
+
+## Presentación
+
+Este minicurso reúne, en once cuadernos, mis notas de trabajo con R en estadística, análisis de redes, series de tiempo y datos espaciales. Están reescritas como un curso: cada cuaderno explica la **teoría** necesaria, muestra el **código** paso a paso con datos que se pueden ejecutar sin descargar nada, incluye **gráficos** y termina con **ejercicios** resueltos y lecturas para profundizar.
+
+Todo el código se ejecuta al construir el sitio, por lo que los resultados y las figuras que ves son los que produce el código.
+
+## Cómo usar este curso
+
+- **Sigue el orden** si vienes de cero: cada módulo se apoya en los anteriores (los prerrequisitos están al inicio de cada cuaderno).
+- **Ejecuta el código** en RStudio o en Positron; copiar y pegar los bloques funciona porque los ejemplos usan datos incluidos en paquetes o simulados.
+- **Intenta los ejercicios** antes de abrir las soluciones plegables.
+- Si ya sabes R, entra directamente al módulo que necesites: los módulos 4 a 9 son bastante independientes entre sí.
+
+## Ruta de aprendizaje
+
+| Módulo | Tema | Duración y nivel |
+|---|---|---|
+| 0 | [Fundamentos de R](00-fundamentos.qmd) | 1,5 h · principiante |
+| 1 | [Programación: flujo, bucles y funciones](01-programacion.qmd) | 1,5 h · principiante |
+| 2 | [Manejo de datos con tidyverse](02-datos.qmd) | 3 h · principiante |
+| 3 | [Visualización con ggplot2](03-visualizacion.qmd) | 3 h · intermedio |
+| 4 | [Estadística básica](04-estadistica-basica.qmd) | 3 h · intermedio |
+| 5 | [Regresión lineal y ANOVA](05-modelos-lineales.qmd) | 4 h · intermedio |
+| 6 | [Modelos mixtos y medidas repetidas](06-modelos-mixtos.qmd) | 4 h · avanzado |
+| 7 | [GAM y series de tiempo](07-gam-series.qmd) | 4 h · avanzado |
+| 8 | [Análisis de redes con igraph](08-redes.qmd) | 2 h · intermedio |
+| 9 | [Análisis espacial](09-espacial.qmd) | 4 h · intermedio |
+| 10 | [Aplicaciones y proyectos](10-aplicaciones.qmd) | 4 h · avanzado |
+
+## Módulos
+
+:::::: mrw-cards-grid
+::: mrw-card
+::: mrw-card-header
+[Módulo 0. Fundamentos de R](00-fundamentos.qmd)
+:::
+
+::: mrw-card-body
+Objetos, vectores, matrices, ayuda, paquetes y buenas prácticas de estilo.
+
+*1,5 h · principiante*
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Módulo 1. Programación: flujo, bucles y funciones](01-programacion.qmd)
+:::
+
+::: mrw-card-body
+Condicionales, bucles, la familia apply, funciones propias y simulaciones.
+
+*1,5 h · principiante*
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Módulo 2. Manejo de datos con tidyverse](02-datos.qmd)
+:::
+
+::: mrw-card-body
+Importar, ordenar, transformar, unir, fechas, factores y datos faltantes.
+
+*3 h · principiante*
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Módulo 3. Visualización con ggplot2](03-visualizacion.qmd)
+:::
+
+::: mrw-card-body
+Gramática de gráficos, color, facetas, incertidumbre y gráficos interactivos.
+
+*3 h · intermedio*
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Módulo 4. Estadística básica](04-estadistica-basica.qmd)
+:::
+
+::: mrw-card-body
+Distribuciones, pruebas t y chi-cuadrado, correlación, permutación y bootstrap.
+
+*3 h · intermedio*
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Módulo 5. Regresión lineal y ANOVA](05-modelos-lineales.qmd)
+:::
+
+::: mrw-card-body
+Modelos lineales, diagnóstico, predicción, ANOVA, post hoc y medias marginales.
+
+*4 h · intermedio*
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Módulo 6. Modelos mixtos y medidas repetidas](06-modelos-mixtos.qmd)
+:::
+
+::: mrw-card-body
+Efectos aleatorios con lme4 y nlme, ICC, correlación temporal y modelos no lineales.
+
+*4 h · avanzado*
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Módulo 7. GAM y series de tiempo](07-gam-series.qmd)
+:::
+
+::: mrw-card-body
+Splines penalizados con mgcv, descomposición, ARIMA y pronóstico.
+
+*4 h · avanzado*
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Módulo 8. Análisis de redes con igraph](08-redes.qmd)
+:::
+
+::: mrw-card-body
+Centralidad, comunidades, modelos aleatorios, conectividad y PageRank.
+
+*2 h · intermedio*
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Módulo 9. Análisis espacial](09-espacial.qmd)
+:::
+
+::: mrw-card-body
+sf y terra, NetCDF, climatologías y autocorrelación espacial de Moran.
+
+*4 h · intermedio*
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Módulo 10. Aplicaciones y proyectos](10-aplicaciones.qmd)
+:::
+
+::: mrw-card-body
+Encuestas, web scraping, matrices de Leslie y proyectos reproducibles con Git.
+
+*4 h · avanzado*
+:::
+:::
+
+::::::
+
+## Instalación
+
+Necesitas [R](https://cran.r-project.org/) (versión 4.3 o superior) y, recomendado, [RStudio](https://posit.co/download/rstudio-desktop/). Los paquetes que se usan a lo largo del curso se instalan una sola vez:
+
+```r
+install.packages(c(
+  # datos y gráficos
+  "tidyverse", "palmerpenguins", "patchwork", "corrplot", "plotly", "scales",
+  # estadística y modelos
+  "broom", "car", "emmeans", "boot", "lme4", "lmerTest", "nlme", "performance", "mgcv",
+  # series de tiempo
+  "forecast", "tseries",
+  # redes
+  "igraph", "ggraph", "tidygraph", "igraphdata",
+  # espacial
+  "sf", "terra", "ncdf4",
+  # aplicaciones
+  "rvest", "jsonlite"
+))
+```
+
+::: {.callout-tip}
+## Si `igraph` o `sf` no se instalan en macOS
+Suelen fallar por librerías del sistema. Instálalas con Homebrew (`brew install libxml2 gdal udunits`) y, si usas Anaconda, procura que no aparezca primero en el `PATH` al compilar paquetes de R.
+:::
+
+## Sobre el material
+
+Las notas originales se escribieron durante varios años de cursos, talleres y proyectos de investigación en ecología marina, gestión del riesgo y ciencia de datos. Para este minicurso se **actualizaron** al ecosistema actual de R: `tidyverse` en lugar de `plyr`/`reshape`, `sf` y `terra` en lugar de `rgdal`/`raster`, y `lme4`/`mgcv`/`forecast` para modelos. Los conjuntos de datos son públicos o simulados. Si encuentras un error o tienes una sugerencia, puedes abrir una *issue* en el [repositorio del sitio](https://github.com/mromerot/web/issues).

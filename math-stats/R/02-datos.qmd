@@ -1,0 +1,388 @@
+---
+title: "Manejo de datos con tidyverse"
+subtitle: "Minicurso de R · Módulo 2"
+description: "Importar, limpiar, transformar, unir y reestructurar tablas de datos; fechas, factores y datos faltantes con dplyr, tidyr, lubridate y forcats."
+author: "Mauricio Romero"
+date: 2026-09-25
+format: html
+editor: visual
+categories: [R, datos, tidyverse, dplyr, tidyr]
+---
+
+::: {.callout-note appearance="minimal"}
+**Duración estimada:** 3 horas · **Nivel:** principiante–intermedio · **Prerrequisitos:** Módulos 0 y 1.
+:::
+
+## Objetivos de aprendizaje
+
+Al terminar este cuaderno podrás:
+
+1. **Importar y exportar** datos en CSV y otros formatos, sin depender de rutas absolutas.
+2. Explicar qué es un conjunto de datos **ordenado** (*tidy*) y reestructurar tablas entre formato ancho y largo.
+3. Seleccionar, filtrar, crear variables y resumir por grupos con `dplyr`.
+4. **Unir** tablas y combinar varios archivos en uno solo.
+5. Manejar **fechas**, **texto** y **factores**.
+6. Diagnosticar y tratar **datos faltantes**.
+
+```{r}
+#| label: paquetes
+library(tidyverse)   # dplyr, tidyr, readr, stringr, forcats, ggplot2...
+library(lubridate)   # fechas
+library(palmerpenguins)
+set.seed(2026)
+```
+
+## 1. Importar y exportar
+
+Los datos vienen casi siempre en archivos de texto separados por comas (CSV). `readr::read_csv()` es rápido, adivina el tipo de cada columna y devuelve un `tibble` (un `data.frame` con mejor impresión).
+
+Como aquí no tenemos un archivo, primero **escribimos** uno temporal y luego lo leemos. Es el mismo procedimiento que con tus propios archivos:
+
+```{r}
+#| label: importar
+ruta <- tempfile(fileext = ".csv")
+
+muestras <- tibble(
+  estacion = c("E01", "E02", "E03", "E04"),
+  fecha    = as.Date(c("2025-03-01", "2025-03-01", "2025-03-02", "2025-03-02")),
+  temp_c   = c(26.4, 27.1, NA, 25.8),
+  salinidad = c(34.9, 35.2, 35.0, 34.7)
+)
+
+write_csv(muestras, ruta)        # exportar
+leidos <- read_csv(ruta)         # importar
+leidos
+```
+
+Observa que `read_csv()` reconoció `fecha` como fecha (`<date>`) y `temp_c` como número. Si necesitas controlar los tipos usa `col_types`:
+
+```{r}
+#| label: col-types
+read_csv(ruta, col_types = cols(estacion = col_character(),
+                                fecha = col_date("%Y-%m-%d"),
+                                .default = col_double()))
+```
+
+::: {.callout-tip}
+## Consejos para archivos reales
+- Guarda los datos en una carpeta `datos/` **dentro del proyecto** y léelos con rutas relativas (`read_csv("datos/muestras.csv")`), nunca con rutas absolutas como `~/Google Drive/...`.
+- En archivos con coma decimal y punto y coma como separador usa `read_csv2()`. Si hay tildes mal leídas, indica `locale = locale(encoding = "latin1")`.
+- Para Excel usa `readxl::read_excel()`, para SPSS/Stata `haven::read_sav()` y para archivos enormes `data.table::fread()` o `arrow`.
+- Para guardar un objeto de R tal cual, usa `saveRDS()` / `readRDS()`.
+:::
+
+## 2. Teoría: datos ordenados (*tidy*)
+
+Un conjunto de datos es **ordenado** cuando cumple tres reglas (Wickham, 2014):
+
+1. Cada **variable** es una columna.
+2. Cada **observación** es una fila.
+3. Cada **valor** ocupa una celda.
+
+Muchas tablas hechas para leer (con años en columnas, por ejemplo) violan la regla 1. Se llaman de formato **ancho**. Para analizar y graficar con R conviene el formato **largo**.
+
+```{r}
+#| label: ancho
+ancho <- tibble(
+  pais = c("Colombia", "Perú", "Chile"),
+  `2020` = c(50.9, 33.0, 19.4),
+  `2021` = c(51.5, 33.4, 19.5),
+  `2022` = c(52.1, 33.7, 19.6)
+)
+ancho
+```
+
+`pivot_longer()` convierte columnas en filas y `pivot_wider()` hace lo contrario:
+
+```{r}
+#| label: pivot
+largo <- ancho |>
+  pivot_longer(cols = -pais, names_to = "anio", values_to = "poblacion_millones") |>
+  mutate(anio = as.integer(anio))
+largo
+
+largo |>
+  pivot_wider(names_from = pais, values_from = poblacion_millones)
+```
+
+```{r}
+#| label: fig-largo
+#| fig-cap: "El formato largo se mapea directamente a la estética de ggplot2: una columna para el eje x, una para el eje y y otra para el color."
+#| fig-height: 3
+ggplot(largo, aes(anio, poblacion_millones, colour = pais)) +
+  geom_line() + geom_point() +
+  scale_x_continuous(breaks = 2020:2022) +
+  scale_colour_brewer(palette = "Set2", name = NULL) +
+  labs(x = "Año", y = "Población (millones)") +
+  theme_minimal(base_size = 12)
+```
+
+## 3. Los verbos de dplyr
+
+`dplyr` resuelve la mayoría de las transformaciones con cinco verbos, que se encadenan con la tubería `|>` ("y luego"):
+
+| Verbo | Qué hace |
+|---|---|
+| `select()` | elige columnas |
+| `filter()` | elige filas según una condición |
+| `mutate()` | crea o modifica columnas |
+| `arrange()` | ordena filas |
+| `summarise()` con `group_by()` | resume por grupos |
+
+Usamos la tabla de pingüinos de Palmer (344 pingüinos de tres especies en la Antártida):
+
+```{r}
+#| label: pinguinos
+glimpse(penguins)
+```
+
+```{r}
+#| label: verbos
+penguins |>
+  select(especie = species, isla = island, masa_g = body_mass_g, sexo = sex) |>
+  filter(!is.na(masa_g), sexo == "female") |>
+  mutate(masa_kg = masa_g / 1000) |>
+  arrange(desc(masa_kg)) |>
+  head(5)
+```
+
+Resumir por grupos:
+
+```{r}
+#| label: resumen-grupos
+penguins |>
+  filter(!is.na(body_mass_g)) |>
+  group_by(species, island) |>
+  summarise(n = n(),
+            masa_media = mean(body_mass_g),
+            masa_sd = sd(body_mass_g),
+            .groups = "drop")
+```
+
+### Seleccionar el máximo de cada grupo
+
+Un problema frecuente es quedarse con la fila de mayor valor de cada grupo. `slice_max()` lo resuelve sin código complicado:
+
+```{r}
+#| label: slice-max
+penguins |>
+  filter(!is.na(body_mass_g)) |>
+  group_by(species) |>
+  slice_max(body_mass_g, n = 1, with_ties = FALSE) |>
+  select(species, island, sex, body_mass_g)
+```
+
+### Varias columnas a la vez con `across()`
+
+```{r}
+#| label: across
+penguins |>
+  group_by(species) |>
+  summarise(across(where(is.numeric), \(x) mean(x, na.rm = TRUE)))
+```
+
+## 4. Unir tablas
+
+Cuando la información está repartida en varias tablas se unen por una **llave** (columna en común). Los tipos de unión más usados son:
+
+| Función | Conserva |
+|---|---|
+| `left_join(x, y)` | todas las filas de `x` |
+| `inner_join(x, y)` | solo las filas con pareja en ambas |
+| `full_join(x, y)` | todas las filas de ambas |
+| `anti_join(x, y)` | filas de `x` sin pareja en `y` |
+
+```{r}
+#| label: joins
+estaciones <- tibble(estacion = c("E01", "E02", "E03", "E05"),
+                     municipio = c("Tumaco", "Buenaventura", "Bahía Solano", "Nuquí"))
+
+leidos |> left_join(estaciones, by = "estacion")     # conserva las 4 muestras
+leidos |> inner_join(estaciones, by = "estacion")    # solo las que tienen municipio
+leidos |> anti_join(estaciones, by = "estacion")     # muestras sin municipio
+```
+
+### Combinar varios archivos en uno
+
+Si tienes un archivo por mes (o por estación) con las mismas columnas, léelos todos y apílalos:
+
+```{r}
+#| label: varios-archivos
+carpeta <- file.path(tempdir(), "mensual")
+dir.create(carpeta, showWarnings = FALSE)
+
+for (mes in c("2025-01", "2025-02", "2025-03")) {
+  tibble(mes = mes, estacion = c("E01", "E02"), lluvia_mm = round(runif(2, 0, 200))) |>
+    write_csv(file.path(carpeta, paste0("lluvia_", mes, ".csv")))
+}
+
+archivos <- list.files(carpeta, pattern = "\\.csv$", full.names = TRUE)
+todos <- map_dfr(archivos, read_csv, show_col_types = FALSE)
+todos
+```
+
+## 5. Texto, fechas y factores
+
+### Texto con `stringr`
+
+Un problema típico es que los códigos pierden los ceros a la izquierda al importarlos (`"007"` se vuelve `7`). `str_pad()` los recupera:
+
+```{r}
+#| label: stringr
+codigos <- c(7, 42, 105)
+str_pad(codigos, width = 4, side = "left", pad = "0")
+
+nombres <- c("  Bogotá D.C. ", "MEDELLÍN", "cali")
+nombres |> str_trim() |> str_to_title()
+str_detect(nombres, regex("cali", ignore_case = TRUE))
+```
+
+### Fechas con `lubridate`
+
+Las fechas se guardan como números (días desde 1970-01-01), lo que permite restarlas y extraer componentes. Las funciones `ymd()`, `dmy()`, `mdy()` interpretan el orden que tenga el texto:
+
+```{r}
+#| label: fechas
+f <- dmy(c("15/03/2025", "01/07/2025", "31/12/2025"))
+f
+year(f); month(f, label = TRUE); wday(f, label = TRUE)
+f[2] - f[1]                          # diferencia en días
+interval(f[1], f[3]) / months(1)     # diferencia en meses
+seq(f[1], by = "month", length.out = 4)
+```
+
+```{r}
+#| label: fig-fechas
+#| fig-cap: "Agrupar por mes con floor_date() es la forma más simple de pasar de datos diarios a mensuales."
+#| fig-height: 3
+diario <- tibble(fecha = seq(ymd("2025-01-01"), ymd("2025-06-30"), by = "day"),
+                 lluvia = rgamma(181, shape = 0.6, scale = 8))
+
+diario |>
+  mutate(mes = floor_date(fecha, "month")) |>
+  group_by(mes) |>
+  summarise(total_mm = sum(lluvia)) |>
+  ggplot(aes(mes, total_mm)) +
+  geom_col(fill = "#2a9d8f") +
+  scale_x_date(date_labels = "%b") +
+  labs(x = NULL, y = "Lluvia mensual (mm)") +
+  theme_minimal(base_size = 12)
+```
+
+### Factores con `forcats`
+
+Un **factor** es una variable categórica con un conjunto fijo de niveles, y su orden define cómo se ordenan tablas y gráficos.
+
+```{r}
+#| label: fig-factores
+#| fig-cap: "fct_reorder() ordena las categorías por su valor, lo que hace el gráfico mucho más fácil de leer."
+#| fig-height: 2.8
+penguins |>
+  filter(!is.na(body_mass_g)) |>
+  group_by(species) |>
+  summarise(masa = mean(body_mass_g)) |>
+  mutate(species = fct_reorder(species, masa)) |>
+  ggplot(aes(masa, species)) +
+  geom_col(fill = "#e76f51") +
+  labs(x = "Masa media (g)", y = NULL) +
+  theme_minimal(base_size = 12)
+```
+
+Otras funciones útiles: `fct_relevel()` (cambiar el orden a mano), `fct_recode()` (renombrar niveles), `fct_lump_n()` (agrupar niveles raros en "Otros") y `droplevels()` (descartar niveles sin datos).
+
+## 6. Datos faltantes
+
+Antes de decidir qué hacer con los `NA` hay que preguntarse **por qué faltan** (Rubin, 1976):
+
+- **MCAR** (*missing completely at random*): la probabilidad de faltar no depende de nada. Eliminar los casos incompletos no sesga, solo pierde información.
+- **MAR** (*missing at random*): depende de otras variables **observadas** (por ejemplo, los hombres responden menos una pregunta). Se puede corregir usando esas variables.
+- **MNAR** (*missing not at random*): depende del propio valor faltante (quien tiene ingresos altos no los declara). Es el caso más difícil y no se corrige con métodos automáticos.
+
+Primero, contar dónde faltan los datos:
+
+```{r}
+#| label: faltantes
+penguins |>
+  summarise(across(everything(), \(x) sum(is.na(x)))) |>
+  pivot_longer(everything(), names_to = "variable", values_to = "faltantes") |>
+  filter(faltantes > 0)
+```
+
+Luego, explorar si faltan de forma aleatoria: ¿hay más `NA` en el sexo según la especie o la isla?
+
+```{r}
+#| label: patron-faltantes
+penguins |>
+  group_by(species, island) |>
+  summarise(prop_sexo_faltante = mean(is.na(sex)), n = n(), .groups = "drop")
+```
+
+Las opciones más simples para tratarlos son: **eliminar** (`drop_na()`), que es razonable si es MCAR y son pocos casos, o **imputar** (reemplazar por un valor razonable), por ejemplo con la mediana del grupo:
+
+```{r}
+#| label: imputacion
+completos <- penguins |> drop_na(body_mass_g, sex)
+nrow(penguins); nrow(completos)
+
+imputado <- penguins |>
+  group_by(species) |>
+  mutate(masa_imputada = coalesce(body_mass_g, median(body_mass_g, na.rm = TRUE))) |>
+  ungroup()
+
+imputado |> filter(is.na(body_mass_g)) |> select(species, body_mass_g, masa_imputada)
+```
+
+::: {.callout-warning}
+## Cuidado con la imputación simple
+Reemplazar por la media o la mediana reduce artificialmente la variabilidad y puede sesgar relaciones entre variables. Para análisis formales usa **imputación múltiple** (paquete `mice`) e incluye el mecanismo supuesto en la discusión de resultados.
+:::
+
+## Ejercicios
+
+1. **Importar.** Escribe el tibble `muestras` a un CSV con `write_csv()`, léelo de nuevo y comprueba con `all.equal()` que es idéntico al original.
+2. **Ordenar.** La tabla `ancho` tiene un país por fila y un año por columna. Conviértela a formato largo y calcula el crecimiento porcentual entre 2020 y 2022 de cada país.
+3. **Resumir.** Con `penguins`, calcula la media del largo del pico (`bill_length_mm`) por especie y sexo, ignorando faltantes. ¿Qué grupo tiene el pico más largo?
+4. **Unir.** Crea una tabla con la altitud de cada una de las estaciones E01–E04 y únela a `leidos`.
+5. **Fechas.** ¿Cuántos días hay entre `2025-03-15` y el 1 de enero de 2026? ¿Qué día de la semana cae?
+
+::: {.callout-note collapse="true"}
+## Soluciones sugeridas
+
+```{r}
+#| label: soluciones
+# 1
+tmp <- tempfile(fileext = ".csv"); write_csv(muestras, tmp)
+all.equal(muestras, read_csv(tmp, show_col_types = FALSE), check.attributes = FALSE)
+
+# 2
+ancho |>
+  pivot_longer(-pais, names_to = "anio", values_to = "pob") |>
+  group_by(pais) |>
+  summarise(crecimiento_pct = (pob[anio == "2022"] / pob[anio == "2020"] - 1) * 100)
+
+# 3
+penguins |>
+  filter(!is.na(sex)) |>
+  group_by(species, sex) |>
+  summarise(pico_medio = mean(bill_length_mm, na.rm = TRUE), .groups = "drop") |>
+  arrange(desc(pico_medio))
+
+# 5
+d <- ymd("2026-01-01") - ymd("2025-03-15")
+d
+wday(ymd("2025-03-15"), label = TRUE, abbr = FALSE)
+```
+:::
+
+## Para profundizar
+
+- Wickham, H. (2014). Tidy data. *Journal of Statistical Software*, 59(10). <https://doi.org/10.18637/jss.v059.i10>
+- Wickham, H., Çetinkaya-Rundel, M. y Grolemund, G. (2023). *R for Data Science* (2.ª ed.). [r4ds.hadley.nz](https://r4ds.hadley.nz/).
+- Rubin, D. B. (1976). Inference and missing data. *Biometrika*, 63(3), 581–592.
+- van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2.ª ed.). [stefvanbuuren.name/fimd](https://stefvanbuuren.name/fimd/).
+- Hojas de referencia de Posit: [posit.co/resources/cheatsheets](https://posit.co/resources/cheatsheets/).
+
+::: {.callout-note appearance="minimal"}
+## Reproducibilidad
+Este cuaderno se ejecutó con R `r paste(R.version$major, R.version$minor, sep = ".")` y dplyr `r as.character(packageVersion("dplyr"))`.
+:::

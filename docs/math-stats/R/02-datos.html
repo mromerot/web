@@ -1,0 +1,2564 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mauricio Romero">
+<meta name="dcterms.date" content="2026-09-25">
+<meta name="description" content="Importar, limpiar, transformar, unir y reestructurar tablas de datos; fechas, factores y datos faltantes con dplyr, tidyr, lubridate y forcats.">
+
+<title>Manejo de datos con tidyverse – Inicio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c0268bb2cd26ea8ad2ddef1ccaf3bc3a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4910f9121cc0cf878839b371e47b8836.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
+</script>
+<!-- Google Site Verification -->
+<!-- Reemplaza XXXXX con tu código de verificación de Google Search Console -->
+<!-- <meta name="google-site-verification" content="XXXXX" /> -->
+
+<!-- Meta tags adicionales para SEO -->
+<meta name="author" content="Mauricio Romero Torres">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@mauricioromerot">
+
+<!-- Schema.org markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mauricio Romero Torres",
+  "jobTitle": "Gestor de ciencia y tecnología",
+  "url": "https://mromerot.github.io/web/",
+  "sameAs": [
+    "https://x.com/mauricioromerot",
+    "https://www.linkedin.com/in/mauricio-romero-torres-1b33b95/",
+    "https://scholar.google.com/citations?user=n484vskAAAAJ"
+  ]
+}
+</script>
+
+
+<meta property="og:title" content="Manejo de datos con tidyverse – Inicio">
+<meta property="og:description" content="Importar, limpiar, transformar, unir y reestructurar tablas de datos; fechas, factores y datos faltantes con dplyr, tidyr, lubridate y forcats.">
+<meta property="og:image" content="https://mromerot.github.io/web/math-stats/R/02-datos_files/figure-html/fig-largo-1.png">
+<meta property="og:site_name" content="Inicio">
+<meta property="og:image:height" content="900">
+<meta property="og:image:width" content="2100">
+<meta name="twitter:title" content="Manejo de datos con tidyverse – Inicio">
+<meta name="twitter:description" content="Importar, limpiar, transformar, unir y reestructurar tablas de datos; fechas, factores y datos faltantes con dplyr, tidyr, lubridate y forcats.">
+<meta name="twitter:image" content="https://mromerot.github.io/web/math-stats/R/02-datos_files/figure-html/fig-largo-1.png">
+<meta name="twitter:image-height" content="900">
+<meta name="twitter:image-width" content="2100">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../math-stats/math-stats.html">Matemáticas y estadística</a></li><li class="breadcrumb-item"><a href="../../math-stats/R/index.html">R: minicurso</a></li><li class="breadcrumb-item"><a href="../../math-stats/R/02-datos.html">Módulo 2. Manejo de datos con tidyverse</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Inicio</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/gestiondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/conocimientodelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conocimiento del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/conocimiento-indicadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indicadores de riesgo nacionales y mundiales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/reducciondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reducción del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/manejodedesastres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manejo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/cienciaytecnologia/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/cienciaytecnologia/cienciaytecnologia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/cienciaytecnologia/estado-ciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estado de la ciencia 2024</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/cienciaytecnologia/hoja-de-ruta-ct.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hoja de ruta de ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/cienciaytecnologia/marco-sendai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Marco de Sendai</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/educacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Cursos, redes y recursos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/cursos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cursos en GRD</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/plataformas-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plataformas y redes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/repositorios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repositorios FAIR</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/sat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sistemas de alerta temprana</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/hidrol-meteorologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas hidrológicas y meteorológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/hidrol-meteorologicas/elnino.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">El Niño / La Niña</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/hidrol-meteorologicas/huracanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Huracanes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/hidrol-meteorologicas/inundaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/hidrol-meteorologicas/inundaciones-repentinas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones repentinas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/hidrol-meteorologicas/olasdecalor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Olas de calor</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/geologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas geológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/geologicas/falladeterreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Falla de terreno</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/geologicas/riesgosismico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgo sísmico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/geologicas/tsunami.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tsunami</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/geologicas/volcanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Volcanes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/ambientales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas ambientales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/ambientales/erosioncostera.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Erosión costera</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/ambientales/incendiosforestales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Incendios forestales</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/biologicos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas biológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/biologicos/covid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">COVID-19</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/tecnologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/tecnologicas/amenazastecnol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/sociales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas sociales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/sociales/migracion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Migración</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/extraterrestre/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/extraterrestre/amenazasextraterrestres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/amazonas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amazonas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/ciudades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciudades</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/glosario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Terminología</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../gcc/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gcc/gestion-cambio-climatico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../gestiondeproyectos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/gestionproyectosciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos de CTeI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/gestiontecnologiainnovacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de tecnología e innovación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/liderazgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Liderazgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/estrategia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estrategia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/metodologias-pm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metodologías de gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/skills-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Competencias clave en la gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/impacto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Impacto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/dofa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DOFA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/mapa-actores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa de actores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/gestion-conocimiento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del conocimiento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/Linea-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Línea base</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/pestel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PESTEL</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/swot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SWOT</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/conpes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CONPES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/riesgos-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgos en proyectos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../cyt/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../cyt/escrituraypublicacionacademica/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cyt/escrituraypublicacionacademica/escrituraypublicacionacademica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cyt/escrituraypublicacionacademica/parrafos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Párrafos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cyt/cienciareproduc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia reproducible</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cyt/transdisciplina.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia transdiciplinar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cyt/interfaz-cps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interfaz ciencia-política-sociedad</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../educacion/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../educacion/docenciaeducacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Docencia y educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../educacion/ova/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Objetos virtuales de aprendizaje (OVA)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ecolyconserv/ecologiayconservacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ecología y conservación marina</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../datascience/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/cienciadedatos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/myst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Myst</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/markdown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Markdown</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Github</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/google-colab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Google Colab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/jupyter-notebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter Notebook</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/graficas-python-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Graficas Python y R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/ia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inteligencia artificial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/vs-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/hugging-face.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hugging Face</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../datascience/mapas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/mapas/mapa_colombia_observable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (Observable / TopoJSON)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/mapas/mapa_colombia_pmtiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (PMTiles)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/mapas/mapa_colombia_tiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (Tiles)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/mapas/mapa_colombia_nri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índice de Riesgo (NRI)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/d3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/d3-experiment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Experimento con D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/claude.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/claude-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude Skills (Slides)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../math-stats/math-stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matemáticas y estadística</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../math-stats/R/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R: minicurso</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/00-fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 0. Fundamentos de R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/01-programacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 1. Programación: flujo, bucles y funciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/02-datos.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Módulo 2. Manejo de datos con tidyverse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/03-visualizacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 3. Visualización con ggplot2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/04-estadistica-basica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 4. Estadística básica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/05-modelos-lineales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 5. Regresión lineal y ANOVA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/06-modelos-mixtos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 6. Modelos mixtos y medidas repetidas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/07-gam-series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 7. GAM y series de tiempo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/08-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 8. Análisis de redes con igraph</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/09-espacial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 9. Análisis espacial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/10-aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 10. Aplicaciones y proyectos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../vidalaboral/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../vidalaboral/cafe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Café</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../vidalaboral/vidalaboral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../vidalaboral/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul class="collapse">
+  <li><a href="#objetivos-de-aprendizaje" id="toc-objetivos-de-aprendizaje" class="nav-link active" data-scroll-target="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
+  <li><a href="#importar-y-exportar" id="toc-importar-y-exportar" class="nav-link" data-scroll-target="#importar-y-exportar">1. Importar y exportar</a></li>
+  <li><a href="#teoría-datos-ordenados-tidy" id="toc-teoría-datos-ordenados-tidy" class="nav-link" data-scroll-target="#teoría-datos-ordenados-tidy">2. Teoría: datos ordenados (<em>tidy</em>)</a></li>
+  <li><a href="#los-verbos-de-dplyr" id="toc-los-verbos-de-dplyr" class="nav-link" data-scroll-target="#los-verbos-de-dplyr">3. Los verbos de dplyr</a></li>
+  <li><a href="#unir-tablas" id="toc-unir-tablas" class="nav-link" data-scroll-target="#unir-tablas">4. Unir tablas</a></li>
+  <li><a href="#texto-fechas-y-factores" id="toc-texto-fechas-y-factores" class="nav-link" data-scroll-target="#texto-fechas-y-factores">5. Texto, fechas y factores</a></li>
+  <li><a href="#datos-faltantes" id="toc-datos-faltantes" class="nav-link" data-scroll-target="#datos-faltantes">6. Datos faltantes</a></li>
+  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a></li>
+  <li><a href="#para-profundizar" id="toc-para-profundizar" class="nav-link" data-scroll-target="#para-profundizar">Para profundizar</a></li>
+  </ul>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../math-stats/math-stats.html">Matemáticas y estadística</a></li><li class="breadcrumb-item"><a href="../../math-stats/R/index.html">R: minicurso</a></li><li class="breadcrumb-item"><a href="../../math-stats/R/02-datos.html">Módulo 2. Manejo de datos con tidyverse</a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Manejo de datos con tidyverse</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Minicurso de R · Módulo 2</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">datos</div>
+    <div class="quarto-category">tidyverse</div>
+    <div class="quarto-category">dplyr</div>
+    <div class="quarto-category">tidyr</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Importar, limpiar, transformar, unir y reestructurar tablas de datos; fechas, factores y datos faltantes con dplyr, tidyr, lubridate y forcats.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mauricio Romero </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 25, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Duración estimada:</strong> 3 horas · <strong>Nivel:</strong> principiante–intermedio · <strong>Prerrequisitos:</strong> Módulos 0 y 1.</p>
+</div>
+</div>
+</div>
+<section id="objetivos-de-aprendizaje" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos-de-aprendizaje">Objetivos de aprendizaje</h2>
+<p>Al terminar este cuaderno podrás:</p>
+<ol type="1">
+<li><strong>Importar y exportar</strong> datos en CSV y otros formatos, sin depender de rutas absolutas.</li>
+<li>Explicar qué es un conjunto de datos <strong>ordenado</strong> (<em>tidy</em>) y reestructurar tablas entre formato ancho y largo.</li>
+<li>Seleccionar, filtrar, crear variables y resumir por grupos con <code>dplyr</code>.</li>
+<li><strong>Unir</strong> tablas y combinar varios archivos en uno solo.</li>
+<li>Manejar <strong>fechas</strong>, <strong>texto</strong> y <strong>factores</strong>.</li>
+<li>Diagnosticar y tratar <strong>datos faltantes</strong>.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)   <span class="co"># dplyr, tidyr, readr, stringr, forcats, ggplot2...</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)   <span class="co"># fechas</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2026</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="importar-y-exportar" class="level2">
+<h2 class="anchored" data-anchor-id="importar-y-exportar">1. Importar y exportar</h2>
+<p>Los datos vienen casi siempre en archivos de texto separados por comas (CSV). <code>readr::read_csv()</code> es rápido, adivina el tipo de cada columna y devuelve un <code>tibble</code> (un <code>data.frame</code> con mejor impresión).</p>
+<p>Como aquí no tenemos un archivo, primero <strong>escribimos</strong> uno temporal y luego lo leemos. Es el mismo procedimiento que con tus propios archivos:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ruta <span class="ot">&lt;-</span> <span class="fu">tempfile</span>(<span class="at">fileext =</span> <span class="st">".csv"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>muestras <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">estacion =</span> <span class="fu">c</span>(<span class="st">"E01"</span>, <span class="st">"E02"</span>, <span class="st">"E03"</span>, <span class="st">"E04"</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">fecha    =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">"2025-03-01"</span>, <span class="st">"2025-03-01"</span>, <span class="st">"2025-03-02"</span>, <span class="st">"2025-03-02"</span>)),</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">temp_c   =</span> <span class="fu">c</span>(<span class="fl">26.4</span>, <span class="fl">27.1</span>, <span class="cn">NA</span>, <span class="fl">25.8</span>),</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">salinidad =</span> <span class="fu">c</span>(<span class="fl">34.9</span>, <span class="fl">35.2</span>, <span class="fl">35.0</span>, <span class="fl">34.7</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(muestras, ruta)        <span class="co"># exportar</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>leidos <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(ruta)         <span class="co"># importar</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>leidos</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 4
+  estacion fecha      temp_c salinidad
+  &lt;chr&gt;    &lt;date&gt;      &lt;dbl&gt;     &lt;dbl&gt;
+1 E01      2025-03-01   26.4      34.9
+2 E02      2025-03-01   27.1      35.2
+3 E03      2025-03-02   NA        35  
+4 E04      2025-03-02   25.8      34.7</code></pre>
+</div>
+</div>
+<p>Observa que <code>read_csv()</code> reconoció <code>fecha</code> como fecha (<code>&lt;date&gt;</code>) y <code>temp_c</code> como número. Si necesitas controlar los tipos usa <code>col_types</code>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(ruta, <span class="at">col_types =</span> <span class="fu">cols</span>(<span class="at">estacion =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                                <span class="at">fecha =</span> <span class="fu">col_date</span>(<span class="st">"%Y-%m-%d"</span>),</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                                <span class="at">.default =</span> <span class="fu">col_double</span>()))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 4
+  estacion fecha      temp_c salinidad
+  &lt;chr&gt;    &lt;date&gt;      &lt;dbl&gt;     &lt;dbl&gt;
+1 E01      2025-03-01   26.4      34.9
+2 E02      2025-03-01   27.1      35.2
+3 E03      2025-03-02   NA        35  
+4 E04      2025-03-02   25.8      34.7</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Consejos para archivos reales
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Guarda los datos en una carpeta <code>datos/</code> <strong>dentro del proyecto</strong> y léelos con rutas relativas (<code>read_csv("datos/muestras.csv")</code>), nunca con rutas absolutas como <code>~/Google Drive/...</code>.</li>
+<li>En archivos con coma decimal y punto y coma como separador usa <code>read_csv2()</code>. Si hay tildes mal leídas, indica <code>locale = locale(encoding = "latin1")</code>.</li>
+<li>Para Excel usa <code>readxl::read_excel()</code>, para SPSS/Stata <code>haven::read_sav()</code> y para archivos enormes <code>data.table::fread()</code> o <code>arrow</code>.</li>
+<li>Para guardar un objeto de R tal cual, usa <code>saveRDS()</code> / <code>readRDS()</code>.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="teoría-datos-ordenados-tidy" class="level2">
+<h2 class="anchored" data-anchor-id="teoría-datos-ordenados-tidy">2. Teoría: datos ordenados (<em>tidy</em>)</h2>
+<p>Un conjunto de datos es <strong>ordenado</strong> cuando cumple tres reglas (Wickham, 2014):</p>
+<ol type="1">
+<li>Cada <strong>variable</strong> es una columna.</li>
+<li>Cada <strong>observación</strong> es una fila.</li>
+<li>Cada <strong>valor</strong> ocupa una celda.</li>
+</ol>
+<p>Muchas tablas hechas para leer (con años en columnas, por ejemplo) violan la regla 1. Se llaman de formato <strong>ancho</strong>. Para analizar y graficar con R conviene el formato <strong>largo</strong>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ancho <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">pais =</span> <span class="fu">c</span>(<span class="st">"Colombia"</span>, <span class="st">"Perú"</span>, <span class="st">"Chile"</span>),</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">2020</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">50.9</span>, <span class="fl">33.0</span>, <span class="fl">19.4</span>),</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">2021</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">51.5</span>, <span class="fl">33.4</span>, <span class="fl">19.5</span>),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">2022</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">52.1</span>, <span class="fl">33.7</span>, <span class="fl">19.6</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>ancho</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+  pais     `2020` `2021` `2022`
+  &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+1 Colombia   50.9   51.5   52.1
+2 Perú       33     33.4   33.7
+3 Chile      19.4   19.5   19.6</code></pre>
+</div>
+</div>
+<p><code>pivot_longer()</code> convierte columnas en filas y <code>pivot_wider()</code> hace lo contrario:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>largo <span class="ot">&lt;-</span> ancho <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>pais, <span class="at">names_to =</span> <span class="st">"anio"</span>, <span class="at">values_to =</span> <span class="st">"poblacion_millones"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">anio =</span> <span class="fu">as.integer</span>(anio))</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>largo</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9 × 3
+  pais      anio poblacion_millones
+  &lt;chr&gt;    &lt;int&gt;              &lt;dbl&gt;
+1 Colombia  2020               50.9
+2 Colombia  2021               51.5
+3 Colombia  2022               52.1
+4 Perú      2020               33  
+5 Perú      2021               33.4
+6 Perú      2022               33.7
+7 Chile     2020               19.4
+8 Chile     2021               19.5
+9 Chile     2022               19.6</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>largo <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> pais, <span class="at">values_from =</span> poblacion_millones)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+   anio Colombia  Perú Chile
+  &lt;int&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1  2020     50.9  33    19.4
+2  2021     51.5  33.4  19.5
+3  2022     52.1  33.7  19.6</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(largo, <span class="fu">aes</span>(anio, poblacion_millones, <span class="at">colour =</span> pais)) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">2020</span><span class="sc">:</span><span class="dv">2022</span>) <span class="sc">+</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_brewer</span>(<span class="at">palette =</span> <span class="st">"Set2"</span>, <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Año"</span>, <span class="at">y =</span> <span class="st">"Población (millones)"</span>) <span class="sc">+</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-largo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-largo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-datos_files/figure-html/fig-largo-1.png" class="img-fluid figure-img" width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-largo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: El formato largo se mapea directamente a la estética de ggplot2: una columna para el eje x, una para el eje y y otra para el color.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="los-verbos-de-dplyr" class="level2">
+<h2 class="anchored" data-anchor-id="los-verbos-de-dplyr">3. Los verbos de dplyr</h2>
+<p><code>dplyr</code> resuelve la mayoría de las transformaciones con cinco verbos, que se encadenan con la tubería <code>|&gt;</code> (“y luego”):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Verbo</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>select()</code></td>
+<td>elige columnas</td>
+</tr>
+<tr class="even">
+<td><code>filter()</code></td>
+<td>elige filas según una condición</td>
+</tr>
+<tr class="odd">
+<td><code>mutate()</code></td>
+<td>crea o modifica columnas</td>
+</tr>
+<tr class="even">
+<td><code>arrange()</code></td>
+<td>ordena filas</td>
+</tr>
+<tr class="odd">
+<td><code>summarise()</code> con <code>group_by()</code></td>
+<td>resume por grupos</td>
+</tr>
+</tbody>
+</table>
+<p>Usamos la tabla de pingüinos de Palmer (344 pingüinos de tres especies en la Antártida):</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(penguins)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 344
+Columns: 8
+$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…
+$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…
+$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …
+$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …
+$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…
+$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …
+$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…
+$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">especie =</span> species, <span class="at">isla =</span> island, <span class="at">masa_g =</span> body_mass_g, <span class="at">sexo =</span> sex) <span class="sc">|&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(masa_g), sexo <span class="sc">==</span> <span class="st">"female"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">masa_kg =</span> masa_g <span class="sc">/</span> <span class="dv">1000</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(masa_kg)) <span class="sc">|&gt;</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 5
+  especie isla   masa_g sexo   masa_kg
+  &lt;fct&gt;   &lt;fct&gt;   &lt;int&gt; &lt;fct&gt;    &lt;dbl&gt;
+1 Gentoo  Biscoe   5200 female    5.2 
+2 Gentoo  Biscoe   5200 female    5.2 
+3 Gentoo  Biscoe   5150 female    5.15
+4 Gentoo  Biscoe   5100 female    5.1 
+5 Gentoo  Biscoe   5050 female    5.05</code></pre>
+</div>
+</div>
+<p>Resumir por grupos:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(body_mass_g)) <span class="sc">|&gt;</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species, island) <span class="sc">|&gt;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">masa_media =</span> <span class="fu">mean</span>(body_mass_g),</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">masa_sd =</span> <span class="fu">sd</span>(body_mass_g),</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 5
+  species   island        n masa_media masa_sd
+  &lt;fct&gt;     &lt;fct&gt;     &lt;int&gt;      &lt;dbl&gt;   &lt;dbl&gt;
+1 Adelie    Biscoe       44      3710.    488.
+2 Adelie    Dream        56      3688.    455.
+3 Adelie    Torgersen    51      3706.    445.
+4 Chinstrap Dream        68      3733.    384.
+5 Gentoo    Biscoe      123      5076.    504.</code></pre>
+</div>
+</div>
+<section id="seleccionar-el-máximo-de-cada-grupo" class="level3">
+<h3 class="anchored" data-anchor-id="seleccionar-el-máximo-de-cada-grupo">Seleccionar el máximo de cada grupo</h3>
+<p>Un problema frecuente es quedarse con la fila de mayor valor de cada grupo. <code>slice_max()</code> lo resuelve sin código complicado:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(body_mass_g)) <span class="sc">|&gt;</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species) <span class="sc">|&gt;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(body_mass_g, <span class="at">n =</span> <span class="dv">1</span>, <span class="at">with_ties =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(species, island, sex, body_mass_g)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+# Groups:   species [3]
+  species   island sex   body_mass_g
+  &lt;fct&gt;     &lt;fct&gt;  &lt;fct&gt;       &lt;int&gt;
+1 Adelie    Biscoe male         4775
+2 Chinstrap Dream  male         4800
+3 Gentoo    Biscoe male         6300</code></pre>
+</div>
+</div>
+</section>
+<section id="varias-columnas-a-la-vez-con-across" class="level3">
+<h3 class="anchored" data-anchor-id="varias-columnas-a-la-vez-con-across">Varias columnas a la vez con <code>across()</code></h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species) <span class="sc">|&gt;</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), \(x) <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 6
+  species   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g  year
+  &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;
+1 Adelie              38.8          18.3              190.       3701. 2008.
+2 Chinstrap           48.8          18.4              196.       3733. 2008.
+3 Gentoo              47.5          15.0              217.       5076. 2008.</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="unir-tablas" class="level2">
+<h2 class="anchored" data-anchor-id="unir-tablas">4. Unir tablas</h2>
+<p>Cuando la información está repartida en varias tablas se unen por una <strong>llave</strong> (columna en común). Los tipos de unión más usados son:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Función</th>
+<th>Conserva</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>left_join(x, y)</code></td>
+<td>todas las filas de <code>x</code></td>
+</tr>
+<tr class="even">
+<td><code>inner_join(x, y)</code></td>
+<td>solo las filas con pareja en ambas</td>
+</tr>
+<tr class="odd">
+<td><code>full_join(x, y)</code></td>
+<td>todas las filas de ambas</td>
+</tr>
+<tr class="even">
+<td><code>anti_join(x, y)</code></td>
+<td>filas de <code>x</code> sin pareja en <code>y</code></td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>estaciones <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">estacion =</span> <span class="fu">c</span>(<span class="st">"E01"</span>, <span class="st">"E02"</span>, <span class="st">"E03"</span>, <span class="st">"E05"</span>),</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">municipio =</span> <span class="fu">c</span>(<span class="st">"Tumaco"</span>, <span class="st">"Buenaventura"</span>, <span class="st">"Bahía Solano"</span>, <span class="st">"Nuquí"</span>))</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>leidos <span class="sc">|&gt;</span> <span class="fu">left_join</span>(estaciones, <span class="at">by =</span> <span class="st">"estacion"</span>)     <span class="co"># conserva las 4 muestras</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 5
+  estacion fecha      temp_c salinidad municipio   
+  &lt;chr&gt;    &lt;date&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;       
+1 E01      2025-03-01   26.4      34.9 Tumaco      
+2 E02      2025-03-01   27.1      35.2 Buenaventura
+3 E03      2025-03-02   NA        35   Bahía Solano
+4 E04      2025-03-02   25.8      34.7 &lt;NA&gt;        </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>leidos <span class="sc">|&gt;</span> <span class="fu">inner_join</span>(estaciones, <span class="at">by =</span> <span class="st">"estacion"</span>)    <span class="co"># solo las que tienen municipio</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+  estacion fecha      temp_c salinidad municipio   
+  &lt;chr&gt;    &lt;date&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;       
+1 E01      2025-03-01   26.4      34.9 Tumaco      
+2 E02      2025-03-01   27.1      35.2 Buenaventura
+3 E03      2025-03-02   NA        35   Bahía Solano</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>leidos <span class="sc">|&gt;</span> <span class="fu">anti_join</span>(estaciones, <span class="at">by =</span> <span class="st">"estacion"</span>)     <span class="co"># muestras sin municipio</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 4
+  estacion fecha      temp_c salinidad
+  &lt;chr&gt;    &lt;date&gt;      &lt;dbl&gt;     &lt;dbl&gt;
+1 E04      2025-03-02   25.8      34.7</code></pre>
+</div>
+</div>
+<section id="combinar-varios-archivos-en-uno" class="level3">
+<h3 class="anchored" data-anchor-id="combinar-varios-archivos-en-uno">Combinar varios archivos en uno</h3>
+<p>Si tienes un archivo por mes (o por estación) con las mismas columnas, léelos todos y apílalos:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>carpeta <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">"mensual"</span>)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(carpeta, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (mes <span class="cf">in</span> <span class="fu">c</span>(<span class="st">"2025-01"</span>, <span class="st">"2025-02"</span>, <span class="st">"2025-03"</span>)) {</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">mes =</span> mes, <span class="at">estacion =</span> <span class="fu">c</span>(<span class="st">"E01"</span>, <span class="st">"E02"</span>), <span class="at">lluvia_mm =</span> <span class="fu">round</span>(<span class="fu">runif</span>(<span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">200</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write_csv</span>(<span class="fu">file.path</span>(carpeta, <span class="fu">paste0</span>(<span class="st">"lluvia_"</span>, mes, <span class="st">".csv"</span>)))</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>archivos <span class="ot">&lt;-</span> <span class="fu">list.files</span>(carpeta, <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.csv$"</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>todos <span class="ot">&lt;-</span> <span class="fu">map_dfr</span>(archivos, read_csv, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>todos</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  mes     estacion lluvia_mm
+  &lt;chr&gt;   &lt;chr&gt;        &lt;dbl&gt;
+1 2025-01 E01            140
+2 2025-01 E02            111
+3 2025-02 E01             28
+4 2025-02 E02             57
+5 2025-03 E01            111
+6 2025-03 E02              5</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="texto-fechas-y-factores" class="level2">
+<h2 class="anchored" data-anchor-id="texto-fechas-y-factores">5. Texto, fechas y factores</h2>
+<section id="texto-con-stringr" class="level3">
+<h3 class="anchored" data-anchor-id="texto-con-stringr">Texto con <code>stringr</code></h3>
+<p>Un problema típico es que los códigos pierden los ceros a la izquierda al importarlos (<code>"007"</code> se vuelve <code>7</code>). <code>str_pad()</code> los recupera:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>codigos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">42</span>, <span class="dv">105</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str_pad</span>(codigos, <span class="at">width =</span> <span class="dv">4</span>, <span class="at">side =</span> <span class="st">"left"</span>, <span class="at">pad =</span> <span class="st">"0"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "0007" "0042" "0105"</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>nombres <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"  Bogotá D.C. "</span>, <span class="st">"MEDELLÍN"</span>, <span class="st">"cali"</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>nombres <span class="sc">|&gt;</span> <span class="fu">str_trim</span>() <span class="sc">|&gt;</span> <span class="fu">str_to_title</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Bogotá D.c." "Medellín"    "Cali"       </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_detect</span>(nombres, <span class="fu">regex</span>(<span class="st">"cali"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE FALSE  TRUE</code></pre>
+</div>
+</div>
+</section>
+<section id="fechas-con-lubridate" class="level3">
+<h3 class="anchored" data-anchor-id="fechas-con-lubridate">Fechas con <code>lubridate</code></h3>
+<p>Las fechas se guardan como números (días desde 1970-01-01), lo que permite restarlas y extraer componentes. Las funciones <code>ymd()</code>, <code>dmy()</code>, <code>mdy()</code> interpretan el orden que tenga el texto:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">dmy</span>(<span class="fu">c</span>(<span class="st">"15/03/2025"</span>, <span class="st">"01/07/2025"</span>, <span class="st">"31/12/2025"</span>))</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>f</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2025-03-15" "2025-07-01" "2025-12-31"</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">year</span>(f); <span class="fu">month</span>(f, <span class="at">label =</span> <span class="cn">TRUE</span>); <span class="fu">wday</span>(f, <span class="at">label =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2025 2025 2025</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] Mar Jul Dec
+12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] Sat Tue Wed
+Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>f[<span class="dv">2</span>] <span class="sc">-</span> f[<span class="dv">1</span>]                          <span class="co"># diferencia en días</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Time difference of 108 days</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">interval</span>(f[<span class="dv">1</span>], f[<span class="dv">3</span>]) <span class="sc">/</span> <span class="fu">months</span>(<span class="dv">1</span>)     <span class="co"># diferencia en meses</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 9.516129</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(f[<span class="dv">1</span>], <span class="at">by =</span> <span class="st">"month"</span>, <span class="at">length.out =</span> <span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2025-03-15" "2025-04-15" "2025-05-15" "2025-06-15"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>diario <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">fecha =</span> <span class="fu">seq</span>(<span class="fu">ymd</span>(<span class="st">"2025-01-01"</span>), <span class="fu">ymd</span>(<span class="st">"2025-06-30"</span>), <span class="at">by =</span> <span class="st">"day"</span>),</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">lluvia =</span> <span class="fu">rgamma</span>(<span class="dv">181</span>, <span class="at">shape =</span> <span class="fl">0.6</span>, <span class="at">scale =</span> <span class="dv">8</span>))</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>diario <span class="sc">|&gt;</span></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mes =</span> <span class="fu">floor_date</span>(fecha, <span class="st">"month"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(mes) <span class="sc">|&gt;</span></span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">total_mm =</span> <span class="fu">sum</span>(lluvia)) <span class="sc">|&gt;</span></span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(mes, total_mm)) <span class="sc">+</span></span>
+<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#2a9d8f"</span>) <span class="sc">+</span></span>
+<span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_labels =</span> <span class="st">"%b"</span>) <span class="sc">+</span></span>
+<span id="cb49-11"><a href="#cb49-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Lluvia mensual (mm)"</span>) <span class="sc">+</span></span>
+<span id="cb49-12"><a href="#cb49-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-fechas" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fechas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-datos_files/figure-html/fig-fechas-1.png" class="img-fluid figure-img" width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fechas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Agrupar por mes con floor_date() es la forma más simple de pasar de datos diarios a mensuales.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="factores-con-forcats" class="level3">
+<h3 class="anchored" data-anchor-id="factores-con-forcats">Factores con <code>forcats</code></h3>
+<p>Un <strong>factor</strong> es una variable categórica con un conjunto fijo de niveles, y su orden define cómo se ordenan tablas y gráficos.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(body_mass_g)) <span class="sc">|&gt;</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species) <span class="sc">|&gt;</span></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">masa =</span> <span class="fu">mean</span>(body_mass_g)) <span class="sc">|&gt;</span></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">species =</span> <span class="fu">fct_reorder</span>(species, masa)) <span class="sc">|&gt;</span></span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(masa, species)) <span class="sc">+</span></span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Masa media (g)"</span>, <span class="at">y =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-factores" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-factores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-datos_files/figure-html/fig-factores-1.png" class="img-fluid figure-img" width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-factores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: fct_reorder() ordena las categorías por su valor, lo que hace el gráfico mucho más fácil de leer.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Otras funciones útiles: <code>fct_relevel()</code> (cambiar el orden a mano), <code>fct_recode()</code> (renombrar niveles), <code>fct_lump_n()</code> (agrupar niveles raros en “Otros”) y <code>droplevels()</code> (descartar niveles sin datos).</p>
+</section>
+</section>
+<section id="datos-faltantes" class="level2">
+<h2 class="anchored" data-anchor-id="datos-faltantes">6. Datos faltantes</h2>
+<p>Antes de decidir qué hacer con los <code>NA</code> hay que preguntarse <strong>por qué faltan</strong> (Rubin, 1976):</p>
+<ul>
+<li><strong>MCAR</strong> (<em>missing completely at random</em>): la probabilidad de faltar no depende de nada. Eliminar los casos incompletos no sesga, solo pierde información.</li>
+<li><strong>MAR</strong> (<em>missing at random</em>): depende de otras variables <strong>observadas</strong> (por ejemplo, los hombres responden menos una pregunta). Se puede corregir usando esas variables.</li>
+<li><strong>MNAR</strong> (<em>missing not at random</em>): depende del propio valor faltante (quien tiene ingresos altos no los declara). Es el caso más difícil y no se corrige con métodos automáticos.</li>
+</ul>
+<p>Primero, contar dónde faltan los datos:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), \(x) <span class="fu">sum</span>(<span class="fu">is.na</span>(x)))) <span class="sc">|&gt;</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="fu">everything</span>(), <span class="at">names_to =</span> <span class="st">"variable"</span>, <span class="at">values_to =</span> <span class="st">"faltantes"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(faltantes <span class="sc">&gt;</span> <span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+  variable          faltantes
+  &lt;chr&gt;                 &lt;int&gt;
+1 bill_length_mm            2
+2 bill_depth_mm             2
+3 flipper_length_mm         2
+4 body_mass_g               2
+5 sex                      11</code></pre>
+</div>
+</div>
+<p>Luego, explorar si faltan de forma aleatoria: ¿hay más <code>NA</code> en el sexo según la especie o la isla?</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species, island) <span class="sc">|&gt;</span></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">prop_sexo_faltante =</span> <span class="fu">mean</span>(<span class="fu">is.na</span>(sex)), <span class="at">n =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 4
+  species   island    prop_sexo_faltante     n
+  &lt;fct&gt;     &lt;fct&gt;                  &lt;dbl&gt; &lt;int&gt;
+1 Adelie    Biscoe                0         44
+2 Adelie    Dream                 0.0179    56
+3 Adelie    Torgersen             0.0962    52
+4 Chinstrap Dream                 0         68
+5 Gentoo    Biscoe                0.0403   124</code></pre>
+</div>
+</div>
+<p>Las opciones más simples para tratarlos son: <strong>eliminar</strong> (<code>drop_na()</code>), que es razonable si es MCAR y son pocos casos, o <strong>imputar</strong> (reemplazar por un valor razonable), por ejemplo con la mediana del grupo:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>completos <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span> <span class="fu">drop_na</span>(body_mass_g, sex)</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(penguins); <span class="fu">nrow</span>(completos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 344</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 333</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>imputado <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species) <span class="sc">|&gt;</span></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">masa_imputada =</span> <span class="fu">coalesce</span>(body_mass_g, <span class="fu">median</span>(body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a>imputado <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="fu">is.na</span>(body_mass_g)) <span class="sc">|&gt;</span> <span class="fu">select</span>(species, body_mass_g, masa_imputada)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+  species body_mass_g masa_imputada
+  &lt;fct&gt;         &lt;int&gt;         &lt;dbl&gt;
+1 Adelie           NA          3700
+2 Gentoo           NA          5000</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Cuidado con la imputación simple
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Reemplazar por la media o la mediana reduce artificialmente la variabilidad y puede sesgar relaciones entre variables. Para análisis formales usa <strong>imputación múltiple</strong> (paquete <code>mice</code>) e incluye el mecanismo supuesto en la discusión de resultados.</p>
+</div>
+</div>
+</section>
+<section id="ejercicios" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
+<ol type="1">
+<li><strong>Importar.</strong> Escribe el tibble <code>muestras</code> a un CSV con <code>write_csv()</code>, léelo de nuevo y comprueba con <code>all.equal()</code> que es idéntico al original.</li>
+<li><strong>Ordenar.</strong> La tabla <code>ancho</code> tiene un país por fila y un año por columna. Conviértela a formato largo y calcula el crecimiento porcentual entre 2020 y 2022 de cada país.</li>
+<li><strong>Resumir.</strong> Con <code>penguins</code>, calcula la media del largo del pico (<code>bill_length_mm</code>) por especie y sexo, ignorando faltantes. ¿Qué grupo tiene el pico más largo?</li>
+<li><strong>Unir.</strong> Crea una tabla con la altitud de cada una de las estaciones E01–E04 y únela a <code>leidos</code>.</li>
+<li><strong>Fechas.</strong> ¿Cuántos días hay entre <code>2025-03-15</code> y el 1 de enero de 2026? ¿Qué día de la semana cae?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Soluciones sugeridas
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> <span class="fu">tempfile</span>(<span class="at">fileext =</span> <span class="st">".csv"</span>); <span class="fu">write_csv</span>(muestras, tmp)</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="fu">all.equal</span>(muestras, <span class="fu">read_csv</span>(tmp, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>), <span class="at">check.attributes =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>ancho <span class="sc">|&gt;</span></span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span>pais, <span class="at">names_to =</span> <span class="st">"anio"</span>, <span class="at">values_to =</span> <span class="st">"pob"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(pais) <span class="sc">|&gt;</span></span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">crecimiento_pct =</span> (pob[anio <span class="sc">==</span> <span class="st">"2022"</span>] <span class="sc">/</span> pob[anio <span class="sc">==</span> <span class="st">"2020"</span>] <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> <span class="dv">100</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  pais     crecimiento_pct
+  &lt;chr&gt;              &lt;dbl&gt;
+1 Chile               1.03
+2 Colombia            2.36
+3 Perú                2.12</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(sex)) <span class="sc">|&gt;</span></span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species, sex) <span class="sc">|&gt;</span></span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">pico_medio =</span> <span class="fu">mean</span>(bill_length_mm, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(pico_medio))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  species   sex    pico_medio
+  &lt;fct&gt;     &lt;fct&gt;       &lt;dbl&gt;
+1 Chinstrap male         51.1
+2 Gentoo    male         49.5
+3 Chinstrap female       46.6
+4 Gentoo    female       45.6
+5 Adelie    male         40.4
+6 Adelie    female       37.3</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 5</span></span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">ymd</span>(<span class="st">"2026-01-01"</span>) <span class="sc">-</span> <span class="fu">ymd</span>(<span class="st">"2025-03-15"</span>)</span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Time difference of 292 days</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wday</span>(<span class="fu">ymd</span>(<span class="st">"2025-03-15"</span>), <span class="at">label =</span> <span class="cn">TRUE</span>, <span class="at">abbr =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] Saturday
+7 Levels: Sunday &lt; Monday &lt; Tuesday &lt; Wednesday &lt; Thursday &lt; ... &lt; Saturday</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="para-profundizar" class="level2">
+<h2 class="anchored" data-anchor-id="para-profundizar">Para profundizar</h2>
+<ul>
+<li>Wickham, H. (2014). Tidy data. <em>Journal of Statistical Software</em>, 59(10). <a href="https://doi.org/10.18637/jss.v059.i10" class="uri">https://doi.org/10.18637/jss.v059.i10</a></li>
+<li>Wickham, H., Çetinkaya-Rundel, M. y Grolemund, G. (2023). <em>R for Data Science</em> (2.ª ed.). <a href="https://r4ds.hadley.nz/">r4ds.hadley.nz</a>.</li>
+<li>Rubin, D. B. (1976). Inference and missing data. <em>Biometrika</em>, 63(3), 581–592.</li>
+<li>van Buuren, S. (2018). <em>Flexible Imputation of Missing Data</em> (2.ª ed.). <a href="https://stefvanbuuren.name/fimd/">stefvanbuuren.name/fimd</a>.</li>
+<li>Hojas de referencia de Posit: <a href="https://posit.co/resources/cheatsheets/">posit.co/resources/cheatsheets</a>.</li>
+</ul>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reproducibilidad
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este cuaderno se ejecutó con R 4.5.2 y dplyr 1.2.1.</p>
+</div>
+</div>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mromerot\.github\.io\/web\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Manejo de datos con tidyverse"</span></span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Minicurso de R · Módulo 2"</span></span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Importar, limpiar, transformar, unir y reestructurar tablas de datos; fechas, factores y datos faltantes con dplyr, tidyr, lubridate y forcats."</span></span>
+<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Mauricio Romero"</span></span>
+<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2026-09-25</span></span>
+<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb70-8"><a href="#cb70-8" aria-hidden="true" tabindex="-1"></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb70-9"><a href="#cb70-9" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [R, datos, tidyverse, dplyr, tidyr]</span></span>
+<span id="cb70-10"><a href="#cb70-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb70-11"><a href="#cb70-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-12"><a href="#cb70-12" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="minimal"}</span>
+<span id="cb70-13"><a href="#cb70-13" aria-hidden="true" tabindex="-1"></a>**Duración estimada:** 3 horas · **Nivel:** principiante–intermedio · **Prerrequisitos:** Módulos 0 y 1.</span>
+<span id="cb70-14"><a href="#cb70-14" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb70-15"><a href="#cb70-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-16"><a href="#cb70-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objetivos de aprendizaje</span></span>
+<span id="cb70-17"><a href="#cb70-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-18"><a href="#cb70-18" aria-hidden="true" tabindex="-1"></a>Al terminar este cuaderno podrás:</span>
+<span id="cb70-19"><a href="#cb70-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-20"><a href="#cb70-20" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Importar y exportar** datos en CSV y otros formatos, sin depender de rutas absolutas.</span>
+<span id="cb70-21"><a href="#cb70-21" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Explicar qué es un conjunto de datos **ordenado** (*tidy*) y reestructurar tablas entre formato ancho y largo.</span>
+<span id="cb70-22"><a href="#cb70-22" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Seleccionar, filtrar, crear variables y resumir por grupos con <span class="in">`dplyr`</span>.</span>
+<span id="cb70-23"><a href="#cb70-23" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Unir** tablas y combinar varios archivos en uno solo.</span>
+<span id="cb70-24"><a href="#cb70-24" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Manejar **fechas**, **texto** y **factores**.</span>
+<span id="cb70-25"><a href="#cb70-25" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Diagnosticar y tratar **datos faltantes**.</span>
+<span id="cb70-26"><a href="#cb70-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-29"><a href="#cb70-29" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-30"><a href="#cb70-30" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: paquetes</span></span>
+<span id="cb70-31"><a href="#cb70-31" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)   <span class="co"># dplyr, tidyr, readr, stringr, forcats, ggplot2...</span></span>
+<span id="cb70-32"><a href="#cb70-32" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)   <span class="co"># fechas</span></span>
+<span id="cb70-33"><a href="#cb70-33" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb70-34"><a href="#cb70-34" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2026</span>)</span>
+<span id="cb70-35"><a href="#cb70-35" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-36"><a href="#cb70-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-37"><a href="#cb70-37" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Importar y exportar</span></span>
+<span id="cb70-38"><a href="#cb70-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-39"><a href="#cb70-39" aria-hidden="true" tabindex="-1"></a>Los datos vienen casi siempre en archivos de texto separados por comas (CSV). <span class="in">`readr::read_csv()`</span> es rápido, adivina el tipo de cada columna y devuelve un <span class="in">`tibble`</span> (un <span class="in">`data.frame`</span> con mejor impresión).</span>
+<span id="cb70-40"><a href="#cb70-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-41"><a href="#cb70-41" aria-hidden="true" tabindex="-1"></a>Como aquí no tenemos un archivo, primero **escribimos** uno temporal y luego lo leemos. Es el mismo procedimiento que con tus propios archivos:</span>
+<span id="cb70-42"><a href="#cb70-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-45"><a href="#cb70-45" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-46"><a href="#cb70-46" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: importar</span></span>
+<span id="cb70-47"><a href="#cb70-47" aria-hidden="true" tabindex="-1"></a>ruta <span class="ot">&lt;-</span> <span class="fu">tempfile</span>(<span class="at">fileext =</span> <span class="st">".csv"</span>)</span>
+<span id="cb70-48"><a href="#cb70-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-49"><a href="#cb70-49" aria-hidden="true" tabindex="-1"></a>muestras <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb70-50"><a href="#cb70-50" aria-hidden="true" tabindex="-1"></a>  <span class="at">estacion =</span> <span class="fu">c</span>(<span class="st">"E01"</span>, <span class="st">"E02"</span>, <span class="st">"E03"</span>, <span class="st">"E04"</span>),</span>
+<span id="cb70-51"><a href="#cb70-51" aria-hidden="true" tabindex="-1"></a>  <span class="at">fecha    =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">"2025-03-01"</span>, <span class="st">"2025-03-01"</span>, <span class="st">"2025-03-02"</span>, <span class="st">"2025-03-02"</span>)),</span>
+<span id="cb70-52"><a href="#cb70-52" aria-hidden="true" tabindex="-1"></a>  <span class="at">temp_c   =</span> <span class="fu">c</span>(<span class="fl">26.4</span>, <span class="fl">27.1</span>, <span class="cn">NA</span>, <span class="fl">25.8</span>),</span>
+<span id="cb70-53"><a href="#cb70-53" aria-hidden="true" tabindex="-1"></a>  <span class="at">salinidad =</span> <span class="fu">c</span>(<span class="fl">34.9</span>, <span class="fl">35.2</span>, <span class="fl">35.0</span>, <span class="fl">34.7</span>)</span>
+<span id="cb70-54"><a href="#cb70-54" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb70-55"><a href="#cb70-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-56"><a href="#cb70-56" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(muestras, ruta)        <span class="co"># exportar</span></span>
+<span id="cb70-57"><a href="#cb70-57" aria-hidden="true" tabindex="-1"></a>leidos <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(ruta)         <span class="co"># importar</span></span>
+<span id="cb70-58"><a href="#cb70-58" aria-hidden="true" tabindex="-1"></a>leidos</span>
+<span id="cb70-59"><a href="#cb70-59" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-60"><a href="#cb70-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-61"><a href="#cb70-61" aria-hidden="true" tabindex="-1"></a>Observa que <span class="in">`read_csv()`</span> reconoció <span class="in">`fecha`</span> como fecha (<span class="in">`&lt;date&gt;`</span>) y <span class="in">`temp_c`</span> como número. Si necesitas controlar los tipos usa <span class="in">`col_types`</span>:</span>
+<span id="cb70-62"><a href="#cb70-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-65"><a href="#cb70-65" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-66"><a href="#cb70-66" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: col-types</span></span>
+<span id="cb70-67"><a href="#cb70-67" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(ruta, <span class="at">col_types =</span> <span class="fu">cols</span>(<span class="at">estacion =</span> <span class="fu">col_character</span>(),</span>
+<span id="cb70-68"><a href="#cb70-68" aria-hidden="true" tabindex="-1"></a>                                <span class="at">fecha =</span> <span class="fu">col_date</span>(<span class="st">"%Y-%m-%d"</span>),</span>
+<span id="cb70-69"><a href="#cb70-69" aria-hidden="true" tabindex="-1"></a>                                <span class="at">.default =</span> <span class="fu">col_double</span>()))</span>
+<span id="cb70-70"><a href="#cb70-70" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-71"><a href="#cb70-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-72"><a href="#cb70-72" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb70-73"><a href="#cb70-73" aria-hidden="true" tabindex="-1"></a><span class="fu">## Consejos para archivos reales</span></span>
+<span id="cb70-74"><a href="#cb70-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Guarda los datos en una carpeta <span class="in">`datos/`</span> **dentro del proyecto** y léelos con rutas relativas (<span class="in">`read_csv("datos/muestras.csv")`</span>), nunca con rutas absolutas como <span class="in">`~/Google Drive/...`</span>.</span>
+<span id="cb70-75"><a href="#cb70-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>En archivos con coma decimal y punto y coma como separador usa <span class="in">`read_csv2()`</span>. Si hay tildes mal leídas, indica <span class="in">`locale = locale(encoding = "latin1")`</span>.</span>
+<span id="cb70-76"><a href="#cb70-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Para Excel usa <span class="in">`readxl::read_excel()`</span>, para SPSS/Stata <span class="in">`haven::read_sav()`</span> y para archivos enormes <span class="in">`data.table::fread()`</span> o <span class="in">`arrow`</span>.</span>
+<span id="cb70-77"><a href="#cb70-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Para guardar un objeto de R tal cual, usa <span class="in">`saveRDS()`</span> / <span class="in">`readRDS()`</span>.</span>
+<span id="cb70-78"><a href="#cb70-78" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb70-79"><a href="#cb70-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-80"><a href="#cb70-80" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Teoría: datos ordenados (*tidy*)</span></span>
+<span id="cb70-81"><a href="#cb70-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-82"><a href="#cb70-82" aria-hidden="true" tabindex="-1"></a>Un conjunto de datos es **ordenado** cuando cumple tres reglas (Wickham, 2014):</span>
+<span id="cb70-83"><a href="#cb70-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-84"><a href="#cb70-84" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Cada **variable** es una columna.</span>
+<span id="cb70-85"><a href="#cb70-85" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Cada **observación** es una fila.</span>
+<span id="cb70-86"><a href="#cb70-86" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Cada **valor** ocupa una celda.</span>
+<span id="cb70-87"><a href="#cb70-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-88"><a href="#cb70-88" aria-hidden="true" tabindex="-1"></a>Muchas tablas hechas para leer (con años en columnas, por ejemplo) violan la regla 1. Se llaman de formato **ancho**. Para analizar y graficar con R conviene el formato **largo**.</span>
+<span id="cb70-89"><a href="#cb70-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-92"><a href="#cb70-92" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-93"><a href="#cb70-93" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: ancho</span></span>
+<span id="cb70-94"><a href="#cb70-94" aria-hidden="true" tabindex="-1"></a>ancho <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb70-95"><a href="#cb70-95" aria-hidden="true" tabindex="-1"></a>  <span class="at">pais =</span> <span class="fu">c</span>(<span class="st">"Colombia"</span>, <span class="st">"Perú"</span>, <span class="st">"Chile"</span>),</span>
+<span id="cb70-96"><a href="#cb70-96" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">2020</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">50.9</span>, <span class="fl">33.0</span>, <span class="fl">19.4</span>),</span>
+<span id="cb70-97"><a href="#cb70-97" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">2021</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">51.5</span>, <span class="fl">33.4</span>, <span class="fl">19.5</span>),</span>
+<span id="cb70-98"><a href="#cb70-98" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">2022</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">52.1</span>, <span class="fl">33.7</span>, <span class="fl">19.6</span>)</span>
+<span id="cb70-99"><a href="#cb70-99" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb70-100"><a href="#cb70-100" aria-hidden="true" tabindex="-1"></a>ancho</span>
+<span id="cb70-101"><a href="#cb70-101" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-102"><a href="#cb70-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-103"><a href="#cb70-103" aria-hidden="true" tabindex="-1"></a><span class="in">`pivot_longer()`</span> convierte columnas en filas y <span class="in">`pivot_wider()`</span> hace lo contrario:</span>
+<span id="cb70-104"><a href="#cb70-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-107"><a href="#cb70-107" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-108"><a href="#cb70-108" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: pivot</span></span>
+<span id="cb70-109"><a href="#cb70-109" aria-hidden="true" tabindex="-1"></a>largo <span class="ot">&lt;-</span> ancho <span class="sc">|&gt;</span></span>
+<span id="cb70-110"><a href="#cb70-110" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>pais, <span class="at">names_to =</span> <span class="st">"anio"</span>, <span class="at">values_to =</span> <span class="st">"poblacion_millones"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb70-111"><a href="#cb70-111" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">anio =</span> <span class="fu">as.integer</span>(anio))</span>
+<span id="cb70-112"><a href="#cb70-112" aria-hidden="true" tabindex="-1"></a>largo</span>
+<span id="cb70-113"><a href="#cb70-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-114"><a href="#cb70-114" aria-hidden="true" tabindex="-1"></a>largo <span class="sc">|&gt;</span></span>
+<span id="cb70-115"><a href="#cb70-115" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> pais, <span class="at">values_from =</span> poblacion_millones)</span>
+<span id="cb70-116"><a href="#cb70-116" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-117"><a href="#cb70-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-120"><a href="#cb70-120" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-121"><a href="#cb70-121" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-largo</span></span>
+<span id="cb70-122"><a href="#cb70-122" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "El formato largo se mapea directamente a la estética de ggplot2: una columna para el eje x, una para el eje y y otra para el color."</span></span>
+<span id="cb70-123"><a href="#cb70-123" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3</span></span>
+<span id="cb70-124"><a href="#cb70-124" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(largo, <span class="fu">aes</span>(anio, poblacion_millones, <span class="at">colour =</span> pais)) <span class="sc">+</span></span>
+<span id="cb70-125"><a href="#cb70-125" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb70-126"><a href="#cb70-126" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">2020</span><span class="sc">:</span><span class="dv">2022</span>) <span class="sc">+</span></span>
+<span id="cb70-127"><a href="#cb70-127" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_brewer</span>(<span class="at">palette =</span> <span class="st">"Set2"</span>, <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb70-128"><a href="#cb70-128" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Año"</span>, <span class="at">y =</span> <span class="st">"Población (millones)"</span>) <span class="sc">+</span></span>
+<span id="cb70-129"><a href="#cb70-129" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>)</span>
+<span id="cb70-130"><a href="#cb70-130" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-131"><a href="#cb70-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-132"><a href="#cb70-132" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Los verbos de dplyr</span></span>
+<span id="cb70-133"><a href="#cb70-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-134"><a href="#cb70-134" aria-hidden="true" tabindex="-1"></a><span class="in">`dplyr`</span> resuelve la mayoría de las transformaciones con cinco verbos, que se encadenan con la tubería <span class="in">`|&gt;`</span> ("y luego"):</span>
+<span id="cb70-135"><a href="#cb70-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-136"><a href="#cb70-136" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Verbo <span class="pp">|</span> Qué hace <span class="pp">|</span></span>
+<span id="cb70-137"><a href="#cb70-137" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb70-138"><a href="#cb70-138" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`select()`</span> <span class="pp">|</span> elige columnas <span class="pp">|</span></span>
+<span id="cb70-139"><a href="#cb70-139" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`filter()`</span> <span class="pp">|</span> elige filas según una condición <span class="pp">|</span></span>
+<span id="cb70-140"><a href="#cb70-140" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`mutate()`</span> <span class="pp">|</span> crea o modifica columnas <span class="pp">|</span></span>
+<span id="cb70-141"><a href="#cb70-141" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`arrange()`</span> <span class="pp">|</span> ordena filas <span class="pp">|</span></span>
+<span id="cb70-142"><a href="#cb70-142" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`summarise()`</span> con <span class="in">`group_by()`</span> <span class="pp">|</span> resume por grupos <span class="pp">|</span></span>
+<span id="cb70-143"><a href="#cb70-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-144"><a href="#cb70-144" aria-hidden="true" tabindex="-1"></a>Usamos la tabla de pingüinos de Palmer (344 pingüinos de tres especies en la Antártida):</span>
+<span id="cb70-145"><a href="#cb70-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-148"><a href="#cb70-148" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-149"><a href="#cb70-149" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: pinguinos</span></span>
+<span id="cb70-150"><a href="#cb70-150" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(penguins)</span>
+<span id="cb70-151"><a href="#cb70-151" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-152"><a href="#cb70-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-155"><a href="#cb70-155" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-156"><a href="#cb70-156" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: verbos</span></span>
+<span id="cb70-157"><a href="#cb70-157" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb70-158"><a href="#cb70-158" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">especie =</span> species, <span class="at">isla =</span> island, <span class="at">masa_g =</span> body_mass_g, <span class="at">sexo =</span> sex) <span class="sc">|&gt;</span></span>
+<span id="cb70-159"><a href="#cb70-159" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(masa_g), sexo <span class="sc">==</span> <span class="st">"female"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb70-160"><a href="#cb70-160" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">masa_kg =</span> masa_g <span class="sc">/</span> <span class="dv">1000</span>) <span class="sc">|&gt;</span></span>
+<span id="cb70-161"><a href="#cb70-161" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(masa_kg)) <span class="sc">|&gt;</span></span>
+<span id="cb70-162"><a href="#cb70-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">5</span>)</span>
+<span id="cb70-163"><a href="#cb70-163" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-164"><a href="#cb70-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-165"><a href="#cb70-165" aria-hidden="true" tabindex="-1"></a>Resumir por grupos:</span>
+<span id="cb70-166"><a href="#cb70-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-169"><a href="#cb70-169" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-170"><a href="#cb70-170" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: resumen-grupos</span></span>
+<span id="cb70-171"><a href="#cb70-171" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb70-172"><a href="#cb70-172" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(body_mass_g)) <span class="sc">|&gt;</span></span>
+<span id="cb70-173"><a href="#cb70-173" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species, island) <span class="sc">|&gt;</span></span>
+<span id="cb70-174"><a href="#cb70-174" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb70-175"><a href="#cb70-175" aria-hidden="true" tabindex="-1"></a>            <span class="at">masa_media =</span> <span class="fu">mean</span>(body_mass_g),</span>
+<span id="cb70-176"><a href="#cb70-176" aria-hidden="true" tabindex="-1"></a>            <span class="at">masa_sd =</span> <span class="fu">sd</span>(body_mass_g),</span>
+<span id="cb70-177"><a href="#cb70-177" aria-hidden="true" tabindex="-1"></a>            <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb70-178"><a href="#cb70-178" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-179"><a href="#cb70-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-180"><a href="#cb70-180" aria-hidden="true" tabindex="-1"></a><span class="fu">### Seleccionar el máximo de cada grupo</span></span>
+<span id="cb70-181"><a href="#cb70-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-182"><a href="#cb70-182" aria-hidden="true" tabindex="-1"></a>Un problema frecuente es quedarse con la fila de mayor valor de cada grupo. <span class="in">`slice_max()`</span> lo resuelve sin código complicado:</span>
+<span id="cb70-183"><a href="#cb70-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-186"><a href="#cb70-186" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-187"><a href="#cb70-187" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: slice-max</span></span>
+<span id="cb70-188"><a href="#cb70-188" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb70-189"><a href="#cb70-189" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(body_mass_g)) <span class="sc">|&gt;</span></span>
+<span id="cb70-190"><a href="#cb70-190" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species) <span class="sc">|&gt;</span></span>
+<span id="cb70-191"><a href="#cb70-191" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(body_mass_g, <span class="at">n =</span> <span class="dv">1</span>, <span class="at">with_ties =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb70-192"><a href="#cb70-192" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(species, island, sex, body_mass_g)</span>
+<span id="cb70-193"><a href="#cb70-193" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-194"><a href="#cb70-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-195"><a href="#cb70-195" aria-hidden="true" tabindex="-1"></a><span class="fu">### Varias columnas a la vez con `across()`</span></span>
+<span id="cb70-196"><a href="#cb70-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-199"><a href="#cb70-199" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-200"><a href="#cb70-200" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: across</span></span>
+<span id="cb70-201"><a href="#cb70-201" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb70-202"><a href="#cb70-202" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species) <span class="sc">|&gt;</span></span>
+<span id="cb70-203"><a href="#cb70-203" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), \(x) <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)))</span>
+<span id="cb70-204"><a href="#cb70-204" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-205"><a href="#cb70-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-206"><a href="#cb70-206" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Unir tablas</span></span>
+<span id="cb70-207"><a href="#cb70-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-208"><a href="#cb70-208" aria-hidden="true" tabindex="-1"></a>Cuando la información está repartida en varias tablas se unen por una **llave** (columna en común). Los tipos de unión más usados son:</span>
+<span id="cb70-209"><a href="#cb70-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-210"><a href="#cb70-210" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Función <span class="pp">|</span> Conserva <span class="pp">|</span></span>
+<span id="cb70-211"><a href="#cb70-211" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb70-212"><a href="#cb70-212" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`left_join(x, y)`</span> <span class="pp">|</span> todas las filas de <span class="in">`x`</span> <span class="pp">|</span></span>
+<span id="cb70-213"><a href="#cb70-213" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`inner_join(x, y)`</span> <span class="pp">|</span> solo las filas con pareja en ambas <span class="pp">|</span></span>
+<span id="cb70-214"><a href="#cb70-214" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`full_join(x, y)`</span> <span class="pp">|</span> todas las filas de ambas <span class="pp">|</span></span>
+<span id="cb70-215"><a href="#cb70-215" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`anti_join(x, y)`</span> <span class="pp">|</span> filas de <span class="in">`x`</span> sin pareja en <span class="in">`y`</span> <span class="pp">|</span></span>
+<span id="cb70-216"><a href="#cb70-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-219"><a href="#cb70-219" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-220"><a href="#cb70-220" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: joins</span></span>
+<span id="cb70-221"><a href="#cb70-221" aria-hidden="true" tabindex="-1"></a>estaciones <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">estacion =</span> <span class="fu">c</span>(<span class="st">"E01"</span>, <span class="st">"E02"</span>, <span class="st">"E03"</span>, <span class="st">"E05"</span>),</span>
+<span id="cb70-222"><a href="#cb70-222" aria-hidden="true" tabindex="-1"></a>                     <span class="at">municipio =</span> <span class="fu">c</span>(<span class="st">"Tumaco"</span>, <span class="st">"Buenaventura"</span>, <span class="st">"Bahía Solano"</span>, <span class="st">"Nuquí"</span>))</span>
+<span id="cb70-223"><a href="#cb70-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-224"><a href="#cb70-224" aria-hidden="true" tabindex="-1"></a>leidos <span class="sc">|&gt;</span> <span class="fu">left_join</span>(estaciones, <span class="at">by =</span> <span class="st">"estacion"</span>)     <span class="co"># conserva las 4 muestras</span></span>
+<span id="cb70-225"><a href="#cb70-225" aria-hidden="true" tabindex="-1"></a>leidos <span class="sc">|&gt;</span> <span class="fu">inner_join</span>(estaciones, <span class="at">by =</span> <span class="st">"estacion"</span>)    <span class="co"># solo las que tienen municipio</span></span>
+<span id="cb70-226"><a href="#cb70-226" aria-hidden="true" tabindex="-1"></a>leidos <span class="sc">|&gt;</span> <span class="fu">anti_join</span>(estaciones, <span class="at">by =</span> <span class="st">"estacion"</span>)     <span class="co"># muestras sin municipio</span></span>
+<span id="cb70-227"><a href="#cb70-227" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-228"><a href="#cb70-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-229"><a href="#cb70-229" aria-hidden="true" tabindex="-1"></a><span class="fu">### Combinar varios archivos en uno</span></span>
+<span id="cb70-230"><a href="#cb70-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-231"><a href="#cb70-231" aria-hidden="true" tabindex="-1"></a>Si tienes un archivo por mes (o por estación) con las mismas columnas, léelos todos y apílalos:</span>
+<span id="cb70-232"><a href="#cb70-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-235"><a href="#cb70-235" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-236"><a href="#cb70-236" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: varios-archivos</span></span>
+<span id="cb70-237"><a href="#cb70-237" aria-hidden="true" tabindex="-1"></a>carpeta <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">"mensual"</span>)</span>
+<span id="cb70-238"><a href="#cb70-238" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(carpeta, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb70-239"><a href="#cb70-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-240"><a href="#cb70-240" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (mes <span class="cf">in</span> <span class="fu">c</span>(<span class="st">"2025-01"</span>, <span class="st">"2025-02"</span>, <span class="st">"2025-03"</span>)) {</span>
+<span id="cb70-241"><a href="#cb70-241" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">mes =</span> mes, <span class="at">estacion =</span> <span class="fu">c</span>(<span class="st">"E01"</span>, <span class="st">"E02"</span>), <span class="at">lluvia_mm =</span> <span class="fu">round</span>(<span class="fu">runif</span>(<span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">200</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb70-242"><a href="#cb70-242" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write_csv</span>(<span class="fu">file.path</span>(carpeta, <span class="fu">paste0</span>(<span class="st">"lluvia_"</span>, mes, <span class="st">".csv"</span>)))</span>
+<span id="cb70-243"><a href="#cb70-243" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb70-244"><a href="#cb70-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-245"><a href="#cb70-245" aria-hidden="true" tabindex="-1"></a>archivos <span class="ot">&lt;-</span> <span class="fu">list.files</span>(carpeta, <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.csv$"</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb70-246"><a href="#cb70-246" aria-hidden="true" tabindex="-1"></a>todos <span class="ot">&lt;-</span> <span class="fu">map_dfr</span>(archivos, read_csv, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb70-247"><a href="#cb70-247" aria-hidden="true" tabindex="-1"></a>todos</span>
+<span id="cb70-248"><a href="#cb70-248" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-249"><a href="#cb70-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-250"><a href="#cb70-250" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Texto, fechas y factores</span></span>
+<span id="cb70-251"><a href="#cb70-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-252"><a href="#cb70-252" aria-hidden="true" tabindex="-1"></a><span class="fu">### Texto con `stringr`</span></span>
+<span id="cb70-253"><a href="#cb70-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-254"><a href="#cb70-254" aria-hidden="true" tabindex="-1"></a>Un problema típico es que los códigos pierden los ceros a la izquierda al importarlos (<span class="in">`"007"`</span> se vuelve <span class="in">`7`</span>). <span class="in">`str_pad()`</span> los recupera:</span>
+<span id="cb70-255"><a href="#cb70-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-258"><a href="#cb70-258" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-259"><a href="#cb70-259" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: stringr</span></span>
+<span id="cb70-260"><a href="#cb70-260" aria-hidden="true" tabindex="-1"></a>codigos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">42</span>, <span class="dv">105</span>)</span>
+<span id="cb70-261"><a href="#cb70-261" aria-hidden="true" tabindex="-1"></a><span class="fu">str_pad</span>(codigos, <span class="at">width =</span> <span class="dv">4</span>, <span class="at">side =</span> <span class="st">"left"</span>, <span class="at">pad =</span> <span class="st">"0"</span>)</span>
+<span id="cb70-262"><a href="#cb70-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-263"><a href="#cb70-263" aria-hidden="true" tabindex="-1"></a>nombres <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"  Bogotá D.C. "</span>, <span class="st">"MEDELLÍN"</span>, <span class="st">"cali"</span>)</span>
+<span id="cb70-264"><a href="#cb70-264" aria-hidden="true" tabindex="-1"></a>nombres <span class="sc">|&gt;</span> <span class="fu">str_trim</span>() <span class="sc">|&gt;</span> <span class="fu">str_to_title</span>()</span>
+<span id="cb70-265"><a href="#cb70-265" aria-hidden="true" tabindex="-1"></a><span class="fu">str_detect</span>(nombres, <span class="fu">regex</span>(<span class="st">"cali"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb70-266"><a href="#cb70-266" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-267"><a href="#cb70-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-268"><a href="#cb70-268" aria-hidden="true" tabindex="-1"></a><span class="fu">### Fechas con `lubridate`</span></span>
+<span id="cb70-269"><a href="#cb70-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-270"><a href="#cb70-270" aria-hidden="true" tabindex="-1"></a>Las fechas se guardan como números (días desde 1970-01-01), lo que permite restarlas y extraer componentes. Las funciones <span class="in">`ymd()`</span>, <span class="in">`dmy()`</span>, <span class="in">`mdy()`</span> interpretan el orden que tenga el texto:</span>
+<span id="cb70-271"><a href="#cb70-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-274"><a href="#cb70-274" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-275"><a href="#cb70-275" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fechas</span></span>
+<span id="cb70-276"><a href="#cb70-276" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">dmy</span>(<span class="fu">c</span>(<span class="st">"15/03/2025"</span>, <span class="st">"01/07/2025"</span>, <span class="st">"31/12/2025"</span>))</span>
+<span id="cb70-277"><a href="#cb70-277" aria-hidden="true" tabindex="-1"></a>f</span>
+<span id="cb70-278"><a href="#cb70-278" aria-hidden="true" tabindex="-1"></a><span class="fu">year</span>(f); <span class="fu">month</span>(f, <span class="at">label =</span> <span class="cn">TRUE</span>); <span class="fu">wday</span>(f, <span class="at">label =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb70-279"><a href="#cb70-279" aria-hidden="true" tabindex="-1"></a>f[<span class="dv">2</span>] <span class="sc">-</span> f[<span class="dv">1</span>]                          <span class="co"># diferencia en días</span></span>
+<span id="cb70-280"><a href="#cb70-280" aria-hidden="true" tabindex="-1"></a><span class="fu">interval</span>(f[<span class="dv">1</span>], f[<span class="dv">3</span>]) <span class="sc">/</span> <span class="fu">months</span>(<span class="dv">1</span>)     <span class="co"># diferencia en meses</span></span>
+<span id="cb70-281"><a href="#cb70-281" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(f[<span class="dv">1</span>], <span class="at">by =</span> <span class="st">"month"</span>, <span class="at">length.out =</span> <span class="dv">4</span>)</span>
+<span id="cb70-282"><a href="#cb70-282" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-283"><a href="#cb70-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-286"><a href="#cb70-286" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-287"><a href="#cb70-287" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-fechas</span></span>
+<span id="cb70-288"><a href="#cb70-288" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Agrupar por mes con floor_date() es la forma más simple de pasar de datos diarios a mensuales."</span></span>
+<span id="cb70-289"><a href="#cb70-289" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3</span></span>
+<span id="cb70-290"><a href="#cb70-290" aria-hidden="true" tabindex="-1"></a>diario <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">fecha =</span> <span class="fu">seq</span>(<span class="fu">ymd</span>(<span class="st">"2025-01-01"</span>), <span class="fu">ymd</span>(<span class="st">"2025-06-30"</span>), <span class="at">by =</span> <span class="st">"day"</span>),</span>
+<span id="cb70-291"><a href="#cb70-291" aria-hidden="true" tabindex="-1"></a>                 <span class="at">lluvia =</span> <span class="fu">rgamma</span>(<span class="dv">181</span>, <span class="at">shape =</span> <span class="fl">0.6</span>, <span class="at">scale =</span> <span class="dv">8</span>))</span>
+<span id="cb70-292"><a href="#cb70-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-293"><a href="#cb70-293" aria-hidden="true" tabindex="-1"></a>diario <span class="sc">|&gt;</span></span>
+<span id="cb70-294"><a href="#cb70-294" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mes =</span> <span class="fu">floor_date</span>(fecha, <span class="st">"month"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb70-295"><a href="#cb70-295" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(mes) <span class="sc">|&gt;</span></span>
+<span id="cb70-296"><a href="#cb70-296" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">total_mm =</span> <span class="fu">sum</span>(lluvia)) <span class="sc">|&gt;</span></span>
+<span id="cb70-297"><a href="#cb70-297" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(mes, total_mm)) <span class="sc">+</span></span>
+<span id="cb70-298"><a href="#cb70-298" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#2a9d8f"</span>) <span class="sc">+</span></span>
+<span id="cb70-299"><a href="#cb70-299" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_labels =</span> <span class="st">"%b"</span>) <span class="sc">+</span></span>
+<span id="cb70-300"><a href="#cb70-300" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Lluvia mensual (mm)"</span>) <span class="sc">+</span></span>
+<span id="cb70-301"><a href="#cb70-301" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>)</span>
+<span id="cb70-302"><a href="#cb70-302" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-303"><a href="#cb70-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-304"><a href="#cb70-304" aria-hidden="true" tabindex="-1"></a><span class="fu">### Factores con `forcats`</span></span>
+<span id="cb70-305"><a href="#cb70-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-306"><a href="#cb70-306" aria-hidden="true" tabindex="-1"></a>Un **factor** es una variable categórica con un conjunto fijo de niveles, y su orden define cómo se ordenan tablas y gráficos.</span>
+<span id="cb70-307"><a href="#cb70-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-310"><a href="#cb70-310" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-311"><a href="#cb70-311" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-factores</span></span>
+<span id="cb70-312"><a href="#cb70-312" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "fct_reorder() ordena las categorías por su valor, lo que hace el gráfico mucho más fácil de leer."</span></span>
+<span id="cb70-313"><a href="#cb70-313" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 2.8</span></span>
+<span id="cb70-314"><a href="#cb70-314" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb70-315"><a href="#cb70-315" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(body_mass_g)) <span class="sc">|&gt;</span></span>
+<span id="cb70-316"><a href="#cb70-316" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species) <span class="sc">|&gt;</span></span>
+<span id="cb70-317"><a href="#cb70-317" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">masa =</span> <span class="fu">mean</span>(body_mass_g)) <span class="sc">|&gt;</span></span>
+<span id="cb70-318"><a href="#cb70-318" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">species =</span> <span class="fu">fct_reorder</span>(species, masa)) <span class="sc">|&gt;</span></span>
+<span id="cb70-319"><a href="#cb70-319" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(masa, species)) <span class="sc">+</span></span>
+<span id="cb70-320"><a href="#cb70-320" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb70-321"><a href="#cb70-321" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Masa media (g)"</span>, <span class="at">y =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb70-322"><a href="#cb70-322" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>)</span>
+<span id="cb70-323"><a href="#cb70-323" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-324"><a href="#cb70-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-325"><a href="#cb70-325" aria-hidden="true" tabindex="-1"></a>Otras funciones útiles: <span class="in">`fct_relevel()`</span> (cambiar el orden a mano), <span class="in">`fct_recode()`</span> (renombrar niveles), <span class="in">`fct_lump_n()`</span> (agrupar niveles raros en "Otros") y <span class="in">`droplevels()`</span> (descartar niveles sin datos).</span>
+<span id="cb70-326"><a href="#cb70-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-327"><a href="#cb70-327" aria-hidden="true" tabindex="-1"></a><span class="fu">## 6. Datos faltantes</span></span>
+<span id="cb70-328"><a href="#cb70-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-329"><a href="#cb70-329" aria-hidden="true" tabindex="-1"></a>Antes de decidir qué hacer con los <span class="in">`NA`</span> hay que preguntarse **por qué faltan** (Rubin, 1976):</span>
+<span id="cb70-330"><a href="#cb70-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-331"><a href="#cb70-331" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**MCAR** (*missing completely at random*): la probabilidad de faltar no depende de nada. Eliminar los casos incompletos no sesga, solo pierde información.</span>
+<span id="cb70-332"><a href="#cb70-332" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**MAR** (*missing at random*): depende de otras variables **observadas** (por ejemplo, los hombres responden menos una pregunta). Se puede corregir usando esas variables.</span>
+<span id="cb70-333"><a href="#cb70-333" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**MNAR** (*missing not at random*): depende del propio valor faltante (quien tiene ingresos altos no los declara). Es el caso más difícil y no se corrige con métodos automáticos.</span>
+<span id="cb70-334"><a href="#cb70-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-335"><a href="#cb70-335" aria-hidden="true" tabindex="-1"></a>Primero, contar dónde faltan los datos:</span>
+<span id="cb70-336"><a href="#cb70-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-339"><a href="#cb70-339" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-340"><a href="#cb70-340" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: faltantes</span></span>
+<span id="cb70-341"><a href="#cb70-341" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb70-342"><a href="#cb70-342" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), \(x) <span class="fu">sum</span>(<span class="fu">is.na</span>(x)))) <span class="sc">|&gt;</span></span>
+<span id="cb70-343"><a href="#cb70-343" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="fu">everything</span>(), <span class="at">names_to =</span> <span class="st">"variable"</span>, <span class="at">values_to =</span> <span class="st">"faltantes"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb70-344"><a href="#cb70-344" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(faltantes <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb70-345"><a href="#cb70-345" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-346"><a href="#cb70-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-347"><a href="#cb70-347" aria-hidden="true" tabindex="-1"></a>Luego, explorar si faltan de forma aleatoria: ¿hay más <span class="in">`NA`</span> en el sexo según la especie o la isla?</span>
+<span id="cb70-348"><a href="#cb70-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-351"><a href="#cb70-351" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-352"><a href="#cb70-352" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: patron-faltantes</span></span>
+<span id="cb70-353"><a href="#cb70-353" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb70-354"><a href="#cb70-354" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species, island) <span class="sc">|&gt;</span></span>
+<span id="cb70-355"><a href="#cb70-355" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">prop_sexo_faltante =</span> <span class="fu">mean</span>(<span class="fu">is.na</span>(sex)), <span class="at">n =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb70-356"><a href="#cb70-356" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-357"><a href="#cb70-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-358"><a href="#cb70-358" aria-hidden="true" tabindex="-1"></a>Las opciones más simples para tratarlos son: **eliminar** (`drop_na()`), que es razonable si es MCAR y son pocos casos, o **imputar** (reemplazar por un valor razonable), por ejemplo con la mediana del grupo:</span>
+<span id="cb70-359"><a href="#cb70-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-362"><a href="#cb70-362" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-363"><a href="#cb70-363" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: imputacion</span></span>
+<span id="cb70-364"><a href="#cb70-364" aria-hidden="true" tabindex="-1"></a>completos <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span> <span class="fu">drop_na</span>(body_mass_g, sex)</span>
+<span id="cb70-365"><a href="#cb70-365" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(penguins); <span class="fu">nrow</span>(completos)</span>
+<span id="cb70-366"><a href="#cb70-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-367"><a href="#cb70-367" aria-hidden="true" tabindex="-1"></a>imputado <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
+<span id="cb70-368"><a href="#cb70-368" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species) <span class="sc">|&gt;</span></span>
+<span id="cb70-369"><a href="#cb70-369" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">masa_imputada =</span> <span class="fu">coalesce</span>(body_mass_g, <span class="fu">median</span>(body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb70-370"><a href="#cb70-370" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb70-371"><a href="#cb70-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-372"><a href="#cb70-372" aria-hidden="true" tabindex="-1"></a>imputado <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="fu">is.na</span>(body_mass_g)) <span class="sc">|&gt;</span> <span class="fu">select</span>(species, body_mass_g, masa_imputada)</span>
+<span id="cb70-373"><a href="#cb70-373" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-374"><a href="#cb70-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-375"><a href="#cb70-375" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb70-376"><a href="#cb70-376" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cuidado con la imputación simple</span></span>
+<span id="cb70-377"><a href="#cb70-377" aria-hidden="true" tabindex="-1"></a>Reemplazar por la media o la mediana reduce artificialmente la variabilidad y puede sesgar relaciones entre variables. Para análisis formales usa **imputación múltiple** (paquete <span class="in">`mice`</span>) e incluye el mecanismo supuesto en la discusión de resultados.</span>
+<span id="cb70-378"><a href="#cb70-378" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb70-379"><a href="#cb70-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-380"><a href="#cb70-380" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejercicios</span></span>
+<span id="cb70-381"><a href="#cb70-381" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-382"><a href="#cb70-382" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Importar.** Escribe el tibble <span class="in">`muestras`</span> a un CSV con <span class="in">`write_csv()`</span>, léelo de nuevo y comprueba con <span class="in">`all.equal()`</span> que es idéntico al original.</span>
+<span id="cb70-383"><a href="#cb70-383" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Ordenar.** La tabla <span class="in">`ancho`</span> tiene un país por fila y un año por columna. Conviértela a formato largo y calcula el crecimiento porcentual entre 2020 y 2022 de cada país.</span>
+<span id="cb70-384"><a href="#cb70-384" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Resumir.** Con <span class="in">`penguins`</span>, calcula la media del largo del pico (<span class="in">`bill_length_mm`</span>) por especie y sexo, ignorando faltantes. ¿Qué grupo tiene el pico más largo?</span>
+<span id="cb70-385"><a href="#cb70-385" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Unir.** Crea una tabla con la altitud de cada una de las estaciones E01–E04 y únela a <span class="in">`leidos`</span>.</span>
+<span id="cb70-386"><a href="#cb70-386" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Fechas.** ¿Cuántos días hay entre <span class="in">`2025-03-15`</span> y el 1 de enero de 2026? ¿Qué día de la semana cae?</span>
+<span id="cb70-387"><a href="#cb70-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-388"><a href="#cb70-388" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
+<span id="cb70-389"><a href="#cb70-389" aria-hidden="true" tabindex="-1"></a><span class="fu">## Soluciones sugeridas</span></span>
+<span id="cb70-390"><a href="#cb70-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-393"><a href="#cb70-393" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb70-394"><a href="#cb70-394" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: soluciones</span></span>
+<span id="cb70-395"><a href="#cb70-395" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb70-396"><a href="#cb70-396" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> <span class="fu">tempfile</span>(<span class="at">fileext =</span> <span class="st">".csv"</span>); <span class="fu">write_csv</span>(muestras, tmp)</span>
+<span id="cb70-397"><a href="#cb70-397" aria-hidden="true" tabindex="-1"></a><span class="fu">all.equal</span>(muestras, <span class="fu">read_csv</span>(tmp, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>), <span class="at">check.attributes =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb70-398"><a href="#cb70-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-399"><a href="#cb70-399" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
+<span id="cb70-400"><a href="#cb70-400" aria-hidden="true" tabindex="-1"></a>ancho <span class="sc">|&gt;</span></span>
+<span id="cb70-401"><a href="#cb70-401" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span>pais, <span class="at">names_to =</span> <span class="st">"anio"</span>, <span class="at">values_to =</span> <span class="st">"pob"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb70-402"><a href="#cb70-402" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(pais) <span class="sc">|&gt;</span></span>
+<span id="cb70-403"><a href="#cb70-403" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">crecimiento_pct =</span> (pob[anio <span class="sc">==</span> <span class="st">"2022"</span>] <span class="sc">/</span> pob[anio <span class="sc">==</span> <span class="st">"2020"</span>] <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> <span class="dv">100</span>)</span>
+<span id="cb70-404"><a href="#cb70-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-405"><a href="#cb70-405" aria-hidden="true" tabindex="-1"></a><span class="co"># 3</span></span>
+<span id="cb70-406"><a href="#cb70-406" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb70-407"><a href="#cb70-407" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(sex)) <span class="sc">|&gt;</span></span>
+<span id="cb70-408"><a href="#cb70-408" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species, sex) <span class="sc">|&gt;</span></span>
+<span id="cb70-409"><a href="#cb70-409" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">pico_medio =</span> <span class="fu">mean</span>(bill_length_mm, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb70-410"><a href="#cb70-410" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(pico_medio))</span>
+<span id="cb70-411"><a href="#cb70-411" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-412"><a href="#cb70-412" aria-hidden="true" tabindex="-1"></a><span class="co"># 5</span></span>
+<span id="cb70-413"><a href="#cb70-413" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">ymd</span>(<span class="st">"2026-01-01"</span>) <span class="sc">-</span> <span class="fu">ymd</span>(<span class="st">"2025-03-15"</span>)</span>
+<span id="cb70-414"><a href="#cb70-414" aria-hidden="true" tabindex="-1"></a>d</span>
+<span id="cb70-415"><a href="#cb70-415" aria-hidden="true" tabindex="-1"></a><span class="fu">wday</span>(<span class="fu">ymd</span>(<span class="st">"2025-03-15"</span>), <span class="at">label =</span> <span class="cn">TRUE</span>, <span class="at">abbr =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb70-416"><a href="#cb70-416" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb70-417"><a href="#cb70-417" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb70-418"><a href="#cb70-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-419"><a href="#cb70-419" aria-hidden="true" tabindex="-1"></a><span class="fu">## Para profundizar</span></span>
+<span id="cb70-420"><a href="#cb70-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-421"><a href="#cb70-421" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wickham, H. (2014). Tidy data. *Journal of Statistical Software*, 59(10). <span class="ot">&lt;https://doi.org/10.18637/jss.v059.i10&gt;</span></span>
+<span id="cb70-422"><a href="#cb70-422" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wickham, H., Çetinkaya-Rundel, M. y Grolemund, G. (2023). *R for Data Science* (2.ª ed.). <span class="co">[</span><span class="ot">r4ds.hadley.nz</span><span class="co">](https://r4ds.hadley.nz/)</span>.</span>
+<span id="cb70-423"><a href="#cb70-423" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rubin, D. B. (1976). Inference and missing data. *Biometrika*, 63(3), 581–592.</span>
+<span id="cb70-424"><a href="#cb70-424" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>van Buuren, S. (2018). *Flexible Imputation of Missing Data* (2.ª ed.). <span class="co">[</span><span class="ot">stefvanbuuren.name/fimd</span><span class="co">](https://stefvanbuuren.name/fimd/)</span>.</span>
+<span id="cb70-425"><a href="#cb70-425" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hojas de referencia de Posit: <span class="co">[</span><span class="ot">posit.co/resources/cheatsheets</span><span class="co">](https://posit.co/resources/cheatsheets/)</span>.</span>
+<span id="cb70-426"><a href="#cb70-426" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-427"><a href="#cb70-427" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="minimal"}</span>
+<span id="cb70-428"><a href="#cb70-428" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reproducibilidad</span></span>
+<span id="cb70-429"><a href="#cb70-429" aria-hidden="true" tabindex="-1"></a>Este cuaderno se ejecutó con R <span class="in">`r paste(R.version$major, R.version$minor, sep = ".")`</span> y dplyr <span class="in">`r as.character(packageVersion("dplyr"))`</span>.</span>
+<span id="cb70-430"><a href="#cb70-430" aria-hidden="true" tabindex="-1"></a>:::</span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Made with ❤️ and Quarto</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

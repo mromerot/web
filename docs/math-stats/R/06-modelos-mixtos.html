@@ -1,0 +1,2496 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mauricio Romero">
+<meta name="dcterms.date" content="2026-09-25">
+<meta name="description" content="Por qué ignorar la dependencia entre observaciones es un error, cómo modelarla con efectos aleatorios (lme4 y nlme) y cómo interpretar los resultados en diseños de medidas repetidas.">
+
+<title>Modelos mixtos y medidas repetidas – Inicio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c0268bb2cd26ea8ad2ddef1ccaf3bc3a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4910f9121cc0cf878839b371e47b8836.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
+</script>
+<!-- Google Site Verification -->
+<!-- Reemplaza XXXXX con tu código de verificación de Google Search Console -->
+<!-- <meta name="google-site-verification" content="XXXXX" /> -->
+
+<!-- Meta tags adicionales para SEO -->
+<meta name="author" content="Mauricio Romero Torres">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@mauricioromerot">
+
+<!-- Schema.org markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mauricio Romero Torres",
+  "jobTitle": "Gestor de ciencia y tecnología",
+  "url": "https://mromerot.github.io/web/",
+  "sameAs": [
+    "https://x.com/mauricioromerot",
+    "https://www.linkedin.com/in/mauricio-romero-torres-1b33b95/",
+    "https://scholar.google.com/citations?user=n484vskAAAAJ"
+  ]
+}
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Modelos mixtos y medidas repetidas – Inicio">
+<meta property="og:description" content="Por qué ignorar la dependencia entre observaciones es un error, cómo modelarla con efectos aleatorios (lme4 y nlme) y cómo interpretar los resultados en diseños de medidas repetidas.">
+<meta property="og:image" content="https://mromerot.github.io/web/math-stats/R/06-modelos-mixtos_files/figure-html/fig-espagueti-1.png">
+<meta property="og:site_name" content="Inicio">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:width" content="2100">
+<meta name="twitter:title" content="Modelos mixtos y medidas repetidas – Inicio">
+<meta name="twitter:description" content="Por qué ignorar la dependencia entre observaciones es un error, cómo modelarla con efectos aleatorios (lme4 y nlme) y cómo interpretar los resultados en diseños de medidas repetidas.">
+<meta name="twitter:image" content="https://mromerot.github.io/web/math-stats/R/06-modelos-mixtos_files/figure-html/fig-espagueti-1.png">
+<meta name="twitter:image-height" content="1080">
+<meta name="twitter:image-width" content="2100">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../math-stats/math-stats.html">Matemáticas y estadística</a></li><li class="breadcrumb-item"><a href="../../math-stats/R/index.html">R: minicurso</a></li><li class="breadcrumb-item"><a href="../../math-stats/R/06-modelos-mixtos.html">Módulo 6. Modelos mixtos y medidas repetidas</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Inicio</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/gestiondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/conocimientodelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conocimiento del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/conocimiento-indicadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indicadores de riesgo nacionales y mundiales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/reducciondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reducción del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/manejodedesastres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manejo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/cienciaytecnologia/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/cienciaytecnologia/cienciaytecnologia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/cienciaytecnologia/estado-ciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estado de la ciencia 2024</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/cienciaytecnologia/hoja-de-ruta-ct.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hoja de ruta de ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/cienciaytecnologia/marco-sendai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Marco de Sendai</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/educacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Cursos, redes y recursos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/cursos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cursos en GRD</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/plataformas-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plataformas y redes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/repositorios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repositorios FAIR</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/sat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sistemas de alerta temprana</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/hidrol-meteorologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas hidrológicas y meteorológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/hidrol-meteorologicas/elnino.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">El Niño / La Niña</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/hidrol-meteorologicas/huracanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Huracanes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/hidrol-meteorologicas/inundaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/hidrol-meteorologicas/inundaciones-repentinas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones repentinas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/hidrol-meteorologicas/olasdecalor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Olas de calor</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/geologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas geológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/geologicas/falladeterreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Falla de terreno</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/geologicas/riesgosismico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgo sísmico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/geologicas/tsunami.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tsunami</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/geologicas/volcanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Volcanes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/ambientales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas ambientales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/ambientales/erosioncostera.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Erosión costera</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/ambientales/incendiosforestales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Incendios forestales</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/biologicos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas biológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/biologicos/covid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">COVID-19</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/tecnologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/tecnologicas/amenazastecnol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/sociales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas sociales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/sociales/migracion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Migración</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../grd/extraterrestre/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/extraterrestre/amenazasextraterrestres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/amazonas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amazonas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/ciudades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciudades</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../grd/glosario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Terminología</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../gcc/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gcc/gestion-cambio-climatico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../gestiondeproyectos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/gestionproyectosciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos de CTeI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/gestiontecnologiainnovacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de tecnología e innovación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/liderazgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Liderazgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/estrategia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estrategia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/metodologias-pm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metodologías de gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/skills-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Competencias clave en la gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/impacto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Impacto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/dofa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DOFA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/mapa-actores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa de actores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/gestion-conocimiento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del conocimiento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/Linea-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Línea base</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/pestel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PESTEL</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/swot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SWOT</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/conpes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CONPES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../gestiondeproyectos/riesgos-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgos en proyectos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../cyt/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../cyt/escrituraypublicacionacademica/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cyt/escrituraypublicacionacademica/escrituraypublicacionacademica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cyt/escrituraypublicacionacademica/parrafos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Párrafos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cyt/cienciareproduc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia reproducible</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cyt/transdisciplina.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia transdiciplinar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cyt/interfaz-cps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interfaz ciencia-política-sociedad</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../educacion/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../educacion/docenciaeducacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Docencia y educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../educacion/ova/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Objetos virtuales de aprendizaje (OVA)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ecolyconserv/ecologiayconservacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ecología y conservación marina</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../datascience/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/cienciadedatos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/myst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Myst</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/markdown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Markdown</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Github</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/google-colab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Google Colab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/jupyter-notebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter Notebook</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/graficas-python-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Graficas Python y R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/ia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inteligencia artificial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/vs-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/hugging-face.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hugging Face</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../datascience/mapas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/mapas/mapa_colombia_observable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (Observable / TopoJSON)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/mapas/mapa_colombia_pmtiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (PMTiles)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/mapas/mapa_colombia_tiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (Tiles)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/mapas/mapa_colombia_nri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índice de Riesgo (NRI)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/d3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/d3-experiment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Experimento con D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/claude.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../datascience/claude-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude Skills (Slides)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../math-stats/math-stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matemáticas y estadística</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../math-stats/R/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R: minicurso</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/00-fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 0. Fundamentos de R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/01-programacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 1. Programación: flujo, bucles y funciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/02-datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 2. Manejo de datos con tidyverse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/03-visualizacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 3. Visualización con ggplot2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/04-estadistica-basica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 4. Estadística básica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/05-modelos-lineales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 5. Regresión lineal y ANOVA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/06-modelos-mixtos.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Módulo 6. Modelos mixtos y medidas repetidas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/07-gam-series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 7. GAM y series de tiempo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/08-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 8. Análisis de redes con igraph</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/09-espacial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 9. Análisis espacial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../math-stats/R/10-aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 10. Aplicaciones y proyectos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../vidalaboral/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../vidalaboral/cafe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Café</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../vidalaboral/vidalaboral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../vidalaboral/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul class="collapse">
+  <li><a href="#objetivos-de-aprendizaje" id="toc-objetivos-de-aprendizaje" class="nav-link active" data-scroll-target="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
+  <li><a href="#el-problema-observaciones-que-no-son-independientes" id="toc-el-problema-observaciones-que-no-son-independientes" class="nav-link" data-scroll-target="#el-problema-observaciones-que-no-son-independientes">1. El problema: observaciones que no son independientes</a></li>
+  <li><a href="#los-datos-privación-de-sueño" id="toc-los-datos-privación-de-sueño" class="nav-link" data-scroll-target="#los-datos-privación-de-sueño">2. Los datos: privación de sueño</a></li>
+  <li><a href="#ignorar-la-dependencia-cuánto-importa" id="toc-ignorar-la-dependencia-cuánto-importa" class="nav-link" data-scroll-target="#ignorar-la-dependencia-cuánto-importa">3. Ignorar la dependencia: ¿cuánto importa?</a></li>
+  <li><a href="#modelo-con-intercepto-aleatorio" id="toc-modelo-con-intercepto-aleatorio" class="nav-link" data-scroll-target="#modelo-con-intercepto-aleatorio">4. Modelo con intercepto aleatorio</a></li>
+  <li><a href="#modelo-con-pendiente-aleatoria" id="toc-modelo-con-pendiente-aleatoria" class="nav-link" data-scroll-target="#modelo-con-pendiente-aleatoria">5. Modelo con pendiente aleatoria</a></li>
+  <li><a href="#diagnóstico" id="toc-diagnóstico" class="nav-link" data-scroll-target="#diagnóstico">6. Diagnóstico</a></li>
+  <li><a href="#medidas-repetidas-relación-con-la-prueba-t-pareada-y-el-anova" id="toc-medidas-repetidas-relación-con-la-prueba-t-pareada-y-el-anova" class="nav-link" data-scroll-target="#medidas-repetidas-relación-con-la-prueba-t-pareada-y-el-anova">7. Medidas repetidas: relación con la prueba t pareada y el ANOVA</a></li>
+  <li><a href="#estructuras-de-correlación-con-nlme" id="toc-estructuras-de-correlación-con-nlme" class="nav-link" data-scroll-target="#estructuras-de-correlación-con-nlme">8. Estructuras de correlación con <code>nlme</code></a></li>
+  <li><a href="#modelos-no-lineales-mixtos" id="toc-modelos-no-lineales-mixtos" class="nav-link" data-scroll-target="#modelos-no-lineales-mixtos">9. Modelos no lineales mixtos</a></li>
+  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a></li>
+  <li><a href="#para-profundizar" id="toc-para-profundizar" class="nav-link" data-scroll-target="#para-profundizar">Para profundizar</a></li>
+  </ul>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../math-stats/math-stats.html">Matemáticas y estadística</a></li><li class="breadcrumb-item"><a href="../../math-stats/R/index.html">R: minicurso</a></li><li class="breadcrumb-item"><a href="../../math-stats/R/06-modelos-mixtos.html">Módulo 6. Modelos mixtos y medidas repetidas</a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Modelos mixtos y medidas repetidas</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Minicurso de R · Módulo 6</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">modelos mixtos</div>
+    <div class="quarto-category">lme4</div>
+    <div class="quarto-category">nlme</div>
+    <div class="quarto-category">medidas repetidas</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Por qué ignorar la dependencia entre observaciones es un error, cómo modelarla con efectos aleatorios (lme4 y nlme) y cómo interpretar los resultados en diseños de medidas repetidas.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mauricio Romero </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 25, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Duración estimada:</strong> 4 horas · <strong>Nivel:</strong> avanzado · <strong>Prerrequisitos:</strong> Módulo 5 (regresión y ANOVA).</p>
+</div>
+</div>
+</div>
+<section id="objetivos-de-aprendizaje" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos-de-aprendizaje">Objetivos de aprendizaje</h2>
+<p>Al terminar este cuaderno podrás:</p>
+<ol type="1">
+<li>Reconocer cuándo las observaciones <strong>no son independientes</strong> (medidas repetidas, sitios, parcelas) y por qué eso invalida un <code>lm()</code> ordinario.</li>
+<li>Distinguir <strong>efectos fijos</strong> de <strong>efectos aleatorios</strong>.</li>
+<li>Ajustar modelos con <strong>intercepto aleatorio</strong> y con <strong>pendiente aleatoria</strong> usando <code>lme4</code>.</li>
+<li>Interpretar los <strong>componentes de varianza</strong> y la correlación intraclase (ICC).</li>
+<li>Comparar modelos y diagnosticar los supuestos.</li>
+<li>Explicar la relación entre un modelo mixto, el ANOVA de medidas repetidas y la prueba t pareada.</li>
+<li>Ajustar un modelo <strong>no lineal mixto</strong> con <code>nlme</code>.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)        <span class="co"># lmer(): modelos mixtos</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lmerTest)    <span class="co"># valores p para lmer</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nlme)        <span class="co"># lme() y nlme(): estructuras de correlación y modelos no lineales</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(performance) <span class="co"># ICC y diagnósticos</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2026</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="el-problema-observaciones-que-no-son-independientes" class="level2">
+<h2 class="anchored" data-anchor-id="el-problema-observaciones-que-no-son-independientes">1. El problema: observaciones que no son independientes</h2>
+<p>Los modelos del Módulo 5 suponen que cada fila es <strong>independiente</strong> de las demás. Esto se rompe cuando:</p>
+<ul>
+<li>se mide <strong>al mismo individuo</strong> varias veces (medidas repetidas, series por sujeto);</li>
+<li>las observaciones vienen de <strong>grupos</strong> (estudiantes en colegios, parcelas en una misma finca, sitios en un mismo arrecife);</li>
+<li>hay una estructura jerárquica o espacial.</li>
+</ul>
+<p>Observaciones del mismo grupo se parecen entre sí más que a las de otro grupo. Si se ignora esa <strong>correlación</strong>, el modelo cree que tiene más información independiente de la que realmente hay (<strong>pseudoreplicación</strong>), los errores estándar se subestiman y los valores p resultan demasiado optimistas (Hurlbert, 1984).</p>
+<section id="efectos-fijos-y-aleatorios" class="level3">
+<h3 class="anchored" data-anchor-id="efectos-fijos-y-aleatorios">Efectos fijos y aleatorios</h3>
+<p>Un <strong>modelo mixto</strong> combina dos tipos de efectos:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Efectos fijos</th>
+<th>Efectos aleatorios</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Qué son</td>
+<td>Los niveles que <strong>interesan en sí mismos</strong> (tratamiento, tiempo)</td>
+<td>Niveles <strong>muestreados de una población</strong> de grupos (sujetos, sitios)</td>
+</tr>
+<tr class="even">
+<td>Qué se estima</td>
+<td>Un coeficiente por nivel o pendiente</td>
+<td>Una <strong>varianza</strong> entre grupos</td>
+</tr>
+<tr class="odd">
+<td>Ejemplo</td>
+<td><code>Days</code> (días de privación de sueño)</td>
+<td><code>Subject</code> (los 18 voluntarios)</td>
+</tr>
+</tbody>
+</table>
+<p>Para un modelo con intercepto y pendiente aleatorios por sujeto <span class="math inline">\(j\)</span>:</p>
+<p><span class="math display">\[
+y_{ij} = (\beta_0 + b_{0j}) + (\beta_1 + b_{1j})\, x_{ij} + \varepsilon_{ij}, \qquad
+\begin{pmatrix} b_{0j} \\ b_{1j} \end{pmatrix} \sim N(\mathbf{0}, \Sigma), \quad \varepsilon_{ij} \sim N(0, \sigma^2)
+\]</span></p>
+<p>Los <span class="math inline">\(\beta\)</span> son los efectos fijos (el promedio de la población). Los <span class="math inline">\(b_j\)</span> son las <strong>desviaciones de cada sujeto</strong> respecto a ese promedio.</p>
+</section>
+</section>
+<section id="los-datos-privación-de-sueño" class="level2">
+<h2 class="anchored" data-anchor-id="los-datos-privación-de-sueño">2. Los datos: privación de sueño</h2>
+<p><code>sleepstudy</code> reúne el tiempo de reacción medio (en ms) de 18 conductores de camión durante 10 días en que solo durmieron 3 horas por noche (Belenky et al., 2003).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(sleepstudy)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(sleepstudy)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 180 × 3
+   Reaction  Days Subject
+      &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  
+ 1     250.     0 308    
+ 2     259.     1 308    
+ 3     251.     2 308    
+ 4     321.     3 308    
+ 5     357.     4 308    
+ 6     415.     5 308    
+ 7     382.     6 308    
+ 8     290.     7 308    
+ 9     431.     8 308    
+10     466.     9 308    
+# ℹ 170 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sleepstudy, <span class="fu">aes</span>(Days, Reaction, <span class="at">group =</span> Subject)) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">colour =</span> <span class="st">"grey60"</span>) <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">group =</span> <span class="dv">1</span>), <span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">colour =</span> <span class="st">"#e76f51"</span>, <span class="at">linewidth =</span> <span class="fl">1.2</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">9</span>) <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Días de privación de sueño"</span>, <span class="at">y =</span> <span class="st">"Tiempo de reacción (ms)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-espagueti" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-espagueti-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="06-modelos-mixtos_files/figure-html/fig-espagueti-1.png" class="img-fluid figure-img" width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-espagueti-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Tiempo de reacción de cada sujeto (líneas grises) y tendencia promedio (línea roja). Los sujetos difieren en el nivel inicial y en la velocidad con que se deterioran.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sleepstudy, <span class="fu">aes</span>(Days, Reaction)) <span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">colour =</span> <span class="st">"#264653"</span>, <span class="at">linewidth =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Subject, <span class="at">nrow =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">9</span>)) <span class="sc">+</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Días"</span>, <span class="at">y =</span> <span class="st">"Reacción (ms)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-por-sujeto" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-por-sujeto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="06-modelos-mixtos_files/figure-html/fig-por-sujeto-1.png" class="img-fluid figure-img" width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-por-sujeto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Regresión por sujeto. Las pendientes e interceptos varían mucho: es justo la variación que un modelo con efectos aleatorios busca capturar.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ignorar-la-dependencia-cuánto-importa" class="level2">
+<h2 class="anchored" data-anchor-id="ignorar-la-dependencia-cuánto-importa">3. Ignorar la dependencia: ¿cuánto importa?</h2>
+<p>Comparemos tres modelos para el efecto de los días:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>m_lm  <span class="ot">&lt;-</span> <span class="fu">lm</span>(Reaction <span class="sc">~</span> Days, <span class="at">data =</span> sleepstudy)                      <span class="co"># ignora los sujetos</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>m_int <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Reaction <span class="sc">~</span> Days <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Subject), <span class="at">data =</span> sleepstudy)    <span class="co"># intercepto aleatorio</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>m_pen <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Reaction <span class="sc">~</span> Days <span class="sc">+</span> (Days <span class="sc">|</span> Subject), <span class="at">data =</span> sleepstudy) <span class="co"># intercepto y pendiente aleatorios</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">modelo =</span> <span class="fu">c</span>(<span class="st">"lm (ignora sujetos)"</span>, <span class="st">"Intercepto aleatorio"</span>, <span class="st">"Intercepto + pendiente aleatorios"</span>),</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">pendiente =</span> <span class="fu">c</span>(<span class="fu">coef</span>(m_lm)[<span class="st">"Days"</span>], <span class="fu">fixef</span>(m_int)[<span class="st">"Days"</span>], <span class="fu">fixef</span>(m_pen)[<span class="st">"Days"</span>]),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">error_est =</span> <span class="fu">c</span>(<span class="fu">summary</span>(m_lm)<span class="sc">$</span>coefficients[<span class="st">"Days"</span>, <span class="dv">2</span>],</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">summary</span>(m_int)<span class="sc">$</span>coefficients[<span class="st">"Days"</span>, <span class="dv">2</span>],</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">summary</span>(m_pen)<span class="sc">$</span>coefficients[<span class="st">"Days"</span>, <span class="dv">2</span>])) <span class="sc">|&gt;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">modelo</th>
+<th style="text-align: right;">pendiente</th>
+<th style="text-align: right;">error_est</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">lm (ignora sujetos)</td>
+<td style="text-align: right;">10.47</td>
+<td style="text-align: right;">1.24</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Intercepto aleatorio</td>
+<td style="text-align: right;">10.47</td>
+<td style="text-align: right;">0.80</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Intercepto + pendiente aleatorios</td>
+<td style="text-align: right;">10.47</td>
+<td style="text-align: right;">1.55</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>La pendiente estimada es la misma en los tres modelos, pero su <strong>error estándar</strong> cambia bastante: 1,24 con <code>lm</code>, 0,80 con intercepto aleatorio y 1,55 con pendiente aleatoria. Hay dos lecciones:</p>
+<ul>
+<li>El <code>lm</code> trata las 180 mediciones como independientes, cuando en realidad son 10 mediciones de cada uno de 18 personas. Su error (1,24) queda por debajo del real (1,55).</li>
+<li>El modelo con <strong>solo intercepto aleatorio</strong> es el más optimista (0,80). Supone que todos los sujetos se deterioran a la <strong>misma velocidad</strong> y solo difieren en el nivel de partida. Como en los datos la velocidad sí varía, ese modelo subestima la incertidumbre sobre el efecto promedio. Omitir un efecto aleatorio que existe en los datos produce intervalos demasiado angostos (Barr et al., 2013).</li>
+</ul>
+</section>
+<section id="modelo-con-intercepto-aleatorio" class="level2">
+<h2 class="anchored" data-anchor-id="modelo-con-intercepto-aleatorio">4. Modelo con intercepto aleatorio</h2>
+<p>La sintaxis de <code>lmer()</code> agrega los efectos aleatorios entre paréntesis: <code>(efecto | grupo)</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_int)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: Reaction ~ Days + (1 | Subject)
+   Data: sleepstudy
+
+REML criterion at convergence: 1786.5
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.2257 -0.5529  0.0109  0.5188  4.2506 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ Subject  (Intercept) 1378.2   37.12   
+ Residual              960.5   30.99   
+Number of obs: 180, groups:  Subject, 18
+
+Fixed effects:
+            Estimate Std. Error       df t value Pr(&gt;|t|)    
+(Intercept) 251.4051     9.7467  22.8102   25.79   &lt;2e-16 ***
+Days         10.4673     0.8042 161.0000   13.02   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation of Fixed Effects:
+     (Intr)
+Days -0.371</code></pre>
+</div>
+</div>
+<p>Se lee así:</p>
+<ul>
+<li><strong>Efectos fijos</strong>: cada día adicional sin dormir aumenta el tiempo de reacción en unos 10 ms (IC 95 % más abajo).</li>
+<li><strong>Efectos aleatorios</strong>: la varianza entre sujetos en el intercepto (<code>Subject (Intercept)</code>) y la varianza residual (dentro de sujetos).</li>
+</ul>
+<section id="correlación-intraclase-icc" class="level3">
+<h3 class="anchored" data-anchor-id="correlación-intraclase-icc">Correlación intraclase (ICC)</h3>
+<p>El ICC es la proporción de la varianza total que se debe a <strong>diferencias entre grupos</strong>:</p>
+<p><span class="math display">\[
+ICC = \frac{\sigma^2_{sujeto}}{\sigma^2_{sujeto} + \sigma^2_{residual}}
+\]</span></p>
+<p>Un ICC alto indica que las observaciones del mismo grupo se parecen mucho y que ignorar la estructura sería grave.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">icc</span>(m_int)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Intraclass Correlation Coefficient
+
+    Adjusted ICC: 0.589
+  Unadjusted ICC: 0.424</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(m_int, <span class="at">parm =</span> <span class="st">"Days"</span>, <span class="at">method =</span> <span class="st">"Wald"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        2.5 %   97.5 %
+Days 8.891041 12.04353</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="modelo-con-pendiente-aleatoria" class="level2">
+<h2 class="anchored" data-anchor-id="modelo-con-pendiente-aleatoria">5. Modelo con pendiente aleatoria</h2>
+<p>Como los sujetos no solo difieren en el nivel de partida sino también en <strong>cuánto se deterioran</strong>, permitimos que la pendiente varíe:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_pen)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: Reaction ~ Days + (Days | Subject)
+   Data: sleepstudy
+
+REML criterion at convergence: 1743.6
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.9536 -0.4634  0.0231  0.4634  5.1793 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr 
+ Subject  (Intercept) 612.10   24.741        
+          Days         35.07    5.922   0.07 
+ Residual             654.94   25.592        
+Number of obs: 180, groups:  Subject, 18
+
+Fixed effects:
+            Estimate Std. Error      df t value Pr(&gt;|t|)    
+(Intercept)  251.405      6.825  17.000  36.838  &lt; 2e-16 ***
+Days          10.467      1.546  17.000   6.771 3.26e-06 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation of Fixed Effects:
+     (Intr)
+Days -0.138</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">VarCorr</span>(m_pen)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> Groups   Name        Std.Dev. Corr  
+ Subject  (Intercept) 24.7407        
+          Days         5.9221  0.066 
+ Residual             25.5918        </code></pre>
+</div>
+</div>
+<p><code>VarCorr()</code> muestra la desviación estándar del intercepto (≈ 25 ms) y de la pendiente (≈ 6 ms/día), y su correlación. Una correlación cercana a cero indica que el nivel inicial no predice la velocidad del deterioro.</p>
+<section id="cuál-modelo-es-mejor" class="level3">
+<h3 class="anchored" data-anchor-id="cuál-modelo-es-mejor">¿Cuál modelo es mejor?</h3>
+<p>Para comparar modelos <strong>anidados que difieren en efectos aleatorios</strong>, se ajustan por máxima verosimilitud restringida (REML, por defecto) y se comparan con una prueba de razón de verosimilitudes. Con <code>anova()</code> sobre los modelos, <code>lmerTest</code> los reajusta automáticamente cuando hace falta:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m_int, m_pen, <span class="at">refit =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Data: sleepstudy
+Models:
+m_int: Reaction ~ Days + (1 | Subject)
+m_pen: Reaction ~ Days + (Days | Subject)
+      npar    AIC    BIC  logLik -2*log(L)  Chisq Df Pr(&gt;Chisq)    
+m_int    4 1794.5 1807.2 -893.23    1786.5                         
+m_pen    6 1755.6 1774.8 -871.81    1743.6 42.837  2   4.99e-10 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">AIC</span>(m_int, m_pen)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      df      AIC
+m_int  4 1794.465
+m_pen  6 1755.628</code></pre>
+</div>
+</div>
+<p>El modelo con pendiente aleatoria ajusta mucho mejor, y como consecuencia, los intervalos de confianza para el efecto de los días son más realistas.</p>
+</section>
+<section id="efectos-aleatorios-cómo-se-desvía-cada-sujeto" class="level3">
+<h3 class="anchored" data-anchor-id="efectos-aleatorios-cómo-se-desvía-cada-sujeto">Efectos aleatorios: ¿cómo se desvía cada sujeto?</h3>
+<p>Los <strong>BLUPs</strong> (<em>best linear unbiased predictors</em>) son las desviaciones estimadas de cada sujeto respecto al promedio. Se pueden ver como un gráfico tipo “oruga”:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>re <span class="ot">&lt;-</span> <span class="fu">ranef</span>(m_pen)<span class="sc">$</span>Subject <span class="sc">|&gt;</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>(<span class="at">rownames =</span> <span class="st">"Subject"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Intercepto =</span> <span class="st">`</span><span class="at">(Intercept)</span><span class="st">`</span>, <span class="at">Pendiente =</span> Days) <span class="sc">|&gt;</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span>Subject, <span class="at">names_to =</span> <span class="st">"efecto"</span>, <span class="at">values_to =</span> <span class="st">"desviacion"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(efecto) <span class="sc">|&gt;</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Subject =</span> <span class="fu">fct_reorder</span>(Subject, desviacion)) <span class="sc">|&gt;</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(re, <span class="fu">aes</span>(desviacion, Subject)) <span class="sc">+</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">"#264653"</span>) <span class="sc">+</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> efecto, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Desviación respecto al promedio"</span>, <span class="at">y =</span> <span class="cn">NULL</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-blups" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-blups-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="06-modelos-mixtos_files/figure-html/fig-blups-1.png" class="img-fluid figure-img" width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-blups-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Desviaciones estimadas de cada sujeto (BLUPs) respecto al intercepto (izquierda) y a la pendiente (derecha) promedios. Los sujetos 309 y 337 son los extremos en el intercepto, y el 335 y el 308 en la pendiente.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="predicciones-por-sujeto-el-efecto-de-encogimiento" class="level3">
+<h3 class="anchored" data-anchor-id="predicciones-por-sujeto-el-efecto-de-encogimiento">Predicciones por sujeto: el efecto de “encogimiento”</h3>
+<p>Los modelos mixtos <strong>suavizan</strong> las estimaciones de cada sujeto hacia el promedio poblacional, en especial cuando hay pocos datos (<em>shrinkage</em>). Compara la regresión por separado con la que ofrece el modelo mixto:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>sleepstudy<span class="sc">$</span>pred_mixto <span class="ot">&lt;-</span> <span class="fu">predict</span>(m_pen)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>sleepstudy<span class="sc">$</span>pred_pob   <span class="ot">&lt;-</span> <span class="fu">predict</span>(m_pen, <span class="at">re.form =</span> <span class="cn">NA</span>)   <span class="co"># solo efectos fijos</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sleepstudy, <span class="fu">aes</span>(Days)) <span class="sc">+</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> Reaction), <span class="at">size =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">y =</span> Reaction), <span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">colour =</span> <span class="st">"grey60"</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> pred_mixto), <span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> pred_pob), <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Subject, <span class="at">nrow =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">9</span>)) <span class="sc">+</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Días"</span>, <span class="at">y =</span> <span class="st">"Reacción (ms)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-encogimiento" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-encogimiento-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="06-modelos-mixtos_files/figure-html/fig-encogimiento-1.png" class="img-fluid figure-img" width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-encogimiento-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Rectas individuales ajustadas por separado (gris) frente a las predicciones del modelo mixto (rojo) y al efecto fijo promedio (negro). El modelo mixto acerca las rectas extremas al promedio y es más estable.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="diagnóstico" class="level2">
+<h2 class="anchored" data-anchor-id="diagnóstico">6. Diagnóstico</h2>
+<p>Se revisan los residuos y también los efectos aleatorios, porque se supone que ambos son normales:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">aj =</span> <span class="fu">fitted</span>(m_pen), <span class="at">res =</span> <span class="fu">resid</span>(m_pen))</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>re_int <span class="ot">&lt;-</span> <span class="fu">ranef</span>(m_pen)<span class="sc">$</span>Subject[[<span class="st">"(Intercept)"</span>]]</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>(<span class="fu">ggplot</span>(d, <span class="fu">aes</span>(aj, res)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>   <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Ajustados"</span>, <span class="at">y =</span> <span class="st">"Residuos"</span>)) <span class="sc">|</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>(<span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="at">sample =</span> res)) <span class="sc">+</span> <span class="fu">stat_qq</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> <span class="fu">stat_qq_line</span>(<span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>   <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Teóricos"</span>, <span class="at">y =</span> <span class="st">"Residuos"</span>)) <span class="sc">|</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>(<span class="fu">ggplot</span>(<span class="fu">tibble</span>(re_int), <span class="fu">aes</span>(<span class="at">sample =</span> re_int)) <span class="sc">+</span> <span class="fu">stat_qq</span>() <span class="sc">+</span> <span class="fu">stat_qq_line</span>(<span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>   <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Teóricos"</span>, <span class="at">y =</span> <span class="st">"Interceptos aleatorios"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-diag-mixto" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diag-mixto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="06-modelos-mixtos_files/figure-html/fig-diag-mixto-1.png" class="img-fluid figure-img" width="1500">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diag-mixto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Diagnóstico del modelo mixto. Izquierda: residuos frente a ajustados. Centro: Q-Q de los residuos. Derecha: Q-Q de los interceptos aleatorios.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Consejo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Con pocos grupos (menos de unos 5 a 6) es difícil estimar una varianza entre grupos. En ese caso conviene usar el grupo como efecto <strong>fijo</strong>. También, si aparece el aviso <code>singular fit</code>, el modelo es más complejo de lo que los datos permiten: simplifica los efectos aleatorios.</p>
+</div>
+</div>
+</section>
+<section id="medidas-repetidas-relación-con-la-prueba-t-pareada-y-el-anova" class="level2">
+<h2 class="anchored" data-anchor-id="medidas-repetidas-relación-con-la-prueba-t-pareada-y-el-anova">7. Medidas repetidas: relación con la prueba t pareada y el ANOVA</h2>
+<p>Cuando solo hay <strong>dos momentos</strong>, un modelo con intercepto aleatorio por sujeto es <strong>equivalente</strong> a la prueba t pareada. Lo comprobamos con los días 0 y 9:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>dos <span class="ot">&lt;-</span> sleepstudy <span class="sc">|&gt;</span> <span class="fu">filter</span>(Days <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">9</span>))</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>ancho <span class="ot">&lt;-</span> dos <span class="sc">|&gt;</span> <span class="fu">select</span>(Subject, Days, Reaction) <span class="sc">|&gt;</span> <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Days, <span class="at">values_from =</span> Reaction, <span class="at">names_prefix =</span> <span class="st">"d"</span>)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(ancho<span class="sc">$</span>d9, ancho<span class="sc">$</span>d0, <span class="at">paired =</span> <span class="cn">TRUE</span>)<span class="sc">$</span>p.value</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.311418e-06</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lmer</span>(Reaction <span class="sc">~</span> <span class="fu">factor</span>(Days) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Subject), <span class="at">data =</span> dos))<span class="sc">$</span>coefficients[<span class="st">"factor(Days)9"</span>, ]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Estimate   Std. Error           df      t value     Pr(&gt;|t|) 
+9.419942e+01 1.353899e+01 1.700000e+01 6.957640e+00 2.311418e-06 </code></pre>
+</div>
+</div>
+<p>El valor p es <strong>idéntico</strong>. La ventaja del modelo mixto es que se generaliza a más de dos momentos, admite <strong>datos desbalanceados</strong> (sujetos con mediciones faltantes, algo que el ANOVA clásico de medidas repetidas no tolera) y permite covariables continuas.</p>
+</section>
+<section id="estructuras-de-correlación-con-nlme" class="level2">
+<h2 class="anchored" data-anchor-id="estructuras-de-correlación-con-nlme">8. Estructuras de correlación con <code>nlme</code></h2>
+<p><code>nlme::lme()</code> es el paquete clásico y permite especificar <strong>estructuras de correlación</strong> entre las mediciones del mismo sujeto, útil con series temporales. Por ejemplo, un proceso autorregresivo de orden 1 (AR1), donde mediciones consecutivas se parecen más que las lejanas:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>m_ar1 <span class="ot">&lt;-</span> <span class="fu">lme</span>(Reaction <span class="sc">~</span> Days, <span class="at">random =</span> <span class="sc">~</span> <span class="dv">1</span> <span class="sc">|</span> Subject,</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">correlation =</span> <span class="fu">corAR1</span>(<span class="at">form =</span> <span class="sc">~</span> Days <span class="sc">|</span> Subject), <span class="at">data =</span> sleepstudy)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_ar1)<span class="sc">$</span>tTable</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                Value Std.Error  DF   t-value      p-value
+(Intercept) 252.84144  10.94093 161 23.109688 5.261088e-53
+Days         10.46687   1.34408 161  7.787388 7.884026e-13</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>m_sin <span class="ot">&lt;-</span> <span class="fu">lme</span>(Reaction <span class="sc">~</span> Days, <span class="at">random =</span> <span class="sc">~</span> <span class="dv">1</span> <span class="sc">|</span> Subject, <span class="at">data =</span> sleepstudy)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m_sin, m_ar1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      Model df      AIC      BIC    logLik   Test  L.Ratio p-value
+m_sin     1  4 1794.465 1807.192 -893.2325                        
+m_ar1     2  5 1746.191 1762.100 -868.0955 1 vs 2 50.27402  &lt;.0001</code></pre>
+</div>
+</div>
+<p>La estructura AR1 mejora claramente el ajuste (AIC de 1794 a 1746): las mediciones de días consecutivos de un mismo sujeto se parecen más entre sí que las de días lejanos, más allá de que sea el mismo sujeto. Es un modelo distinto al de pendiente aleatoria (que tenía un AIC de 1756) y ambos explican parte de la misma variación; también se pueden combinar.</p>
+</section>
+<section id="modelos-no-lineales-mixtos" class="level2">
+<h2 class="anchored" data-anchor-id="modelos-no-lineales-mixtos">9. Modelos no lineales mixtos</h2>
+<p>Muchos procesos (crecimiento, cinética química) no son lineales. <code>nlme()</code> ajusta una curva no lineal en la que <strong>algunos parámetros varían por grupo</strong>. Ejemplo: el crecimiento en altura de 14 árboles de pino (<code>Loblolly</code>) que se aproxima a una asíntota:</p>
+<p><span class="math display">\[
+altura = Asym + (R_0 - Asym)\, e^{-e^{lrc}\, edad}
+\]</span></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>m_nl <span class="ot">&lt;-</span> <span class="fu">nlme</span>(height <span class="sc">~</span> <span class="fu">SSasymp</span>(age, Asym, R0, lrc),</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> Loblolly,</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">fixed =</span> Asym <span class="sc">+</span> R0 <span class="sc">+</span> lrc <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">random =</span> Asym <span class="sc">~</span> <span class="dv">1</span> <span class="sc">|</span> Seed,          <span class="co"># cada árbol tiene su propia asíntota</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">start =</span> <span class="fu">c</span>(<span class="at">Asym =</span> <span class="dv">94</span>, <span class="at">R0 =</span> <span class="sc">-</span><span class="fl">8.25</span>, <span class="at">lrc =</span> <span class="sc">-</span><span class="fl">3.2</span>))</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_nl)<span class="sc">$</span>tTable</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          Value  Std.Error DF   t-value      p-value
+Asym 101.448063 2.46160066 68  41.21223 7.874756e-50
+R0    -8.627523 0.31795212 68 -27.13466 3.341766e-38
+lrc   -3.233727 0.03426941 68 -94.36189 7.807066e-74</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>edades <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">3</span>, <span class="dv">25</span>, <span class="at">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>curva_pob <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">age =</span> edades, <span class="at">height =</span> <span class="fu">predict</span>(m_nl, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">age =</span> edades, <span class="at">Seed =</span> <span class="cn">NA</span>), <span class="at">level =</span> <span class="dv">0</span>))</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>Loblolly <span class="sc">|&gt;</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ajustado =</span> <span class="fu">fitted</span>(m_nl)) <span class="sc">|&gt;</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(age)) <span class="sc">+</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> height, <span class="at">colour =</span> Seed), <span class="at">size =</span> <span class="fl">1.4</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> ajustado, <span class="at">colour =</span> Seed, <span class="at">group =</span> Seed), <span class="at">linewidth =</span> <span class="fl">0.4</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> curva_pob, <span class="fu">aes</span>(<span class="at">y =</span> height), <span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_viridis_d</span>() <span class="sc">+</span></span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Edad (años)"</span>, <span class="at">y =</span> <span class="st">"Altura (pies)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-nlme" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nlme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="06-modelos-mixtos_files/figure-html/fig-nlme-1.png" class="img-fluid figure-img" width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nlme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Crecimiento de 14 pinos. Puntos: datos; líneas: curvas ajustadas por árbol; línea negra: curva promedio de la población.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicios" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
+<ol type="1">
+<li><strong>Intercepto aleatorio.</strong> Con <code>Orthodont</code> (paquete <code>nlme</code>), ajusta <code>distance ~ age + (1 | Subject)</code> con <code>lmer()</code>. ¿Cuánto crece la distancia por año? ¿Cuál es el ICC?</li>
+<li><strong>Pendiente aleatoria.</strong> Añade <code>age</code> como pendiente aleatoria. ¿Mejora el modelo (usa <code>anova()</code> y AIC)?</li>
+<li><strong>Efecto fijo del sexo.</strong> Agrega <code>Sex</code> y su interacción con <code>age</code>. ¿Crece igual la distancia en niños y niñas?</li>
+<li><strong>Pseudoreplicación.</strong> Ajusta el mismo modelo con <code>lm()</code> y compara los errores estándar. ¿Qué observas?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Soluciones sugeridas
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Orthodont, <span class="at">package =</span> <span class="st">"nlme"</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>o1 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(distance <span class="sc">~</span> age <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Subject), <span class="at">data =</span> Orthodont)</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>o2 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(distance <span class="sc">~</span> age <span class="sc">+</span> (age <span class="sc">|</span> Subject), <span class="at">data =</span> Orthodont)</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">fixef</span>(o1)[<span class="st">"age"</span>]; <span class="fu">icc</span>(o1)<span class="sc">$</span>ICC_adjusted</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      age 
+0.6601852 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.6857391</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(o1, o2, <span class="at">refit =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Data: Orthodont
+Models:
+o1: distance ~ age + (1 | Subject)
+o2: distance ~ age + (age | Subject)
+   npar    AIC    BIC  logLik -2*log(L)  Chisq Df Pr(&gt;Chisq)
+o1    4 455.00 465.73 -223.50    447.00                     
+o2    6 454.64 470.73 -221.32    442.64 4.3658  2     0.1127</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>o3 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(distance <span class="sc">~</span> age <span class="sc">*</span> Sex <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Subject), <span class="at">data =</span> Orthodont)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(o3)<span class="sc">$</span>coefficients</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                Estimate Std. Error       df    t value     Pr(&gt;|t|)
+(Intercept)   16.3406250  0.9813122 103.9864 16.6518101 4.193843e-31
+age            0.7843750  0.0775011  79.0000 10.1208235 6.441815e-16
+SexFemale      1.0321023  1.5374208 103.9864  0.6713206 5.035049e-01
+age:SexFemale -0.3048295  0.1214209  79.0000 -2.5105197 1.409745e-02</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(<span class="at">lm =</span> <span class="fu">summary</span>(<span class="fu">lm</span>(distance <span class="sc">~</span> age, <span class="at">data =</span> Orthodont))<span class="sc">$</span>coefficients[<span class="st">"age"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">mixto =</span> <span class="fu">summary</span>(o1)<span class="sc">$</span>coefficients[<span class="st">"age"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       Estimate Std. Error
+lm    0.6601852 0.10918158
+mixto 0.6601852 0.06160592</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="para-profundizar" class="level2">
+<h2 class="anchored" data-anchor-id="para-profundizar">Para profundizar</h2>
+<ul>
+<li>Bates, D., Mächler, M., Bolker, B. y Walker, S. (2015). Fitting linear mixed-effects models using lme4. <em>Journal of Statistical Software</em>, 67(1), 1–48. <a href="https://doi.org/10.18637/jss.v067.i01" class="uri">https://doi.org/10.18637/jss.v067.i01</a></li>
+<li>Pinheiro, J. C. y Bates, D. M. (2000). <em>Mixed-Effects Models in S and S-PLUS</em>. Springer.</li>
+<li>Zuur, A. F., Ieno, E. N., Walker, N., Saveliev, A. A. y Smith, G. M. (2009). <em>Mixed Effects Models and Extensions in Ecology with R</em>. Springer.</li>
+<li>Barr, D. J., Levy, R., Scheepers, C. y Tily, H. J. (2013). Random effects structure for confirmatory hypothesis testing: keep it maximal. <em>Journal of Memory and Language</em>, 68(3), 255–278.</li>
+<li>Hurlbert, S. H. (1984). Pseudoreplication and the design of ecological field experiments. <em>Ecological Monographs</em>, 54(2), 187–211.</li>
+<li>Belenky, G. et al.&nbsp;(2003). Patterns of performance degradation and restoration during sleep restriction. <em>Journal of Sleep Research</em>, 12(1), 1–12.</li>
+</ul>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reproducibilidad
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este cuaderno se ejecutó con R 4.5.2 y lme4 2.0.6.</p>
+</div>
+</div>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mromerot\.github\.io\/web\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Modelos mixtos y medidas repetidas"</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Minicurso de R · Módulo 6"</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Por qué ignorar la dependencia entre observaciones es un error, cómo modelarla con efectos aleatorios (lme4 y nlme) y cómo interpretar los resultados en diseños de medidas repetidas."</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Mauricio Romero"</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2026-09-25</span></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [R, modelos mixtos, lme4, nlme, medidas repetidas]</span></span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="minimal"}</span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a>**Duración estimada:** 4 horas · **Nivel:** avanzado · **Prerrequisitos:** Módulo 5 (regresión y ANOVA).</span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objetivos de aprendizaje</span></span>
+<span id="cb44-17"><a href="#cb44-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-18"><a href="#cb44-18" aria-hidden="true" tabindex="-1"></a>Al terminar este cuaderno podrás:</span>
+<span id="cb44-19"><a href="#cb44-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-20"><a href="#cb44-20" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Reconocer cuándo las observaciones **no son independientes** (medidas repetidas, sitios, parcelas) y por qué eso invalida un <span class="in">`lm()`</span> ordinario.</span>
+<span id="cb44-21"><a href="#cb44-21" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Distinguir **efectos fijos** de **efectos aleatorios**.</span>
+<span id="cb44-22"><a href="#cb44-22" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Ajustar modelos con **intercepto aleatorio** y con **pendiente aleatoria** usando <span class="in">`lme4`</span>.</span>
+<span id="cb44-23"><a href="#cb44-23" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Interpretar los **componentes de varianza** y la correlación intraclase (ICC).</span>
+<span id="cb44-24"><a href="#cb44-24" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Comparar modelos y diagnosticar los supuestos.</span>
+<span id="cb44-25"><a href="#cb44-25" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Explicar la relación entre un modelo mixto, el ANOVA de medidas repetidas y la prueba t pareada.</span>
+<span id="cb44-26"><a href="#cb44-26" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>Ajustar un modelo **no lineal mixto** con <span class="in">`nlme`</span>.</span>
+<span id="cb44-27"><a href="#cb44-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-30"><a href="#cb44-30" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-31"><a href="#cb44-31" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: paquetes</span></span>
+<span id="cb44-32"><a href="#cb44-32" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb44-33"><a href="#cb44-33" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)        <span class="co"># lmer(): modelos mixtos</span></span>
+<span id="cb44-34"><a href="#cb44-34" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lmerTest)    <span class="co"># valores p para lmer</span></span>
+<span id="cb44-35"><a href="#cb44-35" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nlme)        <span class="co"># lme() y nlme(): estructuras de correlación y modelos no lineales</span></span>
+<span id="cb44-36"><a href="#cb44-36" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(performance) <span class="co"># ICC y diagnósticos</span></span>
+<span id="cb44-37"><a href="#cb44-37" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2026</span>)</span>
+<span id="cb44-38"><a href="#cb44-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-39"><a href="#cb44-39" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()))</span>
+<span id="cb44-40"><a href="#cb44-40" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-41"><a href="#cb44-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-42"><a href="#cb44-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. El problema: observaciones que no son independientes</span></span>
+<span id="cb44-43"><a href="#cb44-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-44"><a href="#cb44-44" aria-hidden="true" tabindex="-1"></a>Los modelos del Módulo 5 suponen que cada fila es **independiente** de las demás. Esto se rompe cuando:</span>
+<span id="cb44-45"><a href="#cb44-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-46"><a href="#cb44-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>se mide **al mismo individuo** varias veces (medidas repetidas, series por sujeto);</span>
+<span id="cb44-47"><a href="#cb44-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>las observaciones vienen de **grupos** (estudiantes en colegios, parcelas en una misma finca, sitios en un mismo arrecife);</span>
+<span id="cb44-48"><a href="#cb44-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>hay una estructura jerárquica o espacial.</span>
+<span id="cb44-49"><a href="#cb44-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-50"><a href="#cb44-50" aria-hidden="true" tabindex="-1"></a>Observaciones del mismo grupo se parecen entre sí más que a las de otro grupo. Si se ignora esa **correlación**, el modelo cree que tiene más información independiente de la que realmente hay (**pseudoreplicación**), los errores estándar se subestiman y los valores p resultan demasiado optimistas (Hurlbert, 1984).</span>
+<span id="cb44-51"><a href="#cb44-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-52"><a href="#cb44-52" aria-hidden="true" tabindex="-1"></a><span class="fu">### Efectos fijos y aleatorios</span></span>
+<span id="cb44-53"><a href="#cb44-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-54"><a href="#cb44-54" aria-hidden="true" tabindex="-1"></a>Un **modelo mixto** combina dos tipos de efectos:</span>
+<span id="cb44-55"><a href="#cb44-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-56"><a href="#cb44-56" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="pp">|</span> Efectos fijos <span class="pp">|</span> Efectos aleatorios <span class="pp">|</span></span>
+<span id="cb44-57"><a href="#cb44-57" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb44-58"><a href="#cb44-58" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Qué son <span class="pp">|</span> Los niveles que **interesan en sí mismos** (tratamiento, tiempo) | Niveles **muestreados de una población** de grupos (sujetos, sitios) <span class="pp">|</span></span>
+<span id="cb44-59"><a href="#cb44-59" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Qué se estima <span class="pp">|</span> Un coeficiente por nivel o pendiente <span class="pp">|</span> Una **varianza** entre grupos <span class="pp">|</span></span>
+<span id="cb44-60"><a href="#cb44-60" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Ejemplo <span class="pp">|</span> <span class="in">`Days`</span> (días de privación de sueño) <span class="pp">|</span> <span class="in">`Subject`</span> (los 18 voluntarios) <span class="pp">|</span></span>
+<span id="cb44-61"><a href="#cb44-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-62"><a href="#cb44-62" aria-hidden="true" tabindex="-1"></a>Para un modelo con intercepto y pendiente aleatorios por sujeto $j$:</span>
+<span id="cb44-63"><a href="#cb44-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-64"><a href="#cb44-64" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb44-65"><a href="#cb44-65" aria-hidden="true" tabindex="-1"></a>y_{ij} = (\beta_0 + b_{0j}) + (\beta_1 + b_{1j})\, x_{ij} + \varepsilon_{ij}, \qquad</span>
+<span id="cb44-66"><a href="#cb44-66" aria-hidden="true" tabindex="-1"></a>\begin{pmatrix} b_{0j} <span class="sc">\\</span> b_{1j} \end{pmatrix} \sim N(\mathbf{0}, \Sigma), \quad \varepsilon_{ij} \sim N(0, \sigma^2)</span>
+<span id="cb44-67"><a href="#cb44-67" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb44-68"><a href="#cb44-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-69"><a href="#cb44-69" aria-hidden="true" tabindex="-1"></a>Los $\beta$ son los efectos fijos (el promedio de la población). Los $b_j$ son las **desviaciones de cada sujeto** respecto a ese promedio.</span>
+<span id="cb44-70"><a href="#cb44-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-71"><a href="#cb44-71" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Los datos: privación de sueño</span></span>
+<span id="cb44-72"><a href="#cb44-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-73"><a href="#cb44-73" aria-hidden="true" tabindex="-1"></a><span class="in">`sleepstudy`</span> reúne el tiempo de reacción medio (en ms) de 18 conductores de camión durante 10 días en que solo durmieron 3 horas por noche (Belenky et al., 2003).</span>
+<span id="cb44-74"><a href="#cb44-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-77"><a href="#cb44-77" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-78"><a href="#cb44-78" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: datos</span></span>
+<span id="cb44-79"><a href="#cb44-79" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(sleepstudy)</span>
+<span id="cb44-80"><a href="#cb44-80" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(sleepstudy)</span>
+<span id="cb44-81"><a href="#cb44-81" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-82"><a href="#cb44-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-85"><a href="#cb44-85" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-86"><a href="#cb44-86" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-espagueti</span></span>
+<span id="cb44-87"><a href="#cb44-87" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Tiempo de reacción de cada sujeto (líneas grises) y tendencia promedio (línea roja). Los sujetos difieren en el nivel inicial y en la velocidad con que se deterioran."</span></span>
+<span id="cb44-88"><a href="#cb44-88" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.6</span></span>
+<span id="cb44-89"><a href="#cb44-89" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sleepstudy, <span class="fu">aes</span>(Days, Reaction, <span class="at">group =</span> Subject)) <span class="sc">+</span></span>
+<span id="cb44-90"><a href="#cb44-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">colour =</span> <span class="st">"grey60"</span>) <span class="sc">+</span></span>
+<span id="cb44-91"><a href="#cb44-91" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">group =</span> <span class="dv">1</span>), <span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">colour =</span> <span class="st">"#e76f51"</span>, <span class="at">linewidth =</span> <span class="fl">1.2</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb44-92"><a href="#cb44-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">9</span>) <span class="sc">+</span></span>
+<span id="cb44-93"><a href="#cb44-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Días de privación de sueño"</span>, <span class="at">y =</span> <span class="st">"Tiempo de reacción (ms)"</span>)</span>
+<span id="cb44-94"><a href="#cb44-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-95"><a href="#cb44-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-98"><a href="#cb44-98" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-99"><a href="#cb44-99" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-por-sujeto</span></span>
+<span id="cb44-100"><a href="#cb44-100" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Regresión por sujeto. Las pendientes e interceptos varían mucho: es justo la variación que un modelo con efectos aleatorios busca capturar."</span></span>
+<span id="cb44-101"><a href="#cb44-101" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
+<span id="cb44-102"><a href="#cb44-102" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sleepstudy, <span class="fu">aes</span>(Days, Reaction)) <span class="sc">+</span></span>
+<span id="cb44-103"><a href="#cb44-103" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb44-104"><a href="#cb44-104" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">colour =</span> <span class="st">"#264653"</span>, <span class="at">linewidth =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb44-105"><a href="#cb44-105" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Subject, <span class="at">nrow =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb44-106"><a href="#cb44-106" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">9</span>)) <span class="sc">+</span></span>
+<span id="cb44-107"><a href="#cb44-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Días"</span>, <span class="at">y =</span> <span class="st">"Reacción (ms)"</span>)</span>
+<span id="cb44-108"><a href="#cb44-108" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-109"><a href="#cb44-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-110"><a href="#cb44-110" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Ignorar la dependencia: ¿cuánto importa?</span></span>
+<span id="cb44-111"><a href="#cb44-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-112"><a href="#cb44-112" aria-hidden="true" tabindex="-1"></a>Comparemos tres modelos para el efecto de los días:</span>
+<span id="cb44-113"><a href="#cb44-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-116"><a href="#cb44-116" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-117"><a href="#cb44-117" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tres-modelos</span></span>
+<span id="cb44-118"><a href="#cb44-118" aria-hidden="true" tabindex="-1"></a>m_lm  <span class="ot">&lt;-</span> <span class="fu">lm</span>(Reaction <span class="sc">~</span> Days, <span class="at">data =</span> sleepstudy)                      <span class="co"># ignora los sujetos</span></span>
+<span id="cb44-119"><a href="#cb44-119" aria-hidden="true" tabindex="-1"></a>m_int <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Reaction <span class="sc">~</span> Days <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Subject), <span class="at">data =</span> sleepstudy)    <span class="co"># intercepto aleatorio</span></span>
+<span id="cb44-120"><a href="#cb44-120" aria-hidden="true" tabindex="-1"></a>m_pen <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Reaction <span class="sc">~</span> Days <span class="sc">+</span> (Days <span class="sc">|</span> Subject), <span class="at">data =</span> sleepstudy) <span class="co"># intercepto y pendiente aleatorios</span></span>
+<span id="cb44-121"><a href="#cb44-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-122"><a href="#cb44-122" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">modelo =</span> <span class="fu">c</span>(<span class="st">"lm (ignora sujetos)"</span>, <span class="st">"Intercepto aleatorio"</span>, <span class="st">"Intercepto + pendiente aleatorios"</span>),</span>
+<span id="cb44-123"><a href="#cb44-123" aria-hidden="true" tabindex="-1"></a>       <span class="at">pendiente =</span> <span class="fu">c</span>(<span class="fu">coef</span>(m_lm)[<span class="st">"Days"</span>], <span class="fu">fixef</span>(m_int)[<span class="st">"Days"</span>], <span class="fu">fixef</span>(m_pen)[<span class="st">"Days"</span>]),</span>
+<span id="cb44-124"><a href="#cb44-124" aria-hidden="true" tabindex="-1"></a>       <span class="at">error_est =</span> <span class="fu">c</span>(<span class="fu">summary</span>(m_lm)<span class="sc">$</span>coefficients[<span class="st">"Days"</span>, <span class="dv">2</span>],</span>
+<span id="cb44-125"><a href="#cb44-125" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">summary</span>(m_int)<span class="sc">$</span>coefficients[<span class="st">"Days"</span>, <span class="dv">2</span>],</span>
+<span id="cb44-126"><a href="#cb44-126" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">summary</span>(m_pen)<span class="sc">$</span>coefficients[<span class="st">"Days"</span>, <span class="dv">2</span>])) <span class="sc">|&gt;</span></span>
+<span id="cb44-127"><a href="#cb44-127" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">2</span>)</span>
+<span id="cb44-128"><a href="#cb44-128" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-129"><a href="#cb44-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-130"><a href="#cb44-130" aria-hidden="true" tabindex="-1"></a>La pendiente estimada es la misma en los tres modelos, pero su **error estándar** cambia bastante: 1,24 con <span class="in">`lm`</span>, 0,80 con intercepto aleatorio y 1,55 con pendiente aleatoria. Hay dos lecciones:</span>
+<span id="cb44-131"><a href="#cb44-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-132"><a href="#cb44-132" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>El <span class="in">`lm`</span> trata las 180 mediciones como independientes, cuando en realidad son 10 mediciones de cada uno de 18 personas. Su error (1,24) queda por debajo del real (1,55).</span>
+<span id="cb44-133"><a href="#cb44-133" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>El modelo con **solo intercepto aleatorio** es el más optimista (0,80). Supone que todos los sujetos se deterioran a la **misma velocidad** y solo difieren en el nivel de partida. Como en los datos la velocidad sí varía, ese modelo subestima la incertidumbre sobre el efecto promedio. Omitir un efecto aleatorio que existe en los datos produce intervalos demasiado angostos (Barr et al., 2013).</span>
+<span id="cb44-134"><a href="#cb44-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-135"><a href="#cb44-135" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Modelo con intercepto aleatorio</span></span>
+<span id="cb44-136"><a href="#cb44-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-137"><a href="#cb44-137" aria-hidden="true" tabindex="-1"></a>La sintaxis de <span class="in">`lmer()`</span> agrega los efectos aleatorios entre paréntesis: <span class="in">`(efecto | grupo)`</span>.</span>
+<span id="cb44-138"><a href="#cb44-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-141"><a href="#cb44-141" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-142"><a href="#cb44-142" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: lmer-int</span></span>
+<span id="cb44-143"><a href="#cb44-143" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_int)</span>
+<span id="cb44-144"><a href="#cb44-144" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-145"><a href="#cb44-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-146"><a href="#cb44-146" aria-hidden="true" tabindex="-1"></a>Se lee así:</span>
+<span id="cb44-147"><a href="#cb44-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-148"><a href="#cb44-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Efectos fijos**: cada día adicional sin dormir aumenta el tiempo de reacción en unos 10 ms (IC 95 % más abajo).</span>
+<span id="cb44-149"><a href="#cb44-149" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Efectos aleatorios**: la varianza entre sujetos en el intercepto (<span class="in">`Subject (Intercept)`</span>) y la varianza residual (dentro de sujetos).</span>
+<span id="cb44-150"><a href="#cb44-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-151"><a href="#cb44-151" aria-hidden="true" tabindex="-1"></a><span class="fu">### Correlación intraclase (ICC)</span></span>
+<span id="cb44-152"><a href="#cb44-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-153"><a href="#cb44-153" aria-hidden="true" tabindex="-1"></a>El ICC es la proporción de la varianza total que se debe a **diferencias entre grupos**:</span>
+<span id="cb44-154"><a href="#cb44-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-155"><a href="#cb44-155" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb44-156"><a href="#cb44-156" aria-hidden="true" tabindex="-1"></a>ICC = \frac{\sigma^2_{sujeto}}{\sigma^2_{sujeto} + \sigma^2_{residual}}</span>
+<span id="cb44-157"><a href="#cb44-157" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb44-158"><a href="#cb44-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-159"><a href="#cb44-159" aria-hidden="true" tabindex="-1"></a>Un ICC alto indica que las observaciones del mismo grupo se parecen mucho y que ignorar la estructura sería grave.</span>
+<span id="cb44-160"><a href="#cb44-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-163"><a href="#cb44-163" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-164"><a href="#cb44-164" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: icc</span></span>
+<span id="cb44-165"><a href="#cb44-165" aria-hidden="true" tabindex="-1"></a><span class="fu">icc</span>(m_int)</span>
+<span id="cb44-166"><a href="#cb44-166" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(m_int, <span class="at">parm =</span> <span class="st">"Days"</span>, <span class="at">method =</span> <span class="st">"Wald"</span>)</span>
+<span id="cb44-167"><a href="#cb44-167" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-168"><a href="#cb44-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-169"><a href="#cb44-169" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Modelo con pendiente aleatoria</span></span>
+<span id="cb44-170"><a href="#cb44-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-171"><a href="#cb44-171" aria-hidden="true" tabindex="-1"></a>Como los sujetos no solo difieren en el nivel de partida sino también en **cuánto se deterioran**, permitimos que la pendiente varíe:</span>
+<span id="cb44-172"><a href="#cb44-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-175"><a href="#cb44-175" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-176"><a href="#cb44-176" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: lmer-pen</span></span>
+<span id="cb44-177"><a href="#cb44-177" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_pen)</span>
+<span id="cb44-178"><a href="#cb44-178" aria-hidden="true" tabindex="-1"></a><span class="fu">VarCorr</span>(m_pen)</span>
+<span id="cb44-179"><a href="#cb44-179" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-180"><a href="#cb44-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-181"><a href="#cb44-181" aria-hidden="true" tabindex="-1"></a><span class="in">`VarCorr()`</span> muestra la desviación estándar del intercepto (≈ 25 ms) y de la pendiente (≈ 6 ms/día), y su correlación. Una correlación cercana a cero indica que el nivel inicial no predice la velocidad del deterioro.</span>
+<span id="cb44-182"><a href="#cb44-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-183"><a href="#cb44-183" aria-hidden="true" tabindex="-1"></a><span class="fu">### ¿Cuál modelo es mejor?</span></span>
+<span id="cb44-184"><a href="#cb44-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-185"><a href="#cb44-185" aria-hidden="true" tabindex="-1"></a>Para comparar modelos **anidados que difieren en efectos aleatorios**, se ajustan por máxima verosimilitud restringida (REML, por defecto) y se comparan con una prueba de razón de verosimilitudes. Con <span class="in">`anova()`</span> sobre los modelos, <span class="in">`lmerTest`</span> los reajusta automáticamente cuando hace falta:</span>
+<span id="cb44-186"><a href="#cb44-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-189"><a href="#cb44-189" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-190"><a href="#cb44-190" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: comparar-mixtos</span></span>
+<span id="cb44-191"><a href="#cb44-191" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m_int, m_pen, <span class="at">refit =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb44-192"><a href="#cb44-192" aria-hidden="true" tabindex="-1"></a><span class="fu">AIC</span>(m_int, m_pen)</span>
+<span id="cb44-193"><a href="#cb44-193" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-194"><a href="#cb44-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-195"><a href="#cb44-195" aria-hidden="true" tabindex="-1"></a>El modelo con pendiente aleatoria ajusta mucho mejor, y como consecuencia, los intervalos de confianza para el efecto de los días son más realistas.</span>
+<span id="cb44-196"><a href="#cb44-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-197"><a href="#cb44-197" aria-hidden="true" tabindex="-1"></a><span class="fu">### Efectos aleatorios: ¿cómo se desvía cada sujeto?</span></span>
+<span id="cb44-198"><a href="#cb44-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-199"><a href="#cb44-199" aria-hidden="true" tabindex="-1"></a>Los **BLUPs** (*best linear unbiased predictors*) son las desviaciones estimadas de cada sujeto respecto al promedio. Se pueden ver como un gráfico tipo "oruga":</span>
+<span id="cb44-200"><a href="#cb44-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-203"><a href="#cb44-203" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-204"><a href="#cb44-204" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-blups</span></span>
+<span id="cb44-205"><a href="#cb44-205" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Desviaciones estimadas de cada sujeto (BLUPs) respecto al intercepto (izquierda) y a la pendiente (derecha) promedios. Los sujetos 309 y 337 son los extremos en el intercepto, y el 335 y el 308 en la pendiente."</span></span>
+<span id="cb44-206"><a href="#cb44-206" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 4.6</span></span>
+<span id="cb44-207"><a href="#cb44-207" aria-hidden="true" tabindex="-1"></a>re <span class="ot">&lt;-</span> <span class="fu">ranef</span>(m_pen)<span class="sc">$</span>Subject <span class="sc">|&gt;</span></span>
+<span id="cb44-208"><a href="#cb44-208" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>(<span class="at">rownames =</span> <span class="st">"Subject"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb44-209"><a href="#cb44-209" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Intercepto =</span> <span class="st">`</span><span class="at">(Intercept)</span><span class="st">`</span>, <span class="at">Pendiente =</span> Days) <span class="sc">|&gt;</span></span>
+<span id="cb44-210"><a href="#cb44-210" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span>Subject, <span class="at">names_to =</span> <span class="st">"efecto"</span>, <span class="at">values_to =</span> <span class="st">"desviacion"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb44-211"><a href="#cb44-211" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(efecto) <span class="sc">|&gt;</span></span>
+<span id="cb44-212"><a href="#cb44-212" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Subject =</span> <span class="fu">fct_reorder</span>(Subject, desviacion)) <span class="sc">|&gt;</span></span>
+<span id="cb44-213"><a href="#cb44-213" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb44-214"><a href="#cb44-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-215"><a href="#cb44-215" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(re, <span class="fu">aes</span>(desviacion, Subject)) <span class="sc">+</span></span>
+<span id="cb44-216"><a href="#cb44-216" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb44-217"><a href="#cb44-217" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">"#264653"</span>) <span class="sc">+</span></span>
+<span id="cb44-218"><a href="#cb44-218" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> efecto, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
+<span id="cb44-219"><a href="#cb44-219" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Desviación respecto al promedio"</span>, <span class="at">y =</span> <span class="cn">NULL</span>)</span>
+<span id="cb44-220"><a href="#cb44-220" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-221"><a href="#cb44-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-222"><a href="#cb44-222" aria-hidden="true" tabindex="-1"></a><span class="fu">### Predicciones por sujeto: el efecto de "encogimiento"</span></span>
+<span id="cb44-223"><a href="#cb44-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-224"><a href="#cb44-224" aria-hidden="true" tabindex="-1"></a>Los modelos mixtos **suavizan** las estimaciones de cada sujeto hacia el promedio poblacional, en especial cuando hay pocos datos (*shrinkage*). Compara la regresión por separado con la que ofrece el modelo mixto:</span>
+<span id="cb44-225"><a href="#cb44-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-228"><a href="#cb44-228" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-229"><a href="#cb44-229" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-encogimiento</span></span>
+<span id="cb44-230"><a href="#cb44-230" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Rectas individuales ajustadas por separado (gris) frente a las predicciones del modelo mixto (rojo) y al efecto fijo promedio (negro). El modelo mixto acerca las rectas extremas al promedio y es más estable."</span></span>
+<span id="cb44-231"><a href="#cb44-231" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
+<span id="cb44-232"><a href="#cb44-232" aria-hidden="true" tabindex="-1"></a>sleepstudy<span class="sc">$</span>pred_mixto <span class="ot">&lt;-</span> <span class="fu">predict</span>(m_pen)</span>
+<span id="cb44-233"><a href="#cb44-233" aria-hidden="true" tabindex="-1"></a>sleepstudy<span class="sc">$</span>pred_pob   <span class="ot">&lt;-</span> <span class="fu">predict</span>(m_pen, <span class="at">re.form =</span> <span class="cn">NA</span>)   <span class="co"># solo efectos fijos</span></span>
+<span id="cb44-234"><a href="#cb44-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-235"><a href="#cb44-235" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sleepstudy, <span class="fu">aes</span>(Days)) <span class="sc">+</span></span>
+<span id="cb44-236"><a href="#cb44-236" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> Reaction), <span class="at">size =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb44-237"><a href="#cb44-237" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">y =</span> Reaction), <span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">colour =</span> <span class="st">"grey60"</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb44-238"><a href="#cb44-238" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> pred_mixto), <span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb44-239"><a href="#cb44-239" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> pred_pob), <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb44-240"><a href="#cb44-240" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Subject, <span class="at">nrow =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb44-241"><a href="#cb44-241" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">9</span>)) <span class="sc">+</span></span>
+<span id="cb44-242"><a href="#cb44-242" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Días"</span>, <span class="at">y =</span> <span class="st">"Reacción (ms)"</span>)</span>
+<span id="cb44-243"><a href="#cb44-243" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-244"><a href="#cb44-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-245"><a href="#cb44-245" aria-hidden="true" tabindex="-1"></a><span class="fu">## 6. Diagnóstico</span></span>
+<span id="cb44-246"><a href="#cb44-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-247"><a href="#cb44-247" aria-hidden="true" tabindex="-1"></a>Se revisan los residuos y también los efectos aleatorios, porque se supone que ambos son normales:</span>
+<span id="cb44-248"><a href="#cb44-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-251"><a href="#cb44-251" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-252"><a href="#cb44-252" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-diag-mixto</span></span>
+<span id="cb44-253"><a href="#cb44-253" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Diagnóstico del modelo mixto. Izquierda: residuos frente a ajustados. Centro: Q-Q de los residuos. Derecha: Q-Q de los interceptos aleatorios."</span></span>
+<span id="cb44-254"><a href="#cb44-254" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.2</span></span>
+<span id="cb44-255"><a href="#cb44-255" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 10</span></span>
+<span id="cb44-256"><a href="#cb44-256" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb44-257"><a href="#cb44-257" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">aj =</span> <span class="fu">fitted</span>(m_pen), <span class="at">res =</span> <span class="fu">resid</span>(m_pen))</span>
+<span id="cb44-258"><a href="#cb44-258" aria-hidden="true" tabindex="-1"></a>re_int <span class="ot">&lt;-</span> <span class="fu">ranef</span>(m_pen)<span class="sc">$</span>Subject[[<span class="st">"(Intercept)"</span>]]</span>
+<span id="cb44-259"><a href="#cb44-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-260"><a href="#cb44-260" aria-hidden="true" tabindex="-1"></a>(<span class="fu">ggplot</span>(d, <span class="fu">aes</span>(aj, res)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb44-261"><a href="#cb44-261" aria-hidden="true" tabindex="-1"></a>   <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Ajustados"</span>, <span class="at">y =</span> <span class="st">"Residuos"</span>)) <span class="sc">|</span></span>
+<span id="cb44-262"><a href="#cb44-262" aria-hidden="true" tabindex="-1"></a>(<span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="at">sample =</span> res)) <span class="sc">+</span> <span class="fu">stat_qq</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> <span class="fu">stat_qq_line</span>(<span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb44-263"><a href="#cb44-263" aria-hidden="true" tabindex="-1"></a>   <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Teóricos"</span>, <span class="at">y =</span> <span class="st">"Residuos"</span>)) <span class="sc">|</span></span>
+<span id="cb44-264"><a href="#cb44-264" aria-hidden="true" tabindex="-1"></a>(<span class="fu">ggplot</span>(<span class="fu">tibble</span>(re_int), <span class="fu">aes</span>(<span class="at">sample =</span> re_int)) <span class="sc">+</span> <span class="fu">stat_qq</span>() <span class="sc">+</span> <span class="fu">stat_qq_line</span>(<span class="at">colour =</span> <span class="st">"#e76f51"</span>) <span class="sc">+</span></span>
+<span id="cb44-265"><a href="#cb44-265" aria-hidden="true" tabindex="-1"></a>   <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Teóricos"</span>, <span class="at">y =</span> <span class="st">"Interceptos aleatorios"</span>))</span>
+<span id="cb44-266"><a href="#cb44-266" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-267"><a href="#cb44-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-268"><a href="#cb44-268" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb44-269"><a href="#cb44-269" aria-hidden="true" tabindex="-1"></a><span class="fu">## Consejo</span></span>
+<span id="cb44-270"><a href="#cb44-270" aria-hidden="true" tabindex="-1"></a>Con pocos grupos (menos de unos 5 a 6) es difícil estimar una varianza entre grupos. En ese caso conviene usar el grupo como efecto **fijo**. También, si aparece el aviso <span class="in">`singular fit`</span>, el modelo es más complejo de lo que los datos permiten: simplifica los efectos aleatorios.</span>
+<span id="cb44-271"><a href="#cb44-271" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb44-272"><a href="#cb44-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-273"><a href="#cb44-273" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7. Medidas repetidas: relación con la prueba t pareada y el ANOVA</span></span>
+<span id="cb44-274"><a href="#cb44-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-275"><a href="#cb44-275" aria-hidden="true" tabindex="-1"></a>Cuando solo hay **dos momentos**, un modelo con intercepto aleatorio por sujeto es **equivalente** a la prueba t pareada. Lo comprobamos con los días 0 y 9:</span>
+<span id="cb44-276"><a href="#cb44-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-279"><a href="#cb44-279" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-280"><a href="#cb44-280" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: equivalencia</span></span>
+<span id="cb44-281"><a href="#cb44-281" aria-hidden="true" tabindex="-1"></a>dos <span class="ot">&lt;-</span> sleepstudy <span class="sc">|&gt;</span> <span class="fu">filter</span>(Days <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">9</span>))</span>
+<span id="cb44-282"><a href="#cb44-282" aria-hidden="true" tabindex="-1"></a>ancho <span class="ot">&lt;-</span> dos <span class="sc">|&gt;</span> <span class="fu">select</span>(Subject, Days, Reaction) <span class="sc">|&gt;</span> <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Days, <span class="at">values_from =</span> Reaction, <span class="at">names_prefix =</span> <span class="st">"d"</span>)</span>
+<span id="cb44-283"><a href="#cb44-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-284"><a href="#cb44-284" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(ancho<span class="sc">$</span>d9, ancho<span class="sc">$</span>d0, <span class="at">paired =</span> <span class="cn">TRUE</span>)<span class="sc">$</span>p.value</span>
+<span id="cb44-285"><a href="#cb44-285" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lmer</span>(Reaction <span class="sc">~</span> <span class="fu">factor</span>(Days) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Subject), <span class="at">data =</span> dos))<span class="sc">$</span>coefficients[<span class="st">"factor(Days)9"</span>, ]</span>
+<span id="cb44-286"><a href="#cb44-286" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-287"><a href="#cb44-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-288"><a href="#cb44-288" aria-hidden="true" tabindex="-1"></a>El valor p es **idéntico**. La ventaja del modelo mixto es que se generaliza a más de dos momentos, admite **datos desbalanceados** (sujetos con mediciones faltantes, algo que el ANOVA clásico de medidas repetidas no tolera) y permite covariables continuas.</span>
+<span id="cb44-289"><a href="#cb44-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-290"><a href="#cb44-290" aria-hidden="true" tabindex="-1"></a><span class="fu">## 8. Estructuras de correlación con `nlme`</span></span>
+<span id="cb44-291"><a href="#cb44-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-292"><a href="#cb44-292" aria-hidden="true" tabindex="-1"></a><span class="in">`nlme::lme()`</span> es el paquete clásico y permite especificar **estructuras de correlación** entre las mediciones del mismo sujeto, útil con series temporales. Por ejemplo, un proceso autorregresivo de orden 1 (AR1), donde mediciones consecutivas se parecen más que las lejanas:</span>
+<span id="cb44-293"><a href="#cb44-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-296"><a href="#cb44-296" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-297"><a href="#cb44-297" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: nlme-ar1</span></span>
+<span id="cb44-298"><a href="#cb44-298" aria-hidden="true" tabindex="-1"></a>m_ar1 <span class="ot">&lt;-</span> <span class="fu">lme</span>(Reaction <span class="sc">~</span> Days, <span class="at">random =</span> <span class="sc">~</span> <span class="dv">1</span> <span class="sc">|</span> Subject,</span>
+<span id="cb44-299"><a href="#cb44-299" aria-hidden="true" tabindex="-1"></a>             <span class="at">correlation =</span> <span class="fu">corAR1</span>(<span class="at">form =</span> <span class="sc">~</span> Days <span class="sc">|</span> Subject), <span class="at">data =</span> sleepstudy)</span>
+<span id="cb44-300"><a href="#cb44-300" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_ar1)<span class="sc">$</span>tTable</span>
+<span id="cb44-301"><a href="#cb44-301" aria-hidden="true" tabindex="-1"></a>m_sin <span class="ot">&lt;-</span> <span class="fu">lme</span>(Reaction <span class="sc">~</span> Days, <span class="at">random =</span> <span class="sc">~</span> <span class="dv">1</span> <span class="sc">|</span> Subject, <span class="at">data =</span> sleepstudy)</span>
+<span id="cb44-302"><a href="#cb44-302" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m_sin, m_ar1)</span>
+<span id="cb44-303"><a href="#cb44-303" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-304"><a href="#cb44-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-305"><a href="#cb44-305" aria-hidden="true" tabindex="-1"></a>La estructura AR1 mejora claramente el ajuste (AIC de 1794 a 1746): las mediciones de días consecutivos de un mismo sujeto se parecen más entre sí que las de días lejanos, más allá de que sea el mismo sujeto. Es un modelo distinto al de pendiente aleatoria (que tenía un AIC de 1756) y ambos explican parte de la misma variación; también se pueden combinar.</span>
+<span id="cb44-306"><a href="#cb44-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-307"><a href="#cb44-307" aria-hidden="true" tabindex="-1"></a><span class="fu">## 9. Modelos no lineales mixtos</span></span>
+<span id="cb44-308"><a href="#cb44-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-309"><a href="#cb44-309" aria-hidden="true" tabindex="-1"></a>Muchos procesos (crecimiento, cinética química) no son lineales. <span class="in">`nlme()`</span> ajusta una curva no lineal en la que **algunos parámetros varían por grupo**. Ejemplo: el crecimiento en altura de 14 árboles de pino (<span class="in">`Loblolly`</span>) que se aproxima a una asíntota:</span>
+<span id="cb44-310"><a href="#cb44-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-311"><a href="#cb44-311" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb44-312"><a href="#cb44-312" aria-hidden="true" tabindex="-1"></a>altura = Asym + (R_0 - Asym)\, e^{-e^{lrc}\, edad}</span>
+<span id="cb44-313"><a href="#cb44-313" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb44-314"><a href="#cb44-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-317"><a href="#cb44-317" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-318"><a href="#cb44-318" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: nlme-no-lineal</span></span>
+<span id="cb44-319"><a href="#cb44-319" aria-hidden="true" tabindex="-1"></a>m_nl <span class="ot">&lt;-</span> <span class="fu">nlme</span>(height <span class="sc">~</span> <span class="fu">SSasymp</span>(age, Asym, R0, lrc),</span>
+<span id="cb44-320"><a href="#cb44-320" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> Loblolly,</span>
+<span id="cb44-321"><a href="#cb44-321" aria-hidden="true" tabindex="-1"></a>             <span class="at">fixed =</span> Asym <span class="sc">+</span> R0 <span class="sc">+</span> lrc <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb44-322"><a href="#cb44-322" aria-hidden="true" tabindex="-1"></a>             <span class="at">random =</span> Asym <span class="sc">~</span> <span class="dv">1</span> <span class="sc">|</span> Seed,          <span class="co"># cada árbol tiene su propia asíntota</span></span>
+<span id="cb44-323"><a href="#cb44-323" aria-hidden="true" tabindex="-1"></a>             <span class="at">start =</span> <span class="fu">c</span>(<span class="at">Asym =</span> <span class="dv">94</span>, <span class="at">R0 =</span> <span class="sc">-</span><span class="fl">8.25</span>, <span class="at">lrc =</span> <span class="sc">-</span><span class="fl">3.2</span>))</span>
+<span id="cb44-324"><a href="#cb44-324" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_nl)<span class="sc">$</span>tTable</span>
+<span id="cb44-325"><a href="#cb44-325" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-326"><a href="#cb44-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-329"><a href="#cb44-329" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-330"><a href="#cb44-330" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-nlme</span></span>
+<span id="cb44-331"><a href="#cb44-331" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Crecimiento de 14 pinos. Puntos: datos; líneas: curvas ajustadas por árbol; línea negra: curva promedio de la población."</span></span>
+<span id="cb44-332"><a href="#cb44-332" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.6</span></span>
+<span id="cb44-333"><a href="#cb44-333" aria-hidden="true" tabindex="-1"></a>edades <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">3</span>, <span class="dv">25</span>, <span class="at">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb44-334"><a href="#cb44-334" aria-hidden="true" tabindex="-1"></a>curva_pob <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">age =</span> edades, <span class="at">height =</span> <span class="fu">predict</span>(m_nl, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">age =</span> edades, <span class="at">Seed =</span> <span class="cn">NA</span>), <span class="at">level =</span> <span class="dv">0</span>))</span>
+<span id="cb44-335"><a href="#cb44-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-336"><a href="#cb44-336" aria-hidden="true" tabindex="-1"></a>Loblolly <span class="sc">|&gt;</span></span>
+<span id="cb44-337"><a href="#cb44-337" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ajustado =</span> <span class="fu">fitted</span>(m_nl)) <span class="sc">|&gt;</span></span>
+<span id="cb44-338"><a href="#cb44-338" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(age)) <span class="sc">+</span></span>
+<span id="cb44-339"><a href="#cb44-339" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> height, <span class="at">colour =</span> Seed), <span class="at">size =</span> <span class="fl">1.4</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb44-340"><a href="#cb44-340" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> ajustado, <span class="at">colour =</span> Seed, <span class="at">group =</span> Seed), <span class="at">linewidth =</span> <span class="fl">0.4</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb44-341"><a href="#cb44-341" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> curva_pob, <span class="fu">aes</span>(<span class="at">y =</span> height), <span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb44-342"><a href="#cb44-342" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_viridis_d</span>() <span class="sc">+</span></span>
+<span id="cb44-343"><a href="#cb44-343" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Edad (años)"</span>, <span class="at">y =</span> <span class="st">"Altura (pies)"</span>)</span>
+<span id="cb44-344"><a href="#cb44-344" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-345"><a href="#cb44-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-346"><a href="#cb44-346" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejercicios</span></span>
+<span id="cb44-347"><a href="#cb44-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-348"><a href="#cb44-348" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Intercepto aleatorio.** Con <span class="in">`Orthodont`</span> (paquete <span class="in">`nlme`</span>), ajusta <span class="in">`distance ~ age + (1 | Subject)`</span> con <span class="in">`lmer()`</span>. ¿Cuánto crece la distancia por año? ¿Cuál es el ICC?</span>
+<span id="cb44-349"><a href="#cb44-349" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Pendiente aleatoria.** Añade <span class="in">`age`</span> como pendiente aleatoria. ¿Mejora el modelo (usa <span class="in">`anova()`</span> y AIC)?</span>
+<span id="cb44-350"><a href="#cb44-350" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Efecto fijo del sexo.** Agrega <span class="in">`Sex`</span> y su interacción con <span class="in">`age`</span>. ¿Crece igual la distancia en niños y niñas?</span>
+<span id="cb44-351"><a href="#cb44-351" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Pseudoreplicación.** Ajusta el mismo modelo con <span class="in">`lm()`</span> y compara los errores estándar. ¿Qué observas?</span>
+<span id="cb44-352"><a href="#cb44-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-353"><a href="#cb44-353" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
+<span id="cb44-354"><a href="#cb44-354" aria-hidden="true" tabindex="-1"></a><span class="fu">## Soluciones sugeridas</span></span>
+<span id="cb44-355"><a href="#cb44-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-358"><a href="#cb44-358" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb44-359"><a href="#cb44-359" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: soluciones</span></span>
+<span id="cb44-360"><a href="#cb44-360" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Orthodont, <span class="at">package =</span> <span class="st">"nlme"</span>)</span>
+<span id="cb44-361"><a href="#cb44-361" aria-hidden="true" tabindex="-1"></a>o1 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(distance <span class="sc">~</span> age <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Subject), <span class="at">data =</span> Orthodont)</span>
+<span id="cb44-362"><a href="#cb44-362" aria-hidden="true" tabindex="-1"></a>o2 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(distance <span class="sc">~</span> age <span class="sc">+</span> (age <span class="sc">|</span> Subject), <span class="at">data =</span> Orthodont)</span>
+<span id="cb44-363"><a href="#cb44-363" aria-hidden="true" tabindex="-1"></a><span class="fu">fixef</span>(o1)[<span class="st">"age"</span>]; <span class="fu">icc</span>(o1)<span class="sc">$</span>ICC_adjusted</span>
+<span id="cb44-364"><a href="#cb44-364" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(o1, o2, <span class="at">refit =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb44-365"><a href="#cb44-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-366"><a href="#cb44-366" aria-hidden="true" tabindex="-1"></a>o3 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(distance <span class="sc">~</span> age <span class="sc">*</span> Sex <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Subject), <span class="at">data =</span> Orthodont)</span>
+<span id="cb44-367"><a href="#cb44-367" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(o3)<span class="sc">$</span>coefficients</span>
+<span id="cb44-368"><a href="#cb44-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-369"><a href="#cb44-369" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(<span class="at">lm =</span> <span class="fu">summary</span>(<span class="fu">lm</span>(distance <span class="sc">~</span> age, <span class="at">data =</span> Orthodont))<span class="sc">$</span>coefficients[<span class="st">"age"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],</span>
+<span id="cb44-370"><a href="#cb44-370" aria-hidden="true" tabindex="-1"></a>      <span class="at">mixto =</span> <span class="fu">summary</span>(o1)<span class="sc">$</span>coefficients[<span class="st">"age"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>])</span>
+<span id="cb44-371"><a href="#cb44-371" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb44-372"><a href="#cb44-372" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb44-373"><a href="#cb44-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-374"><a href="#cb44-374" aria-hidden="true" tabindex="-1"></a><span class="fu">## Para profundizar</span></span>
+<span id="cb44-375"><a href="#cb44-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-376"><a href="#cb44-376" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bates, D., Mächler, M., Bolker, B. y Walker, S. (2015). Fitting linear mixed-effects models using lme4. *Journal of Statistical Software*, 67(1), 1–48. <span class="ot">&lt;https://doi.org/10.18637/jss.v067.i01&gt;</span></span>
+<span id="cb44-377"><a href="#cb44-377" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pinheiro, J. C. y Bates, D. M. (2000). *Mixed-Effects Models in S and S-PLUS*. Springer.</span>
+<span id="cb44-378"><a href="#cb44-378" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Zuur, A. F., Ieno, E. N., Walker, N., Saveliev, A. A. y Smith, G. M. (2009). *Mixed Effects Models and Extensions in Ecology with R*. Springer.</span>
+<span id="cb44-379"><a href="#cb44-379" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Barr, D. J., Levy, R., Scheepers, C. y Tily, H. J. (2013). Random effects structure for confirmatory hypothesis testing: keep it maximal. *Journal of Memory and Language*, 68(3), 255–278.</span>
+<span id="cb44-380"><a href="#cb44-380" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hurlbert, S. H. (1984). Pseudoreplication and the design of ecological field experiments. *Ecological Monographs*, 54(2), 187–211.</span>
+<span id="cb44-381"><a href="#cb44-381" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Belenky, G. et al. (2003). Patterns of performance degradation and restoration during sleep restriction. *Journal of Sleep Research*, 12(1), 1–12.</span>
+<span id="cb44-382"><a href="#cb44-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-383"><a href="#cb44-383" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="minimal"}</span>
+<span id="cb44-384"><a href="#cb44-384" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reproducibilidad</span></span>
+<span id="cb44-385"><a href="#cb44-385" aria-hidden="true" tabindex="-1"></a>Este cuaderno se ejecutó con R <span class="in">`r paste(R.version$major, R.version$minor, sep = ".")`</span> y lme4 <span class="in">`r as.character(packageVersion("lme4"))`</span>.</span>
+<span id="cb44-386"><a href="#cb44-386" aria-hidden="true" tabindex="-1"></a>:::</span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Made with ❤️ and Quarto</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

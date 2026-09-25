@@ -234,8 +234,34 @@ website:
           - text: "Claude Skills (Slides)"
             href: datascience/claude-slides.qmd
 # Aqui viene la seccion de matematicas y estadistica que debe trabajarse
-      - text: "Matemáticas y estadística"
+      - section: "Matemáticas y estadística"
         href: math-stats/math-stats.qmd
+        contents:
+          - section: "R: minicurso"
+            href: math-stats/R/index.qmd
+            contents:
+              - text: "Módulo 0. Fundamentos de R"
+                href: math-stats/R/00-fundamentos.qmd
+              - text: "Módulo 1. Programación: flujo, bucles y funciones"
+                href: math-stats/R/01-programacion.qmd
+              - text: "Módulo 2. Manejo de datos con tidyverse"
+                href: math-stats/R/02-datos.qmd
+              - text: "Módulo 3. Visualización con ggplot2"
+                href: math-stats/R/03-visualizacion.qmd
+              - text: "Módulo 4. Estadística básica"
+                href: math-stats/R/04-estadistica-basica.qmd
+              - text: "Módulo 5. Regresión lineal y ANOVA"
+                href: math-stats/R/05-modelos-lineales.qmd
+              - text: "Módulo 6. Modelos mixtos y medidas repetidas"
+                href: math-stats/R/06-modelos-mixtos.qmd
+              - text: "Módulo 7. GAM y series de tiempo"
+                href: math-stats/R/07-gam-series.qmd
+              - text: "Módulo 8. Análisis de redes con igraph"
+                href: math-stats/R/08-redes.qmd
+              - text: "Módulo 9. Análisis espacial"
+                href: math-stats/R/09-espacial.qmd
+              - text: "Módulo 10. Aplicaciones y proyectos"
+                href: math-stats/R/10-aplicaciones.qmd
 # Aqui viene la seccion de vida laboral y cv
       - section: "Vida laboral"
         href: vidalaboral/index.qmd

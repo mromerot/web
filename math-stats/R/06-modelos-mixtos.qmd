@@ -1,0 +1,352 @@
+---
+title: "Modelos mixtos y medidas repetidas"
+subtitle: "Minicurso de R · Módulo 6"
+description: "Por qué ignorar la dependencia entre observaciones es un error, cómo modelarla con efectos aleatorios (lme4 y nlme) y cómo interpretar los resultados en diseños de medidas repetidas."
+author: "Mauricio Romero"
+date: 2026-09-25
+format: html
+editor: visual
+categories: [R, modelos mixtos, lme4, nlme, medidas repetidas]
+---
+
+::: {.callout-note appearance="minimal"}
+**Duración estimada:** 4 horas · **Nivel:** avanzado · **Prerrequisitos:** Módulo 5 (regresión y ANOVA).
+:::
+
+## Objetivos de aprendizaje
+
+Al terminar este cuaderno podrás:
+
+1. Reconocer cuándo las observaciones **no son independientes** (medidas repetidas, sitios, parcelas) y por qué eso invalida un `lm()` ordinario.
+2. Distinguir **efectos fijos** de **efectos aleatorios**.
+3. Ajustar modelos con **intercepto aleatorio** y con **pendiente aleatoria** usando `lme4`.
+4. Interpretar los **componentes de varianza** y la correlación intraclase (ICC).
+5. Comparar modelos y diagnosticar los supuestos.
+6. Explicar la relación entre un modelo mixto, el ANOVA de medidas repetidas y la prueba t pareada.
+7. Ajustar un modelo **no lineal mixto** con `nlme`.
+
+```{r}
+#| label: paquetes
+library(tidyverse)
+library(lme4)        # lmer(): modelos mixtos
+library(lmerTest)    # valores p para lmer
+library(nlme)        # lme() y nlme(): estructuras de correlación y modelos no lineales
+library(performance) # ICC y diagnósticos
+set.seed(2026)
+
+theme_set(theme_minimal(base_size = 12) + theme(panel.grid.minor = element_blank()))
+```
+
+## 1. El problema: observaciones que no son independientes
+
+Los modelos del Módulo 5 suponen que cada fila es **independiente** de las demás. Esto se rompe cuando:
+
+- se mide **al mismo individuo** varias veces (medidas repetidas, series por sujeto);
+- las observaciones vienen de **grupos** (estudiantes en colegios, parcelas en una misma finca, sitios en un mismo arrecife);
+- hay una estructura jerárquica o espacial.
+
+Observaciones del mismo grupo se parecen entre sí más que a las de otro grupo. Si se ignora esa **correlación**, el modelo cree que tiene más información independiente de la que realmente hay (**pseudoreplicación**), los errores estándar se subestiman y los valores p resultan demasiado optimistas (Hurlbert, 1984).
+
+### Efectos fijos y aleatorios
+
+Un **modelo mixto** combina dos tipos de efectos:
+
+| | Efectos fijos | Efectos aleatorios |
+|---|---|---|
+| Qué son | Los niveles que **interesan en sí mismos** (tratamiento, tiempo) | Niveles **muestreados de una población** de grupos (sujetos, sitios) |
+| Qué se estima | Un coeficiente por nivel o pendiente | Una **varianza** entre grupos |
+| Ejemplo | `Days` (días de privación de sueño) | `Subject` (los 18 voluntarios) |
+
+Para un modelo con intercepto y pendiente aleatorios por sujeto $j$:
+
+$$
+y_{ij} = (\beta_0 + b_{0j}) + (\beta_1 + b_{1j})\, x_{ij} + \varepsilon_{ij}, \qquad
+\begin{pmatrix} b_{0j} \\ b_{1j} \end{pmatrix} \sim N(\mathbf{0}, \Sigma), \quad \varepsilon_{ij} \sim N(0, \sigma^2)
+$$
+
+Los $\beta$ son los efectos fijos (el promedio de la población). Los $b_j$ son las **desviaciones de cada sujeto** respecto a ese promedio.
+
+## 2. Los datos: privación de sueño
+
+`sleepstudy` reúne el tiempo de reacción medio (en ms) de 18 conductores de camión durante 10 días en que solo durmieron 3 horas por noche (Belenky et al., 2003).
+
+```{r}
+#| label: datos
+data(sleepstudy)
+as_tibble(sleepstudy)
+```
+
+```{r}
+#| label: fig-espagueti
+#| fig-cap: "Tiempo de reacción de cada sujeto (líneas grises) y tendencia promedio (línea roja). Los sujetos difieren en el nivel inicial y en la velocidad con que se deterioran."
+#| fig-height: 3.6
+ggplot(sleepstudy, aes(Days, Reaction, group = Subject)) +
+  geom_line(colour = "grey60") +
+  geom_smooth(aes(group = 1), method = "lm", colour = "#e76f51", linewidth = 1.2, se = FALSE) +
+  scale_x_continuous(breaks = 0:9) +
+  labs(x = "Días de privación de sueño", y = "Tiempo de reacción (ms)")
+```
+
+```{r}
+#| label: fig-por-sujeto
+#| fig-cap: "Regresión por sujeto. Las pendientes e interceptos varían mucho: es justo la variación que un modelo con efectos aleatorios busca capturar."
+#| fig-height: 5
+ggplot(sleepstudy, aes(Days, Reaction)) +
+  geom_point(size = 1) +
+  geom_smooth(method = "lm", se = FALSE, colour = "#264653", linewidth = 0.6) +
+  facet_wrap(~ Subject, nrow = 3) +
+  scale_x_continuous(breaks = c(0, 3, 6, 9)) +
+  labs(x = "Días", y = "Reacción (ms)")
+```
+
+## 3. Ignorar la dependencia: ¿cuánto importa?
+
+Comparemos tres modelos para el efecto de los días:
+
+```{r}
+#| label: tres-modelos
+m_lm  <- lm(Reaction ~ Days, data = sleepstudy)                      # ignora los sujetos
+m_int <- lmer(Reaction ~ Days + (1 | Subject), data = sleepstudy)    # intercepto aleatorio
+m_pen <- lmer(Reaction ~ Days + (Days | Subject), data = sleepstudy) # intercepto y pendiente aleatorios
+
+tibble(modelo = c("lm (ignora sujetos)", "Intercepto aleatorio", "Intercepto + pendiente aleatorios"),
+       pendiente = c(coef(m_lm)["Days"], fixef(m_int)["Days"], fixef(m_pen)["Days"]),
+       error_est = c(summary(m_lm)$coefficients["Days", 2],
+                     summary(m_int)$coefficients["Days", 2],
+                     summary(m_pen)$coefficients["Days", 2])) |>
+  knitr::kable(digits = 2)
+```
+
+La pendiente estimada es la misma en los tres modelos, pero su **error estándar** cambia bastante: 1,24 con `lm`, 0,80 con intercepto aleatorio y 1,55 con pendiente aleatoria. Hay dos lecciones:
+
+- El `lm` trata las 180 mediciones como independientes, cuando en realidad son 10 mediciones de cada uno de 18 personas. Su error (1,24) queda por debajo del real (1,55).
+- El modelo con **solo intercepto aleatorio** es el más optimista (0,80). Supone que todos los sujetos se deterioran a la **misma velocidad** y solo difieren en el nivel de partida. Como en los datos la velocidad sí varía, ese modelo subestima la incertidumbre sobre el efecto promedio. Omitir un efecto aleatorio que existe en los datos produce intervalos demasiado angostos (Barr et al., 2013).
+
+## 4. Modelo con intercepto aleatorio
+
+La sintaxis de `lmer()` agrega los efectos aleatorios entre paréntesis: `(efecto | grupo)`.
+
+```{r}
+#| label: lmer-int
+summary(m_int)
+```
+
+Se lee así:
+
+- **Efectos fijos**: cada día adicional sin dormir aumenta el tiempo de reacción en unos 10 ms (IC 95 % más abajo).
+- **Efectos aleatorios**: la varianza entre sujetos en el intercepto (`Subject (Intercept)`) y la varianza residual (dentro de sujetos).
+
+### Correlación intraclase (ICC)
+
+El ICC es la proporción de la varianza total que se debe a **diferencias entre grupos**:
+
+$$
+ICC = \frac{\sigma^2_{sujeto}}{\sigma^2_{sujeto} + \sigma^2_{residual}}
+$$
+
+Un ICC alto indica que las observaciones del mismo grupo se parecen mucho y que ignorar la estructura sería grave.
+
+```{r}
+#| label: icc
+icc(m_int)
+confint(m_int, parm = "Days", method = "Wald")
+```
+
+## 5. Modelo con pendiente aleatoria
+
+Como los sujetos no solo difieren en el nivel de partida sino también en **cuánto se deterioran**, permitimos que la pendiente varíe:
+
+```{r}
+#| label: lmer-pen
+summary(m_pen)
+VarCorr(m_pen)
+```
+
+`VarCorr()` muestra la desviación estándar del intercepto (≈ 25 ms) y de la pendiente (≈ 6 ms/día), y su correlación. Una correlación cercana a cero indica que el nivel inicial no predice la velocidad del deterioro.
+
+### ¿Cuál modelo es mejor?
+
+Para comparar modelos **anidados que difieren en efectos aleatorios**, se ajustan por máxima verosimilitud restringida (REML, por defecto) y se comparan con una prueba de razón de verosimilitudes. Con `anova()` sobre los modelos, `lmerTest` los reajusta automáticamente cuando hace falta:
+
+```{r}
+#| label: comparar-mixtos
+anova(m_int, m_pen, refit = FALSE)
+AIC(m_int, m_pen)
+```
+
+El modelo con pendiente aleatoria ajusta mucho mejor, y como consecuencia, los intervalos de confianza para el efecto de los días son más realistas.
+
+### Efectos aleatorios: ¿cómo se desvía cada sujeto?
+
+Los **BLUPs** (*best linear unbiased predictors*) son las desviaciones estimadas de cada sujeto respecto al promedio. Se pueden ver como un gráfico tipo "oruga":
+
+```{r}
+#| label: fig-blups
+#| fig-cap: "Desviaciones estimadas de cada sujeto (BLUPs) respecto al intercepto (izquierda) y a la pendiente (derecha) promedios. Los sujetos 309 y 337 son los extremos en el intercepto, y el 335 y el 308 en la pendiente."
+#| fig-height: 4.6
+re <- ranef(m_pen)$Subject |>
+  as_tibble(rownames = "Subject") |>
+  rename(Intercepto = `(Intercept)`, Pendiente = Days) |>
+  pivot_longer(-Subject, names_to = "efecto", values_to = "desviacion") |>
+  group_by(efecto) |>
+  mutate(Subject = fct_reorder(Subject, desviacion)) |>
+  ungroup()
+
+ggplot(re, aes(desviacion, Subject)) +
+  geom_vline(xintercept = 0, linetype = 2, colour = "#e76f51") +
+  geom_point(colour = "#264653") +
+  facet_wrap(~ efecto, scales = "free") +
+  labs(x = "Desviación respecto al promedio", y = NULL)
+```
+
+### Predicciones por sujeto: el efecto de "encogimiento"
+
+Los modelos mixtos **suavizan** las estimaciones de cada sujeto hacia el promedio poblacional, en especial cuando hay pocos datos (*shrinkage*). Compara la regresión por separado con la que ofrece el modelo mixto:
+
+```{r}
+#| label: fig-encogimiento
+#| fig-cap: "Rectas individuales ajustadas por separado (gris) frente a las predicciones del modelo mixto (rojo) y al efecto fijo promedio (negro). El modelo mixto acerca las rectas extremas al promedio y es más estable."
+#| fig-height: 5
+sleepstudy$pred_mixto <- predict(m_pen)
+sleepstudy$pred_pob   <- predict(m_pen, re.form = NA)   # solo efectos fijos
+
+ggplot(sleepstudy, aes(Days)) +
+  geom_point(aes(y = Reaction), size = 0.8) +
+  geom_smooth(aes(y = Reaction), method = "lm", se = FALSE, colour = "grey60", linewidth = 0.5) +
+  geom_line(aes(y = pred_mixto), colour = "#e76f51") +
+  geom_line(aes(y = pred_pob), colour = "black", linetype = 2) +
+  facet_wrap(~ Subject, nrow = 3) +
+  scale_x_continuous(breaks = c(0, 3, 6, 9)) +
+  labs(x = "Días", y = "Reacción (ms)")
+```
+
+## 6. Diagnóstico
+
+Se revisan los residuos y también los efectos aleatorios, porque se supone que ambos son normales:
+
+```{r}
+#| label: fig-diag-mixto
+#| fig-cap: "Diagnóstico del modelo mixto. Izquierda: residuos frente a ajustados. Centro: Q-Q de los residuos. Derecha: Q-Q de los interceptos aleatorios."
+#| fig-height: 3.2
+#| fig-width: 10
+library(patchwork)
+d <- tibble(aj = fitted(m_pen), res = resid(m_pen))
+re_int <- ranef(m_pen)$Subject[["(Intercept)"]]
+
+(ggplot(d, aes(aj, res)) + geom_point(alpha = 0.5) + geom_hline(yintercept = 0, colour = "#e76f51") +
+   labs(x = "Ajustados", y = "Residuos")) |
+(ggplot(d, aes(sample = res)) + stat_qq(alpha = 0.5) + stat_qq_line(colour = "#e76f51") +
+   labs(x = "Teóricos", y = "Residuos")) |
+(ggplot(tibble(re_int), aes(sample = re_int)) + stat_qq() + stat_qq_line(colour = "#e76f51") +
+   labs(x = "Teóricos", y = "Interceptos aleatorios"))
+```
+
+::: {.callout-tip}
+## Consejo
+Con pocos grupos (menos de unos 5 a 6) es difícil estimar una varianza entre grupos. En ese caso conviene usar el grupo como efecto **fijo**. También, si aparece el aviso `singular fit`, el modelo es más complejo de lo que los datos permiten: simplifica los efectos aleatorios.
+:::
+
+## 7. Medidas repetidas: relación con la prueba t pareada y el ANOVA
+
+Cuando solo hay **dos momentos**, un modelo con intercepto aleatorio por sujeto es **equivalente** a la prueba t pareada. Lo comprobamos con los días 0 y 9:
+
+```{r}
+#| label: equivalencia
+dos <- sleepstudy |> filter(Days %in% c(0, 9))
+ancho <- dos |> select(Subject, Days, Reaction) |> pivot_wider(names_from = Days, values_from = Reaction, names_prefix = "d")
+
+t.test(ancho$d9, ancho$d0, paired = TRUE)$p.value
+summary(lmer(Reaction ~ factor(Days) + (1 | Subject), data = dos))$coefficients["factor(Days)9", ]
+```
+
+El valor p es **idéntico**. La ventaja del modelo mixto es que se generaliza a más de dos momentos, admite **datos desbalanceados** (sujetos con mediciones faltantes, algo que el ANOVA clásico de medidas repetidas no tolera) y permite covariables continuas.
+
+## 8. Estructuras de correlación con `nlme`
+
+`nlme::lme()` es el paquete clásico y permite especificar **estructuras de correlación** entre las mediciones del mismo sujeto, útil con series temporales. Por ejemplo, un proceso autorregresivo de orden 1 (AR1), donde mediciones consecutivas se parecen más que las lejanas:
+
+```{r}
+#| label: nlme-ar1
+m_ar1 <- lme(Reaction ~ Days, random = ~ 1 | Subject,
+             correlation = corAR1(form = ~ Days | Subject), data = sleepstudy)
+summary(m_ar1)$tTable
+m_sin <- lme(Reaction ~ Days, random = ~ 1 | Subject, data = sleepstudy)
+anova(m_sin, m_ar1)
+```
+
+La estructura AR1 mejora claramente el ajuste (AIC de 1794 a 1746): las mediciones de días consecutivos de un mismo sujeto se parecen más entre sí que las de días lejanos, más allá de que sea el mismo sujeto. Es un modelo distinto al de pendiente aleatoria (que tenía un AIC de 1756) y ambos explican parte de la misma variación; también se pueden combinar.
+
+## 9. Modelos no lineales mixtos
+
+Muchos procesos (crecimiento, cinética química) no son lineales. `nlme()` ajusta una curva no lineal en la que **algunos parámetros varían por grupo**. Ejemplo: el crecimiento en altura de 14 árboles de pino (`Loblolly`) que se aproxima a una asíntota:
+
+$$
+altura = Asym + (R_0 - Asym)\, e^{-e^{lrc}\, edad}
+$$
+
+```{r}
+#| label: nlme-no-lineal
+m_nl <- nlme(height ~ SSasymp(age, Asym, R0, lrc),
+             data = Loblolly,
+             fixed = Asym + R0 + lrc ~ 1,
+             random = Asym ~ 1 | Seed,          # cada árbol tiene su propia asíntota
+             start = c(Asym = 94, R0 = -8.25, lrc = -3.2))
+summary(m_nl)$tTable
+```
+
+```{r}
+#| label: fig-nlme
+#| fig-cap: "Crecimiento de 14 pinos. Puntos: datos; líneas: curvas ajustadas por árbol; línea negra: curva promedio de la población."
+#| fig-height: 3.6
+edades <- seq(3, 25, length.out = 100)
+curva_pob <- tibble(age = edades, height = predict(m_nl, newdata = data.frame(age = edades, Seed = NA), level = 0))
+
+Loblolly |>
+  mutate(ajustado = fitted(m_nl)) |>
+  ggplot(aes(age)) +
+  geom_point(aes(y = height, colour = Seed), size = 1.4, show.legend = FALSE) +
+  geom_line(aes(y = ajustado, colour = Seed, group = Seed), linewidth = 0.4, show.legend = FALSE) +
+  geom_line(data = curva_pob, aes(y = height), linewidth = 1.2) +
+  scale_colour_viridis_d() +
+  labs(x = "Edad (años)", y = "Altura (pies)")
+```
+
+## Ejercicios
+
+1. **Intercepto aleatorio.** Con `Orthodont` (paquete `nlme`), ajusta `distance ~ age + (1 | Subject)` con `lmer()`. ¿Cuánto crece la distancia por año? ¿Cuál es el ICC?
+2. **Pendiente aleatoria.** Añade `age` como pendiente aleatoria. ¿Mejora el modelo (usa `anova()` y AIC)?
+3. **Efecto fijo del sexo.** Agrega `Sex` y su interacción con `age`. ¿Crece igual la distancia en niños y niñas?
+4. **Pseudoreplicación.** Ajusta el mismo modelo con `lm()` y compara los errores estándar. ¿Qué observas?
+
+::: {.callout-note collapse="true"}
+## Soluciones sugeridas
+
+```{r}
+#| label: soluciones
+data(Orthodont, package = "nlme")
+o1 <- lmer(distance ~ age + (1 | Subject), data = Orthodont)
+o2 <- lmer(distance ~ age + (age | Subject), data = Orthodont)
+fixef(o1)["age"]; icc(o1)$ICC_adjusted
+anova(o1, o2, refit = FALSE)
+
+o3 <- lmer(distance ~ age * Sex + (1 | Subject), data = Orthodont)
+summary(o3)$coefficients
+
+rbind(lm = summary(lm(distance ~ age, data = Orthodont))$coefficients["age", 1:2],
+      mixto = summary(o1)$coefficients["age", 1:2])
+```
+:::
+
+## Para profundizar
+
+- Bates, D., Mächler, M., Bolker, B. y Walker, S. (2015). Fitting linear mixed-effects models using lme4. *Journal of Statistical Software*, 67(1), 1–48. <https://doi.org/10.18637/jss.v067.i01>
+- Pinheiro, J. C. y Bates, D. M. (2000). *Mixed-Effects Models in S and S-PLUS*. Springer.
+- Zuur, A. F., Ieno, E. N., Walker, N., Saveliev, A. A. y Smith, G. M. (2009). *Mixed Effects Models and Extensions in Ecology with R*. Springer.
+- Barr, D. J., Levy, R., Scheepers, C. y Tily, H. J. (2013). Random effects structure for confirmatory hypothesis testing: keep it maximal. *Journal of Memory and Language*, 68(3), 255–278.
+- Hurlbert, S. H. (1984). Pseudoreplication and the design of ecological field experiments. *Ecological Monographs*, 54(2), 187–211.
+- Belenky, G. et al. (2003). Patterns of performance degradation and restoration during sleep restriction. *Journal of Sleep Research*, 12(1), 1–12.
+
+::: {.callout-note appearance="minimal"}
+## Reproducibilidad
+Este cuaderno se ejecutó con R `r paste(R.version$major, R.version$minor, sep = ".")` y lme4 `r as.character(packageVersion("lme4"))`.
+:::

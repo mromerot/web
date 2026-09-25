@@ -1,0 +1,9 @@
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+  message: false
+fig-align: center
+fig-dpi: 150
+code-fold: false
+code-tools: true

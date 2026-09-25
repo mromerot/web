@@ -1,0 +1,337 @@
+---
+title: "Fundamentos de R"
+subtitle: "Minicurso de R · Módulo 0"
+description: "Objetos, vectores, matrices, ayuda, paquetes y buenas prácticas de estilo para empezar a programar en R."
+author: "Mauricio Romero"
+date: 2026-09-25
+format: html
+editor: visual
+categories: [R, fundamentos, vectores, matrices]
+---
+
+::: {.callout-note appearance="minimal"}
+**Duración estimada:** 1,5 horas · **Nivel:** principiante · **Prerrequisitos:** ninguno (solo tener R y RStudio instalados).
+:::
+
+## Objetivos de aprendizaje
+
+Al terminar este cuaderno podrás:
+
+1. Usar R como calculadora y guardar resultados en **objetos**.
+2. Crear, indexar y operar **vectores**, incluyendo comparaciones lógicas y valores faltantes.
+3. Crear y manipular **matrices** (subconjuntos y aritmética).
+4. Buscar ayuda e instalar paquetes.
+5. Escribir código legible siguiendo una guía de estilo.
+
+```{r}
+#| label: paquetes
+library(ggplot2)
+```
+
+## 1. R como calculadora
+
+R evalúa expresiones y muestra el resultado. Los operadores aritméticos son `+`, `-`, `*`, `/`, `^` (potencia), `%%` (residuo) y `%/%` (división entera).
+
+```{r}
+#| label: calculadora
+3 + 8
+6 * 98
+sqrt(200)
+17 %% 5      # residuo de 17 entre 5
+17 %/% 5     # división entera
+2^10
+```
+
+Para guardar un resultado se usa el operador de asignación `<-` (atajo en RStudio: `Alt` + `-`):
+
+```{r}
+#| label: asignacion
+radio <- 4
+area <- pi * radio^2
+area
+```
+
+::: {.callout-tip}
+## Consejo
+En R, `=` también asigna, pero por convención se reserva `<-` para asignar objetos y `=` para pasar argumentos en las funciones. Así el código es más fácil de leer.
+:::
+
+## 2. Teoría: los vectores son la base
+
+En R casi todo es un **vector**: una colección ordenada de elementos del **mismo tipo**. Un número suelto es un vector de longitud 1. Los tipos atómicos más usados son:
+
+| Tipo | `class()` | Ejemplo |
+|---|---|---|
+| Numérico | `numeric` | `3.14`, `81` |
+| Entero | `integer` | `5L` |
+| Texto | `character` | `"alef"` |
+| Lógico | `logical` | `TRUE`, `FALSE` |
+
+Se crean con la función `c()` (de *combine*):
+
+```{r}
+#| label: vectores
+v_num  <- c(3, 9, 81)
+v_text <- c("alef", "bet", "gimel")   # el texto siempre va entre comillas
+v_bool <- c(TRUE, FALSE, TRUE)
+
+class(v_num)
+class(v_text)
+class(v_bool)
+length(v_num)
+```
+
+Si mezclas tipos, R los convierte al más general (*coerción*): lógico → numérico → texto.
+
+```{r}
+#| label: coercion
+c(1, TRUE, FALSE)      # lógico pasa a numérico
+c(1, "a", TRUE)        # todo pasa a texto
+```
+
+Un vector puede tener **nombres**, lo que lo vuelve parecido a un diccionario:
+
+```{r}
+#| label: vector-nombrado
+prendas <- c(zapatos = "mocasines", gorra = "Yankees", camisa = "blanca")
+prendas
+names(prendas)
+prendas["gorra"]
+```
+
+### Operaciones vectorizadas
+
+Las operaciones se aplican **elemento a elemento**, sin necesidad de bucles. Esta idea, llamada *vectorización*, es la que hace que R sea rápido y conciso:
+
+```{r}
+#| label: vectorizacion
+x <- 1:10                # secuencia del 1 al 10
+x * 2
+x^2
+sum(x); mean(x); sd(x)
+seq(0, 1, by = 0.25)
+rep(c("a", "b"), times = 3)
+```
+
+```{r}
+#| label: fig-vectorizacion
+#| fig-cap: "Una sola línea de código vectorizado genera 200 puntos de una función. No hizo falta un bucle."
+#| fig-height: 3.2
+x <- seq(0, 4 * pi, length.out = 200)
+datos <- data.frame(x = x, seno = sin(x), amortiguada = exp(-x / 5) * sin(x))
+
+ggplot(datos, aes(x)) +
+  geom_line(aes(y = seno, colour = "sin(x)")) +
+  geom_line(aes(y = amortiguada, colour = "exp(-x/5) sin(x)")) +
+  scale_colour_manual(values = c("#e76f51", "#2a9d8f"), name = NULL) +
+  labs(x = "x", y = "f(x)") +
+  theme_minimal(base_size = 12)
+```
+
+### Indexación
+
+Para extraer elementos se usan corchetes `[ ]` con tres opciones: posiciones, un vector lógico o nombres.
+
+```{r}
+#| label: indexacion
+animales <- c("Elefante", "Jirafa", "Burro", "Caballo", "Cebra")
+
+animales[2]            # una posición
+animales[c(1, 3)]      # varias posiciones
+animales[-1]           # todo menos el primero
+animales[2:4]          # un rango
+animales[nchar(animales) > 5]   # con una condición lógica
+```
+
+## 3. Comparaciones y lógica
+
+Las comparaciones (`<`, `>`, `<=`, `>=`, `==`, `!=`) devuelven vectores lógicos. Se combinan con `&` (y), `|` (o) y `!` (no).
+
+```{r}
+#| label: comparaciones
+edades <- c(12, 25, 37, 8, 64, 19)
+
+edades > 18
+edades > 18 & edades < 40
+edades[edades > 18]
+which(edades > 18)          # posiciones donde se cumple
+any(edades > 60); all(edades > 5)
+sum(edades > 18)            # TRUE cuenta como 1
+```
+
+::: {.callout-warning}
+## Error frecuente
+Para comparar igualdad se usa `==`, no `=`. Además, con números decimales evita `==`: `0.1 + 0.2 == 0.3` es `FALSE` por errores de redondeo. Usa `isTRUE(all.equal(0.1 + 0.2, 0.3))`.
+:::
+
+### Valores faltantes
+
+Un dato ausente se representa con `NA`. Casi cualquier operación con `NA` da `NA`, así que hay que decirle a R cómo tratarlo:
+
+```{r}
+#| label: na
+temperatura <- c(21.5, 23.1, NA, 22.8, NA, 24.0)
+
+mean(temperatura)                   # NA
+mean(temperatura, na.rm = TRUE)     # ignora los faltantes
+is.na(temperatura)
+sum(is.na(temperatura))             # cuántos faltan
+```
+
+## 4. Matrices
+
+Una **matriz** es un vector con dos dimensiones (filas y columnas) y elementos del mismo tipo.
+
+```{r}
+#| label: matrices
+M <- matrix(1:12, nrow = 3, ncol = 4)
+M
+
+M_fila <- matrix(1:12, nrow = 3, byrow = TRUE)   # se llena por filas
+M_fila
+
+dim(M); nrow(M); ncol(M)
+```
+
+Se pueden nombrar filas y columnas y luego indexar por posición o por nombre con `[fila, columna]`:
+
+```{r}
+#| label: subconjuntos-matriz
+precipitacion <- matrix(c(120, 98, 45, 60, 150, 110, 70, 80, 130, 105, 55, 65),
+                        nrow = 3, byrow = TRUE,
+                        dimnames = list(estacion = c("Norte", "Centro", "Sur"),
+                                        trimestre = c("T1", "T2", "T3", "T4")))
+precipitacion
+
+precipitacion["Centro", "T2"]      # un valor
+precipitacion["Sur", ]             # una fila completa
+precipitacion[, c("T1", "T4")]     # dos columnas
+precipitacion[precipitacion > 100] # valores mayores a 100
+```
+
+Las sumas y promedios por fila o columna se calculan con `rowSums()`, `colMeans()` y afines, o con `apply()`:
+
+```{r}
+#| label: resumen-matriz
+rowSums(precipitacion)
+colMeans(precipitacion)
+apply(precipitacion, MARGIN = 1, FUN = max)   # máximo por fila
+```
+
+### Aritmética de matrices
+
+Los operadores `+`, `-`, `*` actúan **elemento a elemento**. El producto matricial se escribe con `%*%`.
+
+```{r}
+#| label: aritmetica-matrices
+A <- matrix(c(2, 1, 1, 3), 2)
+B <- matrix(c(1, 0, 4, 2), 2)
+
+A * B          # elemento a elemento
+A %*% B        # producto matricial
+t(A)           # traspuesta
+solve(A)       # inversa
+A %*% solve(A) # da la identidad
+diag(2)        # matriz identidad
+det(A)         # determinante
+```
+
+Un sistema de ecuaciones $A\mathbf{x} = \mathbf{b}$ se resuelve con `solve(A, b)`:
+
+```{r}
+#| label: sistema
+b <- c(5, 10)
+solve(A, b)
+```
+
+## 5. Ayuda, paquetes y estilo
+
+### Cómo pedir ayuda
+
+```{r}
+#| label: ayuda
+#| eval: false
+?mean                       # ayuda de una función
+help("mean")                # equivalente
+??"regresión"               # búsqueda por palabra clave
+example(mean)               # ejecuta los ejemplos de la ayuda
+vignette(package = "dplyr") # guías largas de un paquete
+```
+
+Cuando algo falle, copia el mensaje de error completo y búscalo en internet (ayuda de R, [Stack Overflow](https://stackoverflow.com/questions/tagged/r) o [Posit Community](https://forum.posit.co/)).
+
+### Instalar y cargar paquetes
+
+Un paquete se **instala una sola vez** con `install.packages()` y se **carga en cada sesión** con `library()`:
+
+```{r}
+#| label: paquetes-instalar
+#| eval: false
+install.packages("tidyverse")   # una vez por computador
+library(tidyverse)              # en cada sesión
+dplyr::filter(mtcars, cyl == 4) # usar una función sin cargar el paquete
+```
+
+::: {.callout-warning}
+## Nunca dejes `install.packages()` dentro de un script compartido
+Instalar paquetes en cada ejecución es lento y modifica el computador de quien lo corre. Documéntalos al inicio o usa `renv` para registrar las versiones de tu proyecto.
+:::
+
+### Guía de estilo
+
+Un código legible se entiende meses después. Estas convenciones (basadas en la [guía tidyverse](https://style.tidyverse.org/)) bastan para empezar:
+
+| Recomendado | Evitar |
+|---|---|
+| `datos_clima` (minúsculas y guion bajo) | `DatosClima`, `datos.clima` |
+| `x <- 5` | `x=5` |
+| `mean(x, na.rm = TRUE)` | `mean(x,na.rm=TRUE)` |
+| Líneas de menos de 80 caracteres | Líneas larguísimas |
+| Comentarios que explican el **porqué** | Comentarios que repiten el código |
+| Rutas relativas dentro de un proyecto | `setwd("C:/Users/yo/...")` |
+| `set.seed()` cuando se usa azar | Resultados que cambian sin control |
+
+Sobre las rutas: crea un **proyecto de RStudio** (`.Rproj`) por cada análisis; así el directorio de trabajo es la carpeta del proyecto y el código funciona en cualquier computador. Evita también `rm(list = ls())` al inicio de los scripts: no limpia todo (no reinicia los paquetes cargados) y borra el trabajo de quien lo ejecute. Mejor reinicia la sesión (`Ctrl/Cmd + Shift + F10`).
+
+## Ejercicios
+
+1. **Vectores.** Crea el vector `edades <- c(12, 25, 37, 8, 64, 19)`. Calcula el promedio, selecciona las edades mayores que el promedio y cuenta cuántas son.
+2. **Lógica.** Dado `x <- c(5, NA, 12, 7, NA, 3)`, calcula la media sin los faltantes y reemplaza los `NA` por esa media.
+3. **Matrices.** Construye una matriz de 3 × 3 con los números del 1 al 9 llenada por filas. Extrae la diagonal y calcula la suma de cada columna.
+4. **Sistema lineal.** Resuelve $2x + y = 5$, $x + 3y = 10$ con `solve()` y comprueba la solución multiplicando.
+
+::: {.callout-note collapse="true"}
+## Soluciones sugeridas
+
+```{r}
+#| label: soluciones
+edades <- c(12, 25, 37, 8, 64, 19)
+promedio <- mean(edades)
+edades[edades > promedio]
+sum(edades > promedio)
+
+x <- c(5, NA, 12, 7, NA, 3)
+x[is.na(x)] <- mean(x, na.rm = TRUE)
+x
+
+M3 <- matrix(1:9, 3, byrow = TRUE)
+diag(M3)
+colSums(M3)
+
+A <- matrix(c(2, 1, 1, 3), 2, byrow = TRUE)
+sol <- solve(A, c(5, 10))
+sol
+A %*% sol
+```
+:::
+
+## Para profundizar
+
+- Wickham, H. y Grolemund, G. (2017). *R for Data Science*. O'Reilly. [r4ds.hadley.nz](https://r4ds.hadley.nz/).
+- Wickham, H. (2019). *Advanced R* (2.ª ed.). [adv-r.hadley.nz](https://adv-r.hadley.nz/), capítulo sobre vectores.
+- Guía de estilo de tidyverse: [style.tidyverse.org](https://style.tidyverse.org/).
+
+::: {.callout-note appearance="minimal"}
+## Reproducibilidad
+Este cuaderno se ejecutó con R `r paste(R.version$major, R.version$minor, sep = ".")`.
+:::

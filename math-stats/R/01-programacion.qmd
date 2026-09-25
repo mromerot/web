@@ -1,0 +1,300 @@
+---
+title: "Programación en R: control de flujo, bucles y funciones"
+subtitle: "Minicurso de R · Módulo 1"
+description: "Condicionales, bucles, la familia apply y funciones propias, con simulaciones y una comparación de velocidad."
+author: "Mauricio Romero"
+date: 2026-09-25
+format: html
+editor: visual
+categories: [R, programación, funciones, bucles]
+---
+
+::: {.callout-note appearance="minimal"}
+**Duración estimada:** 1,5 horas · **Nivel:** principiante–intermedio · **Prerrequisitos:** Módulo 0 (vectores y comparaciones).
+:::
+
+## Objetivos de aprendizaje
+
+Al terminar este cuaderno podrás:
+
+1. Tomar decisiones en el código con `if`, `else`, `ifelse()` y `switch()`.
+2. Repetir tareas con `for`, `while` y `repeat`.
+3. Reemplazar bucles por la familia `apply` (`sapply`, `lapply`, `vapply`, `Map`).
+4. Escribir **funciones** propias con argumentos por defecto y validaciones.
+5. Elegir entre bucle y vectorización según legibilidad y velocidad.
+
+```{r}
+#| label: paquetes
+library(ggplot2)
+library(dplyr)
+set.seed(2026)
+```
+
+## 1. Condicionales
+
+Una **estructura de control** decide qué código se ejecuta. La más común es `if`/`else if`/`else`, que evalúa una condición lógica de longitud 1:
+
+```{r}
+#| label: if
+clasificar_lluvia <- function(mm) {
+  if (mm < 1) {
+    "sin lluvia"
+  } else if (mm < 10) {
+    "lluvia ligera"
+  } else if (mm < 50) {
+    "lluvia moderada"
+  } else {
+    "lluvia intensa"
+  }
+}
+
+clasificar_lluvia(0)
+clasificar_lluvia(23)
+clasificar_lluvia(80)
+```
+
+Pero `if` **no está vectorizado**: si le das un vector de condiciones dará un error. Para vectores se usa `ifelse()`, o mejor `dplyr::case_when()` cuando hay varias categorías:
+
+```{r}
+#| label: ifelse
+lluvia <- c(0, 3, 12, 55, 8, 0.5, 120)
+
+ifelse(lluvia > 10, "alta", "baja")
+
+case_when(
+  lluvia < 1  ~ "sin lluvia",
+  lluvia < 10 ~ "ligera",
+  lluvia < 50 ~ "moderada",
+  TRUE        ~ "intensa"
+)
+```
+
+`switch()` elige entre opciones nombradas y es útil dentro de funciones:
+
+```{r}
+#| label: switch
+resumen <- function(x, tipo = c("media", "mediana", "maximo")) {
+  tipo <- match.arg(tipo)
+  switch(tipo,
+         media   = mean(x),
+         mediana = median(x),
+         maximo  = max(x))
+}
+
+resumen(lluvia, "mediana")
+resumen(lluvia)            # usa la primera opción por defecto
+```
+
+## 2. Bucles
+
+Un bucle repite un bloque de código. `for` recorre una secuencia, `while` repite mientras se cumpla una condición y `repeat` repite hasta un `break` explícito.
+
+```{r}
+#| label: for
+for (i in 1:3) {
+  cat("Iteración", i, "\n")
+}
+
+paises <- c("Colombia", "Perú", "Chile")
+for (p in paises) {
+  cat("Hola,", p, "\n")
+}
+```
+
+```{r}
+#| label: while
+# ¿Cuántos años tarda una población de 1000 en superar 5000 si crece 3% anual?
+poblacion <- 1000
+anios <- 0
+while (poblacion < 5000) {
+  poblacion <- poblacion * 1.03
+  anios <- anios + 1
+}
+anios
+```
+
+::: {.callout-tip}
+## Consejo: reserva el espacio antes del bucle
+Cuando llenes un vector dentro de un bucle, créalo antes con su tamaño final (`resultado <- numeric(n)`). Agrandar un vector en cada iteración (`resultado <- c(resultado, nuevo)`) es muy lento.
+:::
+
+### Ejemplo: caminata aleatoria
+
+Una caminata aleatoria suma pasos de +1 o -1 elegidos al azar. Es un modelo básico de difusión y de series de tiempo.
+
+```{r}
+#| label: fig-caminata
+#| fig-cap: "Cinco caminatas aleatorias de 200 pasos, simuladas con un bucle."
+#| fig-height: 3.5
+caminata <- function(n_pasos) {
+  posicion <- numeric(n_pasos)          # se reserva el espacio
+  for (t in 2:n_pasos) {
+    paso <- sample(c(-1, 1), 1)
+    posicion[t] <- posicion[t - 1] + paso
+  }
+  posicion
+}
+
+trayectorias <- lapply(1:5, function(k) {
+  data.frame(paso = 1:200, posicion = caminata(200), id = factor(k))
+}) |> bind_rows()
+
+ggplot(trayectorias, aes(paso, posicion, colour = id)) +
+  geom_line(linewidth = 0.6) +
+  scale_colour_brewer(palette = "Dark2", guide = "none") +
+  labs(x = "Paso", y = "Posición") +
+  theme_minimal(base_size = 12)
+```
+
+## 3. La familia apply
+
+Escribir un `for` para aplicar una función a cada elemento es tan común que R ofrece atajos que devuelven el resultado directamente:
+
+| Función | Devuelve | Cuándo usarla |
+|---|---|---|
+| `lapply(x, f)` | lista | Siempre funciona |
+| `sapply(x, f)` | vector o matriz | Simplifica el resultado (a veces de forma inesperada) |
+| `vapply(x, f, FUN.VALUE)` | vector | Como `sapply` pero declarando el tipo de salida (más seguro) |
+| `Map(f, x, y)` | lista | Cuando `f` recibe varios argumentos en paralelo |
+| `apply(m, MARGIN, f)` | vector | Filas (1) o columnas (2) de una matriz |
+
+```{r}
+#| label: apply
+lista_notas <- list(ana = c(4.5, 3.8, 4.2), beto = c(3.0, 3.5), carla = c(5.0, 4.8, 4.9, 4.7))
+
+sapply(lista_notas, mean)
+vapply(lista_notas, length, FUN.VALUE = integer(1))
+lapply(lista_notas, range)
+```
+
+```{r}
+#| label: apply-matriz
+m <- matrix(c(2, 4, 6, 8, 10, 12), nrow = 2)
+apply(m, 1, sum)    # suma por fila
+apply(m, 2, sum)    # suma por columna
+```
+
+Para agrupar y resumir datos tabulares, `dplyr` es más legible que `tapply()` o `aggregate()`:
+
+```{r}
+#| label: tapply-dplyr
+# Con base R
+tapply(iris$Sepal.Length, iris$Species, mean)
+
+# Con dplyr
+iris |>
+  group_by(Species) |>
+  summarise(media = mean(Sepal.Length), desviacion = sd(Sepal.Length))
+```
+
+## 4. Funciones propias
+
+Si copias el mismo código más de dos veces, conviene escribir una **función**. Su estructura es:
+
+```r
+nombre <- function(argumento1, argumento2 = valor_por_defecto) {
+  # cuerpo
+  resultado   # lo último que se evalúa es lo que se devuelve
+}
+```
+
+Ejemplo: el **coeficiente de variación** ($CV = s/\bar{x}$) con validaciones y manejo de faltantes:
+
+```{r}
+#| label: funcion-cv
+coef_variacion <- function(x, na.rm = TRUE, porcentaje = FALSE) {
+  stopifnot(is.numeric(x))
+  cv <- sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)
+  if (porcentaje) cv * 100 else cv
+}
+
+coef_variacion(c(10, 12, 9, 11, NA))
+coef_variacion(c(10, 12, 9, 11), porcentaje = TRUE)
+```
+
+Una función puede devolver varios valores dentro de una lista y aceptar `...` para pasar argumentos a otras funciones:
+
+```{r}
+#| label: funcion-lista
+resumen_completo <- function(x, ...) {
+  list(n = length(x),
+       media = mean(x, ...),
+       ic95 = mean(x, ...) + c(-1, 1) * 1.96 * sd(x, ...) / sqrt(length(x)))
+}
+
+resumen_completo(c(10, 12, 9, 11, 13, 8), na.rm = TRUE)
+```
+
+## 5. ¿Bucle o vectorización?
+
+Los bucles de R son correctos pero suelen ser más lentos que las operaciones vectorizadas. Comparemos tres formas de calcular el cuadrado de un millón de números:
+
+```{r}
+#| label: fig-velocidad
+#| fig-cap: "Tiempo de cálculo (en escala logarítmica) de tres formas de elevar al cuadrado un millón de números."
+#| fig-height: 3
+n <- 1e6
+x <- runif(n)
+
+t_bucle_malo <- system.time({           # agranda el vector en cada paso (evitar)
+  r <- c(); for (i in 1:5e4) r <- c(r, x[i]^2)
+})["elapsed"] * (n / 5e4)               # se extrapola a n
+
+t_bucle <- system.time({                # reserva el espacio
+  r <- numeric(n); for (i in seq_len(n)) r[i] <- x[i]^2
+})["elapsed"]
+
+t_vector <- system.time(r <- x^2)["elapsed"]
+
+tibble(metodo = c("Bucle que agranda el vector\n(extrapolado)", "Bucle con espacio reservado", "Vectorizado"),
+       segundos = c(t_bucle_malo, t_bucle, t_vector)) |>
+  ggplot(aes(reorder(metodo, segundos), segundos)) +
+  geom_col(fill = "#2a9d8f") +
+  scale_y_log10() +
+  coord_flip() +
+  labs(x = NULL, y = "Segundos (escala log)") +
+  theme_minimal(base_size = 12)
+```
+
+La regla práctica es: **primero claridad, luego velocidad**. Usa operaciones vectorizadas siempre que existan; usa `for` cuando cada paso depende del anterior (como en la caminata aleatoria) y usa `sapply`/`lapply` para repetir una función sobre elementos independientes.
+
+## Ejercicios
+
+1. **Condicional.** Escribe una función `signo(x)` que devuelva `"positivo"`, `"negativo"` o `"cero"`. Aplícala a `c(-3, 0, 5)` con `sapply()`.
+2. **Bucle.** Usa un `for` para calcular el factorial de 10 y compáralo con `factorial(10)`.
+3. **Simulación.** Simula 1000 veces el lanzamiento de dos dados y estima la probabilidad de que sumen 7 (el valor teórico es 1/6).
+4. **Función.** Escribe `estandarizar(x)` que devuelva $(x - \bar{x})/s$. ¿Qué media y desviación tiene el resultado?
+
+::: {.callout-note collapse="true"}
+## Soluciones sugeridas
+
+```{r}
+#| label: soluciones
+signo <- function(x) {
+  if (x > 0) "positivo" else if (x < 0) "negativo" else "cero"
+}
+sapply(c(-3, 0, 5), signo)
+
+f <- 1
+for (i in 1:10) f <- f * i
+c(f, factorial(10))
+
+lanzamientos <- replicate(1000, sum(sample(1:6, 2, replace = TRUE)))
+mean(lanzamientos == 7)
+
+estandarizar <- function(x) (x - mean(x)) / sd(x)
+z <- estandarizar(c(4, 8, 6, 5, 7))
+c(media = mean(z), desviacion = sd(z))
+```
+:::
+
+## Para profundizar
+
+- Wickham, H. (2019). *Advanced R* (2.ª ed.): capítulos "Control flow", "Functionals" y "Functions". [adv-r.hadley.nz](https://adv-r.hadley.nz/).
+- Wickham, H. y Grolemund, G. (2017). *R for Data Science*: capítulos "Functions" e "Iteration". [r4ds.hadley.nz](https://r4ds.hadley.nz/).
+- Paquete [`purrr`](https://purrr.tidyverse.org/), alternativa moderna a la familia `apply`.
+
+::: {.callout-note appearance="minimal"}
+## Reproducibilidad
+Este cuaderno se ejecutó con R `r paste(R.version$major, R.version$minor, sep = ".")`.
+:::

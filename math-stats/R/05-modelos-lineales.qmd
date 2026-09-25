@@ -1,0 +1,377 @@
+---
+title: "Regresión lineal y ANOVA"
+subtitle: "Minicurso de R · Módulo 5"
+description: "Modelos lineales, diagnósticos, predicción, ANOVA de una y dos vías, pruebas post hoc y medias marginales, con la teoría de la partición de la varianza."
+author: "Mauricio Romero"
+date: 2026-09-25
+format: html
+editor: visual
+categories: [R, regresión, ANOVA, modelos lineales]
+---
+
+::: {.callout-note appearance="minimal"}
+**Duración estimada:** 4 horas · **Nivel:** intermedio · **Prerrequisitos:** Módulo 4 (pruebas de hipótesis y supuestos).
+:::
+
+## Objetivos de aprendizaje
+
+Al terminar este cuaderno podrás:
+
+1. Ajustar e interpretar una **regresión lineal** simple y múltiple con `lm()`.
+2. Diagnosticar un modelo revisando sus **supuestos** con gráficos de residuos.
+3. Generar **predicciones** con intervalos de confianza y de predicción.
+4. Explicar el **ANOVA** como partición de la varianza y aplicar el de una y dos vías.
+5. Hacer comparaciones **post hoc** y calcular medias marginales con `emmeans`.
+6. Comparar modelos con AIC y pruebas F.
+
+```{r}
+#| label: paquetes
+library(tidyverse)
+library(palmerpenguins)
+library(broom)
+library(car)        # Levene, VIF, ANOVA tipo II/III
+library(emmeans)    # medias marginales y comparaciones
+library(patchwork)
+set.seed(2026)
+
+theme_set(theme_minimal(base_size = 12) + theme(panel.grid.minor = element_blank()))
+pd <- penguins |> drop_na(body_mass_g, flipper_length_mm, sex)
+```
+
+## 1. Teoría: el modelo lineal
+
+Un **modelo lineal** explica una variable respuesta $y$ como una combinación lineal de predictores más un error:
+
+$$
+y_i = \beta_0 + \beta_1 x_{1i} + \dots + \beta_p x_{pi} + \varepsilon_i, \qquad \varepsilon_i \sim N(0, \sigma^2)
+$$
+
+Los coeficientes $\beta$ se estiman por **mínimos cuadrados**: se elige la recta que minimiza la suma de los cuadrados de los residuos (las distancias verticales entre los datos y la recta). Los supuestos, que hay que revisar, son:
+
+1. **Linealidad**: la relación entre predictores y $y$ es lineal.
+2. **Independencia** de los errores.
+3. **Normalidad** de los residuos.
+4. **Homocedasticidad**: la varianza de los residuos es constante.
+
+(La normalidad se aplica a los **residuos**, no a la variable $y$.)
+
+## 2. Regresión lineal simple
+
+¿Cuánto aumenta la masa de un pingüino por cada milímetro adicional de aleta?
+
+```{r}
+#| label: lm-simple
+m1 <- lm(body_mass_g ~ flipper_length_mm, data = pd)
+summary(m1)
+```
+
+Cómo leer el resultado:
+
+- **Intercepto**: masa esperada cuando la aleta mide 0 mm (aquí no tiene sentido físico, solo ancla la recta).
+- **Pendiente** (`flipper_length_mm`): cada milímetro extra de aleta se asocia con un aumento medio de la masa de unos 50 g.
+- **$R^2$**: fracción de la variabilidad de la masa explicada por la aleta.
+- **Error estándar residual**: desviación típica de los errores, en gramos.
+
+`broom` devuelve estos resultados como tablas fáciles de manipular:
+
+```{r}
+#| label: broom
+tidy(m1, conf.int = TRUE)
+glance(m1) |> select(r.squared, adj.r.squared, sigma, AIC, nobs)
+```
+
+```{r}
+#| label: fig-lm-simple
+#| fig-cap: "Regresión de la masa sobre el largo de la aleta. La banda gris es el intervalo de confianza de la recta."
+#| fig-height: 3.4
+ggplot(pd, aes(flipper_length_mm, body_mass_g)) +
+  geom_point(alpha = 0.5, colour = "grey30") +
+  geom_smooth(method = "lm", colour = "#e76f51", fill = "#e76f51", alpha = 0.2) +
+  labs(x = "Largo de la aleta (mm)", y = "Masa corporal (g)")
+```
+
+### Diagnóstico de los supuestos
+
+Con `augment()` se obtienen los valores ajustados y los residuos para dibujar los gráficos de diagnóstico:
+
+```{r}
+#| label: fig-diagnostico
+#| fig-cap: "Gráficos de diagnóstico. Izquierda: residuos contra valores ajustados (buscamos una nube sin patrón). Centro: Q-Q de los residuos (buscamos puntos sobre la recta). Derecha: escala-ubicación (buscamos una banda horizontal, señal de varianza constante)."
+#| fig-height: 3.2
+#| fig-width: 10
+d <- augment(m1)
+
+g1 <- ggplot(d, aes(.fitted, .resid)) + geom_point(alpha = 0.5) +
+  geom_hline(yintercept = 0, colour = "#e76f51") + geom_smooth(se = FALSE, method = "loess", formula = y ~ x, linewidth = 0.6) +
+  labs(x = "Ajustados", y = "Residuos", title = "Residuos vs. ajustados")
+g2 <- ggplot(d, aes(sample = .std.resid)) + stat_qq(alpha = 0.5) + stat_qq_line(colour = "#e76f51") +
+  labs(x = "Teóricos", y = "Residuos estandarizados", title = "Q-Q")
+g3 <- ggplot(d, aes(.fitted, sqrt(abs(.std.resid)))) + geom_point(alpha = 0.5) +
+  geom_smooth(se = FALSE, method = "loess", formula = y ~ x, linewidth = 0.6) +
+  labs(x = "Ajustados", y = "√|residuos estand.|", title = "Escala-ubicación")
+
+g1 | g2 | g3
+```
+
+Además de los gráficos, los puntos **influyentes** (que cambian mucho el ajuste si se quitan) se detectan con la **distancia de Cook**:
+
+```{r}
+#| label: cook
+augment(m1) |>
+  mutate(fila = row_number()) |>
+  slice_max(.cooksd, n = 3) |>
+  select(fila, body_mass_g, flipper_length_mm, .cooksd)
+```
+
+::: {.callout-tip}
+## Si un supuesto falla
+- **Curvatura** en los residuos: agrega un término cuadrático (`poly(x, 2)`) o usa un GAM (Módulo 7).
+- **Varianza creciente** con el valor ajustado: transforma la respuesta (`log(y)`) o usa modelos que permitan varianzas distintas.
+- **Residuos no normales** con muestras grandes: el modelo es robusto; con muestras pequeñas, transforma o usa bootstrap.
+- **Dependencia** entre observaciones (mismos individuos, sitios repetidos): usa modelos mixtos (Módulo 6).
+:::
+
+### Predicción
+
+Hay dos intervalos distintos: el de **confianza** (incertidumbre sobre la *media* de $y$ para un valor de $x$) y el de **predicción** (incertidumbre sobre una *observación individual*, siempre más ancho).
+
+```{r}
+#| label: fig-prediccion
+#| fig-cap: "Intervalo de confianza (banda oscura) e intervalo de predicción (banda clara) para la masa según el largo de la aleta."
+#| fig-height: 3.4
+nuevo <- tibble(flipper_length_mm = seq(172, 231, length.out = 100))
+pred <- bind_cols(nuevo,
+                  as_tibble(predict(m1, nuevo, interval = "confidence")) |> rename(ic_inf = lwr, ic_sup = upr),
+                  as_tibble(predict(m1, nuevo, interval = "prediction")) |> select(ip_inf = lwr, ip_sup = upr))
+
+ggplot(pred, aes(flipper_length_mm)) +
+  geom_ribbon(aes(ymin = ip_inf, ymax = ip_sup), fill = "#264653", alpha = 0.15) +
+  geom_ribbon(aes(ymin = ic_inf, ymax = ic_sup), fill = "#264653", alpha = 0.35) +
+  geom_line(aes(y = fit), colour = "#264653") +
+  geom_point(data = pd, aes(y = body_mass_g), alpha = 0.3) +
+  labs(x = "Largo de la aleta (mm)", y = "Masa corporal (g)")
+
+predict(m1, tibble(flipper_length_mm = 200), interval = "prediction")
+```
+
+## 3. Regresión múltiple
+
+Con varios predictores, cada coeficiente se interpreta **manteniendo los demás constantes**. Agreguemos la especie (categórica) y el sexo:
+
+```{r}
+#| label: lm-multiple
+m2 <- lm(body_mass_g ~ flipper_length_mm + species + sex, data = pd)
+tidy(m2, conf.int = TRUE) |> mutate(across(where(is.numeric), \(x) round(x, 2)))
+```
+
+Las variables categóricas se codifican con **variables indicadoras** respecto a un nivel de referencia (aquí `Adelie` y `female`). Así, el coeficiente de `sexmale` es la diferencia media entre machos y hembras de la misma especie y con la misma aleta.
+
+### Multicolinealidad
+
+Si los predictores están muy correlacionados entre sí, los coeficientes se vuelven inestables. Se mide con el **factor de inflación de la varianza** (VIF); valores mayores que 5–10 son señal de alerta:
+
+```{r}
+#| label: vif
+vif(m2)
+```
+
+Aquí la aleta y la especie tienen un VIF cercano a 6: es esperable, porque las especies difieren en tamaño y por eso la aleta y la especie comparten información. Es un valor moderado, pero conviene interpretar esos dos coeficientes con cautela.
+
+### Comparar modelos
+
+Con la **prueba F** se compara un modelo con otro anidado y con el **criterio de Akaike (AIC)** se compara cualquier grupo de modelos (menor AIC = mejor equilibrio entre ajuste y complejidad):
+
+```{r}
+#| label: comparar
+m0 <- lm(body_mass_g ~ 1, data = pd)
+m3 <- lm(body_mass_g ~ flipper_length_mm * species + sex, data = pd)   # con interacción
+
+anova(m1, m2, m3)
+AIC(m0, m1, m2, m3)
+```
+
+Un **efecto de interacción** (`*`) permite que la pendiente cambie según el grupo:
+
+```{r}
+#| label: fig-interaccion
+#| fig-cap: "Modelo con interacción: cada especie tiene su propia pendiente entre aleta y masa."
+#| fig-height: 3.2
+ggplot(pd, aes(flipper_length_mm, body_mass_g, colour = species)) +
+  geom_point(alpha = 0.4) +
+  geom_smooth(method = "lm", se = FALSE) +
+  scale_colour_brewer(palette = "Set2", name = NULL) +
+  labs(x = "Largo de la aleta (mm)", y = "Masa corporal (g)")
+```
+
+## 4. Teoría: el ANOVA como partición de la varianza
+
+El **análisis de varianza (ANOVA)** compara las medias de **tres o más grupos**. Su idea es descomponer la variabilidad total de los datos en dos partes:
+
+$$
+\underbrace{SS_{total}}_{\text{variación total}} = \underbrace{SS_{entre}}_{\text{entre grupos}} + \underbrace{SS_{dentro}}_{\text{dentro de grupos}}
+$$
+
+El estadístico $F$ compara ambas fuentes, ajustadas por sus grados de libertad:
+
+$$
+F = \frac{SS_{entre}/(k-1)}{SS_{dentro}/(N-k)}
+$$
+
+Si las medias de los grupos fueran iguales ($H_0$), la variación entre grupos sería similar a la variación dentro de ellos y $F \approx 1$. Un $F$ grande indica que **al menos un grupo** difiere de los demás.
+
+::: {.callout-note}
+## ¿Por qué no hacer varias pruebas t?
+Con 3 grupos habría 3 pruebas t; con 6 grupos, 15. Cada prueba adicional infla la probabilidad de un falso positivo. El ANOVA hace **una sola** prueba global; después se hacen las comparaciones por pares con corrección.
+:::
+
+Lo vemos con dos escenarios simulados: con las mismas medias de grupo pero con más o menos ruido dentro de los grupos:
+
+```{r}
+#| label: fig-anova-idea
+#| fig-cap: "Las medias de los tres grupos son idénticas en ambos paneles. Con poca variación interna (izquierda) las diferencias son evidentes y F es grande; con mucha (derecha) se pierden en el ruido."
+#| fig-height: 3.2
+#| fig-width: 9
+sim_anova <- function(sd_dentro) {
+  tibble(grupo = rep(c("A", "B", "C"), each = 15),
+         y = rnorm(45, mean = rep(c(10, 12, 14), each = 15), sd = sd_dentro))
+}
+bind_rows(mutate(sim_anova(1), caso = "Poco ruido"), mutate(sim_anova(5), caso = "Mucho ruido")) |>
+  mutate(caso = fct_inorder(caso)) |>
+  ggplot(aes(grupo, y, colour = grupo)) +
+  geom_jitter(width = 0.12, alpha = 0.7) +
+  stat_summary(fun = mean, geom = "crossbar", width = 0.5, colour = "black", linewidth = 0.3) +
+  scale_colour_brewer(palette = "Set2", guide = "none") +
+  facet_wrap(~ caso) +
+  labs(x = NULL, y = "Valor")
+```
+
+## 5. ANOVA de una vía
+
+¿La masa corporal difiere entre las tres especies de pingüinos?
+
+```{r}
+#| label: anova
+m_aov <- aov(body_mass_g ~ species, data = pd)
+summary(m_aov)
+```
+
+El $F$ es muy grande y el valor p diminuto: al menos una especie difiere en masa. Para saber **cuáles**, se usan comparaciones por pares que corrigen por múltiples pruebas, como la prueba de **Tukey**:
+
+```{r}
+#| label: tukey
+TukeyHSD(m_aov)
+```
+
+```{r}
+#| label: fig-tukey
+#| fig-cap: "Diferencias entre pares de especies con su intervalo de confianza simultáneo del 95 %. Los intervalos que no cruzan el cero indican diferencias significativas."
+#| fig-height: 2.6
+tidy(TukeyHSD(m_aov)) |>
+  ggplot(aes(estimate, contrast)) +
+  geom_pointrange(aes(xmin = conf.low, xmax = conf.high), colour = "#264653") +
+  geom_vline(xintercept = 0, linetype = 2, colour = "#e76f51") +
+  labs(x = "Diferencia de masa (g)", y = NULL)
+```
+
+### Supuestos del ANOVA
+
+Son los mismos que los de la regresión, aplicados a los **residuos**: normalidad, homogeneidad de varianzas e independencia.
+
+```{r}
+#| label: supuestos-anova
+shapiro.test(residuals(m_aov))
+leveneTest(body_mass_g ~ species, data = pd)     # homogeneidad de varianzas
+```
+
+En este caso Levene detecta varianzas distintas entre especies ($p = 0.006$). Si las varianzas no son homogéneas, usa el ANOVA de **Welch** (`oneway.test(..., var.equal = FALSE)`) y si además falla la normalidad con muestras pequeñas la alternativa no paramétrica, la prueba de **Kruskal-Wallis**. Aquí ambas llevan a la misma conclusión que el ANOVA clásico:
+
+```{r}
+#| label: alternativas
+oneway.test(body_mass_g ~ species, data = pd)     # Welch
+kruskal.test(body_mass_g ~ species, data = pd)    # no paramétrica
+```
+
+## 6. ANOVA de dos vías e interacción
+
+Cuando hay **dos factores**, además de sus efectos principales interesa su **interacción**: si el efecto de un factor depende del nivel del otro.
+
+```{r}
+#| label: anova-dos
+m_dos <- lm(body_mass_g ~ species * sex, data = pd)
+Anova(m_dos, type = "II")     # tipo II: recomendable cuando los grupos tienen tamaños distintos
+```
+
+```{r}
+#| label: fig-interaccion-anova
+#| fig-cap: "Gráfico de interacción: medias por especie y sexo. Los machos pesan más en las tres especies, pero las líneas no son paralelas: la diferencia entre sexos es menor en Chinstrap (412 g) que en Gentoo (805 g), lo que se refleja en una interacción significativa."
+#| fig-height: 3
+pd |>
+  group_by(species, sex) |>
+  summarise(media = mean(body_mass_g), ee = sd(body_mass_g) / sqrt(n()), .groups = "drop") |>
+  ggplot(aes(species, media, colour = sex, group = sex)) +
+  geom_line() +
+  geom_pointrange(aes(ymin = media - ee, ymax = media + ee), size = 0.5) +
+  scale_colour_manual(values = c(female = "#e76f51", male = "#264653"), labels = c("Hembra", "Macho"), name = NULL) +
+  labs(x = NULL, y = "Masa media (g) ± error estándar")
+```
+
+### Medias marginales estimadas y comparaciones
+
+`emmeans` calcula las medias del modelo y hace las comparaciones que interesan con corrección automática:
+
+```{r}
+#| label: emmeans
+em <- emmeans(m_dos, ~ sex | species)
+em
+pairs(em)                          # macho - hembra dentro de cada especie
+```
+
+```{r}
+#| label: emmeans-especie
+emmeans(m_dos, pairwise ~ species, adjust = "tukey")$contrasts
+```
+
+## Ejercicios
+
+1. **Regresión.** Ajusta `lm(bill_length_mm ~ body_mass_g, data = penguins)`. Interpreta la pendiente y el $R^2$. ¿Se cumplen los supuestos?
+2. **Múltiple.** Agrega `species` al modelo anterior. ¿Cambia el coeficiente de `body_mass_g`? ¿Por qué?
+3. **Predicción.** Con el modelo `m1`, calcula el IC de predicción del 95 % para un pingüino de aleta 190 mm. ¿Es más ancho que el IC de la media? ¿Por qué?
+4. **ANOVA.** Compara el largo de la aleta entre islas con un ANOVA de una vía. Verifica supuestos y haz Tukey.
+5. **Interacción.** ¿Hay interacción entre `species` y `island` sobre la masa? Nota: no todas las combinaciones existen; revisa con `table()`.
+
+::: {.callout-note collapse="true"}
+## Soluciones sugeridas
+
+```{r}
+#| label: soluciones
+# 1 y 2
+a <- lm(bill_length_mm ~ body_mass_g, data = penguins)
+b <- lm(bill_length_mm ~ body_mass_g + species, data = penguins)
+rbind(simple = coef(a)["body_mass_g"], con_especie = coef(b)["body_mass_g"])
+# La pendiente baja levemente (de 0,0041 a 0,0037 mm/g, cerca de un 7 %): sin la especie,
+# la masa "absorbe" parte de las diferencias de pico entre especies.
+
+# 3
+predict(m1, tibble(flipper_length_mm = 190), interval = "confidence")
+predict(m1, tibble(flipper_length_mm = 190), interval = "prediction")
+
+# 4
+a4 <- aov(flipper_length_mm ~ island, data = penguins)
+summary(a4); TukeyHSD(a4)
+
+# 5
+table(penguins$species, penguins$island)
+```
+:::
+
+## Para profundizar
+
+- Fox, J. y Weisberg, S. (2019). *An R Companion to Applied Regression* (3.ª ed.). Sage.
+- Gelman, A., Hill, J. y Vehtari, A. (2020). *Regression and Other Stories*. Cambridge University Press.
+- Zuur, A. F., Ieno, E. N. y Elphick, C. S. (2010). A protocol for data exploration to avoid common statistical problems. *Methods in Ecology and Evolution*, 1(1), 3–14.
+- Lenth, R. V. Documentación de [emmeans](https://rvlenth.github.io/emmeans/).
+
+::: {.callout-note appearance="minimal"}
+## Reproducibilidad
+Este cuaderno se ejecutó con R `r paste(R.version$major, R.version$minor, sep = ".")`.
+:::
