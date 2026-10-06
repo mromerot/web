@@ -33,6 +33,18 @@ Amenaza y riesgo sísmico: instituciones nacionales, redes de monitoreo y recurs
 
 ::: mrw-card
 ::: mrw-card-header
+[Sismicidad de Colombia](sismicidad-colombia.ipynb)
+:::
+
+::: mrw-card-body
+![](/grd/images/hips2025.png){.mrw-card-img}
+
+Cuaderno reproducible: catálogo histórico e instrumental, completitud, mapa animado y cortes de profundidad de la sismicidad colombiana.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
 [Tsunami](tsunami.qmd)
 :::
 

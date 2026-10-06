@@ -82,6 +82,8 @@ website:
                 href: grd/geologicas/falladeterreno.qmd
               - text: "Riesgo sísmico"
                 href: grd/geologicas/riesgosismico.qmd
+              - text: "Sismicidad de Colombia"
+                href: grd/geologicas/sismicidad-colombia.ipynb
               - text: "Tsunami"
                 href: grd/geologicas/tsunami.qmd
               - text: "Volcanes"
