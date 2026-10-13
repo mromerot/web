@@ -1,0 +1,2411 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Estrés térmico – Inicio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c0268bb2cd26ea8ad2ddef1ccaf3bc3a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-4910f9121cc0cf878839b371e47b8836.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
+</script>
+<!-- Google Site Verification -->
+<!-- Reemplaza XXXXX con tu código de verificación de Google Search Console -->
+<!-- <meta name="google-site-verification" content="XXXXX" /> -->
+
+<!-- Meta tags adicionales para SEO -->
+<meta name="author" content="Mauricio Romero Torres">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@mauricioromerot">
+
+<!-- Schema.org markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mauricio Romero Torres",
+  "jobTitle": "Gestor de ciencia y tecnología",
+  "url": "https://mromerot.github.io/web/",
+  "sameAs": [
+    "https://x.com/mauricioromerot",
+    "https://www.linkedin.com/in/mauricio-romero-torres-1b33b95/",
+    "https://scholar.google.com/citations?user=n484vskAAAAJ"
+  ]
+}
+</script>
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Estrés térmico – Inicio">
+<meta property="og:description" content="Más allá de la temperatura media, máxima y mínima">
+<meta property="og:site_name" content="Inicio">
+<meta name="twitter:title" content="Estrés térmico – Inicio">
+<meta name="twitter:description" content="Más allá de la temperatura media, máxima y mínima">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../gcc/index.html">Gestión del cambio climático</a></li><li class="breadcrumb-item"><a href="../gcc/estres-termico-v2.html">Estrés térmico</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Inicio</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/gestiondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/conocimientodelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conocimiento del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/conocimiento-indicadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indicadores de riesgo nacionales y mundiales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/reducciondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reducción del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/manejodedesastres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manejo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/cienciaytecnologia/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/cienciaytecnologia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/estado-ciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estado de la ciencia 2024</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/hoja-de-ruta-ct.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hoja de ruta de ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/marco-sendai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Marco de Sendai</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/educacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Cursos, redes y recursos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cursos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cursos en GRD</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/plataformas-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plataformas y redes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/repositorios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repositorios FAIR</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sistemas de alerta temprana</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/hidrol-meteorologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas hidrológicas y meteorológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/elnino.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">El Niño / La Niña</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/huracanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Huracanes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/inundaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/inundaciones-repentinas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones repentinas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/olasdecalor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Olas de calor</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/geologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas geológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/falladeterreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Falla de terreno</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/riesgosismico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgo sísmico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/sismicidad-colombia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sismicidad de Colombia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/tsunami.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tsunami</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/volcanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Volcanes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/ambientales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas ambientales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/ambientales/erosioncostera.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Erosión costera</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/ambientales/incendiosforestales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Incendios forestales</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/biologicos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas biológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/biologicos/covid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">COVID-19</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/tecnologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/tecnologicas/amenazastecnol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/sociales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas sociales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sociales/migracion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Migración</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/extraterrestre/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/extraterrestre/amenazasextraterrestres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/amazonas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amazonas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/ciudades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciudades</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/glosario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Terminología</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../gcc/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gcc/gestion-cambio-climatico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gcc/estres-termico-v2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Estrés térmico</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../gestiondeproyectos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/gestionproyectosciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos de CTeI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/gestiontecnologiainnovacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de tecnología e innovación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/liderazgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Liderazgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/estrategia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estrategia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/metodologias-pm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metodologías de gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/skills-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Competencias clave en la gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/impacto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Impacto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/dofa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DOFA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/mapa-actores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa de actores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/gestion-conocimiento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del conocimiento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/Linea-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Línea base</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/pestel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PESTEL</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/swot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SWOT</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/conpes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CONPES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/riesgos-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgos en proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/sostenibilidad-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sostenibilidad de proyectos de CTeI</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../cyt/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../cyt/escrituraypublicacionacademica/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/escrituraypublicacionacademica/escrituraypublicacionacademica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/escrituraypublicacionacademica/parrafos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Párrafos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/cienciareproduc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia reproducible</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/transdisciplina.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia transdiciplinar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/interfaz-cps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interfaz ciencia-política-sociedad</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../educacion/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../educacion/docenciaeducacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Docencia y educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../educacion/ova/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Objetos virtuales de aprendizaje (OVA)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ecolyconserv/ecologiayconservacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ecología y conservación marina</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datascience/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/cienciadedatos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/myst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Myst</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/markdown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Markdown</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Github</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/google-colab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Google Colab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/jupyter-notebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter Notebook</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/graficas-python-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Graficas Python y R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/ia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inteligencia artificial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/vs-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/hugging-face.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hugging Face</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datascience/mapas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_observable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (Observable / TopoJSON)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_pmtiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (PMTiles)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_tiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (Tiles)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_nri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índice de Riesgo (NRI)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/d3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/d3-experiment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Experimento con D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/claude.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/claude-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude Skills (Slides)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math-stats/math-stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matemáticas y estadística</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math-stats/R/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R: minicurso</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/00-fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 0. Fundamentos de R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/01-programacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 1. Programación: flujo, bucles y funciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/02-datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 2. Manejo de datos con tidyverse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/03-visualizacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 3. Visualización con ggplot2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/04-estadistica-basica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 4. Estadística básica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/05-modelos-lineales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 5. Regresión lineal y ANOVA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/06-modelos-mixtos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 6. Modelos mixtos y medidas repetidas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/07-gam-series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 7. GAM y series de tiempo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/08-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 8. Análisis de redes con igraph</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/09-espacial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 9. Análisis espacial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/10-aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 10. Aplicaciones y proyectos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../vidalaboral/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vidalaboral/cafe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Café</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vidalaboral/vidalaboral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vidalaboral/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul class="collapse">
+  <li><a href="#por-qué-la-temperatura-no-basta" id="toc-por-qué-la-temperatura-no-basta" class="nav-link active" data-scroll-target="#por-qué-la-temperatura-no-basta">Por qué la temperatura no basta</a></li>
+  <li><a href="#familias-de-indicadores" id="toc-familias-de-indicadores" class="nav-link" data-scroll-target="#familias-de-indicadores">Familias de indicadores</a>
+  <ul class="collapse">
+  <li><a href="#basados-en-temperatura-del-aire" id="toc-basados-en-temperatura-del-aire" class="nav-link" data-scroll-target="#basados-en-temperatura-del-aire">Basados en temperatura del aire</a></li>
+  <li><a href="#con-humedad-viento-o-radiación" id="toc-con-humedad-viento-o-radiación" class="nav-link" data-scroll-target="#con-humedad-viento-o-radiación">Con humedad, viento o radiación</a></li>
+  <li><a href="#para-ecosistemas" id="toc-para-ecosistemas" class="nav-link" data-scroll-target="#para-ecosistemas">Para ecosistemas</a></li>
+  </ul></li>
+  <li><a href="#estrés-diurno-y-nocturno" id="toc-estrés-diurno-y-nocturno" class="nav-link" data-scroll-target="#estrés-diurno-y-nocturno">Estrés diurno y nocturno</a></li>
+  <li><a href="#calor-acumulado-y-severidad-de-eventos" id="toc-calor-acumulado-y-severidad-de-eventos" class="nav-link" data-scroll-target="#calor-acumulado-y-severidad-de-eventos">Calor acumulado y severidad de eventos</a>
+  <ul class="collapse">
+  <li><a href="#calor-acumulado" id="toc-calor-acumulado" class="nav-link" data-scroll-target="#calor-acumulado">Calor acumulado</a></li>
+  <li><a href="#excess-heat-factor-ehf" id="toc-excess-heat-factor-ehf" class="nav-link" data-scroll-target="#excess-heat-factor-ehf">Excess Heat Factor (EHF)</a></li>
+  <li><a href="#hwmid-heat-wave-magnitude-index-daily" id="toc-hwmid-heat-wave-magnitude-index-daily" class="nav-link" data-scroll-target="#hwmid-heat-wave-magnitude-index-daily">HWMId (Heat Wave Magnitude Index daily)</a></li>
+  <li><a href="#degree-heating-weeks-dhw" id="toc-degree-heating-weeks-dhw" class="nav-link" data-scroll-target="#degree-heating-weeks-dhw">Degree Heating Weeks (DHW)</a></li>
+  </ul></li>
+  <li><a href="#impactos-por-sector" id="toc-impactos-por-sector" class="nav-link" data-scroll-target="#impactos-por-sector">Impactos por sector</a>
+  <ul class="collapse">
+  <li><a href="#salud-humana-y-trabajo" id="toc-salud-humana-y-trabajo" class="nav-link" data-scroll-target="#salud-humana-y-trabajo">Salud humana y trabajo</a></li>
+  <li><a href="#agricultura-y-ganadería" id="toc-agricultura-y-ganadería" class="nav-link" data-scroll-target="#agricultura-y-ganadería">Agricultura y ganadería</a></li>
+  <li><a href="#océanos-pesquerías-y-arrecifes" id="toc-océanos-pesquerías-y-arrecifes" class="nav-link" data-scroll-target="#océanos-pesquerías-y-arrecifes">Océanos, pesquerías y arrecifes</a></li>
+  <li><a href="#bosques-y-biodiversidad" id="toc-bosques-y-biodiversidad" class="nav-link" data-scroll-target="#bosques-y-biodiversidad">Bosques y biodiversidad</a></li>
+  </ul></li>
+  <li><a href="#del-peligro-al-riesgo" id="toc-del-peligro-al-riesgo" class="nav-link" data-scroll-target="#del-peligro-al-riesgo">Del peligro al riesgo</a></li>
+  <li><a href="#qué-conjunto-de-indicadores-recomendar" id="toc-qué-conjunto-de-indicadores-recomendar" class="nav-link" data-scroll-target="#qué-conjunto-de-indicadores-recomendar">Qué conjunto de indicadores recomendar</a></li>
+  <li><a href="#consideraciones-para-colombia" id="toc-consideraciones-para-colombia" class="nav-link" data-scroll-target="#consideraciones-para-colombia">Consideraciones para Colombia</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
+  </ul>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../gcc/index.html">Gestión del cambio climático</a></li><li class="breadcrumb-item"><a href="../gcc/estres-termico-v2.html">Estrés térmico</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Estrés térmico</h1>
+<p class="subtitle lead">Más allá de la temperatura media, máxima y mínima</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="por-qué-la-temperatura-no-basta" class="level1">
+<h1>Por qué la temperatura no basta</h1>
+<p>La temperatura media, máxima o mínima del aire describe cuánto se calienta la atmósfera, pero no cuánto sufren las personas, los cultivos, el ganado o los arrecifes. Tres razones lo explican:</p>
+<ol type="1">
+<li><strong>El cuerpo no responde solo al aire.</strong> La humedad, el viento y la radiación cambian cuánto calor puede disipar una persona. Durante la ola de calor europea de mayo de 2026, el índice UTCI llegó a superar en hasta 4 °C la temperatura del aire en el pico diurno.</li>
+<li><strong>Importa la duración y la acumulación.</strong> Un día de 38 °C aislado no equivale a cinco días seguidos, y un cuerpo o un coral expuesto a calor acumulado tiene menos margen de recuperación.</li>
+<li><strong>Importa la noche.</strong> Las noches cálidas impiden la recuperación fisiológica (véase la sección sobre estrés diurno y nocturno).</li>
+</ol>
+<p>Por eso la ciencia del clima y la gestión del riesgo usan <strong>indicadores de estrés térmico</strong>: variables que combinan intensidad, duración, umbrales locales y, en algunos casos, humedad, viento, radiación o aclimatación.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Nota sobre las fuentes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El texto completo del artículo de <em>Nature Climate Change</em> no fue accesible (la revista redirige a autenticación). Sus datos provienen del comunicado de ECMWF, de Copernicus y de resúmenes de prensa; verifique las cifras en el artículo original antes de citarlas. Las fórmulas de EHF, HWMId y DHW se presentan según las publicaciones originales y la documentación oficial citada; confirme en cada fuente los parámetros exactos antes de usarlas en un cálculo.</p>
+</div>
+</div>
+</section>
+<section id="familias-de-indicadores" class="level1">
+<h1>Familias de indicadores</h1>
+<p>Los indicadores se agrupan según la pregunta que responden y las variables que incorporan.</p>
+<section id="basados-en-temperatura-del-aire" class="level2">
+<h2 class="anchored" data-anchor-id="basados-en-temperatura-del-aire">Basados en temperatura del aire</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 48%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Indicador</th>
+<th>Qué mide</th>
+<th>Uso típico</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Días/noches sobre un umbral</strong> (p.&nbsp;ej., días &gt; 30 °C, “noches tropicales” con mínima ≥ 20 °C)</td>
+<td>Frecuencia de calor fuerte de día o de noche</td>
+<td>Salud pública, estadísticas climáticas</td>
+</tr>
+<tr class="even">
+<td><strong>Percentiles locales</strong> (p.&nbsp;ej., TX90p, TN90p)</td>
+<td>Días o noches por encima del percentil 90 de la climatología local</td>
+<td>Detección de anomalías relativas al clima del sitio</td>
+</tr>
+<tr class="odd">
+<td><strong>Duración de olas de calor</strong> (WSDI, HWF, HWD)</td>
+<td>Número y largo de eventos con calor persistente</td>
+<td>Planificación sectorial</td>
+</tr>
+<tr class="even">
+<td><strong>Calor acumulado</strong> (grados-día sobre un umbral)</td>
+<td>Suma de los excesos de temperatura sobre un umbral durante un periodo</td>
+<td>Agricultura, energía, ecología</td>
+</tr>
+<tr class="odd">
+<td><strong>EHF</strong></td>
+<td>Calor extremo frente al percentil local y frente a los 30 días previos</td>
+<td>Alerta temprana y salud</td>
+</tr>
+<tr class="even">
+<td><strong>HWMId</strong></td>
+<td>Magnitud de una ola de calor combinando intensidad y duración</td>
+<td>Comparación de eventos y proyecciones</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="con-humedad-viento-o-radiación" class="level2">
+<h2 class="anchored" data-anchor-id="con-humedad-viento-o-radiación">Con humedad, viento o radiación</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 48%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Indicador</th>
+<th>Qué incorpora</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Índice de calor / temperatura aparente</strong></td>
+<td>Temperatura y humedad</td>
+<td>Muy usado en servicios meteorológicos</td>
+</tr>
+<tr class="even">
+<td><strong>Temperatura de bulbo húmedo (Tw)</strong></td>
+<td>Temperatura y humedad (límite de enfriamiento por sudor)</td>
+<td>Referente para límites fisiológicos del calor húmedo</td>
+</tr>
+<tr class="odd">
+<td><strong>WBGT</strong> (temperatura de globo de bulbo húmedo)</td>
+<td>Temperatura, humedad, viento y radiación</td>
+<td>Estándar en salud ocupacional y deporte</td>
+</tr>
+<tr class="even">
+<td><strong>UTCI</strong> (Universal Thermal Climate Index)</td>
+<td>Temperatura, humedad, viento y radiación en un modelo fisiológico</td>
+<td>Usado en Emerton et al.&nbsp;(2026); disponible en ERA5-HEAT</td>
+</tr>
+<tr class="odd">
+<td><strong>THI</strong> (Temperature-Humidity Index)</td>
+<td>Temperatura y humedad</td>
+<td>Estándar en ganadería</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="para-ecosistemas" class="level2">
+<h2 class="anchored" data-anchor-id="para-ecosistemas">Para ecosistemas</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 22%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Indicador</th>
+<th>Ámbito</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Degree Heating Weeks (DHW)</strong></td>
+<td>Corales, océano</td>
+<td>Calor acumulado sobre el umbral de blanqueamiento</td>
+</tr>
+<tr class="even">
+<td><strong>Olas de calor marinas</strong> (Hobday et al.)</td>
+<td>Océano</td>
+<td>Periodos de agua anormalmente cálida para la época del año</td>
+</tr>
+<tr class="odd">
+<td><strong>Oxígeno disuelto y temperatura del agua</strong></td>
+<td>Pesquerías y acuicultura</td>
+<td>El calor reduce el oxígeno disuelto</td>
+</tr>
+<tr class="even">
+<td><strong>Umbrales fisiológicos de cultivos y ganado</strong></td>
+<td>Agricultura</td>
+<td>Véase la sección de impactos sectoriales</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="estrés-diurno-y-nocturno" class="level1">
+<h1>Estrés diurno y nocturno</h1>
+<p>La evidencia global más reciente muestra que el calor nocturno crece al menos tan rápido como el diurno. Emerton et al.&nbsp;(2026), <em>Global heat stress intensification and its expanding footprint on the human population</em>, usan el reanálisis <strong>ERA5-HEAT</strong> (1950–2024) y el índice <strong>UTCI</strong>, y comparan la década 2015–2024 con los años setenta.</p>
+<p><strong>Categorías UTCI utilizadas</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Categoría</th>
+<th>UTCI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Moderado</td>
+<td>≥ 26 °C</td>
+</tr>
+<tr class="even">
+<td>Fuerte</td>
+<td>≥ 32 °C</td>
+</tr>
+<tr class="odd">
+<td>Muy fuerte</td>
+<td>≥ 38 °C</td>
+</tr>
+<tr class="even">
+<td>Extremo</td>
+<td>≥ 46 °C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hallazgos principales</strong></p>
+<ul>
+<li>Las diez noches más cálidas del año se calientan a ≈0,32 °C por década, frente a ≈0,27 °C por década de los diez días más cálidos.</li>
+<li>En las diez jornadas más cálidas, el UTCI máximo es hasta 4 °C mayor que en los setenta en el sur de Europa, el norte de África y la península arábiga; en el suroeste de Europa, hasta 5 °C.</li>
+<li>Las regiones subtropicales (sur de Norteamérica, sur de Europa, África y Suramérica) suman hasta 50 días más al año con estrés térmico fuerte o extremo.</li>
+<li>El estrés térmico extremo es ≈2,5 veces más frecuente en Europa.</li>
+<li>Es el primer análisis global que trata <strong>juntos</strong> los eventos diurnos y nocturnos (eventos compuestos), cada vez más frecuentes, severos y duraderos.</li>
+<li>Los comunicados de prensa reportan que la proporción de población expuesta al menos un día de estrés extremo habría pasado de 16 % a 22 % (≈1000 millones de personas más); otras notas citan cifras distintas para el estrés fuerte, por lo que conviene verificar en el artículo.</li>
+</ul>
+<p><strong>Limitación señalada:</strong> el UTCI modela un individuo de referencia estandarizado y no considera edad, composición corporal ni aclimatación.</p>
+<p><strong>Lectura para este sitio.</strong> El mismo valor de temperatura del aire puede corresponder a estrés muy distinto según la humedad, el viento y la radiación, y la noche es una dimensión del riesgo, no un detalle.</p>
+</section>
+<section id="calor-acumulado-y-severidad-de-eventos" class="level1">
+<h1>Calor acumulado y severidad de eventos</h1>
+<p>Dos preguntas distintas exigen indicadores distintos: cuánto calor se acumuló en un periodo (dosis) y qué tan severo fue un evento frente al clima local (magnitud). La tabla compara los cuatro indicadores más usados.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Criterio</th>
+<th>Calor acumulado (<em>cumulative heat</em>)</th>
+<th>EHF</th>
+<th>HWMId</th>
+<th>DHW</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Qué cuantifica</td>
+<td>Dosis térmica integrada durante un periodo</td>
+<td>Exceso de calor y aclimatación reciente</td>
+<td>Magnitud normalizada de olas de calor</td>
+<td>Estrés térmico acumulado en arrecifes</td>
+</tr>
+<tr class="even">
+<td>Variable típica</td>
+<td>Temperatura y umbral de referencia</td>
+<td>Temperatura media diaria</td>
+<td>Temperatura máxima diaria</td>
+<td>Temperatura superficial del mar</td>
+</tr>
+<tr class="odd">
+<td>Duración considerada</td>
+<td>Definida por el estudio</td>
+<td>Ventanas de 3 y 30 días</td>
+<td>Días consecutivos del evento</td>
+<td>Ventana móvil de 84 días</td>
+</tr>
+<tr class="even">
+<td>Unidades habituales</td>
+<td>°C·día u otra unidad según definición</td>
+<td>°C²</td>
+<td>Índice adimensional</td>
+<td>°C·semana</td>
+</tr>
+<tr class="odd">
+<td>Umbral biológico específico</td>
+<td>Solo si se define y valida</td>
+<td>No es universal</td>
+<td>No es universal</td>
+<td>Calibrado para estrés de blanqueamiento coralino</td>
+</tr>
+<tr class="even">
+<td>Uso principal</td>
+<td>Exposición acumulada</td>
+<td>Severidad de olas de calor con relevancia sanitaria</td>
+<td>Comparación de extremos térmicos</td>
+<td>Blanqueamiento y mortalidad coralina</td>
+</tr>
+</tbody>
+</table>
+<section id="calor-acumulado" class="level2">
+<h2 class="anchored" data-anchor-id="calor-acumulado">Calor acumulado</h2>
+<p><strong>Idea.</strong> Sumar, durante una ventana de tiempo, cuánto excede la temperatura (o un índice térmico) un umbral:</p>
+<p><span class="math display">\[
+CH = \sum_{t=1}^{N} \max\left(0,\; T_t - T_{umbral}\right)
+\]</span></p>
+<p>Es la lógica de los grados-día (de crecimiento, de enfriamiento) y la base conceptual de DHW.</p>
+<ul>
+<li><strong>Utilidad:</strong> captura intensidad y duración en un solo número; permite comparar temporadas; se adapta a distintos sectores cambiando el umbral y la variable (temperatura, UTCI, WBGT).</li>
+<li><strong>Limitaciones:</strong> el umbral decide el resultado y debe justificarse biológicamente; trata igual diez días leves que un día muy intenso; no incorpora aclimatación ni recuperación nocturna a menos que se calcule con variables nocturnas o compuestas.</li>
+</ul>
+<p><strong>Explora los parámetros.</strong> Mueva el umbral y la ola de calor, y observe cómo cambia el exceso y la dosis acumulada. Con una ola corta e intensa y una larga y suave se puede obtener un valor de CH similar, lo que ilustra la limitación anterior. La serie es sintética (ruido con semilla fija más una ola de calor).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="113" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 112;"><span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>viewof ch_umbral <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">20</span><span class="op">,</span> <span class="dv">40</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Umbral (°C)"</span>})</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>viewof ch_base <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">22</span><span class="op">,</span> <span class="dv">34</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">28</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Temperatura típica (°C)"</span>})</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>viewof ch_amp <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">8</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Intensidad de la ola (°C)"</span>})</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>viewof ch_dur <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">1</span><span class="op">,</span> <span class="dv">30</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">8</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Duración de la ola (días)"</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="120" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 119;"><span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>ch_datos <span class="op">=</span> {</span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> noise <span class="op">=</span> d3<span class="op">.</span><span class="at">randomNormal</span><span class="op">.</span><span class="fu">source</span>(d3<span class="op">.</span><span class="fu">randomLcg</span>(<span class="dv">42</span>))(<span class="dv">0</span><span class="op">,</span> <span class="fl">1.2</span>)<span class="op">;</span></span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> inicio <span class="op">=</span> <span class="dv">40</span><span class="op">;</span></span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> acc <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d3<span class="op">.</span><span class="fu">range</span>(<span class="dv">90</span>)<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> {</span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> bump <span class="op">=</span> (d <span class="op">&gt;=</span> inicio <span class="op">&amp;&amp;</span> d <span class="op">&lt;</span> inicio <span class="op">+</span> ch_dur)</span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>      <span class="op">?</span> ch_amp <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(<span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">*</span> (d <span class="op">-</span> inicio <span class="op">+</span> <span class="fl">0.5</span>) <span class="op">/</span> ch_dur) <span class="op">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> T <span class="op">=</span> ch_base <span class="op">+</span> <span class="fu">noise</span>() <span class="op">+</span> bump<span class="op">;</span></span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> exceso <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">0</span><span class="op">,</span> T <span class="op">-</span> ch_umbral)<span class="op">;</span></span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>    acc <span class="op">+=</span> exceso<span class="op">;</span></span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="dt">dia</span><span class="op">:</span> d <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> T<span class="op">,</span> exceso<span class="op">,</span> <span class="dt">CH</span><span class="op">:</span> acc}<span class="op">;</span></span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="137" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 136;"><span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a>  width<span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">230</span><span class="op">,</span></span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Día"</span>}<span class="op">,</span></span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Temperatura (°C)"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">areaY</span>(ch_datos<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"dia"</span><span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> () <span class="kw">=&gt;</span> ch_umbral<span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(ch_umbral<span class="op">,</span> d<span class="op">.</span><span class="at">T</span>)<span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#d62728"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span>})<span class="op">,</span></span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">line</span>(ch_datos<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"dia"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"T"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#444"</span>})<span class="op">,</span></span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([ch_umbral]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#888"</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"4,3"</span>})</span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="151" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 150;"><span id="cb4-151"><a href="#cb4-151" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb4-152"><a href="#cb4-152" aria-hidden="true" tabindex="-1"></a>  width<span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">180</span><span class="op">,</span></span>
+<span id="cb4-153"><a href="#cb4-153" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Día"</span>}<span class="op">,</span></span>
+<span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"CH acumulado (°C·día)"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">line</span>(ch_datos<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"dia"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"CH"</span><span class="op">,</span> <span class="dt">curve</span><span class="op">:</span> <span class="st">"step-after"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#d62728"</span>})<span class="op">,</span> Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])]</span>
+<span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="161" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 160;"><span id="cb5-161"><a href="#cb5-161" aria-hidden="true" tabindex="-1"></a><span class="fu">md</span><span class="vs">`**CH = </span><span class="sc">${</span>d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".1f"</span>)(ch_datos<span class="op">.</span><span class="fu">at</span>(<span class="op">-</span><span class="dv">1</span>)<span class="op">.</span><span class="at">CH</span>)<span class="sc">}</span><span class="vs"> °C·día**, acumulados en </span><span class="sc">${</span>ch_datos<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">exceso</span> <span class="op">&gt;</span> <span class="dv">0</span>)<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> días sobre el umbral.`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-5" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+<section id="excess-heat-factor-ehf" class="level2">
+<h2 class="anchored" data-anchor-id="excess-heat-factor-ehf">Excess Heat Factor (EHF)</h2>
+<p>Propuesto por Nairn y Fawcett (2015) y usado en el servicio de olas de calor de Australia. Es el producto de dos índices:</p>
+<p><span class="math display">\[
+EHF = \max(0, EHI_{sig}) \times \max(1, EHI_{accl})
+\]</span></p>
+<ul>
+<li><span class="math inline">\(EHI_{sig}\)</span>: media de tres días de temperatura menos un percentil alto de la climatología local (el percentil depende de la versión del índice; la literatura cita T95 y otros).</li>
+<li><span class="math inline">\(EHI_{accl}\)</span>: la misma media de tres días menos la media de los 30 días previos (aclimatación).</li>
+<li>Hay ola de calor cuando EHF &gt; 0. La <strong>severidad</strong> se expresa como EHF dividido por el percentil 85 de los valores positivos de EHF en el periodo de referencia, lo que permite clasificar eventos como de baja intensidad, severos o extremos.</li>
+</ul>
+<p><strong>Utilidad:</strong> combina umbral local con un término de adaptación a los días recientes; se ha usado como métrica asociada a efectos en salud y es útil para alerta temprana. <strong>Limitaciones:</strong> usa solo temperatura (no humedad ni viento) y se diseñó en clima extratropical; las unidades (°C²) dificultan la comunicación; en el trópico, con baja variabilidad térmica, los percentiles se vuelven muy estrechos y probablemente requiere calibración local (consideración del autor, no verificada en las fuentes).</p>
+<p><strong>Explora los parámetros.</strong> Cambie el percentil del umbral, la intensidad y la duración de la ola, y active o desactive el término de aclimatación para ver cómo el factor <span class="math inline">\(\max(1, EHI_{accl})\)</span> amplifica los eventos que llegan tras días frescos. <em>Simplificación didáctica:</em> el percentil se calcula sobre la propia serie sintética de un año, no sobre una climatología de referencia de varias décadas.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="183" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 182;"><span id="cb6-183"><a href="#cb6-183" aria-hidden="true" tabindex="-1"></a>viewof ehf_pct <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">80</span><span class="op">,</span> <span class="dv">99</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">95</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Percentil del umbral (%)"</span>})</span>
+<span id="cb6-184"><a href="#cb6-184" aria-hidden="true" tabindex="-1"></a>viewof ehf_amp <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Intensidad de la ola (°C)"</span>})</span>
+<span id="cb6-185"><a href="#cb6-185" aria-hidden="true" tabindex="-1"></a>viewof ehf_dur <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">2</span><span class="op">,</span> <span class="dv">20</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">8</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Duración de la ola (días)"</span>})</span>
+<span id="cb6-186"><a href="#cb6-186" aria-hidden="true" tabindex="-1"></a>viewof ehf_usar <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">toggle</span>({<span class="dt">label</span><span class="op">:</span> <span class="st">"Incluir aclimatación (30 días)"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="kw">true</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-6-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-6-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-6-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-6-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb7" data-startfrom="191" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 190;"><span id="cb7-191"><a href="#cb7-191" aria-hidden="true" tabindex="-1"></a>ehf_T <span class="op">=</span> {</span>
+<span id="cb7-192"><a href="#cb7-192" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> noise <span class="op">=</span> d3<span class="op">.</span><span class="at">randomNormal</span><span class="op">.</span><span class="fu">source</span>(d3<span class="op">.</span><span class="fu">randomLcg</span>(<span class="dv">7</span>))(<span class="dv">0</span><span class="op">,</span> <span class="fl">1.5</span>)<span class="op">;</span></span>
+<span id="cb7-193"><a href="#cb7-193" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> centro <span class="op">=</span> <span class="dv">190</span><span class="op">;</span></span>
+<span id="cb7-194"><a href="#cb7-194" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d3<span class="op">.</span><span class="fu">range</span>(<span class="dv">365</span>)<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> {</span>
+<span id="cb7-195"><a href="#cb7-195" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> bump <span class="op">=</span> ehf_amp <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span> <span class="op">-</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">abs</span>(d <span class="op">-</span> centro) <span class="op">/</span> (ehf_dur <span class="op">/</span> <span class="dv">2</span>))<span class="op">;</span></span>
+<span id="cb7-196"><a href="#cb7-196" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">20</span> <span class="op">+</span> <span class="dv">7</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(<span class="dv">2</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">*</span> (d <span class="op">-</span> <span class="dv">110</span>) <span class="op">/</span> <span class="dv">365</span>) <span class="op">+</span> <span class="fu">noise</span>() <span class="op">+</span> bump<span class="op">;</span></span>
+<span id="cb7-197"><a href="#cb7-197" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb7-198"><a href="#cb7-198" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-199"><a href="#cb7-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-200"><a href="#cb7-200" aria-hidden="true" tabindex="-1"></a>ehf_calc <span class="op">=</span> {</span>
+<span id="cb7-201"><a href="#cb7-201" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> ordenada <span class="op">=</span> [<span class="op">...</span>ehf_T]<span class="op">.</span><span class="fu">sort</span>(d3<span class="op">.</span><span class="at">ascending</span>)<span class="op">;</span></span>
+<span id="cb7-202"><a href="#cb7-202" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> tp <span class="op">=</span> d3<span class="op">.</span><span class="fu">quantileSorted</span>(ordenada<span class="op">,</span> ehf_pct <span class="op">/</span> <span class="dv">100</span>)<span class="op">;</span></span>
+<span id="cb7-203"><a href="#cb7-203" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> filas <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb7-204"><a href="#cb7-204" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">30</span><span class="op">;</span> i <span class="op">&lt;</span> ehf_T<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">2</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb7-205"><a href="#cb7-205" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> m3 <span class="op">=</span> d3<span class="op">.</span><span class="fu">mean</span>(ehf_T<span class="op">.</span><span class="fu">slice</span>(i<span class="op">,</span> i <span class="op">+</span> <span class="dv">3</span>))<span class="op">;</span></span>
+<span id="cb7-206"><a href="#cb7-206" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> m30 <span class="op">=</span> d3<span class="op">.</span><span class="fu">mean</span>(ehf_T<span class="op">.</span><span class="fu">slice</span>(i <span class="op">-</span> <span class="dv">30</span><span class="op">,</span> i))<span class="op">;</span></span>
+<span id="cb7-207"><a href="#cb7-207" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> sig <span class="op">=</span> m3 <span class="op">-</span> tp<span class="op">,</span> accl <span class="op">=</span> m3 <span class="op">-</span> m30<span class="op">;</span></span>
+<span id="cb7-208"><a href="#cb7-208" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> ehf <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">0</span><span class="op">,</span> sig) <span class="op">*</span> (ehf_usar <span class="op">?</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">1</span><span class="op">,</span> accl) <span class="op">:</span> <span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb7-209"><a href="#cb7-209" aria-hidden="true" tabindex="-1"></a>    filas<span class="op">.</span><span class="fu">push</span>({<span class="dt">dia</span><span class="op">:</span> i <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">T</span><span class="op">:</span> ehf_T[i]<span class="op">,</span> sig<span class="op">,</span> accl<span class="op">,</span> ehf})<span class="op">;</span></span>
+<span id="cb7-210"><a href="#cb7-210" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-211"><a href="#cb7-211" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pos <span class="op">=</span> filas<span class="op">.</span><span class="fu">filter</span>(r <span class="kw">=&gt;</span> r<span class="op">.</span><span class="at">ehf</span> <span class="op">&gt;</span> <span class="dv">0</span>)<span class="op">.</span><span class="fu">map</span>(r <span class="kw">=&gt;</span> r<span class="op">.</span><span class="at">ehf</span>)<span class="op">.</span><span class="fu">sort</span>(d3<span class="op">.</span><span class="at">ascending</span>)<span class="op">;</span></span>
+<span id="cb7-212"><a href="#cb7-212" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> p85 <span class="op">=</span> pos<span class="op">.</span><span class="at">length</span> <span class="op">?</span> d3<span class="op">.</span><span class="fu">quantileSorted</span>(pos<span class="op">,</span> <span class="fl">0.85</span>) <span class="op">:</span> <span class="kw">NaN</span><span class="op">;</span></span>
+<span id="cb7-213"><a href="#cb7-213" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> {tp<span class="op">,</span> filas<span class="op">,</span> p85}<span class="op">;</span></span>
+<span id="cb7-214"><a href="#cb7-214" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-7-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-7-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb8" data-startfrom="218" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 217;"><span id="cb8-218"><a href="#cb8-218" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb8-219"><a href="#cb8-219" aria-hidden="true" tabindex="-1"></a>  width<span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">230</span><span class="op">,</span></span>
+<span id="cb8-220"><a href="#cb8-220" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Día del año"</span>}<span class="op">,</span></span>
+<span id="cb8-221"><a href="#cb8-221" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Temperatura media diaria (°C)"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb8-222"><a href="#cb8-222" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb8-223"><a href="#cb8-223" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">line</span>(ehf_calc<span class="op">.</span><span class="at">filas</span><span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"dia"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"T"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#444"</span>})<span class="op">,</span></span>
+<span id="cb8-224"><a href="#cb8-224" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([ehf_calc<span class="op">.</span><span class="at">tp</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#888"</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"4,3"</span>})<span class="op">,</span></span>
+<span id="cb8-225"><a href="#cb8-225" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(ehf_calc<span class="op">.</span><span class="at">filas</span><span class="op">.</span><span class="fu">filter</span>(r <span class="kw">=&gt;</span> r<span class="op">.</span><span class="at">ehf</span> <span class="op">&gt;</span> <span class="dv">0</span>)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"dia"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"T"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#d62728"</span>})</span>
+<span id="cb8-226"><a href="#cb8-226" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb8-227"><a href="#cb8-227" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-8" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb9" data-startfrom="232" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 231;"><span id="cb9-232"><a href="#cb9-232" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb9-233"><a href="#cb9-233" aria-hidden="true" tabindex="-1"></a>  width<span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">180</span><span class="op">,</span></span>
+<span id="cb9-234"><a href="#cb9-234" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Día del año"</span>}<span class="op">,</span></span>
+<span id="cb9-235"><a href="#cb9-235" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"EHF (°C²)"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb9-236"><a href="#cb9-236" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb9-237"><a href="#cb9-237" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>(ehf_calc<span class="op">.</span><span class="at">filas</span><span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"dia"</span><span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> <span class="st">"ehf"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#d62728"</span>})<span class="op">,</span></span>
+<span id="cb9-238"><a href="#cb9-238" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])</span>
+<span id="cb9-239"><a href="#cb9-239" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb9-240"><a href="#cb9-240" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-9" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb10" data-startfrom="245" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 244;"><span id="cb10-245"><a href="#cb10-245" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb10-246"><a href="#cb10-246" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pos <span class="op">=</span> ehf_calc<span class="op">.</span><span class="at">filas</span><span class="op">.</span><span class="fu">filter</span>(r <span class="kw">=&gt;</span> r<span class="op">.</span><span class="at">ehf</span> <span class="op">&gt;</span> <span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb10-247"><a href="#cb10-247" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> max <span class="op">=</span> d3<span class="op">.</span><span class="fu">max</span>(pos<span class="op">,</span> r <span class="kw">=&gt;</span> r<span class="op">.</span><span class="at">ehf</span>)<span class="op">;</span></span>
+<span id="cb10-248"><a href="#cb10-248" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> detalle <span class="op">=</span> pos<span class="op">.</span><span class="at">length</span></span>
+<span id="cb10-249"><a href="#cb10-249" aria-hidden="true" tabindex="-1"></a>    <span class="op">?</span> <span class="vs">`EHF máximo: **</span><span class="sc">${</span>d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".1f"</span>)(max)<span class="sc">}</span><span class="vs"> °C²**; severidad (EHF máx / P85 de los positivos): **</span><span class="sc">${</span>d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".2f"</span>)(max <span class="op">/</span> ehf_calc<span class="op">.</span><span class="at">p85</span>)<span class="sc">}</span><span class="vs">**.`</span></span>
+<span id="cb10-250"><a href="#cb10-250" aria-hidden="true" tabindex="-1"></a>    <span class="op">:</span> <span class="vs">`No hay olas de calor con estos parámetros.`</span><span class="op">;</span></span>
+<span id="cb10-251"><a href="#cb10-251" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">md</span><span class="vs">`Umbral (percentil </span><span class="sc">${</span>ehf_pct<span class="sc">}</span><span class="vs">): **</span><span class="sc">${</span>d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".1f"</span>)(ehf_calc<span class="op">.</span><span class="at">tp</span>)<span class="sc">}</span><span class="vs"> °C**. Días con EHF &gt; 0: **</span><span class="sc">${</span>pos<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs">**. </span><span class="sc">${</span>detalle<span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb10-252"><a href="#cb10-252" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-10" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+<section id="hwmid-heat-wave-magnitude-index-daily" class="level2">
+<h2 class="anchored" data-anchor-id="hwmid-heat-wave-magnitude-index-daily">HWMId (Heat Wave Magnitude Index daily)</h2>
+<p>Propuesto por Russo et al.&nbsp;(2015). Una ola de calor es una racha de al menos tres días con temperatura máxima por encima del percentil 90 de una ventana de 31 días centrada en cada día, según una climatología (p.&nbsp;ej., 1981–2010). A cada día se le asigna una magnitud diaria según qué tan alta es la temperatura respecto del rango intercuartil de los máximos anuales de un periodo de referencia, y el índice del evento es la suma de las magnitudes diarias. Conceptualmente:</p>
+<p><span class="math display">\[
+HWMId = \max_{\text{eventos}} \sum_{d \in evento} M_d
+\]</span></p>
+<p><strong>Utilidad:</strong> integra intensidad y duración, <strong>no se satura</strong> al superar el máximo histórico, es comparable entre sitios y sirvió para proyectar la ocurrencia de olas extremas. <strong>Limitaciones:</strong> exige series diarias largas y homogéneas; se basa en temperatura máxima y no en humedad ni noche; y su sensibilidad depende de la normalización con el rango intercuartil, lo que debe revisarse en regiones de baja variabilidad.</p>
+<p><strong>Explora los parámetros.</strong> La serie sintética tiene 31 años de temperatura máxima diaria; los 30 primeros son la climatología de referencia y el año 31 contiene una ola de calor. Cambie el percentil, la duración mínima, la tendencia y la ola, y observe cómo cambian los eventos detectados y su magnitud. Un evento puede superar el umbral de percentil y tener magnitud 0 si su temperatura no supera el cuartil inferior de los máximos anuales. <em>Simplificación didáctica:</em> el ruido es un proceso autorregresivo sintético y se ignoran los años bisiestos.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb11" data-startfrom="270" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 269;"><span id="cb11-270"><a href="#cb11-270" aria-hidden="true" tabindex="-1"></a>viewof hw_pct <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">80</span><span class="op">,</span> <span class="dv">99</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">90</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Percentil del umbral (%)"</span>})</span>
+<span id="cb11-271"><a href="#cb11-271" aria-hidden="true" tabindex="-1"></a>viewof hw_min <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">2</span><span class="op">,</span> <span class="dv">7</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Duración mínima (días)"</span>})</span>
+<span id="cb11-272"><a href="#cb11-272" aria-hidden="true" tabindex="-1"></a>viewof hw_amp <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">6</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Intensidad de la ola (°C)"</span>})</span>
+<span id="cb11-273"><a href="#cb11-273" aria-hidden="true" tabindex="-1"></a>viewof hw_dur <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">3</span><span class="op">,</span> <span class="dv">30</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Duración de la ola (días)"</span>})</span>
+<span id="cb11-274"><a href="#cb11-274" aria-hidden="true" tabindex="-1"></a>viewof hw_trend <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="fl">0.1</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="fl">0.03</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.005</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Tendencia (°C/año)"</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-11-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-11-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-11-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-11-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-11-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb12" data-startfrom="279" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 278;"><span id="cb12-279"><a href="#cb12-279" aria-hidden="true" tabindex="-1"></a>hw_base <span class="op">=</span> {</span>
+<span id="cb12-280"><a href="#cb12-280" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> z <span class="op">=</span> d3<span class="op">.</span><span class="at">randomNormal</span><span class="op">.</span><span class="fu">source</span>(d3<span class="op">.</span><span class="fu">randomLcg</span>(<span class="dv">11</span>))(<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb12-281"><a href="#cb12-281" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> rho <span class="op">=</span> <span class="fl">0.6</span><span class="op">,</span> sd <span class="op">=</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb12-282"><a href="#cb12-282" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d3<span class="op">.</span><span class="fu">range</span>(<span class="dv">31</span>)<span class="op">.</span><span class="fu">map</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb12-283"><a href="#cb12-283" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> e <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb12-284"><a href="#cb12-284" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> d3<span class="op">.</span><span class="fu">range</span>(<span class="dv">365</span>)<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> {</span>
+<span id="cb12-285"><a href="#cb12-285" aria-hidden="true" tabindex="-1"></a>      e <span class="op">=</span> rho <span class="op">*</span> e <span class="op">+</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span>(<span class="dv">1</span> <span class="op">-</span> rho <span class="op">*</span> rho) <span class="op">*</span> sd <span class="op">*</span> <span class="fu">z</span>()<span class="op">;</span></span>
+<span id="cb12-286"><a href="#cb12-286" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="dv">26</span> <span class="op">+</span> <span class="dv">5</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(<span class="dv">2</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">*</span> (d <span class="op">-</span> <span class="dv">110</span>) <span class="op">/</span> <span class="dv">365</span>) <span class="op">+</span> e<span class="op">;</span></span>
+<span id="cb12-287"><a href="#cb12-287" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb12-288"><a href="#cb12-288" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb12-289"><a href="#cb12-289" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-290"><a href="#cb12-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-291"><a href="#cb12-291" aria-hidden="true" tabindex="-1"></a>hw_calc <span class="op">=</span> {</span>
+<span id="cb12-292"><a href="#cb12-292" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> N <span class="op">=</span> <span class="dv">365</span><span class="op">,</span> Y <span class="op">=</span> <span class="dv">30</span><span class="op">;</span></span>
+<span id="cb12-293"><a href="#cb12-293" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> T <span class="op">=</span> hw_base<span class="op">.</span><span class="fu">map</span>((anio<span class="op">,</span> y) <span class="kw">=&gt;</span> anio<span class="op">.</span><span class="fu">map</span>(v <span class="kw">=&gt;</span> v <span class="op">+</span> hw_trend <span class="op">*</span> y))<span class="op">;</span></span>
+<span id="cb12-294"><a href="#cb12-294" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> obj <span class="op">=</span> T[Y]<span class="op">.</span><span class="fu">map</span>((v<span class="op">,</span> d) <span class="kw">=&gt;</span> v <span class="op">+</span> hw_amp <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span> <span class="op">-</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">abs</span>(d <span class="op">-</span> <span class="dv">190</span>) <span class="op">/</span> (hw_dur <span class="op">/</span> <span class="dv">2</span>)))<span class="op">;</span></span>
+<span id="cb12-295"><a href="#cb12-295" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> umbral <span class="op">=</span> d3<span class="op">.</span><span class="fu">range</span>(N)<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> {</span>
+<span id="cb12-296"><a href="#cb12-296" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> vals <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb12-297"><a href="#cb12-297" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> y <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> y <span class="op">&lt;</span> Y<span class="op">;</span> y<span class="op">++</span>) <span class="cf">for</span> (<span class="kw">let</span> k <span class="op">=</span> <span class="op">-</span><span class="dv">15</span><span class="op">;</span> k <span class="op">&lt;=</span> <span class="dv">15</span><span class="op">;</span> k<span class="op">++</span>) vals<span class="op">.</span><span class="fu">push</span>(T[y][(d <span class="op">+</span> k <span class="op">+</span> N) <span class="op">%</span> N])<span class="op">;</span></span>
+<span id="cb12-298"><a href="#cb12-298" aria-hidden="true" tabindex="-1"></a>    vals<span class="op">.</span><span class="fu">sort</span>(d3<span class="op">.</span><span class="at">ascending</span>)<span class="op">;</span></span>
+<span id="cb12-299"><a href="#cb12-299" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> d3<span class="op">.</span><span class="fu">quantileSorted</span>(vals<span class="op">,</span> hw_pct <span class="op">/</span> <span class="dv">100</span>)<span class="op">;</span></span>
+<span id="cb12-300"><a href="#cb12-300" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb12-301"><a href="#cb12-301" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> maximos <span class="op">=</span> T<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> Y)<span class="op">.</span><span class="fu">map</span>(a <span class="kw">=&gt;</span> d3<span class="op">.</span><span class="fu">max</span>(a))<span class="op">.</span><span class="fu">sort</span>(d3<span class="op">.</span><span class="at">ascending</span>)<span class="op">;</span></span>
+<span id="cb12-302"><a href="#cb12-302" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> q25 <span class="op">=</span> d3<span class="op">.</span><span class="fu">quantileSorted</span>(maximos<span class="op">,</span> <span class="fl">0.25</span>)<span class="op">,</span> q75 <span class="op">=</span> d3<span class="op">.</span><span class="fu">quantileSorted</span>(maximos<span class="op">,</span> <span class="fl">0.75</span>)<span class="op">;</span></span>
+<span id="cb12-303"><a href="#cb12-303" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> eventos <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb12-304"><a href="#cb12-304" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> d <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb12-305"><a href="#cb12-305" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> (d <span class="op">&lt;</span> N) {</span>
+<span id="cb12-306"><a href="#cb12-306" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (obj[d] <span class="op">&gt;</span> umbral[d]) {</span>
+<span id="cb12-307"><a href="#cb12-307" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> e <span class="op">=</span> d<span class="op">;</span></span>
+<span id="cb12-308"><a href="#cb12-308" aria-hidden="true" tabindex="-1"></a>      <span class="cf">while</span> (e <span class="op">&lt;</span> N <span class="op">&amp;&amp;</span> obj[e] <span class="op">&gt;</span> umbral[e]) e<span class="op">++;</span></span>
+<span id="cb12-309"><a href="#cb12-309" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (e <span class="op">-</span> d <span class="op">&gt;=</span> hw_min) {</span>
+<span id="cb12-310"><a href="#cb12-310" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> mag <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb12-311"><a href="#cb12-311" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> (<span class="kw">let</span> k <span class="op">=</span> d<span class="op">;</span> k <span class="op">&lt;</span> e<span class="op">;</span> k<span class="op">++</span>) mag <span class="op">+=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">0</span><span class="op">,</span> (obj[k] <span class="op">-</span> q25) <span class="op">/</span> (q75 <span class="op">-</span> q25))<span class="op">;</span></span>
+<span id="cb12-312"><a href="#cb12-312" aria-hidden="true" tabindex="-1"></a>        eventos<span class="op">.</span><span class="fu">push</span>({<span class="dt">ini</span><span class="op">:</span> d <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">fin</span><span class="op">:</span> e<span class="op">,</span> <span class="dt">dias</span><span class="op">:</span> e <span class="op">-</span> d<span class="op">,</span> mag})<span class="op">;</span></span>
+<span id="cb12-313"><a href="#cb12-313" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb12-314"><a href="#cb12-314" aria-hidden="true" tabindex="-1"></a>      d <span class="op">=</span> e<span class="op">;</span></span>
+<span id="cb12-315"><a href="#cb12-315" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> d<span class="op">++;</span></span>
+<span id="cb12-316"><a href="#cb12-316" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb12-317"><a href="#cb12-317" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> {obj<span class="op">,</span> umbral<span class="op">,</span> q25<span class="op">,</span> q75<span class="op">,</span> eventos<span class="op">,</span> <span class="dt">hwmid</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">max</span>(eventos<span class="op">,</span> e <span class="kw">=&gt;</span> e<span class="op">.</span><span class="at">mag</span>) <span class="op">??</span> <span class="dv">0</span>}<span class="op">;</span></span>
+<span id="cb12-318"><a href="#cb12-318" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-12-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-12-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb13" data-startfrom="322" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 321;"><span id="cb13-322"><a href="#cb13-322" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb13-323"><a href="#cb13-323" aria-hidden="true" tabindex="-1"></a>  width<span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">250</span><span class="op">,</span></span>
+<span id="cb13-324"><a href="#cb13-324" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Día del año 31"</span>}<span class="op">,</span></span>
+<span id="cb13-325"><a href="#cb13-325" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Temperatura máxima (°C)"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb13-326"><a href="#cb13-326" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb13-327"><a href="#cb13-327" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">rect</span>(hw_calc<span class="op">.</span><span class="at">eventos</span><span class="op">,</span> {<span class="dt">x1</span><span class="op">:</span> <span class="st">"ini"</span><span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> <span class="st">"fin"</span><span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">min</span>(hw_calc<span class="op">.</span><span class="at">obj</span>) <span class="op">-</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">max</span>(hw_calc<span class="op">.</span><span class="at">obj</span>) <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#d62728"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.18</span>})<span class="op">,</span></span>
+<span id="cb13-328"><a href="#cb13-328" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">line</span>(hw_calc<span class="op">.</span><span class="at">obj</span><span class="op">.</span><span class="fu">map</span>((T<span class="op">,</span> i) <span class="kw">=&gt;</span> ({<span class="dt">dia</span><span class="op">:</span> i <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> T}))<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"dia"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"T"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#444"</span>})<span class="op">,</span></span>
+<span id="cb13-329"><a href="#cb13-329" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">line</span>(hw_calc<span class="op">.</span><span class="at">umbral</span><span class="op">.</span><span class="fu">map</span>((T<span class="op">,</span> i) <span class="kw">=&gt;</span> ({<span class="dt">dia</span><span class="op">:</span> i <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> T}))<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"dia"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"T"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#888"</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"4,3"</span>})</span>
+<span id="cb13-330"><a href="#cb13-330" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb13-331"><a href="#cb13-331" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-13" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb14" data-startfrom="336" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 335;"><span id="cb14-336"><a href="#cb14-336" aria-hidden="true" tabindex="-1"></a><span class="fu">md</span><span class="vs">`**HWMId = </span><span class="sc">${</span>d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".2f"</span>)(hw_calc<span class="op">.</span><span class="at">hwmid</span>)<span class="sc">}</span><span class="vs">** (magnitud del evento mayor); eventos detectados: **</span><span class="sc">${</span>hw_calc<span class="op">.</span><span class="at">eventos</span><span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs">**. Rango intercuartil de los máximos anuales: </span><span class="sc">${</span>d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".1f"</span>)(hw_calc<span class="op">.</span><span class="at">q25</span>)<span class="sc">}</span><span class="vs">–</span><span class="sc">${</span>d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".1f"</span>)(hw_calc<span class="op">.</span><span class="at">q75</span>)<span class="sc">}</span><span class="vs"> °C.`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-14" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb15" data-startfrom="341" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 340;"><span id="cb15-341"><a href="#cb15-341" aria-hidden="true" tabindex="-1"></a>hw_calc<span class="op">.</span><span class="at">eventos</span><span class="op">.</span><span class="at">length</span></span>
+<span id="cb15-342"><a href="#cb15-342" aria-hidden="true" tabindex="-1"></a>  <span class="op">?</span> Inputs<span class="op">.</span><span class="fu">table</span>(hw_calc<span class="op">.</span><span class="at">eventos</span><span class="op">.</span><span class="fu">map</span>(e <span class="kw">=&gt;</span> ({<span class="st">"Inicio (día)"</span><span class="op">:</span> e<span class="op">.</span><span class="at">ini</span><span class="op">,</span> <span class="st">"Fin (día)"</span><span class="op">:</span> e<span class="op">.</span><span class="at">fin</span><span class="op">,</span> <span class="st">"Duración (días)"</span><span class="op">:</span> e<span class="op">.</span><span class="at">dias</span><span class="op">,</span> <span class="st">"Magnitud"</span><span class="op">:</span> <span class="op">+</span>e<span class="op">.</span><span class="at">mag</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)})))</span>
+<span id="cb15-343"><a href="#cb15-343" aria-hidden="true" tabindex="-1"></a>  <span class="op">:</span> <span class="fu">md</span><span class="vs">`_No se detectan eventos con estos parámetros._`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-15" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+<section id="degree-heating-weeks-dhw" class="level2">
+<h2 class="anchored" data-anchor-id="degree-heating-weeks-dhw">Degree Heating Weeks (DHW)</h2>
+<p>NOAA Coral Reef Watch define DHW como la <strong>acumulación de estrés térmico sobre los corales</strong> durante las 12 semanas previas:</p>
+<ul>
+<li><strong>MMM:</strong> media mensual máxima de la temperatura superficial del mar (TSM) en el sitio.</li>
+<li><strong>HotSpot:</strong> TSM menos MMM. Solo cuenta cuando HotSpot ≥ 1 °C.</li>
+<li><strong>DHW:</strong> suma de los HotSpot ≥ 1 °C en una ventana móvil de 12 semanas. Se expresa en °C-semanas.</li>
+</ul>
+<p><strong>Umbrales operativos de NOAA:</strong> 4 °C-semanas, blanqueamiento esperado en el arrecife; 8 °C-semanas o más, blanqueamiento con mortalidad probable de corales sensibles. En diciembre de 2023 se añadieron los niveles de alerta 3 a 5 tras el calor extremo de 2023.</p>
+<p><strong>Utilidad:</strong> es el mejor ejemplo de un indicador acumulado con umbral biológicamente anclado (MMM + 1 °C) y validado frente a eventos reales de blanqueamiento. <strong>Limitaciones:</strong> el umbral depende de la climatología histórica de cada píxel, de modo que no captura la aclimatación ni la adaptación de los corales; una ventana de 12 semanas puede subestimar eventos largos y modestos o eventos cortos e intensos; no describe efectos en otros organismos marinos, para los cuales se usan las olas de calor marinas y el oxígeno disuelto.</p>
+<p><strong>Explora los parámetros.</strong> Cambie el MMM, la anomalía y su duración, el HotSpot mínimo y la ventana de acumulación. Con una anomalía larga y modesta el DHW puede superar el umbral de 4 °C-semanas aunque ningún día sea extremo, y una ventana corta puede perder eventos prolongados. <em>Simplificación didáctica:</em> la climatología es una curva sinusoidal cuyo máximo diario es el MMM, y se acumulan valores diarios divididos entre 7.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb16" data-startfrom="363" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 362;"><span id="cb16-363"><a href="#cb16-363" aria-hidden="true" tabindex="-1"></a>viewof dhw_mmm <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">26</span><span class="op">,</span> <span class="dv">31</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">29</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"MMM (°C)"</span>})</span>
+<span id="cb16-364"><a href="#cb16-364" aria-hidden="true" tabindex="-1"></a>viewof dhw_anom <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">4</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="fl">1.8</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Anomalía máxima (°C)"</span>})</span>
+<span id="cb16-365"><a href="#cb16-365" aria-hidden="true" tabindex="-1"></a>viewof dhw_dur <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">7</span><span class="op">,</span> <span class="dv">120</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Duración de la anomalía (días)"</span>})</span>
+<span id="cb16-366"><a href="#cb16-366" aria-hidden="true" tabindex="-1"></a>viewof dhw_umbral <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"HotSpot mínimo (°C)"</span>})</span>
+<span id="cb16-367"><a href="#cb16-367" aria-hidden="true" tabindex="-1"></a>viewof dhw_sem <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">4</span><span class="op">,</span> <span class="dv">16</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Ventana (semanas)"</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-16-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-16-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-16-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-16-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-16-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb17" data-startfrom="371" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 370;"><span id="cb17-371"><a href="#cb17-371" aria-hidden="true" tabindex="-1"></a>dhw_calc <span class="op">=</span> {</span>
+<span id="cb17-372"><a href="#cb17-372" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> N <span class="op">=</span> <span class="dv">365</span><span class="op">,</span> pico <span class="op">=</span> <span class="dv">90</span><span class="op">;</span></span>
+<span id="cb17-373"><a href="#cb17-373" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> ruido <span class="op">=</span> d3<span class="op">.</span><span class="at">randomNormal</span><span class="op">.</span><span class="fu">source</span>(d3<span class="op">.</span><span class="fu">randomLcg</span>(<span class="dv">5</span>))(<span class="dv">0</span><span class="op">,</span> <span class="fl">0.15</span>)<span class="op">;</span></span>
+<span id="cb17-374"><a href="#cb17-374" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> serie <span class="op">=</span> d3<span class="op">.</span><span class="fu">range</span>(N)<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> {</span>
+<span id="cb17-375"><a href="#cb17-375" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> clima <span class="op">=</span> dhw_mmm <span class="op">-</span> <span class="fl">1.2</span> <span class="op">+</span> <span class="fl">1.2</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">cos</span>(<span class="dv">2</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">*</span> (d <span class="op">-</span> pico) <span class="op">/</span> N)<span class="op">;</span></span>
+<span id="cb17-376"><a href="#cb17-376" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> bump <span class="op">=</span> dhw_anom <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span> <span class="op">-</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">abs</span>(d <span class="op">-</span> (pico <span class="op">+</span> <span class="dv">10</span>)) <span class="op">/</span> (dhw_dur <span class="op">/</span> <span class="dv">2</span>))<span class="op">;</span></span>
+<span id="cb17-377"><a href="#cb17-377" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="dt">dia</span><span class="op">:</span> d <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> clima<span class="op">,</span> <span class="dt">sst</span><span class="op">:</span> clima <span class="op">+</span> <span class="fu">ruido</span>() <span class="op">+</span> bump}<span class="op">;</span></span>
+<span id="cb17-378"><a href="#cb17-378" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb17-379"><a href="#cb17-379" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> w <span class="op">=</span> dhw_sem <span class="op">*</span> <span class="dv">7</span><span class="op">;</span></span>
+<span id="cb17-380"><a href="#cb17-380" aria-hidden="true" tabindex="-1"></a>  serie<span class="op">.</span><span class="fu">forEach</span>((r<span class="op">,</span> i) <span class="kw">=&gt;</span> {</span>
+<span id="cb17-381"><a href="#cb17-381" aria-hidden="true" tabindex="-1"></a>    r<span class="op">.</span><span class="at">hotspot</span> <span class="op">=</span> r<span class="op">.</span><span class="at">sst</span> <span class="op">-</span> dhw_mmm<span class="op">;</span></span>
+<span id="cb17-382"><a href="#cb17-382" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> s <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb17-383"><a href="#cb17-383" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> k <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">0</span><span class="op">,</span> i <span class="op">-</span> w <span class="op">+</span> <span class="dv">1</span>)<span class="op">;</span> k <span class="op">&lt;=</span> i<span class="op">;</span> k<span class="op">++</span>) {</span>
+<span id="cb17-384"><a href="#cb17-384" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> h <span class="op">=</span> serie[k]<span class="op">.</span><span class="at">sst</span> <span class="op">-</span> dhw_mmm<span class="op">;</span></span>
+<span id="cb17-385"><a href="#cb17-385" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (h <span class="op">&gt;=</span> dhw_umbral) s <span class="op">+=</span> h<span class="op">;</span></span>
+<span id="cb17-386"><a href="#cb17-386" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb17-387"><a href="#cb17-387" aria-hidden="true" tabindex="-1"></a>    r<span class="op">.</span><span class="at">dhw</span> <span class="op">=</span> s <span class="op">/</span> <span class="dv">7</span><span class="op">;</span></span>
+<span id="cb17-388"><a href="#cb17-388" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb17-389"><a href="#cb17-389" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> serie<span class="op">;</span></span>
+<span id="cb17-390"><a href="#cb17-390" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-17" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb18" data-startfrom="395" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 394;"><span id="cb18-395"><a href="#cb18-395" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb18-396"><a href="#cb18-396" aria-hidden="true" tabindex="-1"></a>  width<span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">230</span><span class="op">,</span></span>
+<span id="cb18-397"><a href="#cb18-397" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Día del año"</span>}<span class="op">,</span></span>
+<span id="cb18-398"><a href="#cb18-398" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"TSM (°C)"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb18-399"><a href="#cb18-399" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb18-400"><a href="#cb18-400" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">line</span>(dhw_calc<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"dia"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"clima"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#999"</span>})<span class="op">,</span></span>
+<span id="cb18-401"><a href="#cb18-401" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">line</span>(dhw_calc<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"dia"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"sst"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#1f77b4"</span>})<span class="op">,</span></span>
+<span id="cb18-402"><a href="#cb18-402" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([dhw_mmm]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#d62728"</span>})<span class="op">,</span></span>
+<span id="cb18-403"><a href="#cb18-403" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([dhw_mmm <span class="op">+</span> dhw_umbral]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#d62728"</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"4,3"</span>})</span>
+<span id="cb18-404"><a href="#cb18-404" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb18-405"><a href="#cb18-405" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-18" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb19" data-startfrom="410" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 409;"><span id="cb19-410"><a href="#cb19-410" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb19-411"><a href="#cb19-411" aria-hidden="true" tabindex="-1"></a>  width<span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb19-412"><a href="#cb19-412" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Día del año"</span>}<span class="op">,</span></span>
+<span id="cb19-413"><a href="#cb19-413" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"DHW (°C-semanas)"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb19-414"><a href="#cb19-414" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb19-415"><a href="#cb19-415" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">line</span>(dhw_calc<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"dia"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"dhw"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#d62728"</span>})<span class="op">,</span></span>
+<span id="cb19-416"><a href="#cb19-416" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">4</span><span class="op">,</span> <span class="dv">8</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#888"</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"4,3"</span>})<span class="op">,</span></span>
+<span id="cb19-417"><a href="#cb19-417" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">text</span>([{<span class="dt">x</span><span class="op">:</span> <span class="dv">365</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span> <span class="dt">t</span><span class="op">:</span> <span class="st">"4: blanqueamiento"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="dv">365</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="dv">8</span><span class="op">,</span> <span class="dt">t</span><span class="op">:</span> <span class="st">"8: mortalidad probable"</span>}]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"x"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"y"</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> <span class="st">"t"</span><span class="op">,</span> <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"end"</span><span class="op">,</span> <span class="dt">dy</span><span class="op">:</span> <span class="op">-</span><span class="dv">4</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#666"</span>})</span>
+<span id="cb19-418"><a href="#cb19-418" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb19-419"><a href="#cb19-419" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-19" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb20" data-startfrom="424" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 423;"><span id="cb20-424"><a href="#cb20-424" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb20-425"><a href="#cb20-425" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> max <span class="op">=</span> d3<span class="op">.</span><span class="fu">max</span>(dhw_calc<span class="op">,</span> r <span class="kw">=&gt;</span> r<span class="op">.</span><span class="at">dhw</span>)<span class="op">;</span></span>
+<span id="cb20-426"><a href="#cb20-426" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> nivel <span class="op">=</span> max <span class="op">&gt;=</span> <span class="dv">8</span> <span class="op">?</span> <span class="st">"blanqueamiento con mortalidad probable de corales sensibles"</span> <span class="op">:</span> max <span class="op">&gt;=</span> <span class="dv">4</span> <span class="op">?</span> <span class="st">"blanqueamiento esperado"</span> <span class="op">:</span> <span class="st">"por debajo del umbral de blanqueamiento"</span><span class="op">;</span></span>
+<span id="cb20-427"><a href="#cb20-427" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">md</span><span class="vs">`**DHW máximo = </span><span class="sc">${</span>d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".1f"</span>)(max)<span class="sc">}</span><span class="vs"> °C-semanas**: </span><span class="sc">${</span>nivel<span class="sc">}</span><span class="vs">. Líneas: gris = climatología, azul = TSM, rojo continuo = MMM, rojo discontinuo = MMM + HotSpot mínimo.`</span><span class="op">;</span></span>
+<span id="cb20-428"><a href="#cb20-428" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-20" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="impactos-por-sector" class="level1">
+<h1>Impactos por sector</h1>
+<section id="salud-humana-y-trabajo" class="level2">
+<h2 class="anchored" data-anchor-id="salud-humana-y-trabajo">Salud humana y trabajo</h2>
+<p>El IPCC (AR6) trata el estrés térmico como un riesgo creciente para la salud, con <strong>confianza muy alta</strong>, debido a urbanización, aumento de extremos de alta temperatura y envejecimiento poblacional. Lo define como las condiciones en que un organismo absorbe calor en exceso por exposición a altas temperaturas del aire o del agua, o a radiación térmica; en mamíferos y aves, la combinación de calor, humedad alta y poco viento hace fallar la termorregulación (definición del glosario del GTI, citada por fuentes secundarias). La literatura asociada sobre calor húmedo (Tw, WBGT, índice de calor) muestra que la elección del índice cambia la magnitud del peligro estimado.</p>
+<p>En el trabajo, el informe FAO-OMM (2026) estima que los días demasiado calurosos para trabajar podrían llegar a 250 al año en buena parte del sur de Asia, el África subsahariana tropical y partes de Centroamérica y Suramérica.</p>
+</section>
+<section id="agricultura-y-ganadería" class="level2">
+<h2 class="anchored" data-anchor-id="agricultura-y-ganadería">Agricultura y ganadería</h2>
+<p>El informe conjunto <em>Extreme heat and agriculture</em> (FAO-OMM, abril de 2026) reporta:</p>
+<ul>
+<li><strong>Ganadería:</strong> el estrés comienza por encima de 25 °C en la mayoría de las especies comunes, y algo por debajo en aves y cerdos, que no se enfrían sudando.</li>
+<li><strong>Cultivos:</strong> las caídas de rendimiento comienzan por encima de 30 °C en la mayoría de los cultivos principales, y antes en papa y cebada.</li>
+<li><strong>Recomendaciones:</strong> selección de variedades y razas, ajuste de calendarios de siembra, sistemas de alerta temprana y servicios climáticos, protección financiera y protección social reactiva a choques.</li>
+</ul>
+<p>El enfoque de la FAO es <strong>sectorial y basado en umbrales fisiológicos</strong>, no en un único índice. La nota de prensa consultada no menciona THI ni WBGT; el THI y sus rangos habituales (por debajo de 72 sin estrés, 72–79 leve, 80–89 moderado y más de 89 severo) provienen de guías de extensión universitaria (Texas A&amp;M) y no de la FAO.</p>
+</section>
+<section id="océanos-pesquerías-y-arrecifes" class="level2">
+<h2 class="anchored" data-anchor-id="océanos-pesquerías-y-arrecifes">Océanos, pesquerías y arrecifes</h2>
+<ul>
+<li><strong>Pesca:</strong> el calor extremo reduce el oxígeno disuelto y puede causar fallo cardiaco en peces; más del 90 % del océano global sufrió al menos una ola de calor marina en 2025 (FAO-OMM, 2026).</li>
+<li><strong>Olas de calor marinas:</strong> según el IPCC, son más frecuentes, intensas y largas desde la década de 1980, y desde al menos 2006 es muy probable que se deban al cambio climático de origen humano.</li>
+<li><strong>Arrecifes:</strong> el indicador de referencia es DHW (véase la sección anterior).</li>
+</ul>
+</section>
+<section id="bosques-y-biodiversidad" class="level2">
+<h2 class="anchored" data-anchor-id="bosques-y-biodiversidad">Bosques y biodiversidad</h2>
+<p>Para bosques y biodiversidad no hay un indicador único consolidado. Se combinan extremos térmicos, calor acumulado, déficit de presión de vapor (VPD), sequía y umbrales de tolerancia de las especies, para estimar daño fisiológico, mortalidad y alteraciones ecológicas. Esta sección se apoya en la síntesis metodológica del autor y no en una fuente específica consultada para este artículo; requiere referencias propias.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>No se pudo acceder a los capítulos 7 y 11 del AR6 durante la elaboración de este artículo; los puntos atribuidos al IPCC se apoyan en la síntesis de mensajes de salud y calor del AR6 y en el glosario citado por fuentes secundarias. Se recomienda verificar en los capítulos originales.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="del-peligro-al-riesgo" class="level1">
+<h1>Del peligro al riesgo</h1>
+<p>Los indicadores describen el <strong>peligro</strong>. El riesgo requiere además <strong>exposición</strong> (personas, cultivos, activos, ecosistemas) y <strong>vulnerabilidad</strong> (edad, trabajo al aire libre, vivienda, isla de calor urbana, capacidad de adaptación). Dos marcos de código abierto ilustran cómo operacionalizar esa lógica.</p>
+<ul>
+<li><strong>Evaluación probabilista (CLIMADA, ETH Zúrich).</strong> Combina peligro × exposición × vulnerabilidad mediante funciones de impacto. Según la documentación consultada, sus módulos de peligro incluyen ciclones tropicales, tormentas invernales europeas, incendios y marejada, <strong>sin un módulo específico para calor</strong>. Aun así, permite construir un peligro a partir de ráster o xarray, de modo que un indicador (UTCI, EHF, DHW, días sobre umbral) puede cargarse como intensidad y asociarse a una función de impacto, por ejemplo mortalidad o pérdida de productividad. Su aporte es forzar a explicitar y calibrar esa función, que es el punto débil de los índices de calor. Queda pendiente verificar si hay desarrollos recientes de calor en el repositorio.</li>
+<li><strong>Evaluación regional con cuadernos reproducibles (CLIMAAX).</strong> Su flujo de olas de calor urbanas define el peligro con umbrales de temperatura máxima y mínima durante una duración mínima (EuroHEAT, con percentil 90 mensual durante al menos dos días y climatología 1971–2000, o <code>xclim</code>, con umbrales absolutos definidos por el usuario). La exposición se mide con la temperatura superficial terrestre de Landsat 8 a 30 m, y la vulnerabilidad con la población menor de 5 y mayor de 65 años (WorldPop, 100 m). El riesgo resulta de una matriz de 10 × 10 que expresa diferencias <strong>relativas</strong> entre zonas, no riesgo absoluto.</li>
+</ul>
+<p>La diferencia práctica es que CLIMAAX prioriza flujos replicables con datos abiertos y solo usa frecuencia y duración de olas de calor, mientras que los indicadores fisiológicos más ricos (UTCI, WBGT) exigen variables adicionales de humedad, viento y radiación.</p>
+</section>
+<section id="qué-conjunto-de-indicadores-recomendar" class="level1">
+<h1>Qué conjunto de indicadores recomendar</h1>
+<p>Para una evaluación que abarque salud humana, agricultura y ecosistemas no conviene elegir un único indicador. Una estructura modular permite comparar tendencias climáticas sin confundir la exposición con el impacto.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 38%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Objetivo de evaluación</th>
+<th>Indicadores principales</th>
+<th>Resultado que interesa obtener</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Salud humana</td>
+<td>UTCI, WBGT o temperatura de bulbo húmedo; EHF como complemento</td>
+<td>Intensidad, duración y frecuencia del estrés térmico</td>
+</tr>
+<tr class="even">
+<td>Olas de calor y cambio climático</td>
+<td>HWMId, EHF, días por encima de umbrales y duración máxima</td>
+<td>Evolución de la magnitud y persistencia de los eventos</td>
+</tr>
+<tr class="odd">
+<td>Exposición acumulada</td>
+<td>Calor acumulado, grados-hora o grados-día sobre umbral</td>
+<td>Dosis térmica integrada en un periodo definido</td>
+</tr>
+<tr class="even">
+<td>Cultivos</td>
+<td>Horas sobre umbral fisiológico, grados-día de calor, temperatura del dosel</td>
+<td>Estrés en fases críticas y posibles pérdidas productivas</td>
+</tr>
+<tr class="odd">
+<td>Ganadería</td>
+<td>THI y duración de la exposición por encima de umbrales</td>
+<td>Estrés térmico animal y efectos productivos</td>
+</tr>
+<tr class="even">
+<td>Arrecifes coralinos</td>
+<td>DHW, anomalías de TSM y duración de olas de calor marinas</td>
+<td>Riesgo de blanqueamiento y mortalidad</td>
+</tr>
+<tr class="odd">
+<td>Bosques y biodiversidad</td>
+<td>Extremos térmicos, calor acumulado, VPD, sequía y umbrales de tolerancia</td>
+<td>Daño fisiológico, mortalidad y alteraciones ecológicas</td>
+</tr>
+<tr class="even">
+<td>Riesgo territorial</td>
+<td>Indicador de peligro adecuado + exposición + vulnerabilidad</td>
+<td>Distribución espacial de las consecuencias potenciales</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="consideraciones-para-colombia" class="level1">
+<h1>Consideraciones para Colombia</h1>
+<ol type="1">
+<li><strong>Combinar indicadores según el sector:</strong> uno fisiológico (UTCI o WBGT), uno de severidad (EHF o HWMId) y uno acumulado (grados-día).</li>
+<li><strong>Incluir la noche.</strong> Los eventos compuestos día-noche son el aporte más novedoso de Emerton et al.&nbsp;(2026).</li>
+<li><strong>Calibrar umbrales localmente.</strong> Los umbrales de EHF y HWMId basados en percentiles se diseñaron en climas con fuerte estacionalidad; en el trópico andino y caribeño la variabilidad es pequeña y los percentiles pueden dar falsas alarmas o falsos silencios. Es necesario validar con datos de mortalidad, morbilidad o productividad.</li>
+<li><strong>Separar peligro de riesgo,</strong> con exposición y vulnerabilidad explícitas.</li>
+<li><strong>Costas y océanos:</strong> DHW para arrecifes y olas de calor marinas para el resto del ecosistema; son relevantes para el Caribe y el Pacífico colombianos.</li>
+</ol>
+</section>
+<section id="referencias" class="level1">
+<h1>Referencias</h1>
+<ul>
+<li>Emerton, R., Nicolas, J., Lombardi, A., Di Napoli, C., et al.&nbsp;(2026). Global heat stress intensification and its expanding footprint on the human population. <em>Nature Climate Change</em>, 16, 989–996. <a href="https://www.nature.com/articles/s41558-026-02670-5" class="uri">https://www.nature.com/articles/s41558-026-02670-5</a></li>
+<li>ECMWF (2026). More people at risk from hazardous heat as global heat stress intensifies. <a href="https://www.ecmwf.int/en/about/media-centre/2026/global-heat-stress-intensifies" class="uri">https://www.ecmwf.int/en/about/media-centre/2026/global-heat-stress-intensifies</a></li>
+<li>FAO y OMM (2026). <em>Extreme heat and agriculture</em>. Resumen en OMM: <a href="https://www.wmo.int/news/media-centre/extreme-heat-pushes-agrifood-systems-brink" class="uri">https://www.wmo.int/news/media-centre/extreme-heat-pushes-agrifood-systems-brink</a>; informe: <a href="https://library.wmo.int/idurl/4/69845" class="uri">https://library.wmo.int/idurl/4/69845</a></li>
+<li>NOAA Coral Reef Watch. Degree Heating Week product. <a href="https://coralreefwatch.noaa.gov/product/5km/tutorial/crw10a_dhw_product.php" class="uri">https://coralreefwatch.noaa.gov/product/5km/tutorial/crw10a_dhw_product.php</a></li>
+<li>Nairn, J. y Fawcett, R. (2015). The Excess Heat Factor: a metric for heatwave intensity and its use in classifying heatwave severity. <em>International Journal of Environmental Research and Public Health</em>, 12(1), 227–253. Ver también la guía de <code>thermofeel</code>: <a href="https://thermofeel.readthedocs.io/en/2.3.0/guide/excessheat/" class="uri">https://thermofeel.readthedocs.io/en/2.3.0/guide/excessheat/</a></li>
+<li>Russo, S., Sillmann, J. y Fischer, E. M. (2015). Top ten European heatwaves since 1950 and their occurrence in the coming decades. <em>Environmental Research Letters</em>, 10, 124003. Ver también Russo et al.&nbsp;(2014), <em>Journal of Geophysical Research: Atmospheres</em>.</li>
+<li>IPCC (2021, 2022). AR6, Grupo de Trabajo I y II. Síntesis de mensajes de calor y salud: <a href="https://heathealth.info/news/10-key-heat-health-messages-from-the-ipcc-ar6-report/" class="uri">https://heathealth.info/news/10-key-heat-health-messages-from-the-ipcc-ar6-report/</a></li>
+<li>CLIMADA. <a href="https://climada-python.readthedocs.io/" class="uri">https://climada-python.readthedocs.io/</a> y CLIMADA Petals <a href="https://climada-petals.readthedocs.io/" class="uri">https://climada-petals.readthedocs.io/</a></li>
+<li>CLIMAAX Handbook. <a href="https://handbook.climaax.eu/intro.html" class="uri">https://handbook.climaax.eu/intro.html</a>; flujo de olas de calor urbanas: <a href="https://handbook.climaax.eu/notebooks/workflows/heatwaves.html" class="uri">https://handbook.climaax.eu/notebooks/workflows/heatwaves.html</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBjaF91bWJyYWwgPSBJbnB1dHMucmFuZ2UoWzIwLCA0MF0sIHt2YWx1ZTogMzAsIHN0ZXA6IDAuNSwgbGFiZWw6IFwiVW1icmFsICjCsEMpXCJ9KVxudmlld29mIGNoX2Jhc2UgPSBJbnB1dHMucmFuZ2UoWzIyLCAzNF0sIHt2YWx1ZTogMjgsIHN0ZXA6IDAuNSwgbGFiZWw6IFwiVGVtcGVyYXR1cmEgdMOtcGljYSAowrBDKVwifSlcbnZpZXdvZiBjaF9hbXAgPSBJbnB1dHMucmFuZ2UoWzAsIDhdLCB7dmFsdWU6IDQsIHN0ZXA6IDAuNSwgbGFiZWw6IFwiSW50ZW5zaWRhZCBkZSBsYSBvbGEgKMKwQylcIn0pXG52aWV3b2YgY2hfZHVyID0gSW5wdXRzLnJhbmdlKFsxLCAzMF0sIHt2YWx1ZTogOCwgc3RlcDogMSwgbGFiZWw6IFwiRHVyYWNpw7NuIGRlIGxhIG9sYSAoZMOtYXMpXCJ9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiY2hfZGF0b3MgPSB7XG4gIGNvbnN0IG5vaXNlID0gZDMucmFuZG9tTm9ybWFsLnNvdXJjZShkMy5yYW5kb21MY2coNDIpKSgwLCAxLjIpO1xuICBjb25zdCBpbmljaW8gPSA0MDtcbiAgbGV0IGFjYyA9IDA7XG4gIHJldHVybiBkMy5yYW5nZSg5MCkubWFwKGQgPT4ge1xuICAgIGNvbnN0IGJ1bXAgPSAoZCA+PSBpbmljaW8gJiYgZCA8IGluaWNpbyArIGNoX2R1cilcbiAgICAgID8gY2hfYW1wICogTWF0aC5zaW4oTWF0aC5QSSAqIChkIC0gaW5pY2lvICsgMC41KSAvIGNoX2R1cikgOiAwO1xuICAgIGNvbnN0IFQgPSBjaF9iYXNlICsgbm9pc2UoKSArIGJ1bXA7XG4gICAgY29uc3QgZXhjZXNvID0gTWF0aC5tYXgoMCwgVCAtIGNoX3VtYnJhbCk7XG4gICAgYWNjICs9IGV4Y2VzbztcbiAgICByZXR1cm4ge2RpYTogZCArIDEsIFQsIGV4Y2VzbywgQ0g6IGFjY307XG4gIH0pO1xufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgd2lkdGgsIGhlaWdodDogMjMwLFxuICB4OiB7bGFiZWw6IFwiRMOtYVwifSxcbiAgeToge2xhYmVsOiBcIlRlbXBlcmF0dXJhICjCsEMpXCIsIGdyaWQ6IHRydWV9LFxuICBtYXJrczogW1xuICAgIFBsb3QuYXJlYVkoY2hfZGF0b3MsIHt4OiBcImRpYVwiLCB5MTogKCkgPT4gY2hfdW1icmFsLCB5MjogZCA9PiBNYXRoLm1heChjaF91bWJyYWwsIGQuVCksIGZpbGw6IFwiI2Q2MjcyOFwiLCBmaWxsT3BhY2l0eTogMC41fSksXG4gICAgUGxvdC5saW5lKGNoX2RhdG9zLCB7eDogXCJkaWFcIiwgeTogXCJUXCIsIHN0cm9rZTogXCIjNDQ0XCJ9KSxcbiAgICBQbG90LnJ1bGVZKFtjaF91bWJyYWxdLCB7c3Ryb2tlOiBcIiM4ODhcIiwgc3Ryb2tlRGFzaGFycmF5OiBcIjQsM1wifSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIHdpZHRoLCBoZWlnaHQ6IDE4MCxcbiAgeDoge2xhYmVsOiBcIkTDrWFcIn0sXG4gIHk6IHtsYWJlbDogXCJDSCBhY3VtdWxhZG8gKMKwQ8K3ZMOtYSlcIiwgZ3JpZDogdHJ1ZX0sXG4gIG1hcmtzOiBbUGxvdC5saW5lKGNoX2RhdG9zLCB7eDogXCJkaWFcIiwgeTogXCJDSFwiLCBjdXJ2ZTogXCJzdGVwLWFmdGVyXCIsIHN0cm9rZTogXCIjZDYyNzI4XCJ9KSwgUGxvdC5ydWxlWShbMF0pXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Im1kYCoqQ0ggPSAke2QzLmZvcm1hdChcIi4xZlwiKShjaF9kYXRvcy5hdCgtMSkuQ0gpfSDCsEPCt2TDrWEqKiwgYWN1bXVsYWRvcyBlbiAke2NoX2RhdG9zLmZpbHRlcihkID0+IGQuZXhjZXNvID4gMCkubGVuZ3RofSBkw61hcyBzb2JyZSBlbCB1bWJyYWwuYFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC02IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIGVoZl9wY3QgPSBJbnB1dHMucmFuZ2UoWzgwLCA5OV0sIHt2YWx1ZTogOTUsIHN0ZXA6IDEsIGxhYmVsOiBcIlBlcmNlbnRpbCBkZWwgdW1icmFsICglKVwifSlcbnZpZXdvZiBlaGZfYW1wID0gSW5wdXRzLnJhbmdlKFswLCAxMF0sIHt2YWx1ZTogNSwgc3RlcDogMC41LCBsYWJlbDogXCJJbnRlbnNpZGFkIGRlIGxhIG9sYSAowrBDKVwifSlcbnZpZXdvZiBlaGZfZHVyID0gSW5wdXRzLnJhbmdlKFsyLCAyMF0sIHt2YWx1ZTogOCwgc3RlcDogMSwgbGFiZWw6IFwiRHVyYWNpw7NuIGRlIGxhIG9sYSAoZMOtYXMpXCJ9KVxudmlld29mIGVoZl91c2FyID0gSW5wdXRzLnRvZ2dsZSh7bGFiZWw6IFwiSW5jbHVpciBhY2xpbWF0YWNpw7NuICgzMCBkw61hcylcIiwgdmFsdWU6IHRydWV9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC03IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZWhmX1QgPSB7XG4gIGNvbnN0IG5vaXNlID0gZDMucmFuZG9tTm9ybWFsLnNvdXJjZShkMy5yYW5kb21MY2coNykpKDAsIDEuNSk7XG4gIGNvbnN0IGNlbnRybyA9IDE5MDtcbiAgcmV0dXJuIGQzLnJhbmdlKDM2NSkubWFwKGQgPT4ge1xuICAgIGNvbnN0IGJ1bXAgPSBlaGZfYW1wICogTWF0aC5tYXgoMCwgMSAtIE1hdGguYWJzKGQgLSBjZW50cm8pIC8gKGVoZl9kdXIgLyAyKSk7XG4gICAgcmV0dXJuIDIwICsgNyAqIE1hdGguc2luKDIgKiBNYXRoLlBJICogKGQgLSAxMTApIC8gMzY1KSArIG5vaXNlKCkgKyBidW1wO1xuICB9KTtcbn1cblxuZWhmX2NhbGMgPSB7XG4gIGNvbnN0IG9yZGVuYWRhID0gWy4uLmVoZl9UXS5zb3J0KGQzLmFzY2VuZGluZyk7XG4gIGNvbnN0IHRwID0gZDMucXVhbnRpbGVTb3J0ZWQob3JkZW5hZGEsIGVoZl9wY3QgLyAxMDApO1xuICBjb25zdCBmaWxhcyA9IFtdO1xuICBmb3IgKGxldCBpID0gMzA7IGkgPCBlaGZfVC5sZW5ndGggLSAyOyBpKyspIHtcbiAgICBjb25zdCBtMyA9IGQzLm1lYW4oZWhmX1Quc2xpY2UoaSwgaSArIDMpKTtcbiAgICBjb25zdCBtMzAgPSBkMy5tZWFuKGVoZl9ULnNsaWNlKGkgLSAzMCwgaSkpO1xuICAgIGNvbnN0IHNpZyA9IG0zIC0gdHAsIGFjY2wgPSBtMyAtIG0zMDtcbiAgICBjb25zdCBlaGYgPSBNYXRoLm1heCgwLCBzaWcpICogKGVoZl91c2FyID8gTWF0aC5tYXgoMSwgYWNjbCkgOiAxKTtcbiAgICBmaWxhcy5wdXNoKHtkaWE6IGkgKyAxLCBUOiBlaGZfVFtpXSwgc2lnLCBhY2NsLCBlaGZ9KTtcbiAgfVxuICBjb25zdCBwb3MgPSBmaWxhcy5maWx0ZXIociA9PiByLmVoZiA+IDApLm1hcChyID0+IHIuZWhmKS5zb3J0KGQzLmFzY2VuZGluZyk7XG4gIGNvbnN0IHA4NSA9IHBvcy5sZW5ndGggPyBkMy5xdWFudGlsZVNvcnRlZChwb3MsIDAuODUpIDogTmFOO1xuICByZXR1cm4ge3RwLCBmaWxhcywgcDg1fTtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIHdpZHRoLCBoZWlnaHQ6IDIzMCxcbiAgeDoge2xhYmVsOiBcIkTDrWEgZGVsIGHDsW9cIn0sXG4gIHk6IHtsYWJlbDogXCJUZW1wZXJhdHVyYSBtZWRpYSBkaWFyaWEgKMKwQylcIiwgZ3JpZDogdHJ1ZX0sXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5saW5lKGVoZl9jYWxjLmZpbGFzLCB7eDogXCJkaWFcIiwgeTogXCJUXCIsIHN0cm9rZTogXCIjNDQ0XCJ9KSxcbiAgICBQbG90LnJ1bGVZKFtlaGZfY2FsYy50cF0sIHtzdHJva2U6IFwiIzg4OFwiLCBzdHJva2VEYXNoYXJyYXk6IFwiNCwzXCJ9KSxcbiAgICBQbG90LmRvdChlaGZfY2FsYy5maWxhcy5maWx0ZXIociA9PiByLmVoZiA+IDApLCB7eDogXCJkaWFcIiwgeTogXCJUXCIsIGZpbGw6IFwiI2Q2MjcyOFwifSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIHdpZHRoLCBoZWlnaHQ6IDE4MCxcbiAgeDoge2xhYmVsOiBcIkTDrWEgZGVsIGHDsW9cIn0sXG4gIHk6IHtsYWJlbDogXCJFSEYgKMKwQ8KyKVwiLCBncmlkOiB0cnVlfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LnJ1bGVYKGVoZl9jYWxjLmZpbGFzLCB7eDogXCJkaWFcIiwgeTE6IDAsIHkyOiBcImVoZlwiLCBzdHJva2U6IFwiI2Q2MjcyOFwifSksXG4gICAgUGxvdC5ydWxlWShbMF0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEwIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoie1xuICBjb25zdCBwb3MgPSBlaGZfY2FsYy5maWxhcy5maWx0ZXIociA9PiByLmVoZiA+IDApO1xuICBjb25zdCBtYXggPSBkMy5tYXgocG9zLCByID0+IHIuZWhmKTtcbiAgY29uc3QgZGV0YWxsZSA9IHBvcy5sZW5ndGhcbiAgICA/IGBFSEYgbcOheGltbzogKioke2QzLmZvcm1hdChcIi4xZlwiKShtYXgpfSDCsEPCsioqOyBzZXZlcmlkYWQgKEVIRiBtw6F4IC8gUDg1IGRlIGxvcyBwb3NpdGl2b3MpOiAqKiR7ZDMuZm9ybWF0KFwiLjJmXCIpKG1heCAvIGVoZl9jYWxjLnA4NSl9KiouYFxuICAgIDogYE5vIGhheSBvbGFzIGRlIGNhbG9yIGNvbiBlc3RvcyBwYXLDoW1ldHJvcy5gO1xuICByZXR1cm4gbWRgVW1icmFsIChwZXJjZW50aWwgJHtlaGZfcGN0fSk6ICoqJHtkMy5mb3JtYXQoXCIuMWZcIikoZWhmX2NhbGMudHApfSDCsEMqKi4gRMOtYXMgY29uIEVIRiA+IDA6ICoqJHtwb3MubGVuZ3RofSoqLiAke2RldGFsbGV9YDtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTEiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgaHdfcGN0ID0gSW5wdXRzLnJhbmdlKFs4MCwgOTldLCB7dmFsdWU6IDkwLCBzdGVwOiAxLCBsYWJlbDogXCJQZXJjZW50aWwgZGVsIHVtYnJhbCAoJSlcIn0pXG52aWV3b2YgaHdfbWluID0gSW5wdXRzLnJhbmdlKFsyLCA3XSwge3ZhbHVlOiAzLCBzdGVwOiAxLCBsYWJlbDogXCJEdXJhY2nDs24gbcOtbmltYSAoZMOtYXMpXCJ9KVxudmlld29mIGh3X2FtcCA9IElucHV0cy5yYW5nZShbMCwgMTBdLCB7dmFsdWU6IDYsIHN0ZXA6IDAuNSwgbGFiZWw6IFwiSW50ZW5zaWRhZCBkZSBsYSBvbGEgKMKwQylcIn0pXG52aWV3b2YgaHdfZHVyID0gSW5wdXRzLnJhbmdlKFszLCAzMF0sIHt2YWx1ZTogMTAsIHN0ZXA6IDEsIGxhYmVsOiBcIkR1cmFjacOzbiBkZSBsYSBvbGEgKGTDrWFzKVwifSlcbnZpZXdvZiBod190cmVuZCA9IElucHV0cy5yYW5nZShbMCwgMC4xXSwge3ZhbHVlOiAwLjAzLCBzdGVwOiAwLjAwNSwgbGFiZWw6IFwiVGVuZGVuY2lhICjCsEMvYcOxbylcIn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEyIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiaHdfYmFzZSA9IHtcbiAgY29uc3QgeiA9IGQzLnJhbmRvbU5vcm1hbC5zb3VyY2UoZDMucmFuZG9tTGNnKDExKSkoMCwgMSk7XG4gIGNvbnN0IHJobyA9IDAuNiwgc2QgPSAyO1xuICByZXR1cm4gZDMucmFuZ2UoMzEpLm1hcCgoKSA9PiB7XG4gICAgbGV0IGUgPSAwO1xuICAgIHJldHVybiBkMy5yYW5nZSgzNjUpLm1hcChkID0+IHtcbiAgICAgIGUgPSByaG8gKiBlICsgTWF0aC5zcXJ0KDEgLSByaG8gKiByaG8pICogc2QgKiB6KCk7XG4gICAgICByZXR1cm4gMjYgKyA1ICogTWF0aC5zaW4oMiAqIE1hdGguUEkgKiAoZCAtIDExMCkgLyAzNjUpICsgZTtcbiAgICB9KTtcbiAgfSk7XG59XG5cbmh3X2NhbGMgPSB7XG4gIGNvbnN0IE4gPSAzNjUsIFkgPSAzMDtcbiAgY29uc3QgVCA9IGh3X2Jhc2UubWFwKChhbmlvLCB5KSA9PiBhbmlvLm1hcCh2ID0+IHYgKyBod190cmVuZCAqIHkpKTtcbiAgY29uc3Qgb2JqID0gVFtZXS5tYXAoKHYsIGQpID0+IHYgKyBod19hbXAgKiBNYXRoLm1heCgwLCAxIC0gTWF0aC5hYnMoZCAtIDE5MCkgLyAoaHdfZHVyIC8gMikpKTtcbiAgY29uc3QgdW1icmFsID0gZDMucmFuZ2UoTikubWFwKGQgPT4ge1xuICAgIGNvbnN0IHZhbHMgPSBbXTtcbiAgICBmb3IgKGxldCB5ID0gMDsgeSA8IFk7IHkrKykgZm9yIChsZXQgayA9IC0xNTsgayA8PSAxNTsgaysrKSB2YWxzLnB1c2goVFt5XVsoZCArIGsgKyBOKSAlIE5dKTtcbiAgICB2YWxzLnNvcnQoZDMuYXNjZW5kaW5nKTtcbiAgICByZXR1cm4gZDMucXVhbnRpbGVTb3J0ZWQodmFscywgaHdfcGN0IC8gMTAwKTtcbiAgfSk7XG4gIGNvbnN0IG1heGltb3MgPSBULnNsaWNlKDAsIFkpLm1hcChhID0+IGQzLm1heChhKSkuc29ydChkMy5hc2NlbmRpbmcpO1xuICBjb25zdCBxMjUgPSBkMy5xdWFudGlsZVNvcnRlZChtYXhpbW9zLCAwLjI1KSwgcTc1ID0gZDMucXVhbnRpbGVTb3J0ZWQobWF4aW1vcywgMC43NSk7XG4gIGNvbnN0IGV2ZW50b3MgPSBbXTtcbiAgbGV0IGQgPSAwO1xuICB3aGlsZSAoZCA8IE4pIHtcbiAgICBpZiAob2JqW2RdID4gdW1icmFsW2RdKSB7XG4gICAgICBsZXQgZSA9IGQ7XG4gICAgICB3aGlsZSAoZSA8IE4gJiYgb2JqW2VdID4gdW1icmFsW2VdKSBlKys7XG4gICAgICBpZiAoZSAtIGQgPj0gaHdfbWluKSB7XG4gICAgICAgIGxldCBtYWcgPSAwO1xuICAgICAgICBmb3IgKGxldCBrID0gZDsgayA8IGU7IGsrKykgbWFnICs9IE1hdGgubWF4KDAsIChvYmpba10gLSBxMjUpIC8gKHE3NSAtIHEyNSkpO1xuICAgICAgICBldmVudG9zLnB1c2goe2luaTogZCArIDEsIGZpbjogZSwgZGlhczogZSAtIGQsIG1hZ30pO1xuICAgICAgfVxuICAgICAgZCA9IGU7XG4gICAgfSBlbHNlIGQrKztcbiAgfVxuICByZXR1cm4ge29iaiwgdW1icmFsLCBxMjUsIHE3NSwgZXZlbnRvcywgaHdtaWQ6IGQzLm1heChldmVudG9zLCBlID0+IGUubWFnKSA/PyAwfTtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe1xuICB3aWR0aCwgaGVpZ2h0OiAyNTAsXG4gIHg6IHtsYWJlbDogXCJEw61hIGRlbCBhw7FvIDMxXCJ9LFxuICB5OiB7bGFiZWw6IFwiVGVtcGVyYXR1cmEgbcOheGltYSAowrBDKVwiLCBncmlkOiB0cnVlfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LnJlY3QoaHdfY2FsYy5ldmVudG9zLCB7eDE6IFwiaW5pXCIsIHgyOiBcImZpblwiLCB5MTogZDMubWluKGh3X2NhbGMub2JqKSAtIDEsIHkyOiBkMy5tYXgoaHdfY2FsYy5vYmopICsgMSwgZmlsbDogXCIjZDYyNzI4XCIsIGZpbGxPcGFjaXR5OiAwLjE4fSksXG4gICAgUGxvdC5saW5lKGh3X2NhbGMub2JqLm1hcCgoVCwgaSkgPT4gKHtkaWE6IGkgKyAxLCBUfSkpLCB7eDogXCJkaWFcIiwgeTogXCJUXCIsIHN0cm9rZTogXCIjNDQ0XCJ9KSxcbiAgICBQbG90LmxpbmUoaHdfY2FsYy51bWJyYWwubWFwKChULCBpKSA9PiAoe2RpYTogaSArIDEsIFR9KSksIHt4OiBcImRpYVwiLCB5OiBcIlRcIiwgc3Ryb2tlOiBcIiM4ODhcIiwgc3Ryb2tlRGFzaGFycmF5OiBcIjQsM1wifSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJtZGAqKkhXTUlkID0gJHtkMy5mb3JtYXQoXCIuMmZcIikoaHdfY2FsYy5od21pZCl9KiogKG1hZ25pdHVkIGRlbCBldmVudG8gbWF5b3IpOyBldmVudG9zIGRldGVjdGFkb3M6ICoqJHtod19jYWxjLmV2ZW50b3MubGVuZ3RofSoqLiBSYW5nbyBpbnRlcmN1YXJ0aWwgZGUgbG9zIG3DoXhpbW9zIGFudWFsZXM6ICR7ZDMuZm9ybWF0KFwiLjFmXCIpKGh3X2NhbGMucTI1KX3igJMke2QzLmZvcm1hdChcIi4xZlwiKShod19jYWxjLnE3NSl9IMKwQy5gXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE1IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiaHdfY2FsYy5ldmVudG9zLmxlbmd0aFxuICA/IElucHV0cy50YWJsZShod19jYWxjLmV2ZW50b3MubWFwKGUgPT4gKHtcIkluaWNpbyAoZMOtYSlcIjogZS5pbmksIFwiRmluIChkw61hKVwiOiBlLmZpbiwgXCJEdXJhY2nDs24gKGTDrWFzKVwiOiBlLmRpYXMsIFwiTWFnbml0dWRcIjogK2UubWFnLnRvRml4ZWQoMil9KSkpXG4gIDogbWRgX05vIHNlIGRldGVjdGFuIGV2ZW50b3MgY29uIGVzdG9zIHBhcsOhbWV0cm9zLl9gXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE2IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIGRod19tbW0gPSBJbnB1dHMucmFuZ2UoWzI2LCAzMV0sIHt2YWx1ZTogMjksIHN0ZXA6IDAuMSwgbGFiZWw6IFwiTU1NICjCsEMpXCJ9KVxudmlld29mIGRod19hbm9tID0gSW5wdXRzLnJhbmdlKFswLCA0XSwge3ZhbHVlOiAxLjgsIHN0ZXA6IDAuMSwgbGFiZWw6IFwiQW5vbWFsw61hIG3DoXhpbWEgKMKwQylcIn0pXG52aWV3b2YgZGh3X2R1ciA9IElucHV0cy5yYW5nZShbNywgMTIwXSwge3ZhbHVlOiA2MCwgc3RlcDogMSwgbGFiZWw6IFwiRHVyYWNpw7NuIGRlIGxhIGFub21hbMOtYSAoZMOtYXMpXCJ9KVxudmlld29mIGRod191bWJyYWwgPSBJbnB1dHMucmFuZ2UoWzAsIDJdLCB7dmFsdWU6IDEsIHN0ZXA6IDAuMSwgbGFiZWw6IFwiSG90U3BvdCBtw61uaW1vICjCsEMpXCJ9KVxudmlld29mIGRod19zZW0gPSBJbnB1dHMucmFuZ2UoWzQsIDE2XSwge3ZhbHVlOiAxMiwgc3RlcDogMSwgbGFiZWw6IFwiVmVudGFuYSAoc2VtYW5hcylcIn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE3IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZGh3X2NhbGMgPSB7XG4gIGNvbnN0IE4gPSAzNjUsIHBpY28gPSA5MDtcbiAgY29uc3QgcnVpZG8gPSBkMy5yYW5kb21Ob3JtYWwuc291cmNlKGQzLnJhbmRvbUxjZyg1KSkoMCwgMC4xNSk7XG4gIGNvbnN0IHNlcmllID0gZDMucmFuZ2UoTikubWFwKGQgPT4ge1xuICAgIGNvbnN0IGNsaW1hID0gZGh3X21tbSAtIDEuMiArIDEuMiAqIE1hdGguY29zKDIgKiBNYXRoLlBJICogKGQgLSBwaWNvKSAvIE4pO1xuICAgIGNvbnN0IGJ1bXAgPSBkaHdfYW5vbSAqIE1hdGgubWF4KDAsIDEgLSBNYXRoLmFicyhkIC0gKHBpY28gKyAxMCkpIC8gKGRod19kdXIgLyAyKSk7XG4gICAgcmV0dXJuIHtkaWE6IGQgKyAxLCBjbGltYSwgc3N0OiBjbGltYSArIHJ1aWRvKCkgKyBidW1wfTtcbiAgfSk7XG4gIGNvbnN0IHcgPSBkaHdfc2VtICogNztcbiAgc2VyaWUuZm9yRWFjaCgociwgaSkgPT4ge1xuICAgIHIuaG90c3BvdCA9IHIuc3N0IC0gZGh3X21tbTtcbiAgICBsZXQgcyA9IDA7XG4gICAgZm9yIChsZXQgayA9IE1hdGgubWF4KDAsIGkgLSB3ICsgMSk7IGsgPD0gaTsgaysrKSB7XG4gICAgICBjb25zdCBoID0gc2VyaWVba10uc3N0IC0gZGh3X21tbTtcbiAgICAgIGlmIChoID49IGRod191bWJyYWwpIHMgKz0gaDtcbiAgICB9XG4gICAgci5kaHcgPSBzIC8gNztcbiAgfSk7XG4gIHJldHVybiBzZXJpZTtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTgiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe1xuICB3aWR0aCwgaGVpZ2h0OiAyMzAsXG4gIHg6IHtsYWJlbDogXCJEw61hIGRlbCBhw7FvXCJ9LFxuICB5OiB7bGFiZWw6IFwiVFNNICjCsEMpXCIsIGdyaWQ6IHRydWV9LFxuICBtYXJrczogW1xuICAgIFBsb3QubGluZShkaHdfY2FsYywge3g6IFwiZGlhXCIsIHk6IFwiY2xpbWFcIiwgc3Ryb2tlOiBcIiM5OTlcIn0pLFxuICAgIFBsb3QubGluZShkaHdfY2FsYywge3g6IFwiZGlhXCIsIHk6IFwic3N0XCIsIHN0cm9rZTogXCIjMWY3N2I0XCJ9KSxcbiAgICBQbG90LnJ1bGVZKFtkaHdfbW1tXSwge3N0cm9rZTogXCIjZDYyNzI4XCJ9KSxcbiAgICBQbG90LnJ1bGVZKFtkaHdfbW1tICsgZGh3X3VtYnJhbF0sIHtzdHJva2U6IFwiI2Q2MjcyOFwiLCBzdHJva2VEYXNoYXJyYXk6IFwiNCwzXCJ9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIHdpZHRoLCBoZWlnaHQ6IDIwMCxcbiAgeDoge2xhYmVsOiBcIkTDrWEgZGVsIGHDsW9cIn0sXG4gIHk6IHtsYWJlbDogXCJESFcgKMKwQy1zZW1hbmFzKVwiLCBncmlkOiB0cnVlfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LmxpbmUoZGh3X2NhbGMsIHt4OiBcImRpYVwiLCB5OiBcImRod1wiLCBzdHJva2U6IFwiI2Q2MjcyOFwifSksXG4gICAgUGxvdC5ydWxlWShbNCwgOF0sIHtzdHJva2U6IFwiIzg4OFwiLCBzdHJva2VEYXNoYXJyYXk6IFwiNCwzXCJ9KSxcbiAgICBQbG90LnRleHQoW3t4OiAzNjUsIHk6IDQsIHQ6IFwiNDogYmxhbnF1ZWFtaWVudG9cIn0sIHt4OiAzNjUsIHk6IDgsIHQ6IFwiODogbW9ydGFsaWRhZCBwcm9iYWJsZVwifV0sIHt4OiBcInhcIiwgeTogXCJ5XCIsIHRleHQ6IFwidFwiLCB0ZXh0QW5jaG9yOiBcImVuZFwiLCBkeTogLTQsIGZpbGw6IFwiIzY2NlwifSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMjAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ7XG4gIGNvbnN0IG1heCA9IGQzLm1heChkaHdfY2FsYywgciA9PiByLmRodyk7XG4gIGNvbnN0IG5pdmVsID0gbWF4ID49IDggPyBcImJsYW5xdWVhbWllbnRvIGNvbiBtb3J0YWxpZGFkIHByb2JhYmxlIGRlIGNvcmFsZXMgc2Vuc2libGVzXCIgOiBtYXggPj0gNCA/IFwiYmxhbnF1ZWFtaWVudG8gZXNwZXJhZG9cIiA6IFwicG9yIGRlYmFqbyBkZWwgdW1icmFsIGRlIGJsYW5xdWVhbWllbnRvXCI7XG4gIHJldHVybiBtZGAqKkRIVyBtw6F4aW1vID0gJHtkMy5mb3JtYXQoXCIuMWZcIikobWF4KX0gwrBDLXNlbWFuYXMqKjogJHtuaXZlbH0uIEzDrW5lYXM6IGdyaXMgPSBjbGltYXRvbG9nw61hLCBhenVsID0gVFNNLCByb2pvIGNvbnRpbnVvID0gTU1NLCByb2pvIGRpc2NvbnRpbnVvID0gTU1NICsgSG90U3BvdCBtw61uaW1vLmA7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2NoX3VtYnJhbCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdjaF9iYXNlJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2NoX2FtcCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdjaF9kdXInKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZWhmX3BjdCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdlaGZfYW1wJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2VoZl9kdXInKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZWhmX3VzYXInKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnaHdfcGN0JykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2h3X21pbicpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdod19hbXAnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnaHdfZHVyJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2h3X3RyZW5kJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2Rod19tbW0nKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZGh3X2Fub20nKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZGh3X2R1cicpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdkaHdfdW1icmFsJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2Rod19zZW0nKSJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../gcc";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mromerot\.github\.io\/web\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Made with ❤️ and Quarto</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
