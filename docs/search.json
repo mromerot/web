@@ -2131,135 +2131,23 @@
     "text": "Áreas de trabajo\nGestion del riesgo de desastres | Gestion de proyectos de ciencia y tecnología | Cambio climático | Ecología terrestre y marina | Conservación de la biodiversidad | Escritura y publicación científica | Ciencia reproducible | Café"
   },
   {
-    "objectID": "gcc/estres-termico-v2.html",
-    "href": "gcc/estres-termico-v2.html",
-    "title": "Estrés térmico",
+    "objectID": "gcc/index.html",
+    "href": "gcc/index.html",
+    "title": "Gestión del cambio climático",
     "section": "",
-    "text": "La temperatura media, máxima o mínima del aire describe cuánto se calienta la atmósfera, pero no cuánto sufren las personas, los cultivos, el ganado o los arrecifes. Tres razones lo explican:\n\nEl cuerpo no responde solo al aire. La humedad, el viento y la radiación cambian cuánto calor puede disipar una persona. Durante la ola de calor europea de mayo de 2026, el índice UTCI llegó a superar en hasta 4 °C la temperatura del aire en el pico diurno.\nImporta la duración y la acumulación. Un día de 38 °C aislado no equivale a cinco días seguidos, y un cuerpo o un coral expuesto a calor acumulado tiene menos margen de recuperación.\nImporta la noche. Las noches cálidas impiden la recuperación fisiológica (véase la sección sobre estrés diurno y nocturno).\n\nPor eso la ciencia del clima y la gestión del riesgo usan indicadores de estrés térmico: variables que combinan intensidad, duración, umbrales locales y, en algunos casos, humedad, viento, radiación o aclimatación.\n\n\n\n\n\n\nNoteNota sobre las fuentes\n\n\n\nEl texto completo del artículo de Nature Climate Change no fue accesible (la revista redirige a autenticación). Sus datos provienen del comunicado de ECMWF, de Copernicus y de resúmenes de prensa; verifique las cifras en el artículo original antes de citarlas. Las fórmulas de EHF, HWMId y DHW se presentan según las publicaciones originales y la documentación oficial citada; confirme en cada fuente los parámetros exactos antes de usarlas en un cálculo.",
+    "text": "Esta sección reúne recursos sobre la gestión del cambio climático y su relación con la gestión del riesgo de desastres.\n\n\n\nGestión del cambio climático\n\n\nInstituciones internacionales y nacionales de referencia en cambio climático —Naciones Unidas, IPCC— y el marco normativo colombiano de gestión del cambio climático.\n\n\n\n\nEstrés térmico\n\n\nPor qué la temperatura del aire no basta: indicadores de estrés térmico (UTCI, WBGT, EHF, HWMId, DHW), calor acumulado, impactos por sector y objetos interactivos para explorar las fórmulas.",
     "crumbs": [
-      "Gestión del cambio climático",
-      "Estrés térmico"
+      "Gestión del cambio climático"
     ]
   },
   {
-    "objectID": "gcc/estres-termico-v2.html#basados-en-temperatura-del-aire",
-    "href": "gcc/estres-termico-v2.html#basados-en-temperatura-del-aire",
-    "title": "Estrés térmico",
-    "section": "Basados en temperatura del aire",
-    "text": "Basados en temperatura del aire\n\n\n\n\n\n\n\n\nIndicador\nQué mide\nUso típico\n\n\n\n\nDías/noches sobre un umbral (p. ej., días &gt; 30 °C, “noches tropicales” con mínima ≥ 20 °C)\nFrecuencia de calor fuerte de día o de noche\nSalud pública, estadísticas climáticas\n\n\nPercentiles locales (p. ej., TX90p, TN90p)\nDías o noches por encima del percentil 90 de la climatología local\nDetección de anomalías relativas al clima del sitio\n\n\nDuración de olas de calor (WSDI, HWF, HWD)\nNúmero y largo de eventos con calor persistente\nPlanificación sectorial\n\n\nCalor acumulado (grados-día sobre un umbral)\nSuma de los excesos de temperatura sobre un umbral durante un periodo\nAgricultura, energía, ecología\n\n\nEHF\nCalor extremo frente al percentil local y frente a los 30 días previos\nAlerta temprana y salud\n\n\nHWMId\nMagnitud de una ola de calor combinando intensidad y duración\nComparación de eventos y proyecciones",
+    "objectID": "gcc/index.html#gestión-del-cambio-climático",
+    "href": "gcc/index.html#gestión-del-cambio-climático",
+    "title": "Gestión del cambio climático",
+    "section": "",
+    "text": "Esta sección reúne recursos sobre la gestión del cambio climático y su relación con la gestión del riesgo de desastres.\n\n\n\nGestión del cambio climático\n\n\nInstituciones internacionales y nacionales de referencia en cambio climático —Naciones Unidas, IPCC— y el marco normativo colombiano de gestión del cambio climático.\n\n\n\n\nEstrés térmico\n\n\nPor qué la temperatura del aire no basta: indicadores de estrés térmico (UTCI, WBGT, EHF, HWMId, DHW), calor acumulado, impactos por sector y objetos interactivos para explorar las fórmulas.",
     "crumbs": [
-      "Gestión del cambio climático",
-      "Estrés térmico"
-    ]
-  },
-  {
-    "objectID": "gcc/estres-termico-v2.html#con-humedad-viento-o-radiación",
-    "href": "gcc/estres-termico-v2.html#con-humedad-viento-o-radiación",
-    "title": "Estrés térmico",
-    "section": "Con humedad, viento o radiación",
-    "text": "Con humedad, viento o radiación\n\n\n\n\n\n\n\n\nIndicador\nQué incorpora\nObservación\n\n\n\n\nÍndice de calor / temperatura aparente\nTemperatura y humedad\nMuy usado en servicios meteorológicos\n\n\nTemperatura de bulbo húmedo (Tw)\nTemperatura y humedad (límite de enfriamiento por sudor)\nReferente para límites fisiológicos del calor húmedo\n\n\nWBGT (temperatura de globo de bulbo húmedo)\nTemperatura, humedad, viento y radiación\nEstándar en salud ocupacional y deporte\n\n\nUTCI (Universal Thermal Climate Index)\nTemperatura, humedad, viento y radiación en un modelo fisiológico\nUsado en Emerton et al. (2026); disponible en ERA5-HEAT\n\n\nTHI (Temperature-Humidity Index)\nTemperatura y humedad\nEstándar en ganadería",
-    "crumbs": [
-      "Gestión del cambio climático",
-      "Estrés térmico"
-    ]
-  },
-  {
-    "objectID": "gcc/estres-termico-v2.html#para-ecosistemas",
-    "href": "gcc/estres-termico-v2.html#para-ecosistemas",
-    "title": "Estrés térmico",
-    "section": "Para ecosistemas",
-    "text": "Para ecosistemas\n\n\n\n\n\n\n\n\nIndicador\nÁmbito\nObservación\n\n\n\n\nDegree Heating Weeks (DHW)\nCorales, océano\nCalor acumulado sobre el umbral de blanqueamiento\n\n\nOlas de calor marinas (Hobday et al.)\nOcéano\nPeriodos de agua anormalmente cálida para la época del año\n\n\nOxígeno disuelto y temperatura del agua\nPesquerías y acuicultura\nEl calor reduce el oxígeno disuelto\n\n\nUmbrales fisiológicos de cultivos y ganado\nAgricultura\nVéase la sección de impactos sectoriales",
-    "crumbs": [
-      "Gestión del cambio climático",
-      "Estrés térmico"
-    ]
-  },
-  {
-    "objectID": "gcc/estres-termico-v2.html#calor-acumulado",
-    "href": "gcc/estres-termico-v2.html#calor-acumulado",
-    "title": "Estrés térmico",
-    "section": "Calor acumulado",
-    "text": "Calor acumulado\nIdea. Sumar, durante una ventana de tiempo, cuánto excede la temperatura (o un índice térmico) un umbral:\n\\[\nCH = \\sum_{t=1}^{N} \\max\\left(0,\\; T_t - T_{umbral}\\right)\n\\]\nEs la lógica de los grados-día (de crecimiento, de enfriamiento) y la base conceptual de DHW.\n\nUtilidad: captura intensidad y duración en un solo número; permite comparar temporadas; se adapta a distintos sectores cambiando el umbral y la variable (temperatura, UTCI, WBGT).\nLimitaciones: el umbral decide el resultado y debe justificarse biológicamente; trata igual diez días leves que un día muy intenso; no incorpora aclimatación ni recuperación nocturna a menos que se calcule con variables nocturnas o compuestas.\n\nExplora los parámetros. Mueva el umbral y la ola de calor, y observe cómo cambia el exceso y la dosis acumulada. Con una ola corta e intensa y una larga y suave se puede obtener un valor de CH similar, lo que ilustra la limitación anterior. La serie es sintética (ruido con semilla fija más una ola de calor).\n\nviewof ch_umbral = Inputs.range([20, 40], {value: 30, step: 0.5, label: \"Umbral (°C)\"})\nviewof ch_base = Inputs.range([22, 34], {value: 28, step: 0.5, label: \"Temperatura típica (°C)\"})\nviewof ch_amp = Inputs.range([0, 8], {value: 4, step: 0.5, label: \"Intensidad de la ola (°C)\"})\nviewof ch_dur = Inputs.range([1, 30], {value: 8, step: 1, label: \"Duración de la ola (días)\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nch_datos = {\n  const noise = d3.randomNormal.source(d3.randomLcg(42))(0, 1.2);\n  const inicio = 40;\n  let acc = 0;\n  return d3.range(90).map(d =&gt; {\n    const bump = (d &gt;= inicio && d &lt; inicio + ch_dur)\n      ? ch_amp * Math.sin(Math.PI * (d - inicio + 0.5) / ch_dur) : 0;\n    const T = ch_base + noise() + bump;\n    const exceso = Math.max(0, T - ch_umbral);\n    acc += exceso;\n    return {dia: d + 1, T, exceso, CH: acc};\n  });\n}\n\n\n\n\n\n\n\nPlot.plot({\n  width, height: 230,\n  x: {label: \"Día\"},\n  y: {label: \"Temperatura (°C)\", grid: true},\n  marks: [\n    Plot.areaY(ch_datos, {x: \"dia\", y1: () =&gt; ch_umbral, y2: d =&gt; Math.max(ch_umbral, d.T), fill: \"#d62728\", fillOpacity: 0.5}),\n    Plot.line(ch_datos, {x: \"dia\", y: \"T\", stroke: \"#444\"}),\n    Plot.ruleY([ch_umbral], {stroke: \"#888\", strokeDasharray: \"4,3\"})\n  ]\n})\n\n\n\n\n\n\n\nPlot.plot({\n  width, height: 180,\n  x: {label: \"Día\"},\n  y: {label: \"CH acumulado (°C·día)\", grid: true},\n  marks: [Plot.line(ch_datos, {x: \"dia\", y: \"CH\", curve: \"step-after\", stroke: \"#d62728\"}), Plot.ruleY([0])]\n})\n\n\n\n\n\n\n\nmd`**CH = ${d3.format(\".1f\")(ch_datos.at(-1).CH)} °C·día**, acumulados en ${ch_datos.filter(d =&gt; d.exceso &gt; 0).length} días sobre el umbral.`",
-    "crumbs": [
-      "Gestión del cambio climático",
-      "Estrés térmico"
-    ]
-  },
-  {
-    "objectID": "gcc/estres-termico-v2.html#excess-heat-factor-ehf",
-    "href": "gcc/estres-termico-v2.html#excess-heat-factor-ehf",
-    "title": "Estrés térmico",
-    "section": "Excess Heat Factor (EHF)",
-    "text": "Excess Heat Factor (EHF)\nPropuesto por Nairn y Fawcett (2015) y usado en el servicio de olas de calor de Australia. Es el producto de dos índices:\n\\[\nEHF = \\max(0, EHI_{sig}) \\times \\max(1, EHI_{accl})\n\\]\n\n\\(EHI_{sig}\\): media de tres días de temperatura menos un percentil alto de la climatología local (el percentil depende de la versión del índice; la literatura cita T95 y otros).\n\\(EHI_{accl}\\): la misma media de tres días menos la media de los 30 días previos (aclimatación).\nHay ola de calor cuando EHF &gt; 0. La severidad se expresa como EHF dividido por el percentil 85 de los valores positivos de EHF en el periodo de referencia, lo que permite clasificar eventos como de baja intensidad, severos o extremos.\n\nUtilidad: combina umbral local con un término de adaptación a los días recientes; se ha usado como métrica asociada a efectos en salud y es útil para alerta temprana. Limitaciones: usa solo temperatura (no humedad ni viento) y se diseñó en clima extratropical; las unidades (°C²) dificultan la comunicación; en el trópico, con baja variabilidad térmica, los percentiles se vuelven muy estrechos y probablemente requiere calibración local (consideración del autor, no verificada en las fuentes).\nExplora los parámetros. Cambie el percentil del umbral, la intensidad y la duración de la ola, y active o desactive el término de aclimatación para ver cómo el factor \\(\\max(1, EHI_{accl})\\) amplifica los eventos que llegan tras días frescos. Simplificación didáctica: el percentil se calcula sobre la propia serie sintética de un año, no sobre una climatología de referencia de varias décadas.\n\nviewof ehf_pct = Inputs.range([80, 99], {value: 95, step: 1, label: \"Percentil del umbral (%)\"})\nviewof ehf_amp = Inputs.range([0, 10], {value: 5, step: 0.5, label: \"Intensidad de la ola (°C)\"})\nviewof ehf_dur = Inputs.range([2, 20], {value: 8, step: 1, label: \"Duración de la ola (días)\"})\nviewof ehf_usar = Inputs.toggle({label: \"Incluir aclimatación (30 días)\", value: true})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nehf_T = {\n  const noise = d3.randomNormal.source(d3.randomLcg(7))(0, 1.5);\n  const centro = 190;\n  return d3.range(365).map(d =&gt; {\n    const bump = ehf_amp * Math.max(0, 1 - Math.abs(d - centro) / (ehf_dur / 2));\n    return 20 + 7 * Math.sin(2 * Math.PI * (d - 110) / 365) + noise() + bump;\n  });\n}\n\nehf_calc = {\n  const ordenada = [...ehf_T].sort(d3.ascending);\n  const tp = d3.quantileSorted(ordenada, ehf_pct / 100);\n  const filas = [];\n  for (let i = 30; i &lt; ehf_T.length - 2; i++) {\n    const m3 = d3.mean(ehf_T.slice(i, i + 3));\n    const m30 = d3.mean(ehf_T.slice(i - 30, i));\n    const sig = m3 - tp, accl = m3 - m30;\n    const ehf = Math.max(0, sig) * (ehf_usar ? Math.max(1, accl) : 1);\n    filas.push({dia: i + 1, T: ehf_T[i], sig, accl, ehf});\n  }\n  const pos = filas.filter(r =&gt; r.ehf &gt; 0).map(r =&gt; r.ehf).sort(d3.ascending);\n  const p85 = pos.length ? d3.quantileSorted(pos, 0.85) : NaN;\n  return {tp, filas, p85};\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  width, height: 230,\n  x: {label: \"Día del año\"},\n  y: {label: \"Temperatura media diaria (°C)\", grid: true},\n  marks: [\n    Plot.line(ehf_calc.filas, {x: \"dia\", y: \"T\", stroke: \"#444\"}),\n    Plot.ruleY([ehf_calc.tp], {stroke: \"#888\", strokeDasharray: \"4,3\"}),\n    Plot.dot(ehf_calc.filas.filter(r =&gt; r.ehf &gt; 0), {x: \"dia\", y: \"T\", fill: \"#d62728\"})\n  ]\n})\n\n\n\n\n\n\n\nPlot.plot({\n  width, height: 180,\n  x: {label: \"Día del año\"},\n  y: {label: \"EHF (°C²)\", grid: true},\n  marks: [\n    Plot.ruleX(ehf_calc.filas, {x: \"dia\", y1: 0, y2: \"ehf\", stroke: \"#d62728\"}),\n    Plot.ruleY([0])\n  ]\n})\n\n\n\n\n\n\n\n{\n  const pos = ehf_calc.filas.filter(r =&gt; r.ehf &gt; 0);\n  const max = d3.max(pos, r =&gt; r.ehf);\n  const detalle = pos.length\n    ? `EHF máximo: **${d3.format(\".1f\")(max)} °C²**; severidad (EHF máx / P85 de los positivos): **${d3.format(\".2f\")(max / ehf_calc.p85)}**.`\n    : `No hay olas de calor con estos parámetros.`;\n  return md`Umbral (percentil ${ehf_pct}): **${d3.format(\".1f\")(ehf_calc.tp)} °C**. Días con EHF &gt; 0: **${pos.length}**. ${detalle}`;\n}",
-    "crumbs": [
-      "Gestión del cambio climático",
-      "Estrés térmico"
-    ]
-  },
-  {
-    "objectID": "gcc/estres-termico-v2.html#hwmid-heat-wave-magnitude-index-daily",
-    "href": "gcc/estres-termico-v2.html#hwmid-heat-wave-magnitude-index-daily",
-    "title": "Estrés térmico",
-    "section": "HWMId (Heat Wave Magnitude Index daily)",
-    "text": "HWMId (Heat Wave Magnitude Index daily)\nPropuesto por Russo et al. (2015). Una ola de calor es una racha de al menos tres días con temperatura máxima por encima del percentil 90 de una ventana de 31 días centrada en cada día, según una climatología (p. ej., 1981–2010). A cada día se le asigna una magnitud diaria según qué tan alta es la temperatura respecto del rango intercuartil de los máximos anuales de un periodo de referencia, y el índice del evento es la suma de las magnitudes diarias. Conceptualmente:\n\\[\nHWMId = \\max_{\\text{eventos}} \\sum_{d \\in evento} M_d\n\\]\nUtilidad: integra intensidad y duración, no se satura al superar el máximo histórico, es comparable entre sitios y sirvió para proyectar la ocurrencia de olas extremas. Limitaciones: exige series diarias largas y homogéneas; se basa en temperatura máxima y no en humedad ni noche; y su sensibilidad depende de la normalización con el rango intercuartil, lo que debe revisarse en regiones de baja variabilidad.\nExplora los parámetros. La serie sintética tiene 31 años de temperatura máxima diaria; los 30 primeros son la climatología de referencia y el año 31 contiene una ola de calor. Cambie el percentil, la duración mínima, la tendencia y la ola, y observe cómo cambian los eventos detectados y su magnitud. Un evento puede superar el umbral de percentil y tener magnitud 0 si su temperatura no supera el cuartil inferior de los máximos anuales. Simplificación didáctica: el ruido es un proceso autorregresivo sintético y se ignoran los años bisiestos.\n\nviewof hw_pct = Inputs.range([80, 99], {value: 90, step: 1, label: \"Percentil del umbral (%)\"})\nviewof hw_min = Inputs.range([2, 7], {value: 3, step: 1, label: \"Duración mínima (días)\"})\nviewof hw_amp = Inputs.range([0, 10], {value: 6, step: 0.5, label: \"Intensidad de la ola (°C)\"})\nviewof hw_dur = Inputs.range([3, 30], {value: 10, step: 1, label: \"Duración de la ola (días)\"})\nviewof hw_trend = Inputs.range([0, 0.1], {value: 0.03, step: 0.005, label: \"Tendencia (°C/año)\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw_base = {\n  const z = d3.randomNormal.source(d3.randomLcg(11))(0, 1);\n  const rho = 0.6, sd = 2;\n  return d3.range(31).map(() =&gt; {\n    let e = 0;\n    return d3.range(365).map(d =&gt; {\n      e = rho * e + Math.sqrt(1 - rho * rho) * sd * z();\n      return 26 + 5 * Math.sin(2 * Math.PI * (d - 110) / 365) + e;\n    });\n  });\n}\n\nhw_calc = {\n  const N = 365, Y = 30;\n  const T = hw_base.map((anio, y) =&gt; anio.map(v =&gt; v + hw_trend * y));\n  const obj = T[Y].map((v, d) =&gt; v + hw_amp * Math.max(0, 1 - Math.abs(d - 190) / (hw_dur / 2)));\n  const umbral = d3.range(N).map(d =&gt; {\n    const vals = [];\n    for (let y = 0; y &lt; Y; y++) for (let k = -15; k &lt;= 15; k++) vals.push(T[y][(d + k + N) % N]);\n    vals.sort(d3.ascending);\n    return d3.quantileSorted(vals, hw_pct / 100);\n  });\n  const maximos = T.slice(0, Y).map(a =&gt; d3.max(a)).sort(d3.ascending);\n  const q25 = d3.quantileSorted(maximos, 0.25), q75 = d3.quantileSorted(maximos, 0.75);\n  const eventos = [];\n  let d = 0;\n  while (d &lt; N) {\n    if (obj[d] &gt; umbral[d]) {\n      let e = d;\n      while (e &lt; N && obj[e] &gt; umbral[e]) e++;\n      if (e - d &gt;= hw_min) {\n        let mag = 0;\n        for (let k = d; k &lt; e; k++) mag += Math.max(0, (obj[k] - q25) / (q75 - q25));\n        eventos.push({ini: d + 1, fin: e, dias: e - d, mag});\n      }\n      d = e;\n    } else d++;\n  }\n  return {obj, umbral, q25, q75, eventos, hwmid: d3.max(eventos, e =&gt; e.mag) ?? 0};\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  width, height: 250,\n  x: {label: \"Día del año 31\"},\n  y: {label: \"Temperatura máxima (°C)\", grid: true},\n  marks: [\n    Plot.rect(hw_calc.eventos, {x1: \"ini\", x2: \"fin\", y1: d3.min(hw_calc.obj) - 1, y2: d3.max(hw_calc.obj) + 1, fill: \"#d62728\", fillOpacity: 0.18}),\n    Plot.line(hw_calc.obj.map((T, i) =&gt; ({dia: i + 1, T})), {x: \"dia\", y: \"T\", stroke: \"#444\"}),\n    Plot.line(hw_calc.umbral.map((T, i) =&gt; ({dia: i + 1, T})), {x: \"dia\", y: \"T\", stroke: \"#888\", strokeDasharray: \"4,3\"})\n  ]\n})\n\n\n\n\n\n\n\nmd`**HWMId = ${d3.format(\".2f\")(hw_calc.hwmid)}** (magnitud del evento mayor); eventos detectados: **${hw_calc.eventos.length}**. Rango intercuartil de los máximos anuales: ${d3.format(\".1f\")(hw_calc.q25)}–${d3.format(\".1f\")(hw_calc.q75)} °C.`\n\n\n\n\n\n\n\nhw_calc.eventos.length\n  ? Inputs.table(hw_calc.eventos.map(e =&gt; ({\"Inicio (día)\": e.ini, \"Fin (día)\": e.fin, \"Duración (días)\": e.dias, \"Magnitud\": +e.mag.toFixed(2)})))\n  : md`_No se detectan eventos con estos parámetros._`",
-    "crumbs": [
-      "Gestión del cambio climático",
-      "Estrés térmico"
-    ]
-  },
-  {
-    "objectID": "gcc/estres-termico-v2.html#degree-heating-weeks-dhw",
-    "href": "gcc/estres-termico-v2.html#degree-heating-weeks-dhw",
-    "title": "Estrés térmico",
-    "section": "Degree Heating Weeks (DHW)",
-    "text": "Degree Heating Weeks (DHW)\nNOAA Coral Reef Watch define DHW como la acumulación de estrés térmico sobre los corales durante las 12 semanas previas:\n\nMMM: media mensual máxima de la temperatura superficial del mar (TSM) en el sitio.\nHotSpot: TSM menos MMM. Solo cuenta cuando HotSpot ≥ 1 °C.\nDHW: suma de los HotSpot ≥ 1 °C en una ventana móvil de 12 semanas. Se expresa en °C-semanas.\n\nUmbrales operativos de NOAA: 4 °C-semanas, blanqueamiento esperado en el arrecife; 8 °C-semanas o más, blanqueamiento con mortalidad probable de corales sensibles. En diciembre de 2023 se añadieron los niveles de alerta 3 a 5 tras el calor extremo de 2023.\nUtilidad: es el mejor ejemplo de un indicador acumulado con umbral biológicamente anclado (MMM + 1 °C) y validado frente a eventos reales de blanqueamiento. Limitaciones: el umbral depende de la climatología histórica de cada píxel, de modo que no captura la aclimatación ni la adaptación de los corales; una ventana de 12 semanas puede subestimar eventos largos y modestos o eventos cortos e intensos; no describe efectos en otros organismos marinos, para los cuales se usan las olas de calor marinas y el oxígeno disuelto.\nExplora los parámetros. Cambie el MMM, la anomalía y su duración, el HotSpot mínimo y la ventana de acumulación. Con una anomalía larga y modesta el DHW puede superar el umbral de 4 °C-semanas aunque ningún día sea extremo, y una ventana corta puede perder eventos prolongados. Simplificación didáctica: la climatología es una curva sinusoidal cuyo máximo diario es el MMM, y se acumulan valores diarios divididos entre 7.\n\nviewof dhw_mmm = Inputs.range([26, 31], {value: 29, step: 0.1, label: \"MMM (°C)\"})\nviewof dhw_anom = Inputs.range([0, 4], {value: 1.8, step: 0.1, label: \"Anomalía máxima (°C)\"})\nviewof dhw_dur = Inputs.range([7, 120], {value: 60, step: 1, label: \"Duración de la anomalía (días)\"})\nviewof dhw_umbral = Inputs.range([0, 2], {value: 1, step: 0.1, label: \"HotSpot mínimo (°C)\"})\nviewof dhw_sem = Inputs.range([4, 16], {value: 12, step: 1, label: \"Ventana (semanas)\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndhw_calc = {\n  const N = 365, pico = 90;\n  const ruido = d3.randomNormal.source(d3.randomLcg(5))(0, 0.15);\n  const serie = d3.range(N).map(d =&gt; {\n    const clima = dhw_mmm - 1.2 + 1.2 * Math.cos(2 * Math.PI * (d - pico) / N);\n    const bump = dhw_anom * Math.max(0, 1 - Math.abs(d - (pico + 10)) / (dhw_dur / 2));\n    return {dia: d + 1, clima, sst: clima + ruido() + bump};\n  });\n  const w = dhw_sem * 7;\n  serie.forEach((r, i) =&gt; {\n    r.hotspot = r.sst - dhw_mmm;\n    let s = 0;\n    for (let k = Math.max(0, i - w + 1); k &lt;= i; k++) {\n      const h = serie[k].sst - dhw_mmm;\n      if (h &gt;= dhw_umbral) s += h;\n    }\n    r.dhw = s / 7;\n  });\n  return serie;\n}\n\n\n\n\n\n\n\nPlot.plot({\n  width, height: 230,\n  x: {label: \"Día del año\"},\n  y: {label: \"TSM (°C)\", grid: true},\n  marks: [\n    Plot.line(dhw_calc, {x: \"dia\", y: \"clima\", stroke: \"#999\"}),\n    Plot.line(dhw_calc, {x: \"dia\", y: \"sst\", stroke: \"#1f77b4\"}),\n    Plot.ruleY([dhw_mmm], {stroke: \"#d62728\"}),\n    Plot.ruleY([dhw_mmm + dhw_umbral], {stroke: \"#d62728\", strokeDasharray: \"4,3\"})\n  ]\n})\n\n\n\n\n\n\n\nPlot.plot({\n  width, height: 200,\n  x: {label: \"Día del año\"},\n  y: {label: \"DHW (°C-semanas)\", grid: true},\n  marks: [\n    Plot.line(dhw_calc, {x: \"dia\", y: \"dhw\", stroke: \"#d62728\"}),\n    Plot.ruleY([4, 8], {stroke: \"#888\", strokeDasharray: \"4,3\"}),\n    Plot.text([{x: 365, y: 4, t: \"4: blanqueamiento\"}, {x: 365, y: 8, t: \"8: mortalidad probable\"}], {x: \"x\", y: \"y\", text: \"t\", textAnchor: \"end\", dy: -4, fill: \"#666\"})\n  ]\n})\n\n\n\n\n\n\n\n{\n  const max = d3.max(dhw_calc, r =&gt; r.dhw);\n  const nivel = max &gt;= 8 ? \"blanqueamiento con mortalidad probable de corales sensibles\" : max &gt;= 4 ? \"blanqueamiento esperado\" : \"por debajo del umbral de blanqueamiento\";\n  return md`**DHW máximo = ${d3.format(\".1f\")(max)} °C-semanas**: ${nivel}. Líneas: gris = climatología, azul = TSM, rojo continuo = MMM, rojo discontinuo = MMM + HotSpot mínimo.`;\n}",
-    "crumbs": [
-      "Gestión del cambio climático",
-      "Estrés térmico"
-    ]
-  },
-  {
-    "objectID": "gcc/estres-termico-v2.html#salud-humana-y-trabajo",
-    "href": "gcc/estres-termico-v2.html#salud-humana-y-trabajo",
-    "title": "Estrés térmico",
-    "section": "Salud humana y trabajo",
-    "text": "Salud humana y trabajo\nEl IPCC (AR6) trata el estrés térmico como un riesgo creciente para la salud, con confianza muy alta, debido a urbanización, aumento de extremos de alta temperatura y envejecimiento poblacional. Lo define como las condiciones en que un organismo absorbe calor en exceso por exposición a altas temperaturas del aire o del agua, o a radiación térmica; en mamíferos y aves, la combinación de calor, humedad alta y poco viento hace fallar la termorregulación (definición del glosario del GTI, citada por fuentes secundarias). La literatura asociada sobre calor húmedo (Tw, WBGT, índice de calor) muestra que la elección del índice cambia la magnitud del peligro estimado.\nEn el trabajo, el informe FAO-OMM (2026) estima que los días demasiado calurosos para trabajar podrían llegar a 250 al año en buena parte del sur de Asia, el África subsahariana tropical y partes de Centroamérica y Suramérica.",
-    "crumbs": [
-      "Gestión del cambio climático",
-      "Estrés térmico"
-    ]
-  },
-  {
-    "objectID": "gcc/estres-termico-v2.html#agricultura-y-ganadería",
-    "href": "gcc/estres-termico-v2.html#agricultura-y-ganadería",
-    "title": "Estrés térmico",
-    "section": "Agricultura y ganadería",
-    "text": "Agricultura y ganadería\nEl informe conjunto Extreme heat and agriculture (FAO-OMM, abril de 2026) reporta:\n\nGanadería: el estrés comienza por encima de 25 °C en la mayoría de las especies comunes, y algo por debajo en aves y cerdos, que no se enfrían sudando.\nCultivos: las caídas de rendimiento comienzan por encima de 30 °C en la mayoría de los cultivos principales, y antes en papa y cebada.\nRecomendaciones: selección de variedades y razas, ajuste de calendarios de siembra, sistemas de alerta temprana y servicios climáticos, protección financiera y protección social reactiva a choques.\n\nEl enfoque de la FAO es sectorial y basado en umbrales fisiológicos, no en un único índice. La nota de prensa consultada no menciona THI ni WBGT; el THI y sus rangos habituales (por debajo de 72 sin estrés, 72–79 leve, 80–89 moderado y más de 89 severo) provienen de guías de extensión universitaria (Texas A&M) y no de la FAO.",
-    "crumbs": [
-      "Gestión del cambio climático",
-      "Estrés térmico"
-    ]
-  },
-  {
-    "objectID": "gcc/estres-termico-v2.html#océanos-pesquerías-y-arrecifes",
-    "href": "gcc/estres-termico-v2.html#océanos-pesquerías-y-arrecifes",
-    "title": "Estrés térmico",
-    "section": "Océanos, pesquerías y arrecifes",
-    "text": "Océanos, pesquerías y arrecifes\n\nPesca: el calor extremo reduce el oxígeno disuelto y puede causar fallo cardiaco en peces; más del 90 % del océano global sufrió al menos una ola de calor marina en 2025 (FAO-OMM, 2026).\nOlas de calor marinas: según el IPCC, son más frecuentes, intensas y largas desde la década de 1980, y desde al menos 2006 es muy probable que se deban al cambio climático de origen humano.\nArrecifes: el indicador de referencia es DHW (véase la sección anterior).",
-    "crumbs": [
-      "Gestión del cambio climático",
-      "Estrés térmico"
-    ]
-  },
-  {
-    "objectID": "gcc/estres-termico-v2.html#bosques-y-biodiversidad",
-    "href": "gcc/estres-termico-v2.html#bosques-y-biodiversidad",
-    "title": "Estrés térmico",
-    "section": "Bosques y biodiversidad",
-    "text": "Bosques y biodiversidad\nPara bosques y biodiversidad no hay un indicador único consolidado. Se combinan extremos térmicos, calor acumulado, déficit de presión de vapor (VPD), sequía y umbrales de tolerancia de las especies, para estimar daño fisiológico, mortalidad y alteraciones ecológicas. Esta sección se apoya en la síntesis metodológica del autor y no en una fuente específica consultada para este artículo; requiere referencias propias.\n\n\n\n\n\n\nWarning\n\n\n\nNo se pudo acceder a los capítulos 7 y 11 del AR6 durante la elaboración de este artículo; los puntos atribuidos al IPCC se apoyan en la síntesis de mensajes de salud y calor del AR6 y en el glosario citado por fuentes secundarias. Se recomienda verificar en los capítulos originales.",
-    "crumbs": [
-      "Gestión del cambio climático",
-      "Estrés térmico"
+      "Gestión del cambio climático"
     ]
   },
   {
@@ -6023,23 +5911,135 @@
     ]
   },
   {
-    "objectID": "gcc/index.html",
-    "href": "gcc/index.html",
-    "title": "Gestión del cambio climático",
+    "objectID": "gcc/estres-termico.html",
+    "href": "gcc/estres-termico.html",
+    "title": "Estrés térmico",
     "section": "",
-    "text": "Esta sección reúne recursos sobre la gestión del cambio climático y su relación con la gestión del riesgo de desastres.\n\n\n\nGestión del cambio climático\n\n\nInstituciones internacionales y nacionales de referencia en cambio climático —Naciones Unidas, IPCC— y el marco normativo colombiano de gestión del cambio climático.\n\n\n\n\nEstrés térmico\n\n\nPor qué la temperatura del aire no basta: indicadores de estrés térmico (UTCI, WBGT, EHF, HWMId, DHW), calor acumulado, impactos por sector y objetos interactivos para explorar las fórmulas.",
+    "text": "La temperatura media, máxima o mínima del aire describe cuánto se calienta la atmósfera, pero no cuánto sufren las personas, los cultivos, el ganado o los arrecifes. Tres razones lo explican:\n\nEl cuerpo no responde solo al aire. La humedad, el viento y la radiación cambian cuánto calor puede disipar una persona. Durante la ola de calor europea de mayo de 2026, el índice UTCI llegó a superar en hasta 4 °C la temperatura del aire en el pico diurno.\nImporta la duración y la acumulación. Un día de 38 °C aislado no equivale a cinco días seguidos, y un cuerpo o un coral expuesto a calor acumulado tiene menos margen de recuperación.\nImporta la noche. Las noches cálidas impiden la recuperación fisiológica (véase la sección sobre estrés diurno y nocturno).\n\nPor eso la ciencia del clima y la gestión del riesgo usan indicadores de estrés térmico: variables que combinan intensidad, duración, umbrales locales y, en algunos casos, humedad, viento, radiación o aclimatación.\n\n\n\n\n\n\nNoteNota sobre las fuentes\n\n\n\nEl texto completo del artículo de Nature Climate Change no fue accesible (la revista redirige a autenticación). Sus datos provienen del comunicado de ECMWF, de Copernicus y de resúmenes de prensa; verifique las cifras en el artículo original antes de citarlas. Las fórmulas de EHF, HWMId y DHW se presentan según las publicaciones originales y la documentación oficial citada; confirme en cada fuente los parámetros exactos antes de usarlas en un cálculo.",
     "crumbs": [
-      "Gestión del cambio climático"
+      "Gestión del cambio climático",
+      "Estrés térmico"
     ]
   },
   {
-    "objectID": "gcc/index.html#gestión-del-cambio-climático",
-    "href": "gcc/index.html#gestión-del-cambio-climático",
-    "title": "Gestión del cambio climático",
-    "section": "",
-    "text": "Esta sección reúne recursos sobre la gestión del cambio climático y su relación con la gestión del riesgo de desastres.\n\n\n\nGestión del cambio climático\n\n\nInstituciones internacionales y nacionales de referencia en cambio climático —Naciones Unidas, IPCC— y el marco normativo colombiano de gestión del cambio climático.\n\n\n\n\nEstrés térmico\n\n\nPor qué la temperatura del aire no basta: indicadores de estrés térmico (UTCI, WBGT, EHF, HWMId, DHW), calor acumulado, impactos por sector y objetos interactivos para explorar las fórmulas.",
+    "objectID": "gcc/estres-termico.html#basados-en-temperatura-del-aire",
+    "href": "gcc/estres-termico.html#basados-en-temperatura-del-aire",
+    "title": "Estrés térmico",
+    "section": "Basados en temperatura del aire",
+    "text": "Basados en temperatura del aire\n\n\n\n\n\n\n\n\nIndicador\nQué mide\nUso típico\n\n\n\n\nDías/noches sobre un umbral (p. ej., días &gt; 30 °C, “noches tropicales” con mínima ≥ 20 °C)\nFrecuencia de calor fuerte de día o de noche\nSalud pública, estadísticas climáticas\n\n\nPercentiles locales (p. ej., TX90p, TN90p)\nDías o noches por encima del percentil 90 de la climatología local\nDetección de anomalías relativas al clima del sitio\n\n\nDuración de olas de calor (WSDI, HWF, HWD)\nNúmero y largo de eventos con calor persistente\nPlanificación sectorial\n\n\nCalor acumulado (grados-día sobre un umbral)\nSuma de los excesos de temperatura sobre un umbral durante un periodo\nAgricultura, energía, ecología\n\n\nEHF\nCalor extremo frente al percentil local y frente a los 30 días previos\nAlerta temprana y salud\n\n\nHWMId\nMagnitud de una ola de calor combinando intensidad y duración\nComparación de eventos y proyecciones",
     "crumbs": [
-      "Gestión del cambio climático"
+      "Gestión del cambio climático",
+      "Estrés térmico"
+    ]
+  },
+  {
+    "objectID": "gcc/estres-termico.html#con-humedad-viento-o-radiación",
+    "href": "gcc/estres-termico.html#con-humedad-viento-o-radiación",
+    "title": "Estrés térmico",
+    "section": "Con humedad, viento o radiación",
+    "text": "Con humedad, viento o radiación\n\n\n\n\n\n\n\n\nIndicador\nQué incorpora\nObservación\n\n\n\n\nÍndice de calor / temperatura aparente\nTemperatura y humedad\nMuy usado en servicios meteorológicos\n\n\nTemperatura de bulbo húmedo (Tw)\nTemperatura y humedad (límite de enfriamiento por sudor)\nReferente para límites fisiológicos del calor húmedo\n\n\nWBGT (temperatura de globo de bulbo húmedo)\nTemperatura, humedad, viento y radiación\nEstándar en salud ocupacional y deporte\n\n\nUTCI (Universal Thermal Climate Index)\nTemperatura, humedad, viento y radiación en un modelo fisiológico\nUsado en Emerton et al. (2026); disponible en ERA5-HEAT\n\n\nTHI (Temperature-Humidity Index)\nTemperatura y humedad\nEstándar en ganadería",
+    "crumbs": [
+      "Gestión del cambio climático",
+      "Estrés térmico"
+    ]
+  },
+  {
+    "objectID": "gcc/estres-termico.html#para-ecosistemas",
+    "href": "gcc/estres-termico.html#para-ecosistemas",
+    "title": "Estrés térmico",
+    "section": "Para ecosistemas",
+    "text": "Para ecosistemas\n\n\n\n\n\n\n\n\nIndicador\nÁmbito\nObservación\n\n\n\n\nDegree Heating Weeks (DHW)\nCorales, océano\nCalor acumulado sobre el umbral de blanqueamiento\n\n\nOlas de calor marinas (Hobday et al.)\nOcéano\nPeriodos de agua anormalmente cálida para la época del año\n\n\nOxígeno disuelto y temperatura del agua\nPesquerías y acuicultura\nEl calor reduce el oxígeno disuelto\n\n\nUmbrales fisiológicos de cultivos y ganado\nAgricultura\nVéase la sección de impactos sectoriales",
+    "crumbs": [
+      "Gestión del cambio climático",
+      "Estrés térmico"
+    ]
+  },
+  {
+    "objectID": "gcc/estres-termico.html#calor-acumulado",
+    "href": "gcc/estres-termico.html#calor-acumulado",
+    "title": "Estrés térmico",
+    "section": "Calor acumulado",
+    "text": "Calor acumulado\nIdea. Sumar, durante una ventana de tiempo, cuánto excede la temperatura (o un índice térmico) un umbral:\n\\[\nCH = \\sum_{t=1}^{N} \\max\\left(0,\\; T_t - T_{umbral}\\right)\n\\]\nEs la lógica de los grados-día (de crecimiento, de enfriamiento) y la base conceptual de DHW.\n\nUtilidad: captura intensidad y duración en un solo número; permite comparar temporadas; se adapta a distintos sectores cambiando el umbral y la variable (temperatura, UTCI, WBGT).\nLimitaciones: el umbral decide el resultado y debe justificarse biológicamente; trata igual diez días leves que un día muy intenso; no incorpora aclimatación ni recuperación nocturna a menos que se calcule con variables nocturnas o compuestas.\n\nExplora los parámetros. Mueva el umbral y la ola de calor, y observe cómo cambia el exceso y la dosis acumulada. Con una ola corta e intensa y una larga y suave se puede obtener un valor de CH similar, lo que ilustra la limitación anterior. La serie es sintética (ruido con semilla fija más una ola de calor).\n\nviewof ch_umbral = Inputs.range([20, 40], {value: 30, step: 0.5, label: \"Umbral (°C)\"})\nviewof ch_base = Inputs.range([22, 34], {value: 28, step: 0.5, label: \"Temperatura típica (°C)\"})\nviewof ch_amp = Inputs.range([0, 8], {value: 4, step: 0.5, label: \"Intensidad de la ola (°C)\"})\nviewof ch_dur = Inputs.range([1, 30], {value: 8, step: 1, label: \"Duración de la ola (días)\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nch_datos = {\n  const noise = d3.randomNormal.source(d3.randomLcg(42))(0, 1.2);\n  const inicio = 40;\n  let acc = 0;\n  return d3.range(90).map(d =&gt; {\n    const bump = (d &gt;= inicio && d &lt; inicio + ch_dur)\n      ? ch_amp * Math.sin(Math.PI * (d - inicio + 0.5) / ch_dur) : 0;\n    const T = ch_base + noise() + bump;\n    const exceso = Math.max(0, T - ch_umbral);\n    acc += exceso;\n    return {dia: d + 1, T, exceso, CH: acc};\n  });\n}\n\n\n\n\n\n\n\nPlot.plot({\n  width, height: 230,\n  x: {label: \"Día\"},\n  y: {label: \"Temperatura (°C)\", grid: true},\n  marks: [\n    Plot.areaY(ch_datos, {x: \"dia\", y1: () =&gt; ch_umbral, y2: d =&gt; Math.max(ch_umbral, d.T), fill: \"#d62728\", fillOpacity: 0.5}),\n    Plot.line(ch_datos, {x: \"dia\", y: \"T\", stroke: \"#444\"}),\n    Plot.ruleY([ch_umbral], {stroke: \"#888\", strokeDasharray: \"4,3\"})\n  ]\n})\n\n\n\n\n\n\n\nPlot.plot({\n  width, height: 180,\n  x: {label: \"Día\"},\n  y: {label: \"CH acumulado (°C·día)\", grid: true},\n  marks: [Plot.line(ch_datos, {x: \"dia\", y: \"CH\", curve: \"step-after\", stroke: \"#d62728\"}), Plot.ruleY([0])]\n})\n\n\n\n\n\n\n\nmd`**CH = ${d3.format(\".1f\")(ch_datos.at(-1).CH)} °C·día**, acumulados en ${ch_datos.filter(d =&gt; d.exceso &gt; 0).length} días sobre el umbral.`",
+    "crumbs": [
+      "Gestión del cambio climático",
+      "Estrés térmico"
+    ]
+  },
+  {
+    "objectID": "gcc/estres-termico.html#excess-heat-factor-ehf",
+    "href": "gcc/estres-termico.html#excess-heat-factor-ehf",
+    "title": "Estrés térmico",
+    "section": "Excess Heat Factor (EHF)",
+    "text": "Excess Heat Factor (EHF)\nPropuesto por Nairn y Fawcett (2015) y usado en el servicio de olas de calor de Australia. Es el producto de dos índices:\n\\[\nEHF = \\max(0, EHI_{sig}) \\times \\max(1, EHI_{accl})\n\\]\n\n\\(EHI_{sig}\\): media de tres días de temperatura menos un percentil alto de la climatología local (el percentil depende de la versión del índice; la literatura cita T95 y otros).\n\\(EHI_{accl}\\): la misma media de tres días menos la media de los 30 días previos (aclimatación).\nHay ola de calor cuando EHF &gt; 0. La severidad se expresa como EHF dividido por el percentil 85 de los valores positivos de EHF en el periodo de referencia, lo que permite clasificar eventos como de baja intensidad, severos o extremos.\n\nUtilidad: combina umbral local con un término de adaptación a los días recientes; se ha usado como métrica asociada a efectos en salud y es útil para alerta temprana. Limitaciones: usa solo temperatura (no humedad ni viento) y se diseñó en clima extratropical; las unidades (°C²) dificultan la comunicación; en el trópico, con baja variabilidad térmica, los percentiles se vuelven muy estrechos y probablemente requiere calibración local (consideración del autor, no verificada en las fuentes).\nExplora los parámetros. Cambie el percentil del umbral, la intensidad y la duración de la ola, y active o desactive el término de aclimatación para ver cómo el factor \\(\\max(1, EHI_{accl})\\) amplifica los eventos que llegan tras días frescos. Simplificación didáctica: el percentil se calcula sobre la propia serie sintética de un año, no sobre una climatología de referencia de varias décadas.\n\nviewof ehf_pct = Inputs.range([80, 99], {value: 95, step: 1, label: \"Percentil del umbral (%)\"})\nviewof ehf_amp = Inputs.range([0, 10], {value: 5, step: 0.5, label: \"Intensidad de la ola (°C)\"})\nviewof ehf_dur = Inputs.range([2, 20], {value: 8, step: 1, label: \"Duración de la ola (días)\"})\nviewof ehf_usar = Inputs.toggle({label: \"Incluir aclimatación (30 días)\", value: true})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nehf_T = {\n  const noise = d3.randomNormal.source(d3.randomLcg(7))(0, 1.5);\n  const centro = 190;\n  return d3.range(365).map(d =&gt; {\n    const bump = ehf_amp * Math.max(0, 1 - Math.abs(d - centro) / (ehf_dur / 2));\n    return 20 + 7 * Math.sin(2 * Math.PI * (d - 110) / 365) + noise() + bump;\n  });\n}\n\nehf_calc = {\n  const ordenada = [...ehf_T].sort(d3.ascending);\n  const tp = d3.quantileSorted(ordenada, ehf_pct / 100);\n  const filas = [];\n  for (let i = 30; i &lt; ehf_T.length - 2; i++) {\n    const m3 = d3.mean(ehf_T.slice(i, i + 3));\n    const m30 = d3.mean(ehf_T.slice(i - 30, i));\n    const sig = m3 - tp, accl = m3 - m30;\n    const ehf = Math.max(0, sig) * (ehf_usar ? Math.max(1, accl) : 1);\n    filas.push({dia: i + 1, T: ehf_T[i], sig, accl, ehf});\n  }\n  const pos = filas.filter(r =&gt; r.ehf &gt; 0).map(r =&gt; r.ehf).sort(d3.ascending);\n  const p85 = pos.length ? d3.quantileSorted(pos, 0.85) : NaN;\n  return {tp, filas, p85};\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  width, height: 230,\n  x: {label: \"Día del año\"},\n  y: {label: \"Temperatura media diaria (°C)\", grid: true},\n  marks: [\n    Plot.line(ehf_calc.filas, {x: \"dia\", y: \"T\", stroke: \"#444\"}),\n    Plot.ruleY([ehf_calc.tp], {stroke: \"#888\", strokeDasharray: \"4,3\"}),\n    Plot.dot(ehf_calc.filas.filter(r =&gt; r.ehf &gt; 0), {x: \"dia\", y: \"T\", fill: \"#d62728\"})\n  ]\n})\n\n\n\n\n\n\n\nPlot.plot({\n  width, height: 180,\n  x: {label: \"Día del año\"},\n  y: {label: \"EHF (°C²)\", grid: true},\n  marks: [\n    Plot.ruleX(ehf_calc.filas, {x: \"dia\", y1: 0, y2: \"ehf\", stroke: \"#d62728\"}),\n    Plot.ruleY([0])\n  ]\n})\n\n\n\n\n\n\n\n{\n  const pos = ehf_calc.filas.filter(r =&gt; r.ehf &gt; 0);\n  const max = d3.max(pos, r =&gt; r.ehf);\n  const detalle = pos.length\n    ? `EHF máximo: **${d3.format(\".1f\")(max)} °C²**; severidad (EHF máx / P85 de los positivos): **${d3.format(\".2f\")(max / ehf_calc.p85)}**.`\n    : `No hay olas de calor con estos parámetros.`;\n  return md`Umbral (percentil ${ehf_pct}): **${d3.format(\".1f\")(ehf_calc.tp)} °C**. Días con EHF &gt; 0: **${pos.length}**. ${detalle}`;\n}",
+    "crumbs": [
+      "Gestión del cambio climático",
+      "Estrés térmico"
+    ]
+  },
+  {
+    "objectID": "gcc/estres-termico.html#hwmid-heat-wave-magnitude-index-daily",
+    "href": "gcc/estres-termico.html#hwmid-heat-wave-magnitude-index-daily",
+    "title": "Estrés térmico",
+    "section": "HWMId (Heat Wave Magnitude Index daily)",
+    "text": "HWMId (Heat Wave Magnitude Index daily)\nPropuesto por Russo et al. (2015). Una ola de calor es una racha de al menos tres días con temperatura máxima por encima del percentil 90 de una ventana de 31 días centrada en cada día, según una climatología (p. ej., 1981–2010). A cada día se le asigna una magnitud diaria según qué tan alta es la temperatura respecto del rango intercuartil de los máximos anuales de un periodo de referencia, y el índice del evento es la suma de las magnitudes diarias. Conceptualmente:\n\\[\nHWMId = \\max_{\\text{eventos}} \\sum_{d \\in evento} M_d\n\\]\nUtilidad: integra intensidad y duración, no se satura al superar el máximo histórico, es comparable entre sitios y sirvió para proyectar la ocurrencia de olas extremas. Limitaciones: exige series diarias largas y homogéneas; se basa en temperatura máxima y no en humedad ni noche; y su sensibilidad depende de la normalización con el rango intercuartil, lo que debe revisarse en regiones de baja variabilidad.\nExplora los parámetros. La serie sintética tiene 31 años de temperatura máxima diaria; los 30 primeros son la climatología de referencia y el año 31 contiene una ola de calor. Cambie el percentil, la duración mínima, la tendencia y la ola, y observe cómo cambian los eventos detectados y su magnitud. Un evento puede superar el umbral de percentil y tener magnitud 0 si su temperatura no supera el cuartil inferior de los máximos anuales. Simplificación didáctica: el ruido es un proceso autorregresivo sintético y se ignoran los años bisiestos.\n\nviewof hw_pct = Inputs.range([80, 99], {value: 90, step: 1, label: \"Percentil del umbral (%)\"})\nviewof hw_min = Inputs.range([2, 7], {value: 3, step: 1, label: \"Duración mínima (días)\"})\nviewof hw_amp = Inputs.range([0, 10], {value: 6, step: 0.5, label: \"Intensidad de la ola (°C)\"})\nviewof hw_dur = Inputs.range([3, 30], {value: 10, step: 1, label: \"Duración de la ola (días)\"})\nviewof hw_trend = Inputs.range([0, 0.1], {value: 0.03, step: 0.005, label: \"Tendencia (°C/año)\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw_base = {\n  const z = d3.randomNormal.source(d3.randomLcg(11))(0, 1);\n  const rho = 0.6, sd = 2;\n  return d3.range(31).map(() =&gt; {\n    let e = 0;\n    return d3.range(365).map(d =&gt; {\n      e = rho * e + Math.sqrt(1 - rho * rho) * sd * z();\n      return 26 + 5 * Math.sin(2 * Math.PI * (d - 110) / 365) + e;\n    });\n  });\n}\n\nhw_calc = {\n  const N = 365, Y = 30;\n  const T = hw_base.map((anio, y) =&gt; anio.map(v =&gt; v + hw_trend * y));\n  const obj = T[Y].map((v, d) =&gt; v + hw_amp * Math.max(0, 1 - Math.abs(d - 190) / (hw_dur / 2)));\n  const umbral = d3.range(N).map(d =&gt; {\n    const vals = [];\n    for (let y = 0; y &lt; Y; y++) for (let k = -15; k &lt;= 15; k++) vals.push(T[y][(d + k + N) % N]);\n    vals.sort(d3.ascending);\n    return d3.quantileSorted(vals, hw_pct / 100);\n  });\n  const maximos = T.slice(0, Y).map(a =&gt; d3.max(a)).sort(d3.ascending);\n  const q25 = d3.quantileSorted(maximos, 0.25), q75 = d3.quantileSorted(maximos, 0.75);\n  const eventos = [];\n  let d = 0;\n  while (d &lt; N) {\n    if (obj[d] &gt; umbral[d]) {\n      let e = d;\n      while (e &lt; N && obj[e] &gt; umbral[e]) e++;\n      if (e - d &gt;= hw_min) {\n        let mag = 0;\n        for (let k = d; k &lt; e; k++) mag += Math.max(0, (obj[k] - q25) / (q75 - q25));\n        eventos.push({ini: d + 1, fin: e, dias: e - d, mag});\n      }\n      d = e;\n    } else d++;\n  }\n  return {obj, umbral, q25, q75, eventos, hwmid: d3.max(eventos, e =&gt; e.mag) ?? 0};\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  width, height: 250,\n  x: {label: \"Día del año 31\"},\n  y: {label: \"Temperatura máxima (°C)\", grid: true},\n  marks: [\n    Plot.rect(hw_calc.eventos, {x1: \"ini\", x2: \"fin\", y1: d3.min(hw_calc.obj) - 1, y2: d3.max(hw_calc.obj) + 1, fill: \"#d62728\", fillOpacity: 0.18}),\n    Plot.line(hw_calc.obj.map((T, i) =&gt; ({dia: i + 1, T})), {x: \"dia\", y: \"T\", stroke: \"#444\"}),\n    Plot.line(hw_calc.umbral.map((T, i) =&gt; ({dia: i + 1, T})), {x: \"dia\", y: \"T\", stroke: \"#888\", strokeDasharray: \"4,3\"})\n  ]\n})\n\n\n\n\n\n\n\nmd`**HWMId = ${d3.format(\".2f\")(hw_calc.hwmid)}** (magnitud del evento mayor); eventos detectados: **${hw_calc.eventos.length}**. Rango intercuartil de los máximos anuales: ${d3.format(\".1f\")(hw_calc.q25)}–${d3.format(\".1f\")(hw_calc.q75)} °C.`\n\n\n\n\n\n\n\nhw_calc.eventos.length\n  ? Inputs.table(hw_calc.eventos.map(e =&gt; ({\"Inicio (día)\": e.ini, \"Fin (día)\": e.fin, \"Duración (días)\": e.dias, \"Magnitud\": +e.mag.toFixed(2)})))\n  : md`_No se detectan eventos con estos parámetros._`",
+    "crumbs": [
+      "Gestión del cambio climático",
+      "Estrés térmico"
+    ]
+  },
+  {
+    "objectID": "gcc/estres-termico.html#degree-heating-weeks-dhw",
+    "href": "gcc/estres-termico.html#degree-heating-weeks-dhw",
+    "title": "Estrés térmico",
+    "section": "Degree Heating Weeks (DHW)",
+    "text": "Degree Heating Weeks (DHW)\nNOAA Coral Reef Watch define DHW como la acumulación de estrés térmico sobre los corales durante las 12 semanas previas:\n\nMMM: media mensual máxima de la temperatura superficial del mar (TSM) en el sitio.\nHotSpot: TSM menos MMM. Solo cuenta cuando HotSpot ≥ 1 °C.\nDHW: suma de los HotSpot ≥ 1 °C en una ventana móvil de 12 semanas. Se expresa en °C-semanas.\n\nUmbrales operativos de NOAA: 4 °C-semanas, blanqueamiento esperado en el arrecife; 8 °C-semanas o más, blanqueamiento con mortalidad probable de corales sensibles. En diciembre de 2023 se añadieron los niveles de alerta 3 a 5 tras el calor extremo de 2023.\nUtilidad: es el mejor ejemplo de un indicador acumulado con umbral biológicamente anclado (MMM + 1 °C) y validado frente a eventos reales de blanqueamiento. Limitaciones: el umbral depende de la climatología histórica de cada píxel, de modo que no captura la aclimatación ni la adaptación de los corales; una ventana de 12 semanas puede subestimar eventos largos y modestos o eventos cortos e intensos; no describe efectos en otros organismos marinos, para los cuales se usan las olas de calor marinas y el oxígeno disuelto.\nExplora los parámetros. Cambie el MMM, la anomalía y su duración, el HotSpot mínimo y la ventana de acumulación. Con una anomalía larga y modesta el DHW puede superar el umbral de 4 °C-semanas aunque ningún día sea extremo, y una ventana corta puede perder eventos prolongados. Simplificación didáctica: la climatología es una curva sinusoidal cuyo máximo diario es el MMM, y se acumulan valores diarios divididos entre 7.\n\nviewof dhw_mmm = Inputs.range([26, 31], {value: 29, step: 0.1, label: \"MMM (°C)\"})\nviewof dhw_anom = Inputs.range([0, 4], {value: 1.8, step: 0.1, label: \"Anomalía máxima (°C)\"})\nviewof dhw_dur = Inputs.range([7, 120], {value: 60, step: 1, label: \"Duración de la anomalía (días)\"})\nviewof dhw_umbral = Inputs.range([0, 2], {value: 1, step: 0.1, label: \"HotSpot mínimo (°C)\"})\nviewof dhw_sem = Inputs.range([4, 16], {value: 12, step: 1, label: \"Ventana (semanas)\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndhw_calc = {\n  const N = 365, pico = 90;\n  const ruido = d3.randomNormal.source(d3.randomLcg(5))(0, 0.15);\n  const serie = d3.range(N).map(d =&gt; {\n    const clima = dhw_mmm - 1.2 + 1.2 * Math.cos(2 * Math.PI * (d - pico) / N);\n    const bump = dhw_anom * Math.max(0, 1 - Math.abs(d - (pico + 10)) / (dhw_dur / 2));\n    return {dia: d + 1, clima, sst: clima + ruido() + bump};\n  });\n  const w = dhw_sem * 7;\n  serie.forEach((r, i) =&gt; {\n    r.hotspot = r.sst - dhw_mmm;\n    let s = 0;\n    for (let k = Math.max(0, i - w + 1); k &lt;= i; k++) {\n      const h = serie[k].sst - dhw_mmm;\n      if (h &gt;= dhw_umbral) s += h;\n    }\n    r.dhw = s / 7;\n  });\n  return serie;\n}\n\n\n\n\n\n\n\nPlot.plot({\n  width, height: 230,\n  x: {label: \"Día del año\"},\n  y: {label: \"TSM (°C)\", grid: true},\n  marks: [\n    Plot.line(dhw_calc, {x: \"dia\", y: \"clima\", stroke: \"#999\"}),\n    Plot.line(dhw_calc, {x: \"dia\", y: \"sst\", stroke: \"#1f77b4\"}),\n    Plot.ruleY([dhw_mmm], {stroke: \"#d62728\"}),\n    Plot.ruleY([dhw_mmm + dhw_umbral], {stroke: \"#d62728\", strokeDasharray: \"4,3\"})\n  ]\n})\n\n\n\n\n\n\n\nPlot.plot({\n  width, height: 200,\n  x: {label: \"Día del año\"},\n  y: {label: \"DHW (°C-semanas)\", grid: true},\n  marks: [\n    Plot.line(dhw_calc, {x: \"dia\", y: \"dhw\", stroke: \"#d62728\"}),\n    Plot.ruleY([4, 8], {stroke: \"#888\", strokeDasharray: \"4,3\"}),\n    Plot.text([{x: 365, y: 4, t: \"4: blanqueamiento\"}, {x: 365, y: 8, t: \"8: mortalidad probable\"}], {x: \"x\", y: \"y\", text: \"t\", textAnchor: \"end\", dy: -4, fill: \"#666\"})\n  ]\n})\n\n\n\n\n\n\n\n{\n  const max = d3.max(dhw_calc, r =&gt; r.dhw);\n  const nivel = max &gt;= 8 ? \"blanqueamiento con mortalidad probable de corales sensibles\" : max &gt;= 4 ? \"blanqueamiento esperado\" : \"por debajo del umbral de blanqueamiento\";\n  return md`**DHW máximo = ${d3.format(\".1f\")(max)} °C-semanas**: ${nivel}. Líneas: gris = climatología, azul = TSM, rojo continuo = MMM, rojo discontinuo = MMM + HotSpot mínimo.`;\n}",
+    "crumbs": [
+      "Gestión del cambio climático",
+      "Estrés térmico"
+    ]
+  },
+  {
+    "objectID": "gcc/estres-termico.html#salud-humana-y-trabajo",
+    "href": "gcc/estres-termico.html#salud-humana-y-trabajo",
+    "title": "Estrés térmico",
+    "section": "Salud humana y trabajo",
+    "text": "Salud humana y trabajo\nEl IPCC (AR6) trata el estrés térmico como un riesgo creciente para la salud, con confianza muy alta, debido a urbanización, aumento de extremos de alta temperatura y envejecimiento poblacional. Lo define como las condiciones en que un organismo absorbe calor en exceso por exposición a altas temperaturas del aire o del agua, o a radiación térmica; en mamíferos y aves, la combinación de calor, humedad alta y poco viento hace fallar la termorregulación (definición del glosario del GTI, citada por fuentes secundarias). La literatura asociada sobre calor húmedo (Tw, WBGT, índice de calor) muestra que la elección del índice cambia la magnitud del peligro estimado.\nEn el trabajo, el informe FAO-OMM (2026) estima que los días demasiado calurosos para trabajar podrían llegar a 250 al año en buena parte del sur de Asia, el África subsahariana tropical y partes de Centroamérica y Suramérica.",
+    "crumbs": [
+      "Gestión del cambio climático",
+      "Estrés térmico"
+    ]
+  },
+  {
+    "objectID": "gcc/estres-termico.html#agricultura-y-ganadería",
+    "href": "gcc/estres-termico.html#agricultura-y-ganadería",
+    "title": "Estrés térmico",
+    "section": "Agricultura y ganadería",
+    "text": "Agricultura y ganadería\nEl informe conjunto Extreme heat and agriculture (FAO-OMM, abril de 2026) reporta:\n\nGanadería: el estrés comienza por encima de 25 °C en la mayoría de las especies comunes, y algo por debajo en aves y cerdos, que no se enfrían sudando.\nCultivos: las caídas de rendimiento comienzan por encima de 30 °C en la mayoría de los cultivos principales, y antes en papa y cebada.\nRecomendaciones: selección de variedades y razas, ajuste de calendarios de siembra, sistemas de alerta temprana y servicios climáticos, protección financiera y protección social reactiva a choques.\n\nEl enfoque de la FAO es sectorial y basado en umbrales fisiológicos, no en un único índice. La nota de prensa consultada no menciona THI ni WBGT; el THI y sus rangos habituales (por debajo de 72 sin estrés, 72–79 leve, 80–89 moderado y más de 89 severo) provienen de guías de extensión universitaria (Texas A&M) y no de la FAO.",
+    "crumbs": [
+      "Gestión del cambio climático",
+      "Estrés térmico"
+    ]
+  },
+  {
+    "objectID": "gcc/estres-termico.html#océanos-pesquerías-y-arrecifes",
+    "href": "gcc/estres-termico.html#océanos-pesquerías-y-arrecifes",
+    "title": "Estrés térmico",
+    "section": "Océanos, pesquerías y arrecifes",
+    "text": "Océanos, pesquerías y arrecifes\n\nPesca: el calor extremo reduce el oxígeno disuelto y puede causar fallo cardiaco en peces; más del 90 % del océano global sufrió al menos una ola de calor marina en 2025 (FAO-OMM, 2026).\nOlas de calor marinas: según el IPCC, son más frecuentes, intensas y largas desde la década de 1980, y desde al menos 2006 es muy probable que se deban al cambio climático de origen humano.\nArrecifes: el indicador de referencia es DHW (véase la sección anterior).",
+    "crumbs": [
+      "Gestión del cambio climático",
+      "Estrés térmico"
+    ]
+  },
+  {
+    "objectID": "gcc/estres-termico.html#bosques-y-biodiversidad",
+    "href": "gcc/estres-termico.html#bosques-y-biodiversidad",
+    "title": "Estrés térmico",
+    "section": "Bosques y biodiversidad",
+    "text": "Bosques y biodiversidad\nPara bosques y biodiversidad no hay un indicador único consolidado. Se combinan extremos térmicos, calor acumulado, déficit de presión de vapor (VPD), sequía y umbrales de tolerancia de las especies, para estimar daño fisiológico, mortalidad y alteraciones ecológicas. Esta sección se apoya en la síntesis metodológica del autor y no en una fuente específica consultada para este artículo; requiere referencias propias.\n\n\n\n\n\n\nWarning\n\n\n\nNo se pudo acceder a los capítulos 7 y 11 del AR6 durante la elaboración de este artículo; los puntos atribuidos al IPCC se apoyan en la síntesis de mensajes de salud y calor del AR6 y en el glosario citado por fuentes secundarias. Se recomienda verificar en los capítulos originales.",
+    "crumbs": [
+      "Gestión del cambio climático",
+      "Estrés térmico"
     ]
   },
   {

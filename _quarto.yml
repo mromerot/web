@@ -128,7 +128,7 @@ website:
           - text: "Gestión del cambio climático"
             href: gcc/gestion-cambio-climatico.qmd
           - text: "Estrés térmico"
-            href: gcc/estres-termico-v2.qmd
+            href: gcc/estres-termico.qmd
       - section: "Gestión de proyectos"
         href: gestiondeproyectos/index.qmd
         contents:
