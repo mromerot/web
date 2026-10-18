@@ -239,6 +239,8 @@ website:
             href: datascience/claude.qmd
           - text: "Claude Skills (Slides)"
             href: datascience/claude-slides.qmd
+          - text: "Ilustraciones"
+            href: datascience/ilustraciones.qmd
 # Aqui viene la seccion de matematicas y estadistica que debe trabajarse
       - section: "Matemáticas y estadística"
         href: math-stats/math-stats.qmd

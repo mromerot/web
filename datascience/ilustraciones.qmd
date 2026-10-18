@@ -1,0 +1,26 @@
+---
+title: "Ilustraciones"
+format: html
+editor: visual
+---
+
+# Ilustraciones animadas
+
+## Colorfigures.vercel.app
+
+Fig. 14 — Set de cafetera por goteo (pour-over)
+
+<iframe src="fig14-pourover.html" width="100%" height="650px" style="border: 1px solid #ccc; border-radius: 8px;">
+
+</iframe>
+
+*Ilustración interactiva "Pour-over coffee set" (Fig. 14), creada por April Zhu. Fuente y créditos: [Colorfigures](https://colorfigures.vercel.app/) ([april-zhu.com](https://april-zhu.com/)). Usa los botones (Heat water, Grind beans, Add grounds, Pour water, Serve) para recorrer el proceso de preparación.*
+
+**Cómo se hace una figura así con IA:** esta ilustración no es una imagen generada por un modelo de difusión (texto-a-imagen), sino un dibujo vectorial (SVG) construido por código. Revisando el código fuente de la página se ve que el sitio define un motor común y reutilizable: una proyección isométrica fija, una única fuente de luz para calcular sombreado/sombras, y paletas de color compartidas; cada objeto (tetera, tostadora, esta cafetera, etc.) se arma llamando a una misma función (`mountFigure`) con sus propias piezas en coordenadas x, y, z. Para reproducir el enfoque con un asistente de IA (p. ej. Claude):
+
+1.  Pide primero el "motor" base: funciones de proyección isométrica, reglas de sombreado según un foco de luz fijo y una paleta de colores reutilizable.
+2.  Describe el objeto pieza por pieza (cuerpo, asa, base, etc.) en coordenadas 3D y deja que el asistente traduzca cada pieza a SVG usando esas funciones.
+3.  Itera pidiendo ajustes de proporciones, color o animación hasta lograr el resultado deseado.
+
+El resultado son ilustraciones vectoriales, livianas y perfectamente escalables —y hasta interactivas, como en este ejemplo—, en lugar de imágenes rasterizadas únicas como las que entregan los generadores de imágenes por difusión.
+
