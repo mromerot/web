@@ -55,6 +55,11 @@ Este ejemplo usa dos modelos del Hub para estimar el arbolado de un barrio a par
 - Es una **demostración del flujo**, no una medición validada del arbolado.
 :::
 
+::: {.callout-tip}
+## Ábralo en Colab
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mromerot/web/blob/main/datascience/_colab/arboles_rosales_hf.ipynb) El cuaderno completo, con el mapa y la gráfica, está en [GitHub](https://github.com/mromerot/web/blob/main/datascience/_colab/arboles_rosales_hf.ipynb). Por defecto procesa un subcuadro de ~7 ha y descarga el censo SIGAU recortado a Los Rosales ([CSV](https://github.com/mromerot/web/blob/main/datascience/_colab/censo_arbolado_rosales.csv), datos abiertos del Jardín Botánico de Bogotá, CC BY 4.0).
+:::
+
 ### 1. Entorno
 
 En Colab, *Entorno de ejecución → Cambiar tipo de entorno → GPU* acelera la inferencia.
@@ -166,30 +171,36 @@ print(f"Cobertura arbórea estimada: {arbol / total:.1%} del rectángulo")
 
 ### 6. Comparar con el censo de SIDRo
 
+El cuaderno descarga el censo recortado al polígono de SIDRo y lo compara dentro de la imagen:
+
 ```python
-CENSO_SIGAU = 3288     # árboles del censo del JBB dentro del polígono de SIDRo (sectores 008304 + 008305, oct. 2026)
-# Si tiene arbolado.parquet de SIDRo (`sidro descargar arbolado`), calcúlelo en vez de fijarlo:
-# censo = gpd.read_parquet("arbolado.parquet").to_crs(4326); CENSO_SIGAU = int(censo.within(aoi.union_all()).sum())
-print(f"Detectados: {len(detectados):,} | Censo SIGAU: {CENSO_SIGAU:,} | razón: {len(detectados) / CENSO_SIGAU:.2f}")
+censo = pd.read_csv("https://raw.githubusercontent.com/mromerot/web/main/datascience/_colab/censo_arbolado_rosales.csv")
+# ... se recorta a la extensión de la imagen y se cuenta (ver el cuaderno)
 ```
 
 ### Qué resultó al probarlo
 
-Se probó el código en un subcuadro de unas 7 ha de Los Rosales, donde el censo SIGAU registra 143 árboles:
+Se ejecutó el cuaderno en un subcuadro de unas 7 ha de Los Rosales, donde el censo SIGAU registra 222 árboles. El mapa superpone las copas detectadas (puntuación ≥ 0,2) y los árboles del censo:
+
+![Copas detectadas por DeepForest y árboles del censo SIGAU sobre una imagen de Los Rosales](img/hf-mapa-arboles.png){fig-alt="Mapa de un subcuadro de Los Rosales con círculos naranjas para las copas detectadas y puntos azules para los árboles del censo; los azules siguen sobre todo las calles"}
+
+La segunda figura muestra la variable clave, el número de árboles contados, según el umbral de confianza:
+
+![Árboles contados según el umbral de puntuación, con el censo SIGAU como referencia](img/hf-barras-umbral.png){fig-alt="Gráfica de barras: 1.577 copas con umbral 0,1; 493 con 0,2; 41 con 0,3; 3 con 0,4; línea de referencia en 222 del censo"}
 
 | Puntuación mínima | Copas detectadas | Razón frente al censo |
 |---|---|---|
-| 0,1 | 1.577 | 11,0 |
-| 0,2 | 493 | 3,4 |
-| 0,3 | 41 | 0,3 |
-| 0,4 | 3 | 0,02 |
+| 0,1 | 1.577 | 7,1 |
+| 0,2 | 493 | 2,2 |
+| 0,3 | 41 | 0,18 |
+| 0,4 | 3 | 0,01 |
 
-La cobertura arbórea estimada por TCD SegFormer fue de 17 % del subcuadro.
+La cobertura arbórea estimada por TCD SegFormer fue de 17 % del subcuadro, sin verificar contra la imagen.
 
 Tres lecciones se desprenden de la prueba:
 
 1. **El conteo depende del umbral.** Entre 0,1 y 0,3 el resultado varía por un factor de casi 40, y ningún valor reproduce el censo sin elegirlo precisamente para que lo reproduzca, lo que sería circular.
-2. **El modelo preentrenado se ajusta mal a este paisaje.** DeepForest se entrenó sobre todo con bosques y parques en imágenes de mayor resolución. En un barrio de dosel cerrado, con sombras largas de edificios y una imagen ampliada, tiende a fragmentar copas grandes y a señalar elementos que no son árboles.
-3. **El censo tampoco es una verdad perfecta.** Parte de sus registros data de 2005 a 2009, de modo que ni el censo ni la imagen representan el mismo momento.
+2. **El modelo preentrenado se ajusta mal a este paisaje.** DeepForest se entrenó sobre todo con bosques y parques en imágenes de mayor resolución. En un barrio de dosel cerrado, con sombras largas de edificios y una imagen ampliada, tiende a fragmentar copas grandes y a señalar elementos que no son árboles. En el mapa, los círculos naranjas se agrupan sobre los jardines y el parque privado, que el censo casi no recoge.
+3. **El censo no es la misma población.** El SIGAU registra sobre todo árboles de espacio público (el mapa los muestra alineados en las calles), y cerca del 63 % de sus registros son de 2005 a 2009. Aunque un modelo contara perfecto el dosel visible, no tendría por qué coincidir con él.
 
 El siguiente paso razonable es el **ajuste fino** (*fine-tuning*) de DeepForest con una muestra de copas etiquetadas a mano en Los Rosales, y usar el censo como referencia para validar, no para calibrar. Con un modelo ajustado, el archivo `arboles_detectados_9377.parquet` se puede cruzar con las manzanas de SIDRo para obtener árboles por hectárea, la variable que el análisis de calor (3.5) usa como `arboles_ha`.

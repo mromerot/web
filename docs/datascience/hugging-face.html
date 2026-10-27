@@ -150,10 +150,18 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 
 <meta property="og:title" content="Hugging Face – Inicio">
 <meta property="og:description" content="Sitio web sobre gestión del riesgo de desastres, ciencia de datos, cambio climático y tecnología">
+<meta property="og:image" content="https://mromerot.github.io/web/datascience/img/hf-mapa-arboles.png">
 <meta property="og:site_name" content="Inicio">
+<meta property="og:image:alt" content="Mapa de un subcuadro de Los Rosales con círculos naranjas para las copas detectadas y puntos azules para los árboles del censo; los azules siguen sobre todo las calles">
+<meta property="og:image:height" content="944">
+<meta property="og:image:width" content="1228">
 <meta name="twitter:title" content="Hugging Face – Inicio">
 <meta name="twitter:description" content="Sitio web sobre gestión del riesgo de desastres, ciencia de datos, cambio climático y tecnología">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mromerot.github.io/web/datascience/img/hf-mapa-arboles.png">
+<meta name="twitter:image:alt" content="Mapa de un subcuadro de Los Rosales con círculos naranjas para las copas detectadas y puntos azules para los árboles del censo; los azules siguen sobre todo las calles">
+<meta name="twitter:image-height" content="944">
+<meta name="twitter:image-width" content="1228">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -1065,6 +1073,19 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 </ul>
 </div>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ábralo en Colab
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://colab.research.google.com/github/mromerot/web/blob/main/datascience/_colab/arboles_rosales_hf.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Abrir en Colab"></a> El cuaderno completo, con el mapa y la gráfica, está en <a href="https://github.com/mromerot/web/blob/main/datascience/_colab/arboles_rosales_hf.ipynb">GitHub</a>. Por defecto procesa un subcuadro de ~7 ha y descarga el censo SIGAU recortado a Los Rosales (<a href="https://github.com/mromerot/web/blob/main/datascience/_colab/censo_arbolado_rosales.csv">CSV</a>, datos abiertos del Jardín Botánico de Bogotá, CC BY 4.0).</p>
+</div>
+</div>
 <section id="entorno" class="level3">
 <h3 class="anchored" data-anchor-id="entorno">1. Entorno</h3>
 <p>En Colab, <em>Entorno de ejecución → Cambiar tipo de entorno → GPU</em> acelera la inferencia.</p>
@@ -1159,14 +1180,26 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 </section>
 <section id="comparar-con-el-censo-de-sidro" class="level3">
 <h3 class="anchored" data-anchor-id="comparar-con-el-censo-de-sidro">6. Comparar con el censo de SIDRo</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>CENSO_SIGAU <span class="op">=</span> <span class="dv">3288</span>     <span class="co"># árboles del censo del JBB dentro del polígono de SIDRo (sectores 008304 + 008305, oct. 2026)</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Si tiene arbolado.parquet de SIDRo (`sidro descargar arbolado`), calcúlelo en vez de fijarlo:</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># censo = gpd.read_parquet("arbolado.parquet").to_crs(4326); CENSO_SIGAU = int(censo.within(aoi.union_all()).sum())</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Detectados: </span><span class="sc">{</span><span class="bu">len</span>(detectados)<span class="sc">:,}</span><span class="ss"> | Censo SIGAU: </span><span class="sc">{</span>CENSO_SIGAU<span class="sc">:,}</span><span class="ss"> | razón: </span><span class="sc">{</span><span class="bu">len</span>(detectados) <span class="op">/</span> CENSO_SIGAU<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>El cuaderno descarga el censo recortado al polígono de SIDRo y lo compara dentro de la imagen:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>censo <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/mromerot/web/main/datascience/_colab/censo_arbolado_rosales.csv"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ... se recorta a la extensión de la imagen y se cuenta (ver el cuaderno)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="qué-resultó-al-probarlo" class="level3">
 <h3 class="anchored" data-anchor-id="qué-resultó-al-probarlo">Qué resultó al probarlo</h3>
-<p>Se probó el código en un subcuadro de unas 7 ha de Los Rosales, donde el censo SIGAU registra 143 árboles:</p>
+<p>Se ejecutó el cuaderno en un subcuadro de unas 7 ha de Los Rosales, donde el censo SIGAU registra 222 árboles. El mapa superpone las copas detectadas (puntuación ≥ 0,2) y los árboles del censo:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/hf-mapa-arboles.png" class="img-fluid figure-img" alt="Mapa de un subcuadro de Los Rosales con círculos naranjas para las copas detectadas y puntos azules para los árboles del censo; los azules siguen sobre todo las calles"></p>
+<figcaption>Copas detectadas por DeepForest y árboles del censo SIGAU sobre una imagen de Los Rosales</figcaption>
+</figure>
+</div>
+<p>La segunda figura muestra la variable clave, el número de árboles contados, según el umbral de confianza:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/hf-barras-umbral.png" class="img-fluid figure-img" alt="Gráfica de barras: 1.577 copas con umbral 0,1; 493 con 0,2; 41 con 0,3; 3 con 0,4; línea de referencia en 222 del censo"></p>
+<figcaption>Árboles contados según el umbral de puntuación, con el censo SIGAU como referencia</figcaption>
+</figure>
+</div>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1179,31 +1212,31 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <tr class="odd">
 <td>0,1</td>
 <td>1.577</td>
-<td>11,0</td>
+<td>7,1</td>
 </tr>
 <tr class="even">
 <td>0,2</td>
 <td>493</td>
-<td>3,4</td>
+<td>2,2</td>
 </tr>
 <tr class="odd">
 <td>0,3</td>
 <td>41</td>
-<td>0,3</td>
+<td>0,18</td>
 </tr>
 <tr class="even">
 <td>0,4</td>
 <td>3</td>
-<td>0,02</td>
+<td>0,01</td>
 </tr>
 </tbody>
 </table>
-<p>La cobertura arbórea estimada por TCD SegFormer fue de 17 % del subcuadro.</p>
+<p>La cobertura arbórea estimada por TCD SegFormer fue de 17 % del subcuadro, sin verificar contra la imagen.</p>
 <p>Tres lecciones se desprenden de la prueba:</p>
 <ol type="1">
 <li><strong>El conteo depende del umbral.</strong> Entre 0,1 y 0,3 el resultado varía por un factor de casi 40, y ningún valor reproduce el censo sin elegirlo precisamente para que lo reproduzca, lo que sería circular.</li>
-<li><strong>El modelo preentrenado se ajusta mal a este paisaje.</strong> DeepForest se entrenó sobre todo con bosques y parques en imágenes de mayor resolución. En un barrio de dosel cerrado, con sombras largas de edificios y una imagen ampliada, tiende a fragmentar copas grandes y a señalar elementos que no son árboles.</li>
-<li><strong>El censo tampoco es una verdad perfecta.</strong> Parte de sus registros data de 2005 a 2009, de modo que ni el censo ni la imagen representan el mismo momento.</li>
+<li><strong>El modelo preentrenado se ajusta mal a este paisaje.</strong> DeepForest se entrenó sobre todo con bosques y parques en imágenes de mayor resolución. En un barrio de dosel cerrado, con sombras largas de edificios y una imagen ampliada, tiende a fragmentar copas grandes y a señalar elementos que no son árboles. En el mapa, los círculos naranjas se agrupan sobre los jardines y el parque privado, que el censo casi no recoge.</li>
+<li><strong>El censo no es la misma población.</strong> El SIGAU registra sobre todo árboles de espacio público (el mapa los muestra alineados en las calles), y cerca del 63 % de sus registros son de 2005 a 2009. Aunque un modelo contara perfecto el dosel visible, no tendría por qué coincidir con él.</li>
 </ol>
 <p>El siguiente paso razonable es el <strong>ajuste fino</strong> (<em>fine-tuning</em>) de DeepForest con una muestra de copas etiquetadas a mano en Los Rosales, y usar el censo como referencia para validar, no para calibrar. Con un modelo ajustado, el archivo <code>arboles_detectados_9377.parquet</code> se puede cruzar con las manzanas de SIDRo para obtener árboles por hectárea, la variable que el análisis de calor (3.5) usa como <code>arboles_ha</code>.</p>
 
