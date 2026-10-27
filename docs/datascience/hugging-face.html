@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -954,6 +989,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   <li><a href="#la-librería-transformers-y-el-pipeline" id="toc-la-librería-transformers-y-el-pipeline" class="nav-link" data-scroll-target="#la-librería-transformers-y-el-pipeline">La librería Transformers y el pipeline</a></li>
   <li><a href="#tokenizers" id="toc-tokenizers" class="nav-link" data-scroll-target="#tokenizers">Tokenizers</a></li>
   <li><a href="#el-curso-oficial-de-hugging-face" id="toc-el-curso-oficial-de-hugging-face" class="nav-link" data-scroll-target="#el-curso-oficial-de-hugging-face">El curso oficial de Hugging Face</a></li>
+  <li><a href="#ejemplo-contar-árboles-de-un-barrio-con-un-modelo-del-hub-en-google-colab" id="toc-ejemplo-contar-árboles-de-un-barrio-con-un-modelo-del-hub-en-google-colab" class="nav-link" data-scroll-target="#ejemplo-contar-árboles-de-un-barrio-con-un-modelo-del-hub-en-google-colab">Ejemplo: contar árboles de un barrio con un modelo del Hub en Google Colab</a></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1008,8 +1044,171 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <p>Hugging Face ofrece un curso gratuito en línea (el <strong>Hugging Face Course</strong>) pensado para aprender a usar el ecosistema de NLP y machine learning de la plataforma desde cero. Cubre desde los fundamentos de la librería <code>transformers</code> y los tokenizers, hasta el entrenamiento y ajuste fino de modelos, el uso de <code>datasets</code> para manejar grandes volúmenes de datos, y la publicación de modelos y demos en el Hub.</p>
 <p>El curso combina lecciones escritas disponibles en la documentación con una serie de videos cortos en el canal oficial de YouTube de Hugging Face, y está disponible en varios frameworks (PyTorch y TensorFlow) y en varios idiomas.</p>
 <p></p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/00GKzGyWFEs" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div> Welcome to the Hugging Face course<p></p>
+</section>
+<section id="ejemplo-contar-árboles-de-un-barrio-con-un-modelo-del-hub-en-google-colab" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-contar-árboles-de-un-barrio-con-un-modelo-del-hub-en-google-colab">Ejemplo: contar árboles de un barrio con un modelo del Hub en Google Colab</h2>
+<p>Este ejemplo usa dos modelos del Hub para estimar el arbolado de un barrio a partir de una imagen aérea: <strong>DeepForest</strong> (detecta copas individuales, <a href="https://huggingface.co/weecology/deepforest-tree"><code>weecology/deepforest-tree</code></a>, licencia MIT) y <strong>TCD SegFormer</strong> (segmenta la cobertura arbórea, <a href="https://huggingface.co/restor/tcd-segformer-mit-b5"><code>restor/tcd-segformer-mit-b5</code></a>). El área es Los Rosales (Chapinero, Bogotá), el barrio de <a href="https://mromerot.github.io/SIDRo/">SIDRo</a>, y el resultado queda en los mismos formatos de SIDRo (EPSG:4326 para visores y EPSG:9377 como CRS de trabajo) para compararlo con el censo de arbolado urbano (SIGAU, Jardín Botánico de Bogotá) que usa el libro.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Imágenes y alcance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Las teselas de ejemplo son de <strong>Esri World Imagery</strong>, adecuadas para una demostración. Para un producto publicado conviene una ortofoto con licencia abierta o un vuelo de dron propio, y verificar los términos de uso de cualquier imagen.</li>
+<li>Los dos modelos se entrenaron con imágenes de ~10 cm por píxel. Las teselas de Bogotá tienen ~28 cm, y aquí se amplían por interpolación, lo que no añade detalle real.</li>
+<li>Es una <strong>demostración del flujo</strong>, no una medición validada del arbolado.</li>
+</ul>
+</div>
+</div>
+<section id="entorno" class="level3">
+<h3 class="anchored" data-anchor-id="entorno">1. Entorno</h3>
+<p>En Colab, <em>Entorno de ejecución → Cambiar tipo de entorno → GPU</em> acelera la inferencia.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>q deepforest transformers mercantile rasterio geopandas pyarrow</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="descargar-la-imagen-del-barrio" class="level3">
+<h3 class="anchored" data-anchor-id="descargar-la-imagen-del-barrio">2. Descargar la imagen del barrio</h3>
+<p>El rectángulo es el <code>bbox_respaldo</code> de <code>config/aoi.yaml</code> de SIDRo (sectores catastrales Los Rosales y Bellavista). Para una primera prueba use un subcuadro pequeño: el barrio completo son unos 1,7 × 1,2 km y la inferencia tarda bastante más.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> io, requests, mercantile, numpy <span class="im">as</span> np, rasterio</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rasterio.transform <span class="im">import</span> from_bounds</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Mismo rectángulo que config/aoi.yaml -&gt; geometria.bbox_respaldo de SIDRo (lon_min, lat_min, lon_max, lat_max).</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Para una prueba rápida use un subcuadro, p. ej. [-74.0520, 4.6560, -74.0500, 4.6575].</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>BBOX <span class="op">=</span> [<span class="op">-</span><span class="fl">74.0553</span>, <span class="fl">4.6497</span>, <span class="op">-</span><span class="fl">74.0448</span>, <span class="fl">4.6647</span>]</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>ZOOM, ESCALA <span class="op">=</span> <span class="dv">19</span>, <span class="dv">3</span>    <span class="co"># zoom 19 en Bogotá ~0,28 m/px; se amplía x3 (~0,10 m/px) para acercarse a la resolución de entrenamiento</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>URL <span class="op">=</span> <span class="st">"https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/</span><span class="sc">{z}</span><span class="st">/</span><span class="sc">{y}</span><span class="st">/</span><span class="sc">{x}</span><span class="st">"</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>tiles <span class="op">=</span> <span class="bu">list</span>(mercantile.tiles(<span class="op">*</span>BBOX, ZOOM))</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>xs <span class="op">=</span> <span class="bu">sorted</span>({t.x <span class="cf">for</span> t <span class="kw">in</span> tiles})<span class="op">;</span> ys <span class="op">=</span> <span class="bu">sorted</span>({t.y <span class="cf">for</span> t <span class="kw">in</span> tiles})</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>mosaico <span class="op">=</span> Image.new(<span class="st">"RGB"</span>, (<span class="dv">256</span> <span class="op">*</span> <span class="bu">len</span>(xs), <span class="dv">256</span> <span class="op">*</span> <span class="bu">len</span>(ys)))</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> t <span class="kw">in</span> tiles:</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> requests.get(URL.<span class="bu">format</span>(z<span class="op">=</span>ZOOM, x<span class="op">=</span>t.x, y<span class="op">=</span>t.y), timeout<span class="op">=</span><span class="dv">30</span>, headers<span class="op">=</span>{<span class="st">"User-Agent"</span>: <span class="st">"sidro-ejemplo"</span>})</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    r.raise_for_status()</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    mosaico.paste(Image.<span class="bu">open</span>(io.BytesIO(r.content)).convert(<span class="st">"RGB"</span>), ((t.x <span class="op">-</span> xs[<span class="dv">0</span>]) <span class="op">*</span> <span class="dv">256</span>, (t.y <span class="op">-</span> ys[<span class="dv">0</span>]) <span class="op">*</span> <span class="dv">256</span>))</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>oeste <span class="op">=</span> mercantile.xy_bounds(xs[<span class="dv">0</span>], ys[<span class="dv">0</span>], ZOOM)<span class="op">;</span> este <span class="op">=</span> mercantile.xy_bounds(xs[<span class="op">-</span><span class="dv">1</span>], ys[<span class="op">-</span><span class="dv">1</span>], ZOOM)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>mosaico <span class="op">=</span> mosaico.resize((mosaico.width <span class="op">*</span> ESCALA, mosaico.height <span class="op">*</span> ESCALA), Image.BICUBIC)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.asarray(mosaico).transpose(<span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>transformacion <span class="op">=</span> from_bounds(oeste.left, este.bottom, este.right, oeste.top, arr.shape[<span class="dv">2</span>], arr.shape[<span class="dv">1</span>])</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> rasterio.<span class="bu">open</span>(<span class="st">"ortofoto.tif"</span>, <span class="st">"w"</span>, driver<span class="op">=</span><span class="st">"GTiff"</span>, height<span class="op">=</span>arr.shape[<span class="dv">1</span>], width<span class="op">=</span>arr.shape[<span class="dv">2</span>], count<span class="op">=</span><span class="dv">3</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>                   dtype<span class="op">=</span><span class="st">"uint8"</span>, crs<span class="op">=</span><span class="st">"EPSG:3857"</span>, transform<span class="op">=</span>transformacion) <span class="im">as</span> dst:</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    dst.write(arr)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="bu">len</span>(tiles)<span class="sc">}</span><span class="ss"> teselas, imagen de </span><span class="sc">{</span>arr<span class="sc">.</span>shape[<span class="dv">2</span>]<span class="sc">}</span><span class="ss"> x </span><span class="sc">{</span>arr<span class="sc">.</span>shape[<span class="dv">1</span>]<span class="sc">}</span><span class="ss"> px, </span><span class="sc">{</span>(este.right <span class="op">-</span> oeste.left) <span class="op">/</span> arr<span class="sc">.</span>shape[<span class="dv">2</span>]<span class="sc">:.2f}</span><span class="ss"> m/px"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="detectar-copas-con-deepforest" class="level3">
+<h3 class="anchored" data-anchor-id="detectar-copas-con-deepforest">3. Detectar copas con DeepForest</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> deepforest <span class="im">import</span> main</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>modelo <span class="op">=</span> main.deepforest()</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>modelo.load_model(<span class="st">"weecology/deepforest-tree"</span>)      <span class="co"># modelo preentrenado del Hub (licencia MIT)</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>cajas <span class="op">=</span> modelo.predict_tile(path<span class="op">=</span><span class="st">"ortofoto.tif"</span>, patch_size<span class="op">=</span><span class="dv">400</span>, patch_overlap<span class="op">=</span><span class="fl">0.25</span>, iou_threshold<span class="op">=</span><span class="fl">0.15</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Las cajas vienen en píxeles: se convierten al centroide de cada copa en coordenadas del mapa</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> rasterio.<span class="bu">open</span>(<span class="st">"ortofoto.tif"</span>) <span class="im">as</span> src:</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> src.transform</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>cx <span class="op">=</span> (cajas.xmin <span class="op">+</span> cajas.xmax) <span class="op">/</span> <span class="dv">2</span><span class="op">;</span> cy <span class="op">=</span> (cajas.ymin <span class="op">+</span> cajas.ymax) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>copas <span class="op">=</span> gpd.GeoDataFrame(</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    cajas[[<span class="st">"score"</span>]].assign(ancho_m<span class="op">=</span>(cajas.xmax <span class="op">-</span> cajas.xmin) <span class="op">*</span> t.a, alto_m<span class="op">=</span>(cajas.ymax <span class="op">-</span> cajas.ymin) <span class="op">*</span> <span class="op">-</span>t.e),</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    geometry<span class="op">=</span>gpd.points_from_xy(t.c <span class="op">+</span> cx <span class="op">*</span> t.a, t.f <span class="op">+</span> cy <span class="op">*</span> t.e), crs<span class="op">=</span><span class="st">"EPSG:3857"</span>).to_crs(<span class="st">"EPSG:4326"</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="bu">len</span>(copas)<span class="sc">:,}</span><span class="ss"> candidatos en total"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>El modelo devuelve cada copa con una puntuación de confianza. Cuántas se cuentan como árboles depende del umbral:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># La puntuación decide qué es un árbol: el conteo cambia mucho con el umbral</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> u <span class="kw">in</span> (<span class="fl">0.1</span>, <span class="fl">0.2</span>, <span class="fl">0.3</span>, <span class="fl">0.4</span>):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"puntuación &gt;= </span><span class="sc">{</span>u<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>(copas.score <span class="op">&gt;=</span> u)<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">:,}</span><span class="ss"> copas"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="elegir-el-umbral-y-exportar" class="level3">
+<h3 class="anchored" data-anchor-id="elegir-el-umbral-y-exportar">4. Elegir el umbral y exportar</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>UMBRAL <span class="op">=</span> <span class="fl">0.2</span>      <span class="co"># decisión del analista: se justifica comparando con el censo (celda siguiente)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>detectados <span class="op">=</span> copas[copas.score <span class="op">&gt;=</span> UMBRAL].copy()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Si dispone del polígono del barrio (SIDRo: data/processed/aoi.parquet), recorte con él; si no, queda el rectángulo</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># from google.colab import files; files.upload(); aoi = gpd.read_parquet("aoi.parquet").to_crs(4326)</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># detectados = detectados[detectados.within(aoi.union_all())]</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>detectados[[<span class="st">"score"</span>, <span class="st">"geometry"</span>]].to_file(<span class="st">"arboles_detectados.geojson"</span>, driver<span class="op">=</span><span class="st">"GeoJSON"</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>detectados.to_crs(<span class="st">"EPSG:9377"</span>).to_parquet(<span class="st">"arboles_detectados_9377.parquet"</span>)   <span class="co"># CRS de trabajo de SIDRo</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Árboles detectados: </span><span class="sc">{</span><span class="bu">len</span>(detectados)<span class="sc">:,}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="cobertura-arbórea-con-tcd-segformer" class="level3">
+<h3 class="anchored" data-anchor-id="cobertura-arbórea-con-tcd-segformer">5. Cobertura arbórea con TCD SegFormer</h3>
+<p>La segmentación no cuenta individuos, pero describe la copa continua que DeepForest separa mal cuando varias copas se tocan.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> AutoImageProcessor, SegformerForSemanticSegmentation</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>nombre <span class="op">=</span> <span class="st">"restor/tcd-segformer-mit-b5"</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>proc <span class="op">=</span> AutoImageProcessor.from_pretrained(nombre)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>seg <span class="op">=</span> SegformerForSemanticSegmentation.from_pretrained(nombre).<span class="bu">eval</span>()</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>arbol <span class="op">=</span> total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> rasterio.<span class="bu">open</span>(<span class="st">"ortofoto.tif"</span>) <span class="im">as</span> src:</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> y <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, src.height, <span class="dv">1024</span>):</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, src.width, <span class="dv">1024</span>):</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>            ventana <span class="op">=</span> rasterio.windows.Window(x, y, <span class="bu">min</span>(<span class="dv">1024</span>, src.width <span class="op">-</span> x), <span class="bu">min</span>(<span class="dv">1024</span>, src.height <span class="op">-</span> y))</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>            parche <span class="op">=</span> Image.fromarray(src.read(window<span class="op">=</span>ventana).transpose(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>))</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>            <span class="cf">with</span> torch.no_grad():</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>                logits <span class="op">=</span> seg(<span class="op">**</span>proc(images<span class="op">=</span>parche, return_tensors<span class="op">=</span><span class="st">"pt"</span>)).logits</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>            mascara <span class="op">=</span> torch.nn.functional.interpolate(logits, size<span class="op">=</span>parche.size[::<span class="op">-</span><span class="dv">1</span>], mode<span class="op">=</span><span class="st">"bilinear"</span>).argmax(<span class="dv">1</span>)[<span class="dv">0</span>]</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>            arbol <span class="op">+=</span> <span class="bu">int</span>((mascara <span class="op">==</span> <span class="dv">1</span>).<span class="bu">sum</span>())<span class="op">;</span> total <span class="op">+=</span> mascara.numel()</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Cobertura arbórea estimada: </span><span class="sc">{</span>arbol <span class="op">/</span> total<span class="sc">:.1%}</span><span class="ss"> del rectángulo"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="comparar-con-el-censo-de-sidro" class="level3">
+<h3 class="anchored" data-anchor-id="comparar-con-el-censo-de-sidro">6. Comparar con el censo de SIDRo</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>CENSO_SIGAU <span class="op">=</span> <span class="dv">3288</span>     <span class="co"># árboles del censo del JBB dentro del polígono de SIDRo (sectores 008304 + 008305, oct. 2026)</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Si tiene arbolado.parquet de SIDRo (`sidro descargar arbolado`), calcúlelo en vez de fijarlo:</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># censo = gpd.read_parquet("arbolado.parquet").to_crs(4326); CENSO_SIGAU = int(censo.within(aoi.union_all()).sum())</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Detectados: </span><span class="sc">{</span><span class="bu">len</span>(detectados)<span class="sc">:,}</span><span class="ss"> | Censo SIGAU: </span><span class="sc">{</span>CENSO_SIGAU<span class="sc">:,}</span><span class="ss"> | razón: </span><span class="sc">{</span><span class="bu">len</span>(detectados) <span class="op">/</span> CENSO_SIGAU<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="qué-resultó-al-probarlo" class="level3">
+<h3 class="anchored" data-anchor-id="qué-resultó-al-probarlo">Qué resultó al probarlo</h3>
+<p>Se probó el código en un subcuadro de unas 7 ha de Los Rosales, donde el censo SIGAU registra 143 árboles:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Puntuación mínima</th>
+<th>Copas detectadas</th>
+<th>Razón frente al censo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0,1</td>
+<td>1.577</td>
+<td>11,0</td>
+</tr>
+<tr class="even">
+<td>0,2</td>
+<td>493</td>
+<td>3,4</td>
+</tr>
+<tr class="odd">
+<td>0,3</td>
+<td>41</td>
+<td>0,3</td>
+</tr>
+<tr class="even">
+<td>0,4</td>
+<td>3</td>
+<td>0,02</td>
+</tr>
+</tbody>
+</table>
+<p>La cobertura arbórea estimada por TCD SegFormer fue de 17 % del subcuadro.</p>
+<p>Tres lecciones se desprenden de la prueba:</p>
+<ol type="1">
+<li><strong>El conteo depende del umbral.</strong> Entre 0,1 y 0,3 el resultado varía por un factor de casi 40, y ningún valor reproduce el censo sin elegirlo precisamente para que lo reproduzca, lo que sería circular.</li>
+<li><strong>El modelo preentrenado se ajusta mal a este paisaje.</strong> DeepForest se entrenó sobre todo con bosques y parques en imágenes de mayor resolución. En un barrio de dosel cerrado, con sombras largas de edificios y una imagen ampliada, tiende a fragmentar copas grandes y a señalar elementos que no son árboles.</li>
+<li><strong>El censo tampoco es una verdad perfecta.</strong> Parte de sus registros data de 2005 a 2009, de modo que ni el censo ni la imagen representan el mismo momento.</li>
+</ol>
+<p>El siguiente paso razonable es el <strong>ajuste fino</strong> (<em>fine-tuning</em>) de DeepForest con una muestra de copas etiquetadas a mano en Los Rosales, y usar el censo como referencia para validar, no para calibrar. Con un modelo ajustado, el archivo <code>arboles_detectados_9377.parquet</code> se puede cruzar con las manzanas de SIDRo para obtener árboles por hectárea, la variable que el análisis de calor (3.5) usa como <code>arboles_ha</code>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
