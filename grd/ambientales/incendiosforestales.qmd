@@ -31,6 +31,7 @@ editor: visual
 -   Monitoreo de puntos de calor en Colombia. IDEAM. [*link*](https://puntosdecalor.ideam.gov.co/)
 -   Boletines técnicos IDEAM. Boletín de Alertas por Pronóstico de la Amenaza por Incendios de la Cobertura Vegetal (BAICV). [*Link*](https://www.ideam.gov.co/sala-de-prensa/boletines)
 -   PROTOCOLO PARA LA REALIZACIÓN DE MAPAS DE ZONIFICACIÓN DE RIESGOS A INCENDIOS DE LA COBERTURA VEGETAL. IDEAM, 2011. [*Link*](http://www.ideam.gov.co/documents/13257/14369/PROTOCOLO+INCENDIOS+4Oct.pdf)
+-   Mapping wildfire risk across the US, day by day. NSF NCAR, 2026. [*Link*](https://news.ucar.edu/133092/mapping-wildfire-risk-across-us-day-day). Mapas casi en tiempo real de humedad del combustible vegetal (árboles, arbustos y pastos), a 375 m de resolución, con datos satelitales (VIIRS, ABI), modelos meteorológicos y aprendizaje automático. Visor de mapas: [*Link*](https://fmc.ral.ucar.edu/)
 
 ::: {layout-ncol="2"}
 {{< video "https://youtu.be/QWEXzQaYt9s" >}}
