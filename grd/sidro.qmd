@@ -1,0 +1,46 @@
+---
+title: "SIDRo — Sistema de Información de Riesgos de Desastres, Climático y Ambiental"
+subtitle: "Riesgos de desastres y climáticos del barrio Los Rosales (Chapinero, Bogotá) a escala de manzana y edificación"
+format: html
+editor: visual
+---
+
+::: {.callout-note appearance="simple"}
+**Libro en línea:** [mromerot.github.io/SIDRo](https://mromerot.github.io/SIDRo/) · **Código:** [github.com/mromerot/SIDRo](https://github.com/mromerot/SIDRo)
+:::
+
+## ¿Qué es SIDRo?
+
+SIDRo es un sistema de información reproducible que reúne datos abiertos, métodos y resultados para evaluar el riesgo de desastres y el riesgo climático de un territorio pequeño, manzana por manzana. Está publicado como un libro de [MyST](../datascience/myst.qmd) con cuadernos de Python que se ejecutan desde el propio libro. Su primera aplicación es el barrio **Los Rosales**, en el piedemonte de los Cerros Orientales de Bogotá (sectores catastrales Los Rosales y Bellavista, 81 ha).
+
+La gestión del riesgo en Bogotá se apoya en zonificaciones oficiales hechas a escala de ciudad, como el POT y los estudios de IDIGER. Las decisiones de un barrio necesitan otra pregunta: qué manzanas y qué edificaciones están expuestas, a qué amenazas y con qué consecuencias. SIDRo estima la amenaza, la exposición y el riesgo de cinco amenazas en el clima actual y con escenarios de cambio climático (SSP2-4.5 y SSP5-8.5):
+
+- **Sismo.** Pérdidas con curvas de fragilidad por tipología en cuatro escenarios e impacto anual esperado.
+- **Incendio forestal.** Índice meteorológico de incendio (FWI) diario y franjas de interfaz con la vegetación.
+- **Movimientos en masa.** Exposición por categoría de amenaza del POT y niveles de retorno de la lluvia máxima diaria.
+- **Incendio urbano.** Índice compuesto con análisis de sensibilidad de los pesos.
+- **Calor.** Temperatura de superficie y olas de calor con umbrales relativos.
+
+Una **síntesis multiamenaza** integra los resultados para las 57 manzanas del barrio.
+
+## Datos y métodos
+
+El análisis integra 28 fuentes de datos abiertos con niveles de respaldo local → nacional → global, entre ellas el catastro de Bogotá, la microzonificación sísmica (Decreto 523 de 2010), la zonificación de amenazas del POT (Decreto 555 de 2021), los hidrantes de la EAAB y los incidentes de bomberos, WorldCover, Copernicus DEM, Landsat, ERA5 y el ensamble NEX-GDDP-CMIP6. La estructura y los métodos siguen [CCDR-tools](https://gfdrr.github.io/CCDR-tools) (GFDRR, Banco Mundial) y el [CLIMAAX Climate Risk Assessment Handbook](https://doi.org/10.5281/zenodo.18186357), y se articulan con el marco de la [Ley 1523 de 2012](gestiondelriesgo.qmd).
+
+Todo lo específico del barrio vive en la configuración y no en el código, de modo que el método se puede **replicar en otro territorio pequeño de Colombia** cambiando el área de interés, las fuentes locales y los parámetros.
+
+## Contenido del libro
+
+| Sección | Contenido |
+|------------------------------------|------------------------------------|
+| [1. Conceptos](https://mromerot.github.io/SIDRo/book/conceptos) | Marco de riesgo, riesgo climático, marco normativo colombiano, proceso de evaluación, escalas y vulnerabilidad social |
+| [2. Fuentes de datos](https://mromerot.github.io/SIDRo/book/datos) | Amenaza, vulnerabilidad y exposición, clima, otros datos y catálogo con niveles de respaldo |
+| [3. Análisis](https://mromerot.github.io/SIDRo/book/analisis) | [Sísmico](https://mromerot.github.io/SIDRo/book/analisis/sismo/cuaderno), [incendio forestal](https://mromerot.github.io/SIDRo/book/analisis/incendio-forestal/cuaderno), [movimientos en masa](https://mromerot.github.io/SIDRo/book/analisis/mov-masa/cuaderno), [incendio urbano](https://mromerot.github.io/SIDRo/book/analisis/incendio-urbano/cuaderno), [calor](https://mromerot.github.io/SIDRo/book/analisis/calor/cuaderno) y [síntesis](https://mromerot.github.io/SIDRo/book/analisis/sintesis) |
+| [Recursos](https://mromerot.github.io/SIDRo/book/recursos/glosario) | Glosario, software, preguntas frecuentes y cómo citar |
+
+## Recursos relacionados en este sitio
+
+- [Hugging Face](../datascience/hugging-face.qmd): ejemplo en Colab para estimar el arbolado de Los Rosales con modelos del Hub y compararlo con el censo de arbolado usado por SIDRo.
+- [Riesgo de desastres en ciudades](ciudades.qmd) y [Estrés térmico](../gcc/estres-termico.qmd).
+
+Autor: Mauricio Romero (Subdirección para el Conocimiento del Riesgo, UNGRD). Contenido bajo CC BY 4.0; código bajo MIT.

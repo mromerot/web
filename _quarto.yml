@@ -119,6 +119,8 @@ website:
             href: grd/amazonas.qmd
           - text: "Ciudades"
             href: grd/ciudades.qmd
+          - text: "SIDRo (Los Rosales)"
+            href: grd/sidro.qmd
           - text: "Terminología"
             href: grd/glosario.qmd
       # aqui viene la seccion de cambio climatico
