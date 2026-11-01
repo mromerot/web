@@ -215,6 +215,16 @@ Riesgo de desastres en ciudades: estrés térmico y otros riesgos propios del en
 
 ::: mrw-card
 ::: mrw-card-header
+[SIDRo (Los Rosales)](sidro.qmd)
+:::
+
+::: mrw-card-body
+Sistema de Información de Riesgos de Desastres, Climático y Ambiental: libro reproducible con el riesgo de sismo, incendio, movimientos en masa y calor del barrio Los Rosales (Bogotá), manzana por manzana.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
 [Terminología](glosario.qmd)
 :::
 
