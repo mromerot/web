@@ -22,6 +22,10 @@ editor: visual
 
 # Análisis de riesgos
 
+-   **EVA — Evaluación y análisis de riesgos de desastres de Leticia, Amazonas.** Mauricio Romero. Libro reproducible con datos abiertos y cuadernos de Google Colab sobre siete riesgos de la ciudad: inundación fluvial, sequía y estiaje, erosión y dinámica fluvial, calor extremo, incendios y humo, lluvias intensas y vendavales, y dengue. [*Link*](https://mromerot.github.io/leticia/)
+    -   Síntesis de riesgos. [*Link*](https://mromerot.github.io/leticia/book/analisis/sintesis)
+    -   Cuadernos en Google Colab. [*Link*](https://mromerot.github.io/leticia/book/recursos/colab)
+
 -   Índices de Riesgos Departamentales de la Región Amazonía. CIPE. [*Link*](https://www.cipe.org/resources/colombia-risk-analysis-special-report/)
 
 -   Vulnerabilities and compound risks of escalating climate disasters in the Brazilian Amazon. 2025. Nature Communications. [*Link*](https://www.nature.com/articles/s41467-025-66603-0)
