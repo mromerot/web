@@ -225,6 +225,16 @@ Sistema de Información de Riesgos de Desastres, Climático y Ambiental: libro r
 
 ::: mrw-card
 ::: mrw-card-header
+[Teoría de riesgos](teoria.qmd)
+:::
+
+::: mrw-card-body
+Libro de teoría y métodos de análisis de riesgos de desastres y climáticos (CLIMAAX, CCDR-tools, CLIMADA y fuentes colombianas), base para analizar nuevas ciudades.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
 [Terminología](glosario.qmd)
 :::
 

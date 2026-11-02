@@ -121,6 +121,8 @@ website:
             href: grd/ciudades.qmd
           - text: "SIDRo (Los Rosales)"
             href: grd/sidro.qmd
+          - text: "Teoría de riesgos"
+            href: grd/teoria.qmd
           - text: "Terminología"
             href: grd/glosario.qmd
       # aqui viene la seccion de cambio climatico

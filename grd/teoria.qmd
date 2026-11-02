@@ -1,0 +1,30 @@
+---
+title: "Teoría y métodos de análisis de riesgos de desastres y climáticos"
+subtitle: "Libro de referencia para repetir el análisis en otras ciudades de Colombia"
+format: html
+editor: visual
+---
+
+::: {.callout-note appearance="simple"}
+**Libro en línea:** [mromerot.github.io/teoria-riesgos](https://mromerot.github.io/teoria-riesgos/) · **Código:** [github.com/mromerot/teoria-riesgos](https://github.com/mromerot/teoria-riesgos)
+:::
+
+## ¿Qué es?
+
+Un libro de [MyST](../datascience/myst.qmd) que reúne solo la teoría y los métodos del análisis de riesgos de desastres y climáticos, sin datos de una ciudad en particular. Sirve de base común para los análisis de ciudades como [SIDRo (Los Rosales)](sidro.qmd) y Leticia, y para los de nuevas ciudades colombianas.
+
+Sigue tres marcos de referencia: el [Handbook de CLIMAAX](https://handbook.climaax.eu), [CCDR-tools](https://gfdrr.github.io/CCDR-tools) (GFDRR, Banco Mundial) y [CLIMADA](https://climada.ethz.ch). Los apoya en fuentes colombianas: la [Ley 1523 de 2012](gestiondelriesgo.qmd), el Atlas de Riesgo de Colombia (UNGRD, 2019), el índice municipal de riesgo del DNP, la serie *Investigaciones en gestión del riesgo de desastres en Colombia* y la literatura de la hoja de vigilancia tecnológica.
+
+## Contenido
+
+| Parte | Contenido |
+|------------------------------------|------------------------------------|
+| [1. Conceptos](https://mromerot.github.io/teoria-riesgos/marco-riesgo) | Riesgo = amenaza × exposición × vulnerabilidad, enfoques probabilista y determinista |
+| [2. Metodología](https://mromerot.github.io/teoria-riesgos/flujo-general) | [Flujo general](https://mromerot.github.io/teoria-riesgos/flujo-general), [análisis probabilista y pérdida anual esperada](https://mromerot.github.io/teoria-riesgos/probabilista-pae) y [escenarios climáticos](https://mromerot.github.io/teoria-riesgos/escenarios-climaticos) |
+| [3. Amenazas](https://mromerot.github.io/teoria-riesgos/index-3) | [Sismo](https://mromerot.github.io/teoria-riesgos/sismo), [volcanes](https://mromerot.github.io/teoria-riesgos/volcanes), [tsunami](https://mromerot.github.io/teoria-riesgos/tsunami), [movimientos en masa](https://mromerot.github.io/teoria-riesgos/mov-masa), [inundación](https://mromerot.github.io/teoria-riesgos/inundacion), [erosión costera](https://mromerot.github.io/teoria-riesgos/erosion-costera), [erosión fluvial](https://mromerot.github.io/teoria-riesgos/erosion-fluvial), [sequía](https://mromerot.github.io/teoria-riesgos/sequia), [calor](https://mromerot.github.io/teoria-riesgos/calor), [incendios](https://mromerot.github.io/teoria-riesgos/incendios) y [ciclones](https://mromerot.github.io/teoria-riesgos/ciclones) |
+| [4. Exposición y vulnerabilidad](https://mromerot.github.io/teoria-riesgos/exposicion) | [Exposición](https://mromerot.github.io/teoria-riesgos/exposicion), [funciones de daño](https://mromerot.github.io/teoria-riesgos/funciones-dano) y [vulnerabilidad social](https://mromerot.github.io/teoria-riesgos/vulnerabilidad-social) |
+| [Recursos](https://mromerot.github.io/teoria-riesgos/fuentes-colombia) | Fuentes colombianas y glosario |
+
+Cada capítulo de amenaza sigue el mismo molde de siete puntos: fenómeno, amenaza, exposición, vulnerabilidad, riesgo, clima, y datos y medidas según la Ley 1523. Los capítulos de erosión costera, erosión fluvial y calor son provisionales, porque las fuentes de referencia los cubren poco.
+
+Autor: Mauricio Romero (Subdirección para el Conocimiento del Riesgo, UNGRD).
