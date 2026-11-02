@@ -1,0 +1,44 @@
+---
+title: "EVA — Riesgos de desastres y climáticos de Sincelejo"
+subtitle: "Diagnóstico exploratorio de ocho amenazas en Sincelejo, Sucre, con análisis climático reproducible"
+format: html
+editor: visual
+---
+
+::: {.callout-note appearance="simple"}
+**Libro en línea:** [mromerot.github.io/sincelejo](https://mromerot.github.io/sincelejo/) · **Código:** [github.com/mromerot/sincelejo](https://github.com/mromerot/sincelejo)
+:::
+
+## ¿Qué es?
+
+Libro reproducible, publicado con [MyST](../datascience/myst.qmd), sobre las amenazas y los riesgos de desastres y climáticos de **Sincelejo** (Sucre). Conserva la estructura y el diseño EVA del libro de [Leticia](amazonas.qmd) y aplica el marco del [libro de teoría](teoria.qmd). Es un **diagnóstico exploratorio**: no es una evaluación predial ni estima pérdidas económicas, población expuesta o mortalidad.
+
+Cubre ocho amenazas, cada una con descripción, amenaza, riesgo, escenarios y medidas:
+
+- **Inundación pluvial y de arroyos**, **sequía y agua** (acuífero de Morroa), **erosión y laderas** y **calor extremo**.
+- **Incendios y humo**, **lluvias y vendavales**, **dengue** y **sismo**.
+
+## Qué se calculó y qué no
+
+- **Calculado:** 35 años y 12.784 días de NASA POWER (1991–2025, referencia 1991–2020) con control de calidad: temperatura media de 28,0 °C, 1433 mm de lluvia anual de referencia y 74 días al año con máxima ≥35 °C en 1991–2020 (97 en 2021–2025, un bloque de solo cinco años).
+- **Contrastado:** la lluvia del reanálisis se comparó con cuatro estaciones automáticas del IDEAM. La coincidencia día a día es muy baja, los extremos no se corroboran y 2021 podría estar subestimado, así que el reanálisis se lee como contexto regional, no como medición local.
+- **Documentado:** Plan de Desarrollo 2024–2027, CARSUCRE, DANE, INS, IDEAM, SGC e IPCC, cada hecho con su fuente y su límite de interpretación.
+- **Por completar:** sismo, erosión, incendios, dengue y vendavales están planteados como protocolos con los datos que faltan; no se rellenan con cifras ficticias.
+
+## Contenido del libro
+
+| Sección | Contenido |
+|------------------------------------|------------------------------------|
+| [1. Conceptos y evidencia](https://mromerot.github.io/sincelejo/book/conceptos) | Marco de riesgo, riesgo climático, marco colombiano, contexto de Sincelejo, calidad de la evidencia y revisión crítica |
+| [2. Fuentes de datos](https://mromerot.github.io/sincelejo/book/datos) | Amenaza, exposición, serie climática, catálogo y [contraste con estaciones IDEAM](https://mromerot.github.io/sincelejo/book/datos/validacion-ideam) |
+| [3. Análisis](https://mromerot.github.io/sincelejo/book/analisis) | Las ocho amenazas, la [síntesis](https://mromerot.github.io/sincelejo/book/analisis/sintesis) y los [riesgos compuestos](https://mromerot.github.io/sincelejo/book/analisis/multiamenaza) |
+| [Recursos](https://mromerot.github.io/sincelejo/book/recursos/glosario) | Glosario, software, preguntas frecuentes y cómo citar |
+
+Los 28 cuadernos se ejecutan desde el repositorio con la instantánea de datos preservada (hash SHA-256 en el manifiesto).
+
+## Recursos relacionados en este sitio
+
+- [Amazonas](amazonas.qmd) (EVA de Leticia), [SIDRo (Los Rosales)](sidro.qmd) y [Teoría de riesgos](teoria.qmd).
+- [Riesgo de desastres en ciudades](ciudades.qmd).
+
+Autor: Mauricio Romero (Subdirección para el Conocimiento del Riesgo, UNGRD). Contenido bajo CC BY 4.0; código bajo MIT. Los datos de terceros conservan sus condiciones.
