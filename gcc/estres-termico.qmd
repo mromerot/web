@@ -17,7 +17,7 @@ Por eso la ciencia del clima y la gestión del riesgo usan **indicadores de estr
 
 ::: callout-note
 ## Nota sobre las fuentes
-El texto completo del artículo de *Nature Climate Change* no fue accesible (la revista redirige a autenticación). Sus datos provienen del comunicado de ECMWF, de Copernicus y de resúmenes de prensa; verifique las cifras en el artículo original antes de citarlas. Las fórmulas de EHF, HWMId y DHW se presentan según las publicaciones originales y la documentación oficial citada; confirme en cada fuente los parámetros exactos antes de usarlas en un cálculo.
+Las cifras de Emerton et al. (2026) se contrastaron con el texto del artículo en *Nature Climate Change* (noviembre de 2026). Las fórmulas de EHF, HWMId y DHW se presentan según las publicaciones originales y la documentación oficial citada; confirme en cada fuente los parámetros exactos antes de usarlas en un cálculo.
 :::
 
 # Familias de indicadores
@@ -70,13 +70,13 @@ La evidencia global más reciente muestra que el calor nocturno crece al menos t
 **Hallazgos principales**
 
 -   Las diez noches más cálidas del año se calientan a ≈0,32 °C por década, frente a ≈0,27 °C por década de los diez días más cálidos.
--   En las diez jornadas más cálidas, el UTCI máximo es hasta 4 °C mayor que en los setenta en el sur de Europa, el norte de África y la península arábiga; en el suroeste de Europa, hasta 5 °C.
--   Las regiones subtropicales (sur de Norteamérica, sur de Europa, África y Suramérica) suman hasta 50 días más al año con estrés térmico fuerte o extremo.
--   El estrés térmico extremo es ≈2,5 veces más frecuente en Europa.
+-   En las diez jornadas más cálidas del año, el UTCI máximo es hasta 4 °C mayor (localmente 5 °C) que en los setenta en Europa, el norte de África y la península arábiga; en el resto del mundo predominan aumentos de 2–3 °C.
+-   Las regiones subtropicales (sur de Norteamérica, sur de Europa, África y Suramérica) suman hasta 50 días más al año con estrés térmico al menos fuerte.
+-   El estrés térmico extremo es ≈2,5 veces más frecuente en Europa y Suramérica, el doble en Norteamérica y 1,8, 1,7 y 1,2 veces en África, Oceanía y Asia.
 -   Es el primer análisis global que trata **juntos** los eventos diurnos y nocturnos (eventos compuestos), cada vez más frecuentes, severos y duraderos.
--   Los comunicados de prensa reportan que la proporción de población expuesta al menos un día de estrés extremo habría pasado de 16 % a 22 % (≈1000 millones de personas más); otras notas citan cifras distintas para el estrés fuerte, por lo que conviene verificar en el artículo.
+-   La proporción de población expuesta al menos un día de estrés extremo pasó de 16 % a 22 %, lo que equivale a unos 1000 millones de personas más al año que en los setenta, descontado el crecimiento poblacional.
 
-**Limitación señalada:** el UTCI modela un individuo de referencia estandarizado y no considera edad, composición corporal ni aclimatación.
+**Limitaciones señaladas:** el UTCI modela un individuo de referencia estandarizado y no considera edad, composición corporal ni aclimatación. Además, ERA5-HEAT captura mal los extremos y los microclimas como las islas de calor urbanas, por lo que los autores consideran conservadoras sus estimaciones, sobre todo para ciudades.
 
 **Lectura para este sitio.** El mismo valor de temperatura del aire puede corresponder a estrés muy distinto según la humedad, el viento y la radiación, y la noche es una dimensión del riesgo, no un detalle.
 
@@ -433,7 +433,7 @@ Plot.plot({
 
 ## Salud humana y trabajo
 
-El IPCC (AR6) trata el estrés térmico como un riesgo creciente para la salud, con **confianza muy alta**, debido a urbanización, aumento de extremos de alta temperatura y envejecimiento poblacional. Lo define como las condiciones en que un organismo absorbe calor en exceso por exposición a altas temperaturas del aire o del agua, o a radiación térmica; en mamíferos y aves, la combinación de calor, humedad alta y poco viento hace fallar la termorregulación (definición del glosario del GTI, citada por fuentes secundarias). La literatura asociada sobre calor húmedo (Tw, WBGT, índice de calor) muestra que la elección del índice cambia la magnitud del peligro estimado.
+El IPCC (AR6, GTII, cap. 7) concluye que el calor es un riesgo creciente para la salud, con **confianza muy alta**, debido a urbanización, aumento de extremos de alta temperatura y envejecimiento poblacional. También reporta, con confianza alta, que las horas potenciales de trabajo perdidas por calor aumentaron de forma significativa en las últimas dos décadas y que algunas regiones ya enfrentan condiciones de estrés térmico cercanas al límite de productividad laboral. El AR6 define como las condiciones en que un organismo absorbe calor en exceso por exposición a altas temperaturas del aire o del agua, o a radiación térmica; en mamíferos y aves, la combinación de calor, humedad alta y poco viento hace fallar la termorregulación (definición del glosario del GTI, citada por fuentes secundarias). La literatura asociada sobre calor húmedo (Tw, WBGT, índice de calor) muestra que la elección del índice cambia la magnitud del peligro estimado.
 
 En el trabajo, el informe FAO-OMM (2026) estima que los días demasiado calurosos para trabajar podrían llegar a 250 al año en buena parte del sur de Asia, el África subsahariana tropical y partes de Centroamérica y Suramérica.
 
@@ -450,15 +450,18 @@ El enfoque de la FAO es **sectorial y basado en umbrales fisiológicos**, no en 
 ## Océanos, pesquerías y arrecifes
 
 -   **Pesca:** el calor extremo reduce el oxígeno disuelto y puede causar fallo cardiaco en peces; más del 90 % del océano global sufrió al menos una ola de calor marina en 2025 (FAO-OMM, 2026).
--   **Olas de calor marinas:** según el IPCC, son más frecuentes, intensas y largas desde la década de 1980, y desde al menos 2006 es muy probable que se deban al cambio climático de origen humano.
+-   **Olas de calor marinas:** según el IPCC (AR6, GTI, cap. 9), aumentaron en frecuencia durante el siglo XX (confianza alta), con un aumento aproximado al doble entre 1982 y 2016, y se volvieron más intensas y largas desde los años ochenta (confianza media). El capítulo retoma la evaluación del SROCC según la cual entre el 84 % y el 90 % de las ocurridas entre 2006 y 2015 se deben muy probablemente al calentamiento de origen humano.
 -   **Arrecifes:** el indicador de referencia es DHW (véase la sección anterior).
 
 ## Bosques y biodiversidad
 
-Para bosques y biodiversidad no hay un indicador único consolidado. Se combinan extremos térmicos, calor acumulado, déficit de presión de vapor (VPD), sequía y umbrales de tolerancia de las especies, para estimar daño fisiológico, mortalidad y alteraciones ecológicas. Esta sección se apoya en la síntesis metodológica del autor y no en una fuente específica consultada para este artículo; requiere referencias propias.
+Para bosques y biodiversidad no hay un indicador único consolidado. Se combinan extremos térmicos, calor acumulado, déficit de presión de vapor (VPD), sequía y umbrales de tolerancia de las especies, para estimar daño fisiológico, mortalidad y alteraciones ecológicas.
 
-::: callout-warning
-No se pudo acceder a los capítulos 7 y 11 del AR6 durante la elaboración de este artículo; los puntos atribuidos al IPCC se apoyan en la síntesis de mensajes de salud y calor del AR6 y en el glosario citado por fuentes secundarias. Se recomienda verificar en los capítulos originales.
+La evidencia de mortalidad es más sólida para el efecto combinado de sequía y calor que para el calor aislado. Allen et al. (2010) hicieron la primera evaluación global de mortalidad de árboles atribuida a sequía y estrés térmico y advirtieron que los bosques pueden volverse vulnerables incluso en ambientes que no se consideran limitados por agua. El IPCC (AR6, GTII, cap. 2) concluye, con confianza alta, que el cambio climático de origen humano causó mortalidad de árboles inducida por sequía de hasta el 20 % entre 1945 y 2007 en el oeste de Norteamérica, el Sahel africano y el norte de África, y contribuyó a más de cien casos adicionales en África, Asia, Australia, Europa y América. Esa mortalidad se asocia con aumentos de temperatura, aridez y frecuencia de sequías, no con un índice térmico único. El AR6 también señala, con confianza alta, que las olas de calor y las sequías concurrentes se han vuelto más frecuentes (GTI, cap. 11), lo que respalda tratar el calor y la sequía como eventos compuestos.
+
+::: callout-note
+## Verificación de fuentes del IPCC
+Se contrastaron con el texto de los capítulos: GTII cap. 7 (salud), GTII cap. 2 (ecosistemas terrestres), GTI cap. 9 (olas de calor marinas) y GTI cap. 11 (eventos extremos). Siguen sin verificarse en el original la definición de «estrés térmico» del glosario del GTII y las afirmaciones sobre agricultura, que corresponderían al cap. 5 del GTII; la sección agrícola se apoya en el informe FAO-OMM. El VPD no apareció en el cap. 2 del GTII, por lo que su inclusión como indicador proviene de la literatura ecofisiológica y no del IPCC.
 :::
 
 # Del peligro al riesgo
@@ -501,6 +504,8 @@ Para una evaluación que abarque salud humana, agricultura y ecosistemas no conv
 -   NOAA Coral Reef Watch. Degree Heating Week product. <https://coralreefwatch.noaa.gov/product/5km/tutorial/crw10a_dhw_product.php>
 -   Nairn, J. y Fawcett, R. (2015). The Excess Heat Factor: a metric for heatwave intensity and its use in classifying heatwave severity. *International Journal of Environmental Research and Public Health*, 12(1), 227–253. Ver también la guía de `thermofeel`: <https://thermofeel.readthedocs.io/en/2.3.0/guide/excessheat/>
 -   Russo, S., Sillmann, J. y Fischer, E. M. (2015). Top ten European heatwaves since 1950 and their occurrence in the coming decades. *Environmental Research Letters*, 10, 124003. Ver también Russo et al. (2014), *Journal of Geophysical Research: Atmospheres*.
--   IPCC (2021, 2022). AR6, Grupo de Trabajo I y II. Síntesis de mensajes de calor y salud: <https://heathealth.info/news/10-key-heat-health-messages-from-the-ipcc-ar6-report/>
+-   Allen, C. D., Macalady, A. K., Chenchouni, H., Bachelet, D., McDowell, N., Vennetier, M., et al. (2010). A global overview of drought and heat-induced tree mortality reveals emerging climate change risks for forests. *Forest Ecology and Management*, 259(4), 660–684. <https://doi.org/10.1016/j.foreco.2009.09.001>
+-   IPCC (2021). *Climate Change 2021: The Physical Science Basis*. Grupo de Trabajo I, cap. 9 (<https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-9/>) y cap. 11 (<https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-11/>).
+-   IPCC (2022). *Climate Change 2022: Impacts, Adaptation and Vulnerability*. Grupo de Trabajo II, cap. 2 (<https://www.ipcc.ch/report/ar6/wg2/chapter/chapter-2/>) y cap. 7 (<https://www.ipcc.ch/report/ar6/wg2/chapter/chapter-7/>). Síntesis divulgativa de mensajes de calor y salud: <https://heathealth.info/news/10-key-heat-health-messages-from-the-ipcc-ar6-report/>
 -   CLIMADA. <https://climada-python.readthedocs.io/> y CLIMADA Petals <https://climada-petals.readthedocs.io/>
 -   CLIMAAX Handbook. <https://handbook.climaax.eu/intro.html>; flujo de olas de calor urbanas: <https://handbook.climaax.eu/notebooks/workflows/heatwaves.html>
