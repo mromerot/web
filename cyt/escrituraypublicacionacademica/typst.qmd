@@ -1,0 +1,201 @@
+---
+title: "Typst"
+format: html
+editor: visual
+---
+
+## ¿Qué es Typst?
+
+Typst es un sistema de composición tipográfica (*typesetting*) basado en marcado, pensado para escribir y automatizar documentos de cualquier tipo: artículos científicos, tesis, informes, presentaciones, currículos o cartas. Su compilador es de código abierto (licencia Apache-2.0, escrito en Rust) y genera PDF, imágenes y, en versión preliminar, sitios web.
+
+Se le suele presentar como una alternativa moderna a LaTeX: busca la misma calidad tipográfica (matemáticas, bibliografías, referencias cruzadas, figuras y tablas), pero con una sintaxis más simple, mensajes de error comprensibles y compilación casi instantánea.
+
+{{< video "https://www.youtube.com/watch?v=NTGkb4FCLhM" >}} What is Typst? The Modern LaTeX Alternative
+
+## ¿Para qué sirve?
+
+Typst cubre las mismas necesidades de la escritura académica y técnica que suele resolver LaTeX:
+
+- **Artículos, tesis y libros** con numeración automática, referencias cruzadas, índices y bibliografía (formatos CSL como APA, además de BibTeX/Hayagriva).
+- **Matemáticas** escritas en una notación legible, por ejemplo `sum_(k=1)^n k`.
+- **Datos y visualizaciones**: carga CSV y JSON directamente y los convierte en tablas o gráficos.
+- **Presentaciones** (con paquetes como Touying o Polylux), **currículos**, **informes institucionales** y **cartas** con plantillas reutilizables.
+- **Documentos automatizados**: gracias a su lenguaje de *scripting* integrado (condicionales, bucles, funciones) se pueden generar informes por lote, como un informe por municipio a partir de una tabla.
+
+## Ventajas
+
+| Aspecto | Typst | LaTeX |
+|---|---|---|
+| Arranque | Un archivo `.typ` vacío ya es un documento válido; no hay preámbulo obligatorio | Requiere clase de documento y paquetes |
+| Sintaxis | Ligera, parecida a Markdown (`= Título`, `*negrita*`, `_cursiva_`) | Comandos y entornos (`\section{}`, `\textbf{}`) |
+| Compilación | Milisegundos, con vista previa mientras se escribe | Segundos o más, con varias pasadas |
+| Errores | Mensajes claros, a menudo con sugerencias | Mensajes largos y difíciles de interpretar |
+| Programación | Lenguaje de *scripting* integrado y coherente | Macros de TeX |
+| Paquetes | Se descargan al usarlos y se guardan en caché; instalación ligera | Distribuciones grandes (TeX Live, MiKTeX) |
+| Plantillas | Funciones: `#show: plantilla.with(...)` | Clases y archivos `.sty` |
+
+Como contrapeso, conviene conocer las limitaciones actuales: el ecosistema de gráficos (CeTZ, Lilaq) es menor que el de PGF/TikZ, muchas revistas todavía exigen plantillas LaTeX o Word, y algunos paquetes especializados aún no tienen equivalente.
+
+{{< video "https://www.youtube.com/watch?v=Eu7YvflijNw" >}} First Enhancements You Will Notice Moving From LaTeX to Typst
+
+## Cómo se usa
+
+### Opción 1: la aplicación web
+
+En [typst.app](https://typst.app/) se escribe en el navegador, sin instalar nada, con vista previa en vivo y colaboración en tiempo real. El plan gratuito incluye edición de proyectos, colaboración, paquetes y plantillas de la comunidad, conversión de archivos y 200 MB de almacenamiento. El plan Pro añade comentarios, paquetes privados, sincronización con GitHub/GitLab (experimental), Zotero/Mendeley y más almacenamiento.
+
+### Opción 2: la línea de comandos (CLI)
+
+El compilador es gratuito y se instala localmente:
+
+```bash
+# macOS
+brew install typst
+
+# Windows
+winget install --id Typst.Typst
+
+# Con Rust
+cargo install --locked typst-cli
+```
+
+Luego se compila o se observa un archivo para recompilar en cada cambio:
+
+```bash
+typst compile articulo.typ        # genera articulo.pdf
+typst watch articulo.typ          # recompila al guardar
+```
+
+### Opción 3: un editor local
+
+La extensión **Tinymist** ofrece resaltado, autocompletado, diagnóstico y vista previa para VS Code, Neovim, Helix, Emacs, Zed y Sublime. El siguiente video, en español, muestra cómo configurarlo en VS Code.
+
+{{< video "https://www.youtube.com/watch?v=lsML-qNHU9M" >}} Cómo usar Typst en VS Code
+
+### Un primer documento
+
+```typst
+#set page(paper: "a4", margin: 2.5cm)
+#set text(lang: "es", size: 11pt)
+#set heading(numbering: "1.")
+
+= Introducción
+
+Typst permite escribir texto con *énfasis*, _cursiva_ y listas:
+
+- Compilación rápida
+- Sintaxis simple
+
++ Elemento numerado uno
++ Elemento numerado dos
+
+La suma de los primeros $n$ números es:
+
+$ sum_(k=1)^n k = (n(n+1)) / 2 $
+
+#figure(
+  table(
+    columns: 3,
+    [*Municipio*], [*Eventos*], [*Año*],
+    [Bucaramanga], [12], [2024],
+    [Floridablanca], [7], [2024],
+  ),
+  caption: [Tabla de ejemplo.],
+) <tab-ejemplo>
+
+Como se ve en la @tab-ejemplo, las referencias cruzadas son automáticas.
+```
+
+Las líneas que empiezan con `#set` configuran propiedades de ahí en adelante (*set rules*), y `#show` transforma la apariencia de elementos (*show rules*). Con estas dos ideas y las funciones con `#` se cubre buena parte del lenguaje.
+
+### Plantillas y bibliografía
+
+Una plantilla se aplica con una sola línea, y la bibliografía se enlaza desde un archivo `.bib` o `.yml`:
+
+```typst
+#import "@preview/charged-ieee:0.1.3": ieee
+
+#show: ieee.with(
+  title: [Mi artículo],
+  authors: ((name: "Autor/a", email: "autor@ejemplo.org"),),
+)
+
+Texto con una cita @garcia2024.
+
+#bibliography("referencias.bib", style: "apa")
+```
+
+::: {.callout-note}
+## Versiones de paquetes
+Los números de versión de los paquetes (por ejemplo `charged-ieee:0.1.3`) cambian con el tiempo. Consulte la versión vigente en [Typst Universe](https://typst.app/universe/) antes de copiar el código.
+:::
+
+{{< video "https://www.youtube.com/watch?v=jAp8BFbYP3I" >}} Getting through university without LaTeX (flujo de trabajo con la CLI y plantillas)
+
+## Typst Universe: paquetes y plantillas
+
+[Typst Universe](https://typst.app/universe/) es el repositorio de paquetes y plantillas de la comunidad (más de 1.700) en categorías como visualización, diseño, informes, artículos, tesis, presentaciones y currículos. Los paquetes se importan con `#import "@preview/nombre:versión"` y se descargan automáticamente la primera vez.
+
+## Repositorios en GitHub
+
+### Núcleo y documentación
+
+- [typst/typst](https://github.com/typst/typst): el compilador y la CLI (Apache-2.0).
+- [typst/templates](https://github.com/typst/templates): plantillas oficiales que incluye la aplicación web.
+- [typst/packages](https://github.com/typst/packages): fuente de los paquetes de Typst Universe; aquí se proponen nuevos paquetes y plantillas.
+- [qjcg/awesome-typst](https://github.com/qjcg/awesome-typst): lista curada de herramientas, editores, plantillas y paquetes.
+
+### Editores y herramientas
+
+- [Tinymist](https://github.com/Myriad-Dreamin/tinymist): servidor de lenguaje y vista previa para VS Code, Neovim, Helix, Emacs, Zed y Sublime.
+- [typstyle](https://github.com/typstyle-rs/typstyle): formateador de código Typst.
+- [typst-live](https://github.com/ItsEthra/typst-live): recarga el PDF en el navegador mientras se edita.
+- [utpm](https://github.com/typst-community/utpm): gestor de paquetes locales y remotos.
+- [setup-typst](https://github.com/typst-community/setup-typst): instala Typst en GitHub Actions, útil para compilar documentos automáticamente.
+- [typst-pandoc](https://github.com/lvignoli/typst-pandoc) y [Tylax](https://github.com/scipenai/tylax): conversión entre Typst, Pandoc y LaTeX.
+
+### Paquetes destacados
+
+- [CeTZ](https://github.com/cetz-package/cetz): dibujo y gráficos, inspirado en TikZ.
+- [Lilaq](https://github.com/lilaq-project/lilaq): visualización de datos con valores por defecto sensatos.
+- [Touying](https://github.com/touying-typ/touying) y [Polylux](https://github.com/polylux-typ/polylux): presentaciones.
+- [typst-theorems](https://github.com/sahasatvik/typst-theorems): teoremas numerados.
+- [showybox](https://github.com/Pablo-Gonzalez-Calderon/showybox-package): cuadros personalizables.
+
+### Plantillas
+
+- [brilliant-CV](https://github.com/yunanwg/brilliant-CV): currículo.
+- [LaPreprint](https://github.com/LaPreprint/typst): preprints.
+- [simple-typst-thesis](https://github.com/zagoli/simple-typst-thesis): tesis.
+- [quarto-ext/typst-templates](https://github.com/quarto-ext/typst-templates): plantillas para usar con Quarto.
+
+## Typst y Quarto
+
+Quarto, el sistema con el que se construye este sitio, puede generar PDF mediante Typst en lugar de LaTeX. Basta con pedir ese formato en el encabezado del documento `.qmd`:
+
+```yaml
+---
+title: "Mi informe"
+format: typst
+---
+```
+
+Así se combinan la escritura en Markdown, el código ejecutable (Python, R) y la composición tipográfica de Typst sin instalar una distribución de LaTeX. Ver también [Ciencia reproducible](../cienciareproduc.qmd).
+
+## Cómo aprender más
+
+1. **Tutorial oficial**: [typst.app/docs/tutorial](https://typst.app/docs/tutorial/), sin conocimientos previos y con dificultad gradual.
+2. **Guía para usuarios de LaTeX**: [typst.app/docs/guides/guide-for-latex-users](https://typst.app/docs/guides/guide-for-latex-users/), con equivalencias comando por comando.
+3. **Typst Examples Book**: [sitandr.github.io/typst-examples-book](https://sitandr.github.io/typst-examples-book/book/), con fragmentos, trucos y tutoriales.
+4. **Blog oficial**: [typst.app/blog](https://typst.app/blog/), con novedades del proyecto.
+5. **Comunidad**: [Discord oficial](https://discord.gg/2uDybryKPe) y [r/typst](https://www.reddit.com/r/typst/).
+
+{{< video "https://www.youtube.com/watch?v=SjaCYcgyGAM" >}} Forget LaTeX: Typst is A Game Changer
+
+## Cuándo conviene usar Typst
+
+::: {.callout-tip}
+## Recomendación
+- **Úselo** para documentos nuevos que controla de principio a fin: tesis, informes, apuntes, currículos, presentaciones o informes generados por lote.
+- **Mantenga LaTeX o Word** cuando una revista, editorial o coautores exijan sus propias plantillas, o cuando dependa de paquetes LaTeX sin equivalente en Typst.
+:::

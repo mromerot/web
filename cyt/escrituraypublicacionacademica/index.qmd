@@ -28,4 +28,14 @@ Guía integral sobre lectura y escritura científica: la oración, el párrafo, 
 Recursos sobre la construcción del párrafo académico, comenzando por la oración temática o *topic sentence* que organiza y anticipa el contenido del párrafo.
 :::
 :::
+
+::: mrw-card
+::: mrw-card-header
+[Typst](typst.qmd)
+:::
+
+::: mrw-card-body
+Introducción a Typst, el sistema de composición tipográfica moderno alternativo a LaTeX: qué es, para qué sirve, ventajas, cómo se usa (web, CLI y editores), integración con Quarto, repositorios en GitHub y recursos para aprender.
+:::
+:::
 ::::::

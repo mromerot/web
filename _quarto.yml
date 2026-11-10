@@ -181,6 +181,8 @@ website:
                 href: cyt/escrituraypublicacionacademica/escrituraypublicacionacademica.qmd
               - text: "Párrafos"
                 href: cyt/escrituraypublicacionacademica/parrafos.qmd
+              - text: "Typst"
+                href: cyt/escrituraypublicacionacademica/typst.qmd
           - text: "Ciencia reproducible"
             href: cyt/cienciareproduc.qmd
           - text: "Ciencia transdiciplinar"

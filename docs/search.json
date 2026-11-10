@@ -4223,7 +4223,7 @@
     "href": "cyt/escrituraypublicacionacademica/index.html",
     "title": "Escritura y publicación académica",
     "section": "",
-    "text": "Esta sección reúne recursos sobre el proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.\n\n\n\nEscritura y publicación académica\n\n\nGuía integral sobre lectura y escritura científica: la oración, el párrafo, el estilo científico, el papel del editor, herramientas de escritura, bibliometría, estructura del artículo (título, resumen, introducción, métodos, resultados, discusión), revisión por pares, ética en la publicación y divulgación.\n\n\n\n\nPárrafos\n\n\nRecursos sobre la construcción del párrafo académico, comenzando por la oración temática o topic sentence que organiza y anticipa el contenido del párrafo.",
+    "text": "Esta sección reúne recursos sobre el proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.\n\n\n\nEscritura y publicación académica\n\n\nGuía integral sobre lectura y escritura científica: la oración, el párrafo, el estilo científico, el papel del editor, herramientas de escritura, bibliometría, estructura del artículo (título, resumen, introducción, métodos, resultados, discusión), revisión por pares, ética en la publicación y divulgación.\n\n\n\n\nPárrafos\n\n\nRecursos sobre la construcción del párrafo académico, comenzando por la oración temática o topic sentence que organiza y anticipa el contenido del párrafo.\n\n\n\n\nTypst\n\n\nIntroducción a Typst, el sistema de composición tipográfica moderno alternativo a LaTeX: qué es, para qué sirve, ventajas, cómo se usa (web, CLI y editores), integración con Quarto, repositorios en GitHub y recursos para aprender.",
     "crumbs": [
       "Ciencia y tecnología",
       "Escritura y publicación académica"
@@ -4234,140 +4234,30 @@
     "href": "cyt/escrituraypublicacionacademica/index.html#escritura-y-publicación-académica",
     "title": "Escritura y publicación académica",
     "section": "",
-    "text": "Esta sección reúne recursos sobre el proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.\n\n\n\nEscritura y publicación académica\n\n\nGuía integral sobre lectura y escritura científica: la oración, el párrafo, el estilo científico, el papel del editor, herramientas de escritura, bibliometría, estructura del artículo (título, resumen, introducción, métodos, resultados, discusión), revisión por pares, ética en la publicación y divulgación.\n\n\n\n\nPárrafos\n\n\nRecursos sobre la construcción del párrafo académico, comenzando por la oración temática o topic sentence que organiza y anticipa el contenido del párrafo.",
+    "text": "Esta sección reúne recursos sobre el proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.\n\n\n\nEscritura y publicación académica\n\n\nGuía integral sobre lectura y escritura científica: la oración, el párrafo, el estilo científico, el papel del editor, herramientas de escritura, bibliometría, estructura del artículo (título, resumen, introducción, métodos, resultados, discusión), revisión por pares, ética en la publicación y divulgación.\n\n\n\n\nPárrafos\n\n\nRecursos sobre la construcción del párrafo académico, comenzando por la oración temática o topic sentence que organiza y anticipa el contenido del párrafo.\n\n\n\n\nTypst\n\n\nIntroducción a Typst, el sistema de composición tipográfica moderno alternativo a LaTeX: qué es, para qué sirve, ventajas, cómo se usa (web, CLI y editores), integración con Quarto, repositorios en GitHub y recursos para aprender.",
     "crumbs": [
       "Ciencia y tecnología",
       "Escritura y publicación académica"
     ]
   },
   {
-    "objectID": "cyt/interfaz-cps.html",
-    "href": "cyt/interfaz-cps.html",
-    "title": "Interfaz ciencia-política-sociedad",
+    "objectID": "cyt/index.html",
+    "href": "cyt/index.html",
+    "title": "Ciencia y tecnología",
     "section": "",
-    "text": "La interfaz ciencia-política-sociedad es el conjunto de espacios, procesos y organizaciones donde el conocimiento científico, la toma de decisiones públicas y las demandas y valores de la sociedad se encuentran, se traducen entre sí y se negocian mutuamente. El término aparece de forma explícita en la literatura reciente sobre gobernanza ambiental: un artículo de referencia en el Annual Review of Environment and Resources la describe como el espacio donde confluyen múltiples fuentes de conocimiento y las capacidades de distintos actores, con el propósito de co-crear conocimiento e información que informen la decisión. Co-Producing Sustainability: Reordering the Governance of Science, Policy, and Practice. Wyborn et al. Annual Review of Environment and Resources. 2019. Link.\nEsta idea es más amplia que el viejo “modelo lineal”, según el cual la ciencia produce conocimiento objetivo que los tomadores de decisión simplemente aplican. La revista Science cuestiona directamente ese supuesto: la evidencia científica compite con otros tipos de conocimiento, intereses y valores en el proceso de decisión, y su peso depende de qué tan creíble, relevante y legítima resulte para quienes deciden. The science–policy interface. Van den Hove. Science. 2007. Link. Esa condición triple —credibilidad, relevancia y legitimidad (CRELE)— proviene del concepto de organización puente (boundary organization), propuesto por David Guston para describir las instituciones que estabilizan la frontera entre ciencia y política y permiten que ambas partes cumplan sus objetivos sin que una reemplace a la otra. Boundary Organizations in Environmental Policy and Science: An Introduction. Guston. Science, Technology, & Human Values. 2001. Link.\n\nCiencia: produce y sintetiza evidencia, identifica riesgos y opciones, y evalúa su nivel de certidumbre.\nPolítica: decide, regula y asigna recursos a partir de esa evidencia, junto con otros criterios legítimos (valores, intereses, viabilidad).\nSociedad: valida socialmente el proceso, aporta conocimientos y prioridades propias, y legitima —o cuestiona— tanto la evidencia como la decisión.\n\nDos instituciones intergubernamentales creadas explícitamente como interfaces ciencia-política ilustran el concepto a escala global: el Panel Intergubernamental de Cambio Climático (IPCC), que sintetiza la ciencia climática para las negociaciones de la Convención Marco de Cambio Climático, y la Plataforma Intergubernamental sobre Biodiversidad y Servicios Ecosistémicos (IPBES), que cumple una función equivalente para la biodiversidad. Conceptual Framework. IPBES secretariat. Link. En ambos casos la dimensión “sociedad” es parte explícita del mandato: sus evaluaciones buscan legitimidad no solo ante los gobiernos, sino ante la ciudadanía y los actores no estatales cuyo bienestar depende de esas decisiones.\n What is the IPCC? Video oficial del Panel Intergubernamental de Cambio Climático.",
+    "text": "Esta sección reúne recursos sobre la práctica de la ciencia: la escritura y publicación académica, la ciencia reproducible y abierta, la ciencia transdisciplinar y la interfaz entre ciencia, política y sociedad.\n\n\n\nEscritura y publicación académica\n\n\nEl proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.\n\n\n\n\nCiencia reproducible\n\n\nQué es la ciencia reproducible y la ciencia abierta (UNESCO, FAIR), cómo construir un plan de manejo de datos, y las herramientas de publicación reproducible (Quarto, Typst, MyST, Shiny).\n\n\n\n\nCiencia transdiciplinar\n\n\nQué es la ciencia transdisciplinar, cómo se construyen proyectos TD paso a paso, sus conceptos clave y ejemplos de convocatorias, y su relación con la ciencia convergente y la ciencia de la implementación.\n\n\n\n\nInterfaz ciencia-política-sociedad\n\n\nQué es la interfaz ciencia-política-sociedad: los espacios, procesos y organizaciones donde el conocimiento científico, la decisión pública y las demandas sociales se traducen y negocian mutuamente.",
     "crumbs": [
-      "Ciencia y tecnología",
-      "Interfaz ciencia-política-sociedad"
+      "Ciencia y tecnología"
     ]
   },
   {
-    "objectID": "cyt/interfaz-cps.html#qué-es-la-interfaz-ciencia-política-sociedad",
-    "href": "cyt/interfaz-cps.html#qué-es-la-interfaz-ciencia-política-sociedad",
-    "title": "Interfaz ciencia-política-sociedad",
+    "objectID": "cyt/index.html#ciencia-y-tecnología",
+    "href": "cyt/index.html#ciencia-y-tecnología",
+    "title": "Ciencia y tecnología",
     "section": "",
-    "text": "La interfaz ciencia-política-sociedad es el conjunto de espacios, procesos y organizaciones donde el conocimiento científico, la toma de decisiones públicas y las demandas y valores de la sociedad se encuentran, se traducen entre sí y se negocian mutuamente. El término aparece de forma explícita en la literatura reciente sobre gobernanza ambiental: un artículo de referencia en el Annual Review of Environment and Resources la describe como el espacio donde confluyen múltiples fuentes de conocimiento y las capacidades de distintos actores, con el propósito de co-crear conocimiento e información que informen la decisión. Co-Producing Sustainability: Reordering the Governance of Science, Policy, and Practice. Wyborn et al. Annual Review of Environment and Resources. 2019. Link.\nEsta idea es más amplia que el viejo “modelo lineal”, según el cual la ciencia produce conocimiento objetivo que los tomadores de decisión simplemente aplican. La revista Science cuestiona directamente ese supuesto: la evidencia científica compite con otros tipos de conocimiento, intereses y valores en el proceso de decisión, y su peso depende de qué tan creíble, relevante y legítima resulte para quienes deciden. The science–policy interface. Van den Hove. Science. 2007. Link. Esa condición triple —credibilidad, relevancia y legitimidad (CRELE)— proviene del concepto de organización puente (boundary organization), propuesto por David Guston para describir las instituciones que estabilizan la frontera entre ciencia y política y permiten que ambas partes cumplan sus objetivos sin que una reemplace a la otra. Boundary Organizations in Environmental Policy and Science: An Introduction. Guston. Science, Technology, & Human Values. 2001. Link.\n\nCiencia: produce y sintetiza evidencia, identifica riesgos y opciones, y evalúa su nivel de certidumbre.\nPolítica: decide, regula y asigna recursos a partir de esa evidencia, junto con otros criterios legítimos (valores, intereses, viabilidad).\nSociedad: valida socialmente el proceso, aporta conocimientos y prioridades propias, y legitima —o cuestiona— tanto la evidencia como la decisión.\n\nDos instituciones intergubernamentales creadas explícitamente como interfaces ciencia-política ilustran el concepto a escala global: el Panel Intergubernamental de Cambio Climático (IPCC), que sintetiza la ciencia climática para las negociaciones de la Convención Marco de Cambio Climático, y la Plataforma Intergubernamental sobre Biodiversidad y Servicios Ecosistémicos (IPBES), que cumple una función equivalente para la biodiversidad. Conceptual Framework. IPBES secretariat. Link. En ambos casos la dimensión “sociedad” es parte explícita del mandato: sus evaluaciones buscan legitimidad no solo ante los gobiernos, sino ante la ciudadanía y los actores no estatales cuyo bienestar depende de esas decisiones.\n What is the IPCC? Video oficial del Panel Intergubernamental de Cambio Climático.",
+    "text": "Esta sección reúne recursos sobre la práctica de la ciencia: la escritura y publicación académica, la ciencia reproducible y abierta, la ciencia transdisciplinar y la interfaz entre ciencia, política y sociedad.\n\n\n\nEscritura y publicación académica\n\n\nEl proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.\n\n\n\n\nCiencia reproducible\n\n\nQué es la ciencia reproducible y la ciencia abierta (UNESCO, FAIR), cómo construir un plan de manejo de datos, y las herramientas de publicación reproducible (Quarto, Typst, MyST, Shiny).\n\n\n\n\nCiencia transdiciplinar\n\n\nQué es la ciencia transdisciplinar, cómo se construyen proyectos TD paso a paso, sus conceptos clave y ejemplos de convocatorias, y su relación con la ciencia convergente y la ciencia de la implementación.\n\n\n\n\nInterfaz ciencia-política-sociedad\n\n\nQué es la interfaz ciencia-política-sociedad: los espacios, procesos y organizaciones donde el conocimiento científico, la decisión pública y las demandas sociales se traducen y negocian mutuamente.",
     "crumbs": [
-      "Ciencia y tecnología",
-      "Interfaz ciencia-política-sociedad"
-    ]
-  },
-  {
-    "objectID": "cyt/interfaz-cps.html#cómo-se-construye-la-interfaz-mecanismos-y-organizaciones-puente",
-    "href": "cyt/interfaz-cps.html#cómo-se-construye-la-interfaz-mecanismos-y-organizaciones-puente",
-    "title": "Interfaz ciencia-política-sociedad",
-    "section": "Cómo se construye la interfaz: mecanismos y organizaciones puente",
-    "text": "Cómo se construye la interfaz: mecanismos y organizaciones puente\nUna interfaz ciencia-política-sociedad efectiva no surge de forma espontánea: requiere mecanismos e instituciones diseñadas específicamente para ese propósito. La literatura reciente identifica funciones concretas de corretaje (brokerage) que estas organizaciones deben cumplir: traducir el conocimiento técnico a un lenguaje útil para la decisión, convocar a los actores relevantes, mediar entre visiones distintas del problema y dar legitimidad al proceso ante audiencias diversas. Brokerage at the science–policy interface: from conceptual framework to practical guidance. Humanities and Social Sciences Communications (Nature). 2021. Link. Un trabajo relacionado propone un marco de competencias —analíticas, comunicativas, relacionales y políticas— que deberían desarrollar quienes trabajan en esta frontera. Building capacity at the science-policy interface: a competencies framework. Humanities and Social Sciences Communications (Nature). 2025. Link.\nUn proceso típico para construir esta interfaz incluye:\n\nIdentificar la pregunta de política relevante y el ciclo de decisión al que debe responder la evidencia: una ventana regulatoria, una negociación internacional o una crisis.\nSintetizar el conocimiento disponible en una evaluación (assessment) manejable para quienes deciden, sin simplificar al punto de perder matices críticos: el modelo que siguen tanto el IPCC como IPBES en sus resúmenes para tomadores de decisiones.\nInvolucrar a actores de múltiples niveles (gobiernos, comunidad científica, sector privado, sociedad civil) desde el diseño de la pregunta y no solo al final del proceso, siguiendo el enfoque de coproducción de conocimiento.\nNegociar el mensaje final con los actores políticos: en el caso del IPCC, esto ocurre en sesiones plenarias donde delegados de gobierno aprueban línea por línea el Resumen para Responsables de Políticas.\nSostener la función con estructuras permanentes de asesoría científica, como las redes de asesores científicos jefes que promueve la Red Internacional de Asesoramiento Científico Gubernamental (INGSA), fundada en 2014 bajo la dirección de Sir Peter Gluckman.\n\nUn error frecuente es confundir esta construcción institucional con un ejercicio de relaciones públicas de la ciencia: la credibilidad de la interfaz depende de que la evidencia mantenga independencia técnica incluso cuando su mensaje final se negocia políticamente, y de que la organización puente sea percibida como legítima por todas las partes, no solo por la comunidad científica.\n\n\n\n Sir Peter Gluckman: Science Advice to Government.\n\n\n Introduction to IPBES.",
-    "crumbs": [
-      "Ciencia y tecnología",
-      "Interfaz ciencia-política-sociedad"
-    ]
-  },
-  {
-    "objectID": "cyt/interfaz-cps.html#uso-de-la-interfaz-en-la-sociedad-comunicación-diplomacia-científica-y-confianza-pública",
-    "href": "cyt/interfaz-cps.html#uso-de-la-interfaz-en-la-sociedad-comunicación-diplomacia-científica-y-confianza-pública",
-    "title": "Interfaz ciencia-política-sociedad",
-    "section": "Uso de la interfaz en la sociedad: comunicación, diplomacia científica y confianza pública",
-    "text": "Uso de la interfaz en la sociedad: comunicación, diplomacia científica y confianza pública\nLa dimensión “sociedad” de esta interfaz va más allá de que la ciudadanía reciba pasivamente los resultados de la ciencia y la política: implica participación, comunicación en doble vía y construcción de confianza pública. La Recomendación sobre la Ciencia y los Investigadores Científicos de la UNESCO (2017), ratificada por 195 Estados miembros, es explícita en este punto: reconoce el papel de la ciencia en la política y la toma de decisiones nacionales, y subraya la necesidad de que la ciencia interactúe de forma significativa con la sociedad y viceversa. Recommendation on Science and Scientific Researchers. UNESCO. 2017. Link.\nEsta misma lógica opera a escala internacional a través de la diplomacia científica, que usa la cooperación científica como puente entre países cuando los canales políticos tradicionales están limitados o son insuficientes, y que ha sido un componente explícito de procesos como la propia Convención Marco de Cambio Climático o los Objetivos de Desarrollo Sostenible. El Consejo Internacional de Ciencia (ISC) ha aplicado este enfoque de tres actores —ciencia, política y sociedad— de forma explícita frente a desafíos concretos: su informe de política sobre contaminación por plásticos se titula justamente Creating a Strong Interface between Science, Policy and Society to Tackle Global Plastic Pollution. ISC. 2023. Link; y su plan de acción dedica un eje completo a fortalecer las interfaces ciencia-política en procesos globales como los ODS. UN and global policy processes. ISC Action Plan. Link.\nComunicar la evidencia de forma comprensible y confiable para audiencias no especializadas es, en ese sentido, una función tan crítica como producirla: sin esa traducción, incluso la evidencia más sólida puede perder legitimidad social antes de convertirse en decisión. Esta función de traducción conecta con el trabajo sobre coproducción de conocimiento y ciencia transdisciplinar descrito en esta misma sección, y con la gestión de riesgos en proyectos, donde la comunicación de la incertidumbre científica a actores no técnicos es igualmente central.\n\n\n\n AAAS y la diplomacia científica.\n\n\n ¿Cómo comunicar la evidencia científica para tomar decisiones? Charlas Científicas INS 2024.",
-    "crumbs": [
-      "Ciencia y tecnología",
-      "Interfaz ciencia-política-sociedad"
-    ]
-  },
-  {
-    "objectID": "cyt/interfaz-cps.html#infografía-la-interfaz-ciencia-política-sociedad-en-un-vistazo",
-    "href": "cyt/interfaz-cps.html#infografía-la-interfaz-ciencia-política-sociedad-en-un-vistazo",
-    "title": "Interfaz ciencia-política-sociedad",
-    "section": "Infografía: la interfaz ciencia-política-sociedad en un vistazo",
-    "text": "Infografía: la interfaz ciencia-política-sociedad en un vistazo\n\n\n\nLa interfaz ciencia-política-sociedad\nDe la evidencia a la decisión legítima\n\n\nNo es un modelo lineal: ciencia, política y sociedad se traducen y negocian entre sí.\n\nCredible, relevantey legítimo (CRELE).\n\n\n\n\n\n\nCiencia\nEvidencia · síntesis\n\n\nProduce y sintetiza evidencia, y evalúa su nivel de certidumbre para quienes deciden.\nEj: los informes de evaluación del IPCC y de IPBES.\n\n\n\n\n\nPolítica\nDecisión · regulación\n\n\nDecide y regula a partir de la evidencia, junto con otros criterios legítimos de decisión.\nEj: el Resumen para Responsables de Políticas negociado por gobiernos.\n\n\n\n\n\nSociedad\nConfianza · participación\n\n\nValida socialmente el proceso, aporta conocimientos y prioridades propias.\nEj: consulta pública y comunicación de la evidencia a audiencias no técnicas.\n\n\n\n\n\nOrganizaciones puente\nBrokerage · legitimidad\n\n\nTraducen, convocan y median entre las tres partes para sostener la interfaz en el tiempo.\nEj: IPCC, IPBES, redes de asesores científicos (INGSA).\n\n\n\nMecanismos que sostienen la interfaz\n\n\n\n\n\nMecanismo\nQué conecta\nPregunta clave\nEjemplo\n\n\n\n\nPanel científico\nCiencia ↔︎ Política\n¿Qué dice la evidencia y con qué certeza?\nIPCC (clima), IPBES (biodiversidad).\n\n\nAsesoría científica\nCiencia ↔︎ Gobierno\n¿Cómo llega la evidencia a quien decide?\nAsesores científicos jefes, red INGSA.\n\n\nDiplomacia científica\nCiencia ↔︎ Relaciones internacionales\n¿Cómo coopera la ciencia entre países?\nNegociaciones climáticas y de los ODS.\n\n\nComunicación pública\nCiencia/Política ↔︎ Sociedad\n¿La sociedad entiende y confía en la decisión?\nCharlas y campañas de comunicación de evidencia.\n\n\n\n\n\n\n\n1Identificar la pregunta de política relevante\n→\n2Sintetizar la evidencia en una evaluación manejable\n→\n3Involucrar actores y coproducir el mensaje\n→\n4Negociar, comunicar y sostener la confianza\n\n\nCiencia+Política+Sociedad=Decisiones creíbles, relevantes y legítimas\n\nSin organizaciones puente que la sostengan, la interfaz ciencia-política-sociedad se rompe en el eslabón más débil: la confianza.",
-    "crumbs": [
-      "Ciencia y tecnología",
-      "Interfaz ciencia-política-sociedad"
-    ]
-  },
-  {
-    "objectID": "educacion/index.html",
-    "href": "educacion/index.html",
-    "title": "Educación",
-    "section": "",
-    "text": "Esta sección reúne recursos sobre enseñanza y aprendizaje: estrategias de docencia universitaria, aprendizaje activo y basado en problemas, y el diseño de objetos virtuales de aprendizaje (OVA) como recurso digital reutilizable.\n\n\n\nDocencia y educación\n\n\nLibros, revistas y estrategias de enseñanza —aprendizaje activo, aprendizaje basado en problemas, técnicas de aprendizaje y metacognición— además de aplicaciones para el aula y recursos sobre educación STEM y ciencia ciudadana.\n\n\n\n\nObjetos virtuales de aprendizaje (OVA)\n\n\nQué es un Objeto Virtual de Aprendizaje, sus estándares de metadatos (IEEE LOM, SCORM), principales tipos por función pedagógica y formato, y repositorios de referencia como MIT OpenCourseWare o MERLOT.",
-    "crumbs": [
-      "Educación"
-    ]
-  },
-  {
-    "objectID": "educacion/index.html#educación",
-    "href": "educacion/index.html#educación",
-    "title": "Educación",
-    "section": "",
-    "text": "Esta sección reúne recursos sobre enseñanza y aprendizaje: estrategias de docencia universitaria, aprendizaje activo y basado en problemas, y el diseño de objetos virtuales de aprendizaje (OVA) como recurso digital reutilizable.\n\n\n\nDocencia y educación\n\n\nLibros, revistas y estrategias de enseñanza —aprendizaje activo, aprendizaje basado en problemas, técnicas de aprendizaje y metacognición— además de aplicaciones para el aula y recursos sobre educación STEM y ciencia ciudadana.\n\n\n\n\nObjetos virtuales de aprendizaje (OVA)\n\n\nQué es un Objeto Virtual de Aprendizaje, sus estándares de metadatos (IEEE LOM, SCORM), principales tipos por función pedagógica y formato, y repositorios de referencia como MIT OpenCourseWare o MERLOT.",
-    "crumbs": [
-      "Educación"
-    ]
-  },
-  {
-    "objectID": "educacion/ova/index.html",
-    "href": "educacion/ova/index.html",
-    "title": "Objetos virtuales de aprendizaje (OVA)",
-    "section": "",
-    "text": "Un Objeto Virtual de Aprendizaje (OVA), en inglés learning object, es un recurso digital autocontenible y reutilizable diseñado con un propósito educativo específico. Un OVA típico integra al menos tres componentes: contenidos, actividades de aprendizaje y elementos de contextualización (evaluación, metadatos, guía de uso), de modo que pueda usarse de forma independiente en distintos cursos y plataformas.\n\nAutonomía: puede utilizarse de forma independiente, sin depender de otros materiales.\nReusabilidad: se diseña para emplearse en diferentes contextos y propuestas pedagógicas.\nInteroperabilidad: es compatible con distintas plataformas (LMS) gracias a estándares de empaquetado y metadatos.\nGranularidad: va desde un activo simple (una imagen, un video) hasta un curso completo compuesto por varios objetos.\n\n\n\nLa posibilidad de indexar, describir y reutilizar OVA entre repositorios depende de estándares de metadatos, en particular IEEE LOM (Learning Object Metadata) y el empaquetado SCORM, que surgieron en buena parte del trabajo de proyectos europeos de finales de los años 90.\n\nARIADNE Foundation. Infraestructura europea pionera (1996) para compartir y reutilizar objetos de aprendizaje mediante repositorios federados y metadatos LOM. Link.\nIEEE Learning Object Metadata (LOM). Estándar de metadatos usado para describir OVA. Link.\n\n\n\n\n\nGuía para el diseño de objetos virtuales de aprendizaje. SCIELO Colombia, 2016. Link.\nObjetos Virtuales de Aprendizaje (OVA): qué son, cómo crearlos y mejores prácticas. BeezNest, 2025. Link.\nOVA. Ávaco, Universidad de Ibagué. Link.",
-    "crumbs": [
-      "Educación",
-      "Objetos virtuales de aprendizaje (OVA)"
-    ]
-  },
-  {
-    "objectID": "educacion/ova/index.html#estándares-y-metadatos",
-    "href": "educacion/ova/index.html#estándares-y-metadatos",
-    "title": "Objetos virtuales de aprendizaje (OVA)",
-    "section": "",
-    "text": "La posibilidad de indexar, describir y reutilizar OVA entre repositorios depende de estándares de metadatos, en particular IEEE LOM (Learning Object Metadata) y el empaquetado SCORM, que surgieron en buena parte del trabajo de proyectos europeos de finales de los años 90.\n\nARIADNE Foundation. Infraestructura europea pionera (1996) para compartir y reutilizar objetos de aprendizaje mediante repositorios federados y metadatos LOM. Link.\nIEEE Learning Object Metadata (LOM). Estándar de metadatos usado para describir OVA. Link.",
-    "crumbs": [
-      "Educación",
-      "Objetos virtuales de aprendizaje (OVA)"
-    ]
-  },
-  {
-    "objectID": "educacion/ova/index.html#algunas-definiciones-de-referencia",
-    "href": "educacion/ova/index.html#algunas-definiciones-de-referencia",
-    "title": "Objetos virtuales de aprendizaje (OVA)",
-    "section": "",
-    "text": "Guía para el diseño de objetos virtuales de aprendizaje. SCIELO Colombia, 2016. Link.\nObjetos Virtuales de Aprendizaje (OVA): qué son, cómo crearlos y mejores prácticas. BeezNest, 2025. Link.\nOVA. Ávaco, Universidad de Ibagué. Link.",
-    "crumbs": [
-      "Educación",
-      "Objetos virtuales de aprendizaje (OVA)"
-    ]
-  },
-  {
-    "objectID": "educacion/ova/index.html#por-función-pedagógica",
-    "href": "educacion/ova/index.html#por-función-pedagógica",
-    "title": "Objetos virtuales de aprendizaje (OVA)",
-    "section": "Por función pedagógica",
-    "text": "Por función pedagógica\n\nInformativos: presentan contenidos (texto, imágenes, video) sin actividades de evaluación explícitas; buscan transmitir información.\nInstructivos: incluyen actividades guiadas y retroalimentación; conducen al estudiante a través de un proceso de aprendizaje con un objetivo claro.\nExperimentales o de simulación: reproducen fenómenos, laboratorios o procesos mediante simulaciones interactivas que permiten manipular variables.\nEvaluativos: cuestionarios, ejercicios de práctica y autoevaluaciones diseñados para medir el aprendizaje.\nColaborativos: herramientas y espacios (foros, wikis, proyectos compartidos) orientados a la construcción conjunta de conocimiento.\nPropuesta para la clasificación de los objetos virtuales de aprendizaje interactivos. Revista Virtual Universidad Católica del Norte. Link.",
-    "crumbs": [
-      "Educación",
-      "Objetos virtuales de aprendizaje (OVA)"
-    ]
-  },
-  {
-    "objectID": "educacion/ova/index.html#por-formato-y-repositorio",
-    "href": "educacion/ova/index.html#por-formato-y-repositorio",
-    "title": "Objetos virtuales de aprendizaje (OVA)",
-    "section": "Por formato y repositorio",
-    "text": "Por formato y repositorio\n\nVideo-lecciones activas: segmentos de video cortos combinados con ejercicios en clase. MIT BLOSSOMS (Blended Learning Open Source Science or Math Studies) es un ejemplo de referencia: más de 200 lecciones abiertas de matemáticas y ciencias, con guía docente y materiales descargables.\nCursos abiertos completos (OpenCourseWare): conjuntos de OVA organizados como un curso universitario, publicados bajo licencia abierta. MIT OpenCourseWare es el proyecto pionero de este formato, con más de 2.500 cursos disponibles.\nUnidades y módulos de un MOOC: objetos reutilizables dentro de cursos masivos abiertos, como los de OpenLearn de la Open University (Reino Unido).\nCatálogos y agregadores de OVA: no almacenan el material sino que referencian metadatos de OVA alojados en múltiples repositorios.\n\nLearning Resource Exchange (LRE) de European Schoolnet: cataloga más de 300.000 recursos educativos abiertos de distintos países y proveedores europeos.\nEuropeana Education. Integra colecciones patrimoniales europeas a la LRE para uso educativo.\nMERLOT. Repositorio con revisión por pares de OVA para educación superior.",
-    "crumbs": [
-      "Educación",
-      "Objetos virtuales de aprendizaje (OVA)"
+      "Ciencia y tecnología"
     ]
   },
   {
@@ -4470,23 +4360,253 @@
     ]
   },
   {
-    "objectID": "cyt/index.html",
-    "href": "cyt/index.html",
-    "title": "Ciencia y tecnología",
+    "objectID": "educacion/ova/index.html",
+    "href": "educacion/ova/index.html",
+    "title": "Objetos virtuales de aprendizaje (OVA)",
     "section": "",
-    "text": "Esta sección reúne recursos sobre la práctica de la ciencia: la escritura y publicación académica, la ciencia reproducible y abierta, la ciencia transdisciplinar y la interfaz entre ciencia, política y sociedad.\n\n\n\nEscritura y publicación académica\n\n\nEl proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.\n\n\n\n\nCiencia reproducible\n\n\nQué es la ciencia reproducible y la ciencia abierta (UNESCO, FAIR), cómo construir un plan de manejo de datos, y las herramientas de publicación reproducible (Quarto, Typst, MyST, Shiny).\n\n\n\n\nCiencia transdiciplinar\n\n\nQué es la ciencia transdisciplinar, cómo se construyen proyectos TD paso a paso, sus conceptos clave y ejemplos de convocatorias, y su relación con la ciencia convergente y la ciencia de la implementación.\n\n\n\n\nInterfaz ciencia-política-sociedad\n\n\nQué es la interfaz ciencia-política-sociedad: los espacios, procesos y organizaciones donde el conocimiento científico, la decisión pública y las demandas sociales se traducen y negocian mutuamente.",
+    "text": "Un Objeto Virtual de Aprendizaje (OVA), en inglés learning object, es un recurso digital autocontenible y reutilizable diseñado con un propósito educativo específico. Un OVA típico integra al menos tres componentes: contenidos, actividades de aprendizaje y elementos de contextualización (evaluación, metadatos, guía de uso), de modo que pueda usarse de forma independiente en distintos cursos y plataformas.\n\nAutonomía: puede utilizarse de forma independiente, sin depender de otros materiales.\nReusabilidad: se diseña para emplearse en diferentes contextos y propuestas pedagógicas.\nInteroperabilidad: es compatible con distintas plataformas (LMS) gracias a estándares de empaquetado y metadatos.\nGranularidad: va desde un activo simple (una imagen, un video) hasta un curso completo compuesto por varios objetos.\n\n\n\nLa posibilidad de indexar, describir y reutilizar OVA entre repositorios depende de estándares de metadatos, en particular IEEE LOM (Learning Object Metadata) y el empaquetado SCORM, que surgieron en buena parte del trabajo de proyectos europeos de finales de los años 90.\n\nARIADNE Foundation. Infraestructura europea pionera (1996) para compartir y reutilizar objetos de aprendizaje mediante repositorios federados y metadatos LOM. Link.\nIEEE Learning Object Metadata (LOM). Estándar de metadatos usado para describir OVA. Link.\n\n\n\n\n\nGuía para el diseño de objetos virtuales de aprendizaje. SCIELO Colombia, 2016. Link.\nObjetos Virtuales de Aprendizaje (OVA): qué son, cómo crearlos y mejores prácticas. BeezNest, 2025. Link.\nOVA. Ávaco, Universidad de Ibagué. Link.",
     "crumbs": [
-      "Ciencia y tecnología"
+      "Educación",
+      "Objetos virtuales de aprendizaje (OVA)"
     ]
   },
   {
-    "objectID": "cyt/index.html#ciencia-y-tecnología",
-    "href": "cyt/index.html#ciencia-y-tecnología",
-    "title": "Ciencia y tecnología",
+    "objectID": "educacion/ova/index.html#estándares-y-metadatos",
+    "href": "educacion/ova/index.html#estándares-y-metadatos",
+    "title": "Objetos virtuales de aprendizaje (OVA)",
     "section": "",
-    "text": "Esta sección reúne recursos sobre la práctica de la ciencia: la escritura y publicación académica, la ciencia reproducible y abierta, la ciencia transdisciplinar y la interfaz entre ciencia, política y sociedad.\n\n\n\nEscritura y publicación académica\n\n\nEl proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.\n\n\n\n\nCiencia reproducible\n\n\nQué es la ciencia reproducible y la ciencia abierta (UNESCO, FAIR), cómo construir un plan de manejo de datos, y las herramientas de publicación reproducible (Quarto, Typst, MyST, Shiny).\n\n\n\n\nCiencia transdiciplinar\n\n\nQué es la ciencia transdisciplinar, cómo se construyen proyectos TD paso a paso, sus conceptos clave y ejemplos de convocatorias, y su relación con la ciencia convergente y la ciencia de la implementación.\n\n\n\n\nInterfaz ciencia-política-sociedad\n\n\nQué es la interfaz ciencia-política-sociedad: los espacios, procesos y organizaciones donde el conocimiento científico, la decisión pública y las demandas sociales se traducen y negocian mutuamente.",
+    "text": "La posibilidad de indexar, describir y reutilizar OVA entre repositorios depende de estándares de metadatos, en particular IEEE LOM (Learning Object Metadata) y el empaquetado SCORM, que surgieron en buena parte del trabajo de proyectos europeos de finales de los años 90.\n\nARIADNE Foundation. Infraestructura europea pionera (1996) para compartir y reutilizar objetos de aprendizaje mediante repositorios federados y metadatos LOM. Link.\nIEEE Learning Object Metadata (LOM). Estándar de metadatos usado para describir OVA. Link.",
     "crumbs": [
-      "Ciencia y tecnología"
+      "Educación",
+      "Objetos virtuales de aprendizaje (OVA)"
+    ]
+  },
+  {
+    "objectID": "educacion/ova/index.html#algunas-definiciones-de-referencia",
+    "href": "educacion/ova/index.html#algunas-definiciones-de-referencia",
+    "title": "Objetos virtuales de aprendizaje (OVA)",
+    "section": "",
+    "text": "Guía para el diseño de objetos virtuales de aprendizaje. SCIELO Colombia, 2016. Link.\nObjetos Virtuales de Aprendizaje (OVA): qué son, cómo crearlos y mejores prácticas. BeezNest, 2025. Link.\nOVA. Ávaco, Universidad de Ibagué. Link.",
+    "crumbs": [
+      "Educación",
+      "Objetos virtuales de aprendizaje (OVA)"
+    ]
+  },
+  {
+    "objectID": "educacion/ova/index.html#por-función-pedagógica",
+    "href": "educacion/ova/index.html#por-función-pedagógica",
+    "title": "Objetos virtuales de aprendizaje (OVA)",
+    "section": "Por función pedagógica",
+    "text": "Por función pedagógica\n\nInformativos: presentan contenidos (texto, imágenes, video) sin actividades de evaluación explícitas; buscan transmitir información.\nInstructivos: incluyen actividades guiadas y retroalimentación; conducen al estudiante a través de un proceso de aprendizaje con un objetivo claro.\nExperimentales o de simulación: reproducen fenómenos, laboratorios o procesos mediante simulaciones interactivas que permiten manipular variables.\nEvaluativos: cuestionarios, ejercicios de práctica y autoevaluaciones diseñados para medir el aprendizaje.\nColaborativos: herramientas y espacios (foros, wikis, proyectos compartidos) orientados a la construcción conjunta de conocimiento.\nPropuesta para la clasificación de los objetos virtuales de aprendizaje interactivos. Revista Virtual Universidad Católica del Norte. Link.",
+    "crumbs": [
+      "Educación",
+      "Objetos virtuales de aprendizaje (OVA)"
+    ]
+  },
+  {
+    "objectID": "educacion/ova/index.html#por-formato-y-repositorio",
+    "href": "educacion/ova/index.html#por-formato-y-repositorio",
+    "title": "Objetos virtuales de aprendizaje (OVA)",
+    "section": "Por formato y repositorio",
+    "text": "Por formato y repositorio\n\nVideo-lecciones activas: segmentos de video cortos combinados con ejercicios en clase. MIT BLOSSOMS (Blended Learning Open Source Science or Math Studies) es un ejemplo de referencia: más de 200 lecciones abiertas de matemáticas y ciencias, con guía docente y materiales descargables.\nCursos abiertos completos (OpenCourseWare): conjuntos de OVA organizados como un curso universitario, publicados bajo licencia abierta. MIT OpenCourseWare es el proyecto pionero de este formato, con más de 2.500 cursos disponibles.\nUnidades y módulos de un MOOC: objetos reutilizables dentro de cursos masivos abiertos, como los de OpenLearn de la Open University (Reino Unido).\nCatálogos y agregadores de OVA: no almacenan el material sino que referencian metadatos de OVA alojados en múltiples repositorios.\n\nLearning Resource Exchange (LRE) de European Schoolnet: cataloga más de 300.000 recursos educativos abiertos de distintos países y proveedores europeos.\nEuropeana Education. Integra colecciones patrimoniales europeas a la LRE para uso educativo.\nMERLOT. Repositorio con revisión por pares de OVA para educación superior.",
+    "crumbs": [
+      "Educación",
+      "Objetos virtuales de aprendizaje (OVA)"
+    ]
+  },
+  {
+    "objectID": "educacion/index.html",
+    "href": "educacion/index.html",
+    "title": "Educación",
+    "section": "",
+    "text": "Esta sección reúne recursos sobre enseñanza y aprendizaje: estrategias de docencia universitaria, aprendizaje activo y basado en problemas, y el diseño de objetos virtuales de aprendizaje (OVA) como recurso digital reutilizable.\n\n\n\nDocencia y educación\n\n\nLibros, revistas y estrategias de enseñanza —aprendizaje activo, aprendizaje basado en problemas, técnicas de aprendizaje y metacognición— además de aplicaciones para el aula y recursos sobre educación STEM y ciencia ciudadana.\n\n\n\n\nObjetos virtuales de aprendizaje (OVA)\n\n\nQué es un Objeto Virtual de Aprendizaje, sus estándares de metadatos (IEEE LOM, SCORM), principales tipos por función pedagógica y formato, y repositorios de referencia como MIT OpenCourseWare o MERLOT.",
+    "crumbs": [
+      "Educación"
+    ]
+  },
+  {
+    "objectID": "educacion/index.html#educación",
+    "href": "educacion/index.html#educación",
+    "title": "Educación",
+    "section": "",
+    "text": "Esta sección reúne recursos sobre enseñanza y aprendizaje: estrategias de docencia universitaria, aprendizaje activo y basado en problemas, y el diseño de objetos virtuales de aprendizaje (OVA) como recurso digital reutilizable.\n\n\n\nDocencia y educación\n\n\nLibros, revistas y estrategias de enseñanza —aprendizaje activo, aprendizaje basado en problemas, técnicas de aprendizaje y metacognición— además de aplicaciones para el aula y recursos sobre educación STEM y ciencia ciudadana.\n\n\n\n\nObjetos virtuales de aprendizaje (OVA)\n\n\nQué es un Objeto Virtual de Aprendizaje, sus estándares de metadatos (IEEE LOM, SCORM), principales tipos por función pedagógica y formato, y repositorios de referencia como MIT OpenCourseWare o MERLOT.",
+    "crumbs": [
+      "Educación"
+    ]
+  },
+  {
+    "objectID": "cyt/interfaz-cps.html",
+    "href": "cyt/interfaz-cps.html",
+    "title": "Interfaz ciencia-política-sociedad",
+    "section": "",
+    "text": "La interfaz ciencia-política-sociedad es el conjunto de espacios, procesos y organizaciones donde el conocimiento científico, la toma de decisiones públicas y las demandas y valores de la sociedad se encuentran, se traducen entre sí y se negocian mutuamente. El término aparece de forma explícita en la literatura reciente sobre gobernanza ambiental: un artículo de referencia en el Annual Review of Environment and Resources la describe como el espacio donde confluyen múltiples fuentes de conocimiento y las capacidades de distintos actores, con el propósito de co-crear conocimiento e información que informen la decisión. Co-Producing Sustainability: Reordering the Governance of Science, Policy, and Practice. Wyborn et al. Annual Review of Environment and Resources. 2019. Link.\nEsta idea es más amplia que el viejo “modelo lineal”, según el cual la ciencia produce conocimiento objetivo que los tomadores de decisión simplemente aplican. La revista Science cuestiona directamente ese supuesto: la evidencia científica compite con otros tipos de conocimiento, intereses y valores en el proceso de decisión, y su peso depende de qué tan creíble, relevante y legítima resulte para quienes deciden. The science–policy interface. Van den Hove. Science. 2007. Link. Esa condición triple —credibilidad, relevancia y legitimidad (CRELE)— proviene del concepto de organización puente (boundary organization), propuesto por David Guston para describir las instituciones que estabilizan la frontera entre ciencia y política y permiten que ambas partes cumplan sus objetivos sin que una reemplace a la otra. Boundary Organizations in Environmental Policy and Science: An Introduction. Guston. Science, Technology, & Human Values. 2001. Link.\n\nCiencia: produce y sintetiza evidencia, identifica riesgos y opciones, y evalúa su nivel de certidumbre.\nPolítica: decide, regula y asigna recursos a partir de esa evidencia, junto con otros criterios legítimos (valores, intereses, viabilidad).\nSociedad: valida socialmente el proceso, aporta conocimientos y prioridades propias, y legitima —o cuestiona— tanto la evidencia como la decisión.\n\nDos instituciones intergubernamentales creadas explícitamente como interfaces ciencia-política ilustran el concepto a escala global: el Panel Intergubernamental de Cambio Climático (IPCC), que sintetiza la ciencia climática para las negociaciones de la Convención Marco de Cambio Climático, y la Plataforma Intergubernamental sobre Biodiversidad y Servicios Ecosistémicos (IPBES), que cumple una función equivalente para la biodiversidad. Conceptual Framework. IPBES secretariat. Link. En ambos casos la dimensión “sociedad” es parte explícita del mandato: sus evaluaciones buscan legitimidad no solo ante los gobiernos, sino ante la ciudadanía y los actores no estatales cuyo bienestar depende de esas decisiones.\n What is the IPCC? Video oficial del Panel Intergubernamental de Cambio Climático.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Interfaz ciencia-política-sociedad"
+    ]
+  },
+  {
+    "objectID": "cyt/interfaz-cps.html#qué-es-la-interfaz-ciencia-política-sociedad",
+    "href": "cyt/interfaz-cps.html#qué-es-la-interfaz-ciencia-política-sociedad",
+    "title": "Interfaz ciencia-política-sociedad",
+    "section": "",
+    "text": "La interfaz ciencia-política-sociedad es el conjunto de espacios, procesos y organizaciones donde el conocimiento científico, la toma de decisiones públicas y las demandas y valores de la sociedad se encuentran, se traducen entre sí y se negocian mutuamente. El término aparece de forma explícita en la literatura reciente sobre gobernanza ambiental: un artículo de referencia en el Annual Review of Environment and Resources la describe como el espacio donde confluyen múltiples fuentes de conocimiento y las capacidades de distintos actores, con el propósito de co-crear conocimiento e información que informen la decisión. Co-Producing Sustainability: Reordering the Governance of Science, Policy, and Practice. Wyborn et al. Annual Review of Environment and Resources. 2019. Link.\nEsta idea es más amplia que el viejo “modelo lineal”, según el cual la ciencia produce conocimiento objetivo que los tomadores de decisión simplemente aplican. La revista Science cuestiona directamente ese supuesto: la evidencia científica compite con otros tipos de conocimiento, intereses y valores en el proceso de decisión, y su peso depende de qué tan creíble, relevante y legítima resulte para quienes deciden. The science–policy interface. Van den Hove. Science. 2007. Link. Esa condición triple —credibilidad, relevancia y legitimidad (CRELE)— proviene del concepto de organización puente (boundary organization), propuesto por David Guston para describir las instituciones que estabilizan la frontera entre ciencia y política y permiten que ambas partes cumplan sus objetivos sin que una reemplace a la otra. Boundary Organizations in Environmental Policy and Science: An Introduction. Guston. Science, Technology, & Human Values. 2001. Link.\n\nCiencia: produce y sintetiza evidencia, identifica riesgos y opciones, y evalúa su nivel de certidumbre.\nPolítica: decide, regula y asigna recursos a partir de esa evidencia, junto con otros criterios legítimos (valores, intereses, viabilidad).\nSociedad: valida socialmente el proceso, aporta conocimientos y prioridades propias, y legitima —o cuestiona— tanto la evidencia como la decisión.\n\nDos instituciones intergubernamentales creadas explícitamente como interfaces ciencia-política ilustran el concepto a escala global: el Panel Intergubernamental de Cambio Climático (IPCC), que sintetiza la ciencia climática para las negociaciones de la Convención Marco de Cambio Climático, y la Plataforma Intergubernamental sobre Biodiversidad y Servicios Ecosistémicos (IPBES), que cumple una función equivalente para la biodiversidad. Conceptual Framework. IPBES secretariat. Link. En ambos casos la dimensión “sociedad” es parte explícita del mandato: sus evaluaciones buscan legitimidad no solo ante los gobiernos, sino ante la ciudadanía y los actores no estatales cuyo bienestar depende de esas decisiones.\n What is the IPCC? Video oficial del Panel Intergubernamental de Cambio Climático.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Interfaz ciencia-política-sociedad"
+    ]
+  },
+  {
+    "objectID": "cyt/interfaz-cps.html#cómo-se-construye-la-interfaz-mecanismos-y-organizaciones-puente",
+    "href": "cyt/interfaz-cps.html#cómo-se-construye-la-interfaz-mecanismos-y-organizaciones-puente",
+    "title": "Interfaz ciencia-política-sociedad",
+    "section": "Cómo se construye la interfaz: mecanismos y organizaciones puente",
+    "text": "Cómo se construye la interfaz: mecanismos y organizaciones puente\nUna interfaz ciencia-política-sociedad efectiva no surge de forma espontánea: requiere mecanismos e instituciones diseñadas específicamente para ese propósito. La literatura reciente identifica funciones concretas de corretaje (brokerage) que estas organizaciones deben cumplir: traducir el conocimiento técnico a un lenguaje útil para la decisión, convocar a los actores relevantes, mediar entre visiones distintas del problema y dar legitimidad al proceso ante audiencias diversas. Brokerage at the science–policy interface: from conceptual framework to practical guidance. Humanities and Social Sciences Communications (Nature). 2021. Link. Un trabajo relacionado propone un marco de competencias —analíticas, comunicativas, relacionales y políticas— que deberían desarrollar quienes trabajan en esta frontera. Building capacity at the science-policy interface: a competencies framework. Humanities and Social Sciences Communications (Nature). 2025. Link.\nUn proceso típico para construir esta interfaz incluye:\n\nIdentificar la pregunta de política relevante y el ciclo de decisión al que debe responder la evidencia: una ventana regulatoria, una negociación internacional o una crisis.\nSintetizar el conocimiento disponible en una evaluación (assessment) manejable para quienes deciden, sin simplificar al punto de perder matices críticos: el modelo que siguen tanto el IPCC como IPBES en sus resúmenes para tomadores de decisiones.\nInvolucrar a actores de múltiples niveles (gobiernos, comunidad científica, sector privado, sociedad civil) desde el diseño de la pregunta y no solo al final del proceso, siguiendo el enfoque de coproducción de conocimiento.\nNegociar el mensaje final con los actores políticos: en el caso del IPCC, esto ocurre en sesiones plenarias donde delegados de gobierno aprueban línea por línea el Resumen para Responsables de Políticas.\nSostener la función con estructuras permanentes de asesoría científica, como las redes de asesores científicos jefes que promueve la Red Internacional de Asesoramiento Científico Gubernamental (INGSA), fundada en 2014 bajo la dirección de Sir Peter Gluckman.\n\nUn error frecuente es confundir esta construcción institucional con un ejercicio de relaciones públicas de la ciencia: la credibilidad de la interfaz depende de que la evidencia mantenga independencia técnica incluso cuando su mensaje final se negocia políticamente, y de que la organización puente sea percibida como legítima por todas las partes, no solo por la comunidad científica.\n\n\n\n Sir Peter Gluckman: Science Advice to Government.\n\n\n Introduction to IPBES.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Interfaz ciencia-política-sociedad"
+    ]
+  },
+  {
+    "objectID": "cyt/interfaz-cps.html#uso-de-la-interfaz-en-la-sociedad-comunicación-diplomacia-científica-y-confianza-pública",
+    "href": "cyt/interfaz-cps.html#uso-de-la-interfaz-en-la-sociedad-comunicación-diplomacia-científica-y-confianza-pública",
+    "title": "Interfaz ciencia-política-sociedad",
+    "section": "Uso de la interfaz en la sociedad: comunicación, diplomacia científica y confianza pública",
+    "text": "Uso de la interfaz en la sociedad: comunicación, diplomacia científica y confianza pública\nLa dimensión “sociedad” de esta interfaz va más allá de que la ciudadanía reciba pasivamente los resultados de la ciencia y la política: implica participación, comunicación en doble vía y construcción de confianza pública. La Recomendación sobre la Ciencia y los Investigadores Científicos de la UNESCO (2017), ratificada por 195 Estados miembros, es explícita en este punto: reconoce el papel de la ciencia en la política y la toma de decisiones nacionales, y subraya la necesidad de que la ciencia interactúe de forma significativa con la sociedad y viceversa. Recommendation on Science and Scientific Researchers. UNESCO. 2017. Link.\nEsta misma lógica opera a escala internacional a través de la diplomacia científica, que usa la cooperación científica como puente entre países cuando los canales políticos tradicionales están limitados o son insuficientes, y que ha sido un componente explícito de procesos como la propia Convención Marco de Cambio Climático o los Objetivos de Desarrollo Sostenible. El Consejo Internacional de Ciencia (ISC) ha aplicado este enfoque de tres actores —ciencia, política y sociedad— de forma explícita frente a desafíos concretos: su informe de política sobre contaminación por plásticos se titula justamente Creating a Strong Interface between Science, Policy and Society to Tackle Global Plastic Pollution. ISC. 2023. Link; y su plan de acción dedica un eje completo a fortalecer las interfaces ciencia-política en procesos globales como los ODS. UN and global policy processes. ISC Action Plan. Link.\nComunicar la evidencia de forma comprensible y confiable para audiencias no especializadas es, en ese sentido, una función tan crítica como producirla: sin esa traducción, incluso la evidencia más sólida puede perder legitimidad social antes de convertirse en decisión. Esta función de traducción conecta con el trabajo sobre coproducción de conocimiento y ciencia transdisciplinar descrito en esta misma sección, y con la gestión de riesgos en proyectos, donde la comunicación de la incertidumbre científica a actores no técnicos es igualmente central.\n\n\n\n AAAS y la diplomacia científica.\n\n\n ¿Cómo comunicar la evidencia científica para tomar decisiones? Charlas Científicas INS 2024.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Interfaz ciencia-política-sociedad"
+    ]
+  },
+  {
+    "objectID": "cyt/interfaz-cps.html#infografía-la-interfaz-ciencia-política-sociedad-en-un-vistazo",
+    "href": "cyt/interfaz-cps.html#infografía-la-interfaz-ciencia-política-sociedad-en-un-vistazo",
+    "title": "Interfaz ciencia-política-sociedad",
+    "section": "Infografía: la interfaz ciencia-política-sociedad en un vistazo",
+    "text": "Infografía: la interfaz ciencia-política-sociedad en un vistazo\n\n\n\nLa interfaz ciencia-política-sociedad\nDe la evidencia a la decisión legítima\n\n\nNo es un modelo lineal: ciencia, política y sociedad se traducen y negocian entre sí.\n\nCredible, relevantey legítimo (CRELE).\n\n\n\n\n\n\nCiencia\nEvidencia · síntesis\n\n\nProduce y sintetiza evidencia, y evalúa su nivel de certidumbre para quienes deciden.\nEj: los informes de evaluación del IPCC y de IPBES.\n\n\n\n\n\nPolítica\nDecisión · regulación\n\n\nDecide y regula a partir de la evidencia, junto con otros criterios legítimos de decisión.\nEj: el Resumen para Responsables de Políticas negociado por gobiernos.\n\n\n\n\n\nSociedad\nConfianza · participación\n\n\nValida socialmente el proceso, aporta conocimientos y prioridades propias.\nEj: consulta pública y comunicación de la evidencia a audiencias no técnicas.\n\n\n\n\n\nOrganizaciones puente\nBrokerage · legitimidad\n\n\nTraducen, convocan y median entre las tres partes para sostener la interfaz en el tiempo.\nEj: IPCC, IPBES, redes de asesores científicos (INGSA).\n\n\n\nMecanismos que sostienen la interfaz\n\n\n\n\n\nMecanismo\nQué conecta\nPregunta clave\nEjemplo\n\n\n\n\nPanel científico\nCiencia ↔︎ Política\n¿Qué dice la evidencia y con qué certeza?\nIPCC (clima), IPBES (biodiversidad).\n\n\nAsesoría científica\nCiencia ↔︎ Gobierno\n¿Cómo llega la evidencia a quien decide?\nAsesores científicos jefes, red INGSA.\n\n\nDiplomacia científica\nCiencia ↔︎ Relaciones internacionales\n¿Cómo coopera la ciencia entre países?\nNegociaciones climáticas y de los ODS.\n\n\nComunicación pública\nCiencia/Política ↔︎ Sociedad\n¿La sociedad entiende y confía en la decisión?\nCharlas y campañas de comunicación de evidencia.\n\n\n\n\n\n\n\n1Identificar la pregunta de política relevante\n→\n2Sintetizar la evidencia en una evaluación manejable\n→\n3Involucrar actores y coproducir el mensaje\n→\n4Negociar, comunicar y sostener la confianza\n\n\nCiencia+Política+Sociedad=Decisiones creíbles, relevantes y legítimas\n\nSin organizaciones puente que la sostengan, la interfaz ciencia-política-sociedad se rompe en el eslabón más débil: la confianza.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Interfaz ciencia-política-sociedad"
+    ]
+  },
+  {
+    "objectID": "cyt/escrituraypublicacionacademica/typst.html",
+    "href": "cyt/escrituraypublicacionacademica/typst.html",
+    "title": "Typst",
+    "section": "",
+    "text": "Typst es un sistema de composición tipográfica (typesetting) basado en marcado, pensado para escribir y automatizar documentos de cualquier tipo: artículos científicos, tesis, informes, presentaciones, currículos o cartas. Su compilador es de código abierto (licencia Apache-2.0, escrito en Rust) y genera PDF, imágenes y, en versión preliminar, sitios web.\nSe le suele presentar como una alternativa moderna a LaTeX: busca la misma calidad tipográfica (matemáticas, bibliografías, referencias cruzadas, figuras y tablas), pero con una sintaxis más simple, mensajes de error comprensibles y compilación casi instantánea.\n What is Typst? The Modern LaTeX Alternative",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica",
+      "Typst"
+    ]
+  },
+  {
+    "objectID": "cyt/escrituraypublicacionacademica/typst.html#qué-es-typst",
+    "href": "cyt/escrituraypublicacionacademica/typst.html#qué-es-typst",
+    "title": "Typst",
+    "section": "",
+    "text": "Typst es un sistema de composición tipográfica (typesetting) basado en marcado, pensado para escribir y automatizar documentos de cualquier tipo: artículos científicos, tesis, informes, presentaciones, currículos o cartas. Su compilador es de código abierto (licencia Apache-2.0, escrito en Rust) y genera PDF, imágenes y, en versión preliminar, sitios web.\nSe le suele presentar como una alternativa moderna a LaTeX: busca la misma calidad tipográfica (matemáticas, bibliografías, referencias cruzadas, figuras y tablas), pero con una sintaxis más simple, mensajes de error comprensibles y compilación casi instantánea.\n What is Typst? The Modern LaTeX Alternative",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica",
+      "Typst"
+    ]
+  },
+  {
+    "objectID": "cyt/escrituraypublicacionacademica/typst.html#para-qué-sirve",
+    "href": "cyt/escrituraypublicacionacademica/typst.html#para-qué-sirve",
+    "title": "Typst",
+    "section": "¿Para qué sirve?",
+    "text": "¿Para qué sirve?\nTypst cubre las mismas necesidades de la escritura académica y técnica que suele resolver LaTeX:\n\nArtículos, tesis y libros con numeración automática, referencias cruzadas, índices y bibliografía (formatos CSL como APA, además de BibTeX/Hayagriva).\nMatemáticas escritas en una notación legible, por ejemplo sum_(k=1)^n k.\nDatos y visualizaciones: carga CSV y JSON directamente y los convierte en tablas o gráficos.\nPresentaciones (con paquetes como Touying o Polylux), currículos, informes institucionales y cartas con plantillas reutilizables.\nDocumentos automatizados: gracias a su lenguaje de scripting integrado (condicionales, bucles, funciones) se pueden generar informes por lote, como un informe por municipio a partir de una tabla.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica",
+      "Typst"
+    ]
+  },
+  {
+    "objectID": "cyt/escrituraypublicacionacademica/typst.html#ventajas",
+    "href": "cyt/escrituraypublicacionacademica/typst.html#ventajas",
+    "title": "Typst",
+    "section": "Ventajas",
+    "text": "Ventajas\n\n\n\n\n\n\n\n\nAspecto\nTypst\nLaTeX\n\n\n\n\nArranque\nUn archivo .typ vacío ya es un documento válido; no hay preámbulo obligatorio\nRequiere clase de documento y paquetes\n\n\nSintaxis\nLigera, parecida a Markdown (= Título, *negrita*, _cursiva_)\nComandos y entornos (\\section{}, \\textbf{})\n\n\nCompilación\nMilisegundos, con vista previa mientras se escribe\nSegundos o más, con varias pasadas\n\n\nErrores\nMensajes claros, a menudo con sugerencias\nMensajes largos y difíciles de interpretar\n\n\nProgramación\nLenguaje de scripting integrado y coherente\nMacros de TeX\n\n\nPaquetes\nSe descargan al usarlos y se guardan en caché; instalación ligera\nDistribuciones grandes (TeX Live, MiKTeX)\n\n\nPlantillas\nFunciones: #show: plantilla.with(...)\nClases y archivos .sty\n\n\n\nComo contrapeso, conviene conocer las limitaciones actuales: el ecosistema de gráficos (CeTZ, Lilaq) es menor que el de PGF/TikZ, muchas revistas todavía exigen plantillas LaTeX o Word, y algunos paquetes especializados aún no tienen equivalente.\n First Enhancements You Will Notice Moving From LaTeX to Typst",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica",
+      "Typst"
+    ]
+  },
+  {
+    "objectID": "cyt/escrituraypublicacionacademica/typst.html#cómo-se-usa",
+    "href": "cyt/escrituraypublicacionacademica/typst.html#cómo-se-usa",
+    "title": "Typst",
+    "section": "Cómo se usa",
+    "text": "Cómo se usa\n\nOpción 1: la aplicación web\nEn typst.app se escribe en el navegador, sin instalar nada, con vista previa en vivo y colaboración en tiempo real. El plan gratuito incluye edición de proyectos, colaboración, paquetes y plantillas de la comunidad, conversión de archivos y 200 MB de almacenamiento. El plan Pro añade comentarios, paquetes privados, sincronización con GitHub/GitLab (experimental), Zotero/Mendeley y más almacenamiento.\n\n\nOpción 2: la línea de comandos (CLI)\nEl compilador es gratuito y se instala localmente:\n# macOS\nbrew install typst\n\n# Windows\nwinget install --id Typst.Typst\n\n# Con Rust\ncargo install --locked typst-cli\nLuego se compila o se observa un archivo para recompilar en cada cambio:\ntypst compile articulo.typ        # genera articulo.pdf\ntypst watch articulo.typ          # recompila al guardar\n\n\nOpción 3: un editor local\nLa extensión Tinymist ofrece resaltado, autocompletado, diagnóstico y vista previa para VS Code, Neovim, Helix, Emacs, Zed y Sublime. El siguiente video, en español, muestra cómo configurarlo en VS Code.\n Cómo usar Typst en VS Code\n\n\nUn primer documento\n#set page(paper: \"a4\", margin: 2.5cm)\n#set text(lang: \"es\", size: 11pt)\n#set heading(numbering: \"1.\")\n\n= Introducción\n\nTypst permite escribir texto con *énfasis*, _cursiva_ y listas:\n\n- Compilación rápida\n- Sintaxis simple\n\n+ Elemento numerado uno\n+ Elemento numerado dos\n\nLa suma de los primeros $n$ números es:\n\n$ sum_(k=1)^n k = (n(n+1)) / 2 $\n\n#figure(\n  table(\n    columns: 3,\n    [*Municipio*], [*Eventos*], [*Año*],\n    [Bucaramanga], [12], [2024],\n    [Floridablanca], [7], [2024],\n  ),\n  caption: [Tabla de ejemplo.],\n) &lt;tab-ejemplo&gt;\n\nComo se ve en la @tab-ejemplo, las referencias cruzadas son automáticas.\nLas líneas que empiezan con #set configuran propiedades de ahí en adelante (set rules), y #show transforma la apariencia de elementos (show rules). Con estas dos ideas y las funciones con # se cubre buena parte del lenguaje.\n\n\nPlantillas y bibliografía\nUna plantilla se aplica con una sola línea, y la bibliografía se enlaza desde un archivo .bib o .yml:\n#import \"@preview/charged-ieee:0.1.3\": ieee\n\n#show: ieee.with(\n  title: [Mi artículo],\n  authors: ((name: \"Autor/a\", email: \"autor@ejemplo.org\"),),\n)\n\nTexto con una cita @garcia2024.\n\n#bibliography(\"referencias.bib\", style: \"apa\")\n\n\n\n\n\n\nNoteVersiones de paquetes\n\n\n\nLos números de versión de los paquetes (por ejemplo charged-ieee:0.1.3) cambian con el tiempo. Consulte la versión vigente en Typst Universe antes de copiar el código.\n\n\n Getting through university without LaTeX (flujo de trabajo con la CLI y plantillas)",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica",
+      "Typst"
+    ]
+  },
+  {
+    "objectID": "cyt/escrituraypublicacionacademica/typst.html#typst-universe-paquetes-y-plantillas",
+    "href": "cyt/escrituraypublicacionacademica/typst.html#typst-universe-paquetes-y-plantillas",
+    "title": "Typst",
+    "section": "Typst Universe: paquetes y plantillas",
+    "text": "Typst Universe: paquetes y plantillas\nTypst Universe es el repositorio de paquetes y plantillas de la comunidad (más de 1.700) en categorías como visualización, diseño, informes, artículos, tesis, presentaciones y currículos. Los paquetes se importan con #import \"@preview/nombre:versión\" y se descargan automáticamente la primera vez.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica",
+      "Typst"
+    ]
+  },
+  {
+    "objectID": "cyt/escrituraypublicacionacademica/typst.html#repositorios-en-github",
+    "href": "cyt/escrituraypublicacionacademica/typst.html#repositorios-en-github",
+    "title": "Typst",
+    "section": "Repositorios en GitHub",
+    "text": "Repositorios en GitHub\n\nNúcleo y documentación\n\ntypst/typst: el compilador y la CLI (Apache-2.0).\ntypst/templates: plantillas oficiales que incluye la aplicación web.\ntypst/packages: fuente de los paquetes de Typst Universe; aquí se proponen nuevos paquetes y plantillas.\nqjcg/awesome-typst: lista curada de herramientas, editores, plantillas y paquetes.\n\n\n\nEditores y herramientas\n\nTinymist: servidor de lenguaje y vista previa para VS Code, Neovim, Helix, Emacs, Zed y Sublime.\ntypstyle: formateador de código Typst.\ntypst-live: recarga el PDF en el navegador mientras se edita.\nutpm: gestor de paquetes locales y remotos.\nsetup-typst: instala Typst en GitHub Actions, útil para compilar documentos automáticamente.\ntypst-pandoc y Tylax: conversión entre Typst, Pandoc y LaTeX.\n\n\n\nPaquetes destacados\n\nCeTZ: dibujo y gráficos, inspirado en TikZ.\nLilaq: visualización de datos con valores por defecto sensatos.\nTouying y Polylux: presentaciones.\ntypst-theorems: teoremas numerados.\nshowybox: cuadros personalizables.\n\n\n\nPlantillas\n\nbrilliant-CV: currículo.\nLaPreprint: preprints.\nsimple-typst-thesis: tesis.\nquarto-ext/typst-templates: plantillas para usar con Quarto.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica",
+      "Typst"
+    ]
+  },
+  {
+    "objectID": "cyt/escrituraypublicacionacademica/typst.html#typst-y-quarto",
+    "href": "cyt/escrituraypublicacionacademica/typst.html#typst-y-quarto",
+    "title": "Typst",
+    "section": "Typst y Quarto",
+    "text": "Typst y Quarto\nQuarto, el sistema con el que se construye este sitio, puede generar PDF mediante Typst en lugar de LaTeX. Basta con pedir ese formato en el encabezado del documento .qmd:\n---\ntitle: \"Mi informe\"\nformat: typst\n---\nAsí se combinan la escritura en Markdown, el código ejecutable (Python, R) y la composición tipográfica de Typst sin instalar una distribución de LaTeX. Ver también Ciencia reproducible.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica",
+      "Typst"
+    ]
+  },
+  {
+    "objectID": "cyt/escrituraypublicacionacademica/typst.html#cómo-aprender-más",
+    "href": "cyt/escrituraypublicacionacademica/typst.html#cómo-aprender-más",
+    "title": "Typst",
+    "section": "Cómo aprender más",
+    "text": "Cómo aprender más\n\nTutorial oficial: typst.app/docs/tutorial, sin conocimientos previos y con dificultad gradual.\nGuía para usuarios de LaTeX: typst.app/docs/guides/guide-for-latex-users, con equivalencias comando por comando.\nTypst Examples Book: sitandr.github.io/typst-examples-book, con fragmentos, trucos y tutoriales.\nBlog oficial: typst.app/blog, con novedades del proyecto.\nComunidad: Discord oficial y r/typst.\n\n Forget LaTeX: Typst is A Game Changer",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica",
+      "Typst"
+    ]
+  },
+  {
+    "objectID": "cyt/escrituraypublicacionacademica/typst.html#cuándo-conviene-usar-typst",
+    "href": "cyt/escrituraypublicacionacademica/typst.html#cuándo-conviene-usar-typst",
+    "title": "Typst",
+    "section": "Cuándo conviene usar Typst",
+    "text": "Cuándo conviene usar Typst\n\n\n\n\n\n\nTipRecomendación\n\n\n\n\nÚselo para documentos nuevos que controla de principio a fin: tesis, informes, apuntes, currículos, presentaciones o informes generados por lote.\nMantenga LaTeX o Word cuando una revista, editorial o coautores exijan sus propias plantillas, o cuando dependa de paquetes LaTeX sin equivalente en Typst.",
+    "crumbs": [
+      "Ciencia y tecnología",
+      "Escritura y publicación académica",
+      "Typst"
     ]
   },
   {
