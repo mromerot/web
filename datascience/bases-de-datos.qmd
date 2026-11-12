@@ -1,0 +1,582 @@
+---
+title: "Bases de datos: de las tablas relacionales a los datos nativos de la nube"
+subtitle: "Tipos, formatos modernos, datos geográficos, cubos de datos y Zarr"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "En este artículo"
+editor: visual
+---
+
+## Introducción
+
+Toda práctica de ciencia de datos empieza con una pregunta incómoda: **¿dónde y en qué formato viven los datos?** La respuesta condiciona cuánto cuesta almacenarlos, qué tan rápido se consultan, quién puede reutilizarlos y si un análisis se puede reproducir dentro de cinco años.
+
+Durante décadas la respuesta fue sencilla: una base de datos relacional en un servidor, consultada con SQL. Hoy el panorama es otro. Los datos se generan a escala de terabytes y petabytes (imágenes satelitales, reanálisis climáticos, sensores, registros administrativos), se almacenan en **almacenamiento de objetos en la nube** (Amazon S3, Google Cloud Storage, Azure Blob Storage) y se analizan con motores que leen *solo la porción* del archivo que necesitan, sin descargarlo completo.
+
+Este artículo recorre el tema en cuatro movimientos:
+
+1. Los **tipos clásicos de bases de datos** y para qué sirve cada uno.
+2. El paso de las bases de datos a los **formatos de archivo columnares y los lagos de datos** (Parquet, Arrow, Iceberg, Delta).
+3. Los **datos geográficos**: vectores, ráster y sus formatos nativos de la nube (GeoParquet, COG, PMTiles, FlatGeobuf).
+4. Los **cubos de datos** y **Zarr**, el formato que se ha vuelto estándar para datos científicos multidimensionales en la nube.
+
+::: {.callout-note}
+## A quién va dirigido
+A quien trabaja con datos de riesgo, clima, territorio o salud y necesita decidir qué formato usar para guardar, compartir y analizar información. No se requiere experiencia previa en administración de bases de datos; los ejemplos de código están en Python y SQL y se muestran sin ejecutar.
+:::
+
+## ¿Qué es una base de datos?
+
+Una **base de datos** es una colección organizada de datos junto con el software que permite almacenarlos, consultarlos y protegerlos (el *sistema gestor de bases de datos*, o DBMS). Lo que distingue a una base de datos de una carpeta de archivos son tres garantías:
+
+- **Modelo de datos:** una estructura explícita (tablas, documentos, grafos, arreglos) que da significado a los datos.
+- **Lenguaje de consulta:** una forma declarativa de preguntar "qué quiero" sin decir "cómo buscarlo" (SQL es el ejemplo clásico).
+- **Garantías de integridad:** control de concurrencia, permisos y, en muchos sistemas, transacciones **ACID** (atomicidad, consistencia, aislamiento y durabilidad).
+
+Sin embargo, no todo dato necesita un servidor de base de datos. Un archivo Parquet en un bucket de S3, consultado con DuckDB, se comporta en la práctica como una base de datos analítica sin servidor. Esa difuminación de fronteras es el hilo conductor de este artículo.
+
+## Tipos de bases de datos
+
+### Bases de datos relacionales (SQL)
+
+Organizan la información en **tablas** (filas y columnas) relacionadas mediante llaves primarias y foráneas. Imponen un **esquema** rígido y se consultan con SQL.
+
+- **Fortalezas:** integridad, transacciones ACID, madurez, ecosistema enorme.
+- **Debilidades:** escalar horizontalmente es más difícil; los esquemas rígidos incomodan cuando los datos cambian de forma.
+- **Ejemplos:** PostgreSQL, MySQL/MariaDB, SQLite, SQL Server, Oracle.
+- **Cuándo usarlas:** registros administrativos, inventarios, sistemas transaccionales, cualquier dato con relaciones claras (por ejemplo, municipios → eventos → afectaciones).
+
+```sql
+-- Eventos de desastre por departamento y año
+SELECT d.nombre AS departamento,
+       EXTRACT(YEAR FROM e.fecha) AS anio,
+       COUNT(*) AS n_eventos,
+       SUM(e.personas_afectadas) AS afectados
+FROM eventos e
+JOIN municipios m ON m.codigo = e.codigo_municipio
+JOIN departamentos d ON d.codigo = m.codigo_departamento
+GROUP BY d.nombre, anio
+ORDER BY afectados DESC;
+```
+
+### Bases de datos NoSQL
+
+El término agrupa varias familias que sacrifican parte del modelo relacional a cambio de flexibilidad o escala.
+
+| Familia | Modelo | Ejemplos | Caso típico |
+|---|---|---|---|
+| **Clave-valor** | Un valor asociado a una llave | Redis, DynamoDB | Cachés, sesiones, contadores en tiempo real |
+| **Documentos** | Documentos JSON/BSON anidados | MongoDB, Firestore, CouchDB | Datos semiestructurados, catálogos, APIs |
+| **Columna ancha** | Familias de columnas distribuidas | Cassandra, HBase, Bigtable | Escrituras masivas, telemetría |
+| **Grafos** | Nodos y relaciones | Neo4j, Amazon Neptune | Redes sociales, cadenas de suministro, dependencias entre infraestructuras |
+
+### Bases de datos analíticas (OLAP) frente a transaccionales (OLTP)
+
+Esta distinción es más importante para la ciencia de datos que la de SQL frente a NoSQL.
+
+| | **OLTP** (transaccional) | **OLAP** (analítico) |
+|---|---|---|
+| Objetivo | Registrar operaciones del día a día | Responder preguntas sobre grandes volúmenes |
+| Patrón de acceso | Muchas lecturas/escrituras pequeñas de **filas** | Pocas consultas que leen **columnas** de millones de filas |
+| Almacenamiento | Orientado a filas | **Orientado a columnas** |
+| Ejemplos | PostgreSQL, MySQL | BigQuery, Snowflake, Redshift, ClickHouse, DuckDB |
+
+La orientación por columnas es la idea clave detrás de los formatos modernos: si una consulta solo necesita las columnas `fecha` y `precipitacion` de una tabla de cincuenta columnas, un formato columnar lee solo esas dos, no las cincuenta.
+
+### Otros tipos especializados
+
+- **Series de tiempo** (InfluxDB, TimescaleDB, Prometheus): optimizadas para mediciones indexadas por tiempo, como estaciones hidrometeorológicas.
+- **Vectoriales** (pgvector, Qdrant, Milvus, Chroma): almacenan *embeddings* y buscan por similitud; son la base de los sistemas RAG con modelos de lenguaje (ver la sección de [Inteligencia artificial](ia.qmd) y [Hugging Face](hugging-face.qmd)).
+- **Espaciales** (PostGIS, SpatiaLite): agregan tipos geométricos e índices espaciales. Se tratan más adelante.
+- **En memoria** (Redis, SAP HANA): priorizan latencia sobre persistencia.
+- **Multimodelo y NewSQL** (CockroachDB, YugabyteDB, PostgreSQL con extensiones): intentan combinar escalabilidad horizontal con garantías ACID.
+- **Embebidas** (SQLite, DuckDB): corren dentro del propio proceso de la aplicación, sin servidor. DuckDB es hoy la navaja suiza del analista de datos.
+
+## Del almacén al lago y al *lakehouse*
+
+Las organizaciones han ido migrando entre tres arquitecturas:
+
+- **Data warehouse (almacén de datos):** datos limpios, estructurados y modelados para reportes. Rápido y confiable, pero costoso y rígido.
+- **Data lake (lago de datos):** archivos en bruto de cualquier tipo en almacenamiento barato (S3, GCS). Flexible, pero sin garantías: es fácil terminar en un "pantano de datos".
+- **Lakehouse:** archivos abiertos en almacenamiento de objetos **más** una capa de metadatos que aporta transacciones, versionado y esquemas. Combina el costo del lago con la gobernanza del almacén.
+
+```{mermaid}
+flowchart LR
+    A[Fuentes<br/>sensores, APIs, archivos] --> B[Almacenamiento de objetos<br/>S3 · GCS · Azure Blob]
+    B --> C[Formatos abiertos<br/>Parquet · Zarr · COG]
+    C --> D[Formato de tabla<br/>Iceberg · Delta · Hudi]
+    D --> E[Motores de consulta<br/>DuckDB · Spark · BigQuery · Polars]
+    E --> F[Análisis, mapas, modelos]
+```
+
+La idea central de esta arquitectura es **separar el almacenamiento del cómputo**: los datos viven en un formato abierto y barato, y cualquier motor puede leerlos. Cambiar de motor ya no implica migrar los datos.
+
+## Formatos de archivo modernos para datos tabulares
+
+### El problema de CSV y JSON
+
+CSV y JSON son universales y legibles por humanos, pero ineficientes a escala:
+
+- No guardan **tipos** (una fecha es solo texto; un código DANE con ceros a la izquierda se corrompe al abrirlo en una hoja de cálculo).
+- Son **orientados a filas**: para leer una columna hay que leer todo el archivo.
+- Comprimen mal y no admiten lectura parcial eficiente.
+- No tienen metadatos incrustados (unidades, descripción, sistema de referencia).
+
+### Formatos columnares
+
+| Formato | Orientación | Esquema | Uso principal |
+|---|---|---|---|
+| **CSV** | Filas | No | Intercambio simple, datos pequeños |
+| **JSON / NDJSON** | Filas | Implícito | APIs, datos anidados; NDJSON (un objeto por línea) permite procesamiento por flujo |
+| **Avro** | Filas | Sí (incrustado) | Mensajería y flujos de eventos (Kafka), evolución de esquemas |
+| **Parquet** | **Columnas** | Sí | Estándar de facto para analítica en lagos de datos |
+| **ORC** | Columnas | Sí | Ecosistema Hive/Hadoop |
+| **Arrow / Feather** | Columnas **en memoria** | Sí | Intercambio sin copias entre herramientas y lenguajes |
+
+**Apache Parquet** merece atención especial. Un archivo Parquet se divide en *grupos de filas*, y dentro de cada uno almacena cada *columna* por separado, con compresión y codificación propias y **estadísticas** (mínimo y máximo) por bloque. Esto habilita dos optimizaciones:
+
+- **Proyección de columnas:** se leen solo las columnas solicitadas.
+- ***Predicate pushdown*:** se saltan bloques completos cuyas estadísticas descartan el filtro (por ejemplo, `WHERE anio = 2024`).
+
+Además, el pie del archivo contiene los metadatos, de modo que un cliente puede leerlos con una petición HTTP *range* y luego solicitar únicamente los bloques necesarios.
+
+**Apache Arrow** es complementario: define una representación columnar **en memoria** que comparten pandas, Polars, DuckDB, R, Spark y otros, evitando serializar y copiar datos al pasar de una herramienta a otra.
+
+```python
+import duckdb
+
+# Consultar directamente un Parquet en S3, sin descargarlo ni cargarlo a una base
+duckdb.sql("""
+    SELECT departamento, COUNT(*) AS n
+    FROM read_parquet('s3://mi-bucket/eventos/*.parquet')
+    WHERE anio >= 2020
+    GROUP BY departamento
+    ORDER BY n DESC
+""").df()
+```
+
+```python
+import polars as pl
+
+# Evaluación perezosa: Polars optimiza el plan y lee solo lo necesario
+(pl.scan_parquet("eventos/*.parquet")
+   .filter(pl.col("anio") >= 2020)
+   .group_by("departamento")
+   .agg(pl.len().alias("n"))
+   .collect())
+```
+
+### Formatos de tabla abiertos: Iceberg, Delta Lake y Hudi
+
+Un directorio con miles de archivos Parquet no es una tabla confiable: ¿qué pasa si dos procesos escriben a la vez? ¿cómo se corrige un error sin reescribir todo? Los **formatos de tabla abiertos** resuelven esto añadiendo una capa de metadatos sobre los archivos:
+
+- **Transacciones ACID** sobre almacenamiento de objetos.
+- **Viaje en el tiempo** (*time travel*): consultar la tabla tal como estaba en una fecha anterior.
+- **Evolución de esquema:** agregar o renombrar columnas sin reescribir los datos.
+- **Particionado oculto** y compactación de archivos pequeños.
+
+Los tres principales son **Apache Iceberg**, **Delta Lake** y **Apache Hudi**. Iceberg se ha consolidado como el estándar con mayor soporte multimotor (Spark, Trino, Snowflake, BigQuery, DuckDB, entre otros), mientras que Delta Lake es el formato nativo de Databricks. Para proyectos pequeños y medianos, un conjunto de archivos Parquet particionados por año o región suele ser suficiente; estos formatos se justifican cuando hay **múltiples escritores, auditoría o cambios frecuentes**.
+
+## Datos nativos de la nube
+
+### La idea: leer solo lo que se necesita
+
+Un formato es **nativo de la nube** (*cloud-native* o *cloud-optimized*) cuando está organizado internamente para que un cliente pueda hacer **peticiones HTTP por rango de bytes** y descargar únicamente el fragmento que le interesa. Para esto hacen falta dos cosas:
+
+1. **Un índice o encabezado** al principio (o al final) del archivo que diga dónde está cada fragmento.
+2. **Datos fragmentados** (*tiles*, *chunks* o *row groups*) que se puedan leer de forma independiente.
+
+El resultado es una experiencia distinta: en lugar de descargar 40 GB para analizar un municipio, se leen unos pocos megabytes. Esta es la filosofía de la iniciativa [Cloud-Native Geospatial](https://cloudnativegeo.org/), y de los datos **ARCO** (*Analysis-Ready, Cloud-Optimized*): datos ya preparados para el análisis (corregidos, alineados, con metadatos) y ya organizados para la nube.
+
+::: {.callout-tip}
+## Ventajas y costos
+- **Ventajas:** no hay servidor que mantener, el costo es el del almacenamiento, se escala leyendo en paralelo y los datos son abiertos y reutilizables.
+- **Costos ocultos:** cada petición HTTP tiene latencia; fragmentar en exceso (miles de archivos diminutos) o en defecto (fragmentos enormes) degrada el rendimiento. Las salidas de datos (*egress*) entre regiones o proveedores pueden costar dinero.
+:::
+
+### Datos ARCO y catálogos STAC
+
+Dos piezas acompañan a los formatos nativos de la nube:
+
+- **ARCO:** el dato está listo para usarse sin pasos previos de descarga, descompresión o reproyección. Un ejemplo es el reanálisis ERA5 en formato Zarr en Google Cloud (*ARCO-ERA5*) o los productos del servicio marino de Copernicus (véase la introducción al formato ARCO enlazada en [Herramientas](herramientas.qmd)).
+- **STAC** (*SpatioTemporal Asset Catalog*): una especificación abierta para describir y buscar activos geoespaciales (escenas satelitales, DEM, etc.) mediante JSON y una API. Permite preguntar "dame las imágenes Sentinel-2 de Bucaramanga entre enero y marzo con menos de 20 % de nubes" y recibir enlaces directos a archivos COG.
+
+## Datos geográficos
+
+Los datos geográficos tienen una particularidad: cada registro tiene una **ubicación** y una **geometría**, y las consultas más comunes ("¿qué cae dentro de esto?", "¿qué está cerca de aquello?") requieren índices espaciales. Se dividen en dos grandes modelos.
+
+### Modelo vectorial
+
+Representa objetos discretos mediante **puntos, líneas y polígonos** con atributos (un municipio, un río, una estación, una amenaza zonificada).
+
+| Formato | Tipo | Comentarios |
+|---|---|---|
+| **Shapefile** | Archivos múltiples (`.shp`, `.dbf`, `.shx`, `.prj`) | Omnipresente pero obsoleto: nombres de campo de 10 caracteres, límite de 2 GB, sin tipos modernos. Evitar en proyectos nuevos |
+| **GeoJSON** | Texto JSON | Legible, ideal para la web y archivos pequeños; muy voluminoso a escala |
+| **TopoJSON** | Texto JSON con topología | Comparte arcos entre polígonos vecinos; reduce mucho el tamaño |
+| **GeoPackage (.gpkg)** | Base SQLite en un solo archivo | Estándar OGC. Sustituto natural del Shapefile para trabajo de escritorio |
+| **FlatGeobuf** | Binario con índice espacial | Nativo de la nube: permite pedir solo los objetos de un recuadro (*bbox*) mediante HTTP range |
+| **GeoParquet** | Parquet con columna de geometría | Une analítica columnar con datos espaciales; el formato vectorial de referencia para lagos de datos |
+| **PMTiles** | Teselas vectoriales o ráster en un solo archivo | Mapas web sin servidor de teselas; solo se leen las teselas visibles |
+
+**GeoParquet** es un buen ejemplo de convergencia: una tabla Parquet normal con una columna de geometría codificada (WKB) y metadatos que declaran el sistema de referencia de coordenadas. Como es Parquet, hereda la compresión, la lectura por columnas y el soporte de DuckDB, Spark, BigQuery y Sedona. Las versiones recientes de la especificación y del propio formato Parquet han avanzado hacia tipos geoespaciales nativos y cajas envolventes (*bounding boxes*) por fila para acelerar los filtros espaciales.
+
+```python
+import geopandas as gpd
+
+# Leer un shapefile / geopackage y guardarlo como GeoParquet
+gdf = gpd.read_file("municipios.gpkg")
+gdf.to_parquet("municipios.parquet")           # GeoParquet
+gdf = gpd.read_parquet("municipios.parquet")
+```
+
+```sql
+-- DuckDB con la extensión espacial: ¿qué municipios intersectan una amenaza?
+INSTALL spatial; LOAD spatial;
+
+SELECT m.mpio_nombre, SUM(ST_Area(ST_Intersection(m.geom, a.geom))) AS area_amenaza
+FROM 'municipios.parquet' m
+JOIN 'amenaza_inundacion.parquet' a
+  ON ST_Intersects(m.geom, a.geom)
+GROUP BY m.mpio_nombre
+ORDER BY area_amenaza DESC;
+```
+
+### Modelo ráster
+
+Representa fenómenos continuos como una **malla de celdas** (píxeles) con valores: elevación, precipitación, temperatura, reflectancia satelital, profundidad de inundación.
+
+| Formato | Comentarios |
+|---|---|
+| **GeoTIFF** | Estándar de intercambio ráster; georreferenciado dentro del TIFF |
+| **COG** (*Cloud Optimized GeoTIFF*) | GeoTIFF organizado en teselas internas con **pirámides de resolución** (*overviews*) y encabezado al inicio; permite leer una ventana o un nivel de zoom por HTTP range. Hoy es el formato ráster por defecto en catálogos abiertos |
+| **NetCDF / HDF5** | Contenedores científicos multidimensionales (se ven en la sección de cubos) |
+| **Zarr** | Arreglos fragmentados nativos de la nube (se ve más adelante) |
+| **COPC** (*Cloud Optimized Point Cloud*) | Nube de puntos LiDAR (LAZ) organizada en octree para lectura parcial |
+
+```python
+import rasterio
+from rasterio.windows import from_bounds
+
+url = "https://ejemplo.org/dem_colombia_cog.tif"
+with rasterio.open(url) as src:                 # solo lee el encabezado
+    ventana = from_bounds(-73.2, 7.0, -73.0, 7.2, src.transform)
+    dem = src.read(1, window=ventana)           # solo descarga esa ventana
+```
+
+### Bases de datos espaciales
+
+Para consultas espaciales frecuentes y multiusuario, la opción clásica es **PostgreSQL + PostGIS**, que ofrece cientos de funciones espaciales (`ST_Intersects`, `ST_Buffer`, `ST_Distance`...) e índices GiST. Alternativas ligeras son **SpatiaLite** y **GeoPackage** (SQLite), y para analítica sin servidor **DuckDB spatial**. En la nube, **BigQuery GIS** y **Snowflake** ofrecen tipos geográficos, y **Apache Sedona** extiende Spark para trabajos espaciales masivos.
+
+### Un ejemplo local: el peso de un mapa de Colombia
+
+Los mapas interactivos de esta sección sirven como caso práctico. Los mismos límites administrativos de Colombia ocupan tamaños muy distintos según el formato (valores aproximados de los archivos de [Mapas](mapas/index.qmd)):
+
+| Archivo | Formato | Tamaño aproximado |
+|---|---|---|
+| Departamentos | GeoJSON | 24,6 MB |
+| Departamentos | PMTiles | 0,9 MB |
+| Municipios | GeoJSON | 136 MB |
+| Municipios | PMTiles | 34,9 MB |
+| Colombia (detalle completo) | TopoJSON | 63 MB |
+| Colombia (simplificado) | TopoJSON | 1,1 MB |
+
+Dos lecciones se desprenden de la tabla. Primera, **simplificar la geometría** (reducir vértices) y **usar topología** reduce el tamaño en órdenes de magnitud. Segunda, un archivo PMTiles pesa menos y, sobre todo, **el navegador solo descarga las teselas de la zona visible**, de modo que el peso del archivo deja de ser el peso de la descarga. Véanse las versiones [PMTiles](mapas/mapa_colombia_pmtiles.qmd) y [TopoJSON](mapas/mapa_colombia_observable.qmd).
+
+::: {.callout-note}
+La comparación no es exactamente equivalente: un PMTiles contiene varios niveles de zoom ya preparados, mientras que el GeoJSON tiene una sola geometría. Aun así, ilustra por qué la web moderna ya no consume GeoJSON gigantes.
+:::
+
+## Cubos de datos
+
+### Dos significados de "cubo"
+
+El término se usa en dos comunidades distintas, y conviene no confundirlas.
+
+**1. Cubo OLAP (inteligencia de negocios).** Es una estructura que organiza **medidas** (ventas, afectados, costos) según **dimensiones** (tiempo, geografía, tipo de evento) con jerarquías (día → mes → año; municipio → departamento → país). Permite operaciones como *roll-up* (agregar hacia arriba), *drill-down* (detallar), *slice* y *dice* (cortar). Hoy se materializan con SQL (`GROUP BY CUBE`, `ROLLUP`) o con motores como ClickHouse y Druid.
+
+**2. Cubo de datos científico (*datacube*).** Es un **arreglo multidimensional** donde cada celda es un valor medido y cada eje es una dimensión física o temporal. Es el modelo natural de los datos de observación de la Tierra:
+
+- Un reanálisis climático: `temperatura[tiempo, nivel, latitud, longitud]`.
+- Una serie de imágenes satelitales: `reflectancia[tiempo, banda, y, x]`.
+- Una simulación hidrodinámica: `profundidad[tiempo, y, x]`.
+
+Este segundo sentido es el que domina en datos climáticos y geoespaciales y el que se desarrolla en lo que sigue.
+
+### Representar un cubo: xarray
+
+La librería **xarray** (Python) se ha convertido en la interfaz estándar para trabajar con cubos. Extiende los arreglos de NumPy con **dimensiones con nombre**, **coordenadas** y **metadatos**, de modo que se escribe `precipitacion.sel(tiempo="2024-03")` en lugar de adivinar índices.
+
+```python
+import xarray as xr
+
+ds = xr.open_dataset("era5_temperatura.nc")
+ds
+# <xarray.Dataset>
+# Dimensions:    (time: 8760, latitude: 721, longitude: 1440)
+# Coordinates:   * time, * latitude, * longitude
+# Data variables: t2m (time, latitude, longitude) float32 ...
+
+# Series de tiempo en Bucaramanga, promedio mensual
+t_bga = ds["t2m"].sel(latitude=7.12, longitude=-73.12, method="nearest")
+t_bga.resample(time="1MS").mean()
+```
+
+### Formatos tradicionales de cubos
+
+| Formato | Origen | Características |
+|---|---|---|
+| **NetCDF** | Ciencias atmosféricas y oceánicas | Autodescriptivo, con convenciones CF para unidades y coordenadas. Estándar de la comunidad climática |
+| **HDF5** | Ciencia e ingeniería | Contenedor jerárquico general; base de NetCDF-4 y de muchos productos satelitales |
+| **GRIB / GRIB2** | Meteorología operativa | Muy compacto; usado por los modelos numéricos del tiempo |
+| **GeoTIFF multibanda** | Teledetección | Práctico para pocas bandas y fechas; no escala bien a series largas |
+
+Estos formatos fueron diseñados para discos locales. Un NetCDF o un HDF5 es, internamente, un solo archivo con su propio sistema de índices: leer un trozo remoto exige a menudo descargar mucho más de lo necesario o recorrer el archivo con muchas peticiones pequeñas. Esa limitación motivó el formato siguiente.
+
+::: {.callout-tip}
+## Ejemplo práctico: anomalías de temperatura de NOAA en Python
+Los datos climáticos en rejilla, como las anomalías de temperatura superficial, son un caso típico de cubo de datos (`tiempo × latitud × longitud`). El siguiente video explica cómo acceder a los datos de anomalías de temperatura superficial de NOAA y graficarlos con Python. Sirve para ver en la práctica cómo se obtiene y se visualiza un conjunto de datos de este tipo; los ejemplos con xarray de esta sección muestran el mismo flujo con otras fuentes.
+:::
+
+{{< video https://youtu.be/czLlSVQgXB0 >}} How to access and plot the NOAA surface temperature anomaly data in Python (canal Luke Data Manager)
+
+### Pilas de datos geoespaciales: del catálogo al cubo
+
+En observación de la Tierra el flujo habitual es: **buscar** en un catálogo STAC, **abrir** los COG como un cubo y **calcular** de forma perezosa y en paralelo.
+
+```python
+import pystac_client, odc.stac
+
+catalogo = pystac_client.Client.open("https://earth-search.aws.element84.com/v1")
+busqueda = catalogo.search(
+    collections=["sentinel-2-l2a"],
+    bbox=[-73.25, 7.0, -73.0, 7.25],            # Bucaramanga
+    datetime="2025-01-01/2025-03-31",
+    query={"eo:cloud_cover": {"lt": 20}},
+)
+items = busqueda.item_collection()
+
+# Cubo (tiempo, y, x) construido perezosamente desde COG remotos
+cubo = odc.stac.load(items, bands=["red", "nir"], resolution=20, chunks={})
+ndvi = (cubo.nir - cubo.red) / (cubo.nir + cubo.red)
+ndvi.median("time").compute()
+```
+
+Otros proyectos relevantes: **Open Data Cube** (infraestructura de cubos para observación de la Tierra, base del proyecto *Digital Earth*), **openEO** (API común para procesar cubos en distintos proveedores) y plataformas como **Google Earth Engine** y **Microsoft Planetary Computer**.
+
+## Zarr: arreglos multidimensionales nativos de la nube
+
+### ¿Qué es Zarr?
+
+**Zarr** es un formato y una especificación abiertos para almacenar **arreglos N-dimensionales fragmentados y comprimidos**. En lugar de un único archivo opaco, un conjunto de datos Zarr es una **jerarquía de objetos** (un directorio en disco o un prefijo en un bucket):
+
+```
+temperatura.zarr/
+├── zarr.json              # metadatos del grupo (v3)
+├── t2m/
+│   ├── zarr.json          # forma, tipo, tamaño de chunk, compresión, atributos
+│   └── c/
+│       ├── 0/0/0          # chunk (cada uno es un objeto independiente)
+│       ├── 0/0/1
+│       └── ...
+├── time/
+├── latitude/
+└── longitude/
+```
+
+Cada **chunk** es un objeto pequeño y comprimido (típicamente de 1 a 100 MB). Para leer un recorte espacial o temporal, el cliente calcula qué chunks lo cubren y los solicita **en paralelo** al almacenamiento de objetos. No existe un archivo monolítico ni un servidor intermedio: el almacén de objetos *es* la base de datos.
+
+### Por qué Zarr encaja con la nube
+
+| Característica | Beneficio |
+|---|---|
+| **Chunks independientes** | Lectura y escritura **en paralelo** desde muchos procesos (Dask, Spark, Ray) |
+| **Metadatos en JSON** | Cualquier lenguaje puede leerlos; hay implementaciones en Python, Java, JavaScript, C++, Julia y Rust |
+| **Compresión configurable** | Se eligen códecs (Zstd, Blosc, LZ4, gzip) según velocidad frente a tasa de compresión |
+| **Compatibilidad con xarray** | `xr.open_zarr()` abre un cubo remoto de forma perezosa |
+| **Almacenes intercambiables** | Funciona sobre sistemas de archivos, S3, GCS, Azure, memoria, ZIP o bases clave-valor |
+
+### Leer y escribir Zarr
+
+```python
+import xarray as xr
+
+# Abrir un cubo remoto de forma perezosa: solo se descargan los metadatos
+ds = xr.open_zarr(
+    "gs://gcp-public-data-arco-era5/ar/full_37-1h-0p25deg-chunk-1.zarr-v3",
+    chunks=None,
+    storage_options={"token": "anon"},
+)
+
+# Seleccionar y calcular: solo se descargan los chunks necesarios
+t_bga = ds["2m_temperature"].sel(
+    latitude=7.1, longitude=-73.1, method="nearest"
+).sel(time="2024")
+serie = t_bga.compute()
+```
+
+```python
+# Escribir un cubo propio, con chunks pensados para el patrón de consulta
+ds = ds.chunk({"time": 24 * 30, "latitude": 100, "longitude": 100})
+ds.to_zarr("s3://mi-bucket/temperatura.zarr", mode="w", consolidated=True)
+```
+
+::: {.callout-warning}
+## La elección del tamaño de *chunk* lo es todo
+Los chunks deben alinearse con **cómo se leerá** el dato. Un cubo fragmentado por `(tiempo=1, y=todo, x=todo)` es excelente para mapas de una fecha, pero pésimo para extraer la serie temporal de un solo punto (tocaría miles de chunks). Para ambos usos hay que elegir un compromiso, duplicar el dato con dos fragmentaciones o recurrir a *sharding* (ver abajo). Como regla práctica, apuntar a chunks de decenas de megabytes comprimidos y a un número de objetos razonable (decenas de miles, no millones).
+:::
+
+### Zarr v3, *sharding* y el ecosistema actual
+
+La **especificación Zarr v3** (aprobada en 2023 y con implementación completa en `zarr-python` 3, publicada a comienzos de 2025) introdujo varias mejoras sobre la v2:
+
+- **Un único archivo de metadatos `zarr.json`** por nodo, en lugar de `.zarray`, `.zgroup` y `.zattrs` separados.
+- **Cadena de códecs extensible** (transformaciones, serialización y compresión como pasos configurables).
+- ***Sharding*:** permite agrupar muchos chunks pequeños dentro de un solo objeto (*shard*) con un índice interno. Se obtiene la granularidad de lectura de un chunk pequeño con la cantidad de objetos de uno grande, lo que mitiga el problema de millones de archivos diminutos.
+- Mejor soporte para tipos de datos y para extensiones por parte de la comunidad.
+
+Alrededor de Zarr ha surgido un ecosistema que conviene conocer:
+
+| Herramienta | Qué resuelve |
+|---|---|
+| **Kerchunk** y **VirtualiZarr** | Crean una vista **virtual** tipo Zarr sobre miles de archivos NetCDF/HDF5/GRIB existentes, sin copiar ni convertir los datos. Muy útil para archivos institucionales |
+| **Icechunk** | Motor de almacenamiento **transaccional** para Zarr: versionado tipo Git, ramas y confirmaciones atómicas. Es para Zarr lo que Iceberg es para Parquet |
+| **Pangeo-Forge / Dask** | Conversión y procesamiento paralelo a gran escala hacia formatos ARCO |
+| **Zarr en el navegador** | Hay lectores en JavaScript, lo que permite visualizar cubos sin servidor |
+
+La comunidad **Pangeo** impulsó este modelo ("cubos en la nube con xarray, Dask y Zarr") para el análisis de datos climáticos a escala de petabytes. Un aporte reciente de varios grupos es normalizar convenciones (por ejemplo, para coordenadas y geoespacialidad) y extender el estándar para unir la tradición de NetCDF con la nube.
+
+### Zarr frente a NetCDF, HDF5 y COG
+
+| | **NetCDF/HDF5** | **COG** | **Zarr** |
+|---|---|---|---|
+| Dimensiones | N-D | 2-D (con bandas) | **N-D** |
+| Estructura | Un archivo | Un archivo | **Muchos objetos** (o shards) |
+| Lectura parcial remota | Limitada (según organización interna) | **Excelente** | **Excelente** |
+| Escritura paralela | Difícil | Difícil | **Natural** |
+| Series temporales largas | Se fragmentan en muchos archivos | Un archivo por fecha | **Un solo cubo** |
+| Madurez y soporte en herramientas de escritorio | **Muy alta** | **Muy alta** | Creciente |
+| Ideal para | Intercambio y archivo | Imágenes y mapas ráster | Cubos grandes y analítica en la nube |
+
+No son excluyentes: es común **archivar** en NetCDF o COG como formato de intercambio y **publicar** una copia ARCO en Zarr para análisis a escala.
+
+## Motores de consulta y cómputo
+
+Los formatos abiertos desacoplan los datos del motor. Estas son las herramientas más usadas:
+
+| Herramienta | Qué hace | Cuándo usarla |
+|---|---|---|
+| **DuckDB** | Base analítica embebida; lee Parquet, CSV, JSON, GeoParquet, Iceberg y S3 | Análisis en un solo equipo, de MB a cientos de GB |
+| **Polars** | DataFrames rápidos (Rust), con evaluación perezosa | Reemplazo de pandas cuando el tamaño crece |
+| **pandas / GeoPandas** | DataFrames y datos vectoriales | Datos que caben en memoria |
+| **xarray + Dask** | Cubos multidimensionales en paralelo | Datos climáticos, satelitales, simulaciones |
+| **Apache Spark / Sedona** | Cómputo distribuido en clústeres | Datos de terabytes en adelante |
+| **BigQuery, Athena, Snowflake, Redshift** | Almacenes y motores de consulta administrados | Equipos que prefieren pagar por consulta y no administrar infraestructura |
+| **Trino / Presto** | Consulta federada sobre lagos de datos | Organizaciones con múltiples fuentes |
+| **PostGIS** | Consultas espaciales transaccionales | Aplicaciones multiusuario con edición |
+
+## Plataformas en la nube con datos abiertos
+
+- **AWS Open Data Registry** y **Google Cloud Public Datasets:** reanálisis (ERA5), Landsat, Sentinel, NOAA, entre otros, a menudo ya como COG, Zarr o Parquet.
+- **Microsoft Planetary Computer:** catálogo STAC con datos ambientales y cómputo asociado.
+- **Google Earth Engine:** plataforma de análisis geoespacial a escala planetaria, de uso gratuito para investigación y sin necesidad de descargar datos.
+- **Copernicus Data Space Ecosystem** y **Copernicus Marine:** datos Sentinel y marinos, con ofertas en formatos ARCO.
+- **Hugging Face Datasets:** conjuntos de datos en Parquet para aprendizaje automático (véase [Hugging Face](hugging-face.qmd)).
+
+## ¿Qué formato elijo?
+
+Una guía práctica según el tipo de dato y el uso previsto:
+
+| Tengo... | Para... | Recomendación |
+|---|---|---|
+| Una tabla pequeña (< 100 MB) que se comparte con no técnicos | Intercambio | CSV (UTF-8, con diccionario de datos) o Excel |
+| Una tabla grande | Analítica | **Parquet** (particionado por año/región si es muy grande) |
+| Tablas con múltiples escritores, auditoría o correcciones | Gobernanza en lago de datos | Parquet + **Iceberg** o **Delta** |
+| Polígonos o puntos con atributos | Trabajo de escritorio | **GeoPackage** |
+| Polígonos o puntos, millones de registros | Analítica en la nube | **GeoParquet** |
+| Polígonos para un mapa web | Visualización | **PMTiles** (o TopoJSON simplificado si es pequeño) |
+| Vectores que se consultan por recuadro vía HTTP | Servicio sin servidor | **FlatGeobuf** |
+| Un ráster o una imagen satelital | Compartir y analizar | **COG** |
+| Una nube de puntos LiDAR | Compartir | **COPC** |
+| Muchas capas ráster en el tiempo, o variables climáticas | Análisis a escala | **Zarr** (con xarray) |
+| Miles de NetCDF/HDF5 institucionales ya existentes | Acceso en la nube sin conversión | **Kerchunk / VirtualiZarr** |
+| Un cubo que se edita y requiere historial | Versionado | Zarr + **Icechunk** |
+| Datos geográficos con muchos usuarios que editan | Producción | **PostgreSQL + PostGIS** |
+
+## Aplicación a la gestión del riesgo de desastres
+
+Los datos de riesgo reúnen casi todos los formatos mencionados, lo que hace de la GRD un buen campo de práctica:
+
+| Insumo de riesgo | Naturaleza del dato | Formato recomendado |
+|---|---|---|
+| Inventario de eventos históricos (DesInventar, UNGRD) | Tabla con fecha y ubicación | Parquet / GeoParquet |
+| Límites político-administrativos y zonificación de amenaza | Vectorial | GeoPackage → GeoParquet; PMTiles para visualización |
+| Modelos digitales de elevación, mapas de profundidad de inundación | Ráster | COG |
+| Precipitación, temperatura, humedad del suelo (reanálisis, satélites) | Cubo espacio-temporal | Zarr / NetCDF |
+| Exposición (edificaciones, población) | Vectorial masivo | GeoParquet |
+| Series de estaciones hidrometeorológicas | Series de tiempo | Parquet; TimescaleDB si es en tiempo real |
+| Imágenes de alta resolución post-evento | Ráster pesado | COG + catálogo STAC |
+
+Una cadena de análisis típica (amenaza × exposición × vulnerabilidad) se beneficia de que todos los insumos estén en formatos que permitan **cruzar capas sin descargar todo**: por ejemplo, intersectar una capa de exposición en GeoParquet con un ráster de profundidad de inundación en COG, o extraer la precipitación acumulada sobre una cuenca desde un cubo Zarr.
+
+## Principios FAIR y buenas prácticas
+
+Elegir un buen formato es parte de hacer **datos FAIR** (localizables, accesibles, interoperables y reutilizables). Algunas recomendaciones concretas:
+
+1. **Prefiere formatos abiertos y documentados.** Evita formatos propietarios o con especificaciones frágiles (como el Shapefile) para el archivo y la publicación.
+2. **Guarda metadatos con los datos.** Unidades, sistema de referencia (CRS), fuente, fecha, licencia y método. Zarr, NetCDF, COG y GeoParquet admiten atributos incrustados; complemento con un archivo `README` o un catálogo STAC/DCAT.
+3. **Declara tipos y sistemas de referencia.** Un código DANE es texto, no número; un campo de fecha es fecha; un CRS ausente es un error latente.
+4. **Piensa en el patrón de lectura antes de escribir.** Particiones, orden y tamaño de chunk se deciden al escribir y son costosos de cambiar después.
+5. **Versiona.** Usa formatos de tabla (Iceberg/Delta), Icechunk o, como mínimo, carpetas con fecha y *checksums*. Un resultado no reproducible no es ciencia.
+6. **Conserva el dato crudo y deriva el resto.** Archiva el original; publica la copia optimizada (Parquet, COG, Zarr) como un producto derivado y documentado.
+7. **Controla el costo.** En la nube cuentan el almacenamiento, las peticiones y la salida de datos; coloca el cómputo cerca de los datos (misma región) siempre que sea posible.
+8. **Respeta licencias y datos sensibles.** Anonimiza datos personales y documenta restricciones de uso antes de publicar.
+
+## Resumen
+
+- Las bases de datos **relacionales** siguen siendo el mejor punto de partida para datos transaccionales con relaciones claras; **NoSQL**, **series de tiempo**, **vectoriales** y **espaciales** cubren necesidades específicas.
+- La analítica moderna se apoya en **formatos columnares abiertos (Parquet, Arrow)** sobre **almacenamiento de objetos**, con formatos de tabla (**Iceberg, Delta**) cuando se requieren transacciones y versionado: la arquitectura *lakehouse*.
+- Los formatos **nativos de la nube** (COG, GeoParquet, FlatGeobuf, PMTiles, COPC, Zarr) permiten **leer solo la porción necesaria** mediante peticiones HTTP por rango, y junto con catálogos **STAC** y datos **ARCO** hacen posible analizar petabytes sin descargarlos.
+- Un **cubo de datos** científico es un arreglo multidimensional; **xarray** es su interfaz y **Zarr** su formato nativo de la nube, con **v3, sharding, Kerchunk/VirtualiZarr e Icechunk** como piezas clave del ecosistema actual.
+- No existe un formato universal: la decisión depende del **tipo de dato**, del **patrón de acceso** y del **número de usuarios y escritores**.
+
+## Lecturas y recursos
+
+### Formatos tabulares y lagos de datos
+
+- Apache Parquet. [*Documentación*](https://parquet.apache.org/docs/)
+- Apache Arrow. [*Sitio oficial*](https://arrow.apache.org/)
+- Apache Iceberg. [*Sitio oficial*](https://iceberg.apache.org/)
+- Delta Lake. [*Sitio oficial*](https://delta.io/)
+- DuckDB. [*Documentación*](https://duckdb.org/docs/)
+- Polars. [*Sitio oficial*](https://pola.rs/)
+
+### Datos geoespaciales nativos de la nube
+
+- Cloud-Native Geospatial Foundation. [*Sitio oficial*](https://cloudnativegeo.org/)
+- Cloud Optimized GeoTIFF. [*cogeo.org*](https://cogeo.org/)
+- GeoParquet. [*geoparquet.org*](https://geoparquet.org/)
+- FlatGeobuf. [*flatgeobuf.org*](https://flatgeobuf.org/)
+- PMTiles (Protomaps). [*Documentación*](https://docs.protomaps.com/pmtiles/)
+- STAC, SpatioTemporal Asset Catalog. [*stacspec.org*](https://stacspec.org/)
+- PostGIS. [*postgis.net*](https://postgis.net/)
+
+### Cubos de datos y Zarr
+
+- Zarr. [*zarr.dev*](https://zarr.dev/) · [*Documentación de zarr-python*](https://zarr.readthedocs.io/)
+- xarray. [*xarray.dev*](https://xarray.dev/)
+- Pangeo. [*pangeo.io*](https://pangeo.io/)
+- VirtualiZarr. [*Documentación*](https://virtualizarr.readthedocs.io/)
+- Icechunk (Earthmover). [*Repositorio*](https://github.com/earth-mover/icechunk)
+- Open Data Cube. [*opendatacube.org*](https://www.opendatacube.org/)
+- openEO. [*openeo.org*](https://openeo.org/)
+- Introduction to the ARCO format (Copernicus Marine). [*Link*](https://help.marine.copernicus.eu/en/articles/12332770-introduction-to-the-arco-format)
+
+### Dentro de este sitio
+
+- [Herramientas](herramientas.qmd): datos virtualizados y formato ARCO (videos y lecturas).
+- [Mapas](mapas/index.qmd): mapas interactivos con TopoJSON y PMTiles.
+- [Gráficas en Python y R](graficas-python-r.qmd): visualización de datos.
+- [Hugging Face](hugging-face.qmd): conjuntos de datos para aprendizaje automático.

@@ -228,6 +228,8 @@ website:
             href: datascience/vs-code.qmd
           - text: "Hugging Face"
             href: datascience/hugging-face.qmd
+          - text: "Bases de datos"
+            href: datascience/bases-de-datos.qmd
           - section: "Mapas"
             href: datascience/mapas/index.qmd
             contents:

@@ -133,6 +133,16 @@ Qué es Hugging Face y su papel en el ecosistema de modelos de aprendizaje autom
 
 ::: mrw-card
 ::: mrw-card-header
+[Bases de datos](bases-de-datos.qmd)
+:::
+
+::: mrw-card-body
+Tipos de bases de datos y formatos modernos para ciencia de datos en la nube: Parquet, datos geográficos (GeoParquet, COG, PMTiles), cubos de datos y Zarr.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
 [Mapas](mapas/index.qmd)
 :::
 
