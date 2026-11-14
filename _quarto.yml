@@ -142,6 +142,8 @@ website:
             href: gestiondeproyectos/gestionproyectosciencia.qmd
           - text: "Gestión de tecnología e innovación"
             href: gestiondeproyectos/gestiontecnologiainnovacion.qmd
+          - text: "Innovación"
+            href: gestiondeproyectos/innovacion.qmd
           - text: "Liderazgo"
             href: gestiondeproyectos/liderazgo.qmd
           - text: "Estrategia"

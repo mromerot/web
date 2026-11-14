@@ -1,0 +1,285 @@
+---
+title: "Innovación"
+format: html
+editor: visual
+---
+
+## Qué es innovar
+
+**Innovar** viene del latín *innovare*: *in* (hacia dentro, penetrar) y *novus* (nuevo), es decir, "introducir algo nuevo en lo ya establecido". La idea central es que la novedad por sí sola no basta: **una innovación solo existe cuando llega al mercado o entra en uso**. El *Manual de Oslo* (OCDE y Eurostat, 2018) lo formaliza para las organizaciones: una innovación es un producto o proceso nuevo o mejorado —o una combinación de ambos— que difiere significativamente de los anteriores y que ya fue puesto a disposición de los usuarios o puesto en uso.
+
+De ahí se desprenden varias ideas que ordenan el resto de la página:
+
+-   **Una idea no es una innovación.** La innovación es la *implementación* de la idea y la generación de valor con ella; sin valor no hay innovación.
+-   **La novedad es relativa.** Puede ser nueva para la organización, para el mercado o para el mundo; en la mayoría de los casos públicos basta con que sea nueva para el contexto donde se aplica.
+-   **Mejorar también es innovar.** No solo cuentan los productos nuevos: también los procesos, bienes y servicios que se mejoran de forma significativa.
+-   **Toda innovación es social**, en el sentido de que se valida cuando las personas la adoptan. Por eso la innovación recibe muchos "apellidos" (social, inclusiva, abierta, pública, frugal, tecnológica), que describen su propósito o su método más que una clase aparte.
+-   **Puede o no requerir investigación y desarrollo (I+D).** Algunas innovaciones salen de un laboratorio y otras de reorganizar lo que ya se tiene; el *Manual de Frascati* delimita qué parte de ese esfuerzo cuenta como I+D.
+-   **Innovar no es tecnología ni aplicaciones.** La tecnología habilita, pero entregar tecnología o desarrollar una *app* no equivale a innovar si no resuelve un problema real.
+
+::: callout-note
+## Idea, invención, innovación
+
+La **creatividad** produce ideas; la **invención** produce algo nuevo que funciona; la **innovación** lo lleva al uso y genera valor. Las tres se alimentan entre sí, pero solo la última se mide por el resultado en las personas.
+:::
+
+## Conceptos clave
+
+### Dimensiones de la innovación
+
+Tidd y Bessant (*Managing Innovation*) proponen las **4P del espacio de la innovación**, útiles para no reducir el tema a "producto":
+
+| Dimensión | Pregunta | Ejemplo en el sector público |
+|----------------------|------------------------|--------------------------|
+| **Producto** | ¿Qué ofrecemos que sea nuevo o mejor? | Un nuevo servicio de información de alertas para la ciudadanía |
+| **Proceso** | ¿Cómo lo producimos o entregamos de otra manera? | Rediseñar un trámite para que se resuelva en un solo paso |
+| **Posición** | ¿En qué contexto o para quién lo usamos? | Aplicar una tecnología de teledetección a otro tipo de infraestructura |
+| **Paradigma** | ¿Qué modelo mental cambiamos? | Pasar de "atender el desastre" a "gestionar el riesgo" |
+
+### Grado de cambio y tipo de efecto
+
+-   **Incremental frente a radical.** La innovación incremental mejora lo existente; la radical rompe con ello. La mayoría de las innovaciones públicas valiosas son incrementales y de escala pequeña.
+-   **Sostenedora frente a disruptiva** (Christensen). La sostenedora mejora los productos para los clientes actuales; la disruptiva aparece en el extremo bajo del mercado o crea un mercado nuevo y termina desplazando a los actores establecidos.
+-   **Cerrada frente a abierta** (Chesbrough, 2003). En el modelo abierto, las ideas y los caminos al mercado entran y salen de la organización mediante alianzas, licencias y cocreación.
+
+### Del conocimiento al uso
+
+-   **I+D+i.** La investigación y el desarrollo experimental generan el conocimiento; la innovación lo convierte en valor. Por eso el ecosistema reúne universidades, centros de investigación, empresas, Estado y sociedad civil.
+-   **Nivel de madurez tecnológica (TRL).** Escala de 1 a 9 que describe qué tan cerca está una tecnología de operar en condiciones reales; ayuda a decidir qué financiar y cuándo pasar de la investigación al piloto.
+-   **Difusión y adopción** (Rogers). Una innovación se expande por etapas —innovadores, adoptantes tempranos, mayoría y rezagados—; entender esa curva explica por qué soluciones buenas no se escalan solas.
+-   **Sistema de innovación.** La innovación no es obra de un actor aislado, sino del funcionamiento del conjunto: instituciones, capital humano, infraestructura, mercados, conocimiento y producción creativa.
+-   **Valor público.** En el sector público, el criterio de éxito no es la utilidad financiera sino el valor que se genera para las personas: eficiencia, eficacia, efectividad y economía como medios, y confianza, equidad y ciudadanía como fines.
+
+## Enfoques
+
+No existe un único enfoque de innovación ni una fórmula garantizada de éxito. La recomendación que se repite en los cursos es que cada equipo construya su propio enfoque combinando varios:
+
+-   **Diseño centrado en las personas y *design thinking*.** Parte de la empatía y de entender el problema antes de proponer soluciones. Es el enfoque dominante en los laboratorios de innovación. El primer paso del diseño es escuchar; "escuchar es innovar".
+-   **Pensamiento sistémico.** Mapea las partes, los actores y las relaciones que sostienen un problema para evitar intervenir sobre un síntoma. Los mapas sistémicos son su herramienta principal.
+-   **Ciencias del comportamiento.** Explican por qué la gente actúa como actúa: las personas rara vez deciden de forma plenamente racional, de modo que cambiar un comportamiento exige cambiar el entorno de la decisión (*nudges*, Thaler y Sunstein) y no solo informar.
+-   **Experimentación y pensamiento científico.** Se formula una hipótesis de cambio, se prueba con prototipos y se ajusta con evidencia. Es la base de la innovación responsable en lo público.
+-   ***Lean startup* y desarrollo de clientes** (Blank, Ries). Construir el producto mínimo viable, aprender del usuario y corregir rápido; fallar barato y temprano.
+-   **Innovación abierta y cocreación.** Se innova *con* el ciudadano y no *para* él ni *por* él; también con empresas, universidades y comunidades.
+-   **Innovación orientada por misiones** (Mazzucato). Se organiza el esfuerzo alrededor de retos sociales concretos y medibles y se usa la política pública, incluida la compra, para dirigir la innovación hacia ellos.
+-   **Cultura de datos, liderazgo adaptativo y narrativa pública.** Complementos que sostienen los anteriores: decidir con evidencia, conducir procesos de cambio con conversaciones difíciles y comunicar la innovación como una historia compartida. Innovación y comunicación trabajan juntas.
+
+## Métodos
+
+### Proceso de gestión de la innovación
+
+Una organización suele tener más de diez procesos relacionados con innovar, pero Tidd y Bessant los resumen en un ciclo de cuatro fases:
+
+1.  **Buscar** señales de amenazas y oportunidades (vigilancia tecnológica, escucha a usuarios, prospectiva).
+2.  **Seleccionar** qué se va a hacer a partir de la estrategia y los recursos disponibles.
+3.  **Implementar** (desarrollar, probar, lanzar).
+4.  **Capturar valor y aprender**, de modo que el aprendizaje alimente el siguiente ciclo (ver [Gestión del conocimiento](gestion-conocimiento.qmd)).
+
+### Métodos y herramientas frecuentes
+
+-   **Entender el problema antes de la solución.** Enamorarse del problema y no de la solución: quien se enamora de la solución se vuelve terco y no la deja evolucionar.
+-   **Doble diamante.** Divergir y converger primero sobre el problema (descubrir, definir) y luego sobre la solución (desarrollar, entregar).
+-   **Prototipado e iteración.** Construir versiones beta, ponerlas en funcionamiento, recoger retroalimentación y mejorar; no se necesita la versión final para empezar a experimentar. Todo puede ser mejorado.
+-   **Colisión de dos mundos.** Técnica creativa que combina un mundo con otro aparentemente ajeno para encontrar soluciones; el ejemplo de la sesión es unir el juego con la necesidad de agua en una escuela.
+-   **Mapas de actores y mapas sistémicos.** Ver [Mapa de actores](mapa-actores.qmd).
+-   **Vigilancia tecnológica e inteligencia competitiva.** Proceso organizado y permanente que capta información de ciencia y tecnología para convertirla en conocimiento y decidir con menor riesgo (ver los recursos en [Gestión de tecnología e innovación](gestiontecnologiainnovacion.qmd)).
+-   **Pilotos a escala pequeña con evaluación.** Se prefiere atacar problemas de escala baja, que se pueden resolver, antes que el problema de un país entero.
+-   **Compra pública para la innovación.** Instrumento para adquirir soluciones que aún no existen en el mercado (ver más abajo).
+-   **Habilitantes de la innovación.** Nuevos talentos, procesos sistemáticos, tecnología, espacios de creación, cultura de experimentación, liderazgo y gestión del riesgo (ver sección de innovación pública).
+
+## Innovación pública
+
+### Qué es y para qué sirve
+
+La **innovación pública** es la capacidad de las entidades del Estado de adaptarse y enfrentar la incertidumbre y la complejidad, generando **valor público** mediante nuevos o mejores procesos, bienes y servicios orientados al ciudadano. La OCDE la resume como implementar algo novedoso para el contexto con el fin de lograr un impacto. Algunas ideas que organizan el campo:
+
+-   **Innovar no es tener una idea nueva, es adaptarse.** El cambio tecnológico y de los modelos de negocio es cada vez más rápido ("a cada sector le llega su Uber") y el Estado necesita capacidad de adaptación, no solo de planeación.
+-   **Nace de las necesidades de las personas.** Se alinea con los Objetivos de Desarrollo Sostenible y con la política pública basada en evidencia y con diseño centrado en las personas.
+-   **La innovación pública y la social son hermanas.** Comparten el propósito de resolver necesidades con valor compartido; según el caso, una incluye a la otra o son sinónimas.
+-   **Requiere vocación.** Las personas innovan cuando quieren su trabajo, confían en que pueden hacer algo con lo que tienen al alcance y están dispuestas a "recorrer la milla extra".
+-   **Se hace con y para la ciudadanía.** La cocreación con el ciudadano es la regla; la política pública deja de diseñarse solo "en el papel".
+
+### De las 3 E a las 3 C
+
+Los valores clásicos de la gestión pública —**eficiencia, eficacia y economía** (las E)— siguen siendo medios, pero la innovación pública propone pasar a las **C**: construcción de ciudadanía, confianza y conocimiento, con la experimentación en el centro. Es un cambio de énfasis, de ejecutar bien a aprender y resolver mejor.
+
+### Un caso ilustrativo: el basurero en la calle
+
+Un problema de basuras en una esquina se suele resolver con limpieza o sanciones, sin preguntar por qué se forma ahí. En el ejemplo de la sesión se instaló una cámara, se registró la suma de comportamientos y luego se **preguntó a las personas por qué lo hacían** (por ejemplo, porque el camión no entra y la ruta de bus pasa cerca). La lección: a veces se pierde la capacidad de entender el problema; entender cómo y por qué actúa la gente permite diseñar la solución adecuada.
+
+### La innovación pública en Colombia
+
+-   **Equipo de Innovación Pública (EIP) del DNP.** Desde 2015 promueve que las políticas públicas se diseñen con las personas en el centro y de forma experimental. Trabaja tres frentes: dinamizar el ecosistema, fortalecer las capacidades de experimentación y orientar los lineamientos, y además gestiona y produce conocimiento.
+-   **Capítulo de innovación pública del Plan Nacional de Desarrollo 2018-2022.** Contiene una hoja de ruta con cinco objetivos que atienden los grandes vacíos que veían quienes innovaban: fortalecer el ecosistema, remover barreras institucionales, promover una mentalidad y una cultura afines a la innovación, fomentar mecanismos de apoyo y financiación, y gestionar el conocimiento y los aprendizajes. Cuenta con metas, como formar servidores públicos, y con varias entidades nacionales responsables. El capítulo tiene unas diez páginas y se lee con facilidad.
+-   **MIPG y la dimensión de gestión del conocimiento y la innovación (GESCO+I).** Función Pública incorporó la innovación como una de las dimensiones del Modelo Integrado de Planeación y Gestión, para que los servidores investiguen, experimenten e innoven en su trabajo cotidiano (ver [Gestión del conocimiento](gestion-conocimiento.qmd)). Es una buena puerta de entrada: las áreas de planeación deben responder por la innovación y la cocreación con el ciudadano, y a menudo no saben cómo.
+-   **Declaración de la OCDE sobre innovación en el sector público (2019).** Compromete a los gobiernos con cinco principios: adoptar y potenciar la innovación en el sector público, animar y capacitar a todos los servidores a innovar, cultivar nuevas alianzas e involucrar a distintas voces, apoyar la exploración, la iteración y la prueba, y difundir lecciones y compartir prácticas. Sirve de argumento para justificar las conversaciones difíciles que exige cambiar una entidad.
+
+### Experimentar con responsabilidad
+
+En el Estado, experimentar se confunde con improvisar o con riesgo de corrupción, y los organismos de control miran con recelo al funcionario que experimenta. La respuesta es **metodológica**: experimentar de forma estructurada, con una hipótesis de cambio plausible y basada en evidencia, con prototipos y con diálogo previo con los entes de control. Un ciclo presupuestal anual puede perder dos años para cambiar una sola cosa, y por eso se necesitan prototipos que se ajusten antes de contar con la versión final. Documentar los errores y compartirlos hace parte del método y alimenta la memoria institucional.
+
+### Habilitantes de la innovación pública
+
+| Habilitante | Qué implica |
+|----------------------------------|--------------------------------------|
+| **Nuevos talentos** | Que lleguen perfiles distintos a abogados y economistas: diseñadores de servicios, antropólogos, científicos de datos, diseñadores industriales. Si no llegan talentos "raros", serán los mismos con las mismas |
+| **Procesos sistemáticos** | Procesos de innovación para que sea sistemática y no anecdótica; influir en las áreas de planeación |
+| **Tecnología** | Fomentar la transformación digital y la cultura de datos |
+| **Espacios de creación** | No siempre un laboratorio; puede ser un semillero, un grupo de intraemprendimiento, un programa o una convocatoria abierta |
+| **Cultura de experimentación** | Tolerancia al error con rigor; diálogo con los entes de control |
+| **Liderazgo** | Cultura pública jerárquica que mata la creatividad; liderazgo adaptativo, premiar el cambio e irradiar al resto |
+| **Gestión del riesgo en innovación** | Riesgos propios de experimentar con recursos públicos, gestionados con prototipos y evidencia |
+| **Escala adecuada de los retos** | Problemas de escala baja que se puedan resolver, no el problema de un país entero |
+| **Caja de herramientas** | Metodologías disponibles para que cualquier equipo pueda innovar |
+| **Compra pública para la innovación** | Mecanismo contractual para comprar lo que el mercado todavía no ofrece |
+| **Intraemprendimiento** | Grupos con "gasolina" a quienes no se les dice que no y que empiezan por lo pequeño |
+| **Amor por el servicio público** | Revitalizar la vocación: "querer su trabajo" |
+
+### Laboratorios y otras formas de organizar la innovación
+
+No todas las formas de innovación pública tienen que ser un laboratorio, aunque los laboratorios son un instrumento importante. Según el propósito, una entidad puede optar por un proceso de innovación, un presupuesto específico, un programa, un grupo de intraemprendimiento, un semillero, un grupo o centro de innovación, una convocatoria de innovación abierta o un laboratorio. Un laboratorio puede ser gestor del hábitat de innovación, articulador del ecosistema, incubadora de soluciones, dinamizador de la cocreación y de los experimentos de comportamiento, o espacio de innovación abierta. Requiere plata, personas y voluntad política.
+
+Los ejemplos que mencionó la sesión para aprender de otros equipos fueron el Laboratorio de Innovación de Bogotá, el Centro de Innovación Pública Digital de MinTIC, el Laboratorio de Gobierno de Chile, la 27e Région, Ideas42, Apolitical y State of Change, además del Equipo de Innovación Pública del DNP.
+
+### Barreras para innovar en el sector público
+
+El DNP encuestó a servidores y contratistas nacionales y territoriales, y los obstáculos que aparecieron se agrupan así:
+
+-   **Normativas y legales.** País muy legalista, con miedo a innovar sin saber si "el terreno está abonado".
+-   **Procedimentales.** Lo nuevo genera más pasos y validaciones, de modo que resulta más cómodo repetir el método tradicional.
+-   **Mentales.** Miedos que a veces son mitos y que hay que tratar.
+-   **Presupuestales.** "No tengo la plata" o "no es la prioridad de la entidad".
+-   **Contractuales.** Se piensa que el único camino es la contratación ordinaria y que se debe contratar al más barato, cuando existen mecanismos más flexibles para contratar al mejor.
+-   **De liderazgo.** Quiero innovar, pero mi jefe no lo cree.
+
+Al ser el sector público el que llega de último en la "carrera" de la innovación, el reto es doble: flexibilizar las barreras reales y entrenar las capacidades.
+
+### Cómo empezar desde una entidad
+
+1.  **Armar un grupo** de personas interesadas en un problema; uno solo no logra mucho.
+2.  **Escoger un problema relevante y entenderlo bien**, con soluciones que generen valor reconocible para los jefes.
+3.  **Influir en las áreas de planeación** para que se cree un proceso de innovación y de gestión del conocimiento.
+4.  **Desarrollar tres capacidades:** intuición (leer cuáles son los problemas relevantes), empatía (escuchar) y acción (ir del proyecto al trayecto, de manera colectiva). Esto incluye romper la desconfianza mutua entre servidores y ciudadanía.
+5.  **Tener paciencia y preparar conversaciones difíciles.** Las instituciones cambian poco a poco; se trata de sembrar la semilla del cambio. No hay fórmula para el éxito.
+6.  **Trabajar en los habilitantes** y no solo en los proyectos; cambiar la manera de pensar y actuar de los servidores, porque los cambios sociales requieren cambios comportamentales.
+
+### Facetas de la innovación pública (OCDE-OPSI)
+
+El Observatorio de Innovación del Sector Público de la OCDE (OPSI) propone un modelo para gestionar la innovación como un **portafolio** de cuatro facetas:
+
+| Faceta | Propósito |
+|------------------------------------|------------------------------------|
+| **Orientada a misiones** | Alcanzar objetivos o metas ambiciosas y concretas |
+| **Orientada a la mejora** | Mejorar procesos y servicios existentes, fortalecer el cumplimiento y la eficiencia |
+| **Adaptativa** | Responder a cambios en el entorno probando y aprendiendo |
+| **Anticipatoria** | Explorar futuros posibles y prepararse para lo que aún no ocurre |
+
+## Compra pública para la innovación
+
+La **compra pública para la innovación (CPI)** es la herramienta que conecta el sistema de compra pública con el sistema de ciencia, tecnología e innovación: el Estado usa su demanda de bienes y servicios que el mercado todavía no ofrece para fomentar la innovación empresarial y mejorar los servicios al ciudadano. Colombia Compra Eficiente la formuló en su *Guía de Compra Pública para la Innovación* (G-GCPI-01), de la que se resumen los puntos principales.
+
+### Qué busca
+
+-   Mejorar los servicios públicos incorporando bienes o servicios innovadores.
+-   Fomentar la innovación empresarial, principalmente de las pymes, con un cliente garantizado.
+-   Impulsar la internacionalización y comercialización de la innovación usando al sector público como cliente de lanzamiento. El Estado y el proveedor comparten riesgos y beneficios.
+
+### Dos modalidades
+
+-   **Compra pública comercial (incluye la compra pública de tecnología innovadora, CPTI).** Se adquiere un bien o servicio que requiere adaptación tecnológica y que llegará al mercado a corto o mediano plazo.
+-   **Compra pública precomercial (CPP).** Se compran servicios de I+D (explorar alternativas, diseñar, prototipar y probar en campo). El grado de innovación es mayor; no incluye producción comercial en cantidad.
+
+### Las tres etapas del proceso
+
+1.  **Planeación.** Definir el equipo (técnico generador de la necesidad, comprador y patrocinador, con innovador y especialista como perfiles opcionales), identificar y priorizar retos, registrar las **necesidades en términos funcionales** (la finalidad perseguida, sin prescribir la solución técnica), verificar el componente innovador mediante vigilancia tecnológica, consultar al mercado con una convocatoria de ideas, y realizar el diálogo técnico con transparencia y confidencialidad. Las ideas recibidas no reciben puntaje ni trato preferencial: son insumo del pliego.
+2.  **Selección y contratación.** Elaborar el pliego con la necesidad, los requisitos y los criterios técnicos y económicos, evaluar las ofertas y firmar el contrato. Se puede negociar la titularidad de la propiedad intelectual (Ley 1753 de 2015, art. 10) para que el proveedor venda la solución a otros clientes.
+3.  **Ejecución.** Desarrollar la solución, hacer seguimiento de las obligaciones y evaluar al proveedor, y cumplir las obligaciones posteriores a la liquidación.
+
+### Casos de éxito citados en la guía
+
+| Caso | Reto | Resultado |
+|------------------------|------------------------|------------------------|
+| **Servicio Gallego de Salud, España** | 23 retos de innovación sanitaria (trazabilidad de pacientes, hospital autosostenible, habitación inteligente, entre otros); más de 90 M€ con fondos FEDER | Cocreación con el tejido empresarial y proyección internacional de los resultados |
+| **Diques de Holanda** | Inspección visual de diques que dependía de la capacidad humana | Un satélite con imágenes de radar y sistema de advertencia, adquirido mediante el instrumento SBIR |
+| **MERCAOLIVAR, España** | Tecnificar la recolección del olivar | Prototipos desarrollados en dos fases (preprototipado y prototipado): demanda catalítica |
+| **Bélgica, transporte público** | Emisiones de hollín de los buses | Reducción del 85 % con filtros adquiridos mediante CPI |
+
+## Innovación en la gestión del riesgo de desastres
+
+La gestión del riesgo es un campo donde la innovación no se limita a la tecnología: incluye nuevos enfoques, como ocurre con la innovación social. Izumi et al. (2019) revisan las innovaciones en reducción del riesgo de desastres y muestran que no se restringen a productos tecnológicos. Algunas conexiones con lo anterior:
+
+-   **Entender el problema con las comunidades.** Los sistemas de alerta temprana, la información de riesgo y los planes de gestión funcionan cuando se diseñan con los usuarios (diseño centrado en las personas y cocreación).
+-   **Prototipar y probar en el territorio.** Los ejercicios piloto y los simulacros son una forma de experimentación que permite iterar antes de escalar.
+-   **Compra pública para la innovación.** Aplica a necesidades de monitoreo y de infraestructura (por ejemplo, el caso de los diques) y a servicios de información para el conocimiento del riesgo.
+-   **Plataformas de innovación.** La Plataforma Global para la Reducción del Riesgo de Desastres (Bali, 2022) incluyó una plataforma de innovación, escenarios tipo "Ignite Stage" y laboratorios de aprendizaje para poner a prueba enfoques y herramientas.
+-   **Pregunta abierta.** ¿Existe relación entre las capacidades de innovación de un departamento (IDIC) y su índice de riesgo de desastres? Es una pregunta planteada en el artículo propio que alimenta esta página y que queda por explorar.
+
+Para el contexto científico de esta área, ver [Ciencia y tecnología en la GRD](../grd/cienciaytecnologia/cienciaytecnologia.qmd) y [Gestión de proyectos de CTeI](gestionproyectosciencia.qmd).
+
+## Medir la innovación
+
+Medir permite ver las fortalezas, las asimetrías y las oportunidades de mejora, y tiene sentido porque la innovación se asocia con el desarrollo económico y la competitividad.
+
+-   **Índice Global de Innovación (OMPI).** En 2021 Colombia ocupó el puesto 67 entre 132 países y el sexto de América Latina. Son cifras de esa edición; conviene consultar la más reciente.
+-   **Índice Departamental de Innovación para Colombia (IDIC).** Replica la metodología global con 77 indicadores para los departamentos y se compone de dos subíndices: insumos (instituciones, capital humano e investigación, infraestructura, sofisticación de mercados y de negocios) y resultados (producción de conocimiento y tecnología, y producción creativa). En 2021 los mejor clasificados fueron Bogotá-Cundinamarca, Antioquia y Valle del Cauca. Su recomendación es articular las agendas de CTeI para ir más allá de los insumos y el capital humano.
+-   La relación entre innovación y productividad, y entre innovación y competitividad, es positiva tanto a escala global como entre los departamentos de Colombia.
+
+## Videos recomendados
+
+### Sesiones del curso de innovación pública (ESAP)
+
+::: {layout-ncol="2"}
+{{< video "https://www.youtube.com/embed/tsMmAg4edvY?start=3363" >}} Introducción a la innovación pública (desde el minuto 56: innovación basada en problemas, cocreación, intraemprendimiento, experimentación, laboratorios y cómo empezar)
+
+{{< video "https://youtu.be/rwnzEe_eN7c" >}} Cultura de la innovación (el equipo de innovación pública del DNP, la hoja de ruta y las barreras)
+
+{{< video "https://youtu.be/e2TN3Bi6l0k" >}} Metodologías de innovación (tercera sesión del mismo curso)
+:::
+
+### Charlas y conferencias de alta calidad técnica
+
+::: {layout-ncol="2"}
+{{< video "https://youtu.be/3r1IPsldbBg" >}} Mariana Mazzucato: el Estado como inversionista, asumidor de riesgos e innovador (TED, 14 min)
+
+{{< video "https://youtu.be/t2S-S8cO5_k" >}} Modelo de facetas de innovación del OPSI de la OCDE (3 min)
+
+{{< video "https://youtu.be/YHX2zcKU96A" >}} Mazzucato: dirigir el crecimiento económico con un enfoque orientado por misiones (The New School, 55 min)
+
+{{< video "https://youtu.be/KugUb0JyCtk" >}} Marco para la gobernanza de la innovación anticipatoria (OPSI, seminario web, 1 h 28 min)
+
+{{< video "https://youtu.be/UAinLaT42xY" >}} Tim Brown (IDEO) sobre diseño y *design thinking* (TED)
+
+{{< video "https://youtu.be/jTQgvsI9Xfc" >}} Steve Blank: desarrollo de clientes (Stanford GSB, 1 h 11 min)
+
+{{< video "https://youtu.be/rHdS_4GsKmg" >}} Clayton Christensen: ¿de dónde viene el crecimiento? (Talks at Google, 1 h 21 min)
+
+{{< video "https://youtu.be/02tCs3oKovc" >}} Henry Chesbrough sobre innovación abierta (Foro Económico Mundial, 13 min)
+
+{{< video "https://youtu.be/UlF8GDeW80c" >}} Las 4P del espacio de la innovación (modelo de Bessant y Tidd, 11 min)
+:::
+
+Estas charlas están en inglés en su mayoría, con subtítulos automáticos disponibles en la plataforma.
+
+## Lecturas
+
+-   OCDE y Eurostat (2018). *Manual de Oslo 2018: guía para la recogida, notificación y utilización de datos sobre innovación*. [Enlace](https://www.oecd.org/en/publications/oslo-manual-2018_9789264304604-en.html).
+-   OCDE (2015). *Manual de Frascati 2015*. [Enlace](https://www.oecd.org/publications/manual-de-frascati-2015-9789264310681-es.htm).
+-   OCDE (2019). *Declaración sobre la innovación en el sector público* (OECD/LEGAL/0450). [Enlace](https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0450).
+-   OCDE-OPSI. *Tackling Policy Challenges Through Public Sector Innovation*. [Enlace](https://www.oecd.org/en/publications/tackling-policy-challenges-through-public-sector-innovation_052b06b7-en.html).
+-   Nesta (2014). *Innovation in the public sector: how can public organisations better create, improve and adapt?* y *Ready or not: taking innovation in the public sector seriously*. [Enlace](https://www.nesta.org.uk/report/ready-or-not-taking-innovation-in-the-public-sector-seriously/).
+-   Tidd, J. y Bessant, J. *Managing Innovation: Integrating Technological, Market and Organizational Change*. Wiley.
+-   Mazzucato, M. (2013). *The Entrepreneurial State*. Anthem Press.
+-   Christensen, C. (1997). *The Innovator's Dilemma*. Harvard Business School Press.
+-   Chesbrough, H. (2003). *Open Innovation*. Harvard Business School Press.
+-   Rogers, E. (1962). *Diffusion of Innovations*. Free Press.
+-   Thaler, R. y Sunstein, C. (2008). *Nudge*. Yale University Press.
+-   Izumi, T., Shaw, R., Djalante, R., Ishiwatari, M. y Komino, T. (2019). Disaster risk reduction and innovations. *Progress in Disaster Science, 2*, 100033. [DOI](https://doi.org/10.1016/j.pdisas.2019.100033).
+-   Colombia Compra Eficiente. *Guía de Compra Pública para la Innovación* (G-GCPI-01).
+-   Departamento Administrativo de la Función Pública (2020). *Guía para la implementación de la gestión del conocimiento y la innovación en el marco del MIPG*.
+-   Departamento Nacional de Planeación. *Equipo de Innovación Pública*. [Enlace](https://www.dnp.gov.co/programas/desarrollo-empresarial/Paginas/Innovacion-Publica.aspx).
+-   Departamento Nacional de Planeación. *Índice Departamental de Innovación para Colombia (IDIC)*. [Enlace](https://www.innovamos.gov.co/).
+
+Para más enlaces, bases de datos, cursos y videos de innovación en Colombia, ver la página [Gestión de tecnología e innovación](gestiontecnologiainnovacion.qmd).
+
+## Fuentes de esta página
+
+Esta página sintetiza apuntes personales del curso de innovación (13 de junio de 2023), del diplomado de innovación pública de la ESAP y el DNP (primera y segunda sesión sincrónica), de la *Guía de Compra Pública para la Innovación* de Colombia Compra Eficiente y de un artículo propio sobre creatividad e innovación en la gestión pública del riesgo de desastres. Los videos de las charlas y los marcos conceptuales de la sección de conceptos y enfoques se tomaron de las fuentes citadas arriba.
