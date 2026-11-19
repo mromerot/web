@@ -1,0 +1,21 @@
+---
+title: "Financiación"
+format: html
+editor: visual
+---
+
+## Financiación de proyectos
+
+Esta subsección reúne guías prácticas para identificar fuentes de financiación y presentar proyectos: quién financia, qué tipo de proyectos, cuánto, a través de qué entidades y con qué requisitos.
+
+:::::: mrw-cards-grid
+::: mrw-card
+::: mrw-card-header
+[Fondo Verde para el Clima](fondo-verde-clima.qmd)
+:::
+
+::: mrw-card-body
+Cómo presentar un proyecto al Green Climate Fund desde Colombia: montos, quién puede acceder, entidades acreditadas, Autoridad Nacional Designada (DNP), carta de no objeción y ruta de aprobación.
+:::
+:::
+::::::

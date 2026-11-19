@@ -172,6 +172,11 @@ website:
             href: gestiondeproyectos/riesgos-proyectos.qmd
           - text: "Sostenibilidad de proyectos de CTeI"
             href: gestiondeproyectos/sostenibilidad-proyectos.qmd
+          - section: "Financiación"
+            href: gestiondeproyectos/financiacion/index.qmd
+            contents:
+              - text: "Fondo Verde para el Clima"
+                href: gestiondeproyectos/financiacion/fondo-verde-clima.qmd
       # aqui viene la seccion de ciencia y tecnologia
       - section: "Ciencia y tecnología"
         href: cyt/index.qmd
