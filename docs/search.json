@@ -10064,5 +10064,163 @@
       "Ciencia de datos",
       "Google Colab"
     ]
+  },
+  {
+    "objectID": "datascience/arco-slides.html#la-idea-en-una-frase",
+    "href": "datascience/arco-slides.html#la-idea-en-una-frase",
+    "title": "ARCO",
+    "section": "La idea en una frase",
+    "text": "La idea en una frase\n\nQue el dato llegue preparado para el análisis\ny organizado para leer solo la parte que se necesita,\ndirectamente desde la nube."
+  },
+  {
+    "objectID": "datascience/arco-slides.html#el-problema-el-modelo-de-descarga",
+    "href": "datascience/arco-slides.html#el-problema-el-modelo-de-descarga",
+    "title": "ARCO",
+    "section": "El problema: el modelo de descarga",
+    "text": "El problema: el modelo de descarga\n\n\n\nBuscar el conjunto de datos\nLocalizar los archivos\nDescargarlos todos\nLimpiarlos y organizarlos\nPor fin, analizar\n\n\n\n\nLento e ineficiente\nExige almacenamiento\nNo escala\nDifícil de compartir\nMal para el aprendizaje automático\n\n\n\n\n60–80 % del tiempo de un científico de datos se va en recolectar y limpiar datos."
+  },
+  {
+    "objectID": "datascience/arco-slides.html#los-datos-crecen-exponencialmente",
+    "href": "datascience/arco-slides.html#los-datos-crecen-exponencialmente",
+    "title": "ARCO",
+    "section": "Los datos crecen exponencialmente",
+    "text": "Los datos crecen exponencialmente\n\nEl archivo de NCAR (desde 1965) crece en escala exponencial.\nESGF aloja del orden de 20 PB de simulaciones CMIP6.\nERA5 en Google Cloud: unos 2 PB en un solo almacén Zarr.\n\n\n\n\n\n\n\nCaso NCAR\n\n\nComparar ERA5 con perfiladores de viento: una semana → 20 segundos usando la copia ARCO de ERA5 y Zarr."
+  },
+  {
+    "objectID": "datascience/arco-slides.html#listo-para-el-análisis-analysis-ready",
+    "href": "datascience/arco-slides.html#listo-para-el-análisis-analysis-ready",
+    "title": "ARCO",
+    "section": "Listo para el análisis (analysis-ready)",
+    "text": "Listo para el análisis (analysis-ready)\n\nDatos preprocesados para cumplir los estándares de calidad que exige un análisis determinado.\n— Stern et al. (2022)\n\n\nEs un concepto relativo: depende del usuario y del caso de uso.\nPasos que se quieren encontrar hechos:\n\nformatos comunes, nombres y unidades consistentes\nvalores faltantes bien marcados\nreinterpolación, alineación de coordenadas\nmiles de archivos unidos en un solo objeto"
+  },
+  {
+    "objectID": "datascience/arco-slides.html#optimizado-para-la-nube-cloud-optimized",
+    "href": "datascience/arco-slides.html#optimizado-para-la-nube-cloud-optimized",
+    "title": "ARCO",
+    "section": "Optimizado para la nube (cloud-optimized)",
+    "text": "Optimizado para la nube (cloud-optimized)\nFormatos que permiten acceder directamente a subconjuntos sin abrir y recorrer un objeto enorme.\n\n\nMonolítico (NetCDF, HDF)\n┌────────────────────┐\n│ encabezado         │\n├────────────────────┤\n│ ░░░░░░░░░░░░░░░░░░ │\n│ ░░░░░░░████░░░░░░░ │\n│ ░░░░░░░░░░░░░░░░░░ │\n└────────────────────┘\nrecorrer o descargar todo\n\nFragmentado (Zarr)\ndatos.zarr/\n├── zarr.json   ← 1 lectura\n└── sst/c/\n    ├── 0/0/0\n    ├── 0/0/1   ← solo este\n    └── ...\npedir en paralelo"
+  },
+  {
+    "objectID": "datascience/arco-slides.html#el-patrón-común",
+    "href": "datascience/arco-slides.html#el-patrón-común",
+    "title": "ARCO",
+    "section": "El patrón común",
+    "text": "El patrón común\n\nLos metadatos dan la dirección de cada bloque.\nEstán en un formato y un lugar consistentes.\nSe cargan en una sola lectura.\nSe leen subconjuntos por chunks o teselas.\n\n\nAdemás: acceso por HTTP(S), lectura en paralelo, carga perezosa e integración con xarray y Dask."
+  },
+  {
+    "objectID": "datascience/arco-slides.html#arco-las-dos-a-la-vez",
+    "href": "datascience/arco-slides.html#arco-las-dos-a-la-vez",
+    "title": "ARCO",
+    "section": "ARCO = las dos a la vez",
+    "text": "ARCO = las dos a la vez\n\nDatos que han recibido el preprocesamiento necesario para una tarea analítica y que se almacenan en formatos que permiten un acceso directo y eficiente a subconjuntos.\n\n\n\nUn dato listo para el análisis no es necesariamente optimizado para la nube.\nYa no se mueven datos voluminosos: se acerca el cómputo a los datos.\nSe piensa en conjuntos de datos, no en archivos."
+  },
+  {
+    "objectID": "datascience/arco-slides.html#tres-paradigmas",
+    "href": "datascience/arco-slides.html#tres-paradigmas",
+    "title": "ARCO",
+    "section": "Tres paradigmas",
+    "text": "Tres paradigmas\n\n\n\n\n\n\n\n\n\n\n1. Imágenes pregeneradas\n2. Formatos nuevos\n3. Referencias virtuales\n\n\n\n\nQué\nPirámides de teselas RGB\nReescribir en Zarr o COG\nÍndice que apunta a los bytes originales\n\n\nCopia\nImágenes, no datos\nSí\nNo\n\n\nA favor\nMapas muy rápidos\nFragmentación a la medida\nNo reprocesa petabytes\n\n\nEn contra\nInútil para la ciencia\nDuplica almacenamiento\nHereda la fragmentación original"
+  },
+  {
+    "objectID": "datascience/arco-slides.html#paradigma-2-arco-era5-en-zarr",
+    "href": "datascience/arco-slides.html#paradigma-2-arco-era5-en-zarr",
+    "title": "ARCO",
+    "section": "Paradigma 2: ARCO-ERA5 en Zarr",
+    "text": "Paradigma 2: ARCO-ERA5 en Zarr\nimport xarray as xr\n\nds = xr.open_zarr(\n    \"gs://gcp-public-data-arco-era5/ar/full_37-1h-0p25deg-chunk-1.zarr-v3\",\n    chunks=None,\n    storage_options=dict(token=\"anon\"),\n)\nt2m = ds[\"2m_temperature\"].sel(\n    time=\"2024-01\", latitude=slice(13, -5), longitude=slice(281, 293)\n)\nmedia = (t2m.mean(\"time\") - 273.15).compute()   # solo baja esos chunks\nAbrir ~2 PB toma segundos: solo se leen los metadatos."
+  },
+  {
+    "objectID": "datascience/arco-slides.html#paradigma-3-conjuntos-virtuales",
+    "href": "datascience/arco-slides.html#paradigma-3-conjuntos-virtuales",
+    "title": "ARCO",
+    "section": "Paradigma 3: conjuntos virtuales",
+    "text": "Paradigma 3: conjuntos virtuales\n\n\nEl índice del libro (PO.DAAC)\nEn lugar de leer el libro completo, se va directo a las páginas que interesan.\nEl índice pesa de MB a ~100 MB y basta su enlace.\n\n\nKerchunk: referencias JSON o Parquet\nVirtualiZarr: ensambla archivos en un Zarr virtual\nIcechunk: transacciones ACID, versiones, ramas, etiquetas"
+  },
+  {
+    "objectID": "datascience/arco-slides.html#leer-un-repositorio-icechunk",
+    "href": "datascience/arco-slides.html#leer-un-repositorio-icechunk",
+    "title": "ARCO",
+    "section": "Leer un repositorio Icechunk",
+    "text": "Leer un repositorio Icechunk\nimport icechunk, xarray as xr\n\nURL = \"https://data.source.coop/ocean-icechunks/noaa-oisst/oisst.icechunk\"\nrepo = icechunk.Repository.open(icechunk.http_storage(URL))\ncred = icechunk.containers_credentials(\n    {p: icechunk.s3_anonymous_credentials()\n     for p in repo.config.virtual_chunk_containers})\nstore = repo.reopen(authorize_virtual_chunk_access=cred) \\\n            .readonly_session(\"main\").store\noisst = xr.open_zarr(store, group=\"daily\", consolidated=False, chunks={})\nNOAA OISST v2.1 diaria desde 1981, sin descargar archivos."
+  },
+  {
+    "objectID": "datascience/arco-slides.html#mapas-frente-a-series-de-tiempo",
+    "href": "datascience/arco-slides.html#mapas-frente-a-series-de-tiempo",
+    "title": "ARCO",
+    "section": "Mapas frente a series de tiempo",
+    "text": "Mapas frente a series de tiempo\n\n\ntime: 1 (un día global por chunk)\n\nMapa de un día: inmediato\nSerie de 40 años de un punto: más de 14 000 chunks\n\n\nMuchos años de una región por chunk\n\nSerie de tiempo: inmediata\nMapa global de un día: todos los chunks\n\n\n\nAlgunos proveedores (Copernicus Marine) publican las dos fragmentaciones."
+  },
+  {
+    "objectID": "datascience/arco-slides.html#trampas-aprendidas",
+    "href": "datascience/arco-slides.html#trampas-aprendidas",
+    "title": "ARCO",
+    "section": "Trampas aprendidas",
+    "text": "Trampas aprendidas\n\nEl índice virtual hereda la fragmentación original (MUR: un archivo por día).\nNetCDF3 no tiene compresión ni fragmentación interna: no vale la pena virtualizarlo.\nChunks diminutos: ERA5 con Kerchunk necesitaba ~6 GB de RAM solo para el mapa de referencias.\nLección: diseñar pensando en la nube desde el origen."
+  },
+  {
+    "objectID": "datascience/arco-slides.html#recetas-colaborativas-al-estilo-conda-forge",
+    "href": "datascience/arco-slides.html#recetas-colaborativas-al-estilo-conda-forge",
+    "title": "ARCO",
+    "section": "Recetas colaborativas, al estilo conda-forge",
+    "text": "Recetas colaborativas, al estilo conda-forge\n\nReceta (recipe.py y meta.yaml): extraer → optimizar → almacenar\nFilePattern: concatenar (tiempo) o fusionar (variables)\nFeedstock: un repositorio por receta, con trazabilidad de cada byte\nBakery: clúster en la nube donde se ejecutan las recetas\nCatálogo STAC y versiones MAYOR.MENOR\n\n\nAntes: llevar parte de ERA5 a Google Earth Engine tomó 9 meses."
+  },
+  {
+    "objectID": "datascience/arco-slides.html#la-receta-xarrayzarrrecipe",
+    "href": "datascience/arco-slides.html#la-receta-xarrayzarrrecipe",
+    "title": "ARCO",
+    "section": "La receta XarrayZarrRecipe",
+    "text": "La receta XarrayZarrRecipe\n\n  1. Cachécopiar archivos de origen\n  ➜\n  2. prepare_targetcrear un Zarr vacío\n  ➜\n  3. store_chunksllenar chunks en paralelo\n  ➜\n  4. Consolidarmetadatos en un JSON\n\n\nNOAA OISST: 14 372 archivos → un solo Zarr\nAltimetría Copernicus: ~70 GB; media global en menos de un minuto\nEl cuello de botella fue descargar desde el origen, no el cómputo"
+  },
+  {
+    "objectID": "datascience/arco-slides.html#ncar-noaa-nasa",
+    "href": "datascience/arco-slides.html#ncar-noaa-nasa",
+    "title": "ARCO",
+    "section": "NCAR · NOAA · NASA",
+    "text": "NCAR · NOAA · NASA\n\n\nNCAR (GDEX)\n¿Se puede en Zarr? Sí → convertir.\nNo → Kerchunk.\nMás catálogos intake.\n\nNOAA\nNODD en AWS, Google y Azure.\nNational Water Model retrospectivo en Zarr (1979–2023).\nCMIP6 en la nube con Pangeo.\n\nNASA\nVEDA: almacén ARCO + STAC.\nPO.DAAC: 12 conjuntos virtuales; ≥10× más rápido."
+  },
+  {
+    "objectID": "datascience/arco-slides.html#caso-golfo-de-tehuantepec-po.daac",
+    "href": "datascience/arco-slides.html#caso-golfo-de-tehuantepec-po.daac",
+    "title": "ARCO",
+    "section": "Caso: golfo de Tehuantepec (PO.DAAC)",
+    "text": "Caso: golfo de Tehuantepec (PO.DAAC)\n\nVientos invernales cruzan los pasos de montaña de México.\nSurgencia en mar abierto: el mar se enfría hasta 10 °C.\nCuatro conjuntos virtuales: SST, viento, velocidad vertical, salinidad.\nDécadas de eventos comparadas sin descargar archivos."
+  },
+  {
+    "objectID": "datascience/arco-slides.html#arco-no-es-magia",
+    "href": "datascience/arco-slides.html#arco-no-es-magia",
+    "title": "ARCO",
+    "section": "ARCO no es magia",
+    "text": "ARCO no es magia\n\nAbrir rápido ≠ calcular rápido: un portátil es un colibrí; para todo el néctar hace falta una bandada.\nFuera de la nube hay límites de peticiones.\nLos conjuntos virtuales no son datos nuevos: citar el original.\nPueden no estar al día y arrastrar errores (p. ej., _FillValue).\nCostos de almacenamiento y salida de datos (egress).\nSostenibilidad: personas y financiación, no solo tecnología."
+  },
+  {
+    "objectID": "datascience/arco-slides.html#por-qué-importa-para-el-riesgo-en-colombia",
+    "href": "datascience/arco-slides.html#por-qué-importa-para-el-riesgo-en-colombia",
+    "title": "ARCO",
+    "section": "¿Por qué importa para el riesgo en Colombia?",
+    "text": "¿Por qué importa para el riesgo en Colombia?\n\nÍndices de calor, sequía o estrés térmico marino por municipio, sobre 40 años de datos.\nCombinar ERA5, OISST, CMIP6 y modelos hidrológicos sin descargar.\nCuadernos reproducibles en Colab: el enlace al dato es el mismo para todos.\nVersiones exactas de los datos (Icechunk) para auditar resultados.\n\n\nReto: que los datos nacionales también se publiquen en ARCO."
+  },
+  {
+    "objectID": "datascience/arco-slides.html#resumen",
+    "href": "datascience/arco-slides.html#resumen",
+    "title": "ARCO",
+    "section": "Resumen",
+    "text": "Resumen\n\nARCO = listo para el análisis + optimizado para la nube.\nTres caminos: imágenes, formatos nuevos, referencias virtuales.\nLa fragmentación decide el rendimiento.\nPangeo Forge: recetas abiertas, versionadas y trazables.\nNCAR, NOAA, NASA, Copernicus y Google ya publican datos ARCO."
+  },
+  {
+    "objectID": "datascience/arco-slides.html#fuentes-principales",
+    "href": "datascience/arco-slides.html#fuentes-principales",
+    "title": "ARCO",
+    "section": "Fuentes principales",
+    "text": "Fuentes principales\n\nStern et al. (2022). Pangeo Forge. Frontiers in Climate. doi:10.3389/fclim.2021.782909\nAbernathey et al. (2021). Cloud-native repositories for big scientific data. CiSE. doi:10.1109/MCSE.2021.3059437\nHampapura (2026). ARCO data at GDEX. NCAR. Video\nPanel NOAA (2022). ARCO for open science. Video\nHenze y Armstrong (2025). Virtualized data at PO.DAAC. NASA. Video\n\nArtículo completo: ARCO"
+  },
+  {
+    "objectID": "datascience/arco.html#diapositivas",
+    "href": "datascience/arco.html#diapositivas",
+    "title": "ARCO: datos listos para el análisis y optimizados para la nube",
+    "section": "Diapositivas",
+    "text": "Diapositivas\nEsta presentación resume el contenido del artículo. Se navega con las flechas del teclado; la tecla F activa la pantalla completa y Esc muestra la vista general de las diapositivas.\n\nVer las diapositivas en pantalla completa",
+    "crumbs": [
+      "Ciencia de datos",
+      "ARCO"
+    ]
   }
 ]

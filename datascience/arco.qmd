@@ -415,3 +415,25 @@ El reto pendiente es el inverso: que los datos nacionales (estaciones del IDEAM,
 
 - [Bases de datos](bases-de-datos.qmd): formatos nativos de la nube, cubos de datos y Zarr.
 - [Herramientas](herramientas.qmd): datos virtualizados y formato ARCO (videos y lecturas).
+
+## Diapositivas
+
+Esta presentación resume el contenido del artículo. Se navega con las flechas del teclado; la tecla `F` activa la pantalla completa y `Esc` muestra la vista general de las diapositivas.
+
+```{=html}
+<iframe class="slide-deck" src="arco-slides.html" title="Diapositivas: ARCO" loading="lazy" allowfullscreen></iframe>
+```
+
+[Ver las diapositivas en pantalla completa](arco-slides.qmd){target="_blank"}
+
+```{=html}
+<style>
+.slide-deck {
+  border: 3px solid #dee2e6;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: 300px;
+}
+</style>
+```
