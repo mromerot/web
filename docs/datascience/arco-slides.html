@@ -259,6 +259,24 @@ directamente desde la nube.</p>
 <p><strong>60–80 %</strong> del tiempo de un científico de datos se va en recolectar y limpiar datos.</p>
 </div>
 </section>
+<section id="en-qué-se-va-el-tiempo" class="slide level2">
+<h2>¿En qué se va el tiempo?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/arco/crowdflower-2016.jpg" class="quarto-figure quarto-figure-center" height="440"></p>
+</figure>
+</div>
+<p><span style="font-size:0.45em;color:#666;">Fuente: CrowdFlower (2016), <em>Data Science Report</em>; vía Ladino-Rincón et al., Project Pythia.</span></p>
+</section>
+<section id="del-modelo-de-descarga-a-la-nube" class="slide level2">
+<h2>Del modelo de descarga a la nube</h2>
+
+<img data-src="images/arco/descarga-vs-nube.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><ul>
+<li><strong>Antes:</strong> descargar archivos a un disco local y analizarlos allí.</li>
+<li><strong>Ahora:</strong> el cómputo vive junto al almacenamiento de objetos, en la misma región de la nube.</li>
+</ul>
+<p><span style="font-size:0.45em;color:#666;">Fuente: Pangeo/Ryan Abernathey; vía Ladino-Rincón et al., Project Pythia.</span></p>
+</section>
 <section id="los-datos-crecen-exponencialmente" class="slide level2">
 <h2>Los datos crecen exponencialmente</h2>
 <ul>
@@ -302,30 +320,22 @@ directamente desde la nube.</p>
 </ul></li>
 </ul>
 </section>
-<section id="optimizado-para-la-nube-cloud-optimized" class="slide level2">
-<h2>Optimizado para la nube (<em>cloud-optimized</em>)</h2>
-<p>Formatos que permiten <strong>acceder directamente a subconjuntos</strong> sin abrir y recorrer un objeto enorme.</p>
+<section id="optimizado-para-la-nube" class="slide level2 smaller">
+<h2>Optimizado para la nube</h2>
+<p><em>Cloud-optimized</em>: formatos que permiten <strong>acceder directamente a subconjuntos</strong> sin recorrer un objeto enorme.</p>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Monolítico (NetCDF, HDF)</strong></p>
-<pre><code>┌────────────────────┐
-│ encabezado         │
-├────────────────────┤
-│ ░░░░░░░░░░░░░░░░░░ │
-│ ░░░░░░░████░░░░░░░ │
-│ ░░░░░░░░░░░░░░░░░░ │
-└────────────────────┘
-recorrer o descargar todo</code></pre>
-</div><div class="column" style="width:50%;">
-<p><strong>Fragmentado (Zarr)</strong></p>
-<pre><code>datos.zarr/
-├── zarr.json   ← 1 lectura
-└── sst/c/
-    ├── 0/0/0
-    ├── 0/0/1   ← solo este
-    └── ...
-pedir en paralelo</code></pre>
+<div class="column" style="width:45%;">
+<p><strong>Monolítico</strong> (NetCDF, HDF): un encabezado y un bloque de 120 GB que hay que recorrer o descargar.</p>
+<p><strong>Fragmentado</strong> (Zarr): metadatos pequeños y fragmentos de 260 kB con nombre propio (<code>0.0.0</code>, <code>0.0.1</code>…).</p>
+<p>Se piden <strong>solo</strong> los fragmentos necesarios, <strong>en paralelo</strong>.</p>
+</div><div class="column" style="width:55%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/arco/monolitico-vs-fragmentado.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
 </div></div>
+<p><span style="font-size:0.45em;color:#666;">Ilustración “Monolithic vs.&nbsp;chunked” de Henning Falk, ©2022 NumFOCUS, CC BY 4.0 (doi:10.5281/zenodo.7037367).</span></p>
 </section>
 <section id="el-patrón-común" class="slide level2">
 <h2>El patrón común</h2>
@@ -351,6 +361,28 @@ pedir en paralelo</code></pre>
 <li>Se piensa en <strong>conjuntos de datos</strong>, no en archivos.</li>
 </ul>
 </div>
+</section>
+<section id="arco-y-los-principios-fair" class="slide level2 smaller">
+<h2>ARCO y los principios FAIR</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<ul>
+<li><strong>F</strong>indable: catálogos (STAC, intake)</li>
+<li><strong>A</strong>ccessible: HTTP y protocolos estándar</li>
+<li><strong>I</strong>nteroperable: Zarr, xarray, Python, R…</li>
+<li><strong>R</strong>eusable: metadatos ricos y versiones</li>
+</ul>
+<div class="fragment">
+<p><strong>Formatos ARCO por tipo de dato:</strong> Zarr (arreglos), Parquet (tablas), COG (raster), COPC (nubes de puntos).</p>
+</div>
+</div><div class="column" style="width:55%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/arco/reuso-fair.png" class="quarto-figure quarto-figure-center" height="380"></p>
+</figure>
+</div>
+</div></div>
+<p><span style="font-size:0.45em;color:#666;">Ilustración “FAIR re-use” de Henning Falk, ©2022 NumFOCUS, CC BY 4.0 (doi:10.5281/zenodo.7037367).</span></p>
 </section></section>
 <section>
 <section id="tres-caminos-hacia-arco" class="title-slide slide level1 center">
@@ -404,17 +436,17 @@ pedir en paralelo</code></pre>
 </section>
 <section id="paradigma-2-arco-era5-en-zarr" class="slide level2">
 <h2>Paradigma 2: ARCO-ERA5 en Zarr</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
-<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a>ds <span class="op">=</span> xr.open_zarr(</span>
-<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"gs://gcp-public-data-arco-era5/ar/full_37-1h-0p25deg-chunk-1.zarr-v3"</span>,</span>
-<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a>    chunks<span class="op">=</span><span class="va">None</span>,</span>
-<span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a>    storage_options<span class="op">=</span><span class="bu">dict</span>(token<span class="op">=</span><span class="st">"anon"</span>),</span>
-<span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-8"><a aria-hidden="true" tabindex="-1"></a>t2m <span class="op">=</span> ds[<span class="st">"2m_temperature"</span>].sel(</span>
-<span id="cb3-9"><a aria-hidden="true" tabindex="-1"></a>    time<span class="op">=</span><span class="st">"2024-01"</span>, latitude<span class="op">=</span><span class="bu">slice</span>(<span class="dv">13</span>, <span class="op">-</span><span class="dv">5</span>), longitude<span class="op">=</span><span class="bu">slice</span>(<span class="dv">281</span>, <span class="dv">293</span>)</span>
-<span id="cb3-10"><a aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-11"><a aria-hidden="true" tabindex="-1"></a>media <span class="op">=</span> (t2m.mean(<span class="st">"time"</span>) <span class="op">-</span> <span class="fl">273.15</span>).compute()   <span class="co"># solo baja esos chunks</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>ds <span class="op">=</span> xr.open_zarr(</span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"gs://gcp-public-data-arco-era5/ar/full_37-1h-0p25deg-chunk-1.zarr-v3"</span>,</span>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a>    chunks<span class="op">=</span><span class="va">None</span>,</span>
+<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a>    storage_options<span class="op">=</span><span class="bu">dict</span>(token<span class="op">=</span><span class="st">"anon"</span>),</span>
+<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-8"><a aria-hidden="true" tabindex="-1"></a>t2m <span class="op">=</span> ds[<span class="st">"2m_temperature"</span>].sel(</span>
+<span id="cb1-9"><a aria-hidden="true" tabindex="-1"></a>    time<span class="op">=</span><span class="st">"2024-01"</span>, latitude<span class="op">=</span><span class="bu">slice</span>(<span class="dv">13</span>, <span class="op">-</span><span class="dv">5</span>), longitude<span class="op">=</span><span class="bu">slice</span>(<span class="dv">281</span>, <span class="dv">293</span>)</span>
+<span id="cb1-10"><a aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-11"><a aria-hidden="true" tabindex="-1"></a>media <span class="op">=</span> (t2m.mean(<span class="st">"time"</span>) <span class="op">-</span> <span class="fl">273.15</span>).compute()   <span class="co"># solo baja esos chunks</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Abrir ~2 PB toma segundos: solo se leen los metadatos.</p>
 </section>
 <section id="paradigma-3-conjuntos-virtuales" class="slide level2">
@@ -434,16 +466,16 @@ pedir en paralelo</code></pre>
 </section>
 <section id="leer-un-repositorio-icechunk" class="slide level2">
 <h2>Leer un repositorio Icechunk</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> icechunk, xarray <span class="im">as</span> xr</span>
-<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>URL <span class="op">=</span> <span class="st">"https://data.source.coop/ocean-icechunks/noaa-oisst/oisst.icechunk"</span></span>
-<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a>repo <span class="op">=</span> icechunk.Repository.<span class="bu">open</span>(icechunk.http_storage(URL))</span>
-<span id="cb4-5"><a aria-hidden="true" tabindex="-1"></a>cred <span class="op">=</span> icechunk.containers_credentials(</span>
-<span id="cb4-6"><a aria-hidden="true" tabindex="-1"></a>    {p: icechunk.s3_anonymous_credentials()</span>
-<span id="cb4-7"><a aria-hidden="true" tabindex="-1"></a>     <span class="cf">for</span> p <span class="kw">in</span> repo.config.virtual_chunk_containers})</span>
-<span id="cb4-8"><a aria-hidden="true" tabindex="-1"></a>store <span class="op">=</span> repo.reopen(authorize_virtual_chunk_access<span class="op">=</span>cred) <span class="op">\</span></span>
-<span id="cb4-9"><a aria-hidden="true" tabindex="-1"></a>            .readonly_session(<span class="st">"main"</span>).store</span>
-<span id="cb4-10"><a aria-hidden="true" tabindex="-1"></a>oisst <span class="op">=</span> xr.open_zarr(store, group<span class="op">=</span><span class="st">"daily"</span>, consolidated<span class="op">=</span><span class="va">False</span>, chunks<span class="op">=</span>{})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> icechunk, xarray <span class="im">as</span> xr</span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a>URL <span class="op">=</span> <span class="st">"https://data.source.coop/ocean-icechunks/noaa-oisst/oisst.icechunk"</span></span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a>repo <span class="op">=</span> icechunk.Repository.<span class="bu">open</span>(icechunk.http_storage(URL))</span>
+<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a>cred <span class="op">=</span> icechunk.containers_credentials(</span>
+<span id="cb2-6"><a aria-hidden="true" tabindex="-1"></a>    {p: icechunk.s3_anonymous_credentials()</span>
+<span id="cb2-7"><a aria-hidden="true" tabindex="-1"></a>     <span class="cf">for</span> p <span class="kw">in</span> repo.config.virtual_chunk_containers})</span>
+<span id="cb2-8"><a aria-hidden="true" tabindex="-1"></a>store <span class="op">=</span> repo.reopen(authorize_virtual_chunk_access<span class="op">=</span>cred) <span class="op">\</span></span>
+<span id="cb2-9"><a aria-hidden="true" tabindex="-1"></a>            .readonly_session(<span class="st">"main"</span>).store</span>
+<span id="cb2-10"><a aria-hidden="true" tabindex="-1"></a>oisst <span class="op">=</span> xr.open_zarr(store, group<span class="op">=</span><span class="st">"daily"</span>, consolidated<span class="op">=</span><span class="va">False</span>, chunks<span class="op">=</span>{})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>NOAA OISST v2.1 diaria desde 1981, sin descargar archivos.</p>
 </section></section>
 <section>
@@ -547,6 +579,30 @@ pedir en paralelo</code></pre>
 <li>Cuatro conjuntos virtuales: SST, viento, velocidad vertical, salinidad.</li>
 <li>Décadas de eventos comparadas <strong>sin descargar archivos</strong>.</li>
 </ul>
+</section>
+<section id="copernicus-marine-arco-como-servicio" class="slide level2 smaller">
+<h2>Copernicus Marine: ARCO como servicio</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Dos representaciones de cada producto</strong></p>
+<ul>
+<li><strong>Geo Series</strong>: áreas grandes, periodos cortos (mapas)</li>
+<li><strong>Time Series</strong>: áreas pequeñas, periodos largos (series)</li>
+<li>El Toolbox <strong>elige automáticamente</strong> según la consulta</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong><code>get</code> frente a <code>subset</code></strong></p>
+<ul>
+<li><code>get</code>: archivos originales del productor</li>
+<li><code>subset</code>: representación ARCO armonizada
+<ul>
+<li>valores faltantes, coordenadas estándar</li>
+<li>longitudes en [−180, 180)</li>
+<li>tiempo al <strong>inicio del intervalo</strong></li>
+</ul></li>
+</ul>
+</div></div>
+<p>ARCO es <strong>una convención, no un formato</strong>: la salida puede ser NetCDF, Zarr o CSV.</p>
 </section></section>
 <section>
 <section id="límites-y-precauciones" class="title-slide slide level1 center">
@@ -586,14 +642,15 @@ pedir en paralelo</code></pre>
 <li>NCAR, NOAA, NASA, Copernicus y Google ya publican datos ARCO.</li>
 </ul>
 </section>
-<section id="fuentes-principales" class="slide level2">
+<section id="fuentes-principales" class="slide level2 smaller">
 <h2>Fuentes principales</h2>
 <ul>
-<li>Stern et al.&nbsp;(2022). Pangeo Forge. <em>Frontiers in Climate</em>. <a href="https://doi.org/10.3389/fclim.2021.782909">doi:10.3389/fclim.2021.782909</a></li>
-<li>Abernathey et al.&nbsp;(2021). Cloud-native repositories for big scientific data. <em>CiSE</em>. <a href="https://doi.org/10.1109/MCSE.2021.3059437">doi:10.1109/MCSE.2021.3059437</a></li>
-<li>Hampapura (2026). ARCO data at GDEX. NCAR. <a href="https://www.youtube.com/watch?v=sX1RU92YUfM">Video</a></li>
-<li>Panel NOAA (2022). ARCO for open science. <a href="https://youtu.be/3mDjqIFtS6U">Video</a></li>
-<li>Henze y Armstrong (2025). Virtualized data at PO.DAAC. NASA. <a href="https://youtu.be/K1FJyB0-XjY">Video</a></li>
+<li><p>Stern et al.&nbsp;(2022). Pangeo Forge. <em>Frontiers in Climate</em>. <a href="https://doi.org/10.3389/fclim.2021.782909">doi:10.3389/fclim.2021.782909</a></p></li>
+<li><p>Abernathey et al.&nbsp;(2021). Cloud-native repositories for big scientific data. <em>CiSE</em>. <a href="https://doi.org/10.1109/MCSE.2021.3059437">doi:10.1109/MCSE.2021.3059437</a></p></li>
+<li><p>Hampapura (2026). ARCO data at GDEX. NCAR. <a href="https://www.youtube.com/watch?v=sX1RU92YUfM">Video</a></p></li>
+<li><p>Panel NOAA (2022). ARCO for open science. <a href="https://youtu.be/3mDjqIFtS6U">Video</a></p></li>
+<li><p>Henze y Armstrong (2025). Virtualized data at PO.DAAC. NASA. <a href="https://youtu.be/K1FJyB0-XjY">Video</a></p></li>
+<li><p>Ladino-Rincón et al.&nbsp;(s. f.). Introducción a ARCO. Project Pythia (AtmosCol 2023). <a href="https://projectpythia.org/AtmosCol-2023/introduccion-arco/">Cuaderno</a></p></li>
 </ul>
 <p>Artículo completo: <a href="arco.html">ARCO</a></p>
 

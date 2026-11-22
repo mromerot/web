@@ -50,6 +50,21 @@ directamente desde la nube.
 **60–80 %** del tiempo de un científico de datos se va en recolectar y limpiar datos.
 :::
 
+## ¿En qué se va el tiempo?
+
+![](images/arco/crowdflower-2016.jpg){fig-align="center" height="440"}
+
+<span style="font-size:0.45em;color:#666;">Fuente: CrowdFlower (2016), *Data Science Report*; vía Ladino-Rincón et al., Project Pythia.</span>
+
+## Del modelo de descarga a la nube
+
+![](images/arco/descarga-vs-nube.png){fig-align="center" width="100%"}
+
+- **Antes:** descargar archivos a un disco local y analizarlos allí.
+- **Ahora:** el cómputo vive junto al almacenamiento de objetos, en la misma región de la nube.
+
+<span style="font-size:0.45em;color:#666;">Fuente: Pangeo/Ryan Abernathey; vía Ladino-Rincón et al., Project Pythia.</span>
+
 ## Los datos crecen exponencialmente
 
 - El archivo de NCAR (desde 1965) crece en escala exponencial.
@@ -76,40 +91,25 @@ Comparar ERA5 con perfiladores de viento: **una semana → 20 segundos** usando 
   - reinterpolación, alineación de coordenadas
   - miles de archivos unidos en un solo objeto
 
-## Optimizado para la nube (*cloud-optimized*)
+## Optimizado para la nube {.smaller}
 
-Formatos que permiten **acceder directamente a subconjuntos** sin abrir y recorrer un objeto enorme.
+*Cloud-optimized*: formatos que permiten **acceder directamente a subconjuntos** sin recorrer un objeto enorme.
 
 ::: columns
-::: {.column width="50%"}
-**Monolítico (NetCDF, HDF)**
+::: {.column width="45%"}
+**Monolítico** (NetCDF, HDF): un encabezado y un bloque de 120 GB que hay que recorrer o descargar.
 
-```
-┌────────────────────┐
-│ encabezado         │
-├────────────────────┤
-│ ░░░░░░░░░░░░░░░░░░ │
-│ ░░░░░░░████░░░░░░░ │
-│ ░░░░░░░░░░░░░░░░░░ │
-└────────────────────┘
-recorrer o descargar todo
-```
+**Fragmentado** (Zarr): metadatos pequeños y fragmentos de 260 kB con nombre propio (`0.0.0`, `0.0.1`…).
+
+Se piden **solo** los fragmentos necesarios, **en paralelo**.
 :::
 
-::: {.column width="50%"}
-**Fragmentado (Zarr)**
+::: {.column width="55%"}
+![](images/arco/monolitico-vs-fragmentado.png){height="400" fig-align="center"}
+:::
+:::
 
-```
-datos.zarr/
-├── zarr.json   ← 1 lectura
-└── sst/c/
-    ├── 0/0/0
-    ├── 0/0/1   ← solo este
-    └── ...
-pedir en paralelo
-```
-:::
-:::
+<span style="font-size:0.45em;color:#666;">Ilustración "Monolithic vs. chunked" de Henning Falk, ©2022 NumFOCUS, CC BY 4.0 (doi:10.5281/zenodo.7037367).</span>
 
 ## El patrón común
 
@@ -131,6 +131,27 @@ Además: acceso por **HTTP(S)**, lectura **en paralelo**, **carga perezosa** e i
 - Ya no se mueven datos voluminosos: **se acerca el cómputo a los datos**.
 - Se piensa en **conjuntos de datos**, no en archivos.
 :::
+
+## ARCO y los principios FAIR {.smaller}
+
+::: columns
+::: {.column width="45%"}
+- **F**indable: catálogos (STAC, intake)
+- **A**ccessible: HTTP y protocolos estándar
+- **I**nteroperable: Zarr, xarray, Python, R…
+- **R**eusable: metadatos ricos y versiones
+
+::: {.fragment}
+**Formatos ARCO por tipo de dato:** Zarr (arreglos), Parquet (tablas), COG (raster), COPC (nubes de puntos).
+:::
+:::
+
+::: {.column width="55%"}
+![](images/arco/reuso-fair.png){height="380" fig-align="center"}
+:::
+:::
+
+<span style="font-size:0.45em;color:#666;">Ilustración "FAIR re-use" de Henning Falk, ©2022 NumFOCUS, CC BY 4.0 (doi:10.5281/zenodo.7037367).</span>
 
 # Tres caminos hacia ARCO
 
@@ -302,6 +323,30 @@ PO.DAAC: 12 conjuntos virtuales; **≥10×** más rápido.
 - Cuatro conjuntos virtuales: SST, viento, velocidad vertical, salinidad.
 - Décadas de eventos comparadas **sin descargar archivos**.
 
+## Copernicus Marine: ARCO como servicio {.smaller}
+
+::: columns
+::: {.column width="50%"}
+**Dos representaciones de cada producto**
+
+- **Geo Series**: áreas grandes, periodos cortos (mapas)
+- **Time Series**: áreas pequeñas, periodos largos (series)
+- El Toolbox **elige automáticamente** según la consulta
+:::
+
+::: {.column width="50%"}
+**`get` frente a `subset`**
+
+- `get`: archivos originales del productor
+- `subset`: representación ARCO armonizada
+  - valores faltantes, coordenadas estándar
+  - longitudes en [−180, 180)
+  - tiempo al **inicio del intervalo**
+:::
+:::
+
+ARCO es **una convención, no un formato**: la salida puede ser NetCDF, Zarr o CSV.
+
 # Límites y precauciones
 
 ## ARCO no es magia {.smaller}
@@ -332,12 +377,14 @@ Reto: que los datos nacionales también se **publiquen** en ARCO.
 - **Pangeo Forge**: recetas abiertas, versionadas y trazables.
 - NCAR, NOAA, NASA, Copernicus y Google ya publican datos ARCO.
 
-## Fuentes principales
+## Fuentes principales {.smaller}
 
 - Stern et al. (2022). Pangeo Forge. *Frontiers in Climate*. [doi:10.3389/fclim.2021.782909](https://doi.org/10.3389/fclim.2021.782909)
 - Abernathey et al. (2021). Cloud-native repositories for big scientific data. *CiSE*. [doi:10.1109/MCSE.2021.3059437](https://doi.org/10.1109/MCSE.2021.3059437)
 - Hampapura (2026). ARCO data at GDEX. NCAR. [Video](https://www.youtube.com/watch?v=sX1RU92YUfM)
 - Panel NOAA (2022). ARCO for open science. [Video](https://youtu.be/3mDjqIFtS6U)
 - Henze y Armstrong (2025). Virtualized data at PO.DAAC. NASA. [Video](https://youtu.be/K1FJyB0-XjY)
+
+- Ladino-Rincón et al. (s. f.). Introducción a ARCO. Project Pythia (AtmosCol 2023). [Cuaderno](https://projectpythia.org/AtmosCol-2023/introduccion-arco/)
 
 Artículo completo: [ARCO](arco.html)

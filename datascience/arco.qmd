@@ -2,6 +2,7 @@
 title: "ARCO: datos listos para el análisis y optimizados para la nube"
 subtitle: "Analysis-Ready, Cloud-Optimized (ARCO): qué son, por qué importan y cómo se usan"
 date: 2026-11-22
+lang: es
 format:
   html:
     toc: true
@@ -23,7 +24,7 @@ Este artículo es una nota de estudio. Su objetivo es entender el concepto ARCO 
 3. El panel de NOAA sobre ARCO para la ciencia abierta, con ponentes de NOAA, NASA, HPE y Development Seed (Shrestha e Indiviglio, 2022).
 4. El seminario de NASA PO.DAAC sobre **conjuntos de datos virtuales** (Henze y Armstrong, 2025).
 
-Lo complemento con documentación de NASA, NOAA, Google, la guía de formatos optimizados para la nube de la Cloud-Native Geospatial Forum y los proyectos Zarr, VirtualiZarr e Icechunk.
+Lo complemento con el cuaderno introductorio en español de Project Pythia (Ladino-Rincón et al., s. f.), del que reutilizo varias figuras citando su origen, y con documentación de NASA, NOAA, Google, Copernicus Marine, la guía de formatos optimizados para la nube de la Cloud-Native Geospatial Forum y los proyectos Zarr, VirtualiZarr e Icechunk.
 
 ::: {.callout-note}
 ## Relación con otros artículos del sitio
@@ -53,11 +54,15 @@ Según Hampapura, este flujo "se está volviendo heredado" por varias razones:
 
 Stern et al. (2022) llaman a este esquema el **modelo de descarga** y le oponen un nuevo paradigma, la **computación próxima a los datos** (*data-proximate computing*): el cómputo se lleva a donde están los datos, el usuario trabaja desde un navegador y recupera datos mediante APIs o HTTP.
 
+![Del modelo de descarga (izquierda: copiar los archivos a un disco local y analizarlos allí) a la computación próxima a los datos (derecha: un clúster en la misma región de la nube lee en paralelo del almacenamiento de objetos y solo envía las figuras al usuario). Fuente: Pangeo/Ryan Abernathey, *Closed platforms vs. open architectures for cloud-native Earth system analytics*; figura reutilizada a partir de Ladino-Rincón et al. (s. f.), Project Pythia.](images/arco/descarga-vs-nube.png){#fig-descarga-nube fig-alt="Diagrama que contrasta descargar archivos a un disco local con analizar los datos dentro de una región de la nube junto a un almacenamiento de objetos"}
+
 ### Los datos crecen más rápido que la capacidad de descargarlos
 
 El volumen de los archivos de datos del sistema Tierra crece de forma exponencial. Hampapura mostró que el archivo de NCAR, cuyo antecesor nació en 1965, sigue una curva exponencial. Lo mismo ocurre en NASA, NOAA y otros centros. En el panel de NOAA, Radhakrishnan señaló que la Earth System Grid Federation (ESGF) aloja del orden de 20 petabytes de simulaciones CMIP6.
 
-A esto se suma un costo humano. Varios ponentes del panel de NOAA citaron estudios según los cuales los científicos de datos dedican entre el 60 % y el 80 % de su tiempo a **recolectar, limpiar y organizar** datos, no a analizarlos. ARCO busca reducir esa fracción.
+A esto se suma un costo humano. Varios ponentes del panel de NOAA citaron estudios según los cuales los científicos de datos dedican entre el 60 % y el 80 % de su tiempo a **recolectar, limpiar y organizar** datos, no a analizarlos. La cifra más citada viene de una encuesta de CrowdFlower (2016): limpiar y organizar datos ocupa el 60 % del tiempo, y recolectarlos, otro 19 % (@fig-crowdflower). ARCO busca reducir esa fracción.
+
+![¿En qué gastan su tiempo los científicos de datos? Limpiar y organizar datos (60 %) y recolectarlos (19 %) suman casi cuatro quintas partes. Fuente: CrowdFlower (2016), *Data Science Report*; figura reutilizada a partir de Ladino-Rincón et al. (s. f.), Project Pythia.](images/arco/crowdflower-2016.jpg){#fig-crowdflower width="70%" fig-alt="Gráfico de anillo con la distribución del tiempo de los científicos de datos: 60 % limpiar y organizar, 19 % recolectar, 9 % minería, 5 % otros, 4 % refinar algoritmos, 3 % construir conjuntos de entrenamiento"}
 
 ::: {.callout-tip}
 ## Un caso extremo, pero real
@@ -93,6 +98,12 @@ En términos prácticos, un dato listo para el análisis es aquel cuya cadena de
 Un archivo NetCDF o HDF tradicional es un bloque único: un encabezado con metadatos y, a continuación, los datos. Para leer una porción pequeña desde un disco local esto no es grave. Pero cuando el archivo vive en un **almacenamiento de objetos** en la nube (Amazon S3, Google Cloud Storage, Azure Blob) y se accede por HTTPS, cada consulta tiene latencia. Leer un recorte puede exigir primero abrir el encabezado, recorrer los metadatos y hacer muchas peticiones pequeñas, o simplemente descargar el archivo entero.
 
 Un formato **optimizado para la nube** resuelve esto. Stern et al. (2022) lo definen por la entrada/salida: son formatos que **permiten acceder directamente a subconjuntos de datos sin el costo computacional de abrir y recorrer un objeto enorme**. Lo consiguen de dos maneras: con un encabezado de metadatos que mapea rangos de bytes, o dividiendo los datos en muchos bloques pequeños organizados jerárquicamente.
+
+La @fig-monolitico lo ilustra con un ejemplo de microscopía. A la izquierda, en un archivo monolítico de 120 GB, para llegar a un fragmento hay que pasar por el encabezado y recorrer el archivo. A la derecha, en Zarr, los metadatos ocupan un archivo pequeño (`.zarray`) y cada fragmento de 260 kB es un objeto con nombre propio (`0.0.0`, `0.0.1`…) al que se accede directamente.
+
+![Formato monolítico frente a formato fragmentado (Zarr). Ilustración "Monolithic vs. chunked" de Henning Falk, ©2022 NumFOCUS, usada bajo licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) ([Falk, 2022](https://doi.org/10.5281/zenodo.7037367)); se conoció a través de Ladino-Rincón et al. (s. f.), Project Pythia.](images/arco/monolitico-vs-fragmentado.png){#fig-monolitico width="55%" fig-alt="Ilustración: un cubo de datos se guarda como un archivo monolítico con encabezado que hay que recorrer, o como una carpeta Zarr con metadatos y fragmentos numerados accesibles directamente"}
+
+Esquemáticamente:
 
 ```
  Formato monolítico (NetCDF, HDF)        Formato optimizado (Zarr)
@@ -232,7 +243,7 @@ La disposición interna de los bytes (*chunking*) es la decisión técnica más 
 - Si cada *chunk* contiene un día completo de todo el globo (`time: 1`), dibujar un mapa es inmediato, pero extraer la serie de 40 años de un punto obliga a leer más de 14 000 *chunks*.
 - Si cada *chunk* contiene muchos años de una región pequeña, la serie de tiempo es inmediata, pero el mapa global de un día obliga a leer todos los *chunks*.
 
-Por eso, algunos proveedores publican el mismo dato con dos fragmentaciones. En Pangeo Forge, la fragmentación de salida se fija en la receta (por ejemplo, `target_chunks={"time": 10}`), y cambiarla implica publicar una nueva versión.
+Por eso, algunos proveedores publican el mismo dato con dos fragmentaciones. Copernicus Marine, por ejemplo, ofrece cada producto en una versión *Geo Series* y otra *Time Series*, y su herramienta elige la adecuada según la consulta (véase [Copernicus Marine](#copernicus-marine-arco-como-servicio)). En Pangeo Forge, la fragmentación de salida se fija en la receta (por ejemplo, `target_chunks={"time": 10}`), y cambiarla implica publicar una nueva versión.
 
 ### Lecciones aprendidas
 
@@ -296,6 +307,25 @@ Un conjunto ARCO no sirve si nadie lo encuentra. Todas las fuentes coinciden en 
 
 Con un catálogo, el usuario consulta **"temperatura superficial del mar, enero de 2020, Pacífico oriental"** y recibe enlaces a los *chunks* o a los COG correspondientes, sin manejar archivos.
 
+### ARCO y los principios FAIR
+
+Los catálogos conectan ARCO con los **principios FAIR** (Wilkinson et al., 2016): datos *Findable* (encontrables), *Accessible* (accesibles por protocolos estándar), *Interoperable* (utilizables con distintas herramientas) y *Reusable* (bien documentados para que otros los reutilicen). ARCO no garantiza FAIR por sí solo, pero lo facilita. Un almacén Zarr con metadatos ricos, un catálogo STAC y acceso por HTTP cumple casi todo lo que FAIR pide.
+
+La @fig-fair muestra el ciclo que se busca. Unos producen y publican datos en la nube; otros los toman, los combinan con los propios, publican sus resultados y citan las fuentes. Ese ciclo beneficia a todos. Los productores reciben citas, los usuarios acceden a datos que de otro modo no tendrían, y la ciencia avanza por colaboración y reúso (Ladino-Rincón et al., s. f.).
+
+![El ciclo de reúso FAIR: adquirir, publicar y poner a disposición en la nube; acceder, analizar, comparar, publicar y citar. Ilustración "FAIR re-use" de Henning Falk, ©2022 NumFOCUS, usada bajo licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) ([Falk, 2022](https://doi.org/10.5281/zenodo.7037367)); se conoció a través de Ladino-Rincón et al. (s. f.), Project Pythia.](images/arco/reuso-fair.png){#fig-fair width="65%" fig-alt="Ilustración de cuatro científicos: dos publican cubos de datos en la nube y otros dos los toman, los analizan y publican citando las fuentes"}
+
+### Formatos ARCO según el tipo de dato
+
+ARCO no se limita a Zarr. El cuaderno de Project Pythia resume el panorama en tres familias (Ladino-Rincón et al., s. f.), y la guía de formatos optimizados para la nube agrega otras:
+
+| Tipo de dato | Formato ARCO | Ejemplos de uso | Ecosistema |
+|---|---|---|---|
+| Arreglos N-dimensionales | **Zarr** (también NetCDF4/HDF5 bien fragmentados, o virtualizados) | Clima, radar, satélite, modelos | xarray, Dask, Pangeo |
+| Tablas | **Parquet** (y GeoParquet para vectores) | Estaciones meteorológicas, series, catálogos de eventos | pandas, Dask, Apache Arrow, DuckDB |
+| Raster 2D | **Cloud Optimized GeoTIFF (COG)** | Imágenes satelitales, modelos de elevación | GDAL, rasterio |
+| Nubes de puntos | **COPC** | LiDAR | PDAL |
+
 ## ARCO en las instituciones
 
 ### NCAR: el archivo GDEX
@@ -325,9 +355,50 @@ PO.DAAC, el centro de datos de oceanografía física de NASA, ofrece **conjuntos
 
 Armstrong mostró un caso científico en el golfo de Tehuantepec, México. Allí, los vientos invernales que cruzan los pasos de montaña generan **surgencia** en mar abierto y enfrían la superficie del mar hasta 10 °C. Con cuatro conjuntos virtuales (SST, viento, velocidad vertical y salinidad), se remuestrearon los datos a una malla común y se compararon décadas de eventos, sin descargar los archivos.
 
-### Copernicus y Google
+### Copernicus Marine: ARCO como servicio
 
-El servicio marino de Copernicus distribuye sus productos en formato ARCO con dos fragmentaciones, una para mapas y otra para series de tiempo (véase el enlace en [Lecturas](#lecturas-y-recursos)). Google, con ARCO-ERA5, mantiene ERA5 en Zarr con actualizaciones mensuales del producto estable y un rezago de una semana para el preliminar ERA5T.
+El Copernicus Marine Service (CMEMS) ofrece sus productos oceánicos (corrientes, temperatura, biogeoquímica) en formato ARCO desde comienzos de 2024. Es el ejemplo más completo de ARCO puesto **detrás de un servicio**: el usuario pide un recorte y no necesita saber cómo están fragmentados los datos (Copernicus Marine, 2026a).
+
+Su centro de ayuda aporta tres ideas útiles.
+
+**1. ARCO es una convención, no un formato.** Copernicus describe ARCO como "un estándar comunitario y no un único formato de archivo". Sus datos ARCO se apoyan en contenedores fragmentados, sean NetCDF4 o Zarr. Además, la representación ARCO interna **no determina el formato de salida**: un recorte puede descargarse en NetCDF (por defecto), Zarr o CSV.
+
+**2. Dos representaciones del mismo dato.** Cada conjunto existe en dos versiones con fragmentaciones opuestas, justo el dilema descrito en [La fragmentación lo decide todo](#la-fragmentación-lo-decide-todo) (Copernicus Marine, 2026c):
+
+| Servicio | Optimizado para | Fragmentación |
+|---|---|---|
+| **Geo Series** (`geoseries`) | Áreas grandes en periodos cortos: mapas, cuencas, pocos pasos de tiempo | *Chunks* pequeños en el tiempo y grandes en el espacio |
+| **Time Series** (`timeseries`) | Periodos largos en áreas pequeñas: puntos, series de meses o años | *Chunks* pequeños en el espacio y grandes en el tiempo |
+
+La herramienta oficial, el **Copernicus Marine Toolbox** (paquete `copernicusmarine` en Python y en la línea de comandos), **analiza cada solicitud y elige el servicio automáticamente**: un área grande en poco tiempo favorece Geo Series, y un área pequeña en mucho tiempo favorece Time Series. Los usuarios avanzados pueden forzar el servicio:
+
+```bash
+copernicusmarine subset --dataset-id <dataset_id> --service timeseries ...
+```
+
+**3. "Listo para el análisis" en concreto.** El Toolbox distingue dos operaciones: `get` descarga **los archivos originales** de los productores, y `subset` lee la **representación ARCO**. Para construir esa representación, Copernicus aplica transformaciones que muestran qué significa en la práctica "listo para el análisis" (Copernicus Marine, 2026b):
+
+- Reorganizar la fragmentación para acceso geográfico o en series de tiempo.
+- Armonizar los valores faltantes (por ejemplo, `missing_value` frente a `_FillValue`).
+- Usar nombres de coordenadas estándar (`longitude`, `latitude`, `elevation`, `time`), longitudes en el rango [−180, 180) y dimensiones crecientes.
+- Convertir la profundidad a una convención interna de elevación, que el Toolbox puede devolver como `depth` positiva.
+- Llevar algunas rejillas polares o proyectadas a una rejilla regular de longitud y latitud.
+- Fijar las marcas de tiempo **al inicio del intervalo**. Así, un valor diario que en el archivo original estaba a mediodía aparece al comienzo del día.
+
+```python
+import copernicusmarine
+
+# Abre la representación ARCO de forma perezosa (como xarray.Dataset)
+ds = copernicusmarine.open_dataset(
+    dataset_id="<dataset_id>",
+    minimum_longitude=-80, maximum_longitude=-76,
+    minimum_latitude=1, maximum_latitude=5,
+)
+```
+
+### Google: ARCO-ERA5
+
+Google, con ARCO-ERA5, mantiene ERA5 en Zarr con actualizaciones mensuales del producto estable y un rezago de una semana para el preliminar ERA5T.
 
 ## Límites y precauciones
 
@@ -337,6 +408,7 @@ ARCO no es magia. Las fuentes señalan varias limitaciones que conviene tener pr
 - **Fuera de la nube hay límites de peticiones.** En las pruebas de PO.DAAC, el acceso por HTTPS desde fuera de AWS se detuvo hacia los 20 años de datos analizados por el número de peticiones simultáneas. Para análisis grandes conviene trabajar en la misma región de la nube que los datos.
 - **Descargar sigue siendo más rápido si ya se tienen los datos.** Henze reconoce que, una vez descargados, los datos locales se procesan más rápido. La pregunta es si vale la pena descargar decenas de terabytes. Un término medio es usar el conjunto virtual para extraer el subconjunto y guardarlo como NetCDF local.
 - **Los conjuntos virtuales no son datos nuevos.** Hay que **citar el conjunto original**, consultar su ficha y su documentación, y revisar si el índice cubre todo el periodo. Muchos conjuntos virtuales no incluyen los datos llegados después de su creación, y la actualización continua (*forward streaming*) todavía está en desarrollo.
+- **La versión ARCO no es idéntica al archivo original.** Al armonizar coordenadas, valores faltantes y marcas de tiempo, el resultado puede diferir del archivo original. En Copernicus Marine, por ejemplo, un valor diario puede aparecer desplazado medio día respecto al NetCDF original. Si un flujo de trabajo migra de archivos originales a ARCO, conviene revisar primero coordenadas, tiempos y metadatos (Copernicus Marine, 2026b).
 - **Los errores pueden viajar con las referencias.** PO.DAAC advierte, por ejemplo, que los conjuntos virtuales de MUR y OSTIA tienen un `_FillValue` incorrecto que afecta el enmascarado sobre tierra y hielo marino.
 - **Costos.** Almacenar terabytes cuesta, y mover datos entre regiones o proveedores (*egress*) también. Por eso, una sola copia pública por región de la nube, que sirve a miles de científicos, es más eficiente que mil copias locales (Stern et al., 2022).
 - **Sostenibilidad.** Producir y mantener datos ARCO requiere personas, financiación y reconocimiento, no solo tecnología.
@@ -379,7 +451,7 @@ El reto pendiente es el inverso: que los datos nacionales (estaciones del IDEAM,
 - Hay tres caminos: imágenes pregeneradas (rápidas pero inútiles para la ciencia), **conversión a formatos nuevos** (Zarr, COG) y **conjuntos virtuales** (Kerchunk, VirtualiZarr, Icechunk) que apuntan a los archivos originales.
 - La **fragmentación** decide el rendimiento: no hay una que sirva igual para mapas y para series de tiempo, y los índices virtuales heredan la del archivo original.
 - **Pangeo Forge** propuso producir datos ARCO mediante recetas abiertas, versionadas y trazables, al estilo de conda-forge.
-- NCAR (GDEX), NOAA (NODD, National Water Model), NASA (VEDA, PO.DAAC), Copernicus y Google ya publican datos ARCO. Los límites principales son el cómputo para análisis masivos, las peticiones fuera de la nube, los costos y la sostenibilidad.
+- NCAR (GDEX), NOAA (NODD, National Water Model), NASA (VEDA, PO.DAAC), Copernicus Marine (*Geo Series* y *Time Series* con selección automática) y Google ya publican datos ARCO. Los límites principales son el cómputo para análisis masivos, las peticiones fuera de la nube, los costos y la sostenibilidad.
 
 ## Lecturas y recursos
 
@@ -390,6 +462,17 @@ El reto pendiente es el inverso: que los datos nacionales (estaciones del IDEAM,
 - Shrestha, S. e Indiviglio, F. (Moderadores). (2022, 5 de diciembre). *Analysis-Ready-Cloud-Optimized (ARCO) for cloud computing and data analytics to support open science* [Video]. NOAA Environmental Data Management Workshop. NOAASatellites. YouTube. [https://youtu.be/3mDjqIFtS6U](https://youtu.be/3mDjqIFtS6U)
 - Henze, D. y Armstrong, E. (2025, 28 de agosto). *Accelerating science using virtualized data at PO.DAAC* [Video]. NASA Earth. YouTube. [https://youtu.be/K1FJyB0-XjY](https://youtu.be/K1FJyB0-XjY)
 
+### Material didáctico en español
+
+- Ladino-Rincón, A., Rivera, N., Ruales-Hernández, L. y Grover, M. (s. f.). Introducción a ARCO: datos listos para análisis. En *Ciencia de datos hidrometeorológicos con Python* (AtmosCol 2023). Project Pythia. [https://projectpythia.org/AtmosCol-2023/introduccion-arco/](https://projectpythia.org/AtmosCol-2023/introduccion-arco/). Cuaderno introductorio en español, con continuación práctica sobre Zarr; es la fuente de las figuras @fig-descarga-nube a @fig-fair.
+
+### Figuras reutilizadas
+
+- Abernathey, R. *Closed platforms vs. open architectures for cloud-native Earth system analytics*. Pangeo (Medium). [Enlace](https://medium.com/pangeo/closed-platforms-vs-open-architectures-for-cloud-native-earth-system-analytics-1ad88708ebb6)
+- CrowdFlower. (2016). *Data Science Report*. [PDF](https://www2.cs.uh.edu/~ceick/UDM/CFDS16.pdf)
+- Falk, H. (2022). *zarr-developers/zarr-illustrations-falk-2022* [Ilustraciones, CC BY 4.0]. Zenodo. [https://doi.org/10.5281/zenodo.7037367](https://doi.org/10.5281/zenodo.7037367)
+- Wilkinson, M. D. et al. (2016). The FAIR Guiding Principles for scientific data management and stewardship. *Scientific Data, 3*, 160018. [https://doi.org/10.1038/sdata.2016.18](https://doi.org/10.1038/sdata.2016.18)
+
 ### Artículos y documentación complementaria
 
 - Abernathey, R. P., Augspurger, T., Banihirwe, A., Blackmon-Luca, C. C., Crone, T. J., Gentemann, C. L., Hamman, J. J., Henderson, N., Lepore, C., McCaie, T. A., Robinson, N. H. y Signell, R. P. (2021). Cloud-native repositories for big scientific data. *Computing in Science & Engineering, 23*(2), 26–35. [https://doi.org/10.1109/MCSE.2021.3059437](https://doi.org/10.1109/MCSE.2021.3059437)
@@ -399,7 +482,9 @@ El reto pendiente es el inverso: que los datos nacionales (estaciones del IDEAM,
 - PO.DAAC. *Using Virtual Datasets* (PO.DAAC Cookbook). [https://podaac.github.io/tutorials/quarto_text/UsingVirtualDatasets.html](https://podaac.github.io/tutorials/quarto_text/UsingVirtualDatasets.html)
 - NOAA. *NOAA Open Data Dissemination (NODD)*. [https://www.noaa.gov/nodd](https://www.noaa.gov/nodd)
 - AWS Registry of Open Data. *NOAA National Water Model CONUS Retrospective Dataset*. [https://registry.opendata.aws/nwm-archive/](https://registry.opendata.aws/nwm-archive/)
-- Copernicus Marine. *Introduction to the ARCO format*. [https://help.marine.copernicus.eu/en/articles/12332770-introduction-to-the-arco-format](https://help.marine.copernicus.eu/en/articles/12332770-introduction-to-the-arco-format)
+- Copernicus Marine. (2026a). *Introduction to the ARCO format*. Copernicus Marine Help Center. [https://help.marine.copernicus.eu/en/articles/12332770-introduction-to-the-arco-format](https://help.marine.copernicus.eu/en/articles/12332770-introduction-to-the-arco-format)
+- Copernicus Marine. (2026b). *Differences between NetCDF and ARCO formats*. Copernicus Marine Help Center. [https://help.marine.copernicus.eu/en/articles/8656000-differences-between-netcdf-and-arco-formats](https://help.marine.copernicus.eu/en/articles/8656000-differences-between-netcdf-and-arco-formats)
+- Copernicus Marine. (2026c). *Copernicus Marine Toolbox: Services*. Copernicus Marine Help Center. [https://help.marine.copernicus.eu/en/articles/7969584-copernicus-marine-toolbox-services](https://help.marine.copernicus.eu/en/articles/7969584-copernicus-marine-toolbox-services)
 
 ### Herramientas
 
