@@ -143,6 +143,16 @@ Tipos de bases de datos y formatos modernos para ciencia de datos en la nube: Pa
 
 ::: mrw-card
 ::: mrw-card-header
+[ARCO](arco.qmd)
+:::
+
+::: mrw-card-body
+Datos listos para el análisis y optimizados para la nube (*Analysis-Ready, Cloud-Optimized*): definición, Zarr y conjuntos virtuales (Kerchunk, VirtualiZarr, Icechunk), Pangeo Forge y experiencias de NCAR, NOAA y NASA.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
 [Mapas](mapas/index.qmd)
 :::
 
