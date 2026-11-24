@@ -196,6 +196,8 @@ website:
             href: cyt/transdisciplina.qmd
           - text: "Interfaz ciencia-política-sociedad"
             href: cyt/interfaz-cps.qmd
+          - text: "Código abierto, GitHub e innovación en GRD"
+            href: cyt/github-innovacion-grd.qmd
       # aqui viene la seccion de educacion
       - section: "Educación"
         href: educacion/index.qmd
