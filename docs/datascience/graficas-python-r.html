@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Mauricio Romero Torres">
 
-<title>Graficas Python y R – Inicio</title>
+<title>Gráficas en HTML frente a Python, R, D3 y Plotly – Inicio</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -77,7 +78,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-c0268bb2cd26ea8ad2ddef1ccaf3bc3a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4910f9121cc0cf878839b371e47b8836.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-185dd4034670ad8c937a932c0bc4ae80.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -92,17 +93,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -157,9 +158,11 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <script src="../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
 
-<meta property="og:title" content="Graficas Python y R – Inicio">
+<meta property="og:title" content="Gráficas en HTML frente a Python, R, D3 y Plotly – Inicio">
+<meta property="og:description" content="Cuándo usar cada enfoque para gráficas, tablas, esquemas y figuras, con una demostración interactiva">
 <meta property="og:site_name" content="Inicio">
-<meta name="twitter:title" content="Graficas Python y R – Inicio">
+<meta name="twitter:title" content="Gráficas en HTML frente a Python, R, D3 y Plotly – Inicio">
+<meta name="twitter:description" content="Cuándo usar cada enfoque para gráficas, tablas, esquemas y figuras, con una demostración interactiva">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -169,13 +172,13 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datascience/index.html">Ciencia de datos</a></li><li class="breadcrumb-item"><a href="../datascience/graficas-python-r.html">Graficas Python y R</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -192,7 +195,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Buscar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -201,7 +204,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../grd/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gestión del riesgo de desastres</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -240,7 +243,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../grd/cienciaytecnologia/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ciencia y tecnología</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -281,7 +284,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Cursos, redes y recursos</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -316,7 +319,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../grd/hidrol-meteorologicas/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas hidrológicas y meteorológicas</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -357,7 +360,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../grd/geologicas/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas geológicas</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -398,7 +401,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../grd/ambientales/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas ambientales</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -421,7 +424,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../grd/biologicos/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas biológicas</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -438,7 +441,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../grd/tecnologicas/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas tecnológicas</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -455,7 +458,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../grd/sociales/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas sociales</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -472,7 +475,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../grd/extraterrestre/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Amenazas extraterrestres</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -527,7 +530,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../gcc/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gestión del cambio climático</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -550,7 +553,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../gestiondeproyectos/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gestión de proyectos</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -661,7 +664,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../gestiondeproyectos/financiacion/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Financiación</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -680,7 +683,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../cyt/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ciencia y tecnología</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -689,7 +692,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../cyt/escrituraypublicacionacademica/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Escritura y publicación académica</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -744,7 +747,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../educacion/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Educación</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -773,7 +776,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../datascience/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ciencia de datos</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -866,7 +869,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../datascience/mapas/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mapas</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -933,7 +936,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../math-stats/math-stats.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Matemáticas y estadística</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -942,7 +945,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../math-stats/R/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R: minicurso</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -1021,7 +1024,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a href="../vidalaboral/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vida laboral</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -1056,33 +1059,59 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
     <h2 id="toc-title">Contenidos</h2>
    
   <ul class="collapse">
-  <li><a href="#recursos-de-visualización-de-datos" id="toc-recursos-de-visualización-de-datos" class="nav-link active" data-scroll-target="#recursos-de-visualización-de-datos"><strong>Recursos de visualización de datos</strong></a>
+  <li><a href="#por-qué-volver-a-esta-pregunta" id="toc-por-qué-volver-a-esta-pregunta" class="nav-link active" data-scroll-target="#por-qué-volver-a-esta-pregunta">Por qué volver a esta pregunta</a></li>
+  <li><a href="#cuatro-familias-de-herramientas" id="toc-cuatro-familias-de-herramientas" class="nav-link" data-scroll-target="#cuatro-familias-de-herramientas">Cuatro familias de herramientas</a></li>
+  <li><a href="#los-paquetes-de-esta-entrada-uno-por-uno" id="toc-los-paquetes-de-esta-entrada-uno-por-uno" class="nav-link" data-scroll-target="#los-paquetes-de-esta-entrada-uno-por-uno">Los paquetes de esta entrada, uno por uno</a></li>
+  <li><a href="#comparación-por-criterios" id="toc-comparación-por-criterios" class="nav-link" data-scroll-target="#comparación-por-criterios">Comparación por criterios</a></li>
+  <li><a href="#más-allá-de-las-gráficas-tablas-esquemas-y-figuras" id="toc-más-allá-de-las-gráficas-tablas-esquemas-y-figuras" class="nav-link" data-scroll-target="#más-allá-de-las-gráficas-tablas-esquemas-y-figuras">Más allá de las gráficas: tablas, esquemas y figuras</a></li>
+  <li><a href="#el-mismo-gráfico-en-cuatro-lenguajes" id="toc-el-mismo-gráfico-en-cuatro-lenguajes" class="nav-link" data-scroll-target="#el-mismo-gráfico-en-cuatro-lenguajes">El mismo gráfico en cuatro lenguajes</a></li>
+  <li><a href="#riesgos-de-las-gráficas-html-hechas-a-mano-o-con-ia" id="toc-riesgos-de-las-gráficas-html-hechas-a-mano-o-con-ia" class="nav-link" data-scroll-target="#riesgos-de-las-gráficas-html-hechas-a-mano-o-con-ia">Riesgos de las gráficas HTML hechas a mano o con IA</a></li>
+  <li><a href="#recomendación-para-el-sitio-y-para-la-scr" id="toc-recomendación-para-el-sitio-y-para-la-scr" class="nav-link" data-scroll-target="#recomendación-para-el-sitio-y-para-la-scr">Recomendación para el sitio y para la SCR</a></li>
+  <li><a href="#demostración-elementos-interactivos-en-html-puro" id="toc-demostración-elementos-interactivos-en-html-puro" class="nav-link" data-scroll-target="#demostración-elementos-interactivos-en-html-puro">Demostración: elementos interactivos en HTML puro</a></li>
+  <li><a href="#recursos" id="toc-recursos" class="nav-link" data-scroll-target="#recursos">Recursos</a></li>
+  <li><a href="#anexo-pruebas-anteriores" id="toc-anexo-pruebas-anteriores" class="nav-link" data-scroll-target="#anexo-pruebas-anteriores">Anexo: pruebas anteriores</a>
   <ul class="collapse">
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
-  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
-  <li><a href="#recursos-generales" id="toc-recursos-generales" class="nav-link" data-scroll-target="#recursos-generales">Recursos generales</a></li>
   <li><a href="#pruebas" id="toc-pruebas" class="nav-link" data-scroll-target="#pruebas">Pruebas</a></li>
   <li><a href="#pruebas-de-mapas" id="toc-pruebas-de-mapas" class="nav-link" data-scroll-target="#pruebas-de-mapas">Pruebas de mapas</a></li>
   <li><a href="#mapa-vectorial-desde-pmtiles" id="toc-mapa-vectorial-desde-pmtiles" class="nav-link" data-scroll-target="#mapa-vectorial-desde-pmtiles">🌍 Mapa vectorial desde PMTiles</a></li>
   <li><a href="#mapa-de-colombia-con-pmtiles" id="toc-mapa-de-colombia-con-pmtiles" class="nav-link" data-scroll-target="#mapa-de-colombia-con-pmtiles">🇨🇴 Mapa de Colombia con PMTiles</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Informar sobre problema</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datascience/index.html">Ciencia de datos</a></li><li class="breadcrumb-item"><a href="../datascience/graficas-python-r.html">Graficas Python y R</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Graficas Python y R</h1>
+<h1 class="title">Gráficas en HTML frente a Python, R, D3 y Plotly</h1>
+<p class="subtitle lead">Cuándo usar cada enfoque para gráficas, tablas, esquemas y figuras, con una demostración interactiva</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mauricio Romero Torres </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">25 de noviembre de 2026</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de última modificación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">25 de noviembre de 2026</p>
+    </div>
+  </div>
     
   </div>
   
@@ -1091,117 +1120,519 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 </header>
 
 
-<section id="recursos-de-visualización-de-datos" class="level1">
-<h1><strong>Recursos de visualización de datos</strong></h1>
-<section id="python" class="level2">
-<h2 class="anchored" data-anchor-id="python">Python</h2>
-<section id="matplotlib" class="level3">
-<h3 class="anchored" data-anchor-id="matplotlib">Matplotlib</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="En resumen">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>En resumen
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li>Documentación oficial. <a href="https://matplotlib.org/"><em>Link</em></a>.</li>
-<li>Tutoriales de Matplotlib. <a href="https://matplotlib.org/stable/tutorials/index.html"><em>Link</em></a>.</li>
+<li><strong>No hay que elegir una sola herramienta.</strong> Lo más eficiente es repartir el trabajo por capas:
+<ul>
+<li><strong>Análisis y publicación impresa:</strong> ggplot2 o Matplotlib/Seaborn.</li>
+<li><strong>Gráficas interactivas estándar, desde el mismo código:</strong> Plotly, Altair o Highcharter.</li>
+<li><strong>Piezas a la medida para la web:</strong> HTML/CSS/SVG nativo cuando son sencillas; D3 cuando son complejas (narrativa, explicadores, tableros pequeños, esquemas).</li>
+</ul></li>
+<li><strong>El HTML nativo es la opción más flexible y liviana.</strong> Además, es la que mejor producen los asistentes de IA. Su punto débil es la reproducibilidad: los datos tienen que vivir en archivos versionados, no escritos a mano dentro de la página.</li>
+<li><strong>Para un sitio en Quarto como este</strong>, recomiendo Python o R como base, <code>{=html}</code> u OJS para piezas especiales, y una regla fija: toda cifra visible debe poder rastrearse a un archivo de datos del repositorio.</li>
+</ul>
+</div>
+</div>
+<section id="por-qué-volver-a-esta-pregunta" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-volver-a-esta-pregunta">Por qué volver a esta pregunta</h2>
+<p>Las publicaciones recientes en redes sobre “pedirle a una IA una diapositiva en HTML” muestran algo que los equipos de ciencia de datos venían viendo: un solo archivo HTML puede tener tablas que se ordenan, gráficos que responden al tacto, esquemas que se recorren paso a paso y controles que recalculan escenarios. Antes, eso exigía D3 o una biblioteca de tableros. Hoy un asistente lo escribe en minutos.</p>
+<p>Eso cambia el costo de producir visualizaciones a la medida. Pero no cambia lo que hace confiable una gráfica: datos rastreables, código reproducible y un diseño que no engañe. Este artículo compara los enfoques con ese criterio.</p>
+</section>
+<section id="cuatro-familias-de-herramientas" class="level2">
+<h2 class="anchored" data-anchor-id="cuatro-familias-de-herramientas">Cuatro familias de herramientas</h2>
+<p>La frontera entre “HTML” y “otros lenguajes” es más difusa de lo que parece. Plotly, Altair y Highcharter <strong>también producen HTML y JavaScript</strong>; la diferencia está en quién escribe ese código y desde dónde se controlan los datos.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Familia</th>
+<th>Ejemplos</th>
+<th>Qué escribes</th>
+<th>Qué obtienes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1. Gráficas estáticas</strong></td>
+<td>Matplotlib, Seaborn, ggplot2</td>
+<td>Python o R</td>
+<td>Imagen (PNG, SVG, PDF)</td>
+</tr>
+<tr class="even">
+<td><strong>2. Envoltorios interactivos</strong></td>
+<td>Plotly (Python/R), Altair, Highcharter, Bokeh</td>
+<td>Python o R</td>
+<td>HTML + JS generado automáticamente</td>
+</tr>
+<tr class="odd">
+<td><strong>3. Gramáticas para la web</strong></td>
+<td>Observable Plot, Vega-Lite, Quarto OJS</td>
+<td>JavaScript declarativo</td>
+<td>HTML + SVG</td>
+</tr>
+<tr class="even">
+<td><strong>4. Control total en el navegador</strong></td>
+<td>D3.js, HTML/CSS/SVG nativo</td>
+<td>JavaScript, HTML y CSS</td>
+<td>Cualquier cosa que el navegador pueda dibujar</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="los-paquetes-de-esta-entrada-uno-por-uno" class="level2">
+<h2 class="anchored" data-anchor-id="los-paquetes-de-esta-entrada-uno-por-uno">Los paquetes de esta entrada, uno por uno</h2>
+<p>La versión anterior de esta página listaba siete paquetes. Así se ubican:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Paquete</th>
+<th>Lenguaje</th>
+<th>Cómo dibuja</th>
+<th>Interactividad</th>
+<th>Mejor para</th>
+<th>Cuidado con</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Matplotlib</strong></td>
+<td>Python</td>
+<td>Motor propio → imagen</td>
+<td>Mínima en la web</td>
+<td>Figuras de artículos, control fino de cada elemento</td>
+<td>Código largo para estilos cuidados</td>
+</tr>
+<tr class="even">
+<td><strong>Seaborn</strong></td>
+<td>Python</td>
+<td>Sobre Matplotlib</td>
+<td>Mínima</td>
+<td>Exploración estadística (distribuciones, regresiones, facetas)</td>
+<td>Menos control fino que Matplotlib</td>
+</tr>
+<tr class="odd">
+<td><strong>Plotly</strong></td>
+<td>Python</td>
+<td>Genera plotly.js</td>
+<td>Alta: zoom, tooltips, leyendas</td>
+<td>Interactividad lista desde notebooks y Quarto</td>
+<td>Peso del archivo; estilo “Plotly” reconocible</td>
+</tr>
+<tr class="even">
+<td><strong>Altair</strong></td>
+<td>Python</td>
+<td>Genera una especificación Vega-Lite</td>
+<td>Media-alta: selecciones enlazadas</td>
+<td>Gramática declarativa clara; vistas enlazadas</td>
+<td>Por defecto limita los datos incrustados a 5.000 filas</td>
+</tr>
+<tr class="odd">
+<td><strong>ggplot2</strong></td>
+<td>R</td>
+<td>Gramática de gráficos → imagen</td>
+<td>Ninguna sin extensiones (<code>ggplotly</code>, <code>ggiraph</code>)</td>
+<td>El estándar para figuras reproducibles en R</td>
+<td>Requiere extensiones para la web</td>
+</tr>
+<tr class="even">
+<td><strong>Plotly R</strong></td>
+<td>R</td>
+<td>Genera plotly.js</td>
+<td>Alta</td>
+<td>Lo mismo que en Python, más <code>ggplotly()</code></td>
+<td>Igual que Plotly Python</td>
+</tr>
+<tr class="odd">
+<td><strong>Highcharter</strong></td>
+<td>R</td>
+<td>Envuelve Highcharts</td>
+<td>Alta, muy pulida</td>
+<td>Series de tiempo y tableros vistosos</td>
+<td><strong>Licencia:</strong> gratis solo para uso personal o educativo no comercial</td>
+</tr>
+</tbody>
+</table>
+<p>Dos datos concretos para el contexto institucional:</p>
+<ul>
+<li><strong>Peso de Plotly.</strong> La biblioteca completa de plotly.js pesa cerca de 4,8 MB minificada (unos 1,5 MB comprimida) según su propia documentación de distribución. Existen paquetes parciales más livianos (<a href="https://unpkg.com/plotly.js/dist/README.md">detalles</a>).</li>
+<li><strong>Licencia de Highcharts.</strong> Las Highcharts exigen licencia comercial para proyectos de empresas, trabajo para clientes u operación interna. El uso educativo gratuito excluye el uso operativo institucional (<a href="https://www.highcharts.com/education/">Highcharts for Education</a>). Para una entidad pública, conviene revisarlo antes de adoptarlo.</li>
 </ul>
 </section>
-<section id="seaborn" class="level3">
-<h3 class="anchored" data-anchor-id="seaborn">Seaborn</h3>
+<section id="comparación-por-criterios" class="level2">
+<h2 class="anchored" data-anchor-id="comparación-por-criterios">Comparación por criterios</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Criterio</th>
+<th>Python / R estático</th>
+<th>Plotly · Altair · Highcharter</th>
+<th>D3.js</th>
+<th>HTML/CSS/SVG nativo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Curva de aprendizaje</td>
+<td>Baja si ya analizas en ese lenguaje</td>
+<td>Baja</td>
+<td><strong>Alta</strong></td>
+<td>Media (baja con asistencia de IA)</td>
+</tr>
+<tr class="even">
+<td>Reproducibilidad desde los datos</td>
+<td><strong>Excelente</strong></td>
+<td><strong>Excelente</strong></td>
+<td>Buena si lee CSV/JSON</td>
+<td>Depende de la disciplina: riesgo de datos “pegados”</td>
+</tr>
+<tr class="odd">
+<td>Control del diseño</td>
+<td>Alto (con esfuerzo)</td>
+<td>Medio</td>
+<td><strong>Total</strong></td>
+<td><strong>Total</strong></td>
+</tr>
+<tr class="even">
+<td>Interactividad</td>
+<td>No</td>
+<td>Alta, estándar</td>
+<td>Ilimitada</td>
+<td>Ilimitada</td>
+</tr>
+<tr class="odd">
+<td>Peso y dependencias</td>
+<td>Imagen liviana</td>
+<td>Bibliotecas de cientos de KB a varios MB</td>
+<td>~90 KB comprimido</td>
+<td><strong>Ninguna</strong></td>
+</tr>
+<tr class="even">
+<td>Funciona sin conexión / un solo archivo</td>
+<td>Sí</td>
+<td>Con biblioteca incrustada</td>
+<td>Con biblioteca incrustada</td>
+<td><strong>Sí, de forma natural</strong></td>
+</tr>
+<tr class="odd">
+<td>Impresión y PDF</td>
+<td><strong>Excelente</strong></td>
+<td>Requiere exportar imagen</td>
+<td>Requiere versión estática</td>
+<td>Requiere versión estática</td>
+</tr>
+<tr class="even">
+<td>Muchos datos (&gt;100.000 puntos)</td>
+<td>Bien</td>
+<td>Bien (Plotly con WebGL)</td>
+<td>Con Canvas/WebGL</td>
+<td>Con Canvas; SVG se vuelve lento</td>
+</tr>
+<tr class="odd">
+<td>Accesibilidad</td>
+<td>Texto alternativo</td>
+<td>Parcial</td>
+<td>Depende del autor</td>
+<td>Depende del autor (tablas HTML son las más accesibles)</td>
+</tr>
+<tr class="even">
+<td>Mantenimiento a 5 años</td>
+<td>Alto</td>
+<td>Alto (dependes del proveedor)</td>
+<td>Medio</td>
+<td>Medio: el código queda “suelto”</td>
+</tr>
+<tr class="odd">
+<td>Generación con IA</td>
+<td>Buena</td>
+<td>Buena</td>
+<td>Buena</td>
+<td><strong>La mejor</strong>: un archivo, sin compilación</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="más-allá-de-las-gráficas-tablas-esquemas-y-figuras" class="level2">
+<h2 class="anchored" data-anchor-id="más-allá-de-las-gráficas-tablas-esquemas-y-figuras">Más allá de las gráficas: tablas, esquemas y figuras</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Elemento</th>
+<th>En Python / R</th>
+<th>En HTML nativo</th>
+<th>Comentario</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Tablas</strong></td>
+<td><code>gt</code>, <code>reactable</code>, <code>DT</code> (R); <code>itables</code>, <code>great_tables</code> (Python)</td>
+<td><code>&lt;table&gt;</code> con ordenar, filtrar y barras en celdas</td>
+<td>Las tablas HTML son el formato más accesible y copiable. Los paquetes de R/Python ya generan HTML de calidad.</td>
+</tr>
+<tr class="even">
+<td><strong>Esquemas y diagramas</strong></td>
+<td>Mermaid y Graphviz integrados en Quarto</td>
+<td>SVG a mano o generado por script, con estados interactivos</td>
+<td>Mermaid basta para flujos estáticos; un esquema que se recorre (árbol de decisión, cadena de alerta) pide HTML/SVG.</td>
+</tr>
+<tr class="odd">
+<td><strong>Figuras ilustrativas</strong></td>
+<td>Limitado</td>
+<td>SVG con capas, gradientes y animación</td>
+<td>Para explicar un mecanismo (cómo se forma un lahar, cómo viaja una alerta), el SVG es superior.</td>
+</tr>
+<tr class="even">
+<td><strong>Mapas</strong></td>
+<td><code>sf</code> + <code>tmap</code>/<code>leaflet</code> (R); <code>geopandas</code> + <code>folium</code> (Python)</td>
+<td>MapLibre + PMTiles (como en el anexo de esta página)</td>
+<td>Para mapas vectoriales grandes, MapLibre con PMTiles es liviano y no necesita servidor.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="el-mismo-gráfico-en-cuatro-lenguajes" class="level2">
+<h2 class="anchored" data-anchor-id="el-mismo-gráfico-en-cuatro-lenguajes">El mismo gráfico en cuatro lenguajes</h2>
+<p>Eventos por mes, en barras. La extensión del código ilustra el compromiso entre conveniencia y control.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">ggplot2 (R)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Plotly (Python)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">D3.js</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">HTML + CSS nativo</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>eventos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/eventos_mes.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(eventos, <span class="fu">aes</span>(mes, n)) <span class="sc">+</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#0b6e99"</span>) <span class="sc">+</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Eventos"</span>) <span class="sc">+</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>eventos <span class="op">=</span> pd.read_csv(<span class="st">"data/eventos_mes.csv"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.bar(eventos, x<span class="op">=</span><span class="st">"mes"</span>, y<span class="op">=</span><span class="st">"n"</span>, labels<span class="op">=</span>{<span class="st">"n"</span>: <span class="st">"Eventos"</span>, <span class="st">"mes"</span>: <span class="st">""</span>})</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>fig.show()   <span class="co"># o fig.write_html("eventos.html")</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> datos <span class="op">=</span> <span class="cf">await</span> d3<span class="op">.</span><span class="fu">csv</span>(<span class="st">"data/eventos_mes.csv"</span><span class="op">,</span> d3<span class="op">.</span><span class="at">autoType</span>)<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> x <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleBand</span>(datos<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">mes</span>)<span class="op">,</span> [<span class="dv">40</span><span class="op">,</span> <span class="dv">600</span>])<span class="op">.</span><span class="fu">padding</span>(<span class="fl">0.1</span>)<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> y <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleLinear</span>([<span class="dv">0</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">max</span>(datos<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">n</span>)]<span class="op">,</span> [<span class="dv">300</span><span class="op">,</span> <span class="dv">10</span>])<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">"#grafico"</span>)<span class="op">.</span><span class="fu">append</span>(<span class="st">"svg"</span>)<span class="op">.</span><span class="fu">attr</span>(<span class="st">"viewBox"</span><span class="op">,</span> <span class="st">"0 0 620 330"</span>)<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>svg<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">"rect"</span>)<span class="op">.</span><span class="fu">data</span>(datos)<span class="op">.</span><span class="fu">join</span>(<span class="st">"rect"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">"x"</span><span class="op">,</span> d <span class="kw">=&gt;</span> <span class="fu">x</span>(d<span class="op">.</span><span class="at">mes</span>))<span class="op">.</span><span class="fu">attr</span>(<span class="st">"width"</span><span class="op">,</span> x<span class="op">.</span><span class="fu">bandwidth</span>())</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">"y"</span><span class="op">,</span> d <span class="kw">=&gt;</span> <span class="fu">y</span>(d<span class="op">.</span><span class="at">n</span>))<span class="op">.</span><span class="fu">attr</span>(<span class="st">"height"</span><span class="op">,</span> d <span class="kw">=&gt;</span> <span class="dv">300</span> <span class="op">-</span> <span class="fu">y</span>(d<span class="op">.</span><span class="at">n</span>))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> <span class="st">"#0b6e99"</span>)<span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>svg<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)<span class="op">.</span><span class="fu">attr</span>(<span class="st">"transform"</span><span class="op">,</span> <span class="st">"translate(0,300)"</span>)<span class="op">.</span><span class="fu">call</span>(d3<span class="op">.</span><span class="fu">axisBottom</span>(x))<span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>svg<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)<span class="op">.</span><span class="fu">attr</span>(<span class="st">"transform"</span><span class="op">,</span> <span class="st">"translate(40,0)"</span>)<span class="op">.</span><span class="fu">call</span>(d3<span class="op">.</span><span class="fu">axisLeft</span>(y))<span class="op">;</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"barras"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"grafico"</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.barras</span> { <span class="kw">display</span><span class="ch">:</span><span class="dv">flex</span><span class="op">;</span> <span class="kw">gap</span><span class="ch">:</span><span class="dv">4</span><span class="dt">px</span><span class="op">;</span> <span class="kw">height</span><span class="ch">:</span><span class="dv">200</span><span class="dt">px</span><span class="op">;</span> <span class="kw">align-items</span><span class="ch">:</span><span class="dv">flex-end</span> }</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.barras</span> div { <span class="kw">flex</span><span class="ch">:</span><span class="dv">1</span><span class="op">;</span> <span class="kw">background</span><span class="ch">:</span><span class="cn">#0b6e99</span><span class="op">;</span> <span class="kw">border-radius</span><span class="ch">:</span><span class="dv">4</span><span class="dt">px</span> <span class="dv">4</span><span class="dt">px</span> <span class="dv">0</span> <span class="dv">0</span> }</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">fetch</span>(<span class="st">"data/eventos_mes.json"</span>)<span class="op">.</span><span class="fu">then</span>(r <span class="kw">=&gt;</span> r<span class="op">.</span><span class="fu">json</span>())<span class="op">.</span><span class="fu">then</span>(datos <span class="kw">=&gt;</span> {</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> max <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">...</span>datos<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">n</span>))<span class="op">;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"grafico"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> datos</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> <span class="vs">`&lt;div style="height:</span><span class="sc">${</span>d<span class="op">.</span><span class="at">n</span> <span class="op">/</span> max <span class="op">*</span> <span class="dv">100</span><span class="sc">}</span><span class="vs">%" title="</span><span class="sc">${</span>d<span class="op">.</span><span class="at">mes</span><span class="sc">}</span><span class="vs">: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">n</span><span class="sc">}</span><span class="vs">"&gt;&lt;/div&gt;`</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">join</span>(<span class="st">""</span>)<span class="op">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<p>Observa que <strong>los cuatro leen los datos de un archivo</strong>. Esa es la regla que mantiene confiable cualquier enfoque.</p>
+</section>
+<section id="riesgos-de-las-gráficas-html-hechas-a-mano-o-con-ia" class="level2">
+<h2 class="anchored" data-anchor-id="riesgos-de-las-gráficas-html-hechas-a-mano-o-con-ia">Riesgos de las gráficas HTML hechas a mano o con IA</h2>
+<ol type="1">
+<li><strong>Datos incrustados sin fuente.</strong> Un asistente tiende a escribir los números dentro del código. Si nadie los verifica, la gráfica puede verse impecable y estar equivocada. <em>Regla:</em> los datos van en CSV o JSON versionados, y la página los lee.</li>
+<li><strong>Cifras inventadas o “ilustrativas” que se vuelven reales.</strong> Toda demostración con datos sintéticos debe decirlo en la misma vista, no solo al pie del documento.</li>
+<li><strong>Código difícil de mantener.</strong> Cien líneas de JavaScript sin estructura son fáciles de crear y difíciles de modificar. Conviene separar datos, estilo y lógica, y documentar el propósito de cada pieza.</li>
+<li><strong>Accesibilidad.</strong> Los gráficos SVG necesitan <code>aria-label</code> y alternativas textuales; las tablas HTML reales son preferibles a tablas dibujadas.</li>
+<li><strong>Versión imprimible.</strong> Informes, artículos y documentos oficiales siguen necesitando una imagen estática o un PDF. Ahí, ggplot2 y Matplotlib siguen siendo la mejor opción.</li>
+<li><strong>Seguridad.</strong> Una página que inserta texto de fuentes externas con <code>innerHTML</code> puede ejecutar código no deseado. Para datos de terceros, usa <code>textContent</code> o escapa los valores.</li>
+</ol>
+</section>
+<section id="recomendación-para-el-sitio-y-para-la-scr" class="level2">
+<h2 class="anchored" data-anchor-id="recomendación-para-el-sitio-y-para-la-scr">Recomendación para el sitio y para la SCR</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Situación</th>
+<th>Herramienta recomendada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Notebook de análisis reproducible (CRC, indicadores, series del IDEAM)</td>
+<td><strong>ggplot2</strong> o <strong>Matplotlib/Seaborn</strong>; interactivo con <strong>Plotly</strong> si se publica en la web</td>
+</tr>
+<tr class="even">
+<td>Gráfica interactiva estándar dentro de una página Quarto</td>
+<td><strong>Plotly</strong> (R o Python) u <strong>Observable Plot</strong> con OJS</td>
+</tr>
+<tr class="odd">
+<td>Vistas enlazadas (seleccionar en una y filtrar otra) desde Python</td>
+<td><strong>Altair</strong></td>
+</tr>
+<tr class="even">
+<td>Explicador, diapositiva interactiva, esquema que se recorre, tablero pequeño</td>
+<td><strong>HTML/CSS/SVG nativo</strong>, con datos en archivo aparte</td>
+</tr>
+<tr class="odd">
+<td>Redes, jerarquías, mapas proyectados a medida, transiciones</td>
+<td><strong>D3.js</strong></td>
+</tr>
+<tr class="even">
+<td>Tableros vistosos de series de tiempo</td>
+<td><strong>Highcharter</strong>, solo si la licencia lo permite; si no, Plotly</td>
+</tr>
+</tbody>
+</table>
+<p>El árbol de decisión de la demostración resume esta tabla de forma interactiva.</p>
+</section>
+<section id="demostración-elementos-interactivos-en-html-puro" class="level2">
+<h2 class="anchored" data-anchor-id="demostración-elementos-interactivos-en-html-puro">Demostración: elementos interactivos en HTML puro</h2>
+<p>Las cuatro piezas siguientes están hechas solo con HTML, CSS, SVG y JavaScript, sin bibliotecas. Todo está en un único archivo de unos 25 KB, frente a los más de 4 MB de plotly.js completo. Los datos son <strong>sintéticos</strong> y se generan en el navegador con una semilla fija, para que siempre den lo mismo.</p>
+<ol type="1">
+<li><strong>Tabla:</strong> ordenar, filtrar, buscar, barras en celdas y minigráficos de tendencia.</li>
+<li><strong>Esquema:</strong> árbol de decisión que se recorre respondiendo preguntas.</li>
+<li><strong>Figuras enlazadas:</strong> mapa de calor mes × año que controla un gráfico de barras.</li>
+<li><strong>Serie temporal:</strong> nivel de río con umbrales de alerta, zoom por arrastre, media móvil y lectura día a día.</li>
+</ol>
+<p><a href="demos/visualizacion-html.html" class="btn btn-outline-primary" target="_blank">Abrir la demostración en pantalla completa</a></p>
+<iframe id="demo-html" src="demos/visualizacion-html.html" title="Demostración de tabla, esquema, figuras y serie temporal en HTML" style="width:100%;min-height:1400px;border:1px solid #e2e8eb;border-radius:8px" loading="lazy"></iframe>
+<script>
+  window.addEventListener('message', function (e) {
+    if (e.data && e.data.demoHeight) {
+      document.getElementById('demo-html').style.height = (e.data.demoHeight + 24) + 'px';
+    }
+  });
+</script>
+</section>
+<section id="recursos" class="level2">
+<h2 class="anchored" data-anchor-id="recursos">Recursos</h2>
+<section id="python" class="level3">
+<h3 class="anchored" data-anchor-id="python">Python</h3>
 <ul>
-<li>Documentación oficial. <a href="https://seaborn.pydata.org/"><em>Link</em></a>.</li>
-<li>Galería de ejemplos. <a href="https://seaborn.pydata.org/examples/index.html"><em>Link</em></a>.</li>
+<li><strong>Matplotlib:</strong> <a href="https://matplotlib.org/">documentación</a> · <a href="https://matplotlib.org/stable/tutorials/index.html">tutoriales</a></li>
+<li><strong>Seaborn:</strong> <a href="https://seaborn.pydata.org/">documentación</a> · <a href="https://seaborn.pydata.org/examples/index.html">galería</a></li>
+<li><strong>Plotly:</strong> <a href="https://plotly.com/python/">Plotly Python</a> · <a href="https://plotly.com/python/plotly-express/">Plotly Express</a></li>
+<li><strong>Altair:</strong> <a href="https://altair-viz.github.io/">documentación</a> · <a href="https://altair-viz.github.io/gallery/index.html">galería</a></li>
+<li><strong>Tablas:</strong> <a href="https://mwouts.github.io/itables/">itables</a> · <a href="https://posit-dev.github.io/great-tables/">great_tables</a></li>
 </ul>
 </section>
-<section id="plotly" class="level3">
-<h3 class="anchored" data-anchor-id="plotly">Plotly</h3>
+<section id="r" class="level3">
+<h3 class="anchored" data-anchor-id="r">R</h3>
 <ul>
-<li>Documentación oficial de Plotly Python. <a href="https://plotly.com/python/"><em>Link</em></a>.</li>
-<li>Plotly Express. <a href="https://plotly.com/python/plotly-express/"><em>Link</em></a>.</li>
+<li><strong>ggplot2:</strong> <a href="https://ggplot2.tidyverse.org/">documentación</a> · <a href="https://r-graphics.org/">R Graphics Cookbook</a> · <a href="https://exts.ggplot2.tidyverse.org/">extensiones</a></li>
+<li><strong>Plotly R:</strong> <a href="https://plotly.com/r/">documentación</a> · <a href="https://plotly-r.com/">libro de Plotly R</a></li>
+<li><strong>Highcharter:</strong> <a href="https://jkunst.com/highcharter/">documentación</a> · <a href="https://jkunst.com/highcharter/articles/highcharts.html">ejemplos</a> · <a href="https://www.highcharts.com/education/">licencia de Highcharts</a></li>
+<li><strong>Tablas:</strong> <a href="https://gt.rstudio.com/">gt</a> · <a href="https://glin.github.io/reactable/">reactable</a> · <a href="https://rstudio.github.io/DT/">DT</a></li>
 </ul>
 </section>
-<section id="altair" class="level3">
-<h3 class="anchored" data-anchor-id="altair">Altair</h3>
+<section id="web-javascript-html-y-svg" class="level3">
+<h3 class="anchored" data-anchor-id="web-javascript-html-y-svg">Web (JavaScript, HTML y SVG)</h3>
 <ul>
-<li>Documentación oficial. <a href="https://altair-viz.github.io/"><em>Link</em></a>.</li>
-<li>Galería de ejemplos. <a href="https://altair-viz.github.io/gallery/index.html"><em>Link</em></a>.</li>
+<li><a href="https://d3js.org/">D3.js</a> · <a href="https://observablehq.com/plot/">Observable Plot</a> · <a href="https://vega.github.io/vega-lite/">Vega-Lite</a></li>
+<li><a href="https://quarto.org/docs/interactive/ojs/">Quarto: interactividad con OJS</a> · <a href="https://quarto.org/docs/authoring/diagrams.html">Quarto: diagramas con Mermaid y Graphviz</a></li>
+<li><a href="https://developer.mozilla.org/es/docs/Web/SVG/Tutorial">MDN: tutorial de SVG</a></li>
+<li>Página de este sitio: <a href="../datascience/d3.html">D3, Observable y JS</a></li>
 </ul>
 </section>
-</section>
-<section id="r" class="level2">
-<h2 class="anchored" data-anchor-id="r">R</h2>
-<section id="ggplot2" class="level3">
-<h3 class="anchored" data-anchor-id="ggplot2">ggplot2</h3>
+<section id="generales" class="level3">
+<h3 class="anchored" data-anchor-id="generales">Generales</h3>
 <ul>
-<li>Documentación oficial. <a href="https://ggplot2.tidyverse.org/"><em>Link</em></a>.</li>
-<li>R Graphics Cookbook. <a href="https://r-graphics.org/"><em>Link</em></a>.</li>
-<li>ggplot2 extensions. <a href="https://exts.ggplot2.tidyverse.org/"><em>Link</em></a>.</li>
-</ul>
-</section>
-<section id="plotly-r" class="level3">
-<h3 class="anchored" data-anchor-id="plotly-r">Plotly R</h3>
-<ul>
-<li>Documentación oficial. <a href="https://plotly.com/r/"><em>Link</em></a>.</li>
-<li>Plotly R book. <a href="https://plotly-r.com/"><em>Link</em></a>.</li>
-</ul>
-</section>
-<section id="highcharter" class="level3">
-<h3 class="anchored" data-anchor-id="highcharter">Highcharter</h3>
-<ul>
-<li>Documentación oficial. <a href="https://jkunst.com/highcharter/"><em>Link</em></a>.</li>
-<li>Ejemplos. <a href="https://jkunst.com/highcharter/articles/highcharts.html"><em>Link</em></a>.</li>
+<li><a href="https://datavizcatalogue.com/">Data Visualization Catalogue</a> · <a href="https://www.data-to-viz.com/">From Data to Viz</a> · <a href="https://r-graph-gallery.com/">The R Graph Gallery</a> · <a href="https://python-graph-gallery.com/">Python Graph Gallery</a></li>
 </ul>
 </section>
 </section>
-<section id="recursos-generales" class="level2">
-<h2 class="anchored" data-anchor-id="recursos-generales">Recursos generales</h2>
-<ul>
-<li>Data Visualization Catalogue. <a href="https://datavizcatalogue.com/"><em>Link</em></a>.</li>
-<li>From Data to Viz. <a href="https://www.data-to-viz.com/"><em>Link</em></a>.</li>
-<li>The R Graph Gallery. <a href="https://r-graph-gallery.com/"><em>Link</em></a>.</li>
-<li>Python Graph Gallery. <a href="https://python-graph-gallery.com/"><em>Link</em></a>.</li>
-</ul>
-</section>
+<section id="anexo-pruebas-anteriores" class="level1">
+<h1>Anexo: pruebas anteriores</h1>
+<p>Las pruebas que tenía esta página se conservan sin cambios.</p>
 <section id="pruebas" class="level2">
 <h2 class="anchored" data-anchor-id="pruebas">Pruebas</h2>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Ocultar/Mostrar código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalar plotly si no está instalado</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"plotly"</span>)) {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">"plotly"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(plotly)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>fig <span class="ot">&lt;-</span> <span class="fu">plot_ly</span>(</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">'scatterpolar'</span>,</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">'toself'</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>fig <span class="ot">&lt;-</span> fig <span class="sc">%&gt;%</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_trace</span>(</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">r =</span> <span class="fu">c</span>(<span class="dv">39</span>, <span class="dv">28</span>, <span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">28</span>, <span class="dv">39</span>),</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">theta =</span> <span class="fu">c</span>(<span class="st">'A'</span>,<span class="st">'B'</span>,<span class="st">'C'</span>, <span class="st">'D'</span>, <span class="st">'E'</span>, <span class="st">'A'</span>),</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">'Group A'</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>fig <span class="ot">&lt;-</span> fig <span class="sc">%&gt;%</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_trace</span>(</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">r =</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="dv">10</span>, <span class="dv">39</span>, <span class="dv">31</span>, <span class="dv">15</span>, <span class="fl">1.5</span>),</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">theta =</span> <span class="fu">c</span>(<span class="st">'A'</span>,<span class="st">'B'</span>,<span class="st">'C'</span>, <span class="st">'D'</span>, <span class="st">'E'</span>, <span class="st">'A'</span>),</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">'Group B'</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>fig <span class="ot">&lt;-</span> fig <span class="sc">%&gt;%</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">polar =</span> <span class="fu">list</span>(</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>      <span class="at">radialaxis =</span> <span class="fu">list</span>(</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        <span class="at">visible =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        <span class="at">range =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">50</span>)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>fig</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalar plotly si no está instalado</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"plotly"</span>)) {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">"plotly"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(plotly)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>fig <span class="ot">&lt;-</span> <span class="fu">plot_ly</span>(</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">'scatterpolar'</span>,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">'toself'</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>fig <span class="ot">&lt;-</span> fig <span class="sc">%&gt;%</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_trace</span>(</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">r =</span> <span class="fu">c</span>(<span class="dv">39</span>, <span class="dv">28</span>, <span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">28</span>, <span class="dv">39</span>),</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">theta =</span> <span class="fu">c</span>(<span class="st">'A'</span>,<span class="st">'B'</span>,<span class="st">'C'</span>, <span class="st">'D'</span>, <span class="st">'E'</span>, <span class="st">'A'</span>),</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">'Group A'</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>fig <span class="ot">&lt;-</span> fig <span class="sc">%&gt;%</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_trace</span>(</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">r =</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="dv">10</span>, <span class="dv">39</span>, <span class="dv">31</span>, <span class="dv">15</span>, <span class="fl">1.5</span>),</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">theta =</span> <span class="fu">c</span>(<span class="st">'A'</span>,<span class="st">'B'</span>,<span class="st">'C'</span>, <span class="st">'D'</span>, <span class="st">'E'</span>, <span class="st">'A'</span>),</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">'Group B'</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>fig <span class="ot">&lt;-</span> fig <span class="sc">%&gt;%</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">polar =</span> <span class="fu">list</span>(</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>      <span class="at">radialaxis =</span> <span class="fu">list</span>(</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>        <span class="at">visible =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>        <span class="at">range =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">50</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>fig</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item" id="htmlwidget-cb02c9ceb983905f29e0" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-cb02c9ceb983905f29e0">{"x":{"visdat":{"bf7533bd2fde":["function () ","plotlyVisDat"]},"cur_data":"bf7533bd2fde","attrs":{"bf7533bd2fde":{"fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"bf7533bd2fde.1":{"fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":[39,28,8,7,28,39],"theta":["A","B","C","D","E","A"],"name":"Group A","inherit":true},"bf7533bd2fde.2":{"fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":[1.5,10,39,31,15,1.5],"theta":["A","B","C","D","E","A"],"name":"Group B","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"radialaxis":{"visible":true,"range":[0,50]}},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","fill":"toself","type":"scatterpolar","mode":"markers","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","fill":"toself","type":"scatterpolar","r":[39,28,8,7,28,39],"theta":["A","B","C","D","E","A"],"name":"Group A","mode":"markers","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"line":{"color":"rgba(255,127,14,1)"},"frame":null},{"fillcolor":"rgba(44,160,44,0.5)","fill":"toself","type":"scatterpolar","r":[1.5,10,39,31,15,1.5],"theta":["A","B","C","D","E","A"],"name":"Group B","mode":"markers","marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"line":{"color":"rgba(44,160,44,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-d856e8ec8ca32eeb280d" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-d856e8ec8ca32eeb280d">{"x":{"visdat":{"14fdd6a47b49b":["function () ","plotlyVisDat"]},"cur_data":"14fdd6a47b49b","attrs":{"14fdd6a47b49b":{"fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"14fdd6a47b49b.1":{"fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":[39,28,8,7,28,39],"theta":["A","B","C","D","E","A"],"name":"Group A","inherit":true},"14fdd6a47b49b.2":{"fill":"toself","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":[1.5,10,39,31,15,1.5],"theta":["A","B","C","D","E","A"],"name":"Group B","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"polar":{"radialaxis":{"visible":true,"range":[0,50]}},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","fill":"toself","type":"scatterpolar","mode":"markers","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"fillcolor":"rgba(255,127,14,0.5)","fill":"toself","type":"scatterpolar","r":[39,28,8,7,28,39],"theta":["A","B","C","D","E","A"],"name":"Group A","mode":"markers","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"line":{"color":"rgba(255,127,14,1)"},"frame":null},{"fillcolor":"rgba(44,160,44,0.5)","fill":"toself","type":"scatterpolar","r":[1.5,10,39,31,15,1.5],"theta":["A","B","C","D","E","A"],"name":"Group B","mode":"markers","marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"line":{"color":"rgba(44,160,44,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -1633,12 +2064,12 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiado");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiado");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -2016,7 +2447,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
     </div>   
     <div class="nav-footer-center">
 <p>Made with ❤️ and Quarto</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Informar sobre problema</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

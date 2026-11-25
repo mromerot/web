@@ -1,57 +1,227 @@
 ---
-title: "Graficas Python y R"
-format: html
+title: "Gráficas en HTML frente a Python, R, D3 y Plotly"
+subtitle: "Cuándo usar cada enfoque para gráficas, tablas, esquemas y figuras, con una demostración interactiva"
+author: "Mauricio Romero Torres"
+date: 2026-11-25
+date-modified: 2026-11-25
+lang: es
+format:
+  html:
+    code-copy: true
+resources:
+  - demos/visualizacion-html.html
 editor: visual
 ---
 
-# **Recursos de visualización de datos**
+::: {.callout-tip title="En resumen"}
+- **No hay que elegir una sola herramienta.** Lo más eficiente es repartir el trabajo por capas:
+    - **Análisis y publicación impresa:** ggplot2 o Matplotlib/Seaborn.
+    - **Gráficas interactivas estándar, desde el mismo código:** Plotly, Altair o Highcharter.
+    - **Piezas a la medida para la web:** HTML/CSS/SVG nativo cuando son sencillas; D3 cuando son complejas (narrativa, explicadores, tableros pequeños, esquemas).
+- **El HTML nativo es la opción más flexible y liviana.** Además, es la que mejor producen los asistentes de IA. Su punto débil es la reproducibilidad: los datos tienen que vivir en archivos versionados, no escritos a mano dentro de la página.
+- **Para un sitio en Quarto como este**, recomiendo Python o R como base, `{=html}` u OJS para piezas especiales, y una regla fija: toda cifra visible debe poder rastrearse a un archivo de datos del repositorio.
+:::
 
-## Python
+## Por qué volver a esta pregunta
 
-### Matplotlib
+Las publicaciones recientes en redes sobre "pedirle a una IA una diapositiva en HTML" muestran algo que los equipos de ciencia de datos venían viendo: un solo archivo HTML puede tener tablas que se ordenan, gráficos que responden al tacto, esquemas que se recorren paso a paso y controles que recalculan escenarios. Antes, eso exigía D3 o una biblioteca de tableros. Hoy un asistente lo escribe en minutos.
 
--   Documentación oficial. [*Link*](https://matplotlib.org/).
--   Tutoriales de Matplotlib. [*Link*](https://matplotlib.org/stable/tutorials/index.html).
+Eso cambia el costo de producir visualizaciones a la medida. Pero no cambia lo que hace confiable una gráfica: datos rastreables, código reproducible y un diseño que no engañe. Este artículo compara los enfoques con ese criterio.
 
-### Seaborn
+## Cuatro familias de herramientas
 
--   Documentación oficial. [*Link*](https://seaborn.pydata.org/).
--   Galería de ejemplos. [*Link*](https://seaborn.pydata.org/examples/index.html).
+La frontera entre "HTML" y "otros lenguajes" es más difusa de lo que parece. Plotly, Altair y Highcharter **también producen HTML y JavaScript**; la diferencia está en quién escribe ese código y desde dónde se controlan los datos.
 
-### Plotly
+| Familia | Ejemplos | Qué escribes | Qué obtienes |
+|---|---|---|---|
+| **1. Gráficas estáticas** | Matplotlib, Seaborn, ggplot2 | Python o R | Imagen (PNG, SVG, PDF) |
+| **2. Envoltorios interactivos** | Plotly (Python/R), Altair, Highcharter, Bokeh | Python o R | HTML + JS generado automáticamente |
+| **3. Gramáticas para la web** | Observable Plot, Vega-Lite, Quarto OJS | JavaScript declarativo | HTML + SVG |
+| **4. Control total en el navegador** | D3.js, HTML/CSS/SVG nativo | JavaScript, HTML y CSS | Cualquier cosa que el navegador pueda dibujar |
 
--   Documentación oficial de Plotly Python. [*Link*](https://plotly.com/python/).
--   Plotly Express. [*Link*](https://plotly.com/python/plotly-express/).
+## Los paquetes de esta entrada, uno por uno
 
-### Altair
+La versión anterior de esta página listaba siete paquetes. Así se ubican:
 
--   Documentación oficial. [*Link*](https://altair-viz.github.io/).
--   Galería de ejemplos. [*Link*](https://altair-viz.github.io/gallery/index.html).
+| Paquete | Lenguaje | Cómo dibuja | Interactividad | Mejor para | Cuidado con |
+|---|---|---|---|---|---|
+| **Matplotlib** | Python | Motor propio → imagen | Mínima en la web | Figuras de artículos, control fino de cada elemento | Código largo para estilos cuidados |
+| **Seaborn** | Python | Sobre Matplotlib | Mínima | Exploración estadística (distribuciones, regresiones, facetas) | Menos control fino que Matplotlib |
+| **Plotly** | Python | Genera plotly.js | Alta: zoom, tooltips, leyendas | Interactividad lista desde notebooks y Quarto | Peso del archivo; estilo "Plotly" reconocible |
+| **Altair** | Python | Genera una especificación Vega-Lite | Media-alta: selecciones enlazadas | Gramática declarativa clara; vistas enlazadas | Por defecto limita los datos incrustados a 5.000 filas |
+| **ggplot2** | R | Gramática de gráficos → imagen | Ninguna sin extensiones (`ggplotly`, `ggiraph`) | El estándar para figuras reproducibles en R | Requiere extensiones para la web |
+| **Plotly R** | R | Genera plotly.js | Alta | Lo mismo que en Python, más `ggplotly()` | Igual que Plotly Python |
+| **Highcharter** | R | Envuelve Highcharts | Alta, muy pulida | Series de tiempo y tableros vistosos | **Licencia:** gratis solo para uso personal o educativo no comercial |
 
-## R
+Dos datos concretos para el contexto institucional:
 
-### ggplot2
+- **Peso de Plotly.** La biblioteca completa de plotly.js pesa cerca de 4,8 MB minificada (unos 1,5 MB comprimida) según su propia documentación de distribución. Existen paquetes parciales más livianos ([detalles](https://unpkg.com/plotly.js/dist/README.md)).
+- **Licencia de Highcharts.** Las Highcharts exigen licencia comercial para proyectos de empresas, trabajo para clientes u operación interna. El uso educativo gratuito excluye el uso operativo institucional ([Highcharts for Education](https://www.highcharts.com/education/)). Para una entidad pública, conviene revisarlo antes de adoptarlo.
 
--   Documentación oficial. [*Link*](https://ggplot2.tidyverse.org/).
--   R Graphics Cookbook. [*Link*](https://r-graphics.org/).
--   ggplot2 extensions. [*Link*](https://exts.ggplot2.tidyverse.org/).
+## Comparación por criterios
 
-### Plotly R
+| Criterio | Python / R estático | Plotly · Altair · Highcharter | D3.js | HTML/CSS/SVG nativo |
+|---|---|---|---|---|
+| Curva de aprendizaje | Baja si ya analizas en ese lenguaje | Baja | **Alta** | Media (baja con asistencia de IA) |
+| Reproducibilidad desde los datos | **Excelente** | **Excelente** | Buena si lee CSV/JSON | Depende de la disciplina: riesgo de datos "pegados" |
+| Control del diseño | Alto (con esfuerzo) | Medio | **Total** | **Total** |
+| Interactividad | No | Alta, estándar | Ilimitada | Ilimitada |
+| Peso y dependencias | Imagen liviana | Bibliotecas de cientos de KB a varios MB | ~90 KB comprimido | **Ninguna** |
+| Funciona sin conexión / un solo archivo | Sí | Con biblioteca incrustada | Con biblioteca incrustada | **Sí, de forma natural** |
+| Impresión y PDF | **Excelente** | Requiere exportar imagen | Requiere versión estática | Requiere versión estática |
+| Muchos datos (>100.000 puntos) | Bien | Bien (Plotly con WebGL) | Con Canvas/WebGL | Con Canvas; SVG se vuelve lento |
+| Accesibilidad | Texto alternativo | Parcial | Depende del autor | Depende del autor (tablas HTML son las más accesibles) |
+| Mantenimiento a 5 años | Alto | Alto (dependes del proveedor) | Medio | Medio: el código queda "suelto" |
+| Generación con IA | Buena | Buena | Buena | **La mejor**: un archivo, sin compilación |
 
--   Documentación oficial. [*Link*](https://plotly.com/r/).
--   Plotly R book. [*Link*](https://plotly-r.com/).
+## Más allá de las gráficas: tablas, esquemas y figuras
 
-### Highcharter
+| Elemento | En Python / R | En HTML nativo | Comentario |
+|---|---|---|---|
+| **Tablas** | `gt`, `reactable`, `DT` (R); `itables`, `great_tables` (Python) | `<table>` con ordenar, filtrar y barras en celdas | Las tablas HTML son el formato más accesible y copiable. Los paquetes de R/Python ya generan HTML de calidad. |
+| **Esquemas y diagramas** | Mermaid y Graphviz integrados en Quarto | SVG a mano o generado por script, con estados interactivos | Mermaid basta para flujos estáticos; un esquema que se recorre (árbol de decisión, cadena de alerta) pide HTML/SVG. |
+| **Figuras ilustrativas** | Limitado | SVG con capas, gradientes y animación | Para explicar un mecanismo (cómo se forma un lahar, cómo viaja una alerta), el SVG es superior. |
+| **Mapas** | `sf` + `tmap`/`leaflet` (R); `geopandas` + `folium` (Python) | MapLibre + PMTiles (como en el anexo de esta página) | Para mapas vectoriales grandes, MapLibre con PMTiles es liviano y no necesita servidor. |
 
--   Documentación oficial. [*Link*](https://jkunst.com/highcharter/).
--   Ejemplos. [*Link*](https://jkunst.com/highcharter/articles/highcharts.html).
+## El mismo gráfico en cuatro lenguajes
 
-## Recursos generales
+Eventos por mes, en barras. La extensión del código ilustra el compromiso entre conveniencia y control.
 
--   Data Visualization Catalogue. [*Link*](https://datavizcatalogue.com/).
--   From Data to Viz. [*Link*](https://www.data-to-viz.com/).
--   The R Graph Gallery. [*Link*](https://r-graph-gallery.com/).
--   Python Graph Gallery. [*Link*](https://python-graph-gallery.com/).
+::: {.panel-tabset}
+
+### ggplot2 (R)
+
+```r
+library(ggplot2)
+eventos <- read.csv("data/eventos_mes.csv")
+ggplot(eventos, aes(mes, n)) +
+  geom_col(fill = "#0b6e99") +
+  labs(x = NULL, y = "Eventos") +
+  theme_minimal()
+```
+
+### Plotly (Python)
+
+```python
+import pandas as pd
+import plotly.express as px
+eventos = pd.read_csv("data/eventos_mes.csv")
+fig = px.bar(eventos, x="mes", y="n", labels={"n": "Eventos", "mes": ""})
+fig.show()   # o fig.write_html("eventos.html")
+```
+
+### D3.js
+
+```js
+const datos = await d3.csv("data/eventos_mes.csv", d3.autoType);
+const x = d3.scaleBand(datos.map(d => d.mes), [40, 600]).padding(0.1);
+const y = d3.scaleLinear([0, d3.max(datos, d => d.n)], [300, 10]);
+const svg = d3.select("#grafico").append("svg").attr("viewBox", "0 0 620 330");
+svg.selectAll("rect").data(datos).join("rect")
+  .attr("x", d => x(d.mes)).attr("width", x.bandwidth())
+  .attr("y", d => y(d.n)).attr("height", d => 300 - y(d.n))
+  .attr("fill", "#0b6e99");
+svg.append("g").attr("transform", "translate(0,300)").call(d3.axisBottom(x));
+svg.append("g").attr("transform", "translate(40,0)").call(d3.axisLeft(y));
+```
+
+### HTML + CSS nativo
+
+```html
+<div class="barras" id="grafico"></div>
+<style>
+  .barras { display:flex; gap:4px; height:200px; align-items:flex-end }
+  .barras div { flex:1; background:#0b6e99; border-radius:4px 4px 0 0 }
+</style>
+<script>
+fetch("data/eventos_mes.json").then(r => r.json()).then(datos => {
+  const max = Math.max(...datos.map(d => d.n));
+  document.getElementById("grafico").innerHTML = datos
+    .map(d => `<div style="height:${d.n / max * 100}%" title="${d.mes}: ${d.n}"></div>`)
+    .join("");
+});
+</script>
+```
+
+:::
+
+Observa que **los cuatro leen los datos de un archivo**. Esa es la regla que mantiene confiable cualquier enfoque.
+
+## Riesgos de las gráficas HTML hechas a mano o con IA
+
+1. **Datos incrustados sin fuente.** Un asistente tiende a escribir los números dentro del código. Si nadie los verifica, la gráfica puede verse impecable y estar equivocada. *Regla:* los datos van en CSV o JSON versionados, y la página los lee.
+2. **Cifras inventadas o "ilustrativas" que se vuelven reales.** Toda demostración con datos sintéticos debe decirlo en la misma vista, no solo al pie del documento.
+3. **Código difícil de mantener.** Cien líneas de JavaScript sin estructura son fáciles de crear y difíciles de modificar. Conviene separar datos, estilo y lógica, y documentar el propósito de cada pieza.
+4. **Accesibilidad.** Los gráficos SVG necesitan `aria-label` y alternativas textuales; las tablas HTML reales son preferibles a tablas dibujadas.
+5. **Versión imprimible.** Informes, artículos y documentos oficiales siguen necesitando una imagen estática o un PDF. Ahí, ggplot2 y Matplotlib siguen siendo la mejor opción.
+6. **Seguridad.** Una página que inserta texto de fuentes externas con `innerHTML` puede ejecutar código no deseado. Para datos de terceros, usa `textContent` o escapa los valores.
+
+## Recomendación para el sitio y para la SCR
+
+| Situación | Herramienta recomendada |
+|---|---|
+| Notebook de análisis reproducible (CRC, indicadores, series del IDEAM) | **ggplot2** o **Matplotlib/Seaborn**; interactivo con **Plotly** si se publica en la web |
+| Gráfica interactiva estándar dentro de una página Quarto | **Plotly** (R o Python) u **Observable Plot** con OJS |
+| Vistas enlazadas (seleccionar en una y filtrar otra) desde Python | **Altair** |
+| Explicador, diapositiva interactiva, esquema que se recorre, tablero pequeño | **HTML/CSS/SVG nativo**, con datos en archivo aparte |
+| Redes, jerarquías, mapas proyectados a medida, transiciones | **D3.js** |
+| Tableros vistosos de series de tiempo | **Highcharter**, solo si la licencia lo permite; si no, Plotly |
+
+El árbol de decisión de la demostración resume esta tabla de forma interactiva.
+
+## Demostración: elementos interactivos en HTML puro
+
+Las cuatro piezas siguientes están hechas solo con HTML, CSS, SVG y JavaScript, sin bibliotecas. Todo está en un único archivo de unos 25 KB, frente a los más de 4 MB de plotly.js completo. Los datos son **sintéticos** y se generan en el navegador con una semilla fija, para que siempre den lo mismo.
+
+1. **Tabla:** ordenar, filtrar, buscar, barras en celdas y minigráficos de tendencia.
+2. **Esquema:** árbol de decisión que se recorre respondiendo preguntas.
+3. **Figuras enlazadas:** mapa de calor mes × año que controla un gráfico de barras.
+4. **Serie temporal:** nivel de río con umbrales de alerta, zoom por arrastre, media móvil y lectura día a día.
+
+[Abrir la demostración en pantalla completa](demos/visualizacion-html.html){.btn .btn-outline-primary target="_blank"}
+
+```{=html}
+<iframe id="demo-html" src="demos/visualizacion-html.html" title="Demostración de tabla, esquema, figuras y serie temporal en HTML" style="width:100%;min-height:1400px;border:1px solid #e2e8eb;border-radius:8px" loading="lazy"></iframe>
+<script>
+  window.addEventListener('message', function (e) {
+    if (e.data && e.data.demoHeight) {
+      document.getElementById('demo-html').style.height = (e.data.demoHeight + 24) + 'px';
+    }
+  });
+</script>
+```
+
+## Recursos
+
+### Python
+
+- **Matplotlib:** [documentación](https://matplotlib.org/) · [tutoriales](https://matplotlib.org/stable/tutorials/index.html)
+- **Seaborn:** [documentación](https://seaborn.pydata.org/) · [galería](https://seaborn.pydata.org/examples/index.html)
+- **Plotly:** [Plotly Python](https://plotly.com/python/) · [Plotly Express](https://plotly.com/python/plotly-express/)
+- **Altair:** [documentación](https://altair-viz.github.io/) · [galería](https://altair-viz.github.io/gallery/index.html)
+- **Tablas:** [itables](https://mwouts.github.io/itables/) · [great_tables](https://posit-dev.github.io/great-tables/)
+
+### R
+
+- **ggplot2:** [documentación](https://ggplot2.tidyverse.org/) · [R Graphics Cookbook](https://r-graphics.org/) · [extensiones](https://exts.ggplot2.tidyverse.org/)
+- **Plotly R:** [documentación](https://plotly.com/r/) · [libro de Plotly R](https://plotly-r.com/)
+- **Highcharter:** [documentación](https://jkunst.com/highcharter/) · [ejemplos](https://jkunst.com/highcharter/articles/highcharts.html) · [licencia de Highcharts](https://www.highcharts.com/education/)
+- **Tablas:** [gt](https://gt.rstudio.com/) · [reactable](https://glin.github.io/reactable/) · [DT](https://rstudio.github.io/DT/)
+
+### Web (JavaScript, HTML y SVG)
+
+- [D3.js](https://d3js.org/) · [Observable Plot](https://observablehq.com/plot/) · [Vega-Lite](https://vega.github.io/vega-lite/)
+- [Quarto: interactividad con OJS](https://quarto.org/docs/interactive/ojs/) · [Quarto: diagramas con Mermaid y Graphviz](https://quarto.org/docs/authoring/diagrams.html)
+- [MDN: tutorial de SVG](https://developer.mozilla.org/es/docs/Web/SVG/Tutorial)
+- Página de este sitio: [D3, Observable y JS](d3.qmd)
+
+### Generales
+
+- [Data Visualization Catalogue](https://datavizcatalogue.com/) · [From Data to Viz](https://www.data-to-viz.com/) · [The R Graph Gallery](https://r-graph-gallery.com/) · [Python Graph Gallery](https://python-graph-gallery.com/)
+
+# Anexo: pruebas anteriores
+
+Las pruebas que tenía esta página se conservan sin cambios.
 
 ## Pruebas
 
