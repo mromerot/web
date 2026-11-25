@@ -192,7 +192,7 @@ website:
                 href: cyt/escrituraypublicacionacademica/typst.qmd
           - text: "Ciencia reproducible"
             href: cyt/cienciareproduc.qmd
-          - text: "Ciencia transdiciplinar"
+          - text: "Ciencia transdisciplinar"
             href: cyt/transdisciplina.qmd
           - text: "Interfaz ciencia-política-sociedad"
             href: cyt/interfaz-cps.qmd
@@ -221,7 +221,7 @@ website:
             href: datascience/myst.qmd
           - text: "Markdown"
             href: datascience/markdown.md
-          - text: "Github"
+          - text: "GitHub"
             href: datascience/github.qmd
           - text: "Google Colab"
             href: datascience/google-colab.qmd

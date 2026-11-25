@@ -1,0 +1,95 @@
+REPOSITORIO,personas_humanas,personas_ubicadas,ubicaciones,DEPARTAMENTO,AMENAZA_ESPECIFICA,commits_asistente_ia,commits_bot
+https://github.com/18orkidea/monitor-terremoto-colombia,3,0,,,Terremoto (sismo),False,False
+https://github.com/Agustin-ech/Sistema-de-Alerta-Temprana-Inteligente-para-la-Prediccion-y-Control-del-Dengue-en-Bucaramanga,1,0,,,Dengue,False,False
+https://github.com/AlejandroGuevara-hub/zafiro-earthquakes,3,0,,,Terremoto (sismo),False,False
+https://github.com/AnabelleCouleau/landslides,2,1,Antioquia (1),Antioquia,Movimiento en masa gravitacional (“deslizamiento”),False,False
+https://github.com/AsymmetricFrequency/pulso,2,0,,Sin especificar (Colombia),POR DETERMINAR,False,False
+https://github.com/Camil0MV/dengue-colombia-analisis,2,2,Antioquia (2),Antioquia,Dengue,False,False
+https://github.com/CamiloBedoyaC/mjo-atmospheric-stability,2,2,Antioquia (2),Antioquia,POR DETERMINAR,False,False
+https://github.com/CamiloBedoyaC/modelo-hidrologico,2,2,Antioquia (2),Antioquia,POR DETERMINAR,False,False
+https://github.com/DanielCamiloRiveraG/RHC_GP,2,0,,"Bogotá, D.C.",Inundación,False,False
+https://github.com/GabrielNM/Atlas,3,2,"Bogotá, D.C. (1); Colombia (sin departamento) (1)",Sin especificar (Colombia),POR DETERMINAR,False,False
+https://github.com/Guibi1994/Vulnerability-knowledge-and-enforcement-of-labor-rights-in-the-domestic-workforce,1,1,"Bogotá, D.C. (1)","Bogotá, D.C.",POR DETERMINAR,False,False
+https://github.com/IMAGINE-ENGINE-STUDIOS/platform,8,1,Exterior (Estados Unidos) (1),,Terremoto (sismo),True,True
+https://github.com/IRI-Bangladesh-Flood-Insurance-Research/Colombia-ML-Flood-Mapping,2,1,Exterior (Estados Unidos) (1),,Inundación,False,False
+https://github.com/JhonHTipas21/PronosticoInundaciones-V2,3,2,Valle del Cauca (2),Valle del Cauca,Inundación,False,False
+https://github.com/JhonHTipas21/pronostico_inundaciones,4,2,Valle del Cauca (2),Valle del Cauca,Inundación,False,False
+https://github.com/JuanPabloCYT/bigdata-ean-ideam,4,0,,,Lluvia,False,False
+https://github.com/Kromilla/sismos-global,3,1,Magdalena (1),Magdalena,Terremoto (sismo),True,False
+https://github.com/LindaCatalina/jemeiwaa-wind-energy-climate-risk,2,2,Antioquia (2),Antioquia,POR DETERMINAR,False,False
+https://github.com/LindaCatalina/siata-disdrometer-rainfall-microphysics,2,2,Antioquia (2),Antioquia,Lluvia,False,False
+https://github.com/Mariannly/Quark5-CoAfina2025,4,1,Exterior (Ecuador) (1),Exterior (Ecuador),Sequía,False,False
+https://github.com/Milillo-lab/colombia-2026-recon,1,0,,,Terremoto (sismo),False,False
+https://github.com/NASA-Space-Apps-Challenge-two-left-feet/surface_tango,6,0,,,POR DETERMINAR,False,False
+https://github.com/Nicolas-12000/ECOS,4,3,Colombia (sin departamento) (3),Sin especificar (Colombia),Dengue,False,False
+https://github.com/PhDRedondo/ungrd-temas-operativos,3,1,"Bogotá, D.C. (1)","Bogotá, D.C.",POR DETERMINAR,False,False
+https://github.com/SergioRC-04/Punto-seguro,3,1,Atlántico (1),Atlántico,POR DETERMINAR,False,False
+https://github.com/SergioRC-04/Punto_seguro_api,2,1,Atlántico (1),Atlántico,POR DETERMINAR,False,False
+https://github.com/ShadowBlack33/Functional-Rainfall-Bias-Correction,2,1,Valle del Cauca (1),Valle del Cauca,Lluvia,False,False
+https://github.com/al3jandroangel/sat-incendios-cali,1,0,,,Incendios forestales,False,True
+https://github.com/anvelascos/climate_change_col,1,1,Colombia (sin departamento) (1),Sin especificar (Colombia),POR DETERMINAR,False,False
+https://github.com/bailoteo-solidario-utrecht/bailoteo-solidario-utrecht.github.io,2,2,Exterior (Países Bajos) (2),Exterior (Países Bajos),Terremoto (sismo),False,False
+https://github.com/cemanetwork/appmar,3,1,Atlántico (1),,POR DETERMINAR,False,False
+https://github.com/cpedraza79/PatNat-Sentinel-1-Prototipos---Agua-y-Ganancia-perdida-Estructura,2,1,"Bogotá, D.C. (1)","Bogotá, D.C.",Inundación,False,False
+https://github.com/cpedraza79/Silva-Cras-PatNat,2,1,"Bogotá, D.C. (1)","Bogotá, D.C.",POR DETERMINAR,False,False
+https://github.com/cxsarrm/UNGRD-Dashboard,2,2,Boyacá (1); Colombia (sin departamento) (1),,POR DETERMINAR,False,False
+https://github.com/djimenezm2/ayudagente,4,3,"Bogotá, D.C. (3)","Bogotá, D.C.",POR DETERMINAR,False,False
+https://github.com/dymaxionlabs/unetseg-immap-flood-areas,6,4,Exterior (Argentina) (4),Exterior (Argentina),Inundación,False,False
+https://github.com/edieraristizabal/PAPER_RainfallLandslides_Vdea,2,2,Antioquia (1); Colombia (sin departamento) (1),Antioquia,Movimiento en masa gravitacional (“deslizamiento”),False,False
+https://github.com/edieraristizabal/landinv_aburrav,2,2,Antioquia (1); Exterior (Países Bajos) (1),Antioquia,Movimiento en masa gravitacional (“deslizamiento”),False,False
+https://github.com/elcokiin/Andean-Water-Stress-Simulator,2,1,Boyacá (1),Sin especificar (Colombia),Sequía,False,False
+https://github.com/elisaul77/goes16-gallery,1,0,,Antioquia,POR DETERMINAR,False,True
+https://github.com/encontradosco/encontrados,11,3,Colombia (sin departamento) (1); Exterior (Australia) (1); Exterior (Estados Unidos) (1),,Terremoto (sismo),True,True
+https://github.com/fabianheredia/CambioClimatico,2,0,,Sin especificar (Colombia),POR DETERMINAR,False,False
+https://github.com/fabiolexcastro/Col-Per,2,2,Valle del Cauca (2),Valle del Cauca,POR DETERMINAR,False,False
+https://github.com/fabiolexcastro/UgaEthTha,2,2,Valle del Cauca (2),Valle del Cauca,POR DETERMINAR,False,False
+https://github.com/fabiolexcastro/nasaClimateDownload,2,2,Valle del Cauca (2),Valle del Cauca,POR DETERMINAR,False,False
+https://github.com/fabiolexcastro/nex-gddp-cmip6_p1,2,2,Valle del Cauca (2),Valle del Cauca,POR DETERMINAR,False,False
+https://github.com/farithjhg/dengue-colombia-caribe-covariables,1,1,Exterior (Irlanda) (1),Exterior (Irlanda),Dengue,True,False
+https://github.com/federicogmz/instrumentacion-geotecnica,1,1,Antioquia (1),Antioquia,POR DETERMINAR,False,False
+https://github.com/gallardoro-avrchipalo/AVR-Chipalo_Inventario_Movimientos_en_Masa,2,1,Tolima (1),Tolima,Movimiento en masa gravitacional (“deslizamiento”),False,False
+https://github.com/gomez444/EscalaAPI,3,1,Atlántico (1),,POR DETERMINAR,False,False
+https://github.com/ieferreira/Sismologia,1,1,"Bogotá, D.C. (1)","Bogotá, D.C.",Terremoto (sismo),False,False
+https://github.com/innerhaze/Reclassifying-a-Digital-Elevation-Model-in-R-for-Connectivity-Modeling-P-ramo-Case-Study,1,1,Antioquia (1),Antioquia,POR DETERMINAR,False,False
+https://github.com/jasonfabian8/app-ungrd,6,0,,,POR DETERMINAR,False,False
+https://github.com/jduquetr/sismos-3d-colombia,3,0,,,Terremoto (sismo),False,False
+https://github.com/jhayron-perez/BackTrajectories_Colombia,2,0,,,Lluvia,False,False
+https://github.com/jorgealpala/sat-inundaciones-colombia,2,1,"Bogotá, D.C. (1)","Bogotá, D.C.",Inundación,False,True
+https://github.com/juandavidramirez/Nexo-Colombia-Emergencia-2026,1,0,,Sin especificar (Colombia),Terremoto (sismo),False,True
+https://github.com/juankamn/pronostico-dengue-aa-v,2,0,,Sin especificar (Colombia),Dengue,False,False
+https://github.com/juarroyave-cloud/red-sismo-colombia,1,0,,,Terremoto (sismo),False,False
+https://github.com/jussalcedoga/pulso-colombia,1,0,,,Terremoto (sismo),False,True
+https://github.com/lsperezm/Sismologia_Sismica,4,0,,"Bogotá, D.C.",Terremoto (sismo),False,False
+https://github.com/lunagalarcio/hackatonUTS2026,2,0,,,POR DETERMINAR,False,False
+https://github.com/m0t0r/bvalue-tracker,1,0,,,Terremoto (sismo),True,True
+https://github.com/masantizof/escenarios-incendios-sngrd-preprod,2,1,"Bogotá, D.C. (1)","Bogotá, D.C.",Incendios forestales,False,False
+https://github.com/masantizof/portal-datos-snigrd,1,1,"Bogotá, D.C. (1)","Bogotá, D.C.",POR DETERMINAR,False,False
+https://github.com/masantizof/visor-riesgo-enso-ungrd,1,1,"Bogotá, D.C. (1)","Bogotá, D.C.",POR DETERMINAR,False,False
+https://github.com/mcml1225/precipitation-anomaly-detector,2,1,Antioquia (1),,Lluvia,False,False
+https://github.com/mm98/ha-sgc-earthquakes,1,1,Exterior (Dinamarca) (1),Exterior (Dinamarca),Terremoto (sismo),True,False
+https://github.com/nicolas998/WMF,9,6,Antioquia (1); Colombia (sin departamento) (3); Exterior (Estados Unidos) (1); Exterior (Malasia) (1),,Inundación,False,False
+https://github.com/nicolearodriguez/Landslides_Assessment-SGC,2,2,Colombia (sin departamento) (1); Santander (1),Santander,Movimiento en masa gravitacional (“deslizamiento”),False,False
+https://github.com/niveku/app-vienos-dashboard,2,0,,Sin especificar (Colombia),POR DETERMINAR,False,False
+https://github.com/njdepsky/GCM-Downscaling-Tool,1,0,,,POR DETERMINAR,False,False
+https://github.com/pedrocalle100/Aedes,3,0,,,Dengue,False,False
+https://github.com/reruizc/ayuda-sismo,2,0,,,Terremoto (sismo),False,False
+https://github.com/rubyzela18/Sistemas-de-alertas-tempranas-para-la-detecci-n-de-exceso-de-casos-en-enfermedades-vectoriales-,2,1,"Bogotá, D.C. (1)",,Dengue,False,False
+https://github.com/saedoquililongo/SoilHOMC,1,1,"Bogotá, D.C. (1)","Bogotá, D.C.",Incendios forestales,False,False
+https://github.com/saedoquililongo/climQMBC,1,1,"Bogotá, D.C. (1)","Bogotá, D.C.",POR DETERMINAR,False,False
+https://github.com/scr-ungrd/cuadernos-reproducibles-crc000,4,1,"Bogotá, D.C. (1)","Bogotá, D.C.",POR DETERMINAR,False,False
+https://github.com/scr-ungrd/cuadernos-reproducibles-crc001,3,2,"Bogotá, D.C. (2)","Bogotá, D.C.",POR DETERMINAR,False,False
+https://github.com/scr-ungrd/fichas-departamentales-escenarios-riesgo,3,2,"Bogotá, D.C. (2)","Bogotá, D.C.",POR DETERMINAR,False,False
+https://github.com/scr-ungrd/fichas-departamentales-escenarios-riesgo-objetos,2,2,"Bogotá, D.C. (2)","Bogotá, D.C.",POR DETERMINAR,False,False
+https://github.com/scr-ungrd/hub,2,1,"Bogotá, D.C. (1)","Bogotá, D.C.",POR DETERMINAR,False,False
+https://github.com/scr-ungrd/incendios-colombia-wfs,3,2,"Bogotá, D.C. (2)","Bogotá, D.C.",Incendios forestales,False,True
+https://github.com/scr-ungrd/investigaciones-grd-2021,2,1,"Bogotá, D.C. (1)","Bogotá, D.C.",POR DETERMINAR,False,True
+https://github.com/scr-ungrd/investigaciones-grd-2023,3,2,"Bogotá, D.C. (2)","Bogotá, D.C.",POR DETERMINAR,False,True
+https://github.com/scr-ungrd/investigaciones-grd-colombia,3,2,"Bogotá, D.C. (2)","Bogotá, D.C.",POR DETERMINAR,False,True
+https://github.com/scr-ungrd/visor-riesgoimplicito-volcangaleras,2,2,"Bogotá, D.C. (2)","Bogotá, D.C.",POR DETERMINAR,False,True
+https://github.com/sebasvelasco353/casita-finder,3,1,Valle del Cauca (1),Valle del Cauca,Terremoto (sismo),False,False
+https://github.com/sebnarvaez19/colombia-hydrodata,2,1,Atlántico (1),Atlántico,POR DETERMINAR,False,False
+https://github.com/seismik-org/seismik,2,0,,,Terremoto (sismo),True,False
+https://github.com/sm98652/Modelo-predictivo-para-desplazamiento-interno-por-desastres-naturales,2,0,,,POR DETERMINAR,False,False
+https://github.com/thinkingmachines/immap-evidem-risk-mapping-public,3,0,,,Movimiento en masa gravitacional (“deslizamiento”),False,False
+https://github.com/victorolave/acopio-colombia,3,1,Antioquia (1),Antioquia,Terremoto (sismo),False,True
+https://github.com/wilsonbrinez/medicion_impacto_arroz,1,0,,,POR DETERMINAR,False,False
