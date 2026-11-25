@@ -9272,9 +9272,9 @@
   {
     "objectID": "datascience/graficas-python-r.html",
     "href": "datascience/graficas-python-r.html",
-    "title": "Graficas Python y R",
+    "title": "Gráficas en HTML frente a Python, R, D3 y Plotly",
     "section": "",
-    "text": "Documentación oficial. Link.\nTutoriales de Matplotlib. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nGalería de ejemplos. Link.\n\n\n\n\n\nDocumentación oficial de Plotly Python. Link.\nPlotly Express. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nGalería de ejemplos. Link.\n\n\n\n\n\n\n\n\nDocumentación oficial. Link.\nR Graphics Cookbook. Link.\nggplot2 extensions. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nPlotly R book. Link.\n\n\n\n\n\nDocumentación oficial. Link.\nEjemplos. Link.\n\n\n\n\n\n\nData Visualization Catalogue. Link.\nFrom Data to Viz. Link.\nThe R Graph Gallery. Link.\nPython Graph Gallery. Link.\n\n\n\n\n\n\nOcultar/Mostrar código\n# Instalar plotly si no está instalado\nif (!require(\"plotly\")) {\n  install.packages(\"plotly\")\n  library(plotly)\n}\n\nlibrary(plotly)\n\nfig &lt;- plot_ly(\n    type = 'scatterpolar',\n    fill = 'toself'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(39, 28, 8, 7, 28, 39),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group A'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(1.5, 10, 39, 31, 15, 1.5),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group B'\n  )\nfig &lt;- fig %&gt;%\n  layout(\n    polar = list(\n      radialaxis = list(\n        visible = TRUE,\n        range = c(0,50)\n      )\n    )\n  )\n\nfig\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEste mapa muestra Colombia usando datos vectoriales de OpenStreetMap a través de PMTiles.",
+    "text": "TipEn resumen\n\n\n\n\nNo hay que elegir una sola herramienta. Lo más eficiente es repartir el trabajo por capas:\n\nAnálisis y publicación impresa: ggplot2 o Matplotlib/Seaborn.\nGráficas interactivas estándar, desde el mismo código: Plotly, Altair o Highcharter.\nPiezas a la medida para la web: HTML/CSS/SVG nativo cuando son sencillas; D3 cuando son complejas (narrativa, explicadores, tableros pequeños, esquemas).\n\nEl HTML nativo es la opción más flexible y liviana. Además, es la que mejor producen los asistentes de IA. Su punto débil es la reproducibilidad: los datos tienen que vivir en archivos versionados, no escritos a mano dentro de la página.\nPara un sitio en Quarto como este, recomiendo Python o R como base, {=html} u OJS para piezas especiales, y una regla fija: toda cifra visible debe poder rastrearse a un archivo de datos del repositorio.",
     "crumbs": [
       "Ciencia de datos",
       "Graficas Python y R"
@@ -9316,9 +9316,9 @@
   {
     "objectID": "datascience/graficas-python-r.html#pruebas",
     "href": "datascience/graficas-python-r.html#pruebas",
-    "title": "Graficas Python y R",
-    "section": "",
-    "text": "Ocultar/Mostrar código\n# Instalar plotly si no está instalado\nif (!require(\"plotly\")) {\n  install.packages(\"plotly\")\n  library(plotly)\n}\n\nlibrary(plotly)\n\nfig &lt;- plot_ly(\n    type = 'scatterpolar',\n    fill = 'toself'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(39, 28, 8, 7, 28, 39),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group A'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(1.5, 10, 39, 31, 15, 1.5),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group B'\n  )\nfig &lt;- fig %&gt;%\n  layout(\n    polar = list(\n      radialaxis = list(\n        visible = TRUE,\n        range = c(0,50)\n      )\n    )\n  )\n\nfig",
+    "title": "Gráficas en HTML frente a Python, R, D3 y Plotly",
+    "section": "Pruebas",
+    "text": "Pruebas\n\n\nOcultar/Mostrar código\n# Instalar plotly si no está instalado\nif (!require(\"plotly\")) {\n  install.packages(\"plotly\")\n  library(plotly)\n}\n\nlibrary(plotly)\n\nfig &lt;- plot_ly(\n    type = 'scatterpolar',\n    fill = 'toself'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(39, 28, 8, 7, 28, 39),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group A'\n  )\nfig &lt;- fig %&gt;%\n  add_trace(\n    r = c(1.5, 10, 39, 31, 15, 1.5),\n    theta = c('A','B','C', 'D', 'E', 'A'),\n    name = 'Group B'\n  )\nfig &lt;- fig %&gt;%\n  layout(\n    polar = list(\n      radialaxis = list(\n        visible = TRUE,\n        range = c(0,50)\n      )\n    )\n  )\n\nfig",
     "crumbs": [
       "Ciencia de datos",
       "Graficas Python y R"
@@ -9327,9 +9327,9 @@
   {
     "objectID": "datascience/graficas-python-r.html#mapa-de-colombia-con-pmtiles",
     "href": "datascience/graficas-python-r.html#mapa-de-colombia-con-pmtiles",
-    "title": "Graficas Python y R",
-    "section": "",
-    "text": "Este mapa muestra Colombia usando datos vectoriales de OpenStreetMap a través de PMTiles.",
+    "title": "Gráficas en HTML frente a Python, R, D3 y Plotly",
+    "section": "🇨🇴 Mapa de Colombia con PMTiles",
+    "text": "🇨🇴 Mapa de Colombia con PMTiles\nEste mapa muestra Colombia usando datos vectoriales de OpenStreetMap a través de PMTiles.",
     "crumbs": [
       "Ciencia de datos",
       "Graficas Python y R"
@@ -10370,6 +10370,138 @@
     "crumbs": [
       "Ciencia de datos",
       "Google Colab"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#por-qué-volver-a-esta-pregunta",
+    "href": "datascience/graficas-python-r.html#por-qué-volver-a-esta-pregunta",
+    "title": "Gráficas en HTML frente a Python, R, D3 y Plotly",
+    "section": "Por qué volver a esta pregunta",
+    "text": "Por qué volver a esta pregunta\nLas publicaciones recientes en redes sobre “pedirle a una IA una diapositiva en HTML” muestran algo que los equipos de ciencia de datos venían viendo: un solo archivo HTML puede tener tablas que se ordenan, gráficos que responden al tacto, esquemas que se recorren paso a paso y controles que recalculan escenarios. Antes, eso exigía D3 o una biblioteca de tableros. Hoy un asistente lo escribe en minutos.\nEso cambia el costo de producir visualizaciones a la medida. Pero no cambia lo que hace confiable una gráfica: datos rastreables, código reproducible y un diseño que no engañe. Este artículo compara los enfoques con ese criterio.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#cuatro-familias-de-herramientas",
+    "href": "datascience/graficas-python-r.html#cuatro-familias-de-herramientas",
+    "title": "Gráficas en HTML frente a Python, R, D3 y Plotly",
+    "section": "Cuatro familias de herramientas",
+    "text": "Cuatro familias de herramientas\nLa frontera entre “HTML” y “otros lenguajes” es más difusa de lo que parece. Plotly, Altair y Highcharter también producen HTML y JavaScript; la diferencia está en quién escribe ese código y desde dónde se controlan los datos.\n\n\n\n\n\n\n\n\n\nFamilia\nEjemplos\nQué escribes\nQué obtienes\n\n\n\n\n1. Gráficas estáticas\nMatplotlib, Seaborn, ggplot2\nPython o R\nImagen (PNG, SVG, PDF)\n\n\n2. Envoltorios interactivos\nPlotly (Python/R), Altair, Highcharter, Bokeh\nPython o R\nHTML + JS generado automáticamente\n\n\n3. Gramáticas para la web\nObservable Plot, Vega-Lite, Quarto OJS\nJavaScript declarativo\nHTML + SVG\n\n\n4. Control total en el navegador\nD3.js, HTML/CSS/SVG nativo\nJavaScript, HTML y CSS\nCualquier cosa que el navegador pueda dibujar",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#los-paquetes-de-esta-entrada-uno-por-uno",
+    "href": "datascience/graficas-python-r.html#los-paquetes-de-esta-entrada-uno-por-uno",
+    "title": "Gráficas en HTML frente a Python, R, D3 y Plotly",
+    "section": "Los paquetes de esta entrada, uno por uno",
+    "text": "Los paquetes de esta entrada, uno por uno\nLa versión anterior de esta página listaba siete paquetes. Así se ubican:\n\n\n\n\n\n\n\n\n\n\n\nPaquete\nLenguaje\nCómo dibuja\nInteractividad\nMejor para\nCuidado con\n\n\n\n\nMatplotlib\nPython\nMotor propio → imagen\nMínima en la web\nFiguras de artículos, control fino de cada elemento\nCódigo largo para estilos cuidados\n\n\nSeaborn\nPython\nSobre Matplotlib\nMínima\nExploración estadística (distribuciones, regresiones, facetas)\nMenos control fino que Matplotlib\n\n\nPlotly\nPython\nGenera plotly.js\nAlta: zoom, tooltips, leyendas\nInteractividad lista desde notebooks y Quarto\nPeso del archivo; estilo “Plotly” reconocible\n\n\nAltair\nPython\nGenera una especificación Vega-Lite\nMedia-alta: selecciones enlazadas\nGramática declarativa clara; vistas enlazadas\nPor defecto limita los datos incrustados a 5.000 filas\n\n\nggplot2\nR\nGramática de gráficos → imagen\nNinguna sin extensiones (ggplotly, ggiraph)\nEl estándar para figuras reproducibles en R\nRequiere extensiones para la web\n\n\nPlotly R\nR\nGenera plotly.js\nAlta\nLo mismo que en Python, más ggplotly()\nIgual que Plotly Python\n\n\nHighcharter\nR\nEnvuelve Highcharts\nAlta, muy pulida\nSeries de tiempo y tableros vistosos\nLicencia: gratis solo para uso personal o educativo no comercial\n\n\n\nDos datos concretos para el contexto institucional:\n\nPeso de Plotly. La biblioteca completa de plotly.js pesa cerca de 4,8 MB minificada (unos 1,5 MB comprimida) según su propia documentación de distribución. Existen paquetes parciales más livianos (detalles).\nLicencia de Highcharts. Las Highcharts exigen licencia comercial para proyectos de empresas, trabajo para clientes u operación interna. El uso educativo gratuito excluye el uso operativo institucional (Highcharts for Education). Para una entidad pública, conviene revisarlo antes de adoptarlo.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#comparación-por-criterios",
+    "href": "datascience/graficas-python-r.html#comparación-por-criterios",
+    "title": "Gráficas en HTML frente a Python, R, D3 y Plotly",
+    "section": "Comparación por criterios",
+    "text": "Comparación por criterios\n\n\n\n\n\n\n\n\n\n\nCriterio\nPython / R estático\nPlotly · Altair · Highcharter\nD3.js\nHTML/CSS/SVG nativo\n\n\n\n\nCurva de aprendizaje\nBaja si ya analizas en ese lenguaje\nBaja\nAlta\nMedia (baja con asistencia de IA)\n\n\nReproducibilidad desde los datos\nExcelente\nExcelente\nBuena si lee CSV/JSON\nDepende de la disciplina: riesgo de datos “pegados”\n\n\nControl del diseño\nAlto (con esfuerzo)\nMedio\nTotal\nTotal\n\n\nInteractividad\nNo\nAlta, estándar\nIlimitada\nIlimitada\n\n\nPeso y dependencias\nImagen liviana\nBibliotecas de cientos de KB a varios MB\n~90 KB comprimido\nNinguna\n\n\nFunciona sin conexión / un solo archivo\nSí\nCon biblioteca incrustada\nCon biblioteca incrustada\nSí, de forma natural\n\n\nImpresión y PDF\nExcelente\nRequiere exportar imagen\nRequiere versión estática\nRequiere versión estática\n\n\nMuchos datos (&gt;100.000 puntos)\nBien\nBien (Plotly con WebGL)\nCon Canvas/WebGL\nCon Canvas; SVG se vuelve lento\n\n\nAccesibilidad\nTexto alternativo\nParcial\nDepende del autor\nDepende del autor (tablas HTML son las más accesibles)\n\n\nMantenimiento a 5 años\nAlto\nAlto (dependes del proveedor)\nMedio\nMedio: el código queda “suelto”\n\n\nGeneración con IA\nBuena\nBuena\nBuena\nLa mejor: un archivo, sin compilación",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#más-allá-de-las-gráficas-tablas-esquemas-y-figuras",
+    "href": "datascience/graficas-python-r.html#más-allá-de-las-gráficas-tablas-esquemas-y-figuras",
+    "title": "Gráficas en HTML frente a Python, R, D3 y Plotly",
+    "section": "Más allá de las gráficas: tablas, esquemas y figuras",
+    "text": "Más allá de las gráficas: tablas, esquemas y figuras\n\n\n\n\n\n\n\n\n\nElemento\nEn Python / R\nEn HTML nativo\nComentario\n\n\n\n\nTablas\ngt, reactable, DT (R); itables, great_tables (Python)\n&lt;table&gt; con ordenar, filtrar y barras en celdas\nLas tablas HTML son el formato más accesible y copiable. Los paquetes de R/Python ya generan HTML de calidad.\n\n\nEsquemas y diagramas\nMermaid y Graphviz integrados en Quarto\nSVG a mano o generado por script, con estados interactivos\nMermaid basta para flujos estáticos; un esquema que se recorre (árbol de decisión, cadena de alerta) pide HTML/SVG.\n\n\nFiguras ilustrativas\nLimitado\nSVG con capas, gradientes y animación\nPara explicar un mecanismo (cómo se forma un lahar, cómo viaja una alerta), el SVG es superior.\n\n\nMapas\nsf + tmap/leaflet (R); geopandas + folium (Python)\nMapLibre + PMTiles (como en el anexo de esta página)\nPara mapas vectoriales grandes, MapLibre con PMTiles es liviano y no necesita servidor.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#el-mismo-gráfico-en-cuatro-lenguajes",
+    "href": "datascience/graficas-python-r.html#el-mismo-gráfico-en-cuatro-lenguajes",
+    "title": "Gráficas en HTML frente a Python, R, D3 y Plotly",
+    "section": "El mismo gráfico en cuatro lenguajes",
+    "text": "El mismo gráfico en cuatro lenguajes\nEventos por mes, en barras. La extensión del código ilustra el compromiso entre conveniencia y control.\n\nggplot2 (R)Plotly (Python)D3.jsHTML + CSS nativo\n\n\nlibrary(ggplot2)\neventos &lt;- read.csv(\"data/eventos_mes.csv\")\nggplot(eventos, aes(mes, n)) +\n  geom_col(fill = \"#0b6e99\") +\n  labs(x = NULL, y = \"Eventos\") +\n  theme_minimal()\n\n\nimport pandas as pd\nimport plotly.express as px\neventos = pd.read_csv(\"data/eventos_mes.csv\")\nfig = px.bar(eventos, x=\"mes\", y=\"n\", labels={\"n\": \"Eventos\", \"mes\": \"\"})\nfig.show()   # o fig.write_html(\"eventos.html\")\n\n\nconst datos = await d3.csv(\"data/eventos_mes.csv\", d3.autoType);\nconst x = d3.scaleBand(datos.map(d =&gt; d.mes), [40, 600]).padding(0.1);\nconst y = d3.scaleLinear([0, d3.max(datos, d =&gt; d.n)], [300, 10]);\nconst svg = d3.select(\"#grafico\").append(\"svg\").attr(\"viewBox\", \"0 0 620 330\");\nsvg.selectAll(\"rect\").data(datos).join(\"rect\")\n  .attr(\"x\", d =&gt; x(d.mes)).attr(\"width\", x.bandwidth())\n  .attr(\"y\", d =&gt; y(d.n)).attr(\"height\", d =&gt; 300 - y(d.n))\n  .attr(\"fill\", \"#0b6e99\");\nsvg.append(\"g\").attr(\"transform\", \"translate(0,300)\").call(d3.axisBottom(x));\nsvg.append(\"g\").attr(\"transform\", \"translate(40,0)\").call(d3.axisLeft(y));\n\n\n&lt;div class=\"barras\" id=\"grafico\"&gt;&lt;/div&gt;\n&lt;style&gt;\n  .barras { display:flex; gap:4px; height:200px; align-items:flex-end }\n  .barras div { flex:1; background:#0b6e99; border-radius:4px 4px 0 0 }\n&lt;/style&gt;\n&lt;script&gt;\nfetch(\"data/eventos_mes.json\").then(r =&gt; r.json()).then(datos =&gt; {\n  const max = Math.max(...datos.map(d =&gt; d.n));\n  document.getElementById(\"grafico\").innerHTML = datos\n    .map(d =&gt; `&lt;div style=\"height:${d.n / max * 100}%\" title=\"${d.mes}: ${d.n}\"&gt;&lt;/div&gt;`)\n    .join(\"\");\n});\n&lt;/script&gt;\n\n\n\nObserva que los cuatro leen los datos de un archivo. Esa es la regla que mantiene confiable cualquier enfoque.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#riesgos-de-las-gráficas-html-hechas-a-mano-o-con-ia",
+    "href": "datascience/graficas-python-r.html#riesgos-de-las-gráficas-html-hechas-a-mano-o-con-ia",
+    "title": "Gráficas en HTML frente a Python, R, D3 y Plotly",
+    "section": "Riesgos de las gráficas HTML hechas a mano o con IA",
+    "text": "Riesgos de las gráficas HTML hechas a mano o con IA\n\nDatos incrustados sin fuente. Un asistente tiende a escribir los números dentro del código. Si nadie los verifica, la gráfica puede verse impecable y estar equivocada. Regla: los datos van en CSV o JSON versionados, y la página los lee.\nCifras inventadas o “ilustrativas” que se vuelven reales. Toda demostración con datos sintéticos debe decirlo en la misma vista, no solo al pie del documento.\nCódigo difícil de mantener. Cien líneas de JavaScript sin estructura son fáciles de crear y difíciles de modificar. Conviene separar datos, estilo y lógica, y documentar el propósito de cada pieza.\nAccesibilidad. Los gráficos SVG necesitan aria-label y alternativas textuales; las tablas HTML reales son preferibles a tablas dibujadas.\nVersión imprimible. Informes, artículos y documentos oficiales siguen necesitando una imagen estática o un PDF. Ahí, ggplot2 y Matplotlib siguen siendo la mejor opción.\nSeguridad. Una página que inserta texto de fuentes externas con innerHTML puede ejecutar código no deseado. Para datos de terceros, usa textContent o escapa los valores.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#recomendación-para-el-sitio-y-para-la-scr",
+    "href": "datascience/graficas-python-r.html#recomendación-para-el-sitio-y-para-la-scr",
+    "title": "Gráficas en HTML frente a Python, R, D3 y Plotly",
+    "section": "Recomendación para el sitio y para la SCR",
+    "text": "Recomendación para el sitio y para la SCR\n\n\n\n\n\n\n\nSituación\nHerramienta recomendada\n\n\n\n\nNotebook de análisis reproducible (CRC, indicadores, series del IDEAM)\nggplot2 o Matplotlib/Seaborn; interactivo con Plotly si se publica en la web\n\n\nGráfica interactiva estándar dentro de una página Quarto\nPlotly (R o Python) u Observable Plot con OJS\n\n\nVistas enlazadas (seleccionar en una y filtrar otra) desde Python\nAltair\n\n\nExplicador, diapositiva interactiva, esquema que se recorre, tablero pequeño\nHTML/CSS/SVG nativo, con datos en archivo aparte\n\n\nRedes, jerarquías, mapas proyectados a medida, transiciones\nD3.js\n\n\nTableros vistosos de series de tiempo\nHighcharter, solo si la licencia lo permite; si no, Plotly\n\n\n\nEl árbol de decisión de la demostración resume esta tabla de forma interactiva.",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#demostración-elementos-interactivos-en-html-puro",
+    "href": "datascience/graficas-python-r.html#demostración-elementos-interactivos-en-html-puro",
+    "title": "Gráficas en HTML frente a Python, R, D3 y Plotly",
+    "section": "Demostración: elementos interactivos en HTML puro",
+    "text": "Demostración: elementos interactivos en HTML puro\nLas cuatro piezas siguientes están hechas solo con HTML, CSS, SVG y JavaScript, sin bibliotecas. Todo está en un único archivo de unos 25 KB, frente a los más de 4 MB de plotly.js completo. Los datos son sintéticos y se generan en el navegador con una semilla fija, para que siempre den lo mismo.\n\nTabla: ordenar, filtrar, buscar, barras en celdas y minigráficos de tendencia.\nEsquema: árbol de decisión que se recorre respondiendo preguntas.\nFiguras enlazadas: mapa de calor mes × año que controla un gráfico de barras.\nSerie temporal: nivel de río con umbrales de alerta, zoom por arrastre, media móvil y lectura día a día.\n\nAbrir la demostración en pantalla completa",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#recursos",
+    "href": "datascience/graficas-python-r.html#recursos",
+    "title": "Gráficas en HTML frente a Python, R, D3 y Plotly",
+    "section": "Recursos",
+    "text": "Recursos\n\nPython\n\nMatplotlib: documentación · tutoriales\nSeaborn: documentación · galería\nPlotly: Plotly Python · Plotly Express\nAltair: documentación · galería\nTablas: itables · great_tables\n\n\n\nR\n\nggplot2: documentación · R Graphics Cookbook · extensiones\nPlotly R: documentación · libro de Plotly R\nHighcharter: documentación · ejemplos · licencia de Highcharts\nTablas: gt · reactable · DT\n\n\n\nWeb (JavaScript, HTML y SVG)\n\nD3.js · Observable Plot · Vega-Lite\nQuarto: interactividad con OJS · Quarto: diagramas con Mermaid y Graphviz\nMDN: tutorial de SVG\nPágina de este sitio: D3, Observable y JS\n\n\n\nGenerales\n\nData Visualization Catalogue · From Data to Viz · The R Graph Gallery · Python Graph Gallery",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#pruebas-de-mapas",
+    "href": "datascience/graficas-python-r.html#pruebas-de-mapas",
+    "title": "Gráficas en HTML frente a Python, R, D3 y Plotly",
+    "section": "Pruebas de mapas",
+    "text": "Pruebas de mapas",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
+    ]
+  },
+  {
+    "objectID": "datascience/graficas-python-r.html#mapa-vectorial-desde-pmtiles",
+    "href": "datascience/graficas-python-r.html#mapa-vectorial-desde-pmtiles",
+    "title": "Gráficas en HTML frente a Python, R, D3 y Plotly",
+    "section": "🌍 Mapa vectorial desde PMTiles",
+    "text": "🌍 Mapa vectorial desde PMTiles",
+    "crumbs": [
+      "Ciencia de datos",
+      "Graficas Python y R"
     ]
   }
 ]
