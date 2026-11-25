@@ -200,6 +200,8 @@ website:
             href: cyt/github-innovacion-grd.qmd
           - text: "Nivel de Madurez Tecnológica (TRL)"
             href: cyt/trl.qmd
+          - text: "Transferencia de conocimiento y tecnologías"
+            href: cyt/transferencia.qmd
       # aqui viene la seccion de educacion
       - section: "Educación"
         href: educacion/index.qmd

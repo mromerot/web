@@ -1,0 +1,349 @@
+---
+title: "Transferencia de conocimiento y tecnologías"
+subtitle: "Qué es, por qué mecanismos ocurre, cómo se negocia y cómo la promueven Colombia, Estados Unidos (NSF), la Unión Europea y las Naciones Unidas"
+author: "Mauricio Romero Torres"
+date: 2026-11-25
+date-modified: 2026-11-25
+lang: es
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    include-in-header: _componentes-html.html
+editor: visual
+---
+
+::: {.callout-tip title="En resumen"}
+- **Transferir es mover conocimiento o tecnología de quien la tiene a quien la usa.** Puede ser un movimiento comercial (licencias, spin-off) o no comercial (formación, movilidad de personas, publicaciones). Minciencias pasó a hablar de *transferencia de conocimiento y tecnología* (TCT) porque el concepto se amplió más allá de lo patentable.
+- **Hay muchos mecanismos y la licencia es el más usado.** También están la cesión de derechos, el know-how o asistencia técnica, la I+D por contrato o en colaboración, la consultoría, el *joint venture*, la franquicia y la creación de empresas de base tecnológica (spin-off y start-up).
+- **La transferencia es un proceso, no un evento.** Antes, se identifica la tecnología (TRL, CRL, BRL, SRL) y se protege. Durante, se negocia y se firma un acuerdo. Después, el receptor absorbe, adapta y asimila la tecnología.
+- **En el mundo, la tendencia es financiar la travesía entre el laboratorio y el uso**, no solo la investigación. Algunos ejemplos son los programas de la NSF (I-Corps, America's Seed Fund, Regional Innovation Engines), los principios europeos de *valorización del conocimiento* y el Mecanismo Tecnológico de la CMNUCC para tecnologías climáticas.
+:::
+
+## Qué es la transferencia de conocimiento y tecnología
+
+Minciencias trabaja con tres definiciones complementarias. Cada una pone el acento en algo distinto: el movimiento de un activo, el sistema que lo hace posible y la organización que lo gestiona.
+
+```{=html}
+<div class="trl">
+<div class="grid">
+  <article class="card p1"><span class="num">El movimiento</span>
+  <h4>Transferencia de tecnología y conocimiento</h4>
+  <p>"Es el movimiento de tecnología y/o conocimiento, un valioso activo desde el punto de vista socioeconómico que puede incluir tanto medios técnicos como el conocimiento asociado (saber hacer y experiencia), desde un proveedor (universidad, organismo de investigación, centro tecnológico, empresa) hacia un receptor (generalmente empresa) que adquiere la tecnología a cambio de una contraprestación habitualmente económica".</p>
+  <p class="ev"><b>Fuente:</b> Minciencias (2022), <em>Guía para la transferencia de tecnología</em>, citando a González Sabater (2011).</p></article>
+
+  <article class="card p2"><span class="num">El sistema</span>
+  <h4>Transferencia de conocimiento y tecnología (TCT)</h4>
+  <p>Desde la perspectiva de los sistemas de innovación, es un conjunto de acciones de empresas, universidades, centros de conocimiento y sociedad para desarrollar, aprovechar, usar, modificar y difundir nuevas tecnologías e innovaciones. Es también un punto de intervención de los gobiernos mediante políticas públicas.</p>
+  <p class="ev"><b>Fuente:</b> Minciencias, <em>Documento de tipología de proyectos</em>, versión 6, con base en Freeman (1987) y Edquist (2005).</p></article>
+
+  <article class="card p3"><span class="num">La organización</span>
+  <h4>Oficina de Transferencia de Resultados de Investigación (OTRI)</h4>
+  <p>Organizaciones públicas o privadas, con personería jurídica propia o dependientes de otra entidad, dedicadas a promover la transferencia de conocimiento o tecnología a organizaciones productivas o sociales que lo demandan.</p>
+  <p class="ev"><b>Fuente:</b> Colciencias (2018), <em>Glosario</em>.</p></article>
+</div>
+</div>
+```
+
+### De la tecnología al conocimiento
+
+La guía de Minciencias explica que el concepto se amplió: la transferencia de conocimiento es más amplia que la de tecnología. Esa ampliación tiene tres ejes, que la tabla compara.
+
+```{=html}
+<div class="trl">
+<div class="scroll">
+<table>
+<caption>Fuente: Minciencias (2022), <em>Guía para la transferencia de tecnología</em>, sección de definiciones, citando a González Sabater (2011).</caption>
+<thead><tr><th>Eje</th><th>Visión clásica: transferencia de tecnología</th><th>Visión ampliada: transferencia de conocimiento</th></tr></thead>
+<tbody>
+<tr><td><b>Dimensiones</b></td><td>Tecnológica</td><td>Además, personal, social y cultural</td></tr>
+<tr><td><b>Objetos</b></td><td>Activos con protección de propiedad industrial o intelectual (patentes, diseños, software)</td><td>Además, el saber hacer personal y las publicaciones</td></tr>
+<tr><td><b>Mecanismos</b></td><td>Licencias, contratos de investigación y creación de empresas</td><td>Además, la formación y la movilidad de personal</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+```
+
+Esta visión ampliada encaja con la **apropiación social de la CTeI**, que el glosario de Colciencias define como un "proceso intencionado de comprensión e intervención de las relaciones entre ciencia, tecnología y sociedad, que se construye a partir de la participación activa de diversos grupos sociales". El intercambio y la transferencia de conocimiento son uno de sus componentes, junto con la participación ciudadana, la comunicación y la gestión del conocimiento.
+
+## Tipos de proyecto, madurez y transferencia
+
+El *Documento de tipología de proyectos* (versión 6), que usa el Consejo Nacional de Beneficios Tributarios en CTeI, relaciona cada tipo de proyecto con un tramo de la escala de [madurez tecnológica (TRL)](trl.qmd). Advierte que "no existe una relación lineal entre los proyectos de I+D+i", así que la equivalencia es aproximada.
+
+```{=html}
+<div class="trl" role="figure" aria-label="Equivalencia entre tipos de proyecto y niveles TRL">
+<div class="scale">
+  <div></div>
+  <div class="ticks"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div>
+  <div class="lab">Investigación básica</div>
+  <div class="track"><div class="bar" style="left:0;width:11.1%">TRL 1</div></div>
+  <div class="lab">Investigación aplicada</div>
+  <div class="track"><div class="bar" style="left:11.1%;width:11.1%">TRL 2</div></div>
+  <div class="lab">Desarrollo experimental</div>
+  <div class="track"><div class="bar alt" style="left:22.2%;width:22.2%">TRL 3–4</div></div>
+  <div class="lab">Desarrollo tecnológico</div>
+  <div class="track"><div class="bar alt" style="left:44.4%;width:22.2%">TRL 5–6</div></div>
+  <div class="lab">Innovación<small>Producto o servicio comercializable</small></div>
+  <div class="track"><div class="bar warm" style="left:66.7%;width:22.2%">TRL 7–8</div></div>
+  <div class="lab">Apoyo a la producción competitiva<small>Despliegue comercial</small></div>
+  <div class="track"><div class="bar warm" style="left:77.8%;width:22.2%">TRL 8–9</div></div>
+  <div class="lab" style="margin-top:8px">Entorno de prueba</div>
+  <div style="display:grid;grid-template-columns:4fr 2fr 3fr;gap:4px;margin-top:8px">
+    <div class="grad" style="background:#d8eef7">Laboratorio (1–4)</div>
+    <div class="grad" style="background:#9cc3d3">Simulado cercano al real (5–6)</div>
+    <div class="grad" style="background:#5b8a9a;color:#fff">Real (7–9)</div>
+  </div>
+</div>
+<p style="font-size:.82rem;color:#5b6b75;margin-top:10px">Reconstrucción del Anexo 3 del <em>Documento de tipología de proyectos</em>, versión 6, adaptado a su vez de la guía de autoevaluación de unidades de I+D+i (Colciencias, 2017).</p>
+</div>
+```
+
+La tipología incluye la transferencia en tres lugares:
+
+- **Es un criterio de calidad de todo proyecto.** Un proyecto de CTeI debe ser "transferible y/o reproducible", es decir, debe permitir que otros usen y reproduzcan sus resultados, incluso los negativos.
+- **Forma parte del desarrollo tecnológico.** Citando a Mella (2018), la tipología dice que la capacidad de ceder o captar tecnología hace parte de los procesos de desarrollo tecnológico.
+- **Es una tarea de los actores asociados.** En los proyectos con beneficios tributarios, los actores reconocidos por Minciencias que acompañan a las empresas deben realizar, entre otras, actividades de transferencia de conocimiento y tecnología.
+
+## Mecanismos de transferencia
+
+Según la Universidad de Campinas (2009), citada por Minciencias, la transferencia con activos de propiedad intelectual se hace por cuatro vías: venta (cesión) de derechos, licenciamiento, *joint ventures* o acuerdos de colaboración, y creación de empresas de base tecnológica. La guía de Minciencias detalla los acuerdos más usados.
+
+```{=html}
+<div class="trl">
+<div class="legend">
+  <span style="--c:#1b6f93">Sobre derechos de propiedad intelectual</span>
+  <span style="--c:#1d7a4c">Sobre conocimiento y servicios</span>
+  <span style="--c:#a2560c">Sobre organizaciones y capital</span>
+</div>
+<div class="grid">
+  <article class="card p1"><span class="num">Cesión</span><h4>Cesión de derechos</h4><p>El titular se desprende de los derechos sobre la tecnología, de forma definitiva o por un tiempo. Se parece a una compraventa: el cesionario asume la posición jurídica del cedente a cambio de una compensación.</p></article>
+  <article class="card p1"><span class="num">Licencia</span><h4>Licencia o autorización de uso</h4><p>El titular conserva los derechos y autoriza a un tercero a usarlos con una finalidad, en un territorio y por un plazo convenidos. <b>Es el contrato más usado</b> en la transferencia de tecnología y de conocimiento.</p></article>
+  <article class="card p1"><span class="num">Confidencialidad</span><h4>Acuerdo de confidencialidad</h4><p>Prohíbe divulgar o usar la información recibida para fines distintos de los pactados. Se firma antes de negociar y puede ser, en sí mismo, un acuerdo de transferencia.</p></article>
+  <article class="card p2"><span class="num">Know-how</span><h4>Conocimientos técnicos o asistencia técnica</h4><p>Transfiere el "cómo hacer" sin conceder derechos de propiedad intelectual. Aunque no tiene una protección jurídica específica, puede protegerse como secreto empresarial o por las normas de competencia desleal.</p></article>
+  <article class="card p2"><span class="num">I+D</span><h4>Investigación por contrato o en colaboración</h4><p>Por contrato, una parte presta servicios para obtener una solución técnica. En colaboración, dos o más partes aportan recursos y definen juntas la titularidad de la propiedad intelectual, los derechos de acceso y los de comercialización.</p></article>
+  <article class="card p2"><span class="num">Consultoría</span><h4>Consultoría de investigadores</h4><p>Profesores o investigadores prestan servicios especializados a un socio comercial, si la política de su institución lo permite. Los derechos resultantes suelen ser de la organización.</p></article>
+  <article class="card p3"><span class="num">Joint venture</span><h4>Empresa conjunta</h4><p>Dos o más partes crean una entidad y comparten obligaciones, riesgos y beneficios. Por ejemplo, una parte aporta la tecnología y otra el capital. Exige reglas de propiedad intelectual desde el inicio.</p></article>
+  <article class="card p3"><span class="num">Franquicia</span><h4>Franquicia</h4><p>Transmite una marca, productos o métodos ya probados en el mercado. Reduce la inversión y el riesgo del franquiciado, que trabaja sobre algo conocido.</p></article>
+  <article class="card p3"><span class="num">Spin-off</span><h4>Empresas de base tecnológica</h4><p>Una spin-off nace de la investigación académica y mantiene algún vínculo con la universidad, por licencia, acciones o <em>joint venture</em>. Una start-up puede tener origen académico o empresarial.</p></article>
+</div>
+</div>
+```
+
+Hay además medios **no contractuales** de incorporar tecnología: la **movilidad de personas**, cuando alguien que domina un know-how pasa a otra organización, y la **ingeniería inversa**, que parte del producto para deducir sus materiales y procesos. Este último es un camino legítimo pero costoso, porque avanza por ensayo y error. La guía también clasifica los **canales** según los actores: interna (en el mismo país) o externa (entre países), y horizontal (en el mismo sector) o vertical (entre sectores).
+
+## El proceso: antes, durante y después
+
+La transferencia "suele tener un carácter contractual", dice la guía de Minciencias, y empieza cuando el titular reconoce que no tiene las capacidades para comercializar su tecnología o no quiere asumir ese riesgo. A partir de ahí, el proceso tiene tres momentos.
+
+```{=html}
+<div class="trl">
+<div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
+  <article class="card p1"><span class="num">Antes</span><h4>1. Identificar la tecnología transferible</h4><p>Evaluar la madurez en varias dimensiones: tecnológica (TRL), del cliente (CRL), del negocio (BRL) y de la sostenibilidad o preparación social (SRL).</p></article>
+  <article class="card p1"><span class="num">Antes</span><h4>2. Proteger y documentar</h4><p>Decidir qué se protege y cómo: patente, derecho de autor, secreto empresarial o publicación. Los resultados no pueden quedar solo en la cabeza de los investigadores.</p></article>
+  <article class="card p2"><span class="num">Durante</span><h4>3. Preparar la negociación</h4><p>Acuerdo de confidencialidad, carta de intención o memorando de entendimiento, que en Colombia no son vinculantes salvo que así se pacte. Puede haber un acuerdo <em>statu quo</em> o una licencia de prueba.</p></article>
+  <article class="card p2"><span class="num">Durante</span><h4>4. Firmar el acuerdo</h4><p>Objeto, alcance, territorio, plazo, exclusividad, asistencia técnica, forma de pago, garantías, terminación, ley aplicable y solución de controversias.</p></article>
+  <article class="card p3"><span class="num">Después</span><h4>5. Absorber y adaptar</h4><p>Aprender a operar la tecnología y ajustarla a las condiciones locales, tanto de la oferta como de la demanda.</p></article>
+  <article class="card p3"><span class="num">Después</span><h4>6. Asimilar y generalizar</h4><p>Dominar el "know why" además del "know how", incorporar mejoras posteriores y extender la tecnología a todos los sectores que pueden beneficiarse.</p></article>
+</div>
+</div>
+```
+
+### Por qué transferir, y por qué no
+
+```{=html}
+<div class="trl">
+<div class="scroll">
+<table>
+<caption>Fuente: Minciencias (2022), basado en OMPI (2004), <em>Successful Technology Licensing</em>, y Nanayakkara (2003), <em>Licensing and Franchising Fundamentals</em>, OMPI.</caption>
+<thead><tr><th></th><th>Para quien entrega (cedente o licenciante)</th><th>Para quien recibe (cesionario o licenciatario)</th></tr></thead>
+<tbody>
+<tr><td><b>Ventajas</b></td><td>Más usuarios o clientes al mismo tiempo · expansión de la manufactura · regalías · mercados más grandes · creación de estándares</td><td>Adelantarse a la competencia · acceso a tecnología de punta sin investigar · lanzar productos nuevos · evitar disputas de titularidad · sumar propiedad intelectual complementaria</td></tr>
+<tr><td><b>Riesgos</b></td><td>Crear un competidor · mala reputación si se elige mal al receptor · pérdida de control de la información</td><td>Costos de regalías · la tecnología puede necesitar más desarrollo · más carga administrativa</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+```
+
+### Dónde suele fallar
+
+```{=html}
+<div class="trl">
+<div class="scroll">
+<table>
+<caption>Fuente: Minciencias (2022), basado en Ramanathan (2007), <em>The role of technology transfer services in technology capacity building and enhancing the competitiveness of SMEs</em>.</caption>
+<thead><tr><th>Selección de la tecnología</th><th>Planificación</th><th>Negociación</th><th>Implementación</th></tr></thead>
+<tbody><tr>
+<td>Mala elección por errores en el plan de negocios · costos altos de compra, instalación u operación · tecnología demasiado compleja para el receptor · demasiada adaptación al medio local · obsolescencia durante el proceso</td>
+<td>Quien entrega subestima los problemas del país receptor o no entiende sus necesidades · se atiende la maquinaria y se olvidan las habilidades · análisis de mercado defectuoso · objetivos incompatibles</td>
+<td>Diferencias de estrategia · falta de confianza · objetivos incompatibles · desacuerdo en precios, productos o mercadeo · expectativas de resultados en plazos inverosímiles</td>
+<td>Poca experiencia de los responsables · desconfianza del receptor · metas de calidad inalcanzables · demoras o mala calidad de insumos locales · control deficiente · sobrecostos</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+```
+
+### La adopción toma tiempo
+
+La guía de Minciencias recuerda la curva de **difusión de innovaciones** de Everett Rogers (1962). Transferir no basta: los usuarios tienen que aprender a usar la tecnología, integrarla a sus procesos y hacerla propia, y no todos lo hacen al mismo ritmo.
+
+```{=html}
+<div class="trl" role="figure" aria-label="Curva de adopción de Rogers">
+<div style="display:grid;grid-template-columns:minmax(42px,2.5fr) 13.5fr 34fr 34fr 16fr;gap:3px;font-size:.78rem;white-space:nowrap;font-weight:600;text-align:center;color:#fff">
+  <div style="background:#003A70;border-radius:6px 0 0 6px;padding:10px 0">2,5 %</div>
+  <div style="background:#0b6e99;padding:10px 0">13,5 %</div>
+  <div style="background:#1d7a4c;padding:10px 0">34 %</div>
+  <div style="background:#a2560c;padding:10px 0">34 %</div>
+  <div style="background:#5b6b75;border-radius:0 6px 6px 0;padding:10px 0">16 %</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px;font-size:.85rem">
+  <div><b style="color:#003A70">Innovadores.</b> Asumen riesgos y tienen contacto cercano con las fuentes científicas.</div>
+  <div><b style="color:#0b6e99">Adoptadores tempranos.</b> Tienen el mayor liderazgo de opinión.</div>
+  <div><b style="color:#1d7a4c">Mayoría temprana.</b> Adoptan después de un tiempo, rara vez lideran.</div>
+  <div><b style="color:#a2560c">Mayoría tardía.</b> Escépticos; adoptan cuando ya lo hizo la mayoría.</div>
+  <div><b style="color:#5b6b75">Rezagados.</b> Se centran en las tradiciones y son los últimos.</div>
+</div>
+</div>
+```
+
+## La transferencia en Colombia
+
+### Actores
+
+Minciencias reconoce actores del Sistema Nacional de CTeI cuya misión incluye transferir. Según su franja de madurez tecnológica (ver [el artículo sobre TRL](trl.qmd)), los principales son:
+
+```{=html}
+<div class="trl">
+<div class="scroll">
+<table>
+<caption>Fuentes: Colciencias (2018), <em>Glosario</em>; Minciencias (2022), <em>Guía para la transferencia de tecnología</em>; Política de Actores del SNCTeI (Documento 1602 de 2016).</caption>
+<thead><tr><th>Actor</th><th>Papel en la transferencia</th><th style="width:7rem">Franja TRL</th></tr></thead>
+<tbody>
+<tr><td><b>Oficina de Transferencia de Resultados de Investigación (OTRI)</b></td><td>Promueve la transferencia de conocimiento o tecnología a organizaciones productivas o sociales que la demandan</td><td>—</td></tr>
+<tr><td><b>Centro de Desarrollo Tecnológico (CDT)</b></td><td>Genera, adapta y transfiere tecnología; su objeto incluye explícitamente la transferencia y la extensión tecnológica</td><td><span class="tag">TRL 3–8</span></td></tr>
+<tr><td><b>Centro de Innovación y Productividad (CIP)</b></td><td>Induce la demanda de conocimiento entre actores clave mediante asesoría, consultoría, asistencia técnica y capacitación</td><td><span class="tag">soporte 4–9</span></td></tr>
+<tr><td><b>Incubadora de Empresas de Base Tecnológica (IEBT)</b></td><td>Apoya la creación y aceleración de empresas que explotan resultados de investigación</td><td><span class="tag">soporte 6–9</span></td></tr>
+<tr><td><b>Unidad de I+D+i de empresa</b></td><td>Capta tecnología externa y la integra a la gestión de la innovación de la empresa</td><td><span class="tag">TRL 2–9</span></td></tr>
+<tr><td><b>Empresa Altamente Innovadora</b></td><td>Lleva productos o servicios nuevos al mercado</td><td><span class="tag">TRL 7–9</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+```
+
+A septiembre de 2022, Minciencias tenía reconocidos 69 actores de estas tipologías, entre ellos 10 CDT, según la guía de transferencia. Sus lecciones aprendidas, con el TRL de cada tecnología, están en el [artículo sobre TRL](trl.qmd#casos-colombianos).
+
+### Spin-off universitarias
+
+La **Ley 1838 de 2017** fomenta la creación de empresas de base tecnológica (spin-off) en las instituciones de educación superior, y el **Decreto 1556 de 2022** la reglamenta. El decreto define cuatro tipos:
+
+```{=html}
+<div class="trl">
+<div class="grid">
+  <article class="card"><span class="tag">Independiente</span><h4>La crean miembros de la comunidad académica</h4><p>Explota el conocimiento acumulado en su I+D+i. La institución de educación superior no es socia ni participa en las instancias directivas.</p></article>
+  <article class="card"><span class="tag">Vinculada</span><h4>La institución participa</h4><p>Surge de miembros de la comunidad académica o de la institución, que participa como socia o en las instancias directivas.</p></article>
+  <article class="card"><span class="tag">Alianza estratégica</span><h4>Institución más terceros</h4><p>La conforman la institución y terceros: entidades públicas o privadas, empresas, fondos de capital de riesgo u otras instituciones de educación superior.</p></article>
+  <article class="card"><span class="tag">Subsidiaria</span><h4>La crea un particular</h4><p>Un particular la crea para explotar los activos de propiedad intelectual de la institución.</p></article>
+</div>
+</div>
+```
+
+Pueden financiarse con aportes de los socios, recursos públicos (de la Nación, los departamentos o el Sistema General de Regalías), donaciones, capital privado (fondos de riesgo, ángeles inversionistas, cooperación internacional) y otras fuentes legales. El programa **Spin-Off Colombia**, liderado por Minciencias, Ruta N y Tecnnova, acompaña el alistamiento, la constitución y la puesta en marcha de estas empresas.
+
+### Otros instrumentos
+
+- **Beneficios tributarios en CTeI.** El *Documento de tipología de proyectos* define qué proyectos de investigación, desarrollo e innovación califican. Para ello exige actores asociados reconocidos por Minciencias que acompañen a la empresa.
+- **Cláusulas *offset*.** El CONPES 3522 permite que, en las compras del sector defensa, se pacte cooperación industrial y social: transferencia de información técnica, capacitación y formación de personal. La guía señala que se discute si podría extenderse al sector civil.
+- **Medición de grupos de investigación.** El *Modelo de medición de grupos* 2024 cuenta las patentes y los modelos de utilidad como productos de **generación de nuevo conocimiento** (subtipo 2.2.1.5). En cambio, varios resultados típicos de la transferencia son productos de **desarrollo tecnológico e innovación** (2.2.2): las empresas de base tecnológica (spin-off y start-up), el secreto empresarial, los productos tecnológicos certificados o validados, las regulaciones y normas, y los conceptos técnicos.
+- **Período de gracia para patentes.** La Decisión 486 de la Comunidad Andina (art. 17) no tiene en cuenta, para la novedad, las divulgaciones del inventor hechas dentro del año anterior a la solicitud. Esto permite publicar primero y patentar después, con cuidado.
+
+## La transferencia en el mundo
+
+### Estados Unidos: la NSF y la ley Bayh-Dole
+
+La **Ley Bayh-Dole** (1980) permitió que universidades y pequeñas empresas retuvieran la titularidad de las invenciones logradas con fondos federales y las licenciaran. Es la base del sistema de oficinas de transferencia de las universidades estadounidenses, que la asociación AUTM mide cada año con su encuesta de licenciamiento.
+
+La **National Science Foundation (NSF)** creó en 2022 la Dirección de Tecnología, Innovación y Alianzas (TIP), que agrupa sus programas de traslación al uso:
+
+```{=html}
+<div class="trl">
+<div class="grid">
+  <article class="card p1"><span class="num">Formación</span><h4>Innovation Corps (I-Corps)</h4><p>Programa experiencial de siete semanas, activo desde 2012, que prepara a científicos e ingenieros para mirar más allá del laboratorio. Su misión es reducir el riesgo de trasladar tecnologías del laboratorio al mercado.</p></article>
+  <article class="card p2"><span class="num">Capital semilla</span><h4>America's Seed Fund (SBIR/STTR)</h4><p>Invierte hasta 2 millones de dólares en capital semilla en empresas emergentes de base científica <b>sin tomar participación</b> en ellas. Es financiación no dilutiva para el tramo de alto riesgo técnico.</p></article>
+  <article class="card p3"><span class="num">Ecosistemas</span><h4>Regional Innovation Engines</h4><p>Cada equipo recibe inicialmente 15 millones de dólares por dos años y puede llegar a 160 millones en una década para construir ecosistemas regionales de innovación. La primera cohorte se anunció en 2024.</p></article>
+</div>
+</div>
+```
+
+En el gobierno federal, el NIST coordina la iniciativa *Return on Investment* para mejorar la transferencia desde los laboratorios federales, y el **Federal Laboratory Consortium** conecta esos laboratorios con empresas y universidades.
+
+### Unión Europea: valorización del conocimiento
+
+La Unión Europea habla de **valorización del conocimiento**: crear valor social y económico a partir del conocimiento, más allá de la comercialización. Dos instrumentos la orientan:
+
+- **Recomendación (UE) 2022/2415 del Consejo**, del 2 de diciembre de 2022, sobre los principios rectores de la valorización del conocimiento.
+- **Recomendación (UE) 2023/499 de la Comisión**, del 1 de marzo de 2023, con un código de buenas prácticas para gestionar los activos intelectuales en el Espacio Europeo de Investigación.
+
+La asociación **ASTP** reúne a los profesionales europeos de transferencia de conocimiento. En el Reino Unido, las **Knowledge Transfer Partnerships** financian a un graduado que trabaja en una empresa para incorporar el conocimiento de una universidad, y el *Knowledge Exchange Framework* de Research England compara el desempeño de las universidades en intercambio de conocimiento.
+
+### Organismos internacionales
+
+```{=html}
+<div class="trl">
+<div class="grid">
+  <article class="card"><span class="tag">OMPI</span><h4>Organización Mundial de la Propiedad Intelectual</h4><p>Ofrece guías y modelos de acuerdos de transferencia, el manual <em>Intercambiar valor</em> sobre negociación de licencias, y la red de Centros de Apoyo a la Tecnología y la Innovación (CATI, o TISC en inglés) para acceder a información de patentes.</p></article>
+  <article class="card"><span class="tag">CMNUCC</span><h4>Mecanismo Tecnológico del clima</h4><p>Tiene dos brazos: el Comité Ejecutivo de Tecnología (TEC), que hace recomendaciones de política, y el Centro y Red de Tecnología del Clima (CTCN), su brazo de implementación, alojado en el PNUMA. El CTCN presta asistencia técnica a los países en desarrollo que la solicitan por medio de sus Entidades Nacionales Designadas.</p></article>
+  <article class="card"><span class="tag">OCDE</span><h4>Colaboración universidad-industria</h4><p>Su informe <em>University-Industry Collaboration: New Evidence and Policy Options</em> (2019) analiza los canales de transferencia y las políticas que los fortalecen.</p></article>
+</div>
+</div>
+```
+
+## Transferencia en gestión del riesgo de desastres
+
+En gestión del riesgo, la transferencia rara vez termina en una venta. El "receptor" suele ser una comunidad, una entidad territorial o una autoridad ambiental, y lo que se transfiere es un modelo, un protocolo o una capacidad. Por eso aplica la visión ampliada de la transferencia de conocimiento, con mecanismos como la formación, la movilidad de personas y la apropiación social, y no solo la licencia.
+
+Algunas recomendaciones, derivadas de las fuentes anteriores:
+
+- **Planear la transferencia desde la formulación.** La tipología de Minciencias exige que todo proyecto sea "transferible y/o reproducible". En GRD, eso significa datos, código y protocolos documentados para que la entidad que recibe pueda operar sin el equipo que investigó.
+- **Evaluar la madurez del receptor, no solo la de la tecnología.** Las fallas más comunes de implementación, según la guía, son la poca experiencia de los responsables y la desconfianza del receptor. Por eso conviene acompañar el TRL con la preparación social (SRL).
+- **Pasar de la absorción a la asimilación.** Una entidad que solo sabe operar un sistema de alerta ("know how") depende de quien se lo entregó. Una que entiende por qué funciona ("know why") puede mantenerlo, mejorarlo y adaptarlo a otra cuenca.
+- **Aprovechar los canales climáticos.** Para tecnologías de adaptación, como los sistemas de alerta temprana o la gestión de inundaciones, el CTCN de la CMNUCC ofrece asistencia técnica a solicitud del país.
+- **Elegir la protección según el propósito.** Si el objetivo es el uso público, una licencia abierta puede transferir mejor que una patente. Si se requiere un socio que invierta, la protección de la propiedad intelectual es la que hace viable el acuerdo.
+
+## Referencias y recursos
+
+### Documentos de Minciencias y del marco colombiano
+
+- Colciencias (2016). *Documento de Política Nacional de CTeI 1602: Actores del Sistema Nacional de Ciencia, Tecnología e Innovación* · [Reconocimiento de actores](https://minciencias.gov.co/portafolio/reconocimiento_de_actores).
+- Colciencias (2018). *Glosario*.
+- Minciencias. *Documento de tipología de proyectos de carácter científico, tecnológico o de innovación*, versión 6. Consejo Nacional de Beneficios Tributarios en CTeI.
+- Minciencias (2021). *Guía técnica para el reconocimiento de actores del SNCTI: Centros de Desarrollo Tecnológico*, M601PR05G07.
+- Minciencias (2022). *Guía para la transferencia de tecnología*.
+- Minciencias (2024). *Modelo de medición de grupos de investigación, desarrollo tecnológico o de innovación y de reconocimiento de investigadores del SNCTI 2024* (M601PR04G01, versión 02) · [PDF](https://minciencias.gov.co/sites/default/files/upload/convocatoria/m601pr04g01_modelo_medicion_grupos_investigacion_tecnologica_o_innovacion_y_reconocimiento_investigadores_-_2024_1.pdf).
+- Ley 1838 de 2017, sobre spin-off en instituciones de educación superior, y Decreto 1556 de 2022, que la reglamenta.
+- Comunidad Andina (2000). *Decisión 486: Régimen común sobre propiedad industrial* · [WIPO Lex](https://www.wipo.int/wipolex/es/legislation/details/9451).
+
+### Estados Unidos
+
+- NSF. [Directorate for Technology, Innovation and Partnerships (TIP)](https://www.nsf.gov/tip) · [I-Corps](https://www.nsf.gov/funding/initiatives/i-corps) · [America's Seed Fund](https://seedfund.nsf.gov/) · [Regional Innovation Engines](https://www.nsf.gov/funding/initiatives/regional-innovation-engines).
+- NIST. [Return on Investment Initiative](https://www.nist.gov/tpo/return-investment-roi-initiative) · [Federal Laboratory Consortium](https://federallabs.org/).
+- AUTM. [Bayh-Dole Act](https://autm.net/about-tech-transfer/advocacy/legislation/bayh-dole-act) · [Licensing Survey](https://autm.net/surveys-and-tools/surveys/licensing-survey).
+
+### Europa
+
+- [Recomendación (UE) 2022/2415 del Consejo](https://eur-lex.europa.eu/eli/reco/2022/2415/oj), sobre los principios rectores de la valorización del conocimiento.
+- [Recomendación (UE) 2023/499 de la Comisión](https://eur-lex.europa.eu/eli/reco/2023/499/oj), código de buenas prácticas sobre la gestión de activos intelectuales.
+- [ASTP: Knowledge Transfer Europe](https://www.astp4kt.eu/) · [Knowledge Transfer Partnerships (Reino Unido)](https://www.ktp-uk.org/).
+
+### Organismos internacionales
+
+- OMPI. [Transferencia de tecnología](https://www.wipo.int/technology-transfer/en/) · [Centros de Apoyo a la Tecnología y la Innovación (TISC)](https://www.wipo.int/tisc/en/) · [*Intercambiar valor: negociación de acuerdos de licencia de tecnología* (PDF)](https://www.wipo.int/edocs/pubdocs/es/licensing/906/wipo_pub_906.pdf).
+- CMNUCC. [Comité Ejecutivo de Tecnología (TEC)](https://unfccc.int/ttclear/tec) · [Centro y Red de Tecnología del Clima (CTCN)](https://www.ctc-n.org/).
+- OCDE (2019). *University-Industry Collaboration: New Evidence and Policy Options*. OECD Publishing.
+- UNDRR. [Science and Technology Roadmap to Support the Implementation of the Sendai Framework](https://www.undrr.org/publication/science-and-technology-roadmap-support-implementation-sendai-framework-disaster-risk).
+
+### En este sitio
+
+- [Nivel de Madurez Tecnológica (TRL)](trl.qmd) · [Interfaz ciencia-política-sociedad](interfaz-cps.qmd) · [Gestión de tecnología e innovación](../gestiondeproyectos/gestiontecnologiainnovacion.qmd)

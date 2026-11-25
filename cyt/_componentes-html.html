@@ -1,0 +1,69 @@
+<style>
+/* Estilos del artículo TRL: HTML y CSS puros, con prefijo trl- para no chocar con el tema */
+.trl{--ink:#14232c;--mut:#5b6b75;--line:#e2e8eb;--soft:#eef5f8;--blue:#0b6e99;--deep:#003A70;
+  --f1:#d8eef7;--f1b:#1b6f93;--f2:#dcefe4;--f2b:#1d7a4c;--f3:#fdebd3;--f3b:#a2560c;--coral:#e0560b;
+  color:var(--ink);font-size:15.5px;line-height:1.5;margin:1.2rem 0 1.6rem}
+.trl *{box-sizing:border-box;min-width:0}
+.trl .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.trl .card{border:1px solid var(--line);border-radius:12px;background:#fff;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.trl .card h4{margin:0;font-size:1.02rem;line-height:1.25;color:var(--ink)}
+.trl .card p{margin:0;font-size:.93rem}
+.trl .card .ev{font-size:.85rem;color:var(--mut);border-top:1px dashed var(--line);padding-top:6px;margin-top:auto}
+.trl .card .ev b{color:var(--ink)}
+.trl .num{display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;
+  border-radius:999px;padding:2px 10px;width:max-content}
+.trl .p1 .num{background:var(--f1);color:var(--f1b)} .trl .p1{border-top:4px solid var(--f1b)}
+.trl .p2 .num{background:var(--f2);color:var(--f2b)} .trl .p2{border-top:4px solid var(--f2b)}
+.trl .p3 .num{background:var(--f3);color:var(--f3b)} .trl .p3{border-top:4px solid var(--f3b)}
+.trl details{font-size:.85rem;color:var(--mut)}
+.trl details summary{cursor:pointer;color:var(--blue);font-weight:600}
+.trl details p{margin:.35rem 0 0}
+.trl .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.85rem;color:var(--mut);margin:0 0 10px}
+.trl .legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--c)}
+/* tablas */
+.trl .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.trl table{border-collapse:collapse;width:100%;font-size:.92rem;margin:0}
+.trl th,.trl td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+.trl th{font-size:.8rem;color:var(--mut);font-weight:600;background:var(--soft)}
+.trl tbody tr:hover{background:#f7fafb}
+.trl caption{caption-side:bottom;text-align:left;font-size:.82rem;color:var(--mut);padding-top:8px}
+/* franjas sobre la escala 1-9 */
+.trl .scale{display:grid;grid-template-columns:minmax(150px,1.3fr) 4fr;gap:6px 12px;align-items:center}
+.trl .scale .lab{font-size:.9rem;font-weight:600}
+.trl .scale .lab small{display:block;font-weight:400;color:var(--mut);font-size:.78rem}
+.trl .track{position:relative;height:26px;background:repeating-linear-gradient(90deg,var(--soft) 0 calc(11.111% - 2px),#fff calc(11.111% - 2px) 11.111%);border-radius:6px}
+.trl .bar{position:absolute;top:3px;bottom:3px;border-radius:5px;background:var(--blue);color:#fff;font-size:.75rem;font-weight:600;
+  display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden}
+.trl .bar.alt{background:var(--f2b)} .trl .bar.warm{background:var(--f3b)} .trl .bar.deep{background:var(--deep)}
+.trl .ticks{display:grid;grid-template-columns:repeat(9,1fr);font-size:.75rem;color:var(--mut);text-align:center}
+.trl .grad{height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:600;color:#14232c}
+@media (max-width:620px){.trl .scale{grid-template-columns:1fr}.trl .scale .lab{margin-top:6px}}
+/* línea de tiempo */
+.trl .time{list-style:none;margin:0;padding:0 0 0 18px;border-left:3px solid var(--line)}
+.trl .time li{position:relative;margin:0 0 12px;padding-left:8px}
+.trl .time li::before{content:"";position:absolute;left:-27px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--blue)}
+.trl .time b{color:var(--blue)}
+/* autodiagnóstico */
+.trl .quiz{border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--soft)}
+.trl .quiz .q{font-weight:600;font-size:1rem;margin:4px 0 12px}
+.trl .quiz .step{font-size:.8rem;color:var(--mut)}
+.trl .quiz button{font:inherit;cursor:pointer;border-radius:8px;padding:8px 16px;min-height:42px;border:1px solid var(--line);background:#fff;margin:0 8px 8px 0}
+.trl .quiz button.yes{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600}
+.trl .quiz button:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.trl .meter{display:grid;grid-template-columns:repeat(9,1fr);gap:4px;margin:10px 0}
+.trl .meter i{height:12px;border-radius:3px;background:#fff;border:1px solid var(--line)}
+.trl .meter i.on{background:var(--blue);border-color:var(--blue)}
+.trl .res{font-size:1.05rem}
+.trl .res strong{font-size:1.4rem;color:var(--deep)}
+/* infografía de columnas */
+.trl .info{background:#f2f2f2;border-radius:14px;padding:18px 14px 14px}
+.trl .info h3{margin:4px 0 16px;text-align:center;font-weight:800;letter-spacing:.02em;font-size:clamp(1.05rem,2.6vw,1.6rem);color:#1c1c1c;text-transform:uppercase}
+.trl .info .wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.trl .info .board{min-width:760px;display:grid;grid-template-columns:repeat(9,1fr);gap:0}
+.trl .info .col{background:var(--c);border-radius:22px 22px 0 0;padding:12px 6px 18px;min-height:250px;text-align:center;color:#1c1c1c}
+.trl .info .ring{width:74px;height:74px;margin:0 auto 18px;border-radius:50%;background:#fff;border:7px solid var(--r);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem}
+.trl .info .col p{margin:0;font-size:.86rem;line-height:1.35}
+.trl .info .band{display:flex;align-items:center;justify-content:center;text-align:center;padding:10px 6px;color:#fff;font-weight:700;font-size:.78rem;text-transform:uppercase;line-height:1.25;min-height:58px}
+.trl .info .env{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;text-transform:uppercase;font-size:.9rem;min-height:50px;margin-top:10px;padding:6px;text-align:center}
+.trl .tag{display:inline-block;font-size:.75rem;font-weight:600;color:var(--blue);background:#fff;border:1px solid var(--line);border-radius:999px;padding:1px 8px}
+</style>
