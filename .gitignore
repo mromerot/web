@@ -1,6 +1,6 @@
 /.quarto/
 
-**/*.quarto_ipynb
+**/*.quarto_ipynb*
 
 # Datos geoespaciales grandes (regenerables al renderizar)
 datascience/mapas/data/col_municipios.geojson
