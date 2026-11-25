@@ -198,6 +198,8 @@ website:
             href: cyt/interfaz-cps.qmd
           - text: "Código abierto, GitHub e innovación en GRD"
             href: cyt/github-innovacion-grd.qmd
+          - text: "Nivel de Madurez Tecnológica (TRL)"
+            href: cyt/trl.qmd
       # aqui viene la seccion de educacion
       - section: "Educación"
         href: educacion/index.qmd

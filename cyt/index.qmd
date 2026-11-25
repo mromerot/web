@@ -58,4 +58,14 @@ Qué es la interfaz ciencia-política-sociedad: los espacios, procesos y organiz
 Qué miden los rankings internacionales basados en GitHub (Global Innovation Index, Innovation Graph, OpenSSF) y qué revela un inventario de 400 repositorios colombianos sobre desastres y clima.
 :::
 :::
+
+::: mrw-card
+::: mrw-card-header
+[Nivel de Madurez Tecnológica (TRL)](trl.qmd)
+:::
+
+::: mrw-card-body
+Qué es la escala TRL, cómo la usan la NASA y Minciencias, qué escalas la complementan (CRL, BRL, SRL) y cómo asignar un nivel con evidencia, con un autodiagnóstico interactivo.
+:::
+:::
 ::::::

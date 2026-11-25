@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mauricio Romero Torres">
+
+<title>Nivel de Madurez Tecnológica (TRL) – Inicio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c0268bb2cd26ea8ad2ddef1ccaf3bc3a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-4910f9121cc0cf878839b371e47b8836.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
+</script>
+<!-- Google Site Verification -->
+<!-- Reemplaza XXXXX con tu código de verificación de Google Search Console -->
+<!-- <meta name="google-site-verification" content="XXXXX" /> -->
+
+<!-- Meta tags adicionales para SEO -->
+<meta name="author" content="Mauricio Romero Torres">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@mauricioromerot">
+
+<!-- Schema.org markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mauricio Romero Torres",
+  "jobTitle": "Gestor de ciencia y tecnología",
+  "url": "https://mromerot.github.io/web/",
+  "sameAs": [
+    "https://x.com/mauricioromerot",
+    "https://www.linkedin.com/in/mauricio-romero-torres-1b33b95/",
+    "https://scholar.google.com/citations?user=n484vskAAAAJ"
+  ]
+}
+</script>
+
+
+<meta property="og:title" content="Nivel de Madurez Tecnológica (TRL) – Inicio">
+<meta property="og:description" content="Qué es la escala TRL, cómo la usa Minciencias, qué escalas la complementan y cómo asignar un nivel con evidencia">
+<meta property="og:site_name" content="Inicio">
+<meta name="twitter:title" content="Nivel de Madurez Tecnológica (TRL) – Inicio">
+<meta name="twitter:description" content="Qué es la escala TRL, cómo la usa Minciencias, qué escalas la complementan y cómo asignar un nivel con evidencia">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cyt/index.html">Ciencia y tecnología</a></li><li class="breadcrumb-item"><a href="../cyt/trl.html">Nivel de Madurez Tecnológica (TRL)</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Inicio</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/gestiondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/conocimientodelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conocimiento del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/conocimiento-indicadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indicadores de riesgo nacionales y mundiales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/reducciondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reducción del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/manejodedesastres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manejo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/cienciaytecnologia/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/cienciaytecnologia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/estado-ciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estado de la ciencia 2024</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/hoja-de-ruta-ct.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hoja de ruta de ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/marco-sendai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Marco de Sendai</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/educacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Cursos, redes y recursos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cursos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cursos en GRD</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/plataformas-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plataformas y redes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/repositorios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repositorios FAIR</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sistemas de alerta temprana</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/hidrol-meteorologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas hidrológicas y meteorológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/elnino.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">El Niño / La Niña</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/huracanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Huracanes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/inundaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/inundaciones-repentinas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones repentinas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/olasdecalor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Olas de calor</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/geologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas geológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/falladeterreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Falla de terreno</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/riesgosismico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgo sísmico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/sismicidad-colombia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sismicidad de Colombia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/tsunami.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tsunami</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/volcanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Volcanes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/ambientales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas ambientales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/ambientales/erosioncostera.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Erosión costera</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/ambientales/incendiosforestales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Incendios forestales</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/biologicos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas biológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/biologicos/covid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">COVID-19</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/tecnologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/tecnologicas/amenazastecnol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/sociales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas sociales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sociales/migracion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Migración</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/extraterrestre/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/extraterrestre/amenazasextraterrestres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/amazonas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amazonas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/ciudades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciudades</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sidro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SIDRo (Los Rosales)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sincelejo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sincelejo (EVA)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/teoria.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teoría de riesgos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/glosario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Terminología</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../gcc/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gcc/gestion-cambio-climatico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gcc/estres-termico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estrés térmico</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../gestiondeproyectos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/gestionproyectosciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos de CTeI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/gestiontecnologiainnovacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de tecnología e innovación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/innovacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Innovación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/liderazgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Liderazgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/estrategia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estrategia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/metodologias-pm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metodologías de gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/skills-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Competencias clave en la gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/impacto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Impacto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/dofa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DOFA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/mapa-actores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa de actores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/gestion-conocimiento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del conocimiento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/Linea-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Línea base</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/pestel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PESTEL</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/swot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SWOT</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/conpes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CONPES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/riesgos-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgos en proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/sostenibilidad-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sostenibilidad de proyectos de CTeI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../gestiondeproyectos/financiacion/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Financiación</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/financiacion/fondo-verde-clima.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fondo Verde para el Clima</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../cyt/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../cyt/escrituraypublicacionacademica/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/escrituraypublicacionacademica/escrituraypublicacionacademica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/escrituraypublicacionacademica/parrafos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Párrafos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/escrituraypublicacionacademica/typst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Typst</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/cienciareproduc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia reproducible</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/transdisciplina.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia transdisciplinar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/interfaz-cps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interfaz ciencia-política-sociedad</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/github-innovacion-grd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Código abierto, GitHub e innovación en GRD</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/trl.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Nivel de Madurez Tecnológica (TRL)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../educacion/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../educacion/docenciaeducacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Docencia y educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../educacion/ova/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Objetos virtuales de aprendizaje (OVA)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ecolyconserv/ecologiayconservacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ecología y conservación marina</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datascience/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/cienciadedatos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/myst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Myst</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/markdown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Markdown</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GitHub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/google-colab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Google Colab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/jupyter-notebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter Notebook</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/graficas-python-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Graficas Python y R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/ia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inteligencia artificial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/vs-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/hugging-face.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hugging Face</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/bases-de-datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bases de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/arco.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ARCO</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datascience/mapas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_observable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (Observable / TopoJSON)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_pmtiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (PMTiles)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_nri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índice de Riesgo (NRI)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/d3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/d3-experiment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Experimento con D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/claude.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/claude-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude Skills (Slides)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/ilustraciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ilustraciones</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math-stats/math-stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matemáticas y estadística</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math-stats/R/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R: minicurso</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/00-fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 0. Fundamentos de R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/01-programacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 1. Programación: flujo, bucles y funciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/02-datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 2. Manejo de datos con tidyverse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/03-visualizacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 3. Visualización con ggplot2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/04-estadistica-basica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 4. Estadística básica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/05-modelos-lineales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 5. Regresión lineal y ANOVA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/06-modelos-mixtos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 6. Modelos mixtos y medidas repetidas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/07-gam-series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 7. GAM y series de tiempo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/08-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 8. Análisis de redes con igraph</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/09-espacial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 9. Análisis espacial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/10-aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 10. Aplicaciones y proyectos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../vidalaboral/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vidalaboral/cafe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Café</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vidalaboral/vidalaboral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vidalaboral/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul class="collapse">
+  <li><a href="#qué-es-el-nivel-de-madurez-tecnológica" id="toc-qué-es-el-nivel-de-madurez-tecnológica" class="nav-link active" data-scroll-target="#qué-es-el-nivel-de-madurez-tecnológica">Qué es el nivel de madurez tecnológica</a></li>
+  <li><a href="#los-nueve-niveles" id="toc-los-nueve-niveles" class="nav-link" data-scroll-target="#los-nueve-niveles">Los nueve niveles</a></li>
+  <li><a href="#el-trl-y-las-etapas-de-idi" id="toc-el-trl-y-las-etapas-de-idi" class="nav-link" data-scroll-target="#el-trl-y-las-etapas-de-idi">El TRL y las etapas de I+D+i</a></li>
+  <li><a href="#los-actores-del-snctei-y-su-franja-de-trl" id="toc-los-actores-del-snctei-y-su-franja-de-trl" class="nav-link" data-scroll-target="#los-actores-del-snctei-y-su-franja-de-trl">Los actores del SNCTeI y su franja de TRL</a></li>
+  <li><a href="#más-allá-de-la-tecnología-otras-escalas-de-madurez" id="toc-más-allá-de-la-tecnología-otras-escalas-de-madurez" class="nav-link" data-scroll-target="#más-allá-de-la-tecnología-otras-escalas-de-madurez">Más allá de la tecnología: otras escalas de madurez</a></li>
+  <li><a href="#cómo-asignar-un-trl-sin-engañarse" id="toc-cómo-asignar-un-trl-sin-engañarse" class="nav-link" data-scroll-target="#cómo-asignar-un-trl-sin-engañarse">Cómo asignar un TRL sin engañarse</a></li>
+  <li><a href="#autodiagnóstico-rápido" id="toc-autodiagnóstico-rápido" class="nav-link" data-scroll-target="#autodiagnóstico-rápido">Autodiagnóstico rápido</a></li>
+  <li><a href="#casos-colombianos" id="toc-casos-colombianos" class="nav-link" data-scroll-target="#casos-colombianos">Casos colombianos</a></li>
+  <li><a href="#el-trl-en-la-gestión-del-riesgo-de-desastres" id="toc-el-trl-en-la-gestión-del-riesgo-de-desastres" class="nav-link" data-scroll-target="#el-trl-en-la-gestión-del-riesgo-de-desastres">El TRL en la gestión del riesgo de desastres</a></li>
+  <li><a href="#referencias-y-recursos" id="toc-referencias-y-recursos" class="nav-link" data-scroll-target="#referencias-y-recursos">Referencias y recursos</a></li>
+  </ul>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Informar sobre problema</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cyt/index.html">Ciencia y tecnología</a></li><li class="breadcrumb-item"><a href="../cyt/trl.html">Nivel de Madurez Tecnológica (TRL)</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Nivel de Madurez Tecnológica (TRL)</h1>
+<p class="subtitle lead">Qué es la escala TRL, cómo la usa Minciencias, qué escalas la complementan y cómo asignar un nivel con evidencia</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mauricio Romero Torres </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">25 de noviembre de 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de última modificación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">25 de noviembre de 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-tip callout-titled" title="En resumen">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>En resumen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>El TRL mide qué tan probada está una tecnología</strong>, no qué tan buena es ni qué tan útil será. Va del 1 (principios básicos observados) al 9 (sistema probado con éxito en operación real).</li>
+<li><strong>Nació en la NASA a mediados de los años setenta</strong> y hoy lo usan la ESA, la Comisión Europea, la norma ISO 16290 y Minciencias. Desde el Documento de Política 1602 de 2016, Minciencias lo usa para ubicar a los actores del SNCTI y para pedir a los proyectos que declaren el nivel que esperan alcanzar.</li>
+<li><strong>Cada nivel se gana con evidencia documentada</strong>: una publicación revisada por pares, un informe de pruebas, un piloto en el entorno relevante o resultados de operación. La pregunta no es “¿qué creemos que tenemos?”, sino “¿qué podemos mostrar?”.</li>
+<li><strong>El TRL no basta para llevar algo a la sociedad.</strong> Se complementa con escalas de madurez del cliente (CRL), del negocio (BRL), de la sostenibilidad o de la preparación social (SRL) y de la propiedad intelectual (IPRL). En gestión del riesgo de desastres, donde muchas soluciones son sociales o institucionales, el par <strong>TRL + SRL</strong> suele decir más que el TRL solo.</li>
+</ul>
+</div>
+</div>
+<style>
+/* Estilos del artículo TRL: HTML y CSS puros, con prefijo trl- para no chocar con el tema */
+.trl{--ink:#14232c;--mut:#5b6b75;--line:#e2e8eb;--soft:#eef5f8;--blue:#0b6e99;--deep:#003A70;
+  --f1:#d8eef7;--f1b:#1b6f93;--f2:#dcefe4;--f2b:#1d7a4c;--f3:#fdebd3;--f3b:#a2560c;--coral:#e0560b;
+  color:var(--ink);font-size:15.5px;line-height:1.5;margin:1.2rem 0 1.6rem}
+.trl *{box-sizing:border-box;min-width:0}
+.trl .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.trl .card{border:1px solid var(--line);border-radius:12px;background:#fff;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.trl .card h4{margin:0;font-size:1.02rem;line-height:1.25;color:var(--ink)}
+.trl .card p{margin:0;font-size:.93rem}
+.trl .card .ev{font-size:.85rem;color:var(--mut);border-top:1px dashed var(--line);padding-top:6px;margin-top:auto}
+.trl .card .ev b{color:var(--ink)}
+.trl .num{display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;
+  border-radius:999px;padding:2px 10px;width:max-content}
+.trl .p1 .num{background:var(--f1);color:var(--f1b)} .trl .p1{border-top:4px solid var(--f1b)}
+.trl .p2 .num{background:var(--f2);color:var(--f2b)} .trl .p2{border-top:4px solid var(--f2b)}
+.trl .p3 .num{background:var(--f3);color:var(--f3b)} .trl .p3{border-top:4px solid var(--f3b)}
+.trl details{font-size:.85rem;color:var(--mut)}
+.trl details summary{cursor:pointer;color:var(--blue);font-weight:600}
+.trl details p{margin:.35rem 0 0}
+.trl .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.85rem;color:var(--mut);margin:0 0 10px}
+.trl .legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--c)}
+/* tablas */
+.trl .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.trl table{border-collapse:collapse;width:100%;font-size:.92rem;margin:0}
+.trl th,.trl td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+.trl th{font-size:.8rem;color:var(--mut);font-weight:600;background:var(--soft)}
+.trl tbody tr:hover{background:#f7fafb}
+.trl caption{caption-side:bottom;text-align:left;font-size:.82rem;color:var(--mut);padding-top:8px}
+/* franjas sobre la escala 1-9 */
+.trl .scale{display:grid;grid-template-columns:minmax(150px,1.3fr) 4fr;gap:6px 12px;align-items:center}
+.trl .scale .lab{font-size:.9rem;font-weight:600}
+.trl .scale .lab small{display:block;font-weight:400;color:var(--mut);font-size:.78rem}
+.trl .track{position:relative;height:26px;background:repeating-linear-gradient(90deg,var(--soft) 0 calc(11.111% - 2px),#fff calc(11.111% - 2px) 11.111%);border-radius:6px}
+.trl .bar{position:absolute;top:3px;bottom:3px;border-radius:5px;background:var(--blue);color:#fff;font-size:.75rem;font-weight:600;
+  display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden}
+.trl .bar.alt{background:var(--f2b)} .trl .bar.warm{background:var(--f3b)} .trl .bar.deep{background:var(--deep)}
+.trl .ticks{display:grid;grid-template-columns:repeat(9,1fr);font-size:.75rem;color:var(--mut);text-align:center}
+.trl .grad{height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:600;color:#14232c}
+@media (max-width:620px){.trl .scale{grid-template-columns:1fr}.trl .scale .lab{margin-top:6px}}
+/* línea de tiempo */
+.trl .time{list-style:none;margin:0;padding:0 0 0 18px;border-left:3px solid var(--line)}
+.trl .time li{position:relative;margin:0 0 12px;padding-left:8px}
+.trl .time li::before{content:"";position:absolute;left:-27px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--blue)}
+.trl .time b{color:var(--blue)}
+/* autodiagnóstico */
+.trl .quiz{border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--soft)}
+.trl .quiz .q{font-weight:600;font-size:1rem;margin:4px 0 12px}
+.trl .quiz .step{font-size:.8rem;color:var(--mut)}
+.trl .quiz button{font:inherit;cursor:pointer;border-radius:8px;padding:8px 16px;min-height:42px;border:1px solid var(--line);background:#fff;margin:0 8px 8px 0}
+.trl .quiz button.yes{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600}
+.trl .quiz button:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.trl .meter{display:grid;grid-template-columns:repeat(9,1fr);gap:4px;margin:10px 0}
+.trl .meter i{height:12px;border-radius:3px;background:#fff;border:1px solid var(--line)}
+.trl .meter i.on{background:var(--blue);border-color:var(--blue)}
+.trl .res{font-size:1.05rem}
+.trl .res strong{font-size:1.4rem;color:var(--deep)}
+/* infografía de columnas */
+.trl .info{background:#f2f2f2;border-radius:14px;padding:18px 14px 14px}
+.trl .info h3{margin:4px 0 16px;text-align:center;font-weight:800;letter-spacing:.02em;font-size:clamp(1.05rem,2.6vw,1.6rem);color:#1c1c1c;text-transform:uppercase}
+.trl .info .wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.trl .info .board{min-width:760px;display:grid;grid-template-columns:repeat(9,1fr);gap:0}
+.trl .info .col{background:var(--c);border-radius:22px 22px 0 0;padding:12px 6px 18px;min-height:250px;text-align:center;color:#1c1c1c}
+.trl .info .ring{width:74px;height:74px;margin:0 auto 18px;border-radius:50%;background:#fff;border:7px solid var(--r);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem}
+.trl .info .col p{margin:0;font-size:.86rem;line-height:1.35}
+.trl .info .band{display:flex;align-items:center;justify-content:center;text-align:center;padding:10px 6px;color:#fff;font-weight:700;font-size:.78rem;text-transform:uppercase;line-height:1.25;min-height:58px}
+.trl .info .env{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;text-transform:uppercase;font-size:.9rem;min-height:50px;margin-top:10px;padding:6px;text-align:center}
+.trl .tag{display:inline-block;font-size:.75rem;font-weight:600;color:var(--blue);background:#fff;border:1px solid var(--line);border-radius:999px;padding:1px 8px}
+</style>
+<section id="qué-es-el-nivel-de-madurez-tecnológica" class="level2">
+<h2 class="anchored" data-anchor-id="qué-es-el-nivel-de-madurez-tecnológica">Qué es el nivel de madurez tecnológica</h2>
+<p>El <strong>nivel de madurez tecnológica</strong> (TRL, por <em>Technology Readiness Level</em>) es una escala de nueve peldaños que ubica a una tecnología entre la observación de un principio científico y su operación probada en el mundo real. Su valor está en que obliga a hablar con un vocabulario común: un investigador, un evaluador y un inversionista entienden lo mismo cuando alguien dice “estamos en TRL 4”.</p>
+<p>La escala nació en la NASA a mediados de los años setenta. Empezó con siete niveles y en 1995 se consolidó con los nueve que se usan hoy, documentados por John Mankins. La NASA la sigue usando para decidir cuándo una tecnología está lista para entrar a una misión. Sus definiciones distinguen entre <em>hardware</em> y <em>software</em>, y fijan para cada nivel un <strong>criterio de salida</strong>, es decir, la evidencia que demuestra que el nivel se alcanzó.</p>
+<p>Minciencias adoptó el TRL para ordenar las actividades de investigación, desarrollo tecnológico e innovación (I+D+i) del Sistema Nacional de Ciencia, Tecnología e Innovación (SNCTeI). Lo hizo en el <em>Documento de Política Nacional de CTeI 1602</em> de 2016, sobre los actores del sistema. El Anexo 6 de los términos de referencia de la Convocatoria 50 del SGR (2025) recuerda que, “como todo modelo, corresponde a una simplificación práctica de la realidad, por lo que debe interpretarse de acuerdo con el contexto”. También aclara que la escala puede aplicarse a las ciencias sociales, la economía, las artes, las humanidades, los negocios, el lenguaje y la educación.</p>
+<div class="trl">
+<ul class="time" aria-label="Línea de tiempo de la escala TRL">
+  <li><b>Mediados de los años setenta · NASA.</b> Primera escala de madurez, con siete niveles, para decidir qué tecnologías podían entrar a una misión espacial.</li>
+  <li><b>1995 · NASA (Mankins).</b> La escala se fija en nueve niveles, con definiciones que hoy son la referencia internacional.</li>
+  <li><b>2013 · ISO 16290.</b> Norma internacional que define los TRL y sus criterios de evaluación para sistemas espaciales.</li>
+  <li><b>2014 · Comisión Europea.</b> Horizonte 2020 adopta el TRL en sus programas de trabajo (Anexo General G), y la escala se extiende a toda la política europea de investigación e innovación.</li>
+  <li><b>2016 · Colciencias, Documento 1602.</b> El TRL se usa para caracterizar el rol de los actores del SNCTeI y relacionarlo con las etapas de I+D+i.</li>
+  <li><b>2021 · Minciencias.</b> La guía técnica para reconocer Centros de Desarrollo Tecnológico (CDT) evalúa el TRL de sus actividades y lo presenta junto a una escala de preparación social (SRL).</li>
+  <li><b>2022 · Minciencias.</b> La <em>Guía para la transferencia de tecnología</em> pide identificar tecnologías transferibles con TRL, CRL, BRL y SRL.</li>
+  <li><b>2025 · Convocatoria 50 del SGR.</b> Los proyectos deben declarar el TRL que esperan alcanzar, coherente con sus trayectorias y productos.</li>
+</ul>
+</div>
+</section>
+<section id="los-nueve-niveles" class="level2">
+<h2 class="anchored" data-anchor-id="los-nueve-niveles">Los nueve niveles</h2>
+<p>Los niveles se agrupan en tres fases: <strong>investigación</strong> (1–3), <strong>desarrollo y validación</strong> (4–6) y <strong>demostración y despliegue</strong> (7–9). Cada tarjeta trae el nombre que usa Minciencias, lo que ocurre en ese nivel y la evidencia que, según la NASA, permite darlo por alcanzado. Al desplegar cada tarjeta se ve la diferencia entre <em>hardware</em> y <em>software</em>. La infografía resume la escala completa: arriba, el nombre corto de cada nivel; en medio, la etapa del ciclo de innovación; abajo, el entorno donde se prueba la tecnología.</p>
+<div class="trl">
+<figure class="info figure" aria-label="Infografía de los nueve niveles de madurez tecnológica">
+<h3 class="anchored">Nivel de madurez de la tecnología (TRL)</h3>
+<div class="wrap"><div class="board">
+  <div class="col" style="--c:#fdf04a;--r:#f5c116"><div class="ring">TRL 1</div><p>Principios básicos observados</p></div>
+  <div class="col" style="--c:#f67c24;--r:#ff9a4a"><div class="ring">TRL 2</div><p>Concepto de tecnología o aplicación formulado</p></div>
+  <div class="col" style="--c:#da5f8b;--r:#fbb6dd"><div class="ring">TRL 3</div><p>Prueba de concepto</p></div>
+  <div class="col" style="--c:#6fbffd;--r:#92c9df"><div class="ring">TRL 4</div><p>Validación en pruebas de laboratorio</p></div>
+  <div class="col" style="--c:#a993fd;--r:#7b86c9"><div class="ring">TRL 5</div><p>Validación en un entorno relevante</p></div>
+  <div class="col" style="--c:#22b986;--r:#2a6a45"><div class="ring">TRL 6</div><p>Validación en condiciones cercanas a las reales</p></div>
+  <div class="col" style="--c:#d0e744;--r:#93d452"><div class="ring">TRL 7</div><p>Demostración en el entorno operativo real</p></div>
+  <div class="col" style="--c:#fd6149;--r:#ef4a2b"><div class="ring">TRL 8</div><p>Sistema completo y calificado en ambiente operacional</p></div>
+  <div class="col" style="--c:#fd77d5;--r:#9614b5"><div class="ring">TRL 9</div><p>Sistema probado y operado con éxito en un entorno real</p></div>
+
+  <div class="band" style="grid-column:1/3;background:#263b75">Invención</div>
+  <div class="band" style="grid-column:3/5;background:#0ea689">Validación del concepto</div>
+  <div class="band" style="grid-column:5/6;background:#9512ad">Prototipado e incubación</div>
+  <div class="band" style="grid-column:6/8;background:#f92106">Producción piloto y demostración</div>
+  <div class="band" style="grid-column:8/9;background:#838383">Introducción inicial en el mercado</div>
+  <div class="band" style="grid-column:9/10;background:#1c1c1c">Expansión de mercado</div>
+
+  <div class="env" style="grid-column:1/4;background:#adadad;margin-right:6px">Entorno de laboratorio</div>
+  <div class="env" style="grid-column:4/7;background:#7f7f7f;margin-right:6px">Entorno de simulación</div>
+  <div class="env" style="grid-column:7/10;background:#1c1c1c">Entorno real</div>
+</div></div>
+</figure>
+
+<div class="legend" style="margin-top:18px">
+  <span style="--c:#1b6f93">Investigación (TRL 1–3)</span>
+  <span style="--c:#1d7a4c">Desarrollo y validación (TRL 4–6)</span>
+  <span style="--c:#a2560c">Demostración y despliegue (TRL 7–9)</span>
+</div>
+<div class="grid">
+
+<article class="card p1"><span class="num">TRL 1</span>
+<h4 class="anchored">Principios básicos observados y reportados</h4>
+<p>Es el nivel más bajo. Comienza la investigación científica básica y empieza la transición hacia la investigación aplicada. Las herramientas pueden ser formulaciones matemáticas o algoritmos. Todavía no hay ninguna aplicación comercial.</p>
+<details><summary>Hardware y software</summary><p><b>Hardware:</b> conocimiento científico que sustenta los conceptos de la tecnología.<br><b>Software:</b> conocimiento que sustenta las propiedades básicas de la arquitectura y la formulación matemática.</p></details>
+<p class="ev"><b>Evidencia:</b> publicación revisada por pares de la investigación que sustenta el concepto.</p>
+</article>
+
+<article class="card p1"><span class="num">TRL 2</span>
+<h4 class="anchored">Concepto o aplicación de la tecnología formulado</h4>
+<p>Los principios se enfocan en un área de aplicación concreta y se perfila el plan de desarrollo. La aplicación todavía es especulativa: no hay prueba experimental ni análisis detallado que la respalde. La propiedad intelectual empieza a cobrar interés.</p>
+<details><summary>Hardware y software</summary><p><b>Hardware:</b> comienza la invención; la aplicación práctica se identifica pero es especulativa.<br><b>Software:</b> se definen las propiedades básicas de algoritmos y representaciones; se codifican los principios y se experimenta con datos sintéticos.</p></details>
+<p class="ev"><b>Evidencia:</b> descripción documentada de la aplicación o concepto, con su factibilidad y beneficio.</p>
+</article>
+
+<article class="card p1"><span class="num">TRL 3</span>
+<h4 class="anchored">Prueba de concepto analítica y experimental</h4>
+<p>Empieza la I+D activa: estudios analíticos y pruebas de laboratorio para demostrar la factibilidad técnica. Se validan componentes por separado, aunque todavía no se integran en un sistema.</p>
+<details><summary>Hardware y software</summary><p><b>Hardware:</b> estudios analíticos, demostraciones de laboratorio, modelación y simulación que validan las predicciones.<br><b>Software:</b> funcionalidad limitada para validar propiedades críticas con componentes no integrados.</p></details>
+<p class="ev"><b>Evidencia:</b> resultados analíticos o experimentales documentados que validan las predicciones de los parámetros clave.</p>
+</article>
+
+<article class="card p2"><span class="num">TRL 4</span>
+<h4 class="anchored">Validación de componentes en laboratorio</h4>
+<p>Se comprueba que los componentes funcionan juntos. Se construye un prototipo de baja fidelidad en un entorno controlado, y sus datos permiten estimar el potencial de escalamiento y hacer los primeros modelos económicos.</p>
+<details><summary>Hardware y software</summary><p><b>Hardware:</b> prototipo de baja fidelidad (<em>breadboard</em>) que demuestra la funcionalidad básica.<br><b>Software:</b> componentes críticos integrados y validados; se define el entorno relevante y se predice el desempeño en él.</p></details>
+<p class="ev"><b>Evidencia:</b> pruebas documentadas que concuerdan con las predicciones y definición documentada del entorno relevante.</p>
+</article>
+
+<article class="card p2"><span class="num">TRL 5</span>
+<h4 class="anchored">Validación en un entorno relevante</h4>
+<p>Los elementos se integran en una configuración parecida a la final y se prueban en un entorno simulado realista. Se identifican aspectos de seguridad, ambientales y regulatorios. La diferencia con el TRL 4 es la mayor fidelidad del sistema y de su entorno.</p>
+<details><summary>Hardware y software</summary><p><b>Hardware:</b> prototipo de fidelidad media (<em>brassboard</em>) probado en un entorno operativo simulado.<br><b>Software:</b> sistema de extremo a extremo conectado con sistemas existentes y probado en el entorno relevante.</p></details>
+<p class="ev"><b>Evidencia:</b> pruebas documentadas que concuerdan con las predicciones y requisitos de escalamiento documentados.</p>
+</article>
+
+<article class="card p2"><span class="num">TRL 6</span>
+<h4 class="anchored">Demostración en condiciones cercanas a las reales</h4>
+<p>Hay un prototipo piloto de alta fidelidad capaz de cumplir todas las funciones del sistema en condiciones muy cercanas a las de operación: son las pruebas "beta". Se modela el sistema a escala comercial y se afinan el ciclo de vida y la evaluación económica.</p>
+<details><summary>Hardware y software</summary><p><b>Hardware:</b> prototipo de alta fidelidad que resuelve los problemas críticos de escala.<br><b>Software:</b> prototipo demostrado en problemas reales a escala completa, con integración parcial y documentación limitada.</p></details>
+<p class="ev"><b>Evidencia:</b> pruebas documentadas en el entorno relevante que concuerdan con las predicciones.</p>
+</article>
+
+<article class="card p3"><span class="num">TRL 7</span>
+<h4 class="anchored">Demostración del prototipo en el entorno operativo</h4>
+<p>El sistema opera, o está cerca de operar, a escala precomercial. Se hacen la primera corrida piloto y las pruebas finales reales. Es un salto grande de madurez: el prototipo ya no se prueba en un entorno simulado sino en el real.</p>
+<details><summary>Hardware y software</summary><p><b>Hardware:</b> unidad de ingeniería de alta fidelidad operada en el entorno y la plataforma reales.<br><b>Software:</b> toda la funcionalidad clave disponible, bien integrada con los sistemas operativos y la mayoría de errores corregidos.</p></details>
+<p class="ev"><b>Evidencia:</b> pruebas documentadas en el entorno operativo que concuerdan con las predicciones.</p>
+</article>
+
+<article class="card p3"><span class="num">TRL 8</span>
+<h4 class="anchored">Sistema completo y calificado</h4>
+<p>La tecnología está en su forma final y se ha probado en las condiciones previstas. Las cuestiones de operación y fabricación están resueltas, y hay manuales de uso y mantenimiento. En la mayoría de los casos, este nivel marca el fin del desarrollo.</p>
+<details><summary>Hardware y software</summary><p><b>Hardware:</b> producto final en su configuración final, demostrado mediante pruebas y análisis.<br><b>Software:</b> depurado e integrado por completo, con toda la documentación y la verificación y validación (V&amp;V) terminadas.</p></details>
+<p class="ev"><b>Evidencia:</b> pruebas documentadas que verifican las predicciones analíticas.</p>
+</article>
+
+<article class="card p3"><span class="num">TRL 9</span>
+<h4 class="anchored">Sistema probado con éxito en un entorno real</h4>
+<p>La tecnología opera con éxito en condiciones reales y está disponible para la comercialización, la producción en serie o el uso por la sociedad.</p>
+<details><summary>Hardware y software</summary><p><b>Hardware:</b> producto final operado con éxito en una misión real.<br><b>Software:</b> operado con éxito en el entorno real, con soporte de ingeniería de mantenimiento.</p></details>
+<p class="ev"><b>Evidencia:</b> resultados documentados de la operación real (de la misión).</p>
+</article>
+
+</div>
+</div>
+<p>Fuentes: descripciones adaptadas de Minciencias (2021, Anexo de la guía de CDT; 2022, <em>Guía para la transferencia de tecnología</em>). Hardware, software y criterios de salida traducidos de NASA, <em>Technology Readiness Level Definitions</em>.</p>
+</section>
+<section id="el-trl-y-las-etapas-de-idi" class="level2">
+<h2 class="anchored" data-anchor-id="el-trl-y-las-etapas-de-idi">El TRL y las etapas de I+D+i</h2>
+<p>En la política colombiana, el TRL se usa sobre todo para relacionar cada nivel con el <strong>tipo de actividad</strong> que lo produce. La figura del Documento 1602, reproducida en el Anexo 6 de la Convocatoria 50 del SGR, muestra tres capas: los nueve niveles, las cuatro actividades de I+D+i que se superponen sobre ellos y las actividades complementarias, que pesan más en un extremo de la escala que en el otro. Esta versión en HTML la reconstruye.</p>
+<div class="trl" role="figure" aria-label="Relación entre los niveles TRL y las actividades de I+D+i">
+<div class="scale">
+  <div></div>
+  <div class="ticks"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div>
+
+  <div class="lab">Investigación básica</div>
+  <div class="track"><div class="bar" style="left:0;width:33.3%">TRL 1–3</div></div>
+  <div class="lab">Investigación aplicada</div>
+  <div class="track"><div class="bar" style="left:16%;width:39%">TRL 2–5</div></div>
+  <div class="lab">Desarrollo tecnológico</div>
+  <div class="track"><div class="bar alt" style="left:52%;width:38%">TRL 5–8</div></div>
+  <div class="lab">Innovación</div>
+  <div class="track"><div class="bar warm" style="left:74%;width:26%">TRL 7–9</div></div>
+
+  <div class="lab" style="margin-top:10px">Actividades complementarias <small>Más oscuro = mayor peso</small></div><div></div>
+  <div class="lab">Divulgación científica</div>
+  <div class="grad" style="background:linear-gradient(90deg,#5b8a9a,#d8eef7 70%)"></div>
+  <div class="lab">Formación</div>
+  <div class="grad" style="background:linear-gradient(90deg,#5b8a9a,#d8eef7 60%)"></div>
+  <div class="lab">Servicios tecnológicos</div>
+  <div class="grad" style="background:linear-gradient(90deg,#d8eef7 15%,#5b8a9a 50%,#d8eef7 85%)"></div>
+  <div class="lab">Asesoría y consultoría</div>
+  <div class="grad" style="background:linear-gradient(90deg,#d8eef7 35%,#5b8a9a)"></div>
+  <div class="lab">Apropiación social del conocimiento</div>
+  <div class="grad" style="background:linear-gradient(90deg,#d8eef7 45%,#5b8a9a)"></div>
+</div>
+<p style="font-size:.82rem;color:#5b6b75;margin-top:10px">Reconstrucción aproximada de la Figura 1 del Anexo 6 (Convocatoria 50 del SGR), tomada del Documento de Política 1602 (Colciencias, 2016, p. 12). Los extremos de cada franja se leen sobre la figura original y no son límites normativos.</p>
+</div>
+<p>Tres lecturas prácticas:</p>
+<ul>
+<li><strong>Las franjas se solapan a propósito.</strong> El Documento 1602 reconoce que es difícil delimitar con precisión la investigación básica, la aplicada, el desarrollo tecnológico y la innovación, y que esos límites cambian según la disciplina.</li>
+<li><strong>Un proyecto de investigación básica no tiene que llegar a TRL 9.</strong> El Anexo 6 indica que la relación con las etapas de I+D+i se da principalmente entre los TRL 1 y 6, y pide que el nivel esperado sea coherente con las trayectorias previas y con los productos de nuevo conocimiento, de apropiación social y de divulgación.</li>
+<li><strong>La apropiación social pesa más en los niveles altos.</strong> Según la figura, llevar un resultado a la sociedad se concentra hacia el final de la escala, justo donde las escalas complementarias (CRL, BRL, SRL) se vuelven indispensables.</li>
+</ul>
+</section>
+<section id="los-actores-del-snctei-y-su-franja-de-trl" class="level2">
+<h2 class="anchored" data-anchor-id="los-actores-del-snctei-y-su-franja-de-trl">Los actores del SNCTeI y su franja de TRL</h2>
+<p>Minciencias reconoce actores según su actividad principal, y cada tipología se asocia con una franja de la escala. Las franjas vienen de las definiciones de la <em>Guía para la transferencia de tecnología</em> (2022), que siguen la Política de Actores (Documento 1602).</p>
+<div class="trl" role="figure" aria-label="Franja TRL de cada tipo de actor del SNCTeI">
+<div class="scale">
+  <div></div>
+  <div class="ticks"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div>
+
+  <div class="lab">Unidad de I+D+i de empresa<small>Investigación aplicada, desarrollo tecnológico e innovación</small></div>
+  <div class="track"><div class="bar" style="left:11.1%;width:88.9%">TRL 2–9</div></div>
+
+  <div class="lab">Centro de Desarrollo Tecnológico (CDT)<small>Investigación aplicada y desarrollo tecnológico</small></div>
+  <div class="track"><div class="bar alt" style="left:22.2%;width:66.7%">TRL 3–8</div></div>
+
+  <div class="lab">Centro de Innovación y Productividad (CIP)<small>Asesoría, consultoría, asistencia técnica y capacitación</small></div>
+  <div class="track"><div class="bar deep" style="left:33.3%;width:66.7%">soporte TRL 4–9</div></div>
+
+  <div class="lab">Incubadora de Empresas de Base Tecnológica (IEBT)<small>Asistencia técnica, asesoría y consultoría</small></div>
+  <div class="track"><div class="bar deep" style="left:55.5%;width:44.5%">soporte TRL 6–9</div></div>
+
+  <div class="lab">Empresa Altamente Innovadora (EAI)<small>Productos o servicios nuevos en el mercado</small></div>
+  <div class="track"><div class="bar warm" style="left:66.7%;width:33.3%">TRL 7–9</div></div>
+</div>
+<p style="font-size:.82rem;color:#5b6b75;margin-top:10px">"Soporte" indica que el actor acompaña a otros en esos niveles, pero no desarrolla él mismo la tecnología. Para el reconocimiento de un CDT, la guía técnica M601PR05G07 exige además que la mayoría de sus actividades y productos principales estén entre los TRL 4 y 7.</p>
+</div>
+<p>En el reconocimiento de un CDT, la madurez tecnológica es un criterio explícito de evaluación. El centro debe listar las actividades que mejor muestran la madurez de sus tecnologías y asignar un TRL a cada una. La guía define el TRL como “una herramienta aceptada internacionalmente para delimitar y medir las etapas de maduración de una tecnología y su posibilidad de ser introducida en el mercado”. Para ello toma como referencia los indicadores de la NASA, la Comisión Europea y el CONACYT de México.</p>
+</section>
+<section id="más-allá-de-la-tecnología-otras-escalas-de-madurez" class="level2">
+<h2 class="anchored" data-anchor-id="más-allá-de-la-tecnología-otras-escalas-de-madurez">Más allá de la tecnología: otras escalas de madurez</h2>
+<p>Una tecnología en TRL 9 puede fracasar si nadie la necesita, si no hay un modelo para sostenerla o si la comunidad no la adopta. Por eso la <em>Guía para la transferencia de tecnología</em> recoge el modelo <strong>KTH Innovation Readiness Level™</strong>, del Instituto Real de Tecnología de Suecia, que evalúa la madurez de una idea en varias dimensiones paralelas, todas con nueve niveles.</p>
+<div class="trl">
+<div class="grid">
+  <article class="card"><span class="tag">CRL</span><h4 class="anchored">Madurez del cliente</h4><p>¿Existe una necesidad real y clientes o usuarios interesados? Va de una hipótesis vaga sobre el mercado (CRL 1) a ventas repetibles y escalables (CRL 9).</p></article>
+  <article class="card"><span class="tag">TRL</span><h4 class="anchored">Madurez tecnológica</h4><p>¿Qué tan probada está la tecnología? Va de los principios básicos observados (TRL 1) al sistema probado en entorno real (TRL 9).</p></article>
+  <article class="card"><span class="tag">BRL</span><h4 class="anchored">Madurez del negocio</h4><p>¿Hay un modelo viable? Va de una hipótesis de concepto de negocio (BRL 1) a un modelo definitivo que escala con ingresos recurrentes (BRL 9). Avanza en paralelo con el TRL.</p></article>
+  <article class="card"><span class="tag">IPRL</span><h4 class="anchored">Madurez de la propiedad intelectual</h4><p>¿Está protegido lo que hay que proteger? Evalúa y desarrolla una protección adecuada de la propiedad intelectual.</p></article>
+  <article class="card"><span class="tag">TMRL</span><h4 class="anchored">Madurez del equipo</h4><p>¿El equipo tiene las competencias para llevar la idea al siguiente nivel? Evalúa y prepara al equipo humano.</p></article>
+  <article class="card"><span class="tag">FRL</span><h4 class="anchored">Madurez para la financiación</h4><p>¿Está lista la iniciativa para recibir inversión? Evalúa la preparación para conseguir financiación de forma segura.</p></article>
+  <article class="card"><span class="tag">SRL</span><h4 class="anchored">Madurez de la sostenibilidad</h4><p>¿La sostenibilidad está integrada en el modelo? Va de no conocer la Agenda 2030 (SRL 1) a una estrategia que aporta de forma comprobada a los Objetivos de Desarrollo Sostenible (SRL 9).</p></article>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Ojo con la sigla SRL">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Ojo con la sigla SRL
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En los documentos de Minciencias, “SRL” significa dos cosas distintas:</p>
+<ul>
+<li>En la <em>Guía para la transferencia de tecnología</em> (2022) es el <strong>nivel de madurez de la sostenibilidad</strong> (<em>Sustainability Readiness Level</em>) del modelo KTH.</li>
+<li>En la <em>Guía técnica de reconocimiento de CDT</em> (2021) es el <strong>nivel de preparación social</strong> (<em>Societal Readiness Level</em>), una escala que mide qué tan preparada está la sociedad para adoptar una solución. Esta escala la popularizó Innovation Fund Denmark.</li>
+</ul>
+<p>En la literatura también aparece <em>System Readiness Level</em>, que combina la madurez de las tecnologías y la de su integración. Al usar la sigla, conviene escribir siempre a cuál se refiere.</p>
+</div>
+</div>
+<section id="trl-y-preparación-social-nivel-por-nivel" class="level3">
+<h3 class="anchored" data-anchor-id="trl-y-preparación-social-nivel-por-nivel">TRL y preparación social, nivel por nivel</h3>
+<p>La guía de CDT presenta las dos escalas lado a lado. Esta comparación es especialmente útil para proyectos con comunidades, entidades territoriales o sistemas de alerta, donde el éxito depende tanto del artefacto como de su adopción.</p>
+<div class="trl">
+<div class="scroll">
+
+<table class="caption-top table">
+<caption>Fuente: Minciencias (2021), <em>Guía técnica para el reconocimiento de Centros de Desarrollo Tecnológico</em>, Figura 1 del anexo de definiciones.</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="width: 3.5rem">Nivel</th>
+<th data-quarto-table-cell-role="th">Madurez de la tecnología (TRL)</th>
+<th data-quarto-table-cell-role="th">Preparación social (SRL)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td>Principios básicos observados y reportados</td>
+<td>Identificar el problema y la preparación de la sociedad</td>
+</tr>
+<tr class="even">
+<td><strong>2</strong></td>
+<td>Concepto de tecnología o aplicación formulado</td>
+<td>Formular el problema, las soluciones propuestas y su impacto potencial; identificar a los actores relevantes</td>
+</tr>
+<tr class="odd">
+<td><strong>3</strong></td>
+<td>Pruebas de concepto analíticas y experimentales</td>
+<td>Prueba inicial de las soluciones con las partes interesadas relevantes</td>
+</tr>
+<tr class="even">
+<td><strong>4</strong></td>
+<td>Validación de componentes o subsistemas en laboratorio</td>
+<td>Problema validado mediante pruebas piloto en el entorno pertinente</td>
+</tr>
+<tr class="odd">
+<td><strong>5</strong></td>
+<td>Validación de sistemas o componentes en un entorno relevante</td>
+<td>Soluciones validadas por las partes interesadas del área</td>
+</tr>
+<tr class="even">
+<td><strong>6</strong></td>
+<td>Validación del prototipo en condiciones cercanas a las reales</td>
+<td>Soluciones demostradas en el entorno relevante, con retroalimentación inicial sobre su impacto</td>
+</tr>
+<tr class="odd">
+<td><strong>7</strong></td>
+<td>Demostración del prototipo en el entorno operativo real</td>
+<td>Refinamiento del proyecto o la solución y, si hace falta, nueva prueba con las partes interesadas</td>
+</tr>
+<tr class="even">
+<td><strong>8</strong></td>
+<td>Sistema completo y calificado mediante pruebas y demostraciones</td>
+<td>Soluciones y plan de adaptación social completos y calificados</td>
+</tr>
+<tr class="odd">
+<td><strong>9</strong></td>
+<td>Sistema probado y operando con éxito en un entorno real</td>
+<td>Soluciones reales probadas en el entorno relevante</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
+</section>
+<section id="cómo-asignar-un-trl-sin-engañarse" class="level2">
+<h2 class="anchored" data-anchor-id="cómo-asignar-un-trl-sin-engañarse">Cómo asignar un TRL sin engañarse</h2>
+<p>El error más común es asignar el nivel por intención (“estamos trabajando en el prototipo”) y no por evidencia (“este es el informe de la prueba del prototipo”). Las guías de evaluación de madurez de la NASA, la GAO de Estados Unidos y la norma ISO 16290 coinciden en varias reglas.</p>
+<div class="trl">
+<div class="grid">
+  <article class="card"><h4 class="anchored">1. El nivel se demuestra, no se declara</h4><p>Cada nivel tiene un criterio de salida. Si no hay un documento que lo pruebe, como una publicación, un informe de ensayo o un acta de piloto, el nivel no se ha alcanzado.</p></article>
+  <article class="card"><h4 class="anchored">2. Evaluar los elementos críticos</h4><p>Un sistema tiene muchas piezas. Se identifican los elementos tecnológicos críticos (nuevos o usados de forma nueva, y sin los cuales el sistema no funciona) y se evalúa cada uno.</p></article>
+  <article class="card"><h4 class="anchored">3. El eslabón más débil manda</h4><p>Un sensor en TRL 8 conectado a un modelo de pronóstico en TRL 4 no hace un sistema en TRL 8. La madurez del conjunto la limita su elemento crítico menos maduro y la madurez de su integración.</p></article>
+  <article class="card"><h4 class="anchored">4. Definir el entorno antes de probar</h4><p>"Relevante" (TRL 5–6) y "operativo" (TRL 7–9) no son lo mismo. Hay que escribir cuál es el entorno real de uso, con su clima, sus usuarios, su conectividad y su institucionalidad, antes de decir que una prueba lo representa.</p></article>
+  <article class="card"><h4 class="anchored">5. Cambiar de entorno puede bajar el nivel</h4><p>Una tecnología en TRL 9 en un contexto puede volver a TRL 5 o 6 al trasladarla a otro muy distinto, por ejemplo de la industria a una cuenca rural o de un país a otro.</p></article>
+  <article class="card"><h4 class="anchored">6. El TRL no mide el valor</h4><p>Un TRL bajo no significa un mal proyecto: la investigación básica vive en TRL 1–3. La escala ordena la madurez para planear, financiar y evaluar. No es un puntaje de calidad.</p></article>
+</div>
+</div>
+<p>El tramo entre los TRL 4 y 7 se suele llamar el <strong>“valle de la muerte”</strong>: la investigación ya no atrae fondos de ciencia básica y la tecnología todavía no atrae inversión comercial. La asociación europea EARTO (2014) recomienda usar el TRL como herramienta de política precisamente para diseñar instrumentos que financien ese tramo.</p>
+</section>
+<section id="autodiagnóstico-rápido" class="level2">
+<h2 class="anchored" data-anchor-id="autodiagnóstico-rápido">Autodiagnóstico rápido</h2>
+<p>Responde en orden. La herramienta avanza mientras puedas mostrar la evidencia de cada nivel y se detiene en el primer “no”. Es una guía orientativa basada en los criterios de salida de la NASA, no una evaluación formal.</p>
+<div class="trl">
+<div class="quiz" id="trl-quiz" aria-live="polite">
+  <div class="step" id="trl-step"></div>
+  <div class="meter" id="trl-meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="q" id="trl-q"></div>
+  <div id="trl-btns">
+    <button class="yes" id="trl-yes" type="button">Sí, puedo mostrarlo</button>
+    <button id="trl-no" type="button">No todavía</button>
+  </div>
+  <div class="res" id="trl-res" hidden=""></div>
+  <button id="trl-reset" type="button" hidden="">Volver a empezar</button>
+</div>
+</div>
+<script>
+(function () {
+  var Q = [
+    "¿Hay una publicación o informe revisado que documente los principios científicos en que se basa la idea?",
+    "¿Hay una descripción escrita de la aplicación o el concepto, con su factibilidad y su beneficio?",
+    "¿Hay resultados analíticos o experimentales (laboratorio, modelación o simulación) que validen los parámetros clave?",
+    "¿Los componentes críticos se integraron y probaron juntos en laboratorio, con un informe que coincida con lo previsto?",
+    "¿El conjunto se probó en un entorno simulado realista (entorno relevante) con informe de desempeño?",
+    "¿Un prototipo de alta fidelidad se demostró en condiciones cercanas a las reales (prueba beta o piloto)?",
+    "¿El prototipo se demostró en el entorno operativo real, con sus usuarios y condiciones reales?",
+    "¿El sistema en su forma final está completo, calificado y con documentación de uso y mantenimiento?",
+    "¿El sistema opera con éxito de forma regular en el entorno real, con resultados de operación documentados?"
+  ];
+  var N = [
+    "Antes de TRL 1: la idea aún no tiene una base científica documentada.",
+    "Principios básicos observados y reportados.",
+    "Concepto o aplicación formulado.",
+    "Prueba de concepto analítica y experimental.",
+    "Componentes validados en laboratorio.",
+    "Validación en un entorno relevante.",
+    "Demostración en condiciones cercanas a las reales.",
+    "Demostración en el entorno operativo.",
+    "Sistema completo y calificado.",
+    "Sistema probado con éxito en un entorno real."
+  ];
+  var i = 0;
+  var $ = function (id) { return document.getElementById(id); };
+  function paint(level) {
+    var cells = $("trl-meter").children;
+    for (var k = 0; k < cells.length; k++) cells[k].className = k < level ? "on" : "";
+  }
+  function show() {
+    $("trl-step").textContent = "Pregunta " + (i + 1) + " de 9 · verificando TRL " + (i + 1);
+    $("trl-q").textContent = Q[i];
+    paint(i);
+  }
+  function finish(level) {
+    paint(level);
+    $("trl-step").textContent = "";
+    $("trl-q").textContent = "";
+    $("trl-btns").hidden = true;
+    var r = $("trl-res");
+    r.hidden = false;
+    r.textContent = "";
+    var s = document.createElement("strong");
+    s.textContent = level ? "TRL " + level : "TRL 0";
+    r.appendChild(s);
+    r.appendChild(document.createTextNode(" · " + N[level] + (level < 9 ? " El siguiente paso es reunir la evidencia del TRL " + (level + 1) + "." : "")));
+    $("trl-reset").hidden = false;
+  }
+  $("trl-yes").addEventListener("click", function () { i++; if (i >= 9) finish(9); else show(); });
+  $("trl-no").addEventListener("click", function () { finish(i); });
+  $("trl-reset").addEventListener("click", function () {
+    i = 0; $("trl-res").hidden = true; $("trl-reset").hidden = true; $("trl-btns").hidden = false; show();
+  });
+  show();
+})();
+</script>
+</section>
+<section id="casos-colombianos" class="level2">
+<h2 class="anchored" data-anchor-id="casos-colombianos">Casos colombianos</h2>
+<p>La <em>Guía para la transferencia de tecnología</em> (Minciencias, 2022) presenta lecciones aprendidas de actores reconocidos por el ministerio. En cada caso, la guía reporta el TRL de la tecnología transferida.</p>
+<div class="trl">
+<div class="scroll">
+
+<table class="caption-top table">
+<caption>Fuente: Minciencias (2022), <em>Guía para la transferencia de tecnología</em>, capítulo 9, "Lecciones aprendidas: actores reconocidos".</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Actor</th>
+<th data-quarto-table-cell-role="th">Tecnología o proyecto</th>
+<th data-quarto-table-cell-role="th" style="width: 7rem">TRL reportado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>COTECMAR</strong> (Centro de Desarrollo Tecnológico)</td>
+<td>Diseño del buque patrullero de costa tipo CPV</td>
+<td><span class="tag">TRL 6</span></td>
+</tr>
+<tr class="even">
+<td><strong>Centro de Productividad y Competitividad del Oriente</strong></td>
+<td>"Ignición Productiva": herramientas de gestión de la innovación empresarial transferidas a empresas</td>
+<td><span class="tag">TRL 7</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Procaps S.A.</strong></td>
+<td>BLEFADEX®: composición de aceites esenciales con actividad acaricida contra el ácaro <em>Demodex</em> spp.</td>
+<td><span class="tag">TRL 9</span></td>
+</tr>
+<tr class="even">
+<td><strong>Universidad de Antioquia</strong> (Unidad de Transferencia de Tecnología)</td>
+<td>Proceso para obtener micro y nanopartículas de carbonato de calcio</td>
+<td><span class="tag">TRL 9</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Créame</strong> (incubadora de empresas)</td>
+<td>Metodologías de incubación, aceleración e internacionalización, protegidas como obra literaria</td>
+<td><span class="tag">TRL 9</span></td>
+</tr>
+<tr class="even">
+<td><strong>Banco de Bogotá</strong></td>
+<td>Rediseño de la banca móvil como canal digital masivo</td>
+<td><span class="tag">TRL 9</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<p>Dos de los seis casos son <strong>metodologías</strong>, no artefactos físicos: Ignición Productiva y las metodologías de Créame. Muestran que la escala, adaptada, también sirve para conocimiento organizacional y de gestión, como anticipa el Anexo 6.</p>
+</section>
+<section id="el-trl-en-la-gestión-del-riesgo-de-desastres" class="level2">
+<h2 class="anchored" data-anchor-id="el-trl-en-la-gestión-del-riesgo-de-desastres">El TRL en la gestión del riesgo de desastres</h2>
+<p>La mayoría de las soluciones en gestión del riesgo combinan un componente técnico (sensores, modelos, plataformas) con uno social e institucional (protocolos, comunidades, decisiones). Por eso conviene evaluar las dos dimensiones. El siguiente ejemplo es <strong>ilustrativo</strong>: muestra cómo podría evolucionar un sistema de alerta temprana comunitario por crecientes súbitas.</p>
+<div class="trl">
+<div class="scroll">
+
+<table class="caption-top table">
+<caption>Ejemplo ilustrativo, construido para explicar la escala; no describe un proyecto real.</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="width: 4.5rem">TRL</th>
+<th data-quarto-table-cell-role="th">Qué se tiene</th>
+<th data-quarto-table-cell-role="th">Evidencia que lo respalda</th>
+<th data-quarto-table-cell-role="th">Preparación social (SRL) que debería acompañarlo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="tag">1–2</span></td>
+<td>Relación entre lluvia, nivel del río y tiempo de respuesta de la cuenca; concepto de alerta con sensores de bajo costo</td>
+<td>Revisión de literatura y nota técnica del concepto</td>
+<td>Problema y actores identificados: juntas de acción comunal, consejo municipal de gestión del riesgo</td>
+</tr>
+<tr class="even">
+<td><span class="tag">3–4</span></td>
+<td>Sensor ultrasónico y algoritmo de umbrales probados en laboratorio y con series históricas</td>
+<td>Informe de calibración y validación retrospectiva del algoritmo</td>
+<td>Primera prueba de la solución con líderes comunitarios</td>
+</tr>
+<tr class="odd">
+<td><span class="tag">5–6</span></td>
+<td>Estación piloto instalada en un tramo del río, con transmisión de datos y alertas de prueba</td>
+<td>Informe del piloto: disponibilidad, falsas alarmas, tiempos de aviso</td>
+<td>Solución validada y demostrada con la comunidad; protocolo de respuesta en borrador</td>
+</tr>
+<tr class="even">
+<td><span class="tag">7–8</span></td>
+<td>Red operando en la cuenca durante una temporada de lluvias, con mantenimiento y manual de operación</td>
+<td>Informe de temporada y verificación frente a eventos reales</td>
+<td>Plan de adaptación social calificado: simulacros, roles definidos, protocolo adoptado</td>
+</tr>
+<tr class="odd">
+<td><span class="tag">9</span></td>
+<td>Sistema integrado al Sistema Nacional de Gestión del Riesgo y operado por la entidad territorial</td>
+<td>Registros de operación en varios eventos y de alertas emitidas</td>
+<td>Solución probada en el entorno real y sostenida por sus usuarios</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<p>Algunas recomendaciones para proyectos de ciencia y tecnología en gestión del riesgo:</p>
+<ul>
+<li><strong>Declarar el TRL de partida y el de llegada.</strong> Las convocatorias de Minciencias lo piden, y obliga a que los productos prometidos sean coherentes con el salto de madurez propuesto.</li>
+<li><strong>Separar el TRL de cada componente.</strong> En un sistema de alerta, el sensor, el modelo, la plataforma y el protocolo suelen estar en niveles distintos. Evaluar el conjunto con un solo número esconde el cuello de botella.</li>
+<li><strong>No confundir el piloto con la operación.</strong> Una estación que funcionó durante un mes en un tramo del río está en TRL 6, no en TRL 9. El nivel 9 exige operación regular, con mantenimiento y con eventos reales registrados.</li>
+<li><strong>Acompañar el TRL con el SRL.</strong> Una alerta técnicamente perfecta que la comunidad no entiende, o a la que no responde, no reduce el riesgo.</li>
+</ul>
+</section>
+<section id="referencias-y-recursos" class="level2">
+<h2 class="anchored" data-anchor-id="referencias-y-recursos">Referencias y recursos</h2>
+<section id="documentos-de-minciencias-fuentes-principales" class="level3">
+<h3 class="anchored" data-anchor-id="documentos-de-minciencias-fuentes-principales">Documentos de Minciencias (fuentes principales)</h3>
+<ul>
+<li>Colciencias (2016). <em>Documento de Política Nacional de Ciencia, Tecnología e Innovación N.° 1602: Actores del Sistema Nacional de Ciencia, Tecnología e Innovación</em>. <a href="https://minciencias.gov.co/portafolio/reconocimiento_de_actores">Reconocimiento de actores</a>.</li>
+<li>Minciencias (2021). <em>Guía técnica para el reconocimiento de actores del SNCTI: Centros de Desarrollo Tecnológico (CDT)</em>, código M601PR05G07, versión 00.</li>
+<li>Minciencias (2022). <em>Guía para la transferencia de tecnología</em>.</li>
+<li>Minciencias (2025). <em>Anexo 6. Niveles de madurez tecnológica</em>, términos de referencia de la Convocatoria 50 del SGR, código M802PR06PL02.</li>
+</ul>
+</section>
+<section id="referencias-internacionales" class="level3">
+<h3 class="anchored" data-anchor-id="referencias-internacionales">Referencias internacionales</h3>
+<ul>
+<li>NASA. <em>Technology Readiness Level Definitions</em> (tabla de hardware, software y criterios de salida) · <a href="https://www.nasa.gov/directorates/somd/space-communications-navigation-program/technology-readiness-levels/">Technology Readiness Levels</a>.</li>
+<li>Mankins, J. C. (2009). Technology readiness assessments: A retrospective. <em>Acta Astronautica</em>, 65(9–10), 1216–1223. <a href="https://doi.org/10.1016/j.actaastro.2009.03.058">doi:10.1016/j.actaastro.2009.03.058</a>.</li>
+<li>Héder, M. (2017). From NASA to EU: The evolution of the TRL scale in public sector innovation. <em>The Innovation Journal</em>, 22(2), 1–23.</li>
+<li>ISO 16290:2013. <em>Space systems: Definition of the Technology Readiness Levels (TRLs) and their criteria of assessment</em> · <a href="https://www.iso.org/standard/56064.html">ficha ISO</a>.</li>
+<li>Comisión Europea (2014). <em>Horizon 2020 Work Programme 2014–2015, General Annex G: Technology readiness levels</em> · <a href="https://ec.europa.eu/research/participants/data/ref/h2020/wp/2014_2015/annexes/h2020-wp1415-annex-g-trl_en.pdf">PDF</a>.</li>
+<li>EARTO (2014). <em>The TRL Scale as a Research &amp; Innovation Policy Tool: EARTO Recommendations</em> · <a href="https://www.earto.eu/wp-content/uploads/The_TRL_Scale_as_a_R_I_Policy_Tool_-_EARTO_Recommendations_-_Final.pdf">PDF</a>.</li>
+<li>U.S. GAO (2020). <em>Technology Readiness Assessment Guide: Best Practices for Evaluating the Readiness of Technology for Use in Acquisition Programs and Projects</em> (GAO-20-48G) · <a href="https://www.gao.gov/products/gao-20-48g">GAO</a>.</li>
+<li>ESA. <em>Technology Readiness Levels (TRL)</em> · <a href="https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Shaping_the_Future/Technology_Readiness_Levels_TRL">ESA</a>.</li>
+</ul>
+</section>
+<section id="escalas-complementarias" class="level3">
+<h3 class="anchored" data-anchor-id="escalas-complementarias">Escalas complementarias</h3>
+<ul>
+<li>KTH Innovation. <em>KTH Innovation Readiness Level™</em> (CRL, TRL, BRL, IPRL, TMRL, FRL y SRL de sostenibilidad) · <a href="https://kthinnovationreadinesslevel.com/">kthinnovationreadinesslevel.com</a>.</li>
+<li>Innovation Fund Denmark. <em>Societal Readiness Levels (SRL)</em> · <a href="https://innovationsfonden.dk/sites/default/files/2019-03/societal_readiness_levels_-_srl.pdf">PDF</a>.</li>
+</ul>
+</section>
+<section id="en-este-sitio" class="level3">
+<h3 class="anchored" data-anchor-id="en-este-sitio">En este sitio</h3>
+<ul>
+<li><a href="../gestiondeproyectos/gestiontecnologiainnovacion.html">Gestión de tecnología e innovación</a> · <a href="../gestiondeproyectos/innovacion.html">Innovación</a> · <a href="../cyt/interfaz-cps.html">Interfaz ciencia-política-sociedad</a> · <a href="../cyt/github-innovacion-grd.html">Código abierto, GitHub e innovación en GRD</a></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mromerot\.github\.io\/web\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Made with ❤️ and Quarto</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Informar sobre problema</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
