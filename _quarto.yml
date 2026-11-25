@@ -248,8 +248,6 @@ website:
                 href: datascience/mapas/mapa_colombia_observable.qmd
               - text: "Mapa Interactivo (PMTiles)"
                 href: datascience/mapas/mapa_colombia_pmtiles.qmd
-              - text: "Mapa Interactivo (Tiles)"
-                href: datascience/mapas/mapa_colombia_tiles.qmd
               - text: "Índice de Riesgo (NRI)"
                 href: datascience/mapas/mapa_colombia_nri.qmd
           - text: "D3"
