@@ -67,6 +67,11 @@
   .pb.on{background:var(--acc-soft);border-color:var(--acc)}
   footer{border-top:1px solid var(--line);margin-top:20px;padding-top:10px;font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.7}
   footer a{color:var(--muted)}
+  .aqui{font:inherit;color:var(--acc-ink);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}
+  .aqui:hover{color:var(--acc)}
+  .aqui:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+  .aqui-ok{margin-left:6px;color:var(--art);opacity:0;transition:opacity .3s}
+  .aqui-ok.on{opacity:1}
   .progress{height:3px;background:var(--line);border-radius:2px;overflow:hidden;margin:-8px 0 14px}
   .progress div{height:100%;width:0;background:var(--acc)}
   @media (max-width:820px){
@@ -190,8 +195,58 @@
   <footer>
     FUENTE: CLAUDE COOKBOOK / KNOWLEDGE GRAPH CONSTRUCTION WITH CLAUDE<br>
     <a href="https://platform.claude.com/cookbook/capabilities-knowledge-graph-guide" target="_blank" rel="noopener">platform.claude.com/cookbook/capabilities-knowledge-graph-guide</a><br>
-    Adaptación visual independiente, traducida al español. El corpus de ejemplo es ficticio; no se ejecutó extracción con la API.
+    Adaptación visual independiente, traducida al español. El corpus de ejemplo es ficticio; no se ejecutó extracción con la API.<br>
+    Esta figura se construyó con HTML puro; el estilo puede replicarse <button type="button" class="aqui" id="aqui" title="Copiar el prompt para replicar esta guía">aquí</button><span id="aqui-ok" class="aqui-ok" role="status" aria-live="polite"></span>
   </footer>
+<script type="text/plain" id="prompt-estilo">Crea una guía visual animada en un solo archivo HTML autocontenido sobre el siguiente tema o recurso:
+
+TEMA: [nombre del tema, p. ej. "Sistemas de alerta temprana"]
+FUENTE: [URL, documento adjunto o "conocimiento general"]
+PÚBLICO: [p. ej. técnicos de gestión del riesgo, estudiantes, tomadores de decisión]
+IDIOMA: español
+NÚMERO DE PASOS: [4 a 6]
+
+LENGUAJES Y TECNOLOGÍA (obligatorio)
+- HTML5, CSS3 y JavaScript vanilla (ES6), todo dentro de un único archivo .html.
+- Sin frameworks ni librerías: nada de React, Vue, D3, jQuery ni Tailwind, ni enlaces a CDN, fuentes web o imágenes externas.
+- El diagrama es SVG y se genera con JavaScript a partir de arreglos de nodos y aristas, no escrito a mano.
+- La página del sitio va en Quarto Markdown (.qmd).
+
+ANTES DE ESCRIBIR CÓDIGO
+1. Lee la fuente y extrae un proceso de N pasos en orden lógico. Cada paso necesita: un verbo corto en mayúsculas (EXTRAER, MEDIR, ALERTAR…), qué se hace y qué se verifica.
+2. Inventa un ejemplo ilustrativo ficticio y concreto que atraviese todos los pasos (personas, lugares, eventos, datos con nombres propios). Debe ser el mismo caso en toda la guía.
+3. Escribe para cada paso un bloque de prompt de 4 líneas, en imperativo, envuelto en etiquetas tipo <verbo> … </verbo>.
+
+ESTRUCTURA DE LA PÁGINA (de arriba abajo)
+- Encabezado: marca o logo simple a la izquierda, etiqueta pequeña "CONOCIMIENTO / GUÍA DE CAMPO" al centro y botón Pausar/Reproducir a la derecha.
+- Título grande con serifa, subtítulo de color de acento y una línea de descripción.
+- Fila de N pestañas numeradas ("01 VERBO") y una barra de progreso fina debajo.
+- Bloque 01, con dos columnas:
+  · Izquierda (más ancha): un diagrama SVG del ejemplo (red de nodos y flechas, flujo, línea de tiempo o mapa esquemático, según el tema), con nodos de colores por categoría, etiquetas en las aristas clave con su ID de fuente [A], [B]… y una leyenda de categorías abajo.
+  · Derecha: 3 tarjetas pequeñas que ilustran pasos concretos con mini-ejemplos en monoespaciada.
+- Fila de 2 tarjetas anchas: un detalle o perfil de un elemento del ejemplo, y una tarjeta de evaluación con métricas o criterios de calidad (fórmulas, diagrama de Venn o semáforo, según el tema).
+- Bloque 02 "EL PROMPT DE IMPLEMENTACIÓN": una frase de resumen con marcadores [CORPUS]/[PREGUNTA] o equivalentes, un botón "COPIAR COMO UN SOLO PROMPT" y los N bloques de prompt en una cuadrícula de 2 columnas.
+- Pie: fuente con enlace y la nota "Adaptación visual independiente. El ejemplo es ficticio."
+
+ANIMACIÓN
+- Cada 4 s se activa el paso siguiente, en bucle. En cada paso se resaltan a la vez la pestaña, la parte del diagrama que le corresponde (aristas y nodos en color de acento, con halo; el resto atenuado si ayuda), la tarjeta asociada (fondo de acento suave y borde) y su bloque de prompt.
+- Define los pasos en un arreglo JS { nombre, tarjeta, aristas, nodos, insignia } para que sea fácil de editar.
+- Usa requestAnimationFrame para el temporizador y la barra de progreso.
+- Al hacer clic en una pestaña se salta a ese paso y se reinicia el temporizador. Respeta prefers-reduced-motion (arrancar en pausa).
+- Transiciones CSS suaves de 0,3–0,4 s; nada que parpadee.
+
+ESTILO
+- Fondo crema (#f5f1ea), paneles casi blancos, bordes finos (#ddd4c7) y radio de 8 px.
+- Un solo color de acento cálido (#d9774a) con variantes suaves para fondos resaltados, definidos como variables CSS (:root).
+- Títulos con serifa (Georgia); etiquetas, datos y prompts en monoespaciada del sistema (ui-monospace, Consolas).
+- 5 colores de categoría apagados y distinguibles: azul, naranja, gris verdoso, rojo y verde azulado.
+- Responsivo con CSS Grid: por debajo de 820 px todo pasa a una columna y las pestañas a 3 por fila.
+
+ENTREGA
+- Un único archivo .html que se pueda incrustar con <iframe> en un sitio Quarto.
+- El botón de copiar debe usar navigator.clipboard dentro de try/catch, con alternativa de textarea.
+- Añade una página .qmd que incruste el HTML (iframe de ancho 100% y alto aproximado de 1500 px), con: introducción al tema, una tabla "Paso | Qué hace | Qué se verifica", una sección de aplicación a [ÁMBITO, p. ej. gestión del riesgo en Colombia], recomendaciones de uso y la fuente.
+- Revisa que no haya textos superpuestos en el SVG y que se lea bien en móvil.</script>
 </div>
 
 <script>
@@ -319,6 +374,14 @@
     const b=this, done=()=>{b.textContent='COPIADO ✓'; setTimeout(()=>b.textContent='COPIAR COMO UN SOLO PROMPT',1800);};
     try{ navigator.clipboard.writeText(txt).then(done,()=>fallback()); }catch(e){ fallback(); }
     function fallback(){ const ta=document.createElement('textarea'); ta.value=txt; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy');done();}catch(e){} ta.remove(); }
+  };
+
+  // «aquí»: copia el prompt para replicar el estilo de esta guía
+  document.getElementById('aqui').onclick=function(){
+    const txt=document.getElementById('prompt-estilo').textContent, ok=document.getElementById('aqui-ok');
+    const done=v=>{ok.textContent=v?'(prompt copiado ✓)':'(no se pudo copiar)';ok.classList.add('on');setTimeout(()=>ok.classList.remove('on'),2000);};
+    function fallback(){ const ta=document.createElement('textarea'); ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); let r=false; try{r=document.execCommand('copy');}catch(e){} ta.remove(); done(r); }
+    try{ navigator.clipboard.writeText(txt).then(()=>done(true),fallback); }catch(e){ fallback(); }
   };
 })();
 </script>
