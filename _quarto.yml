@@ -186,6 +186,8 @@ website:
             href: cyt/transdisciplina.qmd
           - text: "Código abierto, GitHub e innovación en GRD"
             href: cyt/github-innovacion-grd.qmd
+          - text: "Desarrollo tecnológico e innovación"
+            href: cyt/desarrollo-tecnologico.qmd
           - section: "Escritura y publicación académica"
             href: cyt/escrituraypublicacionacademica/index.qmd
             contents:

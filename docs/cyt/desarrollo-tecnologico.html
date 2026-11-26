@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mauricio Romero Torres">
+
+<title>Desarrollo tecnológico e innovación – Inicio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c0268bb2cd26ea8ad2ddef1ccaf3bc3a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-4910f9121cc0cf878839b371e47b8836.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
+</script>
+<!-- Google Site Verification -->
+<!-- Reemplaza XXXXX con tu código de verificación de Google Search Console -->
+<!-- <meta name="google-site-verification" content="XXXXX" /> -->
+
+<!-- Meta tags adicionales para SEO -->
+<meta name="author" content="Mauricio Romero Torres">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@mauricioromerot">
+
+<!-- Schema.org markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mauricio Romero Torres",
+  "jobTitle": "Gestor de ciencia y tecnología",
+  "url": "https://mromerot.github.io/web/",
+  "sameAs": [
+    "https://x.com/mauricioromerot",
+    "https://www.linkedin.com/in/mauricio-romero-torres-1b33b95/",
+    "https://scholar.google.com/citations?user=n484vskAAAAJ"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+/* Componentes del artículo «Modelo nacional de medición».
+   Mismo lenguaje visual de las plantillas de datascience/graficas-html:
+   petróleo profundo, hojas blancas, coral para resaltar; Inter Tight + Inter. */
+.mm{--deep:#0d3a4e;--blue:#0b6e99;--blue2:#1173a0;--soft:#e2eff4;--paper:#fff;--ink:#10212b;
+  --mut:#566873;--line:#dde6ea;--coral:#e0560b;--ok:#11845b;
+  --s1:#0a4f6e;--s2:#1173a0;--s3:#4a9fc9;--s4:#9ccbe3;
+  font:15px/1.5 Inter,system-ui,sans-serif;color:var(--ink);margin:1.25rem 0 2rem}
+.mm *{box-sizing:border-box;min-width:0}
+.mm h4,.mm .k,.mm .big{font-family:"Inter Tight",Inter,sans-serif}
+.mm h4{margin:0;font-size:1.05rem;line-height:1.2;color:var(--ink)}
+.mm p{margin:0;color:var(--ink)}
+.mm small,.mm .mut{color:var(--mut);font-size:13px}
+.mm button{font:inherit;cursor:pointer}
+.mm :focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.mm-panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(14px,2.5vw,24px);box-shadow:0 10px 30px #0d3a4e14}
+.mm-panel>.hd{margin-bottom:14px}
+.mm-panel>.hd small{display:block;color:var(--blue);font-weight:600;font-size:13px;letter-spacing:.02em;text-transform:uppercase}
+.mm-panel>.hd h4{font-size:1.25rem;margin-top:2px}
+.mm-src{margin-top:12px;font-size:12px;color:var(--mut)}
+
+/* 1. Tarjetas desplegables (tipo 01) */
+.mm-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.mm-cards button{text-align:left;border:0;border-radius:14px;padding:18px;background:var(--blue);color:#fff;display:flex;flex-direction:column;gap:6px;min-height:190px;transition:transform .2s}
+.mm-cards button:nth-child(4n+2){background:var(--deep)}
+.mm-cards button:nth-child(4n+3){background:var(--coral)}
+.mm-cards button:nth-child(4n+4){background:#2b6a5a}
+.mm-cards button:hover{transform:translateY(-3px)}
+.mm-cards .k{font-size:34px;font-weight:700;line-height:1}
+.mm-cards .t{font:700 17px/1.2 "Inter Tight",Inter,sans-serif}
+.mm-cards .d{display:none;font-size:14px}
+.mm-cards button.open .d{display:block}
+.mm-cards .h{margin-top:auto;font-size:12px;opacity:.85}
+.mm-cards button.open .h{display:none}
+
+/* 2. Tarjetas numeradas sobrias */
+.mm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px}
+.mm-tile{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--paper);display:flex;flex-direction:column;gap:8px}
+.mm-tile .n{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--soft);color:var(--blue);font:700 16px "Inter Tight"}
+.mm-tile.hot{border:2px solid var(--coral)}
+.mm-tile.hot .n{background:var(--coral);color:#fff}
+.mm-tile ul{margin:0;padding-left:1.1em;font-size:14px}
+.mm-tile li{margin:2px 0}
+
+/* 3. Control segmentado y paneles */
+.mm-seg{display:inline-flex;flex-wrap:wrap;background:var(--soft);border-radius:12px;padding:4px;gap:4px;margin-bottom:14px}
+.mm-seg button{border:0;background:none;border-radius:9px;padding:7px 13px;min-height:38px;font-weight:600;color:var(--mut)}
+.mm-seg button.on{background:var(--paper);color:var(--blue);box-shadow:0 1px 4px #0002}
+.mm [data-panel]{display:none}
+.mm [data-panel].on{display:block}
+.mm span[data-panel].on{display:inline}
+
+/* 4. Línea de tiempo (tipo 05) */
+.mm-tl{display:flex;gap:0;overflow-x:auto;padding:6px 2px 10px;scrollbar-width:thin;position:relative}
+.mm-tl button{flex:1 0 64px;border:0;background:none;padding:26px 2px 0;position:relative;color:var(--mut);font-size:12px;font-weight:600}
+.mm-tl button::before{content:"";position:absolute;left:0;right:0;top:12px;height:2px;background:var(--line)}
+.mm-tl button::after{content:"";position:absolute;left:50%;top:5px;width:16px;height:16px;margin-left:-8px;border-radius:50%;border:3px solid var(--blue);background:var(--paper)}
+.mm-tl button.on{color:var(--coral)}
+.mm-tl button.on::after{background:var(--coral);border-color:var(--coral)}
+.mm-ev{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:start;padding-top:6px}
+.mm-ev .big{font-size:clamp(40px,7vw,64px);font-weight:700;line-height:1;color:var(--coral)}
+.mm-ev h4{font-size:1.15rem;margin-bottom:6px}
+@media (max-width:560px){.mm-ev{grid-template-columns:1fr}}
+
+/* 5. Barras horizontales (apiladas o simples) */
+.mm-bars{display:grid;gap:8px}
+.mm-bar{display:grid;grid-template-columns:minmax(0,15em) minmax(0,1fr) 4.2em;gap:10px;align-items:center;font-size:13px}
+.mm-bar>span:first-child{color:var(--mut);text-align:right}
+.mm-bar>b{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.mm-track{display:flex;height:22px;gap:2px}
+.mm-track i{display:block;height:100%;border-radius:0}
+.mm-track i:first-child{border-radius:4px 0 0 4px}
+.mm-track i:last-child{border-radius:0 4px 4px 0}
+.mm-track i:only-child{border-radius:4px}
+.mm-track i:hover{filter:brightness(1.15)}
+.c1{background:var(--s1)}.c2{background:var(--s2)}.c3{background:var(--s3)}.c4{background:var(--s4)}.cc{background:var(--coral)}.cb{background:var(--blue)}
+.mm-leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--mut);margin:0 0 10px}
+.mm-leg span{display:inline-flex;align-items:center;gap:6px}
+.mm-leg i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.mm details{margin-top:12px;font-size:13px}
+.mm details summary{cursor:pointer;color:var(--blue);font-weight:600}
+.mm-tbl{overflow-x:auto}
+.mm table{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+.mm th,.mm td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.mm th{background:var(--soft);font-weight:600}
+.mm td.r,.mm th.r{text-align:right;font-variant-numeric:tabular-nums}
+@media (max-width:560px){.mm-bar{grid-template-columns:minmax(0,7.5em) minmax(0,1fr) 3.6em}}
+
+/* 6. Estadísticas grandes */
+.mm-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+.mm-stat{border-top:3px solid var(--ink);padding-top:8px}
+.mm-stat.c{border-color:var(--coral)}
+.mm-stat b{display:block;font:700 clamp(26px,4vw,38px)/1.05 "Inter Tight",Inter,sans-serif}
+.mm-stat span{font-size:14px;color:var(--mut)}
+
+/* 7. Diagrama de flujo (tipo 10) */
+.mm-flow{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch}
+.mm-step{flex:1 1 150px;border-radius:14px;padding:14px;background:var(--soft);position:relative;display:flex;flex-direction:column;gap:6px}
+.mm-step .n{font:700 13px Inter;color:var(--blue);text-transform:uppercase;letter-spacing:.04em}
+.mm-step h4{font-size:15px}
+.mm-step p{font-size:13px}
+.mm-step.dark{background:var(--deep)}.mm-step.dark *{color:#fff}
+.mm-step.hot{background:var(--coral)}.mm-step.hot *{color:#fff}
+.mm-arrow{flex:0 0 18px;display:grid;place-items:center;color:var(--mut);font-size:20px}
+@media (max-width:700px){.mm-arrow{display:none}}
+
+/* 8. Lista de chequeo con medidor (tipo 08) */
+.mm-check{display:grid;gap:8px}
+.mm-check label{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer;font-size:14px}
+.mm-check input{width:20px;height:20px;accent-color:var(--blue);flex:none;margin-top:1px}
+.mm-check label:has(input:checked){background:var(--soft);border-color:var(--blue)}
+.mm-meter{display:flex;gap:4px;margin:12px 0 6px}
+.mm-meter i{flex:1;height:10px;border-radius:3px;background:var(--line)}
+.mm-meter i.on{background:var(--blue)}
+.mm-res{font-weight:600}
+.mm-res.ok{color:var(--ok)}
+
+/* 9. Escalera de investigadores */
+.mm-ladder{display:grid;gap:10px}
+.mm-rung{display:grid;grid-template-columns:minmax(0,11em) repeat(3,minmax(0,1fr));gap:10px;border-radius:14px;padding:12px 14px;background:var(--soft);align-items:start}
+.mm-rung.r1{background:var(--deep)}.mm-rung.r1 *{color:#fff!important}
+.mm-rung.r2{background:var(--s2)}.mm-rung.r2 *{color:#fff!important}
+.mm-rung.r3{background:var(--s3)}.mm-rung.r3 *{color:#fff!important}
+.mm-rung h4{font-size:16px}
+.mm-rung small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;opacity:.8}
+.mm-rung p{font-size:13px}
+@media (max-width:700px){.mm-rung{grid-template-columns:1fr 1fr}.mm-rung>div:first-child{grid-column:1/-1}}
+.mm-chips{display:flex;flex-wrap:wrap;gap:6px}
+.mm-chip{border-radius:99px;padding:5px 11px;background:var(--soft);font-size:13px;color:var(--ink)}
+.mm-chip.o{background:#fde6d9}
+.mm-chip b{color:var(--blue)}
+
+/* 10. Calculadora con deslizadores (tipo 02) */
+.mm-calc{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:22px;align-items:center}
+.mm-calc label{display:block;font-size:14px;font-weight:600;margin-top:8px}
+.mm-calc input[type=range]{width:100%;accent-color:var(--blue);height:30px}
+.mm-calc output{font:700 clamp(40px,7vw,60px)/1 "Inter Tight",Inter,sans-serif;color:var(--blue)}
+.mm-formula{font:600 17px/1.4 "Inter Tight",Inter,sans-serif;background:var(--soft);border-radius:10px;padding:10px 14px;display:inline-block;margin:6px 0}
+@media (max-width:640px){.mm-calc{grid-template-columns:1fr}}
+
+/* 11. Matriz de clases (tipo 11) */
+.mm-matrix{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.mm-class{border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px;border:1px solid var(--line)}
+.mm-class .k{font-size:26px;font-weight:700;line-height:1}
+.mm-class p{font-size:13px}
+.mm-class.top{background:var(--deep);border:0}.mm-class.top *{color:#fff}
+.mm-class.a{background:var(--s2);border:0}.mm-class.a *{color:#fff}
+.mm-class.b{background:var(--s4);border:0}
+.mm-class.asc{background:#fde6d9;border:0}
+.mm-class.dpc{background:#fff4ec}
+
+/* 12. Tabla comparativa con columna resaltada (tipo 09) */
+.mm-cmp td.y{color:var(--ok);font-weight:600}
+.mm-cmp td.n{color:var(--mut)}
+.mm-cmp[data-hl="A1"] .hc1,.mm-cmp[data-hl="A"] .hc2,.mm-cmp[data-hl="B"] .hc3,.mm-cmp[data-hl="C"] .hc4{background:#fde6d9}
+.mm-cmp[data-hl="A1"] th.hc1,.mm-cmp[data-hl="A"] th.hc2,.mm-cmp[data-hl="B"] th.hc3,.mm-cmp[data-hl="C"] th.hc4{background:var(--coral);color:#fff}
+
+/* 13. Escala ordinal (embudo invertido) */
+.mm-scale{display:flex;align-items:flex-end;gap:6px;height:190px;padding-top:10px}
+.mm-scale div{flex:1;border-radius:8px 8px 3px 3px;background:var(--s4);display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding:6px 2px;text-align:center}
+.mm-scale div b{font:700 18px "Inter Tight"}
+.mm-scale div span{font-size:11px;line-height:1.2}
+.mm-scale div:nth-child(n+4){background:var(--s3)}
+.mm-scale div:nth-child(n+6){background:var(--s2)}.mm-scale div:nth-child(n+6) *{color:#fff}
+.mm-scale div:nth-child(8){background:var(--deep)}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Tarjetas desplegables
+  document.querySelectorAll('.mm-cards button').forEach(function (b) {
+    b.setAttribute('aria-expanded', 'false');
+    b.addEventListener('click', function () {
+      var o = b.classList.toggle('open');
+      b.setAttribute('aria-expanded', o ? 'true' : 'false');
+    });
+  });
+  // Controles segmentados y líneas de tiempo: data-group en el contenedor, data-key en cada botón
+  document.querySelectorAll('[data-group]').forEach(function (g) {
+    var name = g.getAttribute('data-group');
+    var root = g.closest('.mm');
+    var btns = g.querySelectorAll('button[data-key]');
+    function show(key) {
+      btns.forEach(function (x) {
+        var on = x.getAttribute('data-key') === key;
+        x.classList.toggle('on', on);
+        x.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      root.querySelectorAll('[data-panel^="' + name + ':"]').forEach(function (p) {
+        p.classList.toggle('on', p.getAttribute('data-panel') === name + ':' + key);
+      });
+      var hl = root.querySelector('[data-hl-group="' + name + '"]');
+      if (hl) hl.setAttribute('data-hl', key);
+    }
+    btns.forEach(function (x) { x.addEventListener('click', function () { show(x.getAttribute('data-key')); }); });
+    var first = g.querySelector('button.on') || btns[0];
+    if (first) show(first.getAttribute('data-key'));
+  });
+  // Listas de chequeo con medidor
+  document.querySelectorAll('.mm-checkbox').forEach(function (box) {
+    var inputs = box.querySelectorAll('input[type=checkbox]');
+    var meter = box.querySelector('.mm-meter');
+    var res = box.querySelector('.mm-res');
+    var total = inputs.length;
+    for (var i = 0; i < total; i++) meter.appendChild(document.createElement('i'));
+    function upd() {
+      var n = 0; inputs.forEach(function (x) { if (x.checked) n++; });
+      meter.querySelectorAll('i').forEach(function (m, k) { m.classList.toggle('on', k < n); });
+      res.textContent = n === total ? 'Cumple los ' + total + ' requisitos: el grupo puede ser reconocido.'
+        : n + ' de ' + total + ' requisitos. Faltan ' + (total - n) + ' para el reconocimiento.';
+      res.classList.toggle('ok', n === total);
+    }
+    inputs.forEach(function (x) { x.addEventListener('change', upd); });
+    upd();
+  });
+  // Calculadora del conteo escalado lambda = ln(n/T + 1)
+  document.querySelectorAll('.mm-calc').forEach(function (c) {
+    var n = c.querySelector('[name=n]'), t = c.querySelector('[name=t]');
+    var on = c.querySelector('.vn'), ot = c.querySelector('.vt'), out = c.querySelector('output'), ex = c.querySelector('.ex');
+    function upd() {
+      var nv = +n.value, tv = +t.value, l = Math.log(nv / tv + 1);
+      on.textContent = nv; ot.textContent = tv;
+      out.textContent = l.toFixed(2).replace('.', ',');
+      var dbl = Math.log((2 * nv) / tv + 1);
+      ex.textContent = 'Si el grupo duplicara su producción (' + (2 * nv) + ' productos), λ subiría a ' + dbl.toFixed(2).replace('.', ',') + ', no al doble.';
+    }
+    n.addEventListener('input', upd); t.addEventListener('input', upd); upd();
+  });
+});
+</script>
+
+
+<meta property="og:title" content="Desarrollo tecnológico e innovación – Inicio">
+<meta property="og:description" content="La tipología 2 del modelo de medición de Minciencias: qué productos incluye, cómo se califican y con qué bases de datos se puede medir en Colombia">
+<meta property="og:site_name" content="Inicio">
+<meta name="twitter:title" content="Desarrollo tecnológico e innovación – Inicio">
+<meta name="twitter:description" content="La tipología 2 del modelo de medición de Minciencias: qué productos incluye, cómo se califican y con qué bases de datos se puede medir en Colombia">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cyt/index.html">Ciencia y tecnología</a></li><li class="breadcrumb-item"><a href="../cyt/desarrollo-tecnologico.html">Desarrollo tecnológico e innovación</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Inicio</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/amazonas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amazonas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/ambientales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas ambientales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/ambientales/erosioncostera.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Erosión costera</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/ambientales/incendiosforestales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Incendios forestales</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/biologicos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas biológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/biologicos/covid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">COVID-19</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/extraterrestre/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/extraterrestre/amenazasextraterrestres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/geologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas geológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/falladeterreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Falla de terreno</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/riesgosismico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgo sísmico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/sismicidad-colombia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sismicidad de Colombia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/tsunami.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tsunami</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/volcanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Volcanes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/hidrol-meteorologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas hidrológicas y meteorológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/elnino.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">El Niño / La Niña</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/huracanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Huracanes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/inundaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/inundaciones-repentinas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones repentinas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/olasdecalor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Olas de calor</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/sociales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas sociales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sociales/migracion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Migración</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/tecnologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/tecnologicas/amenazastecnol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/cienciaytecnologia/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/cienciaytecnologia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/estado-ciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estado de la ciencia 2024</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/hoja-de-ruta-ct.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hoja de ruta de ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/marco-sendai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Marco de Sendai</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/ciudades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciudades</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/conocimientodelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conocimiento del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">Cursos, redes y recursos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cursos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cursos en GRD</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/plataformas-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plataformas y redes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/repositorios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repositorios FAIR</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/educacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/gestiondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/conocimiento-indicadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indicadores de riesgo nacionales y mundiales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/manejodedesastres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manejo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/reducciondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reducción del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sidro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SIDRo (Los Rosales)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sincelejo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sincelejo (EVA)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sistemas de alerta temprana</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/teoria.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teoría de riesgos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/glosario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Terminología</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../gcc/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gcc/estres-termico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estrés térmico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gcc/gestion-cambio-climatico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../gestiondeproyectos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/skills-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Competencias clave en la gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/conpes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CONPES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/dofa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DOFA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/estrategia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estrategia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../gestiondeproyectos/financiacion/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Financiación</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/financiacion/fondo-verde-clima.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fondo Verde para el Clima</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/gestionproyectosciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos de CTeI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/gestiontecnologiainnovacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de tecnología e innovación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/gestion-conocimiento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del conocimiento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/impacto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Impacto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/innovacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Innovación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/liderazgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Liderazgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/Linea-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Línea base</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/mapa-actores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa de actores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/metodologias-pm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metodologías de gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/pestel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PESTEL</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/riesgos-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgos en proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/sostenibilidad-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sostenibilidad de proyectos de CTeI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/swot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SWOT</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../cyt/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/cienciareproduc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia reproducible</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/transdisciplina.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia transdisciplinar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/github-innovacion-grd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Código abierto, GitHub e innovación en GRD</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/desarrollo-tecnologico.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Desarrollo tecnológico e innovación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../cyt/escrituraypublicacionacademica/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/escrituraypublicacionacademica/escrituraypublicacionacademica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/escrituraypublicacionacademica/parrafos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Párrafos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/escrituraypublicacionacademica/typst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Typst</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/interfaz-cps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interfaz ciencia-política-sociedad</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/modelo-medicion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modelo nacional de medición</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/trl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nivel de Madurez Tecnológica (TRL)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/transferencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transferencia de conocimiento y tecnologías</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../educacion/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../educacion/docenciaeducacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Docencia y educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../educacion/ova/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Objetos virtuales de aprendizaje (OVA)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ecolyconserv/ecologiayconservacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ecología y conservación marina</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datascience/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/arco.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ARCO</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/bases-de-datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bases de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/cienciadedatos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/claude.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/claude-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude Skills (Slides)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/d3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/d3-experiment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Experimento con D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GitHub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/google-colab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Google Colab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/graficas-html.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gráficas HTML</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/graficas-python-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gráficas Python y R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/hugging-face.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hugging Face</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/ilustraciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ilustraciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/ia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inteligencia artificial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/jupyter-notebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter Notebook</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datascience/mapas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_nri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índice de Riesgo (NRI)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_observable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (Observable / TopoJSON)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_pmtiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (PMTiles)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/markdown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Markdown</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/myst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Myst</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/vs-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math-stats/math-stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matemáticas y estadística</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math-stats/R/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R: minicurso</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/00-fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 0. Fundamentos de R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/01-programacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 1. Programación: flujo, bucles y funciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/02-datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 2. Manejo de datos con tidyverse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/03-visualizacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 3. Visualización con ggplot2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/04-estadistica-basica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 4. Estadística básica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/05-modelos-lineales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 5. Regresión lineal y ANOVA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/06-modelos-mixtos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 6. Modelos mixtos y medidas repetidas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/07-gam-series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 7. GAM y series de tiempo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/08-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 8. Análisis de redes con igraph</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/09-espacial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 9. Análisis espacial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/10-aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 10. Aplicaciones y proyectos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../vidalaboral/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vidalaboral/cafe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Café</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vidalaboral/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vidalaboral/vidalaboral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul class="collapse">
+  <li><a href="#qué-es-la-tipología-2" id="toc-qué-es-la-tipología-2" class="nav-link active" data-scroll-target="#qué-es-la-tipología-2">Qué es la tipología 2</a></li>
+  <li><a href="#los-cinco-subtipos-y-sus-productos" id="toc-los-cinco-subtipos-y-sus-productos" class="nav-link" data-scroll-target="#los-cinco-subtipos-y-sus-productos">Los cinco subtipos y sus productos</a></li>
+  <li><a href="#calidad-pesos-y-clases" id="toc-calidad-pesos-y-clases" class="nav-link" data-scroll-target="#calidad-pesos-y-clases">Calidad, pesos y clases</a></li>
+  <li><a href="#dónde-medirla-fuentes-y-bases-de-datos" id="toc-dónde-medirla-fuentes-y-bases-de-datos" class="nav-link" data-scroll-target="#dónde-medirla-fuentes-y-bases-de-datos">Dónde medirla: fuentes y bases de datos</a></li>
+  <li><a href="#piloto-la-tipología-2-en-los-grupos-de-gestión-del-riesgo" id="toc-piloto-la-tipología-2-en-los-grupos-de-gestión-del-riesgo" class="nav-link" data-scroll-target="#piloto-la-tipología-2-en-los-grupos-de-gestión-del-riesgo">Piloto: la tipología 2 en los grupos de gestión del riesgo</a></li>
+  <li><a href="#ver-también" id="toc-ver-también" class="nav-link" data-scroll-target="#ver-también">Ver también</a></li>
+  </ul>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Informar sobre problema</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cyt/index.html">Ciencia y tecnología</a></li><li class="breadcrumb-item"><a href="../cyt/desarrollo-tecnologico.html">Desarrollo tecnológico e innovación</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Desarrollo tecnológico e innovación</h1>
+<p class="subtitle lead">La tipología 2 del modelo de medición de Minciencias: qué productos incluye, cómo se califican y con qué bases de datos se puede medir en Colombia</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mauricio Romero Torres </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">26 de noviembre de 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de última modificación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">26 de noviembre de 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled" title="Documento fuente">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Documento fuente
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ministerio de Ciencia, Tecnología e Innovación [Minciencias]. (2024). <em>Anexo 1. Convocatoria nacional para el reconocimiento y medición de grupos de investigación, desarrollo tecnológico o de innovación y para el reconocimiento de investigadores del SNCTI – 2024</em> (código M601PR04G01, versión 02), sección 2.2.2 y Tablas XII a XVI. Anexo de la Convocatoria 957 de 2024. <a href="https://minciencias.gov.co/convocatorias/investigacion/convocatoria-nacional-actualizacion-y-transicion-para-el-reconocimiento" class="uri">https://minciencias.gov.co/convocatorias/investigacion/convocatoria-nacional-actualizacion-y-transicion-para-el-reconocimiento</a></p>
+<p>El resumen completo del modelo está en <a href="../cyt/modelo-medicion.html">Modelo nacional de medición</a>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="En resumen">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>En resumen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>La tipología 2 agrupa los productos que llevan el conocimiento a soluciones</strong>: software, prototipos, diseños, empresas de base tecnológica, innovaciones en empresas, normas y conceptos técnicos. Son cinco subtipos y más de veinte productos.</li>
+<li><strong>Las patentes no están aquí.</strong> Aunque son tecnologías, el modelo las cuenta como nuevo conocimiento (subtipo 2.2.1.5).</li>
+<li><strong>Casi todo se prueba con un certificado o un número de registro</strong>: del INVIMA, de la Superintendencia de Industria y Comercio (SIC), de la Dirección Nacional de Derecho de Autor (DNDA), de la empresa que implementó la innovación o de la entidad que expidió la norma.</li>
+<li><strong>No existe una base nacional única para medirla.</strong> La vía práctica es combinar lo que los grupos registran en GrupLAC con los registros oficiales de cada producto. Un piloto con 54 grupos de gestión del riesgo de desastres (GRD) muestra que la cifra bruta exagera mucho: de 513 productos recientes, solo 32 tratan de GRD y no parecen plantillas repetidas.</li>
+</ul>
+</div>
+</div>
+<section id="qué-es-la-tipología-2" class="level2">
+<h2 class="anchored" data-anchor-id="qué-es-la-tipología-2">Qué es la tipología 2</h2>
+<p>El modelo define estos productos como los que «dan cuenta de la generación de ideas, métodos y herramientas que impactan el desarrollo económico y generan transformaciones en la sociedad». La investigación sigue presente, pero el resultado ya no es un artículo sino algo que se usa: un programa, un equipo, un proceso mejorado en una empresa, una norma que adopta una comunidad o un concepto que sustenta la decisión de una autoridad.</p>
+<p>En la medición de grupos, la tipología 2 pesa por dos vías. Sus productos de más alta calidad entran en las clases TOP y tipo A del Indicador de Grupo, que tienen los coeficientes más altos (3,7 y 2,3), y el resto entra en la clase B. Además, todos se miran en una ventana de cinco años: en la Convocatoria 957, de 2019 a 2023.</p>
+<div id="caja1" class="callout callout-style-simple callout-important no-icon" style="background-color: #e3f0fbff; border-left: 4px solid #d4e8f9ff;">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p style="font-size: 1rem; font-weight: 700; margin: 0 0 .6rem;">
+Caja 1. Glosario de la tipología 2
+</p>
+<ul>
+<li><strong>Producto tecnológico certificado o validado</strong>: producto registrado ante una institución formalmente constituida para ese fin, que le asigna un número.</li>
+<li><strong>Producto empresarial</strong>: producto que impacta directamente las actividades de una empresa, como un secreto empresarial, una empresa de base tecnológica o una innovación implementada.</li>
+<li><strong>Spin-off</strong>: empresa nacida de la investigación de un grupo, en la que la universidad tiene participación (licencia, acciones o <em>joint venture</em>).</li>
+<li><strong>Start-up</strong>: empresa emergente basada en investigación, innovación y desarrollo tecnológico, de origen académico o empresarial.</li>
+<li><strong>Secreto empresarial</strong>: información no divulgada, con valor comercial por ser secreta y protegida con medidas razonables (Decisión 486 de 2000 de la Comunidad Andina).</li>
+<li><strong>Innovación</strong>: producto o proceso que difiere significativamente de los anteriores y que se ha puesto en el mercado o implantado en la organización. No lo son, por ejemplo, actualizar versiones de documentos o cumplir acciones exigidas por una norma de gestión.</li>
+<li><strong>Norma técnica</strong>: documento aprobado por consenso por un organismo reconocido, con reglas para uso común y repetido.</li>
+<li><strong>Reglamento técnico</strong>: requisito técnico obligatorio expedido por la autoridad competente con fundamento en la ley.</li>
+<li><strong>Concepto técnico</strong>: concepto calificado de un grupo o de sus integrantes que sirve para que una entidad estatal o internacional tome decisiones.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="los-cinco-subtipos-y-sus-productos" class="level2">
+<h2 class="anchored" data-anchor-id="los-cinco-subtipos-y-sus-productos">Los cinco subtipos y sus productos</h2>
+<p>Cada subtipo tiene requerimientos de existencia propios: lo mínimo que debe demostrar el producto para contar. El patrón es claro: el modelo no acepta la palabra del grupo, sino un tercero que certifica. Elige un subtipo para ver sus productos y cómo se prueba cada uno.</p>
+<div class="mm">
+<div class="mm-panel">
+  <div class="hd"><small>Tipología 2 · Sección 2.2.2</small><h4 class="anchored">Productos por subtipo y cómo se prueban</h4></div>
+  <div class="mm-seg" data-group="sub" role="group" aria-label="Elegir subtipo">
+    <button type="button" data-key="1" class="on">2.2.2.1 Certificados</button>
+    <button type="button" data-key="2">2.2.2.2 Empresariales</button>
+    <button type="button" data-key="3">2.2.2.3 Normas</button>
+    <button type="button" data-key="4">2.2.2.4 Conceptos</button>
+    <button type="button" data-key="5">2.2.2.5 Licencias I+C</button>
+  </div>
+  <div data-panel="sub:1"><p style="margin-bottom:12px">Productos registrados ante una institución que les asigna un número.</p><div class="mm-grid">
+    <div class="mm-tile"><h4 class="anchored">Diseño industrial</h4><p>Forma externa de un producto que sirve de patrón para fabricarlo. Se prueba con el registro de diseño industrial ante la SIC.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Esquema de trazado de circuito integrado</h4><p>Disposición tridimensional de los elementos de un circuito integrado. Se prueba con el registro ante la SIC.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Software</h4><p>Programas, documentación y datos asociados. Se prueba con la certificación de la entidad financiadora y la descripción de análisis, diseño, implementación y validación.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Planta piloto</h4><p>Instalación para obtener datos técnicos de un proceso nuevo. Deja de ser I+D cuando pasa a producción comercial.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Prototipo industrial</h4><p>Modelo original con todas las características del producto nuevo. Las copias posteriores ya no cuentan.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Signos distintivos</h4><p>Marcas, lemas, sellos o denominaciones de origen que distinguen resultados de investigación. Se prueban con el número de registro de la SIC.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Producto nutracéutico</h4><p>Producto natural bioactivo validado con criterios equiparables a la FDA. Requiere registro del INVIMA.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Colección científica</h4><p>Organismos, fósiles, minerales o lenguas organizados para investigar. Se valoran la creación, la curaduría y el uso.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Nuevo registro científico</h4><p>Registro nuevo en un sistema de información científica: especies, sustancias, hallazgos geográficos o paleontológicos.</p></div>
+  </div></div>
+  <div data-panel="sub:2"><p style="margin-bottom:12px">Productos que impactan directamente las actividades de una empresa.</p><div class="mm-grid">
+    <div class="mm-tile"><h4 class="anchored">Secreto empresarial</h4><p>Información no divulgada con valor comercial. Se prueba con contrato o certificación, porque no tiene registro público.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Empresa de base tecnológica</h4><p>Spin-off o start-up nacida de la investigación del grupo. Se prueba con certificación institucional y registro mercantil.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Empresa creativa y cultural</h4><p>Empresa de la economía creativa nacida del grupo. Pesa más si tiene productos o servicios en el mercado.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Innovación en la gestión empresarial</h4><p>Método o herramienta organizacional o comercial que genera beneficios tangibles. Requiere certificado de implementación en una o varias empresas.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Innovación en procesos y servicios</h4><p>Procedimiento significativamente mejorado. Lo certifica el representante legal de la empresa que lo implementó.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Productos no registrables</h4><p>Desarrollos que un contrato impide patentar o registrar. El contratante certifica la participación del grupo.</p></div>
+  </div></div>
+  <div data-panel="sub:3"><p style="margin-bottom:12px">Normas emitidas por una entidad competente cuya construcción se apoyó en la actividad científica del grupo. La entidad emisora debe certificar esa participación.</p><div class="mm-grid">
+    <div class="mm-tile"><h4 class="anchored">Regulaciones, normas y legislación</h4><p>Leyes, decretos, ordenanzas y normas ambientales o de salud pública. Pesan más si se implementan a nivel internacional.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Normas técnicas</h4><p>Básicas, de terminología, de ensayo, de producto, de proceso o de servicio.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Reglamentos técnicos</h4><p>Requisitos obligatorios expedidos por la autoridad competente.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Guías y protocolos de salud</h4><p>Guías de práctica clínica y de manejo clínico forense, protocolos de atención a víctimas y de vigilancia epidemiológica.</p></div>
+    <div class="mm-tile"><h4 class="anchored">Actos legislativos y proyectos de ley</h4><p>Insumos de investigación para reformar la Constitución o presentar un proyecto de ley.</p></div>
+    <div class="mm-tile hot"><h4 class="anchored">Qué no cuenta</h4><p>Reglamentos internos de la propia institución, documentos de acreditación o autoevaluación y proyectos educativos.</p></div>
+  </div></div>
+  <div data-panel="sub:4"><div class="mm-grid">
+    <div class="mm-tile"><h4 class="anchored">Conceptos técnicos</h4><p>Conceptos calificados que sirven a una entidad estatal o internacional para decidir, y que se traducen en leyes, decretos, resoluciones o circulares. Es el producto más cercano a la gestión del riesgo: visitas técnicas, conceptos sobre estudios de riesgo, informes de emergencia.</p></div>
+    <div class="mm-tile hot"><h4 class="anchored">Diferencia con el informe técnico</h4><p>En GrupLAC aparecen juntos, pero en el modelo 2024 el informe técnico es un producto de divulgación (circulación de conocimiento especializado), no de la tipología 2.</p></div>
+  </div></div>
+  <div data-panel="sub:5"><div class="mm-grid">
+    <div class="mm-tile"><h4 class="anchored">Licencias de obras de investigación + creación</h4><p>Obras de artes, arquitectura y diseño registradas ante la DNDA, con un contrato que define su explotación por terceros.</p></div>
+  </div></div>
+  <p class="mm-src">Fuente: Minciencias (2024), sección 2.2.2 y Tabla 3, pp. 69–78.</p>
+</div>
+</div>
+</section>
+<section id="calidad-pesos-y-clases" class="level2">
+<h2 class="anchored" data-anchor-id="calidad-pesos-y-clases">Calidad, pesos y clases</h2>
+<p>Una vez probada la existencia, cada producto recibe una categoría de calidad con un peso relativo de 0 a 10 dentro de su subtipo. En la tipología 2, la calidad depende sobre todo de si hay uso real: un contrato de explotación, productos en el mercado, implementación en empresas grandes o alcance internacional.</p>
+<div class="mm">
+<div class="mm-panel">
+  <div class="hd"><small>Tablas XII a XVI</small><h4 class="anchored">Peso relativo de cada categoría (0 a 10)</h4></div>
+  <div class="mm-bars">
+    <div class="mm-bar"><span>Diseño industrial con contrato (DI_A)</span><div class="mm-track"><i class="c1" style="width:100%" title="10"></i></div><b>10</b></div>
+    <div class="mm-bar"><span>Colección científica (CC)</span><div class="mm-track"><i class="c1" style="width:100%" title="10"></i></div><b>10</b></div>
+    <div class="mm-bar"><span>Empresa de base tecnológica A</span><div class="mm-track"><i class="c1" style="width:100%" title="10"></i></div><b>10</b></div>
+    <div class="mm-bar"><span>Empresa creativa con mercado (ICC_A)</span><div class="mm-track"><i class="c1" style="width:100%" title="10"></i></div><b>10</b></div>
+    <div class="mm-bar"><span>Innovación en gestión A1</span><div class="mm-track"><i class="c1" style="width:100%" title="10"></i></div><b>10</b></div>
+    <div class="mm-bar"><span>Norma de alcance internacional (RNL_A)</span><div class="mm-track"><i class="c1" style="width:100%" title="10"></i></div><b>10</b></div>
+    <div class="mm-bar"><span>Concepto técnico (CT)</span><div class="mm-track"><i class="c1" style="width:100%" title="10"></i></div><b>10</b></div>
+    <div class="mm-bar"><span>Software (SF)</span><div class="mm-track"><i class="c2" style="width:80%" title="8"></i></div><b>8</b></div>
+    <div class="mm-bar"><span>Norma de alcance nacional (RNL_B)</span><div class="mm-track"><i class="c2" style="width:80%" title="8"></i></div><b>8</b></div>
+    <div class="mm-bar"><span>Norma técnica, guía o protocolo</span><div class="mm-track"><i class="c2" style="width:70%" title="7"></i></div><b>7</b></div>
+    <div class="mm-bar"><span>Producto nutracéutico (PN)</span><div class="mm-track"><i class="c2" style="width:60%" title="6"></i></div><b>6</b></div>
+    <div class="mm-bar"><span>Diseño industrial sin contrato (DI_B)</span><div class="mm-track"><i class="c3" style="width:50%" title="5"></i></div><b>5</b></div>
+    <div class="mm-bar"><span>Innovación en procesos (IPP) o secreto (SE)</span><div class="mm-track"><i class="c3" style="width:50%" title="5"></i></div><b>5</b></div>
+    <div class="mm-bar"><span>Prototipo, planta piloto, signo distintivo</span><div class="mm-track"><i class="c3" style="width:40%" title="4"></i></div><b>4</b></div>
+    <div class="mm-bar"><span>Empresa creativa sin mercado (ICC_B)</span><div class="mm-track"><i class="c3" style="width:40%" title="4"></i></div><b>4</b></div>
+    <div class="mm-bar"><span>Innovación en gestión B2 (pymes)</span><div class="mm-track"><i class="c4" style="width:30%" title="3"></i></div><b>3</b></div>
+  </div>
+  <p class="mm-src">El peso relativo solo compara categorías dentro de un mismo subtipo. Fuente: Minciencias (2024), Tablas XII a XVI, pp. 147–152.</p>
+</div>
+<div class="mm-matrix" style="margin-top:14px">
+  <div class="mm-class top"><span class="k">TOP</span><h4 class="anchored">Coeficiente 3,7</h4><p>Regulaciones, normas o legislación con implementación internacional (RNL_A).</p></div>
+  <div class="mm-class a"><span class="k">A</span><h4 class="anchored">Coeficiente 2,3</h4><p>Diseño industrial con contrato, circuitos integrados, plantas piloto, prototipos, signos distintivos, secreto empresarial, empresas de base tecnológica y creativas A, innovaciones en gestión A, normas nacionales y del espectro radioeléctrico.</p></div>
+  <div class="mm-class b"><span class="k">B</span><h4 class="anchored">Coeficiente 0,4</h4><p>Diseño sin contrato, software, nutracéuticos, colecciones, nuevos registros, empresas B, innovaciones en gestión B y en procesos, normas técnicas, guías y protocolos, conceptos técnicos y licencias I+C.</p></div>
+</div>
+<p class="mm-src" style="font-size:12px;color:#566873">Clases para el Indicador de Grupo. Fuente: Minciencias (2024), secciones 3.7 y 3.10, pp. 119–127.</p>
+</div>
+</section>
+<section id="dónde-medirla-fuentes-y-bases-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="dónde-medirla-fuentes-y-bases-de-datos">Dónde medirla: fuentes y bases de datos</h2>
+<p>Ninguna base pública reúne toda la tipología 2. Hay dos vistas que se complementan. La de Minciencias muestra lo que producen los grupos de investigación, porque todo pasa por la Plataforma ScienTI. Los registros oficiales de cada producto muestran lo que existe en el país, salgan o no de un grupo, y sirven para verificar lo que los grupos declaran.</p>
+<div class="mm">
+<div class="mm-flow">
+  <div class="mm-step dark"><span class="n">Vista 1</span><h4 class="anchored">Lo que declaran los grupos</h4><p>GrupLAC y CvLAC (páginas públicas por grupo), tableros de <em>La Ciencia en Cifras</em> y datos abiertos de Minciencias en datos.gov.co.</p></div>
+  <div class="mm-arrow" aria-hidden="true">→</div>
+  <div class="mm-step"><span class="n">Cruce</span><h4 class="anchored">Verificación</h4><p>El número de registro o el certificado que declara el grupo se busca en la base oficial del producto.</p></div>
+  <div class="mm-arrow" aria-hidden="true">→</div>
+  <div class="mm-step hot"><span class="n">Vista 2</span><h4 class="anchored">Lo que existe en el país</h4><p>Registros oficiales: SIC, DNDA, INVIMA, RNC, registro mercantil, catálogos de normas y la encuesta de innovación del DANE.</p></div>
+</div>
+<div class="mm-panel" style="margin-top:14px">
+  <div class="hd"><small>Bases por producto</small><h4 class="anchored">¿Hay una base de datos específica?</h4></div>
+  <div class="mm-tbl">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Producto</th>
+<th data-quarto-table-cell-role="th">Base de datos</th>
+<th data-quarto-table-cell-role="th">Qué permite</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Diseños industriales, esquemas de circuitos integrados y signos distintivos</td>
+<td>Sistema de Información de Propiedad Industrial (SIPI) de la SIC</td>
+<td>Registros y solicitudes por titular; el CIGEPI publica informes estadísticos mensuales y anuales</td>
+</tr>
+<tr class="even">
+<td>Software</td>
+<td>Registro de soporte lógico de la DNDA</td>
+<td>Registro voluntario de derechos de autor del software</td>
+</tr>
+<tr class="odd">
+<td>Productos nutracéuticos</td>
+<td>Registros sanitarios del INVIMA</td>
+<td>Productos autorizados</td>
+</tr>
+<tr class="even">
+<td>Colecciones científicas</td>
+<td>Registro Único Nacional de Colecciones Biológicas (RNC), Instituto Humboldt</td>
+<td>Colecciones registradas</td>
+</tr>
+<tr class="odd">
+<td>Nuevos registros científicos</td>
+<td>SiB Colombia y GBIF</td>
+<td>Registros biológicos publicados</td>
+</tr>
+<tr class="even">
+<td>Empresas de base tecnológica y creativas</td>
+<td>Registro mercantil (RUES y cámaras de comercio)</td>
+<td>Existencia de la empresa; la condición de base tecnológica la certifica la institución</td>
+</tr>
+<tr class="odd">
+<td>Innovaciones en gestión, procesos y servicios</td>
+<td>Encuesta de Desarrollo e Innovación Tecnológica (EDIT) del DANE</td>
+<td>Estadística agregada de innovación en empresas, no producto a producto</td>
+</tr>
+<tr class="even">
+<td>Normas, reglamentos y leyes</td>
+<td>Catálogo de ICONTEC, SUIN-Juriscol, Instituto Nacional de Salud e IETS</td>
+<td>Texto vigente; no dicen qué grupo participó</td>
+</tr>
+<tr class="odd">
+<td>Plantas piloto, prototipos, secreto empresarial y conceptos técnicos</td>
+<td>Ninguna pública</td>
+<td>Solo ScienTI, con el certificado del tercero</td>
+</tr>
+</tbody>
+</table>
+</div>
+  <p class="mm-src">Fuentes: <a href="https://minciencias.gov.co/la-ciencia-en-cifras/grupos" target="_blank">La Ciencia en Cifras</a>, <a href="https://www.minciencias.gov.co/ciudadano/datosabiertos" target="_blank">datos abiertos de Minciencias</a>, <a href="https://sedeelectronica.sic.gov.co/temas/propiedad-industrial/cigepi/servicios/informe-estadistico-de-propiedad-industrial" target="_blank">informe estadístico de propiedad industrial de la SIC</a>. Los demás registros son de conocimiento general del sistema; verifica su enlace vigente antes de citarlos.</p>
+</div>
+</div>
+</section>
+<section id="piloto-la-tipología-2-en-los-grupos-de-gestión-del-riesgo" class="level2">
+<h2 class="anchored" data-anchor-id="piloto-la-tipología-2-en-los-grupos-de-gestión-del-riesgo">Piloto: la tipología 2 en los grupos de gestión del riesgo</h2>
+<p>Para probar el método se revisaron las páginas públicas de GrupLAC de los 54 grupos de GRD de la base de capacidades de la Estrategia CTeI-GRD (consulta del 26 de noviembre de 2026). Cada sección de producción técnica se llevó a su subtipo del modelo 2024 y cada producto se marcó por año, por pertinencia a GRD (palabras clave en el título y la descripción) y por posible repetición (títulos con el mismo arranque dentro del mismo grupo).</p>
+<p>La cifra bruta engaña. Los grupos declaran 936 productos de la tipología 2, 513 de ellos entre 2019 y 2023, pero un solo grupo aporta 280 de esos 513, casi todos protocolos organizacionales con el mismo título para distintas empresas. Solo 56 productos recientes tratan de gestión del riesgo, y 32 si se descartan los que parecen plantillas. Lo más pertinente son las normas, los conceptos técnicos (visitas, estudios de riesgo, informes de emergencia), las innovaciones en procesos y algunos programas de <em>software</em> para sismología y amenazas.</p>
+<div class="mm">
+<div class="mm-stats">
+  <div class="mm-stat"><b>54</b><span>Grupos de GRD revisados en GrupLAC</span></div>
+  <div class="mm-stat"><b>43</b><span>Grupos con algún producto de la tipología 2</span></div>
+  <div class="mm-stat"><b>513</b><span>Productos de la tipología 2 entre 2019 y 2023</span></div>
+  <div class="mm-stat c"><b>32</b><span>De ellos, sobre GRD y sin señales de plantilla repetida</span></div>
+</div>
+<div class="mm-panel" style="margin-top:14px">
+  <div class="hd"><small>Productos 2019–2023 por sección de GrupLAC</small><h4 class="anchored">Las innovaciones en gestión dominan por un solo grupo</h4></div>
+  <div class="mm-leg"><span><i class="cc"></i>Sobre GRD</span><span><i class="c2"></i>Otros temas</span></div>
+  <div class="mm-bars">
+    <div class="mm-bar"><span>Innovaciones en gestión empresarial</span><div class="mm-track"><i class="cc" style="width:0.36%" title="Sobre GRD: 1"></i><i class="c2" style="width:99.64%" title="Otros temas: 274"></i></div><b>1 / 275</b></div>
+    <div class="mm-bar"><span>Innovaciones en procesos</span><div class="mm-track"><i class="cc" style="width:3.64%" title="Sobre GRD: 10"></i><i class="c2" style="width:18.55%" title="Otros temas: 51"></i></div><b>10 / 61</b></div>
+    <div class="mm-bar"><span>Regulaciones y normas</span><div class="mm-track"><i class="cc" style="width:5.45%" title="Sobre GRD: 15"></i><i class="c2" style="width:13.45%" title="Otros temas: 37"></i></div><b>15 / 52</b></div>
+    <div class="mm-bar"><span>Conceptos técnicos</span><div class="mm-track"><i class="cc" style="width:4.36%" title="Sobre GRD: 12"></i><i class="c2" style="width:10.91%" title="Otros temas: 30"></i></div><b>12 / 42</b></div>
+    <div class="mm-bar"><span>Prototipos</span><div class="mm-track"><i class="cc" style="width:0.73%" title="Sobre GRD: 2"></i><i class="c2" style="width:10.18%" title="Otros temas: 28"></i></div><b>2 / 30</b></div>
+    <div class="mm-bar"><span>Software</span><div class="mm-track"><i class="cc" style="width:3.27%" title="Sobre GRD: 9"></i><i class="c2" style="width:5.45%" title="Otros temas: 15"></i></div><b>9 / 24</b></div>
+    <div class="mm-bar"><span>Nuevos registros científicos</span><div class="mm-track"><i class="cc" style="width:0.73%" title="Sobre GRD: 2"></i><i class="c2" style="width:5.09%" title="Otros temas: 14"></i></div><b>2 / 16</b></div>
+    <div class="mm-bar"><span>Reglamentos técnicos</span><div class="mm-track"><i class="cc" style="width:1.09%" title="Sobre GRD: 3"></i><i class="c2" style="width:0.36%" title="Otros temas: 1"></i></div><b>3 / 4</b></div>
+    <div class="mm-bar"><span>Signos distintivos</span><div class="mm-track"><i class="cc" style="width:0.73%" title="Sobre GRD: 2"></i><i class="c2" style="width:0.73%" title="Otros temas: 2"></i></div><b>2 / 4</b></div>
+    <div class="mm-bar"><span>Diseños industriales</span><div class="mm-track"><i class="c2" style="width:1.09%" title="Otros temas: 3"></i></div><b>0 / 3</b></div>
+    <div class="mm-bar"><span>Plantas piloto</span><div class="mm-track"><i class="c2" style="width:0.73%" title="Otros temas: 2"></i></div><b>0 / 2</b></div>
+  </div>
+  <p class="mm-src">Cifra a la derecha: productos sobre GRD / total de la sección, 2019–2023. «Sobre GRD» se marcó por palabras clave en el título y la descripción; no excluye los posibles repetidos. Pasa el puntero para ver los valores.</p>
+</div>
+<div class="mm-grid" style="margin-top:14px">
+  <div class="mm-tile"><span class="n">1</span><h4 class="anchored">Mucho autorregistro, poca verificación</h4><p>GrupLAC muestra lo que declara el grupo. Solo 9 de 113 productos registrables (signos, diseños y software) traen número de registro para cruzarlo con SIPI o la DNDA.</p></div>
+  <div class="mm-tile"><span class="n">2</span><h4 class="anchored">Producción técnica fuera de la tipología</h4><p>Los mismos grupos registran 1.564 cartas y mapas y 1.475 informes técnicos. Son muy pertinentes para GRD (mapas de amenaza, estudios), pero el modelo 2024 no los cuenta en la tipología 2.</p></div>
+  <div class="mm-tile"><span class="n">3</span><h4 class="anchored">La pertinencia hay que revisarla</h4><p>Un grupo de GRD también produce innovaciones para empresas de otros sectores. Sin filtrar por tema, la cifra de la tipología 2 no describe la tecnología para la gestión del riesgo.</p></div>
+</div>
+</div>
+<p>La metodología, los scripts y los datos del piloto están en la carpeta de vigilancia de la Estrategia CTeI-GRD (<code>06_VIGILANCIA/09_DESARROLLO_TECNOLOGICO</code>), con un <em>skill</em> que repite el ejercicio para la próxima versión del informe del estado de la ciencia.</p>
+</section>
+<section id="ver-también" class="level2">
+<h2 class="anchored" data-anchor-id="ver-también">Ver también</h2>
+<ul>
+<li><a href="../cyt/modelo-medicion.html">Modelo nacional de medición</a></li>
+<li><a href="../cyt/transferencia.html">Transferencia de conocimiento y tecnologías</a></li>
+<li><a href="../cyt/trl.html">Nivel de Madurez Tecnológica (TRL)</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mromerot\.github\.io\/web\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Made with ❤️ and Quarto</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Informar sobre problema</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
