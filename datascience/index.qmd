@@ -123,6 +123,16 @@ Recursos de visualización de datos con Python y R.
 
 ::: mrw-card
 ::: mrw-card-header
+[Grafos de conocimiento con Claude](grafos-conocimiento-claude.qmd)
+:::
+
+::: mrw-card-body
+Guía visual animada en seis pasos para convertir documentos en evidencia conectada, con el prompt de implementación listo para copiar.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
 [Herramientas](herramientas.qmd)
 :::
 

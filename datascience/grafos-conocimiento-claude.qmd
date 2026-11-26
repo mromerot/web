@@ -1,0 +1,152 @@
+---
+title: "Grafos de conocimiento con Claude"
+subtitle: "De documentos a evidencia conectada: una guía visual en seis pasos, con su prompt de implementación"
+author: "Mauricio Romero Torres"
+date: 2026-11-26
+date-modified: 2026-11-26
+lang: es
+categories: [inteligencia artificial, grafos de conocimiento, Claude]
+format:
+  html:
+    page-layout: full
+resources:
+  - demos/grafos-conocimiento-claude.html
+editor: visual
+---
+
+```{=html}
+<button type="button" id="btn-prompt-replica" class="btn-prompt-replica" title="Copiar el prompt para replicar este cuaderno" aria-label="Copiar el prompt para replicar este cuaderno">&lt; &gt;</button>
+<span id="btn-prompt-aviso" class="btn-prompt-aviso" role="status" aria-live="polite"></span>
+<style>
+  .btn-prompt-replica{position:fixed;right:20px;bottom:20px;z-index:1050;width:52px;height:52px;border-radius:50%;
+    border:1px solid #ddd4c7;background:#d9774a;color:#fff;font:700 17px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    letter-spacing:-.04em;box-shadow:0 6px 18px rgba(0,0,0,.18);cursor:pointer;transition:transform .2s,background .2s}
+  .btn-prompt-replica:hover{transform:translateY(-2px);background:#c3653b}
+  .btn-prompt-replica:focus-visible{outline:3px solid #a5482a;outline-offset:3px}
+  .btn-prompt-replica.ok{background:#3d8c7a}
+  .btn-prompt-aviso{position:fixed;right:82px;bottom:32px;z-index:1050;background:#2b2620;color:#fff;font:13px/1.3 system-ui,sans-serif;
+    padding:6px 10px;border-radius:6px;opacity:0;pointer-events:none;transition:opacity .3s}
+  .btn-prompt-aviso.on{opacity:1}
+  @media print{.btn-prompt-replica,.btn-prompt-aviso{display:none}}
+</style>
+<script type="text/plain" id="prompt-replica">Crea una guía visual animada en un solo archivo HTML autocontenido sobre el siguiente tema o recurso:
+
+TEMA: [nombre del tema, p. ej. "Sistemas de alerta temprana"]
+FUENTE: [URL, documento adjunto o "conocimiento general"]
+PÚBLICO: [p. ej. técnicos de gestión del riesgo, estudiantes, tomadores de decisión]
+IDIOMA: español
+NÚMERO DE PASOS: [4 a 6]
+
+LENGUAJES Y TECNOLOGÍA (obligatorio)
+- HTML5, CSS3 y JavaScript vanilla (ES6), todo dentro de un único archivo .html.
+- Sin frameworks ni librerías: nada de React, Vue, D3, jQuery ni Tailwind, ni enlaces a CDN, fuentes web o imágenes externas.
+- El diagrama es SVG y se genera con JavaScript a partir de arreglos de nodos y aristas, no escrito a mano.
+- La página del sitio va en Quarto Markdown (.qmd).
+
+ANTES DE ESCRIBIR CÓDIGO
+1. Lee la fuente y extrae un proceso de N pasos en orden lógico. Cada paso necesita: un verbo corto en mayúsculas (EXTRAER, MEDIR, ALERTAR…), qué se hace y qué se verifica.
+2. Inventa un ejemplo ilustrativo ficticio y concreto que atraviese todos los pasos (personas, lugares, eventos, datos con nombres propios). Debe ser el mismo caso en toda la guía.
+3. Escribe para cada paso un bloque de prompt de 4 líneas, en imperativo, envuelto en etiquetas tipo <verbo> … </verbo>.
+
+ESTRUCTURA DE LA PÁGINA (de arriba abajo)
+- Encabezado: marca o logo simple a la izquierda, etiqueta pequeña "CONOCIMIENTO / GUÍA DE CAMPO" al centro y botón Pausar/Reproducir a la derecha.
+- Título grande con serifa, subtítulo de color de acento y una línea de descripción.
+- Fila de N pestañas numeradas ("01 VERBO") y una barra de progreso fina debajo.
+- Bloque 01, con dos columnas:
+  · Izquierda (más ancha): un diagrama SVG del ejemplo (red de nodos y flechas, flujo, línea de tiempo o mapa esquemático, según el tema), con nodos de colores por categoría, etiquetas en las aristas clave con su ID de fuente [A], [B]… y una leyenda de categorías abajo.
+  · Derecha: 3 tarjetas pequeñas que ilustran pasos concretos con mini-ejemplos en monoespaciada.
+- Fila de 2 tarjetas anchas: un detalle o perfil de un elemento del ejemplo, y una tarjeta de evaluación con métricas o criterios de calidad (fórmulas, diagrama de Venn o semáforo, según el tema).
+- Bloque 02 "EL PROMPT DE IMPLEMENTACIÓN": una frase de resumen con marcadores [CORPUS]/[PREGUNTA] o equivalentes, un botón "COPIAR COMO UN SOLO PROMPT" y los N bloques de prompt en una cuadrícula de 2 columnas.
+- Pie: fuente con enlace y la nota "Adaptación visual independiente. El ejemplo es ficticio."
+
+ANIMACIÓN
+- Cada 4 s se activa el paso siguiente, en bucle. En cada paso se resaltan a la vez la pestaña, la parte del diagrama que le corresponde (aristas y nodos en color de acento, con halo; el resto atenuado si ayuda), la tarjeta asociada (fondo de acento suave y borde) y su bloque de prompt.
+- Define los pasos en un arreglo JS { nombre, tarjeta, aristas, nodos, insignia } para que sea fácil de editar.
+- Usa requestAnimationFrame para el temporizador y la barra de progreso.
+- Al hacer clic en una pestaña se salta a ese paso y se reinicia el temporizador. Respeta prefers-reduced-motion (arrancar en pausa).
+- Transiciones CSS suaves de 0,3–0,4 s; nada que parpadee.
+
+ESTILO
+- Fondo crema (#f5f1ea), paneles casi blancos, bordes finos (#ddd4c7) y radio de 8 px.
+- Un solo color de acento cálido (#d9774a) con variantes suaves para fondos resaltados, definidos como variables CSS (:root).
+- Títulos con serifa (Georgia); etiquetas, datos y prompts en monoespaciada del sistema (ui-monospace, Consolas).
+- 5 colores de categoría apagados y distinguibles: azul, naranja, gris verdoso, rojo y verde azulado.
+- Responsivo con CSS Grid: por debajo de 820 px todo pasa a una columna y las pestañas a 3 por fila.
+
+ENTREGA
+- Un único archivo .html que se pueda incrustar con <iframe> en un sitio Quarto.
+- El botón de copiar debe usar navigator.clipboard dentro de try/catch, con alternativa de textarea.
+- Añade una página .qmd que incruste el HTML (iframe de ancho 100% y alto aproximado de 1500 px), con: introducción al tema, una tabla "Paso | Qué hace | Qué se verifica", una sección de aplicación a [ÁMBITO, p. ej. gestión del riesgo en Colombia], recomendaciones de uso y la fuente.
+- Revisa que no haya textos superpuestos en el SVG y que se lea bien en móvil.</script>
+<script>
+(function () {
+  var btn = document.getElementById('btn-prompt-replica');
+  var aviso = document.getElementById('btn-prompt-aviso');
+  var texto = document.getElementById('prompt-replica').textContent;
+  function listo(ok) {
+    aviso.textContent = ok ? 'Prompt copiado' : 'No se pudo copiar';
+    aviso.classList.add('on'); btn.classList.toggle('ok', ok); btn.innerHTML = ok ? '&#10003;' : '&lt; &gt;';
+    setTimeout(function () { aviso.classList.remove('on'); btn.classList.remove('ok'); btn.innerHTML = '&lt; &gt;'; }, 1800);
+  }
+  function alternativa() {
+    var ta = document.createElement('textarea');
+    ta.value = texto; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+    ta.remove(); listo(ok);
+  }
+  btn.addEventListener('click', function () {
+    try { navigator.clipboard.writeText(texto).then(function () { listo(true); }, alternativa); }
+    catch (e) { alternativa(); }
+  });
+})();
+</script>
+```
+
+## Qué es un grafo de conocimiento trazable
+
+Un grafo de conocimiento guarda lo que dicen muchos documentos como una red de **entidades tipadas** (personas, organizaciones, lugares, eventos, artefactos) unidas por **relaciones dirigidas** ("el Incidente 42 *afectó* al Sensor X"). Lo que lo vuelve útil para el trabajo técnico e institucional es que cada arista conserva el **ID del documento** que la sustenta. Así, cuando se le hace una pregunta al grafo, la respuesta llega con la ruta de evidencia que la respalda y no como una afirmación suelta.
+
+Un modelo de lenguaje como Claude puede leer un corpus y proponer esas entidades y tripletas, pero el valor está en el proceso que lo rodea: un esquema definido antes de extraer, la resolución de identidades duplicadas, la verificación de cada hecho contra su fuente y una evaluación contra un conjunto de referencia. Esta entrada recrea, traducida al español, la guía visual del *Claude Cookbook* sobre construcción de grafos de conocimiento.
+
+## La guía animada
+
+La animación recorre los seis pasos y resalta, en cada uno, la parte del grafo, la tarjeta y el bloque del prompt que le corresponden. Puede pausarse o elegirse un paso con las pestañas. El botón **Copiar como un solo prompt** copia las seis instrucciones listas para pegar.
+
+```{=html}
+<iframe src="demos/grafos-conocimiento-claude.html" allow="clipboard-write" title="Guía animada: grafos de conocimiento con Claude" style="width:100%;height:1500px;border:0;border-radius:12px" loading="lazy"></iframe>
+```
+
+[Abrir la guía en pantalla completa](demos/grafos-conocimiento-claude.html){target="_blank"}
+
+## Los seis pasos
+
+| Paso | Qué hace | Qué se verifica |
+|------|----------|-----------------|
+| 01 Extraer | Define tipos de entidad y un esquema JSON; extrae nombres, descripciones y tripletas con su fragmento de evidencia. | Que cada hecho esté respaldado por el texto, no solo que encaje en el esquema. |
+| 02 Resolver | Une alias ("Sensor-X", "sensor x") en un ID canónico usando las descripciones. | Fusiones falsas; los nombres sin pareja se conservan como entidades únicas. |
+| 03 Construir | Arma un multigrafo dirigido con nodos tipados y reescribe las relaciones con los IDs canónicos. | Extremos faltantes y evidencia duplicada; cada arista con predicado e ID de fuente. |
+| 04 Perfilar | Para un nodo, reúne extractos y vecindario y redacta hechos clave anclados a la fuente. | Evidencia contradictoria y fechas inciertas, que se preservan en lugar de ocultarse. |
+| 05 Consultar | Toma un vecindario acotado para la pregunta, serializa sus tripletas y responde desde ahí. | Que la respuesta cite la ruta (por ejemplo, Jon → Incidente 42 → Sensor X, fuentes C + D) y que diga cuándo el grafo no alcanza. |
+| 06 Evaluar | Compara con un conjunto de referencia etiquetado y reporta precisión, exhaustividad y F1. | Entidades y relaciones por separado; hechos falsos (FP) y omitidos (FN). |
+
+Las métricas del paso 6 son las habituales en extracción de información:
+
+$$
+P = \frac{VP}{VP + FP} \qquad R = \frac{VP}{VP + FN} \qquad F_1 = \frac{2PR}{P + R}
+$$
+
+## Por qué interesa en gestión del riesgo
+
+Buena parte del conocimiento del riesgo vive disperso en informes de emergencia, actas de comités, evaluaciones de daños, boletines técnicos y bases de datos de eventos. Un grafo trazable permite preguntar, por ejemplo, qué instituciones intervinieron en eventos que afectaron a un mismo municipio o qué estudios sustentan un escenario de amenaza, y obtener la respuesta con los documentos de origen. La resolución de identidades es especialmente importante aquí: un mismo municipio, río o entidad aparece escrito de muchas formas en los reportes.
+
+## Recomendaciones de uso
+
+- Empezar en local, con un corpus pequeño y un esquema cerrado, y ampliar solo cuando la evaluación lo justifique.
+- Tratar la salida del modelo como una propuesta que se revisa: guardar la tabla de alias y la evidencia de cada fusión.
+- Construir un conjunto de referencia, aunque sea modesto (50 a 100 hechos etiquetados a mano), antes de afirmar resultados.
+- Reportar el uso real (tokens, tiempo, costo) y las limitaciones conocidas junto con los artefactos.
+
+## Fuente
+
+Adaptación visual independiente de la guía *Knowledge Graph Construction with Claude* del Claude Cookbook: <https://platform.claude.com/cookbook/capabilities-knowledge-graph-guide>. El corpus del ejemplo es ficticio y no se ejecutó extracción con la API.

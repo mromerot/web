@@ -242,6 +242,8 @@ website:
             href: datascience/graficas-html.qmd
           - text: "Gráficas Python y R"
             href: datascience/graficas-python-r.qmd
+          - text: "Grafos de conocimiento con Claude"
+            href: datascience/grafos-conocimiento-claude.qmd
           - text: "Herramientas"
             href: datascience/herramientas.qmd
           - text: "Hugging Face"

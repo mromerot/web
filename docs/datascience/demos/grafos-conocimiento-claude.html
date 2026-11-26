@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grafos de conocimiento con Claude — guía visual</title>
+<style>
+  :root{
+    --bg:#f5f1ea; --panel:#fbf9f5; --ink:#2b2620; --muted:#6b6257; --line:#ddd4c7;
+    --acc:#d9774a; --acc-soft:#f2c3a5; --acc-bg:#f6d9c6; --acc-ink:#a5482a;
+    --person:#4a6fa5; --org:#c9733a; --loc:#7c8f88; --event:#d9572b; --art:#3d8c7a; --mauve:#9a6a80;
+    --serif: Georgia, "Times New Roman", serif;
+    --mono: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif)}
+  .wrap{max-width:1100px;margin:0 auto;padding:22px 24px 28px}
+  header.top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:12px}
+  .brand{display:flex;align-items:center;gap:8px;font-size:20px}
+  .brand svg{width:22px;height:22px}
+  .kicker{font-family:var(--mono);font-size:12px;color:var(--acc-ink);letter-spacing:.08em}
+  .ctrl{font-family:var(--mono);font-size:12px;background:none;border:1px solid var(--line);border-radius:6px;padding:5px 10px;color:var(--muted);cursor:pointer}
+  .ctrl:hover{border-color:var(--acc);color:var(--acc-ink)}
+  h1{font-size:34px;text-align:center;margin:20px 0 4px}
+  .sub{text-align:center;color:var(--acc-ink);font-size:18px;font-weight:bold;margin:0}
+  .lead{text-align:center;color:var(--muted);margin:8px 0 18px}
+  .tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:16px}
+  .tab{font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;color:var(--acc-ink);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:9px 4px;cursor:pointer;transition:all .35s}
+  .tab.on{background:var(--acc-bg);border-color:var(--acc);box-shadow:0 0 0 2px var(--acc-soft) inset}
+  .grid-top{display:grid;grid-template-columns:1.65fr 1fr;gap:16px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;transition:all .4s}
+  .panel.on{background:var(--acc-bg);border-color:var(--acc);box-shadow:0 0 0 1px var(--acc)}
+  .ph{display:flex;justify-content:space-between;font-family:var(--mono);font-size:12px;color:var(--acc-ink);letter-spacing:.04em}
+  .ph span:last-child{color:var(--muted)}
+  .mono{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+  .side{display:flex;flex-direction:column;gap:10px}
+  .side h3,.row2 h3{font-size:15px;margin:0 0 6px;letter-spacing:.02em;text-transform:uppercase}
+  .side .mono div{margin:2px 0}
+  u{text-decoration-color:var(--acc);text-underline-offset:3px}
+  .chip{display:inline-block;font-family:var(--mono);font-size:12px;border:1px solid var(--line);background:#fff;border-radius:4px;padding:2px 10px}
+  .flow{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:4px 0}
+  .arrow{color:var(--acc)}
+  svg.graph{width:100%;height:auto;display:block}
+  .edge{stroke:#bcb2a5;stroke-width:1.2;fill:none;transition:stroke .4s,stroke-width .4s}
+  .edge.on{stroke:var(--acc);stroke-width:2.6}
+  .elabel{font-family:var(--mono);font-size:11px;fill:var(--muted);opacity:.85}
+  .elabel.on{fill:var(--acc-ink);opacity:1}
+  .node circle.dot{stroke:#fff;stroke-width:2;transition:r .4s}
+  .node circle.halo{fill:var(--acc);opacity:0;transition:opacity .4s}
+  .node.on circle.halo{opacity:.25}
+  .node text{font-family:var(--mono);font-size:12.5px;fill:var(--ink)}
+  .node.dim{opacity:.35}
+  .legend{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted);margin:8px 2px 0;flex-wrap:wrap;gap:6px}
+  .legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+  .badge{font-family:var(--mono);font-size:11px;fill:var(--acc-ink)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+  .prof{display:grid;grid-template-columns:200px 1fr;gap:10px;align-items:center}
+  .gold{display:grid;grid-template-columns:200px 1fr;gap:10px;align-items:center}
+  h2.sec{font-family:var(--mono);font-size:13px;color:var(--acc-ink);letter-spacing:.06em;margin:22px 0 4px;display:flex;justify-content:space-between;font-weight:normal}
+  .copy{cursor:pointer;color:var(--muted);background:none;border:none;font:inherit;letter-spacing:.06em}
+  .copy:hover{color:var(--acc-ink)}
+  .tagline{margin:0 0 10px;font-size:16px}
+  .prompts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .pb{font-family:var(--mono);font-size:12.5px;line-height:1.55;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 12px;white-space:pre-wrap;transition:all .4s}
+  .pb .t{color:var(--acc-ink)}
+  .pb .c{text-align:right;color:var(--acc-ink);font-size:11px}
+  .pb.on{background:var(--acc-soft);border-color:var(--acc)}
+  footer{border-top:1px solid var(--line);margin-top:20px;padding-top:10px;font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.7}
+  footer a{color:var(--muted)}
+  .progress{height:3px;background:var(--line);border-radius:2px;overflow:hidden;margin:-8px 0 14px}
+  .progress div{height:100%;width:0;background:var(--acc)}
+  @media (max-width:820px){
+    .grid-top,.row2,.prompts{grid-template-columns:1fr}
+    .tabs{grid-template-columns:repeat(3,1fr)}
+    h1{font-size:26px}
+    .prof,.gold{grid-template-columns:1fr}
+    .kicker{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><g stroke="#d9774a" stroke-width="2.2" stroke-linecap="round">
+        <line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/>
+        <line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></g></svg>
+      <span>Claude</span>
+    </div>
+    <div class="kicker">CONOCIMIENTO / GUÍA DE CAMPO</div>
+    <button class="ctrl" id="play" aria-pressed="true">❚❚ Pausar</button>
+  </header>
+
+  <h1>Grafos de conocimiento con Claude</h1>
+  <p class="sub">De documentos a evidencia conectada</p>
+  <p class="lead">Una guía visual de construcción: hechos tipados, resolución de identidades, procedencia y consultas al grafo.</p>
+
+  <nav class="tabs" role="tablist" id="tabs"></nav>
+  <div class="progress"><div id="bar"></div></div>
+
+  <section class="grid-top">
+    <div class="panel" id="p-graph">
+      <div class="ph"><span>01 / UN GRAFO TRAZABLE</span><span>CORPUS ILUSTRATIVO</span></div>
+      <div class="mono" style="margin-top:4px">Entidades tipadas + relaciones dirigidas + IDs de fuente</div>
+      <svg class="graph" id="graph" viewBox="0 0 800 430" role="img" aria-label="Grafo de conocimiento de ejemplo con 12 entidades">
+        <defs>
+          <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bcb2a5"/></marker>
+          <marker id="aho" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9774a"/></marker>
+        </defs>
+        <g id="edges"></g><g id="nodes"></g>
+        <text class="badge" id="badge" x="790" y="420" text-anchor="end"></text>
+      </svg>
+      <div class="legend">
+        <span><i style="background:var(--person)"></i>PERSONA</span>
+        <span><i style="background:var(--org)"></i>ORGANIZACIÓN</span>
+        <span><i style="background:var(--loc)"></i>LUGAR</span>
+        <span><i style="background:var(--event)"></i>EVENTO</span>
+        <span><i style="background:var(--art)"></i>ARTEFACTO</span>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="panel" id="c-extract">
+        <h3>Esquema, luego extracción</h3>
+        <div class="mono">
+          <div>[C] <u>El Incidente 42 afectó al Sensor X.</u></div>
+          <div>entidades: Incidente 42 / Sensor X</div>
+          <div>tripleta: incidente / afectó / sensor</div>
+          <div style="font-size:11.5px">Que encaje en el esquema no basta: revisar el hecho.</div>
+        </div>
+      </div>
+      <div class="panel" id="c-resolve">
+        <h3>Resolver identidades</h3>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="display:flex;flex-direction:column;gap:6px"><span class="chip">Sensor-X</span><span class="chip">sensor x</span></div>
+          <svg width="60" height="46" aria-hidden="true"><path d="M0 11 H25 V35 H0 M25 23 H58" stroke="#d9774a" fill="none" stroke-width="1.5"/></svg>
+          <span class="chip">Sensor X</span>
+        </div>
+        <div class="mono" style="margin-top:4px;font-size:11.5px">Conservar los no emparejados / revisar fusiones</div>
+      </div>
+      <div class="panel" id="c-query">
+        <h3>Preguntar entre documentos</h3>
+        <div class="mono">¿Quién revisó el incidente del Sensor X?</div>
+        <div class="flow"><span class="chip">Sensor X</span><span class="arrow">◂</span><span class="chip">Incidente 42</span><span class="arrow">◂</span><span class="chip">Jon</span></div>
+        <div class="mono">Respuesta: Jon &nbsp;|&nbsp; Fuentes: C + D</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row2">
+    <div class="panel" id="c-profile">
+      <h3>Sensor X / perfil de entidad</h3>
+      <div class="prof">
+        <svg viewBox="0 0 200 110" aria-hidden="true">
+          <g stroke="#c98a6c" stroke-width="1.4"><line x1="100" y1="55" x2="30" y2="20"/><line x1="100" y1="55" x2="170" y2="20"/><line x1="100" y1="55" x2="100" y2="95"/></g>
+          <circle cx="30" cy="20" r="6" fill="#9a6a80"/><circle cx="170" cy="20" r="6" fill="#7c8f88"/>
+          <circle cx="100" cy="55" r="7" fill="#d9774a"/><circle cx="100" cy="95" r="6" fill="#d9572b"/>
+          <g font-family="ui-monospace,monospace" font-size="10.5" fill="#2b2620">
+            <text x="10" y="38">Orion</text><text x="140" y="38">Lab Oeste</text><text x="108" y="60">Sensor X</text><text x="108" y="100">Incidente 42</text></g>
+        </svg>
+        <div class="mono">
+          <div>Usado por Orion. [A]</div><div>Probado en Lab Oeste. [B]</div><div>Afectado por el Incidente 42. [C]</div>
+          <div style="margin-top:8px;color:var(--acc-ink)">Extractos + hechos cercanos.</div>
+        </div>
+      </div>
+    </div>
+    <div class="panel" id="c-eval">
+      <h3>Comparar con un conjunto de referencia</h3>
+      <div class="gold">
+        <svg viewBox="0 0 200 110" aria-hidden="true">
+          <circle cx="78" cy="52" r="44" fill="#cfdbe8" opacity=".85"/>
+          <circle cx="122" cy="52" r="44" fill="#d2e1d6" opacity=".85"/>
+          <path d="M100 13.6 A44 44 0 0 1 100 90.4 A44 44 0 0 1 100 13.6z" fill="#f0a77f"/>
+          <g font-family="ui-monospace,monospace" font-size="11" fill="#2b2620" text-anchor="middle">
+            <text x="60" y="56">FP</text><text x="100" y="56">VP</text><text x="140" y="56">FN</text>
+            <text x="60" y="108" fill="#6b6257">predicho</text><text x="140" y="108" fill="#6b6257">referencia</text></g>
+        </svg>
+        <div class="mono">
+          <div>P = VP / (VP + FP)</div><div>R = VP / (VP + FN)</div><div>F1 = 2PR / (P + R)</div>
+          <div style="margin-top:8px">Hechos falsos / hechos omitidos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="sec"><span>02 / EL PROMPT DE IMPLEMENTACIÓN</span><button class="copy" id="copy">COPIAR COMO UN SOLO PROMPT</button></h2>
+  <p class="tagline">Convierte [CORPUS] en un grafo para [PREGUNTA]. Empieza en local; verifica antes de afirmar resultados.</p>
+  <section class="prompts" id="prompts"></section>
+
+  <footer>
+    FUENTE: CLAUDE COOKBOOK / KNOWLEDGE GRAPH CONSTRUCTION WITH CLAUDE<br>
+    <a href="https://platform.claude.com/cookbook/capabilities-knowledge-graph-guide" target="_blank" rel="noopener">platform.claude.com/cookbook/capabilities-knowledge-graph-guide</a><br>
+    Adaptación visual independiente, traducida al español. El corpus de ejemplo es ficticio; no se ejecutó extracción con la API.
+  </footer>
+</div>
+
+<script>
+(function(){
+  const C = {person:'#4a6fa5', org:'#c9733a', loc:'#7c8f88', event:'#d9572b', art:'#3d8c7a', mauve:'#9a6a80', focus:'#d9774a'};
+  const nodes = {
+    mira:{x:140,y:70,l:'Mira',c:C.person},
+    orion:{x:400,y:130,l:'Orion',c:C.mauve},
+    northstar:{x:600,y:50,l:'Northstar',c:C.org},
+    labwest:{x:700,y:185,l:'Lab Oeste',c:C.loc,above:true},
+    helix:{x:55,y:200,l:'Helix',c:C.org},
+    relay:{x:210,y:195,l:'Relay R',c:C.art},
+    sensor:{x:575,y:270,l:'Sensor X',c:C.focus,big:true},
+    jon:{x:130,y:315,l:'Jon',c:C.person},
+    inc:{x:395,y:345,l:'Incidente 42',c:C.event},
+    field:{x:695,y:350,l:'Prueba de campo',c:C.mauve},
+    rae:{x:40,y:395,l:'Rae',c:C.person},
+    data:{x:240,y:395,l:'Dataset A',c:C.art}
+  };
+  const edges = [
+    {id:'e1',a:'mira',b:'orion'},
+    {id:'e2',a:'northstar',b:'orion'},
+    {id:'e3',a:'relay',b:'orion'},
+    {id:'e4',a:'helix',b:'relay'},
+    {id:'e5',a:'helix',b:'jon'},
+    {id:'e6',a:'northstar',b:'labwest'},
+    {id:'eA',a:'orion',b:'sensor',lab:'usa [A]'},
+    {id:'eB',a:'sensor',b:'labwest',lab:'probado en [B]'},
+    {id:'eC',a:'inc',b:'sensor',lab:'afectó [C]'},
+    {id:'eD',a:'jon',b:'inc',lab:'revisó [D]'},
+    {id:'e7',a:'rae',b:'data'},
+    {id:'e8',a:'data',b:'orion'},
+    {id:'e9',a:'field',b:'sensor'}
+  ];
+  const NS='http://www.w3.org/2000/svg';
+  const gE=document.getElementById('edges'), gN=document.getElementById('nodes');
+  const el=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e;};
+  edges.forEach(e=>{
+    const A=nodes[e.a],B=nodes[e.b];
+    const dx=B.x-A.x, dy=B.y-A.y, d=Math.hypot(dx,dy), r=B.big?13:10;
+    const x2=B.x-dx/d*r, y2=B.y-dy/d*r, x1=A.x+dx/d*9, y1=A.y+dy/d*9;
+    const p=el('path',{d:`M${x1},${y1} L${x2},${y2}`,class:'edge',id:e.id,'marker-end':'url(#ah)'});
+    gE.appendChild(p);
+    if(e.lab){
+      const t=el('text',{class:'elabel',id:e.id+'t',x:(A.x+B.x)/2,y:(A.y+B.y)/2-6,'text-anchor':'middle'});
+      t.textContent=e.lab; gE.appendChild(t);
+    }
+  });
+  for(const k in nodes){
+    const n=nodes[k], g=el('g',{class:'node',id:'n-'+k});
+    g.appendChild(el('circle',{class:'halo',cx:n.x,cy:n.y,r:n.big?24:18}));
+    g.appendChild(el('circle',{class:'dot',cx:n.x,cy:n.y,r:n.big?11:8,fill:n.c}));
+    const t=el('text',{x:n.x,y:n.y+((n.y<100||n.above)?-16:26),'text-anchor':'middle'}); t.textContent=n.l; g.appendChild(t);
+    gN.appendChild(g);
+  }
+
+  const prompts = [
+    ['extraer','Lee [CORPUS]. Define los tipos de entidad y un esquema JSON.\nExtrae nombres, descripciones y tripletas dirigidas.\nAdjunta IDs de documento y fragmentos de evidencia. Valida\nla forma y luego revisa si cada hecho está respaldado.'],
+    ['resolver','Mapea los alias a IDs canónicos usando las descripciones.\nConserva los nombres sin pareja como entidades únicas. Señala ambigüedades.\nRevisa fusiones falsas; preserva las entidades distintas.\nGuarda la tabla de alias y la evidencia de cada fusión.'],
+    ['construir','Construye un multigrafo dirigido con nodos tipados.\nReescribe los extremos de cada relación con IDs canónicos.\nConserva predicados e IDs de fuente en cada arista.\nBusca extremos faltantes y evidencia duplicada.'],
+    ['perfilar','Para un nodo seleccionado, reúne sus extractos relevantes\ny su vecindario. Escribe hechos clave anclados a la fuente.\nPreserva la evidencia contradictoria y las fechas inciertas.\nActualiza el perfil cuando cambien sus fuentes.'],
+    ['consultar','Selecciona un vecindario acotado para [PREGUNTA].\nSerializa sus tripletas y los IDs de fuente que las respaldan.\nResponde desde esa evidencia; cita la ruta que la sustenta.\nDi cuándo el grafo disponible no puede responder.'],
+    ['evaluar','Compara la extracción con un conjunto de referencia etiquetado.\nReporta P/R/F1 de entidades y de relaciones por separado.\nNormaliza alias; inspecciona hechos omitidos y fusiones.\nEntrega artefactos, uso real y limitaciones conocidas.']
+  ];
+  const pWrap=document.getElementById('prompts');
+  prompts.forEach((p,i)=>{
+    const d=document.createElement('div'); d.className='pb'; d.id='pb'+i;
+    d.innerHTML=`<div class="t">&lt;${p[0]}&gt;</div>${p[1]}<div class="c">&lt;/${p[0]}&gt;</div>`;
+    pWrap.appendChild(d);
+  });
+  // orden visual de los bloques en dos columnas: extraer, resolver / ensamblar, perfilar / consultar, evaluar
+
+  const steps = [
+    {name:'EXTRAER', card:'c-extract', edges:['eC'], nodes:['inc','sensor']},
+    {name:'RESOLVER', card:'c-resolve', edges:[], nodes:['sensor']},
+    {name:'CONSTRUIR', card:'p-graph', edges:edges.map(e=>e.id), nodes:Object.keys(nodes), badge:'CONSTRUIDO: 12 NODOS / 13 ARISTAS'},
+    {name:'PERFILAR', card:'c-profile', edges:['eA','eB','eC'], nodes:['sensor','orion','labwest','inc'], dim:true},
+    {name:'CONSULTAR', card:'c-query', edges:['eC','eD'], nodes:['jon','inc','sensor'], dim:true, badge:'CONSULTA: SUBGRAFO DE 2 SALTOS'},
+    {name:'EVALUAR', card:'c-eval', edges:[], nodes:[], badge:'REVISAR FP / FN'}
+  ];
+  const tabs=document.getElementById('tabs');
+  steps.forEach((s,i)=>{
+    const b=document.createElement('button'); b.className='tab'; b.setAttribute('role','tab');
+    b.textContent=`0${i+1}  ${s.name}`; b.onclick=()=>{go(i); restart();}; tabs.appendChild(b);
+  });
+
+  let cur=0;
+  function go(i){
+    cur=i; const s=steps[i];
+    [...tabs.children].forEach((t,j)=>{t.classList.toggle('on',j===i);t.setAttribute('aria-selected',j===i);});
+    document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===s.card));
+    document.querySelectorAll('.pb').forEach((p,j)=>p.classList.toggle('on',j===i));
+    edges.forEach(e=>{
+      const on=s.edges.includes(e.id), p=document.getElementById(e.id);
+      p.classList.toggle('on',on); p.setAttribute('marker-end',on?'url(#aho)':'url(#ah)');
+      const t=document.getElementById(e.id+'t'); if(t) t.classList.toggle('on',on);
+    });
+    for(const k in nodes){
+      const g=document.getElementById('n-'+k), on=s.nodes.includes(k);
+      g.classList.toggle('on',on && s.nodes.length<12);
+      g.classList.toggle('dim',!!s.dim && !on);
+    }
+    document.getElementById('badge').textContent=s.badge||'';
+  }
+
+  const DUR=4000; let playing=true, t0=performance.now(), raf;
+  try{ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) playing=false; }catch(e){}
+  const bar=document.getElementById('bar'), btn=document.getElementById('play');
+  function restart(){ t0=performance.now(); }
+  function tick(now){
+    if(playing){
+      const f=(now-t0)/DUR;
+      if(f>=1){ go((cur+1)%steps.length); t0=now; }
+      bar.style.width=Math.min(f,1)*100+'%';
+    }
+    raf=requestAnimationFrame(tick);
+  }
+  function setBtn(){ btn.textContent=playing?'❚❚ Pausar':'▶ Reproducir'; btn.setAttribute('aria-pressed',playing); if(!playing) bar.style.width='0'; }
+  btn.onclick=()=>{ playing=!playing; restart(); setBtn(); };
+  setBtn(); go(0); raf=requestAnimationFrame(tick);
+
+  document.getElementById('copy').onclick=function(){
+    const txt='Convierte [CORPUS] en un grafo para [PREGUNTA]. Empieza en local; verifica antes de afirmar resultados.\n\n'+
+      prompts.map(p=>`<${p[0]}>\n${p[1].replace(/\n/g,' ')}\n</${p[0]}>`).join('\n\n');
+    const b=this, done=()=>{b.textContent='COPIADO ✓'; setTimeout(()=>b.textContent='COPIAR COMO UN SOLO PROMPT',1800);};
+    try{ navigator.clipboard.writeText(txt).then(done,()=>fallback()); }catch(e){ fallback(); }
+    function fallback(){ const ta=document.createElement('textarea'); ta.value=txt; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy');done();}catch(e){} ta.remove(); }
+  };
+})();
+</script>
+</body>
+</html>
