@@ -21,21 +21,21 @@ Calidad y evaluación del café: cafés especiales y recursos de referencia.
 
 ::: mrw-card
 ::: mrw-card-header
-[Vida laboral](vidalaboral.qmd)
-:::
-
-::: mrw-card-body
-Trabajo en equipo, reuniones y otros aspectos de la vida laboral cotidiana.
-:::
-:::
-
-::: mrw-card
-::: mrw-card-header
 [Herramientas](herramientas.qmd)
 :::
 
 ::: mrw-card-body
 Herramientas de trabajo: infografías y otras aplicaciones de productividad.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Vida laboral](vidalaboral.qmd)
+:::
+
+::: mrw-card-body
+Trabajo en equipo, reuniones y otros aspectos de la vida laboral cotidiana.
 :::
 :::
 ::::::

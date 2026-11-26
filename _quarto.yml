@@ -28,53 +28,25 @@ website:
       - section: "Gestión del riesgo de desastres"
         href: grd/index.qmd
         contents:
-          - text: "Gestión del riesgo de desastres"
-            href: grd/gestiondelriesgo.qmd
-          - text: "Conocimiento del riesgo"
-            href: grd/conocimientodelriesgo.qmd
-          - text: "Indicadores de riesgo nacionales y mundiales"
-            href: grd/conocimiento-indicadores.qmd
-          - text: "Reducción del riesgo"
-            href: grd/reducciondelriesgo.qmd
-          - text: "Manejo de desastres"
-            href: grd/manejodedesastres.qmd
-          - section: "Ciencia y tecnología"
-            href: grd/cienciaytecnologia/index.qmd
+          - text: "Amazonas"
+            href: grd/amazonas.qmd
+          - section: "Amenazas ambientales"
+            href: grd/ambientales/index.qmd
             contents:
-              - text: "Ciencia y tecnología"
-                href: grd/cienciaytecnologia/cienciaytecnologia.qmd
-              - text: "Estado de la ciencia 2024"
-                href: grd/cienciaytecnologia/estado-ciencia.qmd
-              - text: "Hoja de ruta de ciencia y tecnología"
-                href: grd/cienciaytecnologia/hoja-de-ruta-ct.qmd
-              - text: "Marco de Sendai"
-                href: grd/cienciaytecnologia/marco-sendai.qmd
-          - text: "Educación"
-            href: grd/educacion.qmd
-          - section: "Cursos, redes y recursos"
+              - text: "Erosión costera"
+                href: grd/ambientales/erosioncostera.qmd
+              - text: "Incendios forestales"
+                href: grd/ambientales/incendiosforestales.qmd
+          - section: "Amenazas biológicas"
+            href: grd/biologicos/index.qmd
             contents:
-              - text: "Cursos en GRD"
-                href: grd/cursos.qmd
-              - text: "Plataformas y redes"
-                href: grd/plataformas-redes.qmd
-              - text: "Repositorios FAIR"
-                href: grd/repositorios.qmd
-          - text: "Sistemas de alerta temprana"
-            href: grd/sat.qmd
-          # aqui viene la seccion de amenazas
-          - section: "Amenazas hidrológicas y meteorológicas"
-            href: grd/hidrol-meteorologicas/index.qmd
+              - text: "COVID-19"
+                href: grd/biologicos/covid.qmd
+          - section: "Amenazas extraterrestres"
+            href: grd/extraterrestre/index.qmd
             contents:
-              - text: "El Niño / La Niña"
-                href: grd/hidrol-meteorologicas/elnino.qmd
-              - text: "Huracanes"
-                href: grd/hidrol-meteorologicas/huracanes.qmd
-              - text: "Inundaciones"
-                href: grd/hidrol-meteorologicas/inundaciones.qmd
-              - text: "Inundaciones repentinas"
-                href: grd/hidrol-meteorologicas/inundaciones-repentinas.qmd
-              - text: "Olas de calor"
-                href: grd/hidrol-meteorologicas/olasdecalor.qmd
+              - text: "Amenazas extraterrestres"
+                href: grd/extraterrestre/amenazasextraterrestres.qmd
           - section: "Amenazas geológicas"
             href: grd/geologicas/index.qmd
             contents:
@@ -88,41 +60,68 @@ website:
                 href: grd/geologicas/tsunami.qmd
               - text: "Volcanes"
                 href: grd/geologicas/volcanes.qmd
-          - section: "Amenazas ambientales"
-            href: grd/ambientales/index.qmd
+          - section: "Amenazas hidrológicas y meteorológicas"
+            href: grd/hidrol-meteorologicas/index.qmd
             contents:
-              - text: "Erosión costera"
-                href: grd/ambientales/erosioncostera.qmd
-              - text: "Incendios forestales"
-                href: grd/ambientales/incendiosforestales.qmd
-          - section: "Amenazas biológicas"
-            href: grd/biologicos/index.qmd
-            contents:
-              - text: "COVID-19"
-                href: grd/biologicos/covid.qmd
-          - section: "Amenazas tecnológicas"
-            href: grd/tecnologicas/index.qmd
-            contents:
-              - text: "Amenazas tecnológicas"
-                href: grd/tecnologicas/amenazastecnol.qmd
+              - text: "El Niño / La Niña"
+                href: grd/hidrol-meteorologicas/elnino.qmd
+              - text: "Huracanes"
+                href: grd/hidrol-meteorologicas/huracanes.qmd
+              - text: "Inundaciones"
+                href: grd/hidrol-meteorologicas/inundaciones.qmd
+              - text: "Inundaciones repentinas"
+                href: grd/hidrol-meteorologicas/inundaciones-repentinas.qmd
+              - text: "Olas de calor"
+                href: grd/hidrol-meteorologicas/olasdecalor.qmd
           - section: "Amenazas sociales"
             href: grd/sociales/index.qmd
             contents:
               - text: "Migración"
                 href: grd/sociales/migracion.qmd
-          - section: "Amenazas extraterrestres"
-            href: grd/extraterrestre/index.qmd
+          - section: "Amenazas tecnológicas"
+            href: grd/tecnologicas/index.qmd
             contents:
-              - text: "Amenazas extraterrestres"
-                href: grd/extraterrestre/amenazasextraterrestres.qmd
-          - text: "Amazonas"
-            href: grd/amazonas.qmd
+              - text: "Amenazas tecnológicas"
+                href: grd/tecnologicas/amenazastecnol.qmd
+          - section: "Ciencia y tecnología"
+            href: grd/cienciaytecnologia/index.qmd
+            contents:
+              - text: "Ciencia y tecnología"
+                href: grd/cienciaytecnologia/cienciaytecnologia.qmd
+              - text: "Estado de la ciencia 2024"
+                href: grd/cienciaytecnologia/estado-ciencia.qmd
+              - text: "Hoja de ruta de ciencia y tecnología"
+                href: grd/cienciaytecnologia/hoja-de-ruta-ct.qmd
+              - text: "Marco de Sendai"
+                href: grd/cienciaytecnologia/marco-sendai.qmd
           - text: "Ciudades"
             href: grd/ciudades.qmd
+          - text: "Conocimiento del riesgo"
+            href: grd/conocimientodelriesgo.qmd
+          - section: "Cursos, redes y recursos"
+            contents:
+              - text: "Cursos en GRD"
+                href: grd/cursos.qmd
+              - text: "Plataformas y redes"
+                href: grd/plataformas-redes.qmd
+              - text: "Repositorios FAIR"
+                href: grd/repositorios.qmd
+          - text: "Educación"
+            href: grd/educacion.qmd
+          - text: "Gestión del riesgo de desastres"
+            href: grd/gestiondelriesgo.qmd
+          - text: "Indicadores de riesgo nacionales y mundiales"
+            href: grd/conocimiento-indicadores.qmd
+          - text: "Manejo de desastres"
+            href: grd/manejodedesastres.qmd
+          - text: "Reducción del riesgo"
+            href: grd/reducciondelriesgo.qmd
           - text: "SIDRo (Los Rosales)"
             href: grd/sidro.qmd
           - text: "Sincelejo (EVA)"
             href: grd/sincelejo.qmd
+          - text: "Sistemas de alerta temprana"
+            href: grd/sat.qmd
           - text: "Teoría de riesgos"
             href: grd/teoria.qmd
           - text: "Terminología"
@@ -131,56 +130,62 @@ website:
       - section: "Gestión del cambio climático"
         href: gcc/index.qmd
         contents:
-          - text: "Gestión del cambio climático"
-            href: gcc/gestion-cambio-climatico.qmd
           - text: "Estrés térmico"
             href: gcc/estres-termico.qmd
+          - text: "Gestión del cambio climático"
+            href: gcc/gestion-cambio-climatico.qmd
       - section: "Gestión de proyectos"
         href: gestiondeproyectos/index.qmd
         contents:
-          - text: "Gestión de proyectos de CTeI"
-            href: gestiondeproyectos/gestionproyectosciencia.qmd
-          - text: "Gestión de tecnología e innovación"
-            href: gestiondeproyectos/gestiontecnologiainnovacion.qmd
-          - text: "Innovación"
-            href: gestiondeproyectos/innovacion.qmd
-          - text: "Liderazgo"
-            href: gestiondeproyectos/liderazgo.qmd
-          - text: "Estrategia"
-            href: gestiondeproyectos/estrategia.qmd
-          - text: "Metodologías de gestión de proyectos"
-            href: gestiondeproyectos/metodologias-pm.qmd
           - text: "Competencias clave en la gestión de proyectos"
             href: gestiondeproyectos/skills-proyectos.qmd
-          - text: "Impacto"
-            href: gestiondeproyectos/impacto.qmd
-          - text: "DOFA"
-            href: gestiondeproyectos/dofa.qmd
-          - text: "Mapa de actores"
-            href: gestiondeproyectos/mapa-actores.qmd
-          - text: "Gestión del conocimiento"
-            href: gestiondeproyectos/gestion-conocimiento.qmd
-          - text: "Línea base"
-            href: gestiondeproyectos/Linea-base.qmd
-          - text: "PESTEL"
-            href: gestiondeproyectos/pestel.qmd
-          - text: "SWOT"
-            href: gestiondeproyectos/swot.qmd
           - text: "CONPES"
             href: gestiondeproyectos/conpes.qmd
-          - text: "Riesgos en proyectos"
-            href: gestiondeproyectos/riesgos-proyectos.qmd
-          - text: "Sostenibilidad de proyectos de CTeI"
-            href: gestiondeproyectos/sostenibilidad-proyectos.qmd
+          - text: "DOFA"
+            href: gestiondeproyectos/dofa.qmd
+          - text: "Estrategia"
+            href: gestiondeproyectos/estrategia.qmd
           - section: "Financiación"
             href: gestiondeproyectos/financiacion/index.qmd
             contents:
               - text: "Fondo Verde para el Clima"
                 href: gestiondeproyectos/financiacion/fondo-verde-clima.qmd
+          - text: "Gestión de proyectos de CTeI"
+            href: gestiondeproyectos/gestionproyectosciencia.qmd
+          - text: "Gestión de tecnología e innovación"
+            href: gestiondeproyectos/gestiontecnologiainnovacion.qmd
+          - text: "Gestión del conocimiento"
+            href: gestiondeproyectos/gestion-conocimiento.qmd
+          - text: "Impacto"
+            href: gestiondeproyectos/impacto.qmd
+          - text: "Innovación"
+            href: gestiondeproyectos/innovacion.qmd
+          - text: "Liderazgo"
+            href: gestiondeproyectos/liderazgo.qmd
+          - text: "Línea base"
+            href: gestiondeproyectos/Linea-base.qmd
+          - text: "Mapa de actores"
+            href: gestiondeproyectos/mapa-actores.qmd
+          - text: "Metodologías de gestión de proyectos"
+            href: gestiondeproyectos/metodologias-pm.qmd
+          - text: "PESTEL"
+            href: gestiondeproyectos/pestel.qmd
+          - text: "Riesgos en proyectos"
+            href: gestiondeproyectos/riesgos-proyectos.qmd
+          - text: "Sostenibilidad de proyectos de CTeI"
+            href: gestiondeproyectos/sostenibilidad-proyectos.qmd
+          - text: "SWOT"
+            href: gestiondeproyectos/swot.qmd
       # aqui viene la seccion de ciencia y tecnologia
       - section: "Ciencia y tecnología"
         href: cyt/index.qmd
         contents:
+          - text: "Ciencia reproducible"
+            href: cyt/cienciareproduc.qmd
+          - text: "Ciencia transdisciplinar"
+            href: cyt/transdisciplina.qmd
+          - text: "Código abierto, GitHub e innovación en GRD"
+            href: cyt/github-innovacion-grd.qmd
           - section: "Escritura y publicación académica"
             href: cyt/escrituraypublicacionacademica/index.qmd
             contents:
@@ -190,14 +195,10 @@ website:
                 href: cyt/escrituraypublicacionacademica/parrafos.qmd
               - text: "Typst"
                 href: cyt/escrituraypublicacionacademica/typst.qmd
-          - text: "Ciencia reproducible"
-            href: cyt/cienciareproduc.qmd
-          - text: "Ciencia transdisciplinar"
-            href: cyt/transdisciplina.qmd
           - text: "Interfaz ciencia-política-sociedad"
             href: cyt/interfaz-cps.qmd
-          - text: "Código abierto, GitHub e innovación en GRD"
-            href: cyt/github-innovacion-grd.qmd
+          - text: "Modelo nacional de medición"
+            href: cyt/modelo-medicion.qmd
           - text: "Nivel de Madurez Tecnológica (TRL)"
             href: cyt/trl.qmd
           - text: "Transferencia de conocimiento y tecnologías"
@@ -217,53 +218,55 @@ website:
       - section: "Ciencia de datos"
         href: datascience/index.qmd
         contents:
-          - text: "Ciencia de datos"
-            href: datascience/cienciadedatos.qmd
-          - text: "Quarto"
-            href: datascience/quarto.qmd
-          - text: "Myst"
-            href: datascience/myst.qmd
-          - text: "Markdown"
-            href: datascience/markdown.md
-          - text: "GitHub"
-            href: datascience/github.qmd
-          - text: "Google Colab"
-            href: datascience/google-colab.qmd
-          - text: "Jupyter Notebook"
-            href: datascience/jupyter-notebook.ipynb
-          - text: "Graficas Python y R"
-            href: datascience/graficas-python-r.qmd
-          - text: "Herramientas"
-            href: datascience/herramientas.qmd
-          - text: "Inteligencia artificial"
-            href: datascience/ia.qmd
-          - text: "VS Code"
-            href: datascience/vs-code.qmd
-          - text: "Hugging Face"
-            href: datascience/hugging-face.qmd
-          - text: "Bases de datos"
-            href: datascience/bases-de-datos.qmd
           - text: "ARCO"
             href: datascience/arco.qmd
-          - section: "Mapas"
-            href: datascience/mapas/index.qmd
-            contents:
-              - text: "Mapa Interactivo (Observable / TopoJSON)"
-                href: datascience/mapas/mapa_colombia_observable.qmd
-              - text: "Mapa Interactivo (PMTiles)"
-                href: datascience/mapas/mapa_colombia_pmtiles.qmd
-              - text: "Índice de Riesgo (NRI)"
-                href: datascience/mapas/mapa_colombia_nri.qmd
-          - text: "D3"
-            href: datascience/d3.qmd
-          - text: "Experimento con D3"
-            href: datascience/d3-experiment.qmd
+          - text: "Bases de datos"
+            href: datascience/bases-de-datos.qmd
+          - text: "Ciencia de datos"
+            href: datascience/cienciadedatos.qmd
           - text: "Claude"
             href: datascience/claude.qmd
           - text: "Claude Skills (Slides)"
             href: datascience/claude-slides.qmd
+          - text: "D3"
+            href: datascience/d3.qmd
+          - text: "Experimento con D3"
+            href: datascience/d3-experiment.qmd
+          - text: "GitHub"
+            href: datascience/github.qmd
+          - text: "Google Colab"
+            href: datascience/google-colab.qmd
+          - text: "Gráficas HTML"
+            href: datascience/graficas-html.qmd
+          - text: "Gráficas Python y R"
+            href: datascience/graficas-python-r.qmd
+          - text: "Herramientas"
+            href: datascience/herramientas.qmd
+          - text: "Hugging Face"
+            href: datascience/hugging-face.qmd
           - text: "Ilustraciones"
             href: datascience/ilustraciones.qmd
+          - text: "Inteligencia artificial"
+            href: datascience/ia.qmd
+          - text: "Jupyter Notebook"
+            href: datascience/jupyter-notebook.ipynb
+          - section: "Mapas"
+            href: datascience/mapas/index.qmd
+            contents:
+              - text: "Índice de Riesgo (NRI)"
+                href: datascience/mapas/mapa_colombia_nri.qmd
+              - text: "Mapa Interactivo (Observable / TopoJSON)"
+                href: datascience/mapas/mapa_colombia_observable.qmd
+              - text: "Mapa Interactivo (PMTiles)"
+                href: datascience/mapas/mapa_colombia_pmtiles.qmd
+          - text: "Markdown"
+            href: datascience/markdown.md
+          - text: "Myst"
+            href: datascience/myst.qmd
+          - text: "Quarto"
+            href: datascience/quarto.qmd
+          - text: "VS Code"
+            href: datascience/vs-code.qmd
 # Aqui viene la seccion de matematicas y estadistica que debe trabajarse
       - section: "Matemáticas y estadística"
         href: math-stats/math-stats.qmd
@@ -299,11 +302,11 @@ website:
         contents:
           - text: "Café"
             href: vidalaboral/cafe.qmd
-          - text: "Vida laboral"
-            href: vidalaboral/vidalaboral.qmd
           - text: "Herramientas"
             href: vidalaboral/herramientas.qmd
 
+          - text: "Vida laboral"
+            href: vidalaboral/vidalaboral.qmd
 format:
   html:
     mainfont: Roboto

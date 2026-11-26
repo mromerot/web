@@ -1,0 +1,231 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Componentes del artículo «Modelo nacional de medición».
+   Mismo lenguaje visual de las plantillas de datascience/graficas-html:
+   petróleo profundo, hojas blancas, coral para resaltar; Inter Tight + Inter. */
+.mm{--deep:#0d3a4e;--blue:#0b6e99;--blue2:#1173a0;--soft:#e2eff4;--paper:#fff;--ink:#10212b;
+  --mut:#566873;--line:#dde6ea;--coral:#e0560b;--ok:#11845b;
+  --s1:#0a4f6e;--s2:#1173a0;--s3:#4a9fc9;--s4:#9ccbe3;
+  font:15px/1.5 Inter,system-ui,sans-serif;color:var(--ink);margin:1.25rem 0 2rem}
+.mm *{box-sizing:border-box;min-width:0}
+.mm h4,.mm .k,.mm .big{font-family:"Inter Tight",Inter,sans-serif}
+.mm h4{margin:0;font-size:1.05rem;line-height:1.2;color:var(--ink)}
+.mm p{margin:0;color:var(--ink)}
+.mm small,.mm .mut{color:var(--mut);font-size:13px}
+.mm button{font:inherit;cursor:pointer}
+.mm :focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.mm-panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(14px,2.5vw,24px);box-shadow:0 10px 30px #0d3a4e14}
+.mm-panel>.hd{margin-bottom:14px}
+.mm-panel>.hd small{display:block;color:var(--blue);font-weight:600;font-size:13px;letter-spacing:.02em;text-transform:uppercase}
+.mm-panel>.hd h4{font-size:1.25rem;margin-top:2px}
+.mm-src{margin-top:12px;font-size:12px;color:var(--mut)}
+
+/* 1. Tarjetas desplegables (tipo 01) */
+.mm-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.mm-cards button{text-align:left;border:0;border-radius:14px;padding:18px;background:var(--blue);color:#fff;display:flex;flex-direction:column;gap:6px;min-height:190px;transition:transform .2s}
+.mm-cards button:nth-child(4n+2){background:var(--deep)}
+.mm-cards button:nth-child(4n+3){background:var(--coral)}
+.mm-cards button:nth-child(4n+4){background:#2b6a5a}
+.mm-cards button:hover{transform:translateY(-3px)}
+.mm-cards .k{font-size:34px;font-weight:700;line-height:1}
+.mm-cards .t{font:700 17px/1.2 "Inter Tight",Inter,sans-serif}
+.mm-cards .d{display:none;font-size:14px}
+.mm-cards button.open .d{display:block}
+.mm-cards .h{margin-top:auto;font-size:12px;opacity:.85}
+.mm-cards button.open .h{display:none}
+
+/* 2. Tarjetas numeradas sobrias */
+.mm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px}
+.mm-tile{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--paper);display:flex;flex-direction:column;gap:8px}
+.mm-tile .n{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--soft);color:var(--blue);font:700 16px "Inter Tight"}
+.mm-tile.hot{border:2px solid var(--coral)}
+.mm-tile.hot .n{background:var(--coral);color:#fff}
+.mm-tile ul{margin:0;padding-left:1.1em;font-size:14px}
+.mm-tile li{margin:2px 0}
+
+/* 3. Control segmentado y paneles */
+.mm-seg{display:inline-flex;flex-wrap:wrap;background:var(--soft);border-radius:12px;padding:4px;gap:4px;margin-bottom:14px}
+.mm-seg button{border:0;background:none;border-radius:9px;padding:7px 13px;min-height:38px;font-weight:600;color:var(--mut)}
+.mm-seg button.on{background:var(--paper);color:var(--blue);box-shadow:0 1px 4px #0002}
+.mm [data-panel]{display:none}
+.mm [data-panel].on{display:block}
+.mm span[data-panel].on{display:inline}
+
+/* 4. Línea de tiempo (tipo 05) */
+.mm-tl{display:flex;gap:0;overflow-x:auto;padding:6px 2px 10px;scrollbar-width:thin;position:relative}
+.mm-tl button{flex:1 0 64px;border:0;background:none;padding:26px 2px 0;position:relative;color:var(--mut);font-size:12px;font-weight:600}
+.mm-tl button::before{content:"";position:absolute;left:0;right:0;top:12px;height:2px;background:var(--line)}
+.mm-tl button::after{content:"";position:absolute;left:50%;top:5px;width:16px;height:16px;margin-left:-8px;border-radius:50%;border:3px solid var(--blue);background:var(--paper)}
+.mm-tl button.on{color:var(--coral)}
+.mm-tl button.on::after{background:var(--coral);border-color:var(--coral)}
+.mm-ev{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:start;padding-top:6px}
+.mm-ev .big{font-size:clamp(40px,7vw,64px);font-weight:700;line-height:1;color:var(--coral)}
+.mm-ev h4{font-size:1.15rem;margin-bottom:6px}
+@media (max-width:560px){.mm-ev{grid-template-columns:1fr}}
+
+/* 5. Barras horizontales (apiladas o simples) */
+.mm-bars{display:grid;gap:8px}
+.mm-bar{display:grid;grid-template-columns:minmax(0,15em) minmax(0,1fr) 4.2em;gap:10px;align-items:center;font-size:13px}
+.mm-bar>span:first-child{color:var(--mut);text-align:right}
+.mm-bar>b{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.mm-track{display:flex;height:22px;gap:2px}
+.mm-track i{display:block;height:100%;border-radius:0}
+.mm-track i:first-child{border-radius:4px 0 0 4px}
+.mm-track i:last-child{border-radius:0 4px 4px 0}
+.mm-track i:only-child{border-radius:4px}
+.mm-track i:hover{filter:brightness(1.15)}
+.c1{background:var(--s1)}.c2{background:var(--s2)}.c3{background:var(--s3)}.c4{background:var(--s4)}.cc{background:var(--coral)}.cb{background:var(--blue)}
+.mm-leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--mut);margin:0 0 10px}
+.mm-leg span{display:inline-flex;align-items:center;gap:6px}
+.mm-leg i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.mm details{margin-top:12px;font-size:13px}
+.mm details summary{cursor:pointer;color:var(--blue);font-weight:600}
+.mm-tbl{overflow-x:auto}
+.mm table{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+.mm th,.mm td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.mm th{background:var(--soft);font-weight:600}
+.mm td.r,.mm th.r{text-align:right;font-variant-numeric:tabular-nums}
+@media (max-width:560px){.mm-bar{grid-template-columns:minmax(0,7.5em) minmax(0,1fr) 3.6em}}
+
+/* 6. Estadísticas grandes */
+.mm-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+.mm-stat{border-top:3px solid var(--ink);padding-top:8px}
+.mm-stat.c{border-color:var(--coral)}
+.mm-stat b{display:block;font:700 clamp(26px,4vw,38px)/1.05 "Inter Tight",Inter,sans-serif}
+.mm-stat span{font-size:14px;color:var(--mut)}
+
+/* 7. Diagrama de flujo (tipo 10) */
+.mm-flow{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch}
+.mm-step{flex:1 1 150px;border-radius:14px;padding:14px;background:var(--soft);position:relative;display:flex;flex-direction:column;gap:6px}
+.mm-step .n{font:700 13px Inter;color:var(--blue);text-transform:uppercase;letter-spacing:.04em}
+.mm-step h4{font-size:15px}
+.mm-step p{font-size:13px}
+.mm-step.dark{background:var(--deep)}.mm-step.dark *{color:#fff}
+.mm-step.hot{background:var(--coral)}.mm-step.hot *{color:#fff}
+.mm-arrow{flex:0 0 18px;display:grid;place-items:center;color:var(--mut);font-size:20px}
+@media (max-width:700px){.mm-arrow{display:none}}
+
+/* 8. Lista de chequeo con medidor (tipo 08) */
+.mm-check{display:grid;gap:8px}
+.mm-check label{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer;font-size:14px}
+.mm-check input{width:20px;height:20px;accent-color:var(--blue);flex:none;margin-top:1px}
+.mm-check label:has(input:checked){background:var(--soft);border-color:var(--blue)}
+.mm-meter{display:flex;gap:4px;margin:12px 0 6px}
+.mm-meter i{flex:1;height:10px;border-radius:3px;background:var(--line)}
+.mm-meter i.on{background:var(--blue)}
+.mm-res{font-weight:600}
+.mm-res.ok{color:var(--ok)}
+
+/* 9. Escalera de investigadores */
+.mm-ladder{display:grid;gap:10px}
+.mm-rung{display:grid;grid-template-columns:minmax(0,11em) repeat(3,minmax(0,1fr));gap:10px;border-radius:14px;padding:12px 14px;background:var(--soft);align-items:start}
+.mm-rung.r1{background:var(--deep)}.mm-rung.r1 *{color:#fff!important}
+.mm-rung.r2{background:var(--s2)}.mm-rung.r2 *{color:#fff!important}
+.mm-rung.r3{background:var(--s3)}.mm-rung.r3 *{color:#fff!important}
+.mm-rung h4{font-size:16px}
+.mm-rung small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;opacity:.8}
+.mm-rung p{font-size:13px}
+@media (max-width:700px){.mm-rung{grid-template-columns:1fr 1fr}.mm-rung>div:first-child{grid-column:1/-1}}
+.mm-chips{display:flex;flex-wrap:wrap;gap:6px}
+.mm-chip{border-radius:99px;padding:5px 11px;background:var(--soft);font-size:13px;color:var(--ink)}
+.mm-chip.o{background:#fde6d9}
+.mm-chip b{color:var(--blue)}
+
+/* 10. Calculadora con deslizadores (tipo 02) */
+.mm-calc{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:22px;align-items:center}
+.mm-calc label{display:block;font-size:14px;font-weight:600;margin-top:8px}
+.mm-calc input[type=range]{width:100%;accent-color:var(--blue);height:30px}
+.mm-calc output{font:700 clamp(40px,7vw,60px)/1 "Inter Tight",Inter,sans-serif;color:var(--blue)}
+.mm-formula{font:600 17px/1.4 "Inter Tight",Inter,sans-serif;background:var(--soft);border-radius:10px;padding:10px 14px;display:inline-block;margin:6px 0}
+@media (max-width:640px){.mm-calc{grid-template-columns:1fr}}
+
+/* 11. Matriz de clases (tipo 11) */
+.mm-matrix{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.mm-class{border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px;border:1px solid var(--line)}
+.mm-class .k{font-size:26px;font-weight:700;line-height:1}
+.mm-class p{font-size:13px}
+.mm-class.top{background:var(--deep);border:0}.mm-class.top *{color:#fff}
+.mm-class.a{background:var(--s2);border:0}.mm-class.a *{color:#fff}
+.mm-class.b{background:var(--s4);border:0}
+.mm-class.asc{background:#fde6d9;border:0}
+.mm-class.dpc{background:#fff4ec}
+
+/* 12. Tabla comparativa con columna resaltada (tipo 09) */
+.mm-cmp td.y{color:var(--ok);font-weight:600}
+.mm-cmp td.n{color:var(--mut)}
+.mm-cmp[data-hl="A1"] .hc1,.mm-cmp[data-hl="A"] .hc2,.mm-cmp[data-hl="B"] .hc3,.mm-cmp[data-hl="C"] .hc4{background:#fde6d9}
+.mm-cmp[data-hl="A1"] th.hc1,.mm-cmp[data-hl="A"] th.hc2,.mm-cmp[data-hl="B"] th.hc3,.mm-cmp[data-hl="C"] th.hc4{background:var(--coral);color:#fff}
+
+/* 13. Escala ordinal (embudo invertido) */
+.mm-scale{display:flex;align-items:flex-end;gap:6px;height:190px;padding-top:10px}
+.mm-scale div{flex:1;border-radius:8px 8px 3px 3px;background:var(--s4);display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding:6px 2px;text-align:center}
+.mm-scale div b{font:700 18px "Inter Tight"}
+.mm-scale div span{font-size:11px;line-height:1.2}
+.mm-scale div:nth-child(n+4){background:var(--s3)}
+.mm-scale div:nth-child(n+6){background:var(--s2)}.mm-scale div:nth-child(n+6) *{color:#fff}
+.mm-scale div:nth-child(8){background:var(--deep)}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Tarjetas desplegables
+  document.querySelectorAll('.mm-cards button').forEach(function (b) {
+    b.setAttribute('aria-expanded', 'false');
+    b.addEventListener('click', function () {
+      var o = b.classList.toggle('open');
+      b.setAttribute('aria-expanded', o ? 'true' : 'false');
+    });
+  });
+  // Controles segmentados y líneas de tiempo: data-group en el contenedor, data-key en cada botón
+  document.querySelectorAll('[data-group]').forEach(function (g) {
+    var name = g.getAttribute('data-group');
+    var root = g.closest('.mm');
+    var btns = g.querySelectorAll('button[data-key]');
+    function show(key) {
+      btns.forEach(function (x) {
+        var on = x.getAttribute('data-key') === key;
+        x.classList.toggle('on', on);
+        x.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      root.querySelectorAll('[data-panel^="' + name + ':"]').forEach(function (p) {
+        p.classList.toggle('on', p.getAttribute('data-panel') === name + ':' + key);
+      });
+      var hl = root.querySelector('[data-hl-group="' + name + '"]');
+      if (hl) hl.setAttribute('data-hl', key);
+    }
+    btns.forEach(function (x) { x.addEventListener('click', function () { show(x.getAttribute('data-key')); }); });
+    var first = g.querySelector('button.on') || btns[0];
+    if (first) show(first.getAttribute('data-key'));
+  });
+  // Listas de chequeo con medidor
+  document.querySelectorAll('.mm-checkbox').forEach(function (box) {
+    var inputs = box.querySelectorAll('input[type=checkbox]');
+    var meter = box.querySelector('.mm-meter');
+    var res = box.querySelector('.mm-res');
+    var total = inputs.length;
+    for (var i = 0; i < total; i++) meter.appendChild(document.createElement('i'));
+    function upd() {
+      var n = 0; inputs.forEach(function (x) { if (x.checked) n++; });
+      meter.querySelectorAll('i').forEach(function (m, k) { m.classList.toggle('on', k < n); });
+      res.textContent = n === total ? 'Cumple los ' + total + ' requisitos: el grupo puede ser reconocido.'
+        : n + ' de ' + total + ' requisitos. Faltan ' + (total - n) + ' para el reconocimiento.';
+      res.classList.toggle('ok', n === total);
+    }
+    inputs.forEach(function (x) { x.addEventListener('change', upd); });
+    upd();
+  });
+  // Calculadora del conteo escalado lambda = ln(n/T + 1)
+  document.querySelectorAll('.mm-calc').forEach(function (c) {
+    var n = c.querySelector('[name=n]'), t = c.querySelector('[name=t]');
+    var on = c.querySelector('.vn'), ot = c.querySelector('.vt'), out = c.querySelector('output'), ex = c.querySelector('.ex');
+    function upd() {
+      var nv = +n.value, tv = +t.value, l = Math.log(nv / tv + 1);
+      on.textContent = nv; ot.textContent = tv;
+      out.textContent = l.toFixed(2).replace('.', ',');
+      var dbl = Math.log((2 * nv) / tv + 1);
+      ex.textContent = 'Si el grupo duplicara su producción (' + (2 * nv) + ' productos), λ subiría a ' + dbl.toFixed(2).replace('.', ',') + ', no al doble.';
+    }
+    n.addEventListener('input', upd); t.addEventListener('input', upd); upd();
+  });
+});
+</script>

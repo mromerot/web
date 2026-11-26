@@ -11,21 +11,21 @@ Esta sección reúne recursos sobre la gestión del cambio climático y su relac
 :::::: mrw-cards-grid
 ::: mrw-card
 ::: mrw-card-header
-[Gestión del cambio climático](gestion-cambio-climatico.qmd)
-:::
-
-::: mrw-card-body
-Instituciones internacionales y nacionales de referencia en cambio climático —Naciones Unidas, IPCC— y el marco normativo colombiano de gestión del cambio climático.
-:::
-:::
-
-::: mrw-card
-::: mrw-card-header
 [Estrés térmico](estres-termico.qmd)
 :::
 
 ::: mrw-card-body
 Por qué la temperatura del aire no basta: indicadores de estrés térmico (UTCI, WBGT, EHF, HWMId, DHW), calor acumulado, impactos por sector y objetos interactivos para explorar las fórmulas.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Gestión del cambio climático](gestion-cambio-climatico.qmd)
+:::
+
+::: mrw-card-body
+Instituciones internacionales y nacionales de referencia en cambio climático —Naciones Unidas, IPCC— y el marco normativo colombiano de gestión del cambio climático.
 :::
 :::
 ::::::

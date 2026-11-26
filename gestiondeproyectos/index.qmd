@@ -11,11 +11,33 @@ Esta sección reúne recursos sobre la gestión de proyectos de desarrollo, cien
 :::::: mrw-cards-grid
 ::: mrw-card
 ::: mrw-card-header
-[Liderazgo](liderazgo.qmd)
+[Competencias clave en la gestión de proyectos](skills-proyectos.qmd)
 :::
 
 ::: mrw-card-body
-Qué distingue al liderazgo de la administración, los principios de liderazgo de referentes como Drucker y Amazon, y su papel en la gestión de proyectos.
+Quince competencias típicas de la gestión de proyectos de desarrollo y CTeI, en orden alfabético, con definiciones de alto nivel del PMI, la OCDE, el PNUD y *Harvard Business Review*.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[CONPES](conpes.qmd)
+:::
+
+::: mrw-card-body
+![](images/Conpes-4069.png){.mrw-card-img}
+
+Qué son los documentos CONPES, el manual metodológico del DNP para su elaboración y el papel de la gestión de riesgos en su seguimiento.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[DOFA](dofa.qmd)
+:::
+
+::: mrw-card-body
+Qué es la matriz DOFA (debilidades, oportunidades, fortalezas y amenazas), cómo se construye y cómo se usa para formular estrategias FO, DO, FA y DA.
 :::
 :::
 
@@ -31,11 +53,11 @@ Qué es la estrategia según Porter, la diferencia entre estrategia deliberada y
 
 ::: mrw-card
 ::: mrw-card-header
-[Metodologías de gestión de proyectos](metodologias-pm.qmd)
+[Financiación](financiacion/index.qmd)
 :::
 
 ::: mrw-card-body
-PMP y PRINCE2 frente a frente, su relación con enfoques ágiles y el marco lógico, y criterios para elegir la metodología según el tipo de proyecto.
+Guías para identificar fuentes de financiación y presentar proyectos, comenzando por el Fondo Verde para el Clima.
 :::
 :::
 
@@ -61,11 +83,11 @@ Cómo se gestiona la adopción, transferencia y escalamiento de tecnologías e i
 
 ::: mrw-card
 ::: mrw-card-header
-[Innovación](innovacion.qmd)
+[Gestión del conocimiento](gestion-conocimiento.qmd)
 :::
 
 ::: mrw-card-body
-Qué es innovar, conceptos clave, enfoques y métodos, la innovación pública en Colombia (DNP, OCDE, MIPG), la compra pública para la innovación y su relación con la gestión del riesgo de desastres.
+Qué es la gestión del conocimiento, el modelo de Nonaka y Takeuchi, el ciclo de gestión del conocimiento y la política de Gestión del Conocimiento y la Innovación de Función Pública en Colombia.
 :::
 :::
 
@@ -81,6 +103,36 @@ Qué significa medir el impacto de un proyecto, cómo se diferencia de otros niv
 
 ::: mrw-card
 ::: mrw-card-header
+[Innovación](innovacion.qmd)
+:::
+
+::: mrw-card-body
+Qué es innovar, conceptos clave, enfoques y métodos, la innovación pública en Colombia (DNP, OCDE, MIPG), la compra pública para la innovación y su relación con la gestión del riesgo de desastres.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Liderazgo](liderazgo.qmd)
+:::
+
+::: mrw-card-body
+Qué distingue al liderazgo de la administración, los principios de liderazgo de referentes como Drucker y Amazon, y su papel en la gestión de proyectos.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Línea base](Linea-base.qmd)
+:::
+
+::: mrw-card-body
+Cómo se construye una línea base y su relación con los indicadores y las metas en la Matriz de Marco Lógico, con ejemplos y errores frecuentes.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
 [Mapa de actores](mapa-actores.qmd)
 :::
 
@@ -91,11 +143,11 @@ Qué es y para qué sirve el análisis de actores antes de formular un proyecto 
 
 ::: mrw-card
 ::: mrw-card-header
-[DOFA](dofa.qmd)
+[Metodologías de gestión de proyectos](metodologias-pm.qmd)
 :::
 
 ::: mrw-card-body
-Qué es la matriz DOFA (debilidades, oportunidades, fortalezas y amenazas), cómo se construye y cómo se usa para formular estrategias FO, DO, FA y DA.
+PMP y PRINCE2 frente a frente, su relación con enfoques ágiles y el marco lógico, y criterios para elegir la metodología según el tipo de proyecto.
 :::
 :::
 
@@ -106,16 +158,6 @@ Qué es la matriz DOFA (debilidades, oportunidades, fortalezas y amenazas), cóm
 
 ::: mrw-card-body
 El análisis PESTEL de factores políticos, económicos, sociales, tecnológicos, ecológicos y legales del macroentorno de un proyecto u organización.
-:::
-:::
-
-::: mrw-card
-::: mrw-card-header
-[SWOT](swot.qmd)
-:::
-
-::: mrw-card-body
-La versión en inglés de la matriz DOFA (*Strengths, Weaknesses, Opportunities, Threats*) y su uso en la planeación estratégica internacional.
 :::
 :::
 
@@ -141,53 +183,11 @@ Cómo pasar de la financiación temporal a resultados perdurables: dimensiones d
 
 ::: mrw-card
 ::: mrw-card-header
-[Gestión del conocimiento](gestion-conocimiento.qmd)
+[SWOT](swot.qmd)
 :::
 
 ::: mrw-card-body
-Qué es la gestión del conocimiento, el modelo de Nonaka y Takeuchi, el ciclo de gestión del conocimiento y la política de Gestión del Conocimiento y la Innovación de Función Pública en Colombia.
-:::
-:::
-
-::: mrw-card
-::: mrw-card-header
-[Línea base](Linea-base.qmd)
-:::
-
-::: mrw-card-body
-Cómo se construye una línea base y su relación con los indicadores y las metas en la Matriz de Marco Lógico, con ejemplos y errores frecuentes.
-:::
-:::
-
-::: mrw-card
-::: mrw-card-header
-[Competencias clave en la gestión de proyectos](skills-proyectos.qmd)
-:::
-
-::: mrw-card-body
-Quince competencias típicas de la gestión de proyectos de desarrollo y CTeI, en orden alfabético, con definiciones de alto nivel del PMI, la OCDE, el PNUD y *Harvard Business Review*.
-:::
-:::
-
-::: mrw-card
-::: mrw-card-header
-[CONPES](conpes.qmd)
-:::
-
-::: mrw-card-body
-![](images/Conpes-4069.png){.mrw-card-img}
-
-Qué son los documentos CONPES, el manual metodológico del DNP para su elaboración y el papel de la gestión de riesgos en su seguimiento.
-:::
-:::
-
-::: mrw-card
-::: mrw-card-header
-[Financiación](financiacion/index.qmd)
-:::
-
-::: mrw-card-body
-Guías para identificar fuentes de financiación y presentar proyectos, comenzando por el Fondo Verde para el Clima.
+La versión en inglés de la matriz DOFA (*Strengths, Weaknesses, Opportunities, Threats*) y su uso en la planeación estratégica internacional.
 :::
 :::
 ::::::

@@ -1,0 +1,665 @@
+---
+title: "Modelo nacional de medición"
+subtitle: "Cómo reconoce y clasifica Minciencias a los grupos de investigación y a los investigadores de Colombia: resumen del documento conceptual de 2024, sección por sección"
+author: "Mauricio Romero Torres"
+date: 2026-11-26
+date-modified: 2026-11-26
+lang: es
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    include-in-header: _modelo-medicion-html.html
+editor: visual
+---
+
+::: {.callout-note title="Documento fuente"}
+Ministerio de Ciencia, Tecnología e Innovación [Minciencias]. (2024). *Anexo 1. Convocatoria nacional para el reconocimiento y medición de grupos de investigación, desarrollo tecnológico o de innovación y para el reconocimiento de investigadores del Sistema Nacional de Ciencia, Tecnología e Innovación – 2024* (Documento conceptual del modelo de medición, código M601PR04G01, versión 02; 252 pp.). Anexo de la Convocatoria 957 de 2024, *Convocatoria Nacional de Actualización y Transición para el Reconocimiento y Medición de Grupos de Investigación, Desarrollo Tecnológico o de Innovación y para el Reconocimiento de Investigadores del SNCTI*. <https://minciencias.gov.co/convocatorias/investigacion/convocatoria-nacional-actualizacion-y-transicion-para-el-reconocimiento>
+
+[Descargar el PDF del documento conceptual](https://minciencias.gov.co/sites/default/files/upload/convocatoria/m601pr04g01_modelo_medicion_grupos_investigacion_tecnologica_o_innovacion_y_reconocimiento_investigadores_-_2024_1.pdf){target="_blank"}
+:::
+
+::: {.callout-tip title="En resumen"}
+- **El modelo es la regla con la que Minciencias cuenta y ordena la ciencia del país.** Reconoce grupos e investigadores, calcula perfiles de producción y clasifica a los grupos en las categorías A1, A, B y C.
+- **Todo sale de la Plataforma ScienTI.** Los investigadores registran su hoja de vida en CvLAC, los grupos su producción en GrupLAC y las instituciones avalan desde InstituLAC. Quien registra responde por la veracidad de lo registrado.
+- **Los productos se agrupan en cinco tipos**: nuevo conocimiento, desarrollo tecnológico e innovación, apropiación social del conocimiento, divulgación pública de la ciencia y formación de recurso humano. Cada producto debe probar que existe y, después, cuánta calidad tiene.
+- **En 2024 cambian tres cosas**: pesa más la apropiación social del conocimiento, se premia publicar en revistas de acceso abierto y las mujeres con hijos nacidos en la ventana de observación tienen dos años más para cumplir los requisitos de investigador.
+:::
+
+## Contexto
+
+El documento parte de la Ley 2162 de 2021, que creó el Ministerio de Ciencia, Tecnología e Innovación y le encargó fortalecer el Sistema Nacional de Ciencia, Tecnología e Innovación (SNCTI). La intención declarada es doble: que el conocimiento producido en el país tenga más efecto sobre el sistema productivo y que ayude a resolver los problemas de la sociedad colombiana, en todas las regiones y no solo en los centros de mayor desarrollo.
+
+Para justificarlo, el texto acude a la teoría del nuevo crecimiento de Paul Romer: el conocimiento es un bien que muchas personas pueden usar a la vez sin agotarlo, por lo que invertir en él rinde cada vez más. De ahí concluye que el Ministerio necesita conocer, de forma oportuna y veraz, las capacidades de investigación del país, y que ese conocimiento debe venir de un sistema independiente del gobierno de turno.
+
+```{=html}
+<div class="mm">
+<div class="mm-cards">
+  <button type="button"><span class="k">2021</span><span class="t">Ley 2162: nace el Ministerio</span><span class="d">Su artículo 6 fija como objetivo fortalecer el SNCTI, articulando organizaciones públicas y privadas, regionales, nacionales e internacionales, hacia una sociedad del conocimiento.</span><span class="h">Toca para ver más</span></button>
+  <button type="button"><span class="k">∞</span><span class="t">El conocimiento no se agota</span><span class="d">Según la teoría del nuevo crecimiento (Romer, 1990), el conocimiento aplicado a la innovación puede usarlo un número ilimitado de personas al mismo tiempo; por eso su retorno crece y abre mercados nuevos.</span><span class="h">Toca para ver más</span></button>
+  <button type="button"><span class="k">I+D</span><span class="t">Cerrar brechas regionales</span><span class="d">Las capacidades de investigación y desarrollo se concentran en pocos centros. La ley busca extenderlas a todas las regiones para responder a problemas sociales y económicos con conocimiento.</span><span class="h">Toca para ver más</span></button>
+  <button type="button"><span class="k">Datos</span><span class="t">Un sistema independiente</span><span class="d">El Ministerio debe conocer las capacidades reales del sistema con información científica, no solo atender las demandas del gobierno de turno, para cerrar vacíos de conocimiento e inequidades.</span><span class="h">Toca para ver más</span></button>
+</div>
+<p class="mm-src">Fuente: Minciencias (2024), sección «Contexto», pp. 10–11.</p>
+</div>
+```
+
+## Capítulo I. Aspectos generales
+
+### Presentación, introducción y propósitos
+
+El documento de 2024 es una versión ajustada del modelo de 2021. Resume un trabajo de más de una década: un comité de expertos lo construyó entre 2011 y 2013, y desde entonces se aplicó en seis convocatorias (640 de 2013, 693 de 2014, 737 de 2015, 781 de 2017, 833 de 2018 y 894 de 2021), cuyos resultados se revisaron con simulaciones y mesas técnicas de institutos públicos, de investigación más creación y de libros.
+
+Para cumplir su misión, el Ministerio necesita saber quién investiga en Colombia, qué produce, cómo lo hace, qué talento forma y cómo se relacionan los actores entre sí. El modelo responde a esa necesidad con cuatro propósitos, que el capítulo desarrolla uno a uno.
+
+```{=html}
+<div class="mm">
+<div class="mm-grid">
+  <div class="mm-tile"><span class="n">1</span><h4>Una herramienta de diagnóstico para todo el país</h4><p>Perfiles de producción, índices de colaboración y perfiles de integrantes que muestran capacidades, fortalezas y debilidades de cada grupo. Los cuartiles por área de conocimiento permiten ver dónde está un grupo frente a sus pares.</p></div>
+  <div class="mm-tile"><span class="n">2</span><h4>Información actualizada de investigadores y grupos</h4><p>Bases completas para saber cuántos investigadores tiene el país, en qué áreas trabajan y qué publican, patentan o crean: un mapa del SNCTI alimentado de forma continua.</p></div>
+  <div class="mm-tile"><span class="n">3</span><h4>Conocer la dinámica de los grupos</h4><p>Distinguir niveles de producción, áreas temáticas, compromiso con la formación de investigadores y esfuerzos de apropiación social y divulgación, a partir de lo registrado en ScienTI.</p></div>
+  <div class="mm-tile"><span class="n">4</span><h4>Orientar la política pública</h4><p>Usar los resultados para diseñar políticas de apoyo, fortalecimiento y sostenimiento de grupos y centros, y programas de investigación en temas de importancia nacional.</p></div>
+</div>
+<p class="mm-src">Fuente: Minciencias (2024), secciones 1.1 a 1.3, pp. 12–15.</p>
+</div>
+```
+
+### Antecedentes: tres décadas de medición
+
+La medición de grupos empezó con la Ley 29 de 1990 y la política de Colciencias de apoyo a grupos y centros de investigación. En los noventa las convocatorias repartían estímulos económicos según la categoría que asignaba un comité de expertos; desde 2002 la medición se desligó del dinero, se apoyó en la Plataforma ScienTI y pasó a calcular índices estadísticos reproducibles.
+
+El modelo vigente nació entre 2010 y 2013, cuando se definió el grupo de investigación, se tipificaron los integrantes, se incorporaron productos de desarrollo tecnológico y apropiación social, y se introdujeron ventanas de observación diferenciadas. Desde entonces cada convocatoria ha ajustado requisitos, productos y pesos. Recorre los hitos en la línea de tiempo.
+
+```{=html}
+<div class="mm">
+<div class="mm-panel">
+  <div class="hd"><small>Línea de tiempo</small><h4>Cómo evolucionó la medición de grupos</h4></div>
+  <div class="mm-tl" data-group="tl" role="group" aria-label="Años de la línea de tiempo">
+    <button type="button" data-key="1990">1990</button>
+    <button type="button" data-key="1998">1998</button>
+    <button type="button" data-key="2002">2002</button>
+    <button type="button" data-key="2008">2008</button>
+    <button type="button" data-key="2013">2013</button>
+    <button type="button" data-key="2015">2015</button>
+    <button type="button" data-key="2017">2017</button>
+    <button type="button" data-key="2018">2018</button>
+    <button type="button" data-key="2021">2021</button>
+    <button type="button" data-key="2024" class="on">2024</button>
+  </div>
+  <div class="mm-ev" data-panel="tl:1990"><span class="big">1990</span><div><h4>Ley 29 y primeras convocatorias</h4><p>Colciencias crea la política de apoyo a grupos y centros y define «grupo», «centro», «investigador» y «línea de investigación». Desde 1991 hace cinco convocatorias con estímulos económicos; en 1996 apoya 30 grupos y 27 centros.</p></div></div>
+  <div class="mm-ev" data-panel="tl:1998"><span class="big">1998</span><div><h4>Primer escalafón</h4><p>Se construye un escalafón de 736 grupos y 102 centros y se diseña el primer modelo de medición. En 2000 las categorías ya salen de deciles de un índice y no de un comité.</p></div></div>
+  <div class="mm-ev" data-panel="tl:2002"><span class="big">2002</span><div><h4>Plataforma ScienTI y medición sin dinero</h4><p>Se adopta ScienTI (CvLAC y GrupLAC), se proponen las nociones de existencia, calidad, visibilidad, circulación y uso, y la medición se separa de la entrega de recursos. En 2004 nace el índice ScienTICol con categorías A, B y C.</p></div></div>
+  <div class="mm-ev" data-panel="tl:2008"><span class="big">2008</span><div><h4>Productividad y cinco categorías</h4><p>Un comité de expertos recomienda medir «productividad» en vez de «producción». El índice ScienTICol clasifica en A1, A, B, C y D. En 2008 se reconocen 3.712 grupos y en 2010, 4.705.</p></div></div>
+  <div class="mm-ev" data-panel="tl:2013"><span class="big">2013</span><div><h4>Convocatoria 640: el modelo actual</h4><p>Primera aplicación del modelo construido entre 2010 y 2013: 4.304 grupos reconocidos y, por primera vez, reconocimiento de investigadores (8.011: 693 sénior, 1.823 asociados y 5.495 junior).</p></div></div>
+  <div class="mm-ev" data-panel="tl:2015"><span class="big">2015</span><div><h4>Convocatoria 737 y los eméritos</h4><p>Se reconocen 4.638 grupos y 10.042 investigadores, y con el Colegio Máximo de Academias se reconoce la trayectoria de 76 investigadores eméritos. Antes, en 2014, se habían sumado productos de artes, arquitectura y diseño.</p></div></div>
+  <div class="mm-ev" data-panel="tl:2017"><span class="big">2017</span><div><h4>Convocatoria 781: adiós a la categoría D</h4><p>Se elimina la categoría D, la ventana de observación pasa a años calendario completos (2012–2016) y se reconocen 5.207 grupos y 13.001 investigadores.</p></div></div>
+  <div class="mm-ev" data-panel="tl:2018"><span class="big">2018</span><div><h4>Convocatoria 833: institutos públicos</h4><p>Con una mesa de 14 institutos públicos (Invemar, Sinchi, SGC, IGAC, entre otros) entran ocho productos nuevos, como notas científicas, conceptos técnicos y protocolos de vigilancia epidemiológica. Resultado: 5.772 grupos y 16.799 investigadores.</p></div></div>
+  <div class="mm-ev" data-panel="tl:2021"><span class="big">2021</span><div><h4>Convocatoria 894: apropiación social</h4><p>Entran cuatro productos de apropiación social, nuevas tipologías de libros, índices por gran área de conocimiento y los indicadores de permanencia, trayectoria y estabilidad. Resultado: 6.160 grupos y 21.094 investigadores.</p></div></div>
+  <div class="mm-ev" data-panel="tl:2024"><span class="big">2024</span><div><h4>Convocatoria 957: transición</h4><p>Mientras avanza el proyecto de modernización del SNCTeI, el modelo sube el peso de la apropiación social, crea uno propio para la divulgación, premia el acceso abierto y amplía la ventana para mujeres con hijos.</p></div></div>
+  <p class="mm-src">Fuente: Minciencias (2024), sección 1.4, pp. 15–31.</p>
+</div>
+</div>
+```
+
+Las cifras de las convocatorias dibujan un sistema que crece. Entre 2013 y 2021 el número de grupos clasificados pasó de 2.647 a 5.629, y el de investigadores reconocidos, de 8.011 a 21.094. El crecimiento se concentra en las categorías de entrada: los grupos C y los investigadores junior.
+
+```{=html}
+<div class="mm">
+<div class="mm-panel">
+  <div class="hd"><small>Resultados por convocatoria</small><h4>Grupos clasificados e investigadores reconocidos, 2013–2021</h4></div>
+  <div class="mm-seg" data-group="res" role="group" aria-label="Elegir serie">
+    <button type="button" data-key="g" class="on">Grupos clasificados</button>
+    <button type="button" data-key="i">Investigadores reconocidos</button>
+  </div>
+  <div data-panel="res:g">
+    <div class="mm-leg"><span><i class="c1"></i>A1</span><span><i class="c2"></i>A</span><span><i class="c3"></i>B</span><span><i class="c4"></i>C</span></div>
+    <div class="mm-bars">
+      <div class="mm-bar"><span>640 de 2013</span><div class="mm-track"><i class="c1" style="width:6.52%" title="A1: 367"></i><i class="c2" style="width:5.26%" title="A: 296"></i><i class="c3" style="width:12.83%" title="B: 722"></i><i class="c4" style="width:22.42%" title="C: 1.262"></i></div><b>2.647</b></div>
+      <div class="mm-bar"><span>693 de 2014</span><div class="mm-track"><i class="c1" style="width:5.21%" title="A1: 293"></i><i class="c2" style="width:6.86%" title="A: 386"></i><i class="c3" style="width:15.44%" title="B: 869"></i><i class="c4" style="width:27.41%" title="C: 1.543"></i></div><b>3.091</b></div>
+      <div class="mm-bar"><span>737 de 2015</span><div class="mm-track"><i class="c1" style="width:7.25%" title="A1: 408"></i><i class="c2" style="width:9.75%" title="A: 549"></i><i class="c3" style="width:16.91%" title="B: 952"></i><i class="c4" style="width:34.45%" title="C: 1.939"></i></div><b>3.848</b></div>
+      <div class="mm-bar"><span>781 de 2017</span><div class="mm-track"><i class="c1" style="width:9.29%" title="A1: 523"></i><i class="c2" style="width:13.54%" title="A: 762"></i><i class="c3" style="width:20.75%" title="B: 1.168"></i><i class="c4" style="width:37.54%" title="C: 2.113"></i></div><b>4.566</b></div>
+      <div class="mm-bar"><span>833 de 2018</span><div class="mm-track"><i class="c1" style="width:12.74%" title="A1: 717"></i><i class="c2" style="width:18.17%" title="A: 1.023"></i><i class="c3" style="width:22.83%" title="B: 1.285"></i><i class="c4" style="width:41.36%" title="C: 2.328"></i></div><b>5.353</b></div>
+      <div class="mm-bar"><span>894 de 2021</span><div class="mm-track"><i class="c1" style="width:15.08%" title="A1: 849"></i><i class="c2" style="width:20.86%" title="A: 1.174"></i><i class="c3" style="width:23.63%" title="B: 1.330"></i><i class="c4" style="width:40.43%" title="C: 2.276"></i></div><b>5.629</b></div>
+    </div>
+    <p class="mm-src">Suma de A1, A, B y C. Hasta 2015 existía además la categoría D (1.113 grupos en 2013, 749 en 2014 y 610 en 2015), que aquí no se muestra.</p>
+  </div>
+  <div data-panel="res:i">
+    <div class="mm-leg"><span><i class="c1"></i>Emérito</span><span><i class="c2"></i>Sénior</span><span><i class="c3"></i>Asociado</span><span><i class="c4"></i>Junior</span></div>
+    <div class="mm-bars">
+      <div class="mm-bar"><span>640 de 2013</span><div class="mm-track"><i class="c2" style="width:3.29%" title="Sénior: 693"></i><i class="c3" style="width:8.64%" title="Asociado: 1.823"></i><i class="c4" style="width:26.05%" title="Junior: 5.495"></i></div><b>8.011</b></div>
+      <div class="mm-bar"><span>693 de 2014</span><div class="mm-track"><i class="c2" style="width:5.01%" title="Sénior: 1.057"></i><i class="c3" style="width:9.78%" title="Asociado: 2.064"></i><i class="c4" style="width:24.46%" title="Junior: 5.159"></i></div><b>8.280</b></div>
+      <div class="mm-bar"><span>737 de 2015</span><div class="mm-track"><i class="c1" style="width:0.36%" title="Emérito: 76"></i><i class="c2" style="width:5.77%" title="Sénior: 1.218"></i><i class="c3" style="width:13.12%" title="Asociado: 2.767"></i><i class="c4" style="width:28.71%" title="Junior: 6.057"></i></div><b>10.118</b></div>
+      <div class="mm-bar"><span>781 de 2017</span><div class="mm-track"><i class="c1" style="width:0.59%" title="Emérito: 124"></i><i class="c2" style="width:8.09%" title="Sénior: 1.707"></i><i class="c3" style="width:17.04%" title="Asociado: 3.595"></i><i class="c4" style="width:35.91%" title="Junior: 7.575"></i></div><b>13.001</b></div>
+      <div class="mm-bar"><span>833 de 2018</span><div class="mm-track"><i class="c1" style="width:0.27%" title="Emérito: 56"></i><i class="c2" style="width:11.72%" title="Sénior: 2.473"></i><i class="c3" style="width:20.62%" title="Asociado: 4.349"></i><i class="c4" style="width:47.03%" title="Junior: 9.921"></i></div><b>16.799</b></div>
+      <div class="mm-bar"><span>894 de 2021</span><div class="mm-track"><i class="c1" style="width:0.39%" title="Emérito: 83"></i><i class="c2" style="width:14.41%" title="Sénior: 3.040"></i><i class="c3" style="width:21.81%" title="Asociado: 4.601"></i><i class="c4" style="width:63.38%" title="Junior: 13.370"></i></div><b>21.094</b></div>
+    </div>
+    <p class="mm-src">En 2015 el documento reporta 10.042 investigadores más 76 eméritos reconocidos aparte; aquí se suman. Los eméritos no existían como categoría en 2013 y 2014.</p>
+  </div>
+  <details><summary>Ver los datos en tabla</summary>
+  <div class="mm-tbl"><table>
+    <thead><tr><th>Convocatoria</th><th class="r">A1</th><th class="r">A</th><th class="r">B</th><th class="r">C</th><th class="r">D</th><th class="r">Emérito</th><th class="r">Sénior</th><th class="r">Asociado</th><th class="r">Junior</th></tr></thead>
+    <tbody>
+      <tr><td>640 de 2013</td><td class="r">367</td><td class="r">296</td><td class="r">722</td><td class="r">1.262</td><td class="r">1.113</td><td class="r">—</td><td class="r">693</td><td class="r">1.823</td><td class="r">5.495</td></tr>
+      <tr><td>693 de 2014</td><td class="r">293</td><td class="r">386</td><td class="r">869</td><td class="r">1.543</td><td class="r">749</td><td class="r">—</td><td class="r">1.057</td><td class="r">2.064</td><td class="r">5.159</td></tr>
+      <tr><td>737 de 2015</td><td class="r">408</td><td class="r">549</td><td class="r">952</td><td class="r">1.939</td><td class="r">610</td><td class="r">76</td><td class="r">1.218</td><td class="r">2.767</td><td class="r">6.057</td></tr>
+      <tr><td>781 de 2017</td><td class="r">523</td><td class="r">762</td><td class="r">1.168</td><td class="r">2.113</td><td class="r">—</td><td class="r">124</td><td class="r">1.707</td><td class="r">3.595</td><td class="r">7.575</td></tr>
+      <tr><td>833 de 2018</td><td class="r">717</td><td class="r">1.023</td><td class="r">1.285</td><td class="r">2.328</td><td class="r">—</td><td class="r">56</td><td class="r">2.473</td><td class="r">4.349</td><td class="r">9.921</td></tr>
+      <tr><td>894 de 2021</td><td class="r">849</td><td class="r">1.174</td><td class="r">1.330</td><td class="r">2.276</td><td class="r">—</td><td class="r">83</td><td class="r">3.040</td><td class="r">4.601</td><td class="r">13.370</td></tr>
+    </tbody>
+  </table></div></details>
+  <p class="mm-src">Fuente: Minciencias (2024), sección 1.4, pp. 22–31. Pasa el puntero sobre cada segmento para ver su valor.</p>
+</div>
+</div>
+```
+
+### Qué cambia en 2024 y decisiones de implementación
+
+La Convocatoria de 2024 es de transición. El Ministerio trabaja en un proyecto de modernización del SNCTeI, iniciado en 2023, que revisa referentes de la OCDE y la UNESCO sobre ciencia abierta y evaluación responsable. Mientras ese proyecto termina, el modelo se mantiene con tres cambios puntuales.
+
+El capítulo cierra con 56 decisiones de implementación. Las más importantes fijan quién responde por la información, cómo se vinculan personas y productos, cuánto duran los reconocimientos y qué pasa si se encuentra información falsa.
+
+```{=html}
+<div class="mm">
+<div class="mm-grid">
+  <div class="mm-tile hot"><span class="n">1</span><h4>Más peso a la apropiación social</h4><p>El indicador de grupo da más importancia a los productos de apropiación social del conocimiento y crea una ponderación propia para los de divulgación pública de la ciencia.</p></div>
+  <div class="mm-tile hot"><span class="n">2</span><h4>Premio al acceso abierto</h4><p>Los artículos publicados en revistas de acceso abierto reciben más peso que los mismos artículos en revistas de suscripción.</p></div>
+  <div class="mm-tile hot"><span class="n">3</span><h4>Equidad de género</h4><p>Siguiendo el CONPES 4080, las mujeres cuyos hijos nacieron dentro de la ventana de observación tienen dos años adicionales para cumplir los requisitos de investigadora. Aplica solo al reconocimiento de investigadores.</p></div>
+</div>
+<div class="mm-panel" style="margin-top:14px">
+  <div class="hd"><small>Decisiones de implementación</small><h4>Las reglas del juego, agrupadas</h4></div>
+  <div class="mm-seg" data-group="dec" role="group" aria-label="Elegir grupo de decisiones">
+    <button type="button" data-key="resp" class="on">Responsabilidad</button>
+    <button type="button" data-key="vinc">Vinculación</button>
+    <button type="button" data-key="vent">Ventanas</button>
+    <button type="button" data-key="vig">Vigencias</button>
+    <button type="button" data-key="ctrl">Control</button>
+  </div>
+  <div data-panel="dec:resp"><div class="mm-grid">
+    <div class="mm-tile"><h4>Titular del CvLAC</h4><p>Responde por su hoja de vida junto con el representante legal de la institución que la avala.</p></div>
+    <div class="mm-tile"><h4>Líder del grupo</h4><p>Responde por lo registrado en GrupLAC junto con el representante legal de la institución avaladora.</p></div>
+    <div class="mm-tile"><h4>Institución avaladora</h4><p>Debe verificar la información antes de avalar, conservar los soportes de todos los productos y denunciar ante los entes de control si encuentra falsedades.</p></div>
+  </div></div>
+  <div data-panel="dec:vinc"><div class="mm-grid">
+    <div class="mm-tile"><h4>Integrantes</h4><p>Solo el líder vincula integrantes, con autorización de cada persona y en una ventana retroactiva limitada. Aceptada la invitación, el integrante no se elimina: se le registra fecha de salida.</p></div>
+    <div class="mm-tile"><h4>Productos</h4><p>Cada producto cuenta una sola vez por grupo. Los de autor único se vinculan a un solo grupo, y siempre con autorización del autor.</p></div>
+    <div class="mm-tile"><h4>Revistas canceladas</h4><p>Los artículos en revistas «canceladas» o «descontinuadas» en los sistemas de indexación dejan de contar desde la fecha de cancelación.</p></div>
+  </div></div>
+  <div data-panel="dec:vent"><div class="mm-grid">
+    <div class="mm-tile"><h4>Ventana general 2024</h4><p>Del 1 de enero de 2019 al 31 de diciembre de 2023.</p></div>
+    <div class="mm-tile"><h4>Ventanas diferenciadas</h4><p>7 años para artículos A1 a C y libros; 10 años para patentes, variedades vegetales, razas animales e investigación-creación; 5 años para el resto.</p></div>
+    <div class="mm-tile"><h4>Pesos de los productos</h4><p>Miden la relevancia relativa dentro de un mismo subtipo. No sirven para comparar productos de tipos distintos.</p></div>
+  </div></div>
+  <div data-panel="dec:vig"><div class="mm-grid">
+    <div class="mm-tile"><h4>Grupos e investigadores</h4><p>El reconocimiento y la categoría valen desde la publicación de resultados hasta la publicación de los de la siguiente convocatoria.</p></div>
+    <div class="mm-tile"><h4>Eméritos</h4><p>El reconocimiento es vitalicio y se da a quienes, cumplidos los requisitos, están en el 25 % superior de su gran área.</p></div>
+    <div class="mm-tile"><h4>Resultados preliminares</h4><p>No otorgan reconocimiento. Solo los resultados finales, publicados por resolución, son definitivos.</p></div>
+  </div></div>
+  <div data-panel="dec:ctrl"><div class="mm-grid">
+    <div class="mm-tile"><h4>Información pública</h4><p>Lo registrado se vuelve documento público y puede consultarlo cualquier persona, lo que habilita el control social.</p></div>
+    <div class="mm-tile"><h4>Auditorías</h4><p>El Ministerio puede auditar instituciones, pedir soportes y tramitar denuncias. Sin evidencia, el reconocimiento se revoca.</p></div>
+    <div class="mm-tile"><h4>Metadatos congelados</h4><p>Los productos que ya alcanzaron su máxima calidad en convocatorias anteriores no pueden modificarse.</p></div>
+  </div></div>
+  <p class="mm-src">Fuente: Minciencias (2024), secciones 1.4.16 y 1.5, pp. 29–38.</p>
+</div>
+</div>
+```
+
+### La convocatoria paso a paso
+
+La convocatoria sigue una secuencia fija de 22 pasos que pueden agruparse en cinco fases. La inscripción a la clasificación es voluntaria para los grupos: el líder la hace en GrupLAC y recibe un número de inscripción. A partir de ahí el grupo se identifica solo por su Código Colombiano de Registro de Grupo (CCRG).
+
+Después del cierre, el Ministerio revisa los criterios de grupo, de investigador y de clasificación, publica resultados preliminares y abre tres días hábiles para solicitudes de aclaración. Solo entonces calcula los cuartiles definitivos y publica los resultados finales.
+
+```{=html}
+<div class="mm">
+<div class="mm-flow">
+  <div class="mm-step"><span class="n">Fase 1</span><h4>Publicación</h4><p>Términos de referencia, documento conceptual y anexos en el portal del Ministerio.</p></div>
+  <div class="mm-arrow" aria-hidden="true">→</div>
+  <div class="mm-step"><span class="n">Fase 2</span><h4>Registro y aval</h4><p>Actualizar CvLAC, GrupLAC e InstituLAC; autorizar el uso de datos; aval institucional; inscripción voluntaria a la clasificación.</p></div>
+  <div class="mm-arrow" aria-hidden="true">→</div>
+  <div class="mm-step dark"><span class="n">Fase 3</span><h4>Revisión técnica</h4><p>Cierre de la actualización y verificación de criterios de grupo, investigador y clasificación.</p></div>
+  <div class="mm-arrow" aria-hidden="true">→</div>
+  <div class="mm-step"><span class="n">Fase 4</span><h4>Preliminares y aclaraciones</h4><p>Resultados preliminares, tres días hábiles para aclaraciones, corrección de errores y cálculo de cuartiles.</p></div>
+  <div class="mm-arrow" aria-hidden="true">→</div>
+  <div class="mm-step hot"><span class="n">Fase 5</span><h4>Resultados finales</h4><p>Grupos reconocidos y clasificados, investigadores reconocidos y perfiles visibles en ScienTI. Después, verificaciones posteriores.</p></div>
+</div>
+<p class="mm-src">Fuente: Minciencias (2024), sección 1.6, pp. 38–41.</p>
+</div>
+```
+
+## Capítulo II. Reconocimiento de grupos e investigadores
+
+### Definiciones básicas
+
+El capítulo II define el vocabulario del modelo y las reglas para reconocer grupos y tipificar a sus integrantes. Un grupo existe para el Ministerio si demuestra, de forma continua, resultados verificables que salen de su plan de trabajo, y si cumple ocho requisitos mínimos. Reconocer un grupo consiste justamente en verificar esos ocho requisitos.
+
+::: {#caja1 .callout-important style="background-color: #e3f0fbff; border-left: 4px solid #d4e8f9ff;" appearance="minimal" icon="false"}
+<p style="font-size: 1rem; font-weight: 700; margin: 0 0 .6rem;">Caja 1. Glosario de términos del modelo de reconocimiento</p>
+
+-   **Grupo de investigación, desarrollo tecnológico o de innovación**: conjunto de personas que interactúan para investigar y generar productos de conocimiento en uno o varios temas, de acuerdo con un plan de trabajo de corto, mediano o largo plazo tendiente a la solución de un problema.
+-   **Integrante**: persona que desempeña alguna tarea relacionada con la actividad del grupo. Según su hoja de vida se clasifica en investigador, investigador en formación, estudiante de pregrado o integrante vinculado.
+-   **Producto**: resultado que un grupo o investigador obtiene en procesos de investigación, desarrollo tecnológico o innovación, y que responde a su plan de trabajo, líneas y proyectos.
+-   **Fecha de obtención del producto**: fecha en la que el producto alcanza su estado final, como la publicación de un artículo, la solicitud u obtención de una patente o la sustentación de una tesis.
+-   **Requerimientos de existencia**: información que el autor registra en los aplicativos y que permite validar que el producto efectivamente existe.
+-   **Requerimientos de calidad**: características del producto que, validadas en las fuentes pertinentes, permiten asignarle una categoría dentro de su subtipo.
+-   **Ventana de observación**: período en el que se analizan los productos. La general de 2024 va del 1 de enero de 2019 al 31 de diciembre de 2023.
+-   **Aval institucional**: certificación con la que una institución registrada en InstituLAC respalda a un grupo o investigador y garantiza que lo reportado es verídico.
+-   **CvLAC, GrupLAC e InstituLAC**: aplicativos de la Plataforma ScienTI para hojas de vida, grupos e instituciones, respectivamente.
+-   **CCRG**: Código Colombiano de Registro de Grupo, única identificación válida del grupo ante el Ministerio.
+-   **Cuartil**: cada uno de los cuatro intervalos en que se divide la distribución de un indicador entre los grupos de una misma área de conocimiento. El cuartil 1 reúne al 25 % superior.
+:::
+
+```{=html}
+<div class="mm">
+<div class="mm-panel mm-checkbox">
+  <div class="hd"><small>Lista de chequeo</small><h4>¿Tu grupo puede ser reconocido? Marca lo que cumple</h4></div>
+  <div class="mm-check">
+    <label><input type="checkbox"> Está registrado en GrupLAC.</label>
+    <label><input type="checkbox"> Tiene al menos dos integrantes.</label>
+    <label><input type="checkbox"> Tiene uno o más años de existencia declarada.</label>
+    <label><input type="checkbox"> Lo avala al menos una institución registrada en InstituLAC.</label>
+    <label><input type="checkbox"> Tiene al menos un proyecto de investigación, desarrollo tecnológico o innovación en ejecución.</label>
+    <label><input type="checkbox"> Su líder tiene título de pregrado, maestría o doctorado.</label>
+    <label><input type="checkbox"> Tiene en la ventana al menos un producto de nuevo conocimiento o de desarrollo tecnológico por año de existencia.</label>
+    <label><input type="checkbox"> Tiene en la ventana al menos un producto de apropiación social, divulgación o formación por año de existencia.</label>
+  </div>
+  <div class="mm-meter" aria-hidden="true"></div>
+  <p class="mm-res" aria-live="polite"></p>
+  <p class="mm-src">Fuente: Minciencias (2024), sección 2.1.1, pp. 41–42.</p>
+</div>
+</div>
+```
+
+### Integrantes e investigadores
+
+El sistema asigna a cada integrante uno de trece subtipos, en un orden de prioridad que empieza por investigador emérito y termina en integrante vinculado. Los cuatro primeros son investigadores reconocidos por el Ministerio, condición que además da beneficios tributarios sobre los ingresos de proyectos calificados de ciencia y tecnología.
+
+Cada categoría de investigador combina tres condiciones: nivel de formación, producción mínima y productos de formación de recurso humano. Para las personas vinculadas a entidades que no son universidades, la formación de estudiantes se puede reemplazar por la dirección de proyectos con productos asociados. En la versión con ventana para mujeres, los plazos de diez años pasan a doce.
+
+```{=html}
+<div class="mm">
+<div class="mm-panel">
+  <div class="hd"><small>Escalera de investigadores</small><h4>Qué se exige en cada categoría</h4></div>
+  <div class="mm-seg" data-group="inv" role="group" aria-label="Elegir ventana">
+    <button type="button" data-key="gen" class="on">Ventana general</button>
+    <button type="button" data-key="muj">Ventana para mujeres (Tabla 2)</button>
+  </div>
+  <div class="mm-ladder">
+    <div class="mm-rung r1"><div><h4>Emérito</h4><small>Vitalicio · 65 años o más</small></div><div><small>Formación</small><p>Doctorado o 15 productos tipo A en toda la trayectoria.</p></div><div><small>Producción</small><p>Productos TOP o tipo A, y estar en el 25 % superior de su gran área.</p></div><div><small>Formación de personas</small><p>Director de tesis de doctorado o de trabajos de maestría. Lo evalúa un comité de expertos.</p></div></div>
+    <div class="mm-rung r2"><div><h4>Sénior</h4><small>Hasta la próxima convocatoria</small></div><div><small>Formación</small><p>Doctorado o 15 productos tipo A en toda la trayectoria.</p></div><div><small>Producción</small><p>10 productos TOP o tipo A en los últimos <span data-panel="inv:gen" class="on">10</span><span data-panel="inv:muj">12</span> años.</p></div><div><small>Formación de personas</small><p>4 trabajos de maestría o 1 tesis de doctorado dirigidos en los últimos <span data-panel="inv:gen" class="on">10</span><span data-panel="inv:muj">12</span> años.</p></div></div>
+    <div class="mm-rung r3"><div><h4>Asociado</h4><small>Hasta la próxima convocatoria</small></div><div><small>Formación</small><p>Doctorado, maestría o especialidad clínica, o 7 productos tipo A.</p></div><div><small>Producción</small><p>3 productos tipo A en 10 años y 4 productos adicionales de nuevo conocimiento o desarrollo tecnológico en 5 años.</p></div><div><small>Formación de personas</small><p>1 tesis de doctorado, 2 trabajos de maestría u 8 de pregrado en 5 años.</p></div></div>
+    <div class="mm-rung"><div><h4>Junior</h4><small>Hasta la próxima convocatoria</small></div><div><small>Vía rápida</small><p>Doctor graduado hace máximo 3 años que participa en un proyecto del grupo.</p></div><div><small>Vía ordinaria</small><p>Doctorado, maestría o especialidad clínica, o pregrado con 7 productos.</p></div><div><small>Producción</small><p>1 producto tipo A en la trayectoria y 4 productos de nuevo conocimiento o desarrollo tecnológico en 5 años.</p></div></div>
+  </div>
+  <p class="mut" style="margin-top:14px">Otros integrantes que el sistema tipifica automáticamente:</p>
+  <div class="mm-chips">
+    <span class="mm-chip"><b>ED</b> Estudiante de doctorado (iniciado hace máx. 8 años)</span>
+    <span class="mm-chip"><b>EM</b> Estudiante de maestría o especialidad clínica (máx. 4 años)</span>
+    <span class="mm-chip"><b>EP</b> Estudiante de pregrado</span>
+    <span class="mm-chip"><b>IVD</b> Vinculado con doctorado</span>
+    <span class="mm-chip"><b>IVM</b> Vinculado con maestría</span>
+    <span class="mm-chip"><b>IVE</b> Vinculado con especialización</span>
+    <span class="mm-chip"><b>IVP</b> Vinculado con pregrado</span>
+    <span class="mm-chip"><b>IV</b> Integrante vinculado</span>
+  </div>
+  <p class="mm-src">Fuente: Minciencias (2024), sección 2.1.2 y Tablas 1 y 2, pp. 42–54.</p>
+</div>
+</div>
+```
+
+### Productos: cinco tipos
+
+Un producto cuenta para un grupo cuando uno o varios de sus integrantes son autores en la fecha de obtención y autorizan su vinculación. Algunos productos son colectivos y los registra el líder, como una empresa de base tecnológica o el apoyo a la creación de un programa de doctorado.
+
+Los productos se organizan en cinco grandes tipos, cada uno con subtipos que tienen requerimientos de existencia propios y categorías de calidad. Las patentes, por ejemplo, son productos de **nuevo conocimiento** (subtipo 2.2.1.5), no de desarrollo tecnológico.
+
+```{=html}
+<div class="mm">
+<div class="mm-panel">
+  <div class="hd"><small>Tipología de productos</small><h4>Qué cuenta en cada tipo</h4></div>
+  <div class="mm-seg" data-group="prod" role="group" aria-label="Elegir tipo de producto">
+    <button type="button" data-key="nc" class="on">Nuevo conocimiento</button>
+    <button type="button" data-key="dt">Desarrollo tecnológico</button>
+    <button type="button" data-key="asc">Apropiación social</button>
+    <button type="button" data-key="dpc">Divulgación</button>
+    <button type="button" data-key="fr">Formación</button>
+  </div>
+  <div data-panel="prod:nc"><p style="margin-bottom:10px">Aportes significativos al estado del arte, validados por mecanismos que corroboran que hubo evaluación.</p><div class="mm-chips">
+    <span class="mm-chip">Artículos de investigación A1, A2, B, C y D</span><span class="mm-chip">Notas científicas</span><span class="mm-chip">Libros resultado de investigación</span><span class="mm-chip">Capítulos en libro resultado de investigación</span><span class="mm-chip o">Patentes de invención y modelos de utilidad (obtenidas o solicitadas)</span><span class="mm-chip">Variedades vegetales, nuevas razas animales y poblaciones mejoradas</span><span class="mm-chip">Productos de creación o investigación-creación en artes, arquitectura y diseño</span>
+  </div></div>
+  <div data-panel="prod:dt"><p style="margin-bottom:10px">Ideas, métodos y herramientas que impactan el desarrollo económico y transforman la sociedad.</p><div class="mm-chips">
+    <span class="mm-chip">Diseño industrial</span><span class="mm-chip">Esquema de circuito integrado</span><span class="mm-chip">Software</span><span class="mm-chip">Planta piloto</span><span class="mm-chip">Prototipo industrial</span><span class="mm-chip">Signos distintivos</span><span class="mm-chip">Producto nutracéutico</span><span class="mm-chip">Colección científica</span><span class="mm-chip">Nuevo registro científico</span><span class="mm-chip">Secreto empresarial</span><span class="mm-chip">Empresas de base tecnológica (spin-off y start-up)</span><span class="mm-chip">Empresas creativas y culturales</span><span class="mm-chip">Innovaciones en gestión, procesos y servicios</span><span class="mm-chip">Regulaciones, normas, guías clínicas, protocolos y proyectos de ley</span><span class="mm-chip">Conceptos técnicos</span><span class="mm-chip">Licencias de obras de investigación-creación</span>
+  </div></div>
+  <div data-panel="prod:asc"><p style="margin-bottom:10px">Procesos en los que la ciudadanía dialoga e intercambia saberes con la ciencia. Se guían por cuatro principios: reconocimiento del contexto, participación, diálogo de saberes y confianza.</p><div class="mm-chips">
+    <span class="mm-chip">Fortalecimiento o solución de asuntos de interés social</span><span class="mm-chip">Generación de insumos de política pública y normatividad</span><span class="mm-chip">Fortalecimiento de cadenas productivas</span><span class="mm-chip">Trabajo conjunto entre un centro de ciencia y un grupo</span>
+  </div></div>
+  <div data-panel="prod:dpc"><p style="margin-bottom:10px">Circulación del conocimiento especializado y su divulgación al público general.</p><div class="mm-chips">
+    <span class="mm-chip">Eventos científicos con apropiación</span><span class="mm-chip">Redes de conocimiento</span><span class="mm-chip">Talleres de creación</span><span class="mm-chip">Documentos de trabajo</span><span class="mm-chip">Nuevas secuencias genéticas</span><span class="mm-chip">Informes finales y técnicos</span><span class="mm-chip">Consultorías científico-tecnológicas</span><span class="mm-chip">Publicaciones editoriales no especializadas</span><span class="mm-chip">Contenido digital y transmedia</span><span class="mm-chip">Desarrollos web</span><span class="mm-chip">Libros de divulgación y de formación</span><span class="mm-chip">Manuales y guías especializadas</span><span class="mm-chip">Boletines divulgativos</span>
+  </div></div>
+  <div data-panel="prod:fr"><p style="margin-bottom:10px">Actividades con las que el grupo forma nuevos investigadores y consigue recursos para investigar.</p><div class="mm-chips">
+    <span class="mm-chip">Dirección de tesis de doctorado</span><span class="mm-chip">Dirección de trabajos de maestría</span><span class="mm-chip">Dirección de trabajos de pregrado</span><span class="mm-chip">Proyectos de I+D, de investigación-creación y de ID+I</span><span class="mm-chip">Proyectos de extensión y responsabilidad social</span><span class="mm-chip">Apoyo a la creación de programas y cursos de maestría y doctorado</span><span class="mm-chip">Asesorías del Programa Ondas</span>
+  </div></div>
+  <p class="mm-src">Fuente: Minciencias (2024), sección 2.2 y Tabla 3, pp. 54–98.</p>
+</div>
+</div>
+```
+
+### Ventanas, vinculación e indicadores
+
+No todos los productos tienen la misma vigencia, por eso cada tipología se mira en una ventana distinta. El capítulo también reglamenta la vinculación: el líder envía la solicitud desde GrupLAC, la persona la autoriza desde CvLAC y, una vez registrada, solo puede editarse la fecha de salida. Los productos y los proyectos se vinculan con reglas equivalentes.
+
+Con lo vinculado se calcula, para cada subtipo de producto, un conteo escalado λ. El logaritmo natural amortigua el efecto de tamaño: un grupo grande no gana en proporción directa a su volumen. A eso se suman los indicadores de cohesión (coautorías dentro del grupo) y de cooperación (coautorías con otros grupos), y tres indicadores informativos: trayectoria, permanencia de investigadores y estabilidad de la producción.
+
+```{=html}
+<div class="mm">
+<div class="mm-panel">
+  <div class="hd"><small>Ventanas de observación</small><h4>Cuántos años hacia atrás se mira cada producto</h4></div>
+  <div class="mm-bars">
+    <div class="mm-bar"><span>Patentes y modelos de utilidad</span><div class="mm-track"><i class="cc" style="width:100%" title="10 años"></i></div><b>10 años</b></div>
+    <div class="mm-bar"><span>Variedades y razas</span><div class="mm-track"><i class="cc" style="width:100%" title="10 años"></i></div><b>10 años</b></div>
+    <div class="mm-bar"><span>Investigación-creación</span><div class="mm-track"><i class="cc" style="width:100%" title="10 años"></i></div><b>10 años</b></div>
+    <div class="mm-bar"><span>Artículos A1, A2, B y C</span><div class="mm-track"><i class="cb" style="width:70%" title="7 años"></i></div><b>7 años</b></div>
+    <div class="mm-bar"><span>Libros de investigación</span><div class="mm-track"><i class="cb" style="width:70%" title="7 años"></i></div><b>7 años</b></div>
+    <div class="mm-bar"><span>Artículos D, notas, capítulos y demás productos</span><div class="mm-track"><i class="c3" style="width:50%" title="5 años"></i></div><b>5 años</b></div>
+  </div>
+  <p class="mm-src">Fuente: Minciencias (2024), decisión 37 y Tabla 5, pp. 36 y 98–99. Para un grupo más joven que la ventana, el período de observación es su edad.</p>
+</div>
+<div class="mm-panel" style="margin-top:14px">
+  <div class="hd"><small>Calculadora</small><h4>Conteo escalado de un subtipo de producto</h4></div>
+  <div class="mm-calc">
+    <div>
+      <span class="mm-formula">λ = ln( productos ÷ período + 1 )</span>
+      <label>Productos del subtipo en la ventana: <span class="vn"></span></label>
+      <input type="range" name="n" min="0" max="60" value="10" aria-label="Número de productos">
+      <label>Período de observación (años): <span class="vt"></span></label>
+      <input type="range" name="t" min="1" max="10" value="5" aria-label="Período de observación en años">
+    </div>
+    <div><small>Conteo escalado λ</small><br><output aria-live="polite"></output><p class="ex mut" style="margin-top:8px"></p></div>
+  </div>
+  <p class="mm-src">Fuente: Minciencias (2024), secciones 2.2.9 y 3.5. El período es el menor valor entre la edad del grupo y la ventana del subtipo.</p>
+</div>
+<div class="mm-grid" style="margin-top:14px">
+  <div class="mm-tile"><span class="n">IC</span><h4>Cohesión</h4><p>Promedio de autores del grupo por producto, menos uno. Mide si los integrantes publican juntos.</p></div>
+  <div class="mm-tile"><span class="n">ICoop</span><h4>Cooperación</h4><p>Promedio de grupos distintos relacionados por producto, menos uno. Mide la colaboración entre grupos.</p></div>
+  <div class="mm-tile"><span class="n">IT</span><h4>Trayectoria (informativo)</h4><p>Cómo ha evolucionado el grupo en las últimas cinco convocatorias, estimado con un modelo estadístico (Anexo 3).</p></div>
+  <div class="mm-tile"><span class="n">IP</span><h4>Permanencia y estabilidad (informativos)</h4><p>Cuánto tiempo se quedan los investigadores y cuál es el mayor intervalo, en meses, entre dos productos de nuevo conocimiento.</p></div>
+</div>
+</div>
+```
+
+### Perfiles, cuartiles y áreas
+
+Con esos indicadores, cada grupo reconocido recibe perfiles: uno de integrantes, uno de colaboración, uno informativo de trayectoria y uno de producción por cada tipo de producto. Junto a cada perfil, la Plataforma muestra los cuartiles calculados sobre todos los grupos de la misma área de conocimiento, para que cada grupo sepa dónde está frente a sus pares.
+
+Las áreas de conocimiento de ScienTI se hicieron equivalentes a las de la OCDE (Anexo 5). Los grupos que tienen valor cero en un indicador quedan en una «clase 0» y no entran en el cálculo de los cuartiles.
+
+```{=html}
+<div class="mm">
+<div class="mm-grid">
+  <div class="mm-tile"><span class="n">PI</span><h4>Perfil de integrantes</h4><p>Cuántos integrantes hay en cada uno de los trece subtipos.</p></div>
+  <div class="mm-tile"><span class="n">PC</span><h4>Perfil de colaboración</h4><p>Indicadores de cohesión y de cooperación.</p></div>
+  <div class="mm-tile"><span class="n">PTPE</span><h4>Trayectoria, permanencia y estabilidad</h4><p>Los tres indicadores informativos.</p></div>
+  <div class="mm-tile"><span class="n">5×</span><h4>Perfiles de producción</h4><p>Uno por tipo de producto: nuevo conocimiento, desarrollo tecnológico, apropiación social, divulgación y formación.</p></div>
+</div>
+<p class="mm-src">Fuente: Minciencias (2024), secciones 2.2.12 a 2.2.14, pp. 108–113.</p>
+</div>
+```
+
+## Capítulo III. Clasificación de grupos
+
+### Clases de productos y pesos globales
+
+El capítulo III construye el Indicador de Grupo, que identifica a los grupos con resultados diferenciados en calidad e impacto dentro de cada una de las seis grandes áreas OCDE: ciencias naturales, ingeniería y tecnología, ciencias médicas y de la salud, ciencias agrícolas, ciencias sociales y humanidades. El grupo elige en cuál de ellas ubicar su campo de acción.
+
+Primero se verifica la existencia y luego la calidad de cada producto. Después, los productos se reparten en siete clases según su visibilidad e impacto, y cada subtipo recibe un peso global. El indicador de cada clase es la suma de los conteos escalados λ multiplicados por esos pesos.
+
+::: {#caja2 .callout-important style="background-color: #e3f0fbff; border-left: 4px solid #d4e8f9ff;" appearance="minimal" icon="false"}
+<p style="font-size: 1rem; font-weight: 700; margin: 0 0 .6rem;">Caja 2. Glosario de términos de la clasificación</p>
+
+-   **Productos TOP**: resultados de nuevo conocimiento de la más alta calidad, como artículos A1 y A2, libros y capítulos A1 y A, patentes A1 y A2, variedades A1 y A2, y regulaciones o normas de calidad A.
+-   **Productos tipo A**: productos de alta calidad un escalón por debajo, como artículos B y C, libros y capítulos B, patentes A3 y A4, y la mayoría de productos de desarrollo tecnológico con calidad A.
+-   **Productos tipo B**: el resto de la producción reconocida de nuevo conocimiento y desarrollo tecnológico, como artículos D, notas científicas, patentes solicitadas, software y normas técnicas.
+-   **Peso global**: valor con el que cada subtipo de producto, en su categoría de más alta calidad, entra en el indicador de su clase.
+-   **Índice**: valor del indicador de un grupo dividido entre el valor máximo de ese indicador en su gran área de conocimiento. Va de 0 a 1.
+-   **Indicador de Grupo**: suma ponderada de los índices de las siete clases y de cohesión y cooperación. Es la base de la clasificación en A1, A, B y C.
+:::
+
+```{=html}
+<div class="mm">
+<div class="mm-matrix">
+  <div class="mm-class top"><span class="k">TOP</span><h4>Más alta calidad</h4><p>Artículos A1–A2, libros y capítulos A1–A, patentes y variedades A1–A2, razas A, investigación-creación A1–A, normas A.</p></div>
+  <div class="mm-class a"><span class="k">A</span><h4>Alta calidad</h4><p>Artículos B–C, libros y capítulos B, patentes A3–A4, diseños, prototipos, plantas piloto, secreto empresarial, empresas de base tecnológica.</p></div>
+  <div class="mm-class b"><span class="k">B</span><h4>Producción reconocida</h4><p>Artículos D, notas, libros y capítulos C, patentes solicitadas, software, normas técnicas, guías clínicas, conceptos técnicos.</p></div>
+  <div class="mm-class asc"><span class="k">ASC</span><h4>Apropiación social</h4><p>Los cuatro tipos de procesos de apropiación social del conocimiento, en sus categorías A a D.</p></div>
+  <div class="mm-class dpc"><span class="k">DPC</span><h4>Divulgación</h4><p>Eventos, redes, informes, consultorías, contenido digital y transmedia, libros de divulgación y de formación Q2–Q3.</p></div>
+  <div class="mm-class"><span class="k">FrA</span><h4>Formación tipo A</h4><p>Dirección de tesis de doctorado y apoyo a la creación de programas y cursos de doctorado.</p></div>
+  <div class="mm-class"><span class="k">FrB</span><h4>Formación tipo B</h4><p>Trabajos de maestría y pregrado, proyectos, extensión, apoyo a maestrías y Programa Ondas.</p></div>
+</div>
+<div class="mm-panel" style="margin-top:14px">
+  <div class="hd"><small>Pesos globales</small><h4>Cuánto vale un producto en su categoría más alta</h4></div>
+  <div class="mm-bars">
+    <div class="mm-bar"><span>Patente de invención A1</span><div class="mm-track"><i class="cb" style="width:100%" title="500"></i></div><b>500</b></div>
+    <div class="mm-bar"><span>Modelo de utilidad A1</span><div class="mm-track"><i class="cb" style="width:100%" title="500"></i></div><b>500</b></div>
+    <div class="mm-bar"><span>Libro de investigación A1</span><div class="mm-track"><i class="cb" style="width:60%" title="300"></i></div><b>300</b></div>
+    <div class="mm-bar"><span>Variedad vegetal A1 o raza animal</span><div class="mm-track"><i class="cb" style="width:60%" title="300"></i></div><b>300</b></div>
+    <div class="mm-bar"><span>Proceso de apropiación social</span><div class="mm-track"><i class="cb" style="width:40%" title="200"></i></div><b>200</b></div>
+    <div class="mm-bar"><span>Artículo A1 en acceso abierto</span><div class="mm-track"><i class="cb" style="width:20%" title="100"></i></div><b>100</b></div>
+    <div class="mm-bar"><span>Empresa de base tecnológica, innovación, norma</span><div class="mm-track"><i class="cb" style="width:20%" title="100"></i></div><b>100</b></div>
+    <div class="mm-bar"><span>Producto de divulgación (evento, informe, consultoría)</span><div class="mm-track"><i class="cb" style="width:20%" title="100"></i></div><b>100</b></div>
+    <div class="mm-bar"><span>Capítulo A1 o libro de formación Q1</span><div class="mm-track"><i class="cb" style="width:12%" title="60"></i></div><b>60</b></div>
+    <div class="mm-bar"><span>Software, prototipo, diseño industrial</span><div class="mm-track"><i class="cb" style="width:7%" title="35"></i></div><b>35</b></div>
+    <div class="mm-bar"><span>Libro C o concepto técnico</span><div class="mm-track"><i class="cb" style="width:3%" title="15"></i></div><b>15</b></div>
+    <div class="mm-bar"><span>Artículo D en acceso abierto</span><div class="mm-track"><i class="cb" style="width:1%" title="5"></i></div><b>5</b></div>
+    <div class="mm-bar"><span>Nota científica A1</span><div class="mm-track"><i class="cb" style="width:0.8%" title="4"></i></div><b>4</b></div>
+  </div>
+  <p class="mm-src">Selección de la Tabla 6. Fuente: Minciencias (2024), secciones 3.6 y 3.7, pp. 116–125.</p>
+</div>
+</div>
+```
+
+### Indicador de Grupo y categorías A1, A, B y C
+
+Cada indicador de clase, junto con los de cohesión y cooperación, se convierte en un índice al dividirlo por el máximo de su gran área. El Indicador de Grupo suma esos índices con pesos fijos. Los productos TOP pesan casi diez veces más que los tipo B, y la apropiación social pesa tres veces más que la divulgación.
+
+La categoría resulta de combinar el cuartil del Indicador de Grupo con condiciones adicionales: tener productos de apropiación o divulgación, formar recurso humano, contar con investigadores reconocidos, mostrar cohesión y tener años de existencia. Elige una categoría para resaltar sus requisitos en la tabla.
+
+```{=html}
+<div class="mm">
+<div class="mm-panel">
+  <div class="hd"><small>Indicador de Grupo</small><h4>Coeficiente de cada índice en la fórmula</h4></div>
+  <div class="mm-bars">
+    <div class="mm-bar"><span>Productos TOP</span><div class="mm-track"><i class="c1" style="width:100%" title="3,7"></i></div><b>3,7</b></div>
+    <div class="mm-bar"><span>Productos tipo A</span><div class="mm-track"><i class="c1" style="width:62.2%" title="2,3"></i></div><b>2,3</b></div>
+    <div class="mm-bar"><span>Apropiación social</span><div class="mm-track"><i class="cc" style="width:40.5%" title="1,5"></i></div><b>1,5</b></div>
+    <div class="mm-bar"><span>Formación tipo A</span><div class="mm-track"><i class="c2" style="width:27%" title="1,0"></i></div><b>1,0</b></div>
+    <div class="mm-bar"><span>Divulgación pública</span><div class="mm-track"><i class="cc" style="width:13.5%" title="0,5"></i></div><b>0,5</b></div>
+    <div class="mm-bar"><span>Productos tipo B</span><div class="mm-track"><i class="c1" style="width:10.8%" title="0,4"></i></div><b>0,4</b></div>
+    <div class="mm-bar"><span>Cooperación</span><div class="mm-track"><i class="c3" style="width:8.1%" title="0,3"></i></div><b>0,3</b></div>
+    <div class="mm-bar"><span>Formación tipo B</span><div class="mm-track"><i class="c2" style="width:5.4%" title="0,2"></i></div><b>0,2</b></div>
+    <div class="mm-bar"><span>Cohesión</span><div class="mm-track"><i class="c3" style="width:2.7%" title="0,1"></i></div><b>0,1</b></div>
+  </div>
+  <p class="mm-src">Ind. Grupo = 3,7·TOP + 2,3·A + 0,4·B + 1,5·ASC + 0,5·DPC + 1·FrA + 0,2·FrB + 0,1·Cohe + 0,3·Coop. Fuente: Minciencias (2024), sección 3.10, p. 127.</p>
+</div>
+<div class="mm-panel" style="margin-top:14px">
+  <div class="hd"><small>Tabla comparativa</small><h4>Requisitos de cada categoría</h4></div>
+  <div class="mm-seg" data-group="cat" role="group" aria-label="Resaltar categoría">
+    <button type="button" data-key="A1" class="on">A1</button>
+    <button type="button" data-key="A">A</button>
+    <button type="button" data-key="B">B</button>
+    <button type="button" data-key="C">C</button>
+  </div>
+  <div class="mm-tbl"><table class="mm-cmp" data-hl-group="cat" data-hl="A1">
+    <thead><tr><th>Requisito</th><th class="hc1">A1</th><th class="hc2">A</th><th class="hc3">B</th><th class="hc4">C</th></tr></thead>
+    <tbody>
+      <tr><td>Indicador de Grupo</td><td class="hc1">Cuartil 1 (25 % superior)</td><td class="hc2">Cuartil 2 o mejor (50 % superior)</td><td class="hc3">Cuartil 3 o mejor (75 % superior)</td><td class="hc4">Mayor que 0</td></tr>
+      <tr><td>Productos TOP o tipo A</td><td class="hc1">TOP en cuartil 1</td><td class="hc2">TOP o A &gt; 0</td><td class="hc3">TOP o A &gt; 0</td><td class="hc4">TOP o A &gt; 0</td></tr>
+      <tr><td>Apropiación social o divulgación</td><td class="hc1 y">&gt; 0</td><td class="hc2 y">&gt; 0</td><td class="hc3 y">&gt; 0</td><td class="hc4 y">&gt; 0</td></tr>
+      <tr><td>Formación de recurso humano</td><td class="hc1">Tipo A &gt; 0*</td><td class="hc2">Tipo A &gt; 0*</td><td class="hc3">Tipo A &gt; 0 o tipo B en cuartil 2</td><td class="hc4">Tipo A o B &gt; 0</td></tr>
+      <tr><td>Investigador en el grupo</td><td class="hc1">Emérito, sénior o asociado</td><td class="hc2">Emérito, sénior o asociado</td><td class="hc3">Además junior o vinculado con doctorado</td><td class="hc4 n">No se exige</td></tr>
+      <tr><td>Cohesión</td><td class="hc1 y">&gt; 0</td><td class="hc2 y">&gt; 0</td><td class="hc3 y">&gt; 0</td><td class="hc4 n">No se exige</td></tr>
+      <tr><td>Años de existencia</td><td class="hc1">5 o más</td><td class="hc2">5 o más</td><td class="hc3">3 o más</td><td class="hc4">2 o más</td></tr>
+    </tbody>
+  </table></div>
+  <p class="mm-src">* Fuera del sector universitario se homologa con productos TOP, una patente A obtenida, una variedad vegetal o animal, o cinco artículos TOP en la ventana. El investigador exigido debe tener vínculo contractual con una institución del SNCTI y residir en Colombia. Fuente: Minciencias (2024), sección 3.14, pp. 128–130.</p>
+</div>
+</div>
+```
+
+## Anexo 1. Requerimientos, categorías y pesos de los productos
+
+El Anexo 1 es el reglamento detallado de cada producto, organizado en 21 tablas (de la I a la XXI). Para cada subtipo indica qué información prueba que existe, qué categorías de calidad puede alcanzar, con qué criterios y con qué peso relativo entra en el indicador. Para los procesos de reconocimiento basta con cumplir los requerimientos de existencia; la calidad pesa en la clasificación.
+
+Dos escalas lo ilustran bien. En los artículos, la calidad depende del cuartil de la revista en JCR o SJR (se toma el más alto) o de su clasificación en Publindex, y publicar en acceso abierto suma medio punto en cada categoría. En las patentes, pesa más la obtenida que la solicitada, la tramitada por vía PCT que la tradicional, y la que tiene producto o contrato de explotación que la que no.
+
+::: {#caja3 .callout-important style="background-color: #e3f0fbff; border-left: 4px solid #d4e8f9ff;" appearance="minimal" icon="false"}
+<p style="font-size: 1rem; font-weight: 700; margin: 0 0 .6rem;">Caja 3. Glosario de términos del Anexo 1</p>
+
+-   **JCR**: *Journal Citation Reports*, que ordena revistas por citación en los índices SCI y SSCI.
+-   **SJR**: *SCImago Journal Rank*, indicador de prestigio de revistas basado en Scopus.
+-   **Publindex**: índice colombiano de revistas científicas. Una revista Publindex B en el cuartil 1 de H5 de su área cuenta como artículo B; una Publindex C en cuartil 2, como artículo C.
+-   **Artículo D**: artículo en una revista que está en dos o más bases bibliográficas con comité científico de selección.
+-   **Vía PCT**: solicitud de patente por el Tratado de Cooperación en materia de Patentes, que permite proteger una invención en varios países con un solo trámite internacional.
+-   **Peso relativo**: valor de 0 a 10 que ordena las categorías dentro de un mismo subtipo. No compara productos de tipos distintos.
+:::
+
+```{=html}
+<div class="mm">
+<div class="mm-panel">
+  <div class="hd"><small>Escalas de calidad</small><h4>Peso relativo según la categoría</h4></div>
+  <div class="mm-seg" data-group="esc" role="group" aria-label="Elegir producto">
+    <button type="button" data-key="art" class="on">Artículos</button>
+    <button type="button" data-key="pat">Patentes de invención</button>
+  </div>
+  <div data-panel="esc:art">
+    <div class="mm-leg"><span><i class="cc"></i>Acceso abierto</span><span><i class="cb"></i>Suscripción</span></div>
+    <div class="mm-bars">
+      <div class="mm-bar"><span>A1 · cuartil 1</span><div class="mm-track"><i class="cc" style="width:100%" title="A1 acceso abierto: 10"></i></div><b>10</b></div>
+      <div class="mm-bar"><span></span><div class="mm-track"><i class="cb" style="width:95%" title="A1: 9,5"></i></div><b>9,5</b></div>
+      <div class="mm-bar"><span>A2 · cuartil 2</span><div class="mm-track"><i class="cc" style="width:60%" title="A2 acceso abierto: 6"></i></div><b>6</b></div>
+      <div class="mm-bar"><span></span><div class="mm-track"><i class="cb" style="width:55%" title="A2: 5,5"></i></div><b>5,5</b></div>
+      <div class="mm-bar"><span>B · cuartil 3 o Publindex B</span><div class="mm-track"><i class="cc" style="width:35%" title="B acceso abierto: 3,5"></i></div><b>3,5</b></div>
+      <div class="mm-bar"><span></span><div class="mm-track"><i class="cb" style="width:30%" title="B: 3"></i></div><b>3</b></div>
+      <div class="mm-bar"><span>C · cuartil 4 o Publindex C</span><div class="mm-track"><i class="cc" style="width:20%" title="C acceso abierto: 2"></i></div><b>2</b></div>
+      <div class="mm-bar"><span></span><div class="mm-track"><i class="cb" style="width:15%" title="C: 1,5"></i></div><b>1,5</b></div>
+    </div>
+    <p class="mm-src">Tabla I. Los artículos D tienen su propia escala (Tabla II): 10 en acceso abierto y 9 en suscripción.</p>
+  </div>
+  <div data-panel="esc:pat">
+    <div class="mm-bars">
+      <div class="mm-bar"><span>PA1 · obtenida PCT con producto o contrato</span><div class="mm-track"><i class="c1" style="width:100%" title="10"></i></div><b>10</b></div>
+      <div class="mm-bar"><span>PA2 · obtenida tradicional con producto o contrato</span><div class="mm-track"><i class="c1" style="width:70%" title="7"></i></div><b>7</b></div>
+      <div class="mm-bar"><span>PA3 · obtenida PCT sin producto ni contrato</span><div class="mm-track"><i class="c1" style="width:60%" title="6"></i></div><b>6</b></div>
+      <div class="mm-bar"><span>PA4 · obtenida tradicional sin producto ni contrato</span><div class="mm-track"><i class="c1" style="width:55%" title="5,5"></i></div><b>5,5</b></div>
+      <div class="mm-bar"><span>PB1 · solicitada PCT, exámenes favorables y contrato</span><div class="mm-track"><i class="c3" style="width:50%" title="5"></i></div><b>5</b></div>
+      <div class="mm-bar"><span>PB2</span><div class="mm-track"><i class="c3" style="width:35%" title="3,5"></i></div><b>3,5</b></div>
+      <div class="mm-bar"><span>PB3</span><div class="mm-track"><i class="c3" style="width:30%" title="3"></i></div><b>3</b></div>
+      <div class="mm-bar"><span>PB4</span><div class="mm-track"><i class="c3" style="width:26%" title="2,6"></i></div><b>2,6</b></div>
+      <div class="mm-bar"><span>PB5</span><div class="mm-track"><i class="c3" style="width:25%" title="2,5"></i></div><b>2,5</b></div>
+      <div class="mm-bar"><span>PC · solicitada</span><div class="mm-track"><i class="c4" style="width:18%" title="1,8"></i></div><b>1,8</b></div>
+    </div>
+    <p class="mm-src">Tabla IX. Los modelos de utilidad siguen la misma escala con valores menores (de 6 a 1,1).</p>
+  </div>
+  <p class="mm-src">Fuente: Minciencias (2024), Anexo 1, pp. 131–170.</p>
+</div>
+</div>
+```
+
+## Anexo 2. Visualización de resultados por perfiles
+
+El Anexo 2 muestra cómo se ven los resultados en la Plataforma. Cada grupo que cumple la definición tiene un enlace «Ver perfiles» en GrupLAC, donde aparecen sus ocho perfiles junto a los cuartiles de su área.
+
+Las instituciones, por su parte, tienen en InstituLAC el módulo «Visualizar perfiles», dentro de «Avalar grupos». Allí ven el balance de todos sus grupos reconocidos por indicador y cuartil, en conteo general o por gran área de conocimiento.
+
+```{=html}
+<div class="mm">
+<div class="mm-flow">
+  <div class="mm-step"><span class="n">GrupLAC</span><h4>Lo que ve el grupo</h4><p>Ocho perfiles: integrantes, colaboración, trayectoria y cinco de producción, cada uno con los cuartiles de su área.</p></div>
+  <div class="mm-arrow" aria-hidden="true">→</div>
+  <div class="mm-step dark"><span class="n">InstituLAC</span><h4>Lo que ve la institución</h4><p>Conteo de sus grupos por indicador y cuartil, en conteo general o por cada una de las seis grandes áreas.</p></div>
+  <div class="mm-arrow" aria-hidden="true">→</div>
+  <div class="mm-step hot"><span class="n">Uso</span><h4>Para qué sirve</h4><p>Gestión interna: ver fortalezas y vacíos de cada grupo y priorizar apoyos según el perfil y no solo según la categoría.</p></div>
+</div>
+<p class="mm-src">Fuente: Minciencias (2024), Anexo 2, pp. 170–194.</p>
+</div>
+```
+
+## Anexo 3. Modelo estadístico de trayectoria
+
+El indicador de trayectoria mide cómo ha evolucionado un grupo en el tiempo. Cada grupo recibe, en cada una de las últimas cinco convocatorias (2014, 2015, 2017, 2018 y 2021), una categoría ordinal de 1 a 8. Con esas observaciones se ajusta un modelo logístico ordenado, del tipo usado en psicometría, educación y medicina, que estima la «habilidad» latente de cada grupo y los puntos de corte de cada convocatoria.
+
+El resultado es un valor entre −3 y 3 con una banda de credibilidad del 95 %. A la izquierda quedan los grupos incipientes o que rara vez pasan de avalados; en el centro, los que transitan hacia categorías altas; a la derecha, los consolidados. El documento observa que, desde 2014, grupos con menos trayectoria acceden cada vez con más facilidad a las categorías superiores. En 2024 el indicador es solo informativo.
+
+```{=html}
+<div class="mm">
+<div class="mm-panel">
+  <div class="hd"><small>Escala ordinal</small><h4>De «no reconocido» a A1</h4></div>
+  <div class="mm-scale" role="img" aria-label="Escala ordinal de 1 (no reconocido) a 8 (A1)">
+    <div style="height:22%"><b>1</b><span>No reconocido</span></div>
+    <div style="height:32%"><b>2</b><span>Avalado</span></div>
+    <div style="height:42%"><b>3</b><span>Reconocido</span></div>
+    <div style="height:52%"><b>4</b><span>D</span></div>
+    <div style="height:62%"><b>5</b><span>C</span></div>
+    <div style="height:74%"><b>6</b><span>B</span></div>
+    <div style="height:86%"><b>7</b><span>A</span></div>
+    <div style="height:100%"><b>8</b><span>A1</span></div>
+  </div>
+  <p class="mm-formula" style="margin-top:14px">log( P<sub>ijk</sub> ÷ P<sub>ij(k−1)</sub> ) = θ<sub>i</sub> − β<sub>jk</sub></p>
+  <p class="mut">θ<sub>i</sub> es la trayectoria del grupo i y β<sub>jk</sub> el punto de corte entre las categorías k−1 y k en la convocatoria j. Desde 2017 la categoría D no existe y la escala va de 1 a 7.</p>
+  <p class="mm-src">Fuente: Minciencias (2024), Anexo 3, pp. 194–201.</p>
+</div>
+</div>
+```
+
+## Anexo 4. Guías de revisión de productos
+
+El Anexo 4 reúne las listas de verificación que el Ministerio aplica a los productos más sensibles. Cada guía enumera criterios de «cumple o no cumple» y todos son obligatorios: si falla uno, el producto se invalida.
+
+Las guías más extensas son las de libros y capítulos, que distinguen la fecha y el país de la editorial, y las de patentes y variedades, que piden los soportes oficiales del registro. Las de tesis y trabajos de grado verifican el acta o diploma, y la de investigación-creación, la instancia de valoración en la que se presentó la obra.
+
+```{=html}
+<div class="mm">
+<div class="mm-grid">
+  <div class="mm-tile"><span class="n">7.1</span><h4>Artículos y notas científicas</h4><p>Revista, ISSN, DOI, indexación vigente y tipo de documento.</p></div>
+  <div class="mm-tile"><span class="n">7.3</span><h4>Libros y capítulos</h4><p>Siete guías según el período (antes de 2006 o de 2006 a 2020) y si la editorial es colombiana o extranjera, más la validación de tipologías.</p></div>
+  <div class="mm-tile"><span class="n">7.4</span><h4>Patentes y modelos de utilidad</h4><p>Certificado o solicitud, titular, vía (PCT o tradicional) y contratos.</p></div>
+  <div class="mm-tile"><span class="n">7.5</span><h4>Variedades y razas</h4><p>Variedad vegetal, nueva raza animal y poblaciones mejoradas de razas pecuarias.</p></div>
+  <div class="mm-tile"><span class="n">7.6</span><h4>Desarrollo tecnológico</h4><p>Productos certificados, nutracéuticos, nuevos registros científicos, colecciones y productos empresariales.</p></div>
+  <div class="mm-tile"><span class="n">7.7–7.10</span><h4>Normas y conceptos</h4><p>Normas, reglamentos técnicos, protocolos de vigilancia epidemiológica y conceptos técnicos.</p></div>
+  <div class="mm-tile"><span class="n">7.11</span><h4>Tesis y trabajos de grado</h4><p>Doctorado, maestría y pregrado: acta o diploma y rol de dirección.</p></div>
+  <div class="mm-tile"><span class="n">7.12</span><h4>Investigación-creación</h4><p>Obras en artes, arquitectura y diseño y su instancia de valoración.</p></div>
+</div>
+<p class="mm-src">Fuente: Minciencias (2024), Anexo 4, pp. 202–239.</p>
+</div>
+```
+
+## Anexo 5. Áreas científicas de la OCDE
+
+El último anexo lista la clasificación de áreas científicas de la OCDE que el modelo usa para comparar a cada grupo con sus pares. Tiene seis grandes áreas, divididas en áreas y estas en disciplinas. Los máximos de los índices y los cuartiles de la clasificación se calculan dentro de cada gran área, de modo que un grupo de humanidades no compite con uno de medicina.
+
+```{=html}
+<div class="mm">
+<div class="mm-panel">
+  <div class="hd"><small>Grandes áreas OCDE</small><h4>Elige una gran área para ver sus áreas</h4></div>
+  <div class="mm-seg" data-group="ocde" role="group" aria-label="Elegir gran área">
+    <button type="button" data-key="1" class="on">1. Naturales</button>
+    <button type="button" data-key="2">2. Ingeniería</button>
+    <button type="button" data-key="3">3. Médicas</button>
+    <button type="button" data-key="4">4. Agrícolas</button>
+    <button type="button" data-key="5">5. Sociales</button>
+    <button type="button" data-key="6">6. Humanidades</button>
+  </div>
+  <div data-panel="ocde:1"><div class="mm-chips"><span class="mm-chip"><b>1A</b> Matemática</span><span class="mm-chip"><b>1B</b> Computación y ciencias de la información</span><span class="mm-chip"><b>1C</b> Ciencias físicas</span><span class="mm-chip"><b>1D</b> Ciencias químicas</span><span class="mm-chip o"><b>1E</b> Ciencias de la tierra y medioambientales</span><span class="mm-chip"><b>1F</b> Ciencias biológicas</span><span class="mm-chip"><b>1G</b> Otras ciencias naturales</span></div></div>
+  <div data-panel="ocde:2"><div class="mm-chips"><span class="mm-chip o"><b>2A</b> Ingeniería civil</span><span class="mm-chip"><b>2B</b> Ingenierías eléctrica, electrónica e informática</span><span class="mm-chip"><b>2C</b> Ingeniería mecánica</span><span class="mm-chip"><b>2D</b> Ingeniería química</span><span class="mm-chip"><b>2E</b> Ingeniería de los materiales</span><span class="mm-chip"><b>2F</b> Ingeniería médica</span><span class="mm-chip o"><b>2G</b> Ingeniería ambiental</span><span class="mm-chip"><b>2H</b> Biotecnología ambiental</span><span class="mm-chip"><b>2I</b> Biotecnología industrial</span><span class="mm-chip"><b>2J</b> Nanotecnología</span><span class="mm-chip"><b>2K</b> Otras ingenierías y tecnologías</span></div></div>
+  <div data-panel="ocde:3"><div class="mm-chips"><span class="mm-chip"><b>3A</b> Medicina básica</span><span class="mm-chip"><b>3B</b> Medicina clínica</span><span class="mm-chip"><b>3C</b> Ciencias de la salud</span><span class="mm-chip"><b>3D</b> Biotecnología en salud</span><span class="mm-chip"><b>3E</b> Otras ciencias médicas</span></div></div>
+  <div data-panel="ocde:4"><div class="mm-chips"><span class="mm-chip"><b>4A</b> Agricultura, silvicultura y pesca</span><span class="mm-chip"><b>4B</b> Ciencias animales y lechería</span><span class="mm-chip"><b>4C</b> Ciencias veterinarias</span><span class="mm-chip"><b>4D</b> Biotecnología agrícola</span><span class="mm-chip"><b>4E</b> Otras ciencias agrícolas</span></div></div>
+  <div data-panel="ocde:5"><div class="mm-chips"><span class="mm-chip"><b>5A</b> Psicología</span><span class="mm-chip"><b>5B</b> Economía y negocios</span><span class="mm-chip"><b>5C</b> Ciencias de la educación</span><span class="mm-chip"><b>5D</b> Sociología</span><span class="mm-chip"><b>5E</b> Derecho</span><span class="mm-chip"><b>5F</b> Ciencias políticas</span><span class="mm-chip o"><b>5G</b> Geografía social y económica</span><span class="mm-chip"><b>5H</b> Periodismo y comunicaciones</span><span class="mm-chip"><b>5I</b> Otras ciencias sociales</span></div></div>
+  <div data-panel="ocde:6"><div class="mm-chips"><span class="mm-chip"><b>6A</b> Historia y arqueología</span><span class="mm-chip"><b>6B</b> Idiomas y literatura</span><span class="mm-chip"><b>6C</b> Otras historias</span><span class="mm-chip"><b>6D</b> Arte</span><span class="mm-chip"><b>6E</b> Otras humanidades</span></div></div>
+  <p class="mm-src">En naranja, las áreas donde suelen ubicarse los grupos de gestión del riesgo de desastres. Fuente: Minciencias (2024), Anexo 5 y Tabla 8, pp. 240–245.</p>
+</div>
+</div>
+```
+
+## Ver también
+
+- [Nivel de Madurez Tecnológica (TRL)](trl.qmd)
+- [Transferencia de conocimiento y tecnologías](transferencia.qmd)
+- [Ciencia y tecnología en gestión del riesgo de desastres](../grd/cienciaytecnologia/index.qmd)

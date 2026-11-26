@@ -1,0 +1,133 @@
+---
+title: "Gráficas HTML"
+subtitle: "Ventajas, referentes y buenas prácticas, con 12 plantillas genéricas, su versión en gestión del riesgo y 6 mapas de Colombia"
+author: "Mauricio Romero Torres"
+date: 2026-11-26
+date-modified: 2026-11-26
+lang: es
+format:
+  html:
+    page-layout: full
+resources:
+  - demos/plantillas-diapositivas.html
+  - demos/plantillas-gestion-riesgo.html
+  - demos/mapas-colombia.html
+editor: visual
+---
+
+## Por qué gráficas en HTML
+
+Una gráfica HTML es una página que dibuja los datos con SVG, Canvas o WebGL dentro del navegador. Su mayor ventaja es que se lee igual en cualquier dispositivo sin instalar nada y que se puede tocar: filtrar, comparar escenarios, mover un umbral o pasar el puntero para ver el valor exacto. Un solo archivo autocontenido viaja por correo, se inserta en un sitio Quarto con un `<iframe>`, se publica en GitHub Pages y se versiona en git como cualquier texto. Además, ahora un asistente de IA puede generar una a partir de una descripción en lenguaje natural, lo que acorta mucho el camino entre la idea y el prototipo.
+
+Sus desventajas aparecen cuando la gráfica tiene que vivir fuera de la pantalla. En un PDF o un documento impreso se pierde la interacción, y hay que prever una versión estática. Si depende de bibliotecas o de datos cargados desde internet, puede romperse con el tiempo, por eso conviene fijar versiones o, mejor, no depender de ellas. El código tiene más piezas que una imagen (estilos, scripts, accesibilidad, modo oscuro), y una gráfica generada por IA puede verse bien y estar mal: hay que revisar datos, escalas y colores antes de publicarla. Con decenas de miles de elementos, el SVG se vuelve lento y hace falta pasar a Canvas o WebGL.
+
+### Diez referentes en GitHub
+
+Estos repositorios marcan el estado del arte de la visualización en la web, desde las bibliotecas de base hasta los componentes listos para tableros y las *skills* con las que un agente de IA genera páginas. Las estrellas son las que tenían en GitHub el 26 de noviembre de 2026.
+
+1. **[D3.js](https://github.com/d3/d3)** (114 000 ★, ISC). La base de casi toda la visualización web: une datos a elementos SVG o Canvas y da control total sobre cada marca. Exige más código, pero no tiene techo.
+2. **[Apache ECharts](https://github.com/apache/echarts)** (68 000 ★, Apache-2.0). Gráficas declaradas con un objeto de configuración, con mapas, series grandes y salida en Canvas o SVG. Muy usado en tableros institucionales.
+3. **[shadcn/ui Charts](https://github.com/shadcn-ui/ui)** (129 000 ★, MIT). Componentes de gráficas que se copian al proyecto y se construyen sobre [Recharts](https://github.com/recharts/recharts); toman los colores del tema del sitio. Es el estilo que generan herramientas como v0 de Vercel.
+4. **[Tremor](https://github.com/tremorlabs/tremor)** (3700 ★, Apache-2.0). Componentes de React y Tailwind para tableros y métricas. [Vercel lo adquirió en enero de 2025](https://vercel.com/blog/vercel-acquires-tremor) y liberó gratis todos sus bloques.
+5. **[Plotly.js](https://github.com/plotly/plotly.js)** (18 000 ★, MIT). Gráficas científicas interactivas; es el motor que usan Plotly para Python y R al exportar un HTML independiente.
+6. **[Observable Plot](https://github.com/observablehq/plot)** (5400 ★, ISC). Una gramática concisa de marcas y transformaciones, de los creadores de D3, ideal para explorar datos con pocas líneas.
+7. **[Vega-Lite](https://github.com/vega/vega-lite)** (5600 ★, BSD-3). Gráficas descritas en JSON; es la base de Altair en Python y facilita que una IA genere especificaciones válidas.
+8. **[deck.gl](https://github.com/visgl/deck.gl)** (15 000 ★, MIT). Capas en WebGL para millones de puntos geográficos: trayectorias, mallas hexagonales y 3D.
+9. **[MapLibre GL JS](https://github.com/maplibre/maplibre-gl-js)** (12 000 ★). Mapas vectoriales abiertos con teselas y PMTiles; es la herramienta de los [mapas interactivos](mapas/index.qmd) de este sitio.
+10. **[Anthropic Skills](https://github.com/anthropics/skills)** (201 000 ★). Colección de *skills* para agentes de IA. *frontend-design* produce interfaces con diseño cuidado y *web-artifacts-builder* arma páginas HTML complejas con React, Tailwind y shadcn/ui. La licencia varía según la *skill*.
+
+## Buenas prácticas para generarlas
+
+1. **Una gráfica, un mensaje.** El título dice el hallazgo («Ocho departamentos mejoran»), no el tema («Indicador por departamento»).
+2. **Primero la forma, después el color.** Elige la gráfica según la tarea: comparar magnitudes, mostrar cambio en el tiempo, ubicar en el territorio o destacar una sola cifra, que a veces es mejor como número grande que como gráfica.
+3. **Color según su función.** Un solo tono de claro a oscuro para magnitudes, dos tonos con gris en el centro para cambios con signo y colores distintos, en orden fijo, para categorías. Verifica la paleta para daltonismo con una herramienta, no a ojo.
+4. **Nunca dos ejes verticales.** Si dos medidas tienen escalas distintas, van en dos gráficas.
+5. **Identidad nunca solo por color.** Leyenda cuando hay dos o más series y etiquetas directas en las marcas importantes; los textos van en color de texto, no en el color de la serie.
+6. **Interacción con propósito.** Información al pasar el puntero, controles en una sola fila sobre la gráfica y una vista de tabla con los datos.
+7. **Accesible y adaptable.** `aria-label` en cada gráfica, foco visible para teclado, controles de al menos 44 px en el celular y nada de desplazamiento horizontal.
+8. **Autocontenida y liviana.** Sin dependencias, o con versiones exactas desde un CDN confiable. Simplifica geometrías y datos: los seis mapas de abajo pesan 77 KB en total.
+9. **Datos honestos.** Marca los valores ilustrativos, cita la fuente de los reales y conserva el script que los produjo.
+10. **Mírala antes de publicarla.** Ábrela en escritorio y en celular, revisa que no se superpongan las etiquetas y prueba cada control.
+
+## Las plantillas
+
+::: {.callout-note title="Cómo usarlas"}
+- **Qué son:** cada diapositiva es un archivo HTML autocontenido, sin bibliotecas externas. Se puede tocar, arrastrar o alternar.
+- **Cómo navegar:** desliza de lado, usa los botones ‹ › o las flechas del teclado, o salta con los botones numerados.
+- **Cómo pedir una nueva:** a un asistente de IA basta con pedirla por el nombre de la plantilla. Por ejemplo: *«Haz una diapositiva HTML tipo embudo con la cadena de alerta temprana: población en riesgo, recibe la alerta, la entiende, evacúa»*.
+- **Datos:** todas las cifras son ficticias o ilustrativas, salvo las que se indican en cada diapositiva.
+:::
+
+### Las 12 plantillas
+
+| Nº | Plantilla | Interacción | Ejemplo genérico | Ejemplo en gestión del riesgo |
+|---|---|---|---|---|
+| 01 | Tarjetas con viñetas | Tocar para desplegar detalle | Razones para elegir un servicio | Procesos de la Ley 1523 de 2012 |
+| 02 | Slider | Mover un control y recalcular | Días de entrega vs. satisfacción | Nivel del río y umbrales de alerta |
+| 03 | Gráfico de líneas | Elegir período, promedio y variación | Consultas mensuales | Movimientos en masa por temporada de lluvias |
+| 04 | Barras + dona | Tocar una barra y ver su composición | Ventas por producto | Tipos de evento en años Niña/Niño |
+| 05 | Línea de tiempo | Recorrer hitos | Crecimiento de una empresa | Desastres que cambiaron el sistema |
+| 06 | Diagrama de Gantt | Ajustar duraciones con dependencias | Cronograma de proyecto | Fases de la recuperación |
+| 07 | Organigrama | Buscar por nombre o función | Equipo de proyecto | Estructura del SNGRD |
+| 08 | Pictograma | Convertir totales en "X de cada 10" | Uso diario de una app | Población expuesta |
+| 09 | Tabla comparativa | Alternar escenarios | Planes mensual/anual | Medidas de reducción a 10/30 años |
+| 10 | Diagrama de flujo | Comparar procesos | Aprobación en papel vs. digital | Reporte de emergencias |
+| 11 | Matriz | Cambiar los ejes | Priorización de proyectos | Escenarios de riesgo municipal |
+| 12 | Embudo | Ajustar tasas de conversión | Embudo de ventas | Cadena de la alerta temprana |
+
+### Plantillas genéricas
+
+[Abrir en pantalla completa](demos/plantillas-diapositivas.html){.btn .btn-outline-primary target="_blank"}
+
+```{=html}
+<iframe class="deck" id="deck-generico" src="demos/plantillas-diapositivas.html" title="12 plantillas de diapositivas HTML interactivas" style="width:100%;height:820px;border:0;border-radius:12px" loading="lazy"></iframe>
+```
+
+### Plantillas aplicadas a la gestión del riesgo
+
+[Abrir en pantalla completa](demos/plantillas-gestion-riesgo.html){.btn .btn-outline-primary target="_blank"}
+
+```{=html}
+<iframe class="deck" id="deck-riesgo" src="demos/plantillas-gestion-riesgo.html" title="12 diapositivas interactivas de gestión del riesgo de desastres" style="width:100%;height:820px;border:0;border-radius:12px" loading="lazy"></iframe>
+<script>
+  // Ajusta la altura de cada iframe a su contenido
+  window.addEventListener('message', function (e) {
+    if (!e.data || !e.data.deckHeight) return;
+    document.querySelectorAll('iframe.deck').forEach(function (f) {
+      if (f.contentWindow === e.source) f.style.height = (e.data.deckHeight + 8) + 'px';
+    });
+  });
+</script>
+```
+
+::: {.callout-warning title="Sobre los datos de gestión del riesgo"}
+- **Datos ilustrativos:** la mayoría de las diapositivas, y así lo indica cada una.
+- **Línea de tiempo histórica (05):** usa cifras aproximadas de fuentes públicas; conviene verificarlas antes de citarlas.
+- **Organigrama del SNGRD (07):** está simplificado a partir de la Ley 1523 de 2012.
+:::
+
+## Mapas de Colombia en 6 plantillas
+
+Los mapas siguen la misma idea: un archivo HTML sin bibliotecas en el que cada departamento es un trazo SVG. La geometría sale de la capa de departamentos del sitio, simplificada con Shapely (tolerancia de 0,02°) y proyectada en coordenadas planas simples; San Andrés y Providencia va en un recuadro aparte, como en la cartografía oficial.
+
+Cada plantilla resuelve una pregunta distinta sobre el territorio. Los valores son ilustrativos; las capitales son reales y la región natural es la predominante de cada departamento.
+
+| Nº | Plantilla | Pregunta que responde | Interacción |
+|---|---|---|---|
+| 1 | Coropleta | ¿Cómo se distribuye un indicador entre departamentos? | Elegir indicador y ver el valor al pasar el puntero |
+| 2 | Símbolos proporcionales | ¿Dónde se concentran los casos por ciudad? | Mover un umbral mínimo |
+| 3 | Mapa + ficha | ¿Cómo está un departamento frente al promedio? | Tocar un departamento |
+| 4 | Categorías | ¿A qué región pertenece cada departamento? | Resaltar una región |
+| 5 | Antes, después y cambio | ¿Dónde mejoró y dónde empeoró? | Alternar período 1, período 2 y cambio |
+| 6 | Mapa + ranking | ¿Cuáles son los diez mayores y dónde están? | Selección vinculada entre barras y mapa |
+
+[Abrir en pantalla completa](demos/mapas-colombia.html){.btn .btn-outline-primary target="_blank"}
+
+```{=html}
+<iframe class="deck" id="deck-mapas" src="demos/mapas-colombia.html" title="6 plantillas de mapas de Colombia en HTML" style="width:100%;height:820px;border:0;border-radius:12px" loading="lazy"></iframe>
+```
+
+## Ver también
+
+- [Gráficas en HTML frente a Python, R, D3 y Plotly](graficas-python-r.qmd)
+- [D3, Observable y JS](d3.qmd)

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>12 diapositivas interactivas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: claro y de oficina, como un buen informe de consultoría; cada diapositiva dice su hallazgo.
+   IDEA: un mazo de diapositivas que se manipulan con la mano: tocar, arrastrar, alternar.
+   PICTURE: cada plantilla ES el gráfico interactivo, grande, bajo un título corto.
+   COLOUR and TYPE: campo azul profundo alrededor de hojas blancas; azul de marca y coral para alertas. Inter Tight + Inter.
+   LAYOUT: barra superior con navegación, una diapositiva por pantalla con scroll-snap horizontal. */
+:root{color-scheme:light dark;
+--bg:light-dark(#0f3fa8,#081127);--paper:light-dark(#ffffff,#111b33);--ink:light-dark(#0f1b2d,#e9eef8);
+--mut:light-dark(#5a6478,#9aa6bb);--line:light-dark(#e3e7ee,#24304b);--blue:light-dark(#1554d1,#6e9cff);
+--soft:light-dark(#e4ecfc,#1a2a52);--coral:light-dark(#e5533d,#ff7f6b);--ok:light-dark(#0f8a5f,#4fd39d)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,.big{font-family:"Inter Tight",Inter,sans-serif}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.top{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;padding:16px max(4vw,14px) 8px;color:#fff}
+.top h1{font-size:clamp(20px,3vw,28px);margin:0;line-height:1.1;flex:1 1 260px;text-wrap:balance}
+.top p{margin:2px 0 0;font:500 14px Inter;opacity:.8}
+.navb{display:flex;gap:8px;align-items:center}
+.navb button{width:44px;height:44px;border-radius:50%;border:1px solid #ffffff55;background:#ffffff1a;color:#fff;font-size:20px}
+.navb span{font:600 15px Inter;min-width:54px;text-align:center;color:#fff}
+.idx{display:flex;gap:6px;overflow-x:auto;padding:4px max(4vw,14px) 10px;scrollbar-width:none}
+.idx button{flex:none;border:0;border-radius:99px;padding:8px 13px;background:#ffffff1f;color:#fff;font-size:14px;min-height:36px}
+.idx button.on{background:#fff;color:#0f3fa8}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:start;padding:6px max(4vw,14px) 24px}
+.card{max-width:1120px;margin:0 auto;background:var(--paper);border-radius:18px;padding:clamp(18px,3vw,36px);min-height:560px;display:flex;flex-direction:column;gap:18px;box-shadow:0 20px 50px #0003}
+.hd small{display:block;color:var(--blue);font:600 14px Inter;margin-bottom:6px}
+.hd h2{font-size:clamp(24px,3.2vw,36px);line-height:1.08;margin:0;text-wrap:balance}
+.hd p{margin:8px 0 0;color:var(--mut);font-size:15px}
+.bd{flex:1;display:flex;flex-direction:column;gap:14px}
+.foot{color:#ffffffb0;font-size:13px;text-align:center;padding:0 16px 22px}
+.seg{display:inline-flex;background:var(--soft);border-radius:12px;padding:4px;gap:4px;flex-wrap:wrap}
+.seg button{border:0;background:none;border-radius:9px;padding:8px 14px;min-height:40px;font-weight:600;color:var(--mut)}
+.seg button.on{background:var(--paper);color:var(--blue);box-shadow:0 1px 4px #0002}
+input[type=range]{width:100%;accent-color:var(--blue);height:32px}
+select,input[type=search],input[type=number]{border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:10px 12px;min-height:44px;font-size:16px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.stat{border-top:2px solid var(--ink);padding-top:8px}
+.stat b{display:block;font:700 clamp(26px,4vw,40px)/1.05 "Inter Tight";white-space:nowrap}
+.stat span{color:var(--mut);font-size:14px}
+.fig{position:relative;min-height:300px}.fig>svg{position:absolute;inset:0;width:100%;height:100%}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.mut{color:var(--mut);font-size:14px}
+/* 1 tarjetas */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.cards button{text-align:left;border:0;border-radius:16px;padding:20px;background:var(--blue);color:#fff;display:flex;flex-direction:column;gap:8px;min-height:230px;transition:transform .2s}
+.cards button:hover{transform:translateY(-3px)}
+.cards .k{font:700 38px/1 "Inter Tight"}
+.cards .t{font:700 20px "Inter Tight"}
+.cards .d{display:none;font-size:15px;opacity:.95}
+.cards .e{display:none;font-size:14px;background:#ffffff22;border-radius:10px;padding:8px 10px}
+.cards button.open .d,.cards button.open .e{display:block}
+.cards .h{margin-top:auto;font-size:13px;opacity:.8}
+/* barras horizontales */
+.hb{display:grid;grid-template-columns:minmax(0,9em) minmax(0,1fr) 4.5em;gap:10px;align-items:center}
+.hb .tr{height:18px;background:var(--soft);border-radius:99px;overflow:hidden}
+.hb .tr i{display:block;height:100%;background:var(--blue);border-radius:99px;transition:width .3s}
+.hb .tr i.c{background:var(--coral)}
+.hb b{text-align:right;white-space:nowrap}
+/* 4 barras + dona */
+.two{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;align-items:end}
+.vb{display:flex;gap:10px;height:280px;align-items:flex-end}
+.vb button{flex:1;border:0;background:none;display:flex;flex-direction:column;justify-content:flex-end;height:100%;padding:0;gap:6px;align-items:stretch}
+.vb i{display:block;background:var(--soft);border-radius:8px 8px 3px 3px;transition:background .2s}
+.vb button.on i{background:var(--blue)}
+.vb small{font-size:13px;color:var(--mut)}
+.vb em{font-style:normal;font-weight:600;font-size:14px}
+.donut{display:flex;flex-direction:column;align-items:center;gap:10px}
+.donut svg{width:min(220px,60vw);height:auto}
+.leg{display:grid;gap:4px;font-size:14px;width:100%}
+.leg span{display:flex;gap:8px;align-items:center}
+.leg i{width:12px;height:12px;border-radius:3px;flex:none}
+.leg b{margin-left:auto}
+/* 5 timeline */
+.yrs{display:flex;justify-content:space-between;font-size:13px;color:var(--mut)}
+.yrs span.on{color:var(--blue);font-weight:700}
+.yr{font:700 clamp(56px,9vw,96px)/1 "Inter Tight";color:var(--blue)}
+/* 6 gantt */
+.gt{display:grid;gap:8px}
+.gr{display:grid;grid-template-columns:minmax(0,8.5em) 92px minmax(0,1fr);gap:10px;align-items:center}
+.gr .ctl{display:flex;align-items:center;gap:4px}
+.gr .ctl button{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:var(--paper)}
+.gr .ctl span{width:22px;text-align:center;font-weight:600}
+.lane{position:relative;height:30px;background:repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px calc(100%/16))}
+.lane i{position:absolute;top:4px;bottom:4px;background:var(--blue);border-radius:6px;transition:left .3s,width .3s}
+.lane .dl{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--coral)}
+/* 7 org */
+.org{display:grid;gap:14px}
+.boss,.p{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--paper);text-align:left;min-height:44px;transition:background .2s,opacity .2s}
+.boss{justify-self:center;border:2px solid var(--blue)}
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.area{background:var(--soft);border-radius:14px;padding:12px;display:grid;gap:8px;align-content:start}
+.area h3{margin:0;font-size:15px}
+.p b,.boss b{display:block;font-size:15px}.p span,.boss span{font-size:13px;color:var(--mut)}
+.p.hit,.boss.hit{background:var(--blue);color:#fff;border-color:var(--blue)}.p.hit span,.boss.hit span{color:#fff}
+.p.dim,.boss.dim{opacity:.35}
+.who{border-left:3px solid var(--blue);padding:8px 12px;min-height:48px}
+/* 8 pictograma */
+.pic{display:grid;grid-template-columns:repeat(20,1fr);gap:4px;max-width:560px}
+.pic i{aspect-ratio:1/1.6;border-radius:40% 40% 20% 20%;background:var(--soft);transition:background .2s}
+.pic i.on{background:var(--blue)}
+/* 9 tabla */
+table{border-collapse:collapse;width:100%}
+th,td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:center}
+th:first-child,td:first-child{text-align:left}
+th.rec{background:var(--blue);color:#fff;border-radius:12px 12px 0 0}
+td.rec{background:var(--soft)}
+.price{font:700 28px "Inter Tight";white-space:nowrap}
+.yes{color:var(--ok);font-weight:700}.no{color:var(--mut)}
+/* 10 flujo */
+.lanef{display:grid;gap:8px}
+.lanef h3{margin:0;font-size:15px;display:flex;gap:8px}
+.lanef h3 b{margin-left:auto;white-space:nowrap}
+.steps{display:flex;gap:6px;align-items:stretch;flex-wrap:wrap}
+.st{border-radius:10px;padding:10px;background:var(--soft);font-size:14px;display:flex;flex-direction:column;justify-content:space-between;min-width:92px;transition:opacity .3s}
+.st b{font-size:16px;white-space:nowrap}
+.lanef.new .st{background:var(--blue);color:#fff}
+.lanef.off{opacity:.3}
+.save{font:700 clamp(28px,4vw,40px) "Inter Tight";color:var(--ok)}
+/* 11 matriz */
+.mx{position:relative;aspect-ratio:16/9;max-height:420px;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);margin:0 0 26px 26px;background:linear-gradient(90deg,transparent calc(50% - .5px),var(--line) 0 calc(50% + .5px),transparent 0),linear-gradient(transparent calc(50% - .5px),var(--line) 0 calc(50% + .5px),transparent 0)}
+.mx .dot{position:absolute;transform:translate(-50%,50%);transition:left .5s,bottom .5s;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;white-space:nowrap}
+.mx .dot i{width:14px;height:14px;border-radius:50%;background:var(--blue);flex:none;box-shadow:0 0 0 3px var(--paper)}
+.mx .ax{position:absolute;font-size:13px;color:var(--mut)}
+.mx .q{position:absolute;font-size:12px;color:var(--mut);padding:6px}
+/* 12 embudo */
+.fun{display:grid;gap:6px;justify-items:center}
+.fun div{height:54px;border-radius:8px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;transition:width .3s;white-space:nowrap;min-width:150px}
+.fun div:nth-child(2){opacity:.85}.fun div:nth-child(3){opacity:.72}.fun div:nth-child(4){background:var(--coral);opacity:1}
+.ctrls{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.ctrls label{font-size:14px;color:var(--mut)}.ctrls label b{color:var(--ink);float:right}
+@media(max-width:700px){.two{grid-template-columns:1fr}.vb{height:200px}.gr{grid-template-columns:minmax(0,6.5em) 86px minmax(0,1fr);font-size:14px}.card{min-height:0}}
+@media(max-width:520px){.pic{grid-template-columns:repeat(10,1fr)}.hb{grid-template-columns:minmax(0,7em) minmax(0,1fr) 4em;font-size:14px}th,td{padding:10px 4px;font-size:13px}.price{font-size:20px}.mx .dot span{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div style="flex:1 1 260px"><h1>12 plantillas de diapositivas que se tocan y se mueven</h1><p>Pídelas por su nombre: «haz una diapositiva tipo embudo con…»</p></div>
+  <div class="navb"><button id="prev" aria-label="Anterior">‹</button><span id="cnt">1 / 12</span><button id="next" aria-label="Siguiente">›</button></div>
+</header>
+<nav class="idx" id="idx"></nav>
+<main class="track" id="track">
+
+<section class="slide" data-n="Tarjetas"><div class="card">
+ <div class="hd"><small>01 · Tarjetas con viñetas</small><h2>Tres razones por las que los clientes nos eligen</h2><p>Toca una tarjeta para ver el detalle y un ejemplo.</p></div>
+ <div class="bd"><div class="cards" id="c1"></div></div></div></section>
+
+<section class="slide" data-n="Slider"><div class="card">
+ <div class="hd"><small>02 · Slider</small><h2>Cada día menos de entrega suma casi 3 puntos de satisfacción</h2><p>Mueve el tiempo de entrega y mira cómo cambian los indicadores.</p></div>
+ <div class="bd"><label class="row"><span>Días de entrega: <b id="s2v"></b></span></label><input type="range" id="s2" min="1" max="14" value="7" aria-label="Días de entrega"><div class="gt" id="s2b"></div></div></div></section>
+
+<section class="slide" data-n="Líneas"><div class="card">
+ <div class="hd"><small>03 · Gráfico de líneas</small><h2>Las consultas bajan en el segundo trimestre y repuntan al cierre</h2><p>Elige un período: se sombrea y se calculan promedio y variación.</p></div>
+ <div class="bd"><div class="seg" id="s3s"></div><div class="stats" id="s3t"></div><div class="fig"><svg id="s3"></svg></div></div></div></section>
+
+<section class="slide" data-n="Barras + dona"><div class="card">
+ <div class="hd"><small>04 · Barras + dona</small><h2>Junio fue el mejor mes, impulsado por suscripciones</h2><p>Toca un mes para ver de qué se compone la venta.</p></div>
+ <div class="bd two"><div><div class="mut" style="margin-bottom:6px">Ventas mensuales (millones COP)</div><div class="vb" id="s4"></div></div><div class="donut" id="s4d"></div></div></div></section>
+
+<section class="slide" data-n="Línea de tiempo"><div class="card">
+ <div class="hd"><small>05 · Línea de tiempo</small><h2>De 3 personas a una empresa con presencia en 5 ciudades</h2><p>Arrastra por los años: las cifras cambian a ese momento.</p></div>
+ <div class="bd"><div class="row" style="align-items:flex-end;gap:24px"><div class="yr" id="s5y"></div><div id="s5h" style="flex:1 1 220px;font-size:17px"></div></div><div class="stats" id="s5t"></div><input type="range" id="s5" min="0" max="8" value="8" aria-label="Año"><div class="yrs" id="s5l"></div></div></div></section>
+
+<section class="slide" data-n="Gantt"><div class="card">
+ <div class="hd"><small>06 · Diagrama de Gantt</small><h2 id="s6h"></h2><p>Ajusta la duración de cada tarea (semanas): las dependientes se corren solas. Línea coral = fecha límite.</p></div>
+ <div class="bd"><div class="gt" id="s6"></div></div></div></section>
+
+<section class="slide" data-n="Organigrama"><div class="card">
+ <div class="hd"><small>07 · Organigrama</small><h2>Quién hace qué en el equipo del proyecto</h2><p>Busca por nombre o tema, o toca a una persona.</p></div>
+ <div class="bd"><input type="search" id="s7q" placeholder="Ej.: datos, contratos, Laura" aria-label="Buscar persona"><div class="org" id="s7"></div><div class="who" id="s7w"></div></div></div></section>
+
+<section class="slide" data-n="Pictograma"><div class="card">
+ <div class="hd"><small>08 · Pictograma</small><h2 id="s8h"></h2><p>Escribe el total de tu organización y ajusta el porcentaje.</p></div>
+ <div class="bd"><div class="row"><label>Total de personas <input type="number" id="s8n" value="1200" min="1" style="width:130px"></label><label style="flex:1 1 220px">Porcentaje: <b id="s8pv"></b><input type="range" id="s8p" min="1" max="100" value="72"></label></div><div class="row" style="align-items:center;gap:28px"><div class="pic" id="s8" style="flex:1 1 300px"></div><div class="stats" style="flex:0 1 260px" id="s8t"></div></div></div></div></section>
+
+<section class="slide" data-n="Comparativa"><div class="card">
+ <div class="hd"><small>09 · Tabla comparativa</small><h2>El plan Estándar cubre lo esencial a mitad de precio</h2><p>Alterna entre pago mensual y anual (15 % de descuento).</p></div>
+ <div class="bd"><div class="seg" id="s9s"><button class="on" data-v="m">Mensual</button><button data-v="a">Anual</button></div><div class="scroll"><table id="s9"></table></div></div></div></section>
+
+<section class="slide" data-n="Flujo"><div class="card">
+ <div class="hd"><small>10 · Diagrama de flujo</small><h2>Digitalizar la aprobación la lleva de 7 días a poco más de 1</h2><p>Compara el proceso actual con el propuesto.</p></div>
+ <div class="bd"><div class="seg" id="s10s"><button data-v="a">Actual</button><button data-v="p">Propuesto</button><button class="on" data-v="b">Ambos</button></div><div id="s10" class="gt" style="gap:18px"></div><div class="row"><span class="save" id="s10v"></span><span class="mut">de ahorro por solicitud</span></div></div></div></section>
+
+<section class="slide" data-n="Matriz"><div class="card">
+ <div class="hd"><small>11 · Matriz</small><h2>Priorizar proyectos según los ejes que importan</h2><p>Cambia los ejes y los proyectos se reubican.</p></div>
+ <div class="bd"><div class="row"><label>Eje X <select id="s11x"></select></label><label>Eje Y <select id="s11y"></select></label></div><div class="mx" id="s11"></div></div></div></section>
+
+<section class="slide" data-n="Embudo"><div class="card">
+ <div class="hd"><small>12 · Embudo</small><h2 id="s12h"></h2><p>Ajusta las tasas de conversión y mira el resultado al final.</p></div>
+ <div class="bd"><div class="ctrls" id="s12c"></div><div class="fun" id="s12"></div></div></div></section>
+
+</main>
+<p class="foot">Todas las cifras, nombres y empresas son ficticios, solo para mostrar las plantillas.</p>
+<script>
+{
+const $=id=>document.getElementById(id);
+const fmt=n=>Math.round(n).toLocaleString('es-CO');
+const track=$('track'),slides=[...document.querySelectorAll('.slide')];
+$('idx').innerHTML=slides.map((s,i)=>`<button data-i="${i}">${String(i+1).padStart(2,'0')} ${s.dataset.n}</button>`).join('');
+const chips=[...$('idx').children];
+let cur=0;
+const go=i=>{i=Math.max(0,Math.min(slides.length-1,i));track.scrollTo({left:i*track.clientWidth});};
+const mark=()=>{cur=Math.round(track.scrollLeft/track.clientWidth);$('cnt').textContent=(cur+1)+' / '+slides.length;chips.forEach((c,i)=>c.classList.toggle('on',i===cur));const c=chips[cur];c&&c.parentNode.scrollTo({left:c.offsetLeft-40,behavior:'smooth'});};
+track.addEventListener('scroll',()=>{clearTimeout(track._t);track._t=setTimeout(mark,80)});
+$('prev').onclick=()=>go(cur-1);$('next').onclick=()=>go(cur+1);
+$('idx').onclick=e=>{const b=e.target.closest('button');if(b)go(+b.dataset.i)};
+document.addEventListener('keydown',e=>{if(/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+mark();
+
+/* 1 */
+const C1=[{k:'14 días',t:'Rápido de implementar',d:'Plantillas listas y acompañamiento en sitio: la mayoría de equipos opera en dos semanas.',e:'Ejemplo: una cadena de 40 tiendas migró en 12 días.'},
+{k:'99,95 %',t:'No se cae',d:'Infraestructura redundante en dos regiones y monitoreo permanente.',e:'Ejemplo: cero interrupciones durante la temporada alta de diciembre.'},
+{k:'< 1 hora',t:'Soporte que responde',d:'Atención en español por personas, por chat y teléfono, todos los días.',e:'Ejemplo: 94 % de los casos resueltos en el primer contacto.'}];
+$('c1').innerHTML=C1.map(c=>`<button aria-expanded="false"><span class="k">${c.k}</span><span class="t">${c.t}</span><span class="d">${c.d}</span><span class="e">${c.e}</span><span class="h">Toca para ver más</span></button>`).join('');
+$('c1').onclick=e=>{const b=e.target.closest('button');if(!b)return;const o=b.classList.toggle('open');b.setAttribute('aria-expanded',o);b.querySelector('.h').textContent=o?'Toca para cerrar':'Toca para ver más'};
+
+/* 2 */
+const s2=()=>{const d=+$('s2').value;$('s2v').textContent=d+(d===1?' día':' días');
+const M=[['Satisfacción',92-(d-1)*2.6,'%',100],['Recompra',66-(d-1)*2.3,'%',100],['Reclamos por mes',8+(d-1)*4.5,'',80],['Costo logístico',100+(14-d)*7,'índice',200]];
+$('s2b').innerHTML=M.map((m,i)=>`<div class="hb"><span>${m[0]}</span><span class="tr"><i class="${i>1?'c':''}" style="width:${Math.min(100,m[1]/m[3]*100)}%"></i></span><b>${fmt(m[1])}${m[2]==='%'?' %':''}</b></div>`).join('')+'<p class="mut" style="margin:4px 0 0">Costo logístico: índice 100 = entrega en 14 días.</p>'};
+$('s2').oninput=s2;s2();
+
+/* 3 */
+const L=[132,128,141,118,104,97,101,112,126,138,149,157],MS=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+const P={'T1':[0,2],'T2':[3,5],'T3':[6,8],'T4':[9,11],'Año':[0,11]};let per='T2';
+$('s3s').innerHTML=Object.keys(P).map(k=>`<button data-v="${k}">${k}</button>`).join('');
+const s3=$('s3');
+const draw3=()=>{const W=s3.clientWidth,H=s3.clientHeight,pl=40,pr=12,pt=14,pb=28,mn=80,mx=170;
+const x=i=>pl+i*(W-pl-pr)/11,y=v=>pt+(mx-v)/(mx-mn)*(H-pt-pb);const [a,b]=P[per];
+let g='';for(let v=80;v<=160;v+=40)g+=`<line x1="${pl}" x2="${W-pr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${pl-8}" y="${y(v)+4}" text-anchor="end" font-size="12" fill="var(--mut)">${v}</text>`;
+g+=`<rect x="${x(a)-10}" y="${pt}" width="${x(b)-x(a)+20}" height="${H-pt-pb}" fill="var(--soft)" rx="6"/>`;
+g+=`<polyline fill="none" stroke="var(--blue)" stroke-width="3" stroke-linejoin="round" points="${L.map((v,i)=>x(i)+','+y(v)).join(' ')}"/>`;
+const avg=L.slice(a,b+1).reduce((s,v)=>s+v,0)/(b-a+1);
+g+=`<line x1="${x(a)-10}" x2="${x(b)+10}" y1="${y(avg)}" y2="${y(avg)}" stroke="var(--coral)" stroke-dasharray="5 4" stroke-width="2"/>`;
+g+=L.map((v,i)=>`<circle cx="${x(i)}" cy="${y(v)}" r="${i>=a&&i<=b?5:3}" fill="${i>=a&&i<=b?'var(--blue)':'var(--paper)'}" stroke="var(--blue)" stroke-width="2"/>`).join('');
+g+=MS.map((m,i)=>(W<520&&i%2)?'':`<text x="${x(i)}" y="${H-8}" text-anchor="middle" font-size="12" fill="var(--mut)">${m}</text>`).join('');
+s3.innerHTML=g;
+const ch=(L[b]-L[a])/L[a]*100;
+$('s3t').innerHTML=`<div class="stat"><b>${fmt(avg)}</b><span>Promedio mensual (línea coral)</span></div><div class="stat"><b>${Math.max(...L.slice(a,b+1))}</b><span>Máximo del período</span></div><div class="stat"><b style="color:${ch<0?'var(--coral)':'var(--ok)'}">${ch>0?'+':''}${ch.toFixed(1).replace('.',',')} %</b><span>Variación ${MS[a]}–${MS[b]}</span></div>`;
+[...$('s3s').children].forEach(c=>c.classList.toggle('on',c.dataset.v===per))};
+$('s3s').onclick=e=>{const b=e.target.closest('button');if(b){per=b.dataset.v;draw3()}};
+const ro3=new ResizeObserver(draw3);ro3.observe(s3);
+
+/* 4 */
+const B=[{m:'Ene',p:[120,60,30]},{m:'Feb',p:[115,70,28]},{m:'Mar',p:[130,82,35]},{m:'Abr',p:[125,95,31]},{m:'May',p:[135,110,40]},{m:'Jun',p:[140,150,42]}];
+const PN=['Licencias','Suscripciones','Servicios'],PC=['var(--blue)','var(--coral)','var(--ok)'];let sel=5;
+const tot=r=>r.p.reduce((s,v)=>s+v,0),top4=Math.max(...B.map(tot));
+const s4=()=>{$('s4').innerHTML=B.map((r,i)=>`<button class="${i===sel?'on':''}" data-i="${i}" aria-label="${r.m}"><em>${tot(r)}</em><i style="height:${tot(r)/top4*82}%"></i><small>${r.m}</small></button>`).join('');
+const r=B[sel],T=tot(r),C=2*Math.PI*60;let off=0;
+const arcs=r.p.map((v,i)=>{const l=v/T*C,s=`<circle r="60" cx="80" cy="80" fill="none" stroke="${PC[i]}" stroke-width="26" stroke-dasharray="${l} ${C-l}" stroke-dashoffset="${-off}" transform="rotate(-90 80 80)"/>`;off+=l;return s}).join('');
+$('s4d').innerHTML=`<svg viewBox="0 0 160 160" role="img" aria-label="Composición de ${r.m}">${arcs}<text x="80" y="78" text-anchor="middle" font-size="22" font-weight="700" fill="var(--ink)" font-family="Inter Tight">${T}</text><text x="80" y="98" text-anchor="middle" font-size="11" fill="var(--mut)">${r.m} · millones</text></svg><div class="leg">${r.p.map((v,i)=>`<span><i style="background:${PC[i]}"></i>${PN[i]}<b>${v} · ${Math.round(v/T*100)} %</b></span>`).join('')}</div>`};
+$('s4').onclick=e=>{const b=e.target.closest('button');if(b){sel=+b.dataset.i;s4()}};s4();
+
+/* 5 */
+const Y=[[2018,3,4,1,'Fundación en un garaje de Medellín'],[2019,9,30,1,'Primer cliente corporativo'],[2020,14,85,1,'Paso total al trabajo remoto'],[2021,22,160,2,'Apertura de oficina en Bogotá'],[2022,35,290,2,'Ronda de inversión semilla'],[2023,51,460,3,'Llegada a Cali'],[2024,68,720,4,'Lanzamiento de la app móvil'],[2025,84,1050,4,'Certificación ISO 27001'],[2026,102,1420,5,'Sede en Barranquilla']];
+$('s5l').innerHTML=Y.map((r,i)=>`<span data-i="${i}">${window.innerWidth<520?String(r[0]).slice(2):r[0]}</span>`).join('');
+const s5=()=>{const r=Y[+$('s5').value];$('s5y').textContent=r[0];$('s5h').textContent=r[4];
+$('s5t').innerHTML=`<div class="stat"><b>${r[1]}</b><span>Personas en el equipo</span></div><div class="stat"><b>${fmt(r[2])}</b><span>Clientes activos</span></div><div class="stat"><b>${r[3]}</b><span>Ciudades</span></div>`;
+[...$('s5l').children].forEach((c,i)=>c.classList.toggle('on',i===+$('s5').value))};
+$('s5').oninput=s5;s5();
+
+/* 6 */
+const G=[{n:'Diseño',d:3,dep:[]},{n:'Desarrollo',d:5,dep:[0]},{n:'Contenidos',d:3,dep:[0]},{n:'Pruebas',d:2,dep:[1]},{n:'Capacitación',d:2,dep:[1,2]},{n:'Lanzamiento',d:1,dep:[3,4]}];const DL=12,WK=16;
+const s6=()=>{G.forEach(t=>{t.s=Math.max(0,...t.dep.map(j=>G[j].e));t.e=t.s+t.d});const end=Math.max(...G.map(t=>t.e));
+$('s6h').textContent=end<=DL?`El proyecto termina en la semana ${end}, ${DL-end===0?'justo en':(DL-end)+' antes de'} la fecha límite`:`Con estos plazos el proyecto se atrasa ${end-DL} semana${end-DL>1?'s':''}`;
+$('s6').innerHTML=G.map((t,i)=>`<div class="gr"><span>${t.n}</span><span class="ctl"><button data-i="${i}" data-d="-1" aria-label="Menos">−</button><span>${t.d}</span><button data-i="${i}" data-d="1" aria-label="Más">+</button></span><span class="lane"><i style="left:${t.s/WK*100}%;width:${t.d/WK*100}%;${t.e>DL?'background:var(--coral)':''}"></i><span class="dl" style="left:${DL/WK*100}%"></span></span></div>`).join('')+`<div class="gr mut"><span></span><span></span><span class="yrs"><span>Sem 0</span><span>Sem 8</span><span>Sem 16</span></span></div>`};
+$('s6').onclick=e=>{const b=e.target.closest('button[data-i]');if(!b)return;const t=G[+b.dataset.i];t.d=Math.max(1,Math.min(8,t.d+ +b.dataset.d));s6()};s6();
+
+/* 7 */
+const O={n:'Ana Ruiz',r:'Gerente del proyecto',f:'Responde por el presupuesto, el cronograma y la relación con el comité directivo.'};
+const A=[{a:'Producto',p:[['Laura Gómez','Líder de producto','Define prioridades y escribe los requisitos con los usuarios.'],['Diego Pardo','Diseño UX','Prototipos, pruebas con usuarios e interfaz.']]},
+{a:'Tecnología',p:[['Camilo Torres','Líder técnico','Arquitectura, revisión de código y despliegues.'],['Sofía Rincón','Ingeniera de datos','Integración de bases de datos, tableros e informes.'],['Andrés Mejía','Desarrollador','Aplicación web y móvil.']]},
+{a:'Operación',p:[['Paula Vargas','Contratos y compras','Contratos, proveedores y pagos.'],['Julián Ortiz','Soporte y capacitación','Mesa de ayuda y formación de usuarios.']]}];
+const all=[O,...A.flatMap(x=>x.p.map(p=>({n:p[0],r:p[1],f:p[2],a:x.a})))];
+const card=(p,cls)=>`<button class="${cls}" data-n="${p.n}"><b>${p.n}</b><span>${p.r}</span></button>`;
+$('s7').innerHTML=card(O,'boss')+`<div class="areas">${A.map(x=>`<div class="area"><h3>${x.a}</h3>${x.p.map(p=>card({n:p[0],r:p[1]},'p')).join('')}</div>`).join('')}</div>`;
+const show7=p=>{$('s7w').innerHTML=p?`<b>${p.n}</b> · ${p.r}${p.a?' · '+p.a:''}<br><span class="mut">${p.f}</span>`:'<span class="mut">Selecciona a alguien para ver su rol.</span>'};
+const s7=()=>{const q=$('s7q').value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');const btns=[...$('s7').querySelectorAll('button')];let hits=[];
+btns.forEach(b=>{const p=all.find(x=>x.n===b.dataset.n);const txt=(p.n+' '+p.r+' '+p.f+' '+(p.a||'')).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');const h=q&&txt.includes(q);if(h)hits.push(p);b.classList.toggle('hit',!!h);b.classList.toggle('dim',!!q&&!h)});
+show7(hits.length===1?hits[0]:null);if(q&&!hits.length)$('s7w').innerHTML='<span class="mut">Nadie coincide con esa búsqueda.</span>'};
+$('s7q').oninput=s7;$('s7').onclick=e=>{const b=e.target.closest('button');if(!b)return;$('s7q').value=b.dataset.n;s7()};show7(null);
+
+/* 8 */
+$('s8').innerHTML='<i></i>'.repeat(100);
+const s8=()=>{const n=Math.max(1,+$('s8n').value||1),p=+$('s8p').value,k=n*p/100;$('s8pv').textContent=p+' %';
+[...$('s8').children].forEach((c,i)=>c.classList.toggle('on',i<p));
+const r=Math.round(p/10);$('s8h').textContent=`${r===0?'Menos de 1':r} de cada 10 personas usan la app todos los días`;
+$('s8t').innerHTML=`<div class="stat"><b>${fmt(k)}</b><span>personas de ${fmt(n)}</span></div><div class="stat"><b>${fmt(n-k)}</b><span>aún no la usan a diario</span></div>`};
+$('s8n').oninput=s8;$('s8p').oninput=s8;s8();
+
+/* 9 */
+const PL=[['Básico',29],['Estándar',69],['Empresa',149]];
+const F=[['Usuarios incluidos','3','15','Ilimitados'],['Almacenamiento','10 GB','200 GB','2 TB'],['Informes automáticos',0,1,1],['Integraciones (API)',0,1,1],['Soporte telefónico',0,0,1],['Gestor de cuenta dedicado',0,0,1]];let bill='m';
+const s9=()=>{const f=bill==='a'?0.85:1;
+$('s9').innerHTML=`<thead><tr><th>Plan</th>${PL.map((p,i)=>`<th class="${i===1?'rec':''}">${p[0]}${i===1?'<br><small style="font-weight:500">Recomendado</small>':''}</th>`).join('')}</tr></thead><tbody><tr><td>Precio por mes</td>${PL.map((p,i)=>`<td class="${i===1?'rec':''}"><span class="price">US$ ${fmt(p[1]*f)}</span>${bill==='a'?`<br><small class="mut">US$ ${fmt(p[1]*f*12)} al año</small>`:''}</td>`).join('')}</tr>${F.map(r=>`<tr><td>${r[0]}</td>${r.slice(1).map((v,i)=>`<td class="${i===1?'rec':''}">${v===1?'<span class="yes">Sí</span>':v===0?'<span class="no">—</span>':v}</td>`).join('')}</tr>`).join('')}</tbody>`;
+[...$('s9s').children].forEach(c=>c.classList.toggle('on',c.dataset.v===bill))};
+$('s9s').onclick=e=>{const b=e.target.closest('button');if(b){bill=b.dataset.v;s9()}};s9();
+
+/* 10 */
+const FA=[['Radicación en papel',1],['Revisión manual',3],['Firma del jefe',2],['Archivo físico',1]],FP=[['Formulario en línea',0.2],['Revisión con reglas automáticas',0.5],['Firma electrónica',0.5]];
+const sum=a=>a.reduce((s,x)=>s+x[1],0);let fv='b';
+const lane=(t,a,cls)=>`<div class="lanef ${cls}"><h3>${t}<b>${String(sum(a)).replace('.',',')} días</b></h3><div class="steps">${a.map((s,i)=>`<div class="st" style="flex:${Math.max(s[1],0.6)} 1 0"><span>${s[0]}</span><b>${String(s[1]).replace('.',',')} d</b></div>${i<a.length-1?'<span class="mut" style="align-self:center">→</span>':''}`).join('')}</div></div>`;
+const s10=()=>{$('s10').innerHTML=lane('Proceso actual',FA,fv==='p'?'off':'')+lane('Proceso propuesto',FP,'new '+(fv==='a'?'off':''));
+$('s10v').textContent=String((sum(FA)-sum(FP)).toFixed(1)).replace('.',',')+' días';[...$('s10s').children].forEach(c=>c.classList.toggle('on',c.dataset.v===fv))};
+$('s10s').onclick=e=>{const b=e.target.closest('button');if(b){fv=b.dataset.v;s10()}};s10();
+
+/* 11 */
+const AX={imp:'Impacto',esf:'Esfuerzo',cos:'Costo',rie:'Riesgo',urg:'Urgencia'};
+const PR=[{n:'Nueva app',imp:8,esf:8,cos:9,rie:6,urg:5},{n:'Chat de soporte',imp:6,esf:3,cos:3,rie:2,urg:8},{n:'Migrar a la nube',imp:9,esf:7,cos:7,rie:7,urg:6},{n:'Rediseño web',imp:5,esf:5,cos:4,rie:3,urg:3},{n:'Tablero de ventas',imp:7,esf:2,cos:2,rie:1,urg:7},{n:'ERP nuevo',imp:8,esf:9,cos:10,rie:9,urg:2},{n:'Encuesta NPS',imp:3,esf:1,cos:1,rie:1,urg:4}];
+const opt=v=>Object.entries(AX).map(([k,t])=>`<option value="${k}" ${k===v?'selected':''}>${t}</option>`).join('');
+$('s11x').innerHTML=opt('esf');$('s11y').innerHTML=opt('imp');
+const s11=()=>{const x=$('s11x').value,y=$('s11y').value;
+$('s11').innerHTML=`<span class="q" style="left:0;top:0">${AX[y]} alto · ${AX[x]} bajo</span><span class="q" style="right:0;top:0">Ambos altos</span><span class="q" style="left:0;bottom:0">Ambos bajos</span><span class="ax" style="left:50%;bottom:-24px;transform:translateX(-50%)">${AX[x]} →</span><span class="ax" style="left:-24px;top:50%;transform:rotate(-90deg) translateX(50%);transform-origin:left top">${AX[y]} →</span>`+
+PR.map(p=>`<span class="dot" style="left:${p[x]*9+5}%;bottom:${p[y]*9+5}%"><i></i><span>${p.n}</span></span>`).join('')};
+$('s11x').onchange=s11;$('s11y').onchange=s11;s11();
+
+/* 12 */
+const R=[['Visita → registro',12,1,40],['Registro → demo',35,5,80],['Demo → compra',25,5,80]];const V=10000,TK=480;
+$('s12c').innerHTML=R.map((r,i)=>`<label>${r[0]} <b id="r${i}v"></b><input type="range" id="r${i}" min="${r[2]}" max="${r[3]}" value="${r[1]}"></label>`).join('');
+const s12=()=>{const rs=R.map((r,i)=>+$('r'+i).value);rs.forEach((v,i)=>$('r'+i+'v').textContent=v+' %');
+const st=[V];rs.forEach(v=>st.push(st[st.length-1]*v/100));const N=['Visitas','Registros','Demos','Compras'];
+$('s12').innerHTML=st.map((v,i)=>`<div style="width:${Math.max(18,Math.sqrt(v/V)*100)}%"><b>${fmt(v)}</b> ${N[i]}</div>`).join('');
+$('s12h').textContent=`${fmt(st[3])} compras al mes: US$ ${fmt(st[3]*TK)} en ventas`};
+R.forEach((r,i)=>$('r'+i).oninput=s12);s12();
+}
+</script>
+<script>{const post=()=>{try{parent.postMessage({deckHeight:document.documentElement.scrollHeight,deck:location.pathname.split('/').pop()},'*')}catch(e){}};new ResizeObserver(post).observe(document.body);window.addEventListener('load',post)}</script>
+</body>
+</html>

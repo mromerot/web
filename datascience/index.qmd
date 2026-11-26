@@ -11,6 +11,26 @@ Esta sección reúne recursos de ciencia de datos: herramientas de trabajo (Quar
 :::::: mrw-cards-grid
 ::: mrw-card
 ::: mrw-card-header
+[ARCO](arco.qmd)
+:::
+
+::: mrw-card-body
+Datos listos para el análisis y optimizados para la nube (*Analysis-Ready, Cloud-Optimized*): definición, Zarr y conjuntos virtuales (Kerchunk, VirtualiZarr, Icechunk), Pangeo Forge y experiencias de NCAR, NOAA y NASA.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Bases de datos](bases-de-datos.qmd)
+:::
+
+::: mrw-card-body
+Tipos de bases de datos y formatos modernos para ciencia de datos en la nube: Parquet, datos geográficos (GeoParquet, COG, PMTiles), cubos de datos y Zarr.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
 [Ciencia de datos](cienciadedatos.qmd)
 :::
 
@@ -21,31 +41,41 @@ Lecturas de referencia sobre ciencia de datos.
 
 ::: mrw-card
 ::: mrw-card-header
-[Quarto](quarto.qmd)
+[Claude](claude.qmd)
 :::
 
 ::: mrw-card-body
-Atajos y recursos de ayuda para trabajar con Quarto.
+Recursos y cursos sobre Claude y la construcción de *agent skills*.
 :::
 :::
 
 ::: mrw-card
 ::: mrw-card-header
-[Myst](myst.qmd)
+[Claude Skills (Slides)](claude-slides.qmd)
 :::
 
 ::: mrw-card-body
-Myst como alternativa a Quarto para publicación científica reproducible.
+Guía completa para construir *Skills* para Claude, en formato de presentación.
 :::
 :::
 
 ::: mrw-card
 ::: mrw-card-header
-[Markdown](markdown.md)
+[D3](d3.qmd)
 :::
 
 ::: mrw-card-body
-Introducción a la sintaxis de Markdown.
+D3, Observable y JavaScript para visualización de datos en la web.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Experimento con D3](d3-experiment.qmd)
+:::
+
+::: mrw-card-body
+Ejercicios prácticos con D3.js en Observable.
 :::
 :::
 
@@ -73,17 +103,17 @@ Recursos de ayuda para trabajar con Google Colab.
 
 ::: mrw-card
 ::: mrw-card-header
-[Jupyter Notebook](jupyter-notebook.ipynb)
+[Gráficas HTML](graficas-html.qmd)
 :::
 
 ::: mrw-card-body
-Introducción al uso de Jupyter Notebook para ciencia de datos.
+Doce plantillas de diapositivas HTML interactivas y autocontenidas, en versión genérica y aplicada a la gestión del riesgo de desastres.
 :::
 :::
 
 ::: mrw-card
 ::: mrw-card-header
-[Graficas Python y R](graficas-python-r.qmd)
+[Gráficas Python y R](graficas-python-r.qmd)
 :::
 
 ::: mrw-card-body
@@ -103,26 +133,6 @@ Lecturas y videos introductorios sobre herramientas de ciencia de datos.
 
 ::: mrw-card
 ::: mrw-card-header
-[Inteligencia artificial](ia.qmd)
-:::
-
-::: mrw-card-body
-Recursos de inteligencia artificial para el trabajo diario.
-:::
-:::
-
-::: mrw-card
-::: mrw-card-header
-[VS Code](vs-code.qmd)
-:::
-
-::: mrw-card-body
-Qué es Visual Studio Code y cómo aprovecharlo para ciencia de datos.
-:::
-:::
-
-::: mrw-card
-::: mrw-card-header
 [Hugging Face](hugging-face.qmd)
 :::
 
@@ -133,21 +143,21 @@ Qué es Hugging Face y su papel en el ecosistema de modelos de aprendizaje autom
 
 ::: mrw-card
 ::: mrw-card-header
-[Bases de datos](bases-de-datos.qmd)
+[Inteligencia artificial](ia.qmd)
 :::
 
 ::: mrw-card-body
-Tipos de bases de datos y formatos modernos para ciencia de datos en la nube: Parquet, datos geográficos (GeoParquet, COG, PMTiles), cubos de datos y Zarr.
+Recursos de inteligencia artificial para el trabajo diario.
 :::
 :::
 
 ::: mrw-card
 ::: mrw-card-header
-[ARCO](arco.qmd)
+[Jupyter Notebook](jupyter-notebook.ipynb)
 :::
 
 ::: mrw-card-body
-Datos listos para el análisis y optimizados para la nube (*Analysis-Ready, Cloud-Optimized*): definición, Zarr y conjuntos virtuales (Kerchunk, VirtualiZarr, Icechunk), Pangeo Forge y experiencias de NCAR, NOAA y NASA.
+Introducción al uso de Jupyter Notebook para ciencia de datos.
 :::
 :::
 
@@ -163,41 +173,41 @@ Mapas interactivos de Colombia con distintas tecnologías (Observable/TopoJSON, 
 
 ::: mrw-card
 ::: mrw-card-header
-[D3](d3.qmd)
+[Markdown](markdown.md)
 :::
 
 ::: mrw-card-body
-D3, Observable y JavaScript para visualización de datos en la web.
+Introducción a la sintaxis de Markdown.
 :::
 :::
 
 ::: mrw-card
 ::: mrw-card-header
-[Experimento con D3](d3-experiment.qmd)
+[Myst](myst.qmd)
 :::
 
 ::: mrw-card-body
-Ejercicios prácticos con D3.js en Observable.
+Myst como alternativa a Quarto para publicación científica reproducible.
 :::
 :::
 
 ::: mrw-card
 ::: mrw-card-header
-[Claude](claude.qmd)
+[Quarto](quarto.qmd)
 :::
 
 ::: mrw-card-body
-Recursos y cursos sobre Claude y la construcción de *agent skills*.
+Atajos y recursos de ayuda para trabajar con Quarto.
 :::
 :::
 
 ::: mrw-card
 ::: mrw-card-header
-[Claude Skills (Slides)](claude-slides.qmd)
+[VS Code](vs-code.qmd)
 :::
 
 ::: mrw-card-body
-Guía completa para construir *Skills* para Claude, en formato de presentación.
+Qué es Visual Studio Code y cómo aprovecharlo para ciencia de datos.
 :::
 :::
 ::::::

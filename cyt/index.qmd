@@ -11,16 +11,6 @@ Esta sección reúne recursos sobre la práctica de la ciencia: la escritura y p
 :::::: mrw-cards-grid
 ::: mrw-card
 ::: mrw-card-header
-[Escritura y publicación académica](escrituraypublicacionacademica/index.qmd)
-:::
-
-::: mrw-card-body
-El proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.
-:::
-:::
-
-::: mrw-card
-::: mrw-card-header
 [Ciencia reproducible](cienciareproduc.qmd)
 :::
 
@@ -41,6 +31,26 @@ Qué es la ciencia transdisciplinar, cómo se construyen proyectos TD paso a pas
 
 ::: mrw-card
 ::: mrw-card-header
+[Código abierto, GitHub e innovación en GRD](github-innovacion-grd.qmd)
+:::
+
+::: mrw-card-body
+Qué miden los rankings internacionales basados en GitHub (Global Innovation Index, Innovation Graph, OpenSSF) y qué revela un inventario de 400 repositorios colombianos sobre desastres y clima.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Escritura y publicación académica](escrituraypublicacionacademica/index.qmd)
+:::
+
+::: mrw-card-body
+El proceso de escritura científica y su publicación: desde la construcción de oraciones y párrafos hasta el estilo científico, el proceso editorial, la bibliometría y la ética en la publicación.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
 [Interfaz ciencia-política-sociedad](interfaz-cps.qmd)
 :::
 
@@ -51,11 +61,11 @@ Qué es la interfaz ciencia-política-sociedad: los espacios, procesos y organiz
 
 ::: mrw-card
 ::: mrw-card-header
-[Código abierto, GitHub e innovación en GRD](github-innovacion-grd.qmd)
+[Modelo nacional de medición](modelo-medicion.qmd)
 :::
 
 ::: mrw-card-body
-Qué miden los rankings internacionales basados en GitHub (Global Innovation Index, Innovation Graph, OpenSSF) y qué revela un inventario de 400 repositorios colombianos sobre desastres y clima.
+Cómo reconoce y clasifica Minciencias a los grupos de investigación y a los investigadores: resumen del documento conceptual de 2024, sección por sección.
 :::
 :::
 

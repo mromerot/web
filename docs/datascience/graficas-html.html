@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mauricio Romero Torres">
+
+<title>Gráficas HTML – Inicio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c0268bb2cd26ea8ad2ddef1ccaf3bc3a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-4910f9121cc0cf878839b371e47b8836.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
+</script>
+<!-- Google Site Verification -->
+<!-- Reemplaza XXXXX con tu código de verificación de Google Search Console -->
+<!-- <meta name="google-site-verification" content="XXXXX" /> -->
+
+<!-- Meta tags adicionales para SEO -->
+<meta name="author" content="Mauricio Romero Torres">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@mauricioromerot">
+
+<!-- Schema.org markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mauricio Romero Torres",
+  "jobTitle": "Gestor de ciencia y tecnología",
+  "url": "https://mromerot.github.io/web/",
+  "sameAs": [
+    "https://x.com/mauricioromerot",
+    "https://www.linkedin.com/in/mauricio-romero-torres-1b33b95/",
+    "https://scholar.google.com/citations?user=n484vskAAAAJ"
+  ]
+}
+</script>
+
+
+<meta property="og:title" content="Gráficas HTML – Inicio">
+<meta property="og:description" content="Ventajas, referentes y buenas prácticas, con 12 plantillas genéricas, su versión en gestión del riesgo y 6 mapas de Colombia">
+<meta property="og:site_name" content="Inicio">
+<meta name="twitter:title" content="Gráficas HTML – Inicio">
+<meta name="twitter:description" content="Ventajas, referentes y buenas prácticas, con 12 plantillas genéricas, su versión en gestión del riesgo y 6 mapas de Colombia">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datascience/index.html">Ciencia de datos</a></li><li class="breadcrumb-item"><a href="../datascience/graficas-html.html">Gráficas HTML</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Inicio</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/amazonas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amazonas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/ambientales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas ambientales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/ambientales/erosioncostera.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Erosión costera</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/ambientales/incendiosforestales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Incendios forestales</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/biologicos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas biológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/biologicos/covid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">COVID-19</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/extraterrestre/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/extraterrestre/amenazasextraterrestres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/geologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas geológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/falladeterreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Falla de terreno</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/riesgosismico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgo sísmico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/sismicidad-colombia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sismicidad de Colombia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/tsunami.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tsunami</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/volcanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Volcanes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/hidrol-meteorologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas hidrológicas y meteorológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/elnino.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">El Niño / La Niña</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/huracanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Huracanes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/inundaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/inundaciones-repentinas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones repentinas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/olasdecalor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Olas de calor</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/sociales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas sociales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sociales/migracion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Migración</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/tecnologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/tecnologicas/amenazastecnol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/cienciaytecnologia/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/cienciaytecnologia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/estado-ciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estado de la ciencia 2024</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/hoja-de-ruta-ct.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hoja de ruta de ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/marco-sendai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Marco de Sendai</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/ciudades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciudades</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/conocimientodelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conocimiento del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">Cursos, redes y recursos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cursos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cursos en GRD</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/plataformas-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plataformas y redes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/repositorios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repositorios FAIR</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/educacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/gestiondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/conocimiento-indicadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indicadores de riesgo nacionales y mundiales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/manejodedesastres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manejo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/reducciondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reducción del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sidro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SIDRo (Los Rosales)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sincelejo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sincelejo (EVA)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sistemas de alerta temprana</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/teoria.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teoría de riesgos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/glosario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Terminología</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../gcc/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gcc/estres-termico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estrés térmico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gcc/gestion-cambio-climatico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../gestiondeproyectos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/skills-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Competencias clave en la gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/conpes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CONPES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/dofa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DOFA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/estrategia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estrategia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../gestiondeproyectos/financiacion/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Financiación</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/financiacion/fondo-verde-clima.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fondo Verde para el Clima</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/gestionproyectosciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos de CTeI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/gestiontecnologiainnovacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de tecnología e innovación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/gestion-conocimiento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del conocimiento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/impacto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Impacto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/innovacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Innovación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/liderazgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Liderazgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/Linea-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Línea base</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/mapa-actores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa de actores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/metodologias-pm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metodologías de gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/pestel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PESTEL</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/riesgos-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgos en proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/sostenibilidad-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sostenibilidad de proyectos de CTeI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/swot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SWOT</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../cyt/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/cienciareproduc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia reproducible</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/transdisciplina.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia transdisciplinar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/github-innovacion-grd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Código abierto, GitHub e innovación en GRD</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../cyt/escrituraypublicacionacademica/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/escrituraypublicacionacademica/escrituraypublicacionacademica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/escrituraypublicacionacademica/parrafos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Párrafos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/escrituraypublicacionacademica/typst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Typst</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/interfaz-cps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interfaz ciencia-política-sociedad</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/modelo-medicion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modelo nacional de medición</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/trl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nivel de Madurez Tecnológica (TRL)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/transferencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transferencia de conocimiento y tecnologías</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../educacion/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../educacion/docenciaeducacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Docencia y educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../educacion/ova/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Objetos virtuales de aprendizaje (OVA)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ecolyconserv/ecologiayconservacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ecología y conservación marina</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datascience/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/arco.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ARCO</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/bases-de-datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bases de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/cienciadedatos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/claude.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/claude-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude Skills (Slides)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/d3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/d3-experiment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Experimento con D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GitHub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/google-colab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Google Colab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/graficas-html.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Gráficas HTML</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/graficas-python-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gráficas Python y R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/hugging-face.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hugging Face</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/ilustraciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ilustraciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/ia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inteligencia artificial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/jupyter-notebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter Notebook</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datascience/mapas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_nri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índice de Riesgo (NRI)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_observable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (Observable / TopoJSON)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_pmtiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (PMTiles)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/markdown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Markdown</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/myst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Myst</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/vs-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math-stats/math-stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matemáticas y estadística</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math-stats/R/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R: minicurso</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/00-fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 0. Fundamentos de R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/01-programacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 1. Programación: flujo, bucles y funciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/02-datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 2. Manejo de datos con tidyverse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/03-visualizacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 3. Visualización con ggplot2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/04-estadistica-basica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 4. Estadística básica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/05-modelos-lineales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 5. Regresión lineal y ANOVA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/06-modelos-mixtos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 6. Modelos mixtos y medidas repetidas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/07-gam-series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 7. GAM y series de tiempo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/08-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 8. Análisis de redes con igraph</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/09-espacial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 9. Análisis espacial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/10-aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 10. Aplicaciones y proyectos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../vidalaboral/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vidalaboral/cafe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Café</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vidalaboral/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vidalaboral/vidalaboral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul class="collapse">
+  <li><a href="#por-qué-gráficas-en-html" id="toc-por-qué-gráficas-en-html" class="nav-link active" data-scroll-target="#por-qué-gráficas-en-html">Por qué gráficas en HTML</a></li>
+  <li><a href="#buenas-prácticas-para-generarlas" id="toc-buenas-prácticas-para-generarlas" class="nav-link" data-scroll-target="#buenas-prácticas-para-generarlas">Buenas prácticas para generarlas</a></li>
+  <li><a href="#las-plantillas" id="toc-las-plantillas" class="nav-link" data-scroll-target="#las-plantillas">Las plantillas</a></li>
+  <li><a href="#mapas-de-colombia-en-6-plantillas" id="toc-mapas-de-colombia-en-6-plantillas" class="nav-link" data-scroll-target="#mapas-de-colombia-en-6-plantillas">Mapas de Colombia en 6 plantillas</a></li>
+  <li><a href="#ver-también" id="toc-ver-también" class="nav-link" data-scroll-target="#ver-también">Ver también</a></li>
+  </ul>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Informar sobre problema</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datascience/index.html">Ciencia de datos</a></li><li class="breadcrumb-item"><a href="../datascience/graficas-html.html">Gráficas HTML</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Gráficas HTML</h1>
+<p class="subtitle lead">Ventajas, referentes y buenas prácticas, con 12 plantillas genéricas, su versión en gestión del riesgo y 6 mapas de Colombia</p>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mauricio Romero Torres </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">26 de noviembre de 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de última modificación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">26 de noviembre de 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="por-qué-gráficas-en-html" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-gráficas-en-html">Por qué gráficas en HTML</h2>
+<p>Una gráfica HTML es una página que dibuja los datos con SVG, Canvas o WebGL dentro del navegador. Su mayor ventaja es que se lee igual en cualquier dispositivo sin instalar nada y que se puede tocar: filtrar, comparar escenarios, mover un umbral o pasar el puntero para ver el valor exacto. Un solo archivo autocontenido viaja por correo, se inserta en un sitio Quarto con un <code>&lt;iframe&gt;</code>, se publica en GitHub Pages y se versiona en git como cualquier texto. Además, ahora un asistente de IA puede generar una a partir de una descripción en lenguaje natural, lo que acorta mucho el camino entre la idea y el prototipo.</p>
+<p>Sus desventajas aparecen cuando la gráfica tiene que vivir fuera de la pantalla. En un PDF o un documento impreso se pierde la interacción, y hay que prever una versión estática. Si depende de bibliotecas o de datos cargados desde internet, puede romperse con el tiempo, por eso conviene fijar versiones o, mejor, no depender de ellas. El código tiene más piezas que una imagen (estilos, scripts, accesibilidad, modo oscuro), y una gráfica generada por IA puede verse bien y estar mal: hay que revisar datos, escalas y colores antes de publicarla. Con decenas de miles de elementos, el SVG se vuelve lento y hace falta pasar a Canvas o WebGL.</p>
+<section id="diez-referentes-en-github" class="level3">
+<h3 class="anchored" data-anchor-id="diez-referentes-en-github">Diez referentes en GitHub</h3>
+<p>Estos repositorios marcan el estado del arte de la visualización en la web, desde las bibliotecas de base hasta los componentes listos para tableros y las <em>skills</em> con las que un agente de IA genera páginas. Las estrellas son las que tenían en GitHub el 26 de noviembre de 2026.</p>
+<ol type="1">
+<li><strong><a href="https://github.com/d3/d3">D3.js</a></strong> (114 000 ★, ISC). La base de casi toda la visualización web: une datos a elementos SVG o Canvas y da control total sobre cada marca. Exige más código, pero no tiene techo.</li>
+<li><strong><a href="https://github.com/apache/echarts">Apache ECharts</a></strong> (68 000 ★, Apache-2.0). Gráficas declaradas con un objeto de configuración, con mapas, series grandes y salida en Canvas o SVG. Muy usado en tableros institucionales.</li>
+<li><strong><a href="https://github.com/shadcn-ui/ui">shadcn/ui Charts</a></strong> (129 000 ★, MIT). Componentes de gráficas que se copian al proyecto y se construyen sobre <a href="https://github.com/recharts/recharts">Recharts</a>; toman los colores del tema del sitio. Es el estilo que generan herramientas como v0 de Vercel.</li>
+<li><strong><a href="https://github.com/tremorlabs/tremor">Tremor</a></strong> (3700 ★, Apache-2.0). Componentes de React y Tailwind para tableros y métricas. <a href="https://vercel.com/blog/vercel-acquires-tremor">Vercel lo adquirió en enero de 2025</a> y liberó gratis todos sus bloques.</li>
+<li><strong><a href="https://github.com/plotly/plotly.js">Plotly.js</a></strong> (18 000 ★, MIT). Gráficas científicas interactivas; es el motor que usan Plotly para Python y R al exportar un HTML independiente.</li>
+<li><strong><a href="https://github.com/observablehq/plot">Observable Plot</a></strong> (5400 ★, ISC). Una gramática concisa de marcas y transformaciones, de los creadores de D3, ideal para explorar datos con pocas líneas.</li>
+<li><strong><a href="https://github.com/vega/vega-lite">Vega-Lite</a></strong> (5600 ★, BSD-3). Gráficas descritas en JSON; es la base de Altair en Python y facilita que una IA genere especificaciones válidas.</li>
+<li><strong><a href="https://github.com/visgl/deck.gl">deck.gl</a></strong> (15 000 ★, MIT). Capas en WebGL para millones de puntos geográficos: trayectorias, mallas hexagonales y 3D.</li>
+<li><strong><a href="https://github.com/maplibre/maplibre-gl-js">MapLibre GL JS</a></strong> (12 000 ★). Mapas vectoriales abiertos con teselas y PMTiles; es la herramienta de los <a href="../datascience/mapas/index.html">mapas interactivos</a> de este sitio.</li>
+<li><strong><a href="https://github.com/anthropics/skills">Anthropic Skills</a></strong> (201 000 ★). Colección de <em>skills</em> para agentes de IA. <em>frontend-design</em> produce interfaces con diseño cuidado y <em>web-artifacts-builder</em> arma páginas HTML complejas con React, Tailwind y shadcn/ui. La licencia varía según la <em>skill</em>.</li>
+</ol>
+</section>
+</section>
+<section id="buenas-prácticas-para-generarlas" class="level2">
+<h2 class="anchored" data-anchor-id="buenas-prácticas-para-generarlas">Buenas prácticas para generarlas</h2>
+<ol type="1">
+<li><strong>Una gráfica, un mensaje.</strong> El título dice el hallazgo («Ocho departamentos mejoran»), no el tema («Indicador por departamento»).</li>
+<li><strong>Primero la forma, después el color.</strong> Elige la gráfica según la tarea: comparar magnitudes, mostrar cambio en el tiempo, ubicar en el territorio o destacar una sola cifra, que a veces es mejor como número grande que como gráfica.</li>
+<li><strong>Color según su función.</strong> Un solo tono de claro a oscuro para magnitudes, dos tonos con gris en el centro para cambios con signo y colores distintos, en orden fijo, para categorías. Verifica la paleta para daltonismo con una herramienta, no a ojo.</li>
+<li><strong>Nunca dos ejes verticales.</strong> Si dos medidas tienen escalas distintas, van en dos gráficas.</li>
+<li><strong>Identidad nunca solo por color.</strong> Leyenda cuando hay dos o más series y etiquetas directas en las marcas importantes; los textos van en color de texto, no en el color de la serie.</li>
+<li><strong>Interacción con propósito.</strong> Información al pasar el puntero, controles en una sola fila sobre la gráfica y una vista de tabla con los datos.</li>
+<li><strong>Accesible y adaptable.</strong> <code>aria-label</code> en cada gráfica, foco visible para teclado, controles de al menos 44 px en el celular y nada de desplazamiento horizontal.</li>
+<li><strong>Autocontenida y liviana.</strong> Sin dependencias, o con versiones exactas desde un CDN confiable. Simplifica geometrías y datos: los seis mapas de abajo pesan 77 KB en total.</li>
+<li><strong>Datos honestos.</strong> Marca los valores ilustrativos, cita la fuente de los reales y conserva el script que los produjo.</li>
+<li><strong>Mírala antes de publicarla.</strong> Ábrela en escritorio y en celular, revisa que no se superpongan las etiquetas y prueba cada control.</li>
+</ol>
+</section>
+<section id="las-plantillas" class="level2">
+<h2 class="anchored" data-anchor-id="las-plantillas">Las plantillas</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Cómo usarlas">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Cómo usarlas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Qué son:</strong> cada diapositiva es un archivo HTML autocontenido, sin bibliotecas externas. Se puede tocar, arrastrar o alternar.</li>
+<li><strong>Cómo navegar:</strong> desliza de lado, usa los botones ‹ › o las flechas del teclado, o salta con los botones numerados.</li>
+<li><strong>Cómo pedir una nueva:</strong> a un asistente de IA basta con pedirla por el nombre de la plantilla. Por ejemplo: <em>«Haz una diapositiva HTML tipo embudo con la cadena de alerta temprana: población en riesgo, recibe la alerta, la entiende, evacúa»</em>.</li>
+<li><strong>Datos:</strong> todas las cifras son ficticias o ilustrativas, salvo las que se indican en cada diapositiva.</li>
+</ul>
+</div>
+</div>
+<section id="las-12-plantillas" class="level3">
+<h3 class="anchored" data-anchor-id="las-12-plantillas">Las 12 plantillas</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nº</th>
+<th>Plantilla</th>
+<th>Interacción</th>
+<th>Ejemplo genérico</th>
+<th>Ejemplo en gestión del riesgo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01</td>
+<td>Tarjetas con viñetas</td>
+<td>Tocar para desplegar detalle</td>
+<td>Razones para elegir un servicio</td>
+<td>Procesos de la Ley 1523 de 2012</td>
+</tr>
+<tr class="even">
+<td>02</td>
+<td>Slider</td>
+<td>Mover un control y recalcular</td>
+<td>Días de entrega vs.&nbsp;satisfacción</td>
+<td>Nivel del río y umbrales de alerta</td>
+</tr>
+<tr class="odd">
+<td>03</td>
+<td>Gráfico de líneas</td>
+<td>Elegir período, promedio y variación</td>
+<td>Consultas mensuales</td>
+<td>Movimientos en masa por temporada de lluvias</td>
+</tr>
+<tr class="even">
+<td>04</td>
+<td>Barras + dona</td>
+<td>Tocar una barra y ver su composición</td>
+<td>Ventas por producto</td>
+<td>Tipos de evento en años Niña/Niño</td>
+</tr>
+<tr class="odd">
+<td>05</td>
+<td>Línea de tiempo</td>
+<td>Recorrer hitos</td>
+<td>Crecimiento de una empresa</td>
+<td>Desastres que cambiaron el sistema</td>
+</tr>
+<tr class="even">
+<td>06</td>
+<td>Diagrama de Gantt</td>
+<td>Ajustar duraciones con dependencias</td>
+<td>Cronograma de proyecto</td>
+<td>Fases de la recuperación</td>
+</tr>
+<tr class="odd">
+<td>07</td>
+<td>Organigrama</td>
+<td>Buscar por nombre o función</td>
+<td>Equipo de proyecto</td>
+<td>Estructura del SNGRD</td>
+</tr>
+<tr class="even">
+<td>08</td>
+<td>Pictograma</td>
+<td>Convertir totales en “X de cada 10”</td>
+<td>Uso diario de una app</td>
+<td>Población expuesta</td>
+</tr>
+<tr class="odd">
+<td>09</td>
+<td>Tabla comparativa</td>
+<td>Alternar escenarios</td>
+<td>Planes mensual/anual</td>
+<td>Medidas de reducción a 10/30 años</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Diagrama de flujo</td>
+<td>Comparar procesos</td>
+<td>Aprobación en papel vs.&nbsp;digital</td>
+<td>Reporte de emergencias</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Matriz</td>
+<td>Cambiar los ejes</td>
+<td>Priorización de proyectos</td>
+<td>Escenarios de riesgo municipal</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Embudo</td>
+<td>Ajustar tasas de conversión</td>
+<td>Embudo de ventas</td>
+<td>Cadena de la alerta temprana</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="plantillas-genéricas" class="level3">
+<h3 class="anchored" data-anchor-id="plantillas-genéricas">Plantillas genéricas</h3>
+<p><a href="demos/plantillas-diapositivas.html" class="btn btn-outline-primary" target="_blank">Abrir en pantalla completa</a></p>
+<iframe class="deck" id="deck-generico" src="demos/plantillas-diapositivas.html" title="12 plantillas de diapositivas HTML interactivas" style="width:100%;height:820px;border:0;border-radius:12px" loading="lazy"></iframe>
+</section>
+<section id="plantillas-aplicadas-a-la-gestión-del-riesgo" class="level3">
+<h3 class="anchored" data-anchor-id="plantillas-aplicadas-a-la-gestión-del-riesgo">Plantillas aplicadas a la gestión del riesgo</h3>
+<p><a href="demos/plantillas-gestion-riesgo.html" class="btn btn-outline-primary" target="_blank">Abrir en pantalla completa</a></p>
+<iframe class="deck" id="deck-riesgo" src="demos/plantillas-gestion-riesgo.html" title="12 diapositivas interactivas de gestión del riesgo de desastres" style="width:100%;height:820px;border:0;border-radius:12px" loading="lazy"></iframe>
+<script>
+  // Ajusta la altura de cada iframe a su contenido
+  window.addEventListener('message', function (e) {
+    if (!e.data || !e.data.deckHeight) return;
+    document.querySelectorAll('iframe.deck').forEach(function (f) {
+      if (f.contentWindow === e.source) f.style.height = (e.data.deckHeight + 8) + 'px';
+    });
+  });
+</script>
+<div class="callout callout-style-default callout-warning callout-titled" title="Sobre los datos de gestión del riesgo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Sobre los datos de gestión del riesgo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Datos ilustrativos:</strong> la mayoría de las diapositivas, y así lo indica cada una.</li>
+<li><strong>Línea de tiempo histórica (05):</strong> usa cifras aproximadas de fuentes públicas; conviene verificarlas antes de citarlas.</li>
+<li><strong>Organigrama del SNGRD (07):</strong> está simplificado a partir de la Ley 1523 de 2012.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="mapas-de-colombia-en-6-plantillas" class="level2">
+<h2 class="anchored" data-anchor-id="mapas-de-colombia-en-6-plantillas">Mapas de Colombia en 6 plantillas</h2>
+<p>Los mapas siguen la misma idea: un archivo HTML sin bibliotecas en el que cada departamento es un trazo SVG. La geometría sale de la capa de departamentos del sitio, simplificada con Shapely (tolerancia de 0,02°) y proyectada en coordenadas planas simples; San Andrés y Providencia va en un recuadro aparte, como en la cartografía oficial.</p>
+<p>Cada plantilla resuelve una pregunta distinta sobre el territorio. Los valores son ilustrativos; las capitales son reales y la región natural es la predominante de cada departamento.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nº</th>
+<th>Plantilla</th>
+<th>Pregunta que responde</th>
+<th>Interacción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Coropleta</td>
+<td>¿Cómo se distribuye un indicador entre departamentos?</td>
+<td>Elegir indicador y ver el valor al pasar el puntero</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Símbolos proporcionales</td>
+<td>¿Dónde se concentran los casos por ciudad?</td>
+<td>Mover un umbral mínimo</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Mapa + ficha</td>
+<td>¿Cómo está un departamento frente al promedio?</td>
+<td>Tocar un departamento</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Categorías</td>
+<td>¿A qué región pertenece cada departamento?</td>
+<td>Resaltar una región</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Antes, después y cambio</td>
+<td>¿Dónde mejoró y dónde empeoró?</td>
+<td>Alternar período 1, período 2 y cambio</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Mapa + ranking</td>
+<td>¿Cuáles son los diez mayores y dónde están?</td>
+<td>Selección vinculada entre barras y mapa</td>
+</tr>
+</tbody>
+</table>
+<p><a href="demos/mapas-colombia.html" class="btn btn-outline-primary" target="_blank">Abrir en pantalla completa</a></p>
+<iframe class="deck" id="deck-mapas" src="demos/mapas-colombia.html" title="6 plantillas de mapas de Colombia en HTML" style="width:100%;height:820px;border:0;border-radius:12px" loading="lazy"></iframe>
+</section>
+<section id="ver-también" class="level2">
+<h2 class="anchored" data-anchor-id="ver-también">Ver también</h2>
+<ul>
+<li><a href="../datascience/graficas-python-r.html">Gráficas en HTML frente a Python, R, D3 y Plotly</a></li>
+<li><a href="../datascience/d3.html">D3, Observable y JS</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mromerot\.github\.io\/web\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Made with ❤️ and Quarto</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Informar sobre problema</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
