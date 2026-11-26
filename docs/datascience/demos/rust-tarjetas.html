@@ -32,10 +32,10 @@ a{color:var(--blue)}
 .idx{display:flex;gap:6px;overflow-x:auto;padding:4px max(4vw,14px) 10px;scrollbar-width:none}
 .idx button{flex:none;border:0;border-radius:99px;padding:8px 13px;background:#ffffff1f;color:#fff;font-size:14px;min-height:36px}
 .idx button.on{background:#fff;color:#0f3fa8}
-.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
+.track{display:flex;align-items:flex-start;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
 .track::-webkit-scrollbar{display:none}
 .slide{flex:0 0 100%;scroll-snap-align:start;padding:6px max(4vw,14px) 24px}
-.card{max-width:1120px;margin:0 auto;background:var(--paper);border-radius:18px;padding:clamp(18px,3vw,36px);min-height:600px;display:flex;flex-direction:column;gap:18px;box-shadow:0 20px 50px #0003}
+.card{max-width:1120px;margin:0 auto;background:var(--paper);border-radius:18px;padding:clamp(18px,3vw,36px);min-height:480px;display:flex;flex-direction:column;gap:18px;box-shadow:0 20px 50px #0003}
 .hd small{display:block;color:var(--blue);font:600 14px Inter;margin-bottom:6px}
 .hd h2{font-size:clamp(24px,3.2vw,36px);line-height:1.08;margin:0;text-wrap:balance}
 .hd p{margin:8px 0 0;color:var(--mut);font-size:15px}
@@ -107,7 +107,7 @@ code.i{font:600 .92em "JetBrains Mono",ui-monospace,monospace;background:var(--s
 .yrs button.on{background:var(--blue);border-color:var(--blue);color:#fff}
 .yr{font:700 clamp(56px,9vw,96px)/1 "Inter Tight";color:var(--blue)}
 /* 8 ecosistema */
-.eco{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.eco{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;max-height:520px;overflow-y:auto;padding:2px 6px 2px 2px;scrollbar-width:thin}
 .eco a{display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:14px;padding:14px;text-decoration:none;color:var(--ink);background:var(--paper);transition:border-color .2s,transform .2s}
 .eco a:hover{border-color:var(--blue);transform:translateY(-2px)}
 .eco b{font:700 17px "Inter Tight";display:flex;gap:8px;align-items:baseline}
@@ -136,7 +136,7 @@ th.alt{box-shadow:inset 0 -3px 0 var(--blue)}
 .path button.done::before{content:"✓";background:var(--ok);color:#fff}
 .path b{display:block}.path span{font-size:14px;color:var(--mut)}
 .bar{height:10px;background:var(--soft);border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ok);transition:width .3s}
-@media(max-width:760px){.cards button{min-height:130px}.two,.mem{grid-template-columns:1fr}.card{min-height:0}.hb{grid-template-columns:minmax(0,8em) minmax(0,1fr) 4em;font-size:14px}.q{grid-template-columns:1fr}}
+@media(max-width:760px){.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.cards button{min-height:118px;padding:14px}.cards button.open{grid-column:1/-1}.cards .k{font-size:26px}.cards .t{font-size:17px}.eco{max-height:460px}.two,.mem{grid-template-columns:1fr}.card{min-height:0}.hb{grid-template-columns:minmax(0,8em) minmax(0,1fr) 4em;font-size:14px}.q{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -208,7 +208,7 @@ th.alt{box-shadow:inset 0 -3px 0 var(--blue)}
  </div></div></section>
 
 <section class="slide" data-n="Ecosistema"><div class="card">
- <div class="hd"><small>08 · Filtro</small><h2>Rust se usa sobre todo como motor de Python</h2><p>Proyectos de referencia por área. Estrellas en GitHub al 26 de noviembre de 2026. Cada tarjeta abre el repositorio.</p></div>
+ <div class="hd"><small>08 · Filtro</small><h2>Rust se usa sobre todo como motor de Python</h2><p>Proyectos de referencia por área. Estrellas en GitHub al 26 de noviembre de 2026. Desplaza la lista; cada tarjeta abre el repositorio.</p></div>
  <div class="bd">
   <div class="seg" id="g-seg"></div>
   <div class="eco" id="g-list"></div>
@@ -254,7 +254,9 @@ const track=$('track'),slides=[...document.querySelectorAll('.slide')];
 $('idx').innerHTML=slides.map((s,i)=>`<button data-i="${i}">${String(i+1).padStart(2,'0')} ${s.dataset.n}</button>`).join('');
 const chips=[...$('idx').children];let cur=0;
 const go=i=>{i=Math.max(0,Math.min(slides.length-1,i));track.scrollTo({left:i*track.clientWidth})};
-const mark=()=>{cur=Math.round(track.scrollLeft/track.clientWidth);$('cnt').textContent=(cur+1)+' / '+slides.length;chips.forEach((c,i)=>c.classList.toggle('on',i===cur));const c=chips[cur];c&&c.parentNode.scrollTo({left:c.offsetLeft-40,behavior:'smooth'})};
+const fit=()=>{const s=slides[cur];if(s)track.style.height=s.offsetHeight+'px'};
+new ResizeObserver(fit).observe(document.body);slides.forEach(s=>new ResizeObserver(()=>{if(s===slides[cur])fit()}).observe(s));
+const mark=()=>{cur=Math.round(track.scrollLeft/track.clientWidth);fit();$('cnt').textContent=(cur+1)+' / '+slides.length;chips.forEach((c,i)=>c.classList.toggle('on',i===cur));const c=chips[cur];c&&c.parentNode.scrollTo({left:c.offsetLeft-40,behavior:'smooth'})};
 track.addEventListener('scroll',()=>{clearTimeout(track._t);track._t=setTimeout(mark,80)});
 $('prev').onclick=()=>go(cur-1);$('next').onclick=()=>go(cur+1);
 $('idx').onclick=e=>{const b=e.target.closest('button');if(b)go(+b.dataset.i)};
@@ -496,6 +498,6 @@ const r11=()=>{$('r-list').innerHTML=RT.map((r,i)=>`<button class="${rd[i]?'done
 $('r-list').onclick=e=>{const b=e.target.closest('button');if(b){rd[+b.dataset.i]=!rd[+b.dataset.i];r11()}};r11();
 }
 </script>
-<script>{const post=()=>{try{parent.postMessage({deckHeight:document.documentElement.scrollHeight,deck:location.pathname.split('/').pop()},'*')}catch(e){}};new ResizeObserver(post).observe(document.body);window.addEventListener('load',post)}</script>
+<script>{const post=()=>{try{parent.postMessage({deckHeight:document.documentElement.scrollHeight,deck:location.pathname.split('/').pop()},'*')}catch(e){}};new ResizeObserver(post).observe(document.body);new ResizeObserver(post).observe(document.documentElement);window.addEventListener('load',post);document.addEventListener('transitionend',post)}</script>
 </body>
 </html>

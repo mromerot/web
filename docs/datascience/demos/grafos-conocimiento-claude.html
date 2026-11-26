@@ -385,5 +385,6 @@ ENTREGA
   };
 })();
 </script>
+<script>{const post=()=>{try{parent.postMessage({deckHeight:document.documentElement.scrollHeight,deck:location.pathname.split('/').pop()},'*')}catch(e){}};new ResizeObserver(post).observe(document.body);window.addEventListener('load',post)}</script>
 </body>
 </html>

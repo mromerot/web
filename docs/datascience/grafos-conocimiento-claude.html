@@ -1229,7 +1229,16 @@ ENTREGA
 <section id="la-guía-animada" class="level2">
 <h2 class="anchored" data-anchor-id="la-guía-animada">La guía animada</h2>
 <p>La animación recorre los seis pasos y resalta, en cada uno, la parte del grafo, la tarjeta y el bloque del prompt que le corresponden. Puede pausarse o elegirse un paso con las pestañas. El botón <strong>Copiar como un solo prompt</strong> copia las seis instrucciones listas para pegar.</p>
-<iframe src="demos/grafos-conocimiento-claude.html" allow="clipboard-write" title="Guía animada: grafos de conocimiento con Claude" style="width:100%;height:1500px;border:0;border-radius:12px" loading="lazy"></iframe>
+<iframe class="deck" src="demos/grafos-conocimiento-claude.html" allow="clipboard-write" title="Guía animada: grafos de conocimiento con Claude" style="width:100%;height:1500px;border:0;border-radius:12px" loading="lazy"></iframe>
+<script>
+  // Ajusta la altura del iframe a su contenido
+  window.addEventListener('message', function (e) {
+    if (!e.data || !e.data.deckHeight) return;
+    document.querySelectorAll('iframe.deck').forEach(function (f) {
+      if (f.contentWindow === e.source) f.style.height = (e.data.deckHeight + 8) + 'px';
+    });
+  });
+</script>
 <p><a href="demos/grafos-conocimiento-claude.html" target="_blank">Abrir la guía en pantalla completa</a></p>
 </section>
 <section id="los-seis-pasos" class="level2">
