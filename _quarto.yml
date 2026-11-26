@@ -267,6 +267,8 @@ website:
             href: datascience/myst.qmd
           - text: "Quarto"
             href: datascience/quarto.qmd
+          - text: "Rust"
+            href: datascience/rust.qmd
           - text: "VS Code"
             href: datascience/vs-code.qmd
 # Aqui viene la seccion de matematicas y estadistica que debe trabajarse

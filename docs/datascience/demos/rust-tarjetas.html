@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rust en tarjetas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Mismo sistema visual que plantillas-diapositivas.html: campo azul profundo, hojas blancas,
+   azul de marca y coral para alertas; Inter Tight + Inter, y JetBrains Mono para el código. */
+:root{color-scheme:light dark;
+--bg:light-dark(#0f3fa8,#081127);--paper:light-dark(#ffffff,#111b33);--ink:light-dark(#0f1b2d,#e9eef8);
+--mut:light-dark(#5a6478,#9aa6bb);--line:light-dark(#e3e7ee,#24304b);--blue:light-dark(#1554d1,#6e9cff);
+--soft:light-dark(#e4ecfc,#1a2a52);--coral:light-dark(#e5533d,#ff7f6b);--ok:light-dark(#0f8a5f,#4fd39d);
+--code:light-dark(#f4f6fa,#0b1326);--kw:light-dark(#1554d1,#8db1ff);--str:light-dark(#0f8a5f,#6fe0b0);
+--com:light-dark(#7a8396,#7f8ba3);--lt:light-dark(#b0451f,#ffa27f)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,.big{font-family:"Inter Tight",Inter,sans-serif}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.top{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;padding:16px max(4vw,14px) 8px;color:#fff}
+.top h1{font-size:clamp(20px,3vw,28px);margin:0;line-height:1.1;text-wrap:balance}
+.top p{margin:2px 0 0;font:500 14px Inter;opacity:.8}
+.navb{display:flex;gap:8px;align-items:center}
+.navb button{width:44px;height:44px;border-radius:50%;border:1px solid #ffffff55;background:#ffffff1a;color:#fff;font-size:20px}
+.navb span{font:600 15px Inter;min-width:54px;text-align:center;color:#fff}
+.idx{display:flex;gap:6px;overflow-x:auto;padding:4px max(4vw,14px) 10px;scrollbar-width:none}
+.idx button{flex:none;border:0;border-radius:99px;padding:8px 13px;background:#ffffff1f;color:#fff;font-size:14px;min-height:36px}
+.idx button.on{background:#fff;color:#0f3fa8}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:start;padding:6px max(4vw,14px) 24px}
+.card{max-width:1120px;margin:0 auto;background:var(--paper);border-radius:18px;padding:clamp(18px,3vw,36px);min-height:600px;display:flex;flex-direction:column;gap:18px;box-shadow:0 20px 50px #0003}
+.hd small{display:block;color:var(--blue);font:600 14px Inter;margin-bottom:6px}
+.hd h2{font-size:clamp(24px,3.2vw,36px);line-height:1.08;margin:0;text-wrap:balance}
+.hd p{margin:8px 0 0;color:var(--mut);font-size:15px}
+.bd{flex:1;display:flex;flex-direction:column;gap:14px}
+.foot{color:#ffffffb0;font-size:13px;text-align:center;padding:0 16px 22px}
+.seg{display:inline-flex;background:var(--soft);border-radius:12px;padding:4px;gap:4px;flex-wrap:wrap}
+.seg button{border:0;background:none;border-radius:9px;padding:8px 14px;min-height:40px;font-weight:600;color:var(--mut)}
+.seg button.on{background:var(--paper);color:var(--blue);box-shadow:0 1px 4px #0002}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat{border-top:2px solid var(--ink);padding-top:8px}
+.stat b{display:block;font:700 clamp(26px,4vw,40px)/1.05 "Inter Tight";white-space:nowrap}
+.stat span{color:var(--mut);font-size:14px}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.mut{color:var(--mut);font-size:14px}
+.two{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:24px;align-items:start}
+.note{border-left:3px solid var(--blue);padding:8px 12px;background:var(--soft);border-radius:0 10px 10px 0;font-size:15px}
+.note.bad{border-color:var(--coral)}.note.good{border-color:var(--ok)}
+/* código */
+pre.code{margin:0;background:var(--code);border:1px solid var(--line);border-radius:12px;padding:14px 16px;overflow-x:auto;font:14px/1.55 "JetBrains Mono",ui-monospace,Menlo,monospace;tab-size:4}
+pre.code .k{color:var(--kw);font-weight:600}pre.code .s{color:var(--str)}pre.code .c{color:var(--com);font-style:italic}
+pre.code .l{color:var(--lt)}pre.code .n{color:var(--coral)}
+pre.code .ln{display:block;border-radius:6px;padding:0 6px;margin:0 -6px;transition:background .2s}
+pre.code .ln.on{background:var(--soft);box-shadow:inset 3px 0 0 var(--blue)}
+code.i{font:600 .92em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:1px 6px;border-radius:6px}
+/* 1 tarjetas */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.cards button{text-align:left;border:0;border-radius:16px;padding:20px;background:var(--blue);color:#fff;display:flex;flex-direction:column;gap:8px;min-height:200px;transition:transform .2s}
+.cards button:hover{transform:translateY(-3px)}
+.cards .k{font:700 34px/1 "JetBrains Mono",monospace}
+.cards .t{font:700 20px "Inter Tight"}
+.cards .d{display:none;font-size:15px;opacity:.95}
+.cards .e{display:none;font:13px/1.5 "JetBrains Mono",monospace;background:#ffffff22;border-radius:10px;padding:8px 10px;white-space:pre-wrap}
+.cards button.open .d,.cards button.open .e{display:block}
+.cards .h{margin-top:auto;font-size:13px;opacity:.8}
+/* 2 memoria */
+.mem{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.mem h3{margin:0 0 6px;font-size:14px;color:var(--mut);font-weight:600}
+.cell{border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin-bottom:8px;background:var(--paper);font:13px/1.4 "JetBrains Mono",monospace;transition:opacity .3s,border-color .3s}
+.cell b{font-family:Inter;font-size:15px;display:block}
+.cell.dead{opacity:.35;text-decoration:line-through}
+.cell.own{border:2px solid var(--blue)}.cell.ref{border:2px dashed var(--ok)}
+.cell.heap{background:var(--soft)}.cell.freed{opacity:.25;border-style:dotted}
+.stepper{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.stepper button{border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:8px 14px;min-height:44px;font-weight:600}
+.stepper button.pri{background:var(--blue);color:#fff;border-color:var(--blue)}
+/* 3 quiz */
+.ans{display:flex;gap:10px;flex-wrap:wrap}
+.ans button{border:2px solid var(--blue);background:var(--paper);color:var(--blue);border-radius:12px;padding:10px 18px;min-height:46px;font-weight:700}
+.ans button.pick{background:var(--blue);color:#fff}
+.ans button:disabled{cursor:default}
+.dots{display:flex;gap:6px}.dots i{width:12px;height:12px;border-radius:50%;background:var(--soft)}
+.dots i.ok{background:var(--ok)}.dots i.ko{background:var(--coral)}.dots i.cur{box-shadow:0 0 0 2px var(--blue)}
+/* 5 send/sync */
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{border-radius:12px;padding:10px 14px;font-weight:700;display:flex;gap:8px;align-items:center;background:var(--soft)}
+.badge.y{background:color-mix(in srgb,var(--ok) 18%,var(--paper));color:var(--ok)}
+.badge.n{background:color-mix(in srgb,var(--coral) 16%,var(--paper));color:var(--coral)}
+/* 6 barras */
+.hb{display:grid;grid-template-columns:minmax(0,11em) minmax(0,1fr) 4.5em;gap:10px;align-items:center}
+.hb .tr{height:22px;background:var(--soft);border-radius:99px;overflow:hidden}
+.hb .tr i{display:block;height:100%;background:var(--blue);border-radius:99px;transition:width .4s}
+.hb .tr i.c{background:var(--coral)}
+.hb b{text-align:right;white-space:nowrap}
+.hb button{all:unset;cursor:pointer;display:contents}
+.hb.sel span:first-child{font-weight:700;color:var(--blue)}
+/* 7 timeline */
+.yrs{display:flex;gap:6px;flex-wrap:wrap}
+.yrs button{border:1px solid var(--line);background:var(--paper);border-radius:99px;padding:6px 12px;min-height:40px;font-weight:600;color:var(--mut)}
+.yrs button.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.yr{font:700 clamp(56px,9vw,96px)/1 "Inter Tight";color:var(--blue)}
+/* 8 ecosistema */
+.eco{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.eco a{display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:14px;padding:14px;text-decoration:none;color:var(--ink);background:var(--paper);transition:border-color .2s,transform .2s}
+.eco a:hover{border-color:var(--blue);transform:translateY(-2px)}
+.eco b{font:700 17px "Inter Tight";display:flex;gap:8px;align-items:baseline}
+.eco b em{margin-left:auto;font:600 13px Inter;color:var(--mut);font-style:normal;white-space:nowrap}
+.eco span{font-size:14px;color:var(--mut)}
+.eco small{font-size:12px;color:var(--blue);font-weight:600}
+/* 9 tabla */
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:center;font-size:14px;transition:background .2s}
+th:first-child,td:first-child{text-align:left;color:var(--mut);font-weight:600}
+th{font:700 16px "Inter Tight"}
+th.rec{background:var(--blue);color:#fff;border-radius:12px 12px 0 0}
+td.rec{background:var(--soft);font-weight:600}
+th.alt{box-shadow:inset 0 -3px 0 var(--blue)}
+/* 10 decisión */
+.qs{display:grid;gap:10px}
+.q{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:10px}
+.verdict{border-radius:16px;padding:18px 20px;background:var(--blue);color:#fff}
+.verdict b{display:block;font:700 22px "Inter Tight";margin-bottom:4px}
+/* 11 ruta */
+.path{display:grid;gap:8px;counter-reset:p}
+.path button{display:grid;grid-template-columns:36px minmax(0,1fr);gap:12px;align-items:start;text-align:left;border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:12px 14px}
+.path button::before{counter-increment:p;content:counter(p);width:32px;height:32px;border-radius:50%;background:var(--soft);color:var(--blue);display:grid;place-items:center;font-weight:700}
+.path button.done{border-color:var(--ok)}
+.path button.done::before{content:"✓";background:var(--ok);color:#fff}
+.path b{display:block}.path span{font-size:14px;color:var(--mut)}
+.bar{height:10px;background:var(--soft);border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ok);transition:width .3s}
+@media(max-width:760px){.cards button{min-height:130px}.two,.mem{grid-template-columns:1fr}.card{min-height:0}.hb{grid-template-columns:minmax(0,8em) minmax(0,1fr) 4em;font-size:14px}.q{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div style="flex:1 1 260px"><h1>Rust en 11 tarjetas que se tocan</h1><p>Propiedad, préstamos, errores, concurrencia, evidencia, ecosistema de datos y cuándo usarlo</p></div>
+  <div class="navb"><button id="prev" aria-label="Anterior">‹</button><span id="cnt">1 / 11</span><button id="next" aria-label="Siguiente">›</button></div>
+</header>
+<nav class="idx" id="idx"></nav>
+<main class="track" id="track">
+
+<section class="slide" data-n="Seis ideas"><div class="card">
+ <div class="hd"><small>01 · Tarjetas</small><h2>Seis ideas sostienen todo el lenguaje</h2><p>Toca una tarjeta para ver qué garantiza y cómo se ve en el código.</p></div>
+ <div class="bd"><div class="cards" id="c1"></div></div></div></section>
+
+<section class="slide" data-n="Propiedad"><div class="card">
+ <div class="hd"><small>02 · Paso a paso</small><h2>Un solo dueño: quién libera la memoria y cuándo</h2><p>Avanza línea por línea y mira la pila (variables) y el montículo (datos).</p></div>
+ <div class="bd">
+  <div class="stepper"><button id="m-prev">‹ Anterior</button><button id="m-next" class="pri">Siguiente ›</button><span class="mut" id="m-cnt"></span></div>
+  <div class="two">
+   <pre class="code" id="m-code"></pre>
+   <div class="mem"><div><h3>Pila</h3><div id="m-stack"></div></div><div><h3>Montículo</h3><div id="m-heap"></div></div></div>
+  </div>
+  <div class="note" id="m-note"></div>
+ </div></div></section>
+
+<section class="slide" data-n="¿Compila?"><div class="card">
+ <div class="hd"><small>03 · Cuestionario</small><h2>¿Compila o no compila?</h2><p>Seis fragmentos verificados con <code class="i">rustc</code> estable (edición 2024). Decide antes de ver la respuesta.</p></div>
+ <div class="bd">
+  <div class="row"><div class="dots" id="q-dots"></div><span class="mut" id="q-score"></span></div>
+  <pre class="code" id="q-code"></pre>
+  <div class="ans" id="q-ans"><button data-v="1">Compila</button><button data-v="0">No compila</button></div>
+  <div class="note" id="q-note" hidden></div>
+  <div class="stepper"><button id="q-next" class="pri" hidden>Siguiente fragmento ›</button></div>
+ </div></div></section>
+
+<section class="slide" data-n="Errores"><div class="card">
+ <div class="hd"><small>04 · Comparación</small><h2>El error forma parte de la firma de la función</h2><p>La misma tarea en cuatro lenguajes: leer una lectura de lluvia (mm en 24 h) y clasificarla. Umbrales ilustrativos.</p></div>
+ <div class="bd">
+  <div class="seg" id="e-seg"></div>
+  <pre class="code" id="e-code"></pre>
+  <div class="note" id="e-note"></div>
+ </div></div></section>
+
+<section class="slide" data-n="Send y Sync"><div class="card">
+ <div class="hd"><small>05 · Selector</small><h2>Las carreras de datos son un error de tipos</h2><p><b>Send</b>: el valor puede pasar a otro hilo. <b>Sync</b>: puede compartirse por referencia entre hilos (<code class="i">&amp;T</code> es Send). El compilador los deduce solo.</p></div>
+ <div class="bd">
+  <div class="seg" id="s-seg"></div>
+  <div class="badges" id="s-badges"></div>
+  <pre class="code" id="s-code"></pre>
+  <div class="note" id="s-note"></div>
+ </div></div></section>
+
+<section class="slide" data-n="Evidencia"><div class="card">
+ <div class="hd"><small>06 · Barras</small><h2>Siete de cada diez fallas graves son de memoria</h2><p>Proporción de vulnerabilidades de seguridad atribuidas a errores de memoria. Toca una barra para ver la fuente.</p></div>
+ <div class="bd">
+  <div id="v-bars" style="display:grid;gap:14px"></div>
+  <div class="note" id="v-note"></div>
+  <p class="mut" style="margin:0">Cifras reales. Android: Google Security Blog, 25-sep-2024. Microsoft: MSRC, 2019. Chromium: proyecto Chromium, página <i>Memory safety</i>.</p>
+ </div></div></section>
+
+<section class="slide" data-n="Historia"><div class="card">
+ <div class="hd"><small>07 · Línea de tiempo</small><h2>De proyecto personal a lenguaje del núcleo de Linux</h2><p>Toca un año.</p></div>
+ <div class="bd">
+  <div class="yrs" id="t-yrs"></div>
+  <div class="yr" id="t-yr"></div>
+  <h3 style="margin:0;font:700 22px 'Inter Tight'" id="t-tt"></h3>
+  <p style="margin:0;max-width:70ch" id="t-tx"></p>
+ </div></div></section>
+
+<section class="slide" data-n="Ecosistema"><div class="card">
+ <div class="hd"><small>08 · Filtro</small><h2>Rust se usa sobre todo como motor de Python</h2><p>Proyectos de referencia por área. Estrellas en GitHub al 26 de noviembre de 2026. Cada tarjeta abre el repositorio.</p></div>
+ <div class="bd">
+  <div class="seg" id="g-seg"></div>
+  <div class="eco" id="g-list"></div>
+ </div></div></section>
+
+<section class="slide" data-n="Comparativa"><div class="card">
+ <div class="hd"><small>09 · Tabla comparativa</small><h2>Cada problema tiene su lenguaje</h2><p>Elige un tipo de trabajo; la columna resaltada es la recomendación y la subrayada, la alternativa.</p></div>
+ <div class="bd">
+  <div class="seg" id="k-seg"></div>
+  <div class="tw"><table id="k-tab"></table></div>
+  <div class="note" id="k-note"></div>
+ </div></div></section>
+
+<section class="slide" data-n="¿Rust aquí?"><div class="card">
+ <div class="hd"><small>10 · Árbol de decisión</small><h2>¿Vale la pena Rust para este problema?</h2><p>Responde cinco preguntas sobre tu caso.</p></div>
+ <div class="bd">
+  <div class="qs" id="d-qs"></div>
+  <div class="verdict" id="d-out"></div>
+ </div></div></section>
+
+<section class="slide" data-n="Ruta"><div class="card">
+ <div class="hd"><small>11 · Lista de avance</small><h2>Una ruta de aprendizaje en ocho pasos</h2><p>Marca los pasos que ya hiciste.</p></div>
+ <div class="bd">
+  <div class="row"><div class="bar" style="flex:1"><i id="r-bar" style="width:0"></i></div><span class="mut" id="r-cnt"></span></div>
+  <div class="path" id="r-list"></div>
+ </div></div></section>
+
+</main>
+<p class="foot">HTML autocontenido, sin bibliotecas. Código verificado en el compilador estable de Rust el 26 de noviembre de 2026.</p>
+
+<script>
+{
+const $=id=>document.getElementById(id);
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const KW='fn|let|mut|use|match|if|else|return|struct|enum|impl|trait|for|in|move|pub|mod|where|loop|while|unsafe|dyn|as|ref|const|static|type|def|func|var|try|except|raise|char|double|errno';
+const RX=new RegExp(`(\\/\\/.*$|#(?!\\[).*$|\\/\\*[\\s\\S]*?\\*\\/)|("(?:[^"\\\\]|\\\\.)*")|\\b(${KW})\\b|('[a-z_]+\\b(?!'))|(\\b(?:E0\\d{3}|Ok|Err|Some|None|Self|true|false)\\b)`,'gm');
+const hl=code=>{let out='',last=0;for(const m of code.matchAll(RX)){out+=esc(code.slice(last,m.index));const cls=m[1]?'c':m[2]?'s':m[3]?'k':m[4]?'l':'n';out+=`<span class="${cls}">${esc(m[0])}</span>`;last=m.index+m[0].length}return out+esc(code.slice(last))};
+const lines=(code,on)=>code.split('\n').map((l,i)=>`<span class="ln${on&&on.includes(i)?' on':''}">${hl(l)||' '}</span>`).join('');
+const segs=(el,items,cur,fn)=>{el.innerHTML=items.map((t,i)=>`<button data-i="${i}" class="${i===cur?'on':''}">${t}</button>`).join('');el.onclick=e=>{const b=e.target.closest('button');if(!b)return;[...el.children].forEach(c=>c.classList.toggle('on',c===b));fn(+b.dataset.i)}};
+
+/* navegación */
+const track=$('track'),slides=[...document.querySelectorAll('.slide')];
+$('idx').innerHTML=slides.map((s,i)=>`<button data-i="${i}">${String(i+1).padStart(2,'0')} ${s.dataset.n}</button>`).join('');
+const chips=[...$('idx').children];let cur=0;
+const go=i=>{i=Math.max(0,Math.min(slides.length-1,i));track.scrollTo({left:i*track.clientWidth})};
+const mark=()=>{cur=Math.round(track.scrollLeft/track.clientWidth);$('cnt').textContent=(cur+1)+' / '+slides.length;chips.forEach((c,i)=>c.classList.toggle('on',i===cur));const c=chips[cur];c&&c.parentNode.scrollTo({left:c.offsetLeft-40,behavior:'smooth'})};
+track.addEventListener('scroll',()=>{clearTimeout(track._t);track._t=setTimeout(mark,80)});
+$('prev').onclick=()=>go(cur-1);$('next').onclick=()=>go(cur+1);
+$('idx').onclick=e=>{const b=e.target.closest('button');if(b)go(+b.dataset.i)};
+document.addEventListener('keydown',e=>{if(/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+mark();
+
+/* 1 · seis ideas */
+const C1=[
+{k:'dueño',t:'Propiedad',d:'Cada valor tiene un único dueño. Asignar o pasar a una función transfiere la propiedad (mover) y, cuando el dueño sale de su ámbito, el valor se libera. Sin recolector de basura ni free manual.',e:'let b = a;  // a deja de ser válida\n// fin del ámbito: se libera b'},
+{k:'&',t:'Préstamos',d:'Se puede prestar un valor sin cederlo: muchas referencias de lectura o una sola de escritura, nunca ambas a la vez («alias XOR mutabilidad»). Esa regla elimina la invalidación de iteradores y las carreras de datos.',e:'let r = &v;      // lectura\nlet w = &mut v;  // escritura exclusiva'},
+{k:"'a",t:'Tiempos de vida',d:'El compilador demuestra que ninguna referencia sobrevive al dato al que apunta. La mayoría se infieren; se escriben solo cuando una función devuelve una referencia que depende de varias entradas.',e:"fn f<'a>(x: &'a str, y: &'a str)\n    -> &'a str"},
+{k:'enum',t:'Tipos algebraicos',d:'No existe null: la ausencia es Option<T> y el error es Result<T, E>. match exige cubrir todos los casos, de modo que agregar una variante obliga a revisar cada sitio que la usa.',e:'match leer(l) {\n    Ok(a)  => alertar(a),\n    Err(e) => registrar(e),\n}'},
+{k:'trait',t:'Traits y genéricos',d:'Comportamiento compartido entre tipos. Los genéricos se monomorfizan: el compilador genera una versión especializada por tipo y la abstracción cuesta cero en tiempo de ejecución.',e:'fn maximo<A: Amenaza>(a: &A,\n    pts: &[(f64, f64)]) -> f64'},
+{k:'Send',t:'Concurrencia sin miedo',d:'Los rasgos Send y Sync marcan qué tipos pueden cruzar hilos. Compartir un dato no sincronizado entre hilos no compila. Paralelizar un iterador con rayon es cambiar una palabra.',e:'celdas.par_iter()\n      .map(dano)\n      .sum::<f64>()'}];
+$('c1').innerHTML=C1.map(c=>`<button aria-expanded="false"><span class="k">${esc(c.k)}</span><span class="t">${c.t}</span><span class="d">${c.d}</span><span class="e">${esc(c.e)}</span><span class="h">Toca para ver más</span></button>`).join('');
+$('c1').onclick=e=>{const b=e.target.closest('button');if(!b)return;const o=b.classList.toggle('open');b.setAttribute('aria-expanded',o);b.querySelector('.h').textContent=o?'Toca para cerrar':'Toca para ver más'};
+
+/* 2 · propiedad paso a paso */
+const MC=`fn main() {
+    let a = String::from("Tumaco");
+    let b = a;
+    let c = &b;
+    println!("{c}");
+    let d = b.clone();
+}   // fin del ámbito`;
+const P='ptr · len 6 · cap 6';
+const MS=[
+{l:[1],st:[['a',P,'own']],hp:[['búfer 1','"Tumaco"','heap']],n:'<b>a</b> es dueña de un búfer en el montículo. En la pila solo hay tres palabras: puntero, longitud y capacidad.'},
+{l:[2],st:[['a','movida','dead'],['b',P,'own']],hp:[['búfer 1','"Tumaco"','heap']],n:'Mover copia las tres palabras de la pila, no el texto. <b>a</b> queda inválida: usarla es el error <code class="i">E0382</code>. Como nunca hay dos dueños, no puede haber doble liberación.'},
+{l:[3],st:[['a','movida','dead'],['b',P,'own'],['c','&b → apunta a b','ref']],hp:[['búfer 1','"Tumaco"','heap']],n:'<b>c</b> toma prestado <b>b</b>. Mientras el préstamo esté vivo, <b>b</b> no se puede mover ni modificar.'},
+{l:[4],st:[['a','movida','dead'],['b',P,'own'],['c','último uso','ref']],hp:[['búfer 1','"Tumaco"','heap']],n:'Último uso de <b>c</b>: el préstamo termina aquí y no al cerrar el bloque. Son los tiempos de vida no léxicos (NLL), vigentes desde la edición 2018.'},
+{l:[5],st:[['a','movida','dead'],['b',P,'own'],['c','préstamo terminado','dead'],['d',P,'own']],hp:[['búfer 1','"Tumaco"','heap'],['búfer 2','"Tumaco"','heap']],n:'<code class="i">clone()</code> duplica el búfer. En Rust las copias costosas siempre se escriben: el costo se ve en el código.'},
+{l:[6],st:[['a','sin efecto','dead'],['b','drop','dead'],['c','—','dead'],['d','drop','dead']],hp:[['búfer 1','liberado por b','freed'],['búfer 2','liberado por d','freed']],n:'Al cerrar el ámbito, Rust llama a <code class="i">drop</code> en orden inverso: primero <b>d</b> y luego <b>b</b>. <b>a</b> no libera nada porque ya no era dueña. Es RAII, como en C++, pero verificado por el compilador.'}];
+let ms=0;
+const m2=()=>{const s=MS[ms];$('m-code').innerHTML=lines(MC,s.l);
+const cell=x=>`<div class="cell ${x[2]}"><b>${x[0]}</b>${x[1]}</div>`;
+$('m-stack').innerHTML=s.st.map(cell).join('');$('m-heap').innerHTML=s.hp.map(cell).join('');
+$('m-note').innerHTML=s.n;$('m-cnt').textContent=`Paso ${ms+1} de ${MS.length}`;
+$('m-prev').disabled=ms===0;$('m-next').disabled=ms===MS.length-1};
+$('m-prev').onclick=()=>{ms=Math.max(0,ms-1);m2()};$('m-next').onclick=()=>{ms=Math.min(MS.length-1,ms+1);m2()};m2();
+
+/* 3 · quiz */
+const Q=[
+{c:`fn main() {
+    let s = String::from("Mocoa");
+    let t = s.clone();
+    println!("{s} {t}");
+}`,ok:1,x:'<b>Compila.</b> <code class="i">clone()</code> crea un segundo búfer con su propio dueño; <b>s</b> sigue siendo válida.'},
+{c:`fn main() {
+    let x = 5;
+    let y = x;
+    println!("{x} {y}");
+}`,ok:1,x:'<b>Compila.</b> <code class="i">i32</code> implementa <code class="i">Copy</code>: asignar copia los bits y no mueve. Los tipos que poseen memoria en el montículo, como String o Vec, no pueden ser Copy.'},
+{c:`fn main() {
+    let mut v = vec![1];
+    let r1 = &mut v;
+    let r2 = &mut v;
+    r1.push(2);
+    r2.push(3);
+}`,ok:0,x:'<b>No compila: E0499</b>, dos préstamos mutables a la vez. Si los dos pudieran escribir, uno podría realojar el vector mientras el otro apunta a la memoria vieja.'},
+{c:`fn ultimo(v: &Vec<i32>) -> &i32 {
+    let w = v.clone();
+    w.last().unwrap()
+}`,ok:0,x:'<b>No compila: E0515</b>, se devuelve una referencia a <b>w</b>, que se libera al terminar la función. En C sería un puntero colgante que solo fallaría a veces.'},
+{c:`fn main() {
+    let mut v = vec![1, 2, 3];
+    let p = &v[0];
+    println!("{p}");
+    v.push(4);
+}`,ok:1,x:'<b>Compila.</b> El préstamo <b>p</b> termina en su último uso (println), antes del push. Si el println fuera después del push, sería E0502: el push puede realojar el vector y dejar a <b>p</b> colgando.'},
+{c:`fn main() {
+    let v = vec![1, 2, 3];
+    let h = std::thread::spawn(|| println!("{v:?}"));
+    h.join().unwrap();
+}`,ok:0,x:'<b>No compila: E0373</b>. El hilo podría vivir más que <b>v</b>, que pertenece a main. Soluciones: <code class="i">move ||</code> transfiere la propiedad al hilo, o <code class="i">std::thread::scope</code> garantiza que el hilo termina antes que el ámbito.'}];
+let qi=0;const qr=Array(Q.length).fill(null);
+const q3=()=>{const q=Q[qi];$('q-code').innerHTML=lines(q.c);
+$('q-dots').innerHTML=Q.map((_,i)=>`<i class="${qr[i]===null?'':qr[i]?'ok':'ko'}${i===qi?' cur':''}"></i>`).join('');
+const done=qr[qi]!==null;[...$('q-ans').children].forEach(b=>{b.disabled=done;b.classList.remove('pick')});
+$('q-note').hidden=!done;$('q-next').hidden=!done;
+const n=qr.filter(v=>v!==null).length,ok=qr.filter(Boolean).length;$('q-score').textContent=n?`${ok} de ${n} correctas`:'';
+$('q-next').textContent=qi===Q.length-1?'Volver a empezar ↺':'Siguiente fragmento ›'};
+$('q-ans').onclick=e=>{const b=e.target.closest('button');if(!b||qr[qi]!==null)return;const q=Q[qi],right=+b.dataset.v===q.ok;qr[qi]=right;
+q3();b.classList.add('pick');const nt=$('q-note');nt.className='note '+(right?'good':'bad');nt.innerHTML=(right?'✓ Correcto. ':'✗ No. ')+q.x};
+$('q-next').onclick=()=>{if(qi===Q.length-1){qr.fill(null);qi=0}else qi++;q3()};q3();
+
+/* 4 · errores */
+const E=[
+['Python',`def leer(linea: str) -> Alerta:
+    mm = float(linea)    # puede lanzar ValueError
+    return nivel(mm)     # float("nan") pasa sin error`,'La firma no dice que la función puede fallar y nada obliga a quien la llama a capturar la excepción. <code class="i">float("nan")</code> es válido y llega a <code class="i">nivel</code>.','bad'],
+['C',`char *fin;
+errno = 0;
+double mm = strtod(linea, &fin);
+if (fin == linea || errno == ERANGE) {
+    /* error: hay que recordarlo en cada llamada */
+}`,'<code class="i">strtod</code> devuelve 0.0 ante una entrada inválida, que es también una lectura legítima. El error vive en <code class="i">errno</code>, un estado global que hay que revisar a mano.','bad'],
+['Go',`mm, err := strconv.ParseFloat(strings.TrimSpace(linea), 64)
+if err != nil {
+    return Verde, err   // valor cero + error
+}
+return nivel(mm), nil`,'El error es explícito y vuelve como valor, pero el compilador no obliga a revisarlo: <code class="i">mm, _ :=</code> también compila.',''],
+['Rust',`enum ErrorLectura { NoNumerico(ParseFloatError), FueraDeRango(f64) }
+
+fn leer(linea: &str) -> Result<Alerta, ErrorLectura> {
+    let mm: f64 = linea.trim().parse()?;   // ? propaga el error
+    if !(0.0..=1000.0).contains(&mm) {
+        return Err(ErrorLectura::FueraDeRango(mm));
+    }
+    Ok(nivel(mm))
+}`,'El fallo está en el tipo de retorno y <code class="i">?</code> lo propaga. Para usar el valor hay que pasar por <code class="i">match</code> o <code class="i">?</code>, e ignorar un Result produce una advertencia (<code class="i">#[must_use]</code>). Ojo: «NaN» sí se interpreta como f64, pero el filtro de rango lo rechaza porque toda comparación con NaN es falsa. Por eso f64 no implementa <code class="i">Ord</code>.','good']];
+const e4=i=>{$('e-code').innerHTML=lines(E[i][1]);$('e-note').innerHTML=E[i][2];$('e-note').className='note '+E[i][3]};
+segs($('e-seg'),E.map(x=>x[0]),3,e4);e4(3);
+
+/* 5 · send / sync */
+const S=[
+['Vec<f64>',1,1,`let datos = vec![1.0, 2.0, 3.0];
+let h = thread::spawn(move || datos.iter().sum::<f64>());`,'Un tipo dueño de sus datos y sin estado compartido es Send y Sync. <code class="i">move</code> transfiere la propiedad al hilo.'],
+['Rc<T>',0,0,`let datos = Rc::new(vec![1.0, 2.0, 3.0]);
+let copia = Rc::clone(&datos);
+thread::spawn(move || copia.iter().sum::<f64>());
+// error[E0277]: Rc<Vec<f64>> cannot be sent between threads safely`,'El contador de referencias de Rc no es atómico: dos hilos que lo incrementen a la vez lo corromperían. El compilador lo rechaza con <code class="i">E0277</code>.'],
+['Arc<T>',1,1,`let datos = Arc::new(vec![1.0, 2.0, 3.0]);
+let copia = Arc::clone(&datos);
+thread::spawn(move || copia.iter().sum::<f64>());`,'Igual que Rc, pero con contador atómico: permite compartir lectura entre hilos. Para escribir hace falta además un candado o un tipo atómico.'],
+['Arc<Mutex<T>>',1,1,`let total = Arc::new(Mutex::new(0.0_f64));
+let t = Arc::clone(&total);
+thread::spawn(move || { *t.lock().unwrap() += 1.5; });`,'El dato solo se alcanza a través del candado. La guarda que devuelve <code class="i">lock()</code> lo libera al salir de su ámbito (RAII), así que no se puede olvidar soltarlo. Los bloqueos mutuos (<i>deadlocks</i>), en cambio, siguen siendo posibles.'],
+['RefCell<T>',1,0,`let celda = RefCell::new(vec![1.0]);
+celda.borrow_mut().push(2.0);   // préstamo verificado al ejecutar`,'Mutabilidad interior con préstamos verificados al ejecutar, no al compilar. Se puede mover a otro hilo (Send), pero no compartir (no es Sync): su contador de préstamos no está sincronizado.'],
+['MutexGuard<T>',0,1,`let g = total.lock().unwrap();
+thread::spawn(move || drop(g));
+// error[E0277]: MutexGuard<'_, f64> cannot be sent between threads safely`,'La guarda puede compartirse por referencia, pero no enviarse: en algunos sistemas operativos un candado debe soltarlo el mismo hilo que lo tomó. Esa regla del sistema operativo se codifica en el tipo.']];
+const s5=i=>{const s=S[i];$('s-badges').innerHTML=`<span class="badge ${s[1]?'y':'n'}">${s[1]?'✓':'✗'} Send</span><span class="badge ${s[2]?'y':'n'}">${s[2]?'✓':'✗'} Sync</span>`;
+$('s-code').innerHTML=lines(s[3]);$('s-note').innerHTML=s[4];$('s-note').className='note '+(s[1]&&s[2]?'good':(!s[1]&&!s[2]?'bad':''))};
+segs($('s-seg'),S.map(x=>esc(x[0])),0,s5);s5(0);
+
+/* 6 · evidencia */
+const V=[
+['Android, 2019',76,'c','En 2019, el 76 % de las vulnerabilidades de Android eran de seguridad de memoria.'],
+['Android, 2024',24,'','En 2024 la proporción bajó al 24 %. Google lo atribuye a escribir el código nuevo en lenguajes con seguridad de memoria (Rust, Kotlin y Java), sin reescribir el código C/C++ existente: las vulnerabilidades se concentran en el código reciente y el viejo «madura». (Vander Stoep y Rebert, Google Security Blog, 2024.)'],
+['Microsoft (CVE por año)',70,'c','Cerca del 70 % de las vulnerabilidades a las que Microsoft asigna un CVE cada año son de seguridad de memoria (Microsoft Security Response Center, 2019).'],
+['Chromium (gravedad alta)',70,'c','Cerca del 70 % de los errores de seguridad de gravedad alta en Chromium son problemas de seguridad de memoria (proyecto Chromium).']];
+let vs=1;
+const v6=()=>{$('v-bars').innerHTML=V.map((v,i)=>`<div class="hb${i===vs?' sel':''}" role="button" tabindex="0" data-i="${i}" style="cursor:pointer"><span>${v[0]}</span><span class="tr"><i class="${v[2]}" style="width:${v[1]}%"></i></span><b>~${v[1]} %</b></div>`).join('');$('v-note').innerHTML=V[vs][3]};
+$('v-bars').onclick=e=>{const r=e.target.closest('[data-i]');if(r){vs=+r.dataset.i;v6()}};
+$('v-bars').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){const r=e.target.closest('[data-i]');if(r){e.preventDefault();vs=+r.dataset.i;v6();$('v-bars').children[vs].focus()}}};v6();
+
+/* 7 · historia */
+const T=[
+['2006','Un proyecto personal','Graydon Hoare, ingeniero de Mozilla, empieza Rust en su tiempo libre: un lenguaje de sistemas que no permitiera los errores de memoria de C y C++.'],
+['2009','Mozilla lo adopta','Mozilla patrocina el proyecto y lo presenta en 2010. El primer compilador, en OCaml, se reemplaza por uno escrito en Rust sobre LLVM.'],
+['2015','Rust 1.0','15 de mayo: primera versión estable con promesa de compatibilidad hacia atrás. Desde entonces hay una versión nueva cada seis semanas.'],
+['2017','Rust llega a Firefox','Firefox Quantum incorpora Stylo, el motor de estilos CSS en paralelo que venía de Servo, el navegador experimental de Mozilla escrito en Rust.'],
+['2018','Edición 2018','Las ediciones permiten cambiar la sintaxis sin romper el código anterior. Llegan los tiempos de vida no léxicos (NLL). async/await se estabiliza en noviembre de 2019 (Rust 1.39).'],
+['2021','Rust Foundation','En febrero nace la Rust Foundation con AWS, Google, Huawei, Microsoft y Mozilla como miembros fundadores. Sale la edición 2021.'],
+['2022','Rust en el núcleo de Linux','Linux 6.1 (diciembre) acepta Rust como segundo lenguaje para escribir partes del núcleo, sobre todo controladores.'],
+['2024','Política pública','En febrero, la Oficina del Director Nacional de Ciberseguridad de la Casa Blanca (ONCD) recomienda migrar a lenguajes con seguridad de memoria. Google reporta que esas vulnerabilidades bajaron al 24 % en Android.'],
+['2025','Edición 2024','Rust 1.85 (20 de febrero) estabiliza la edición 2024, que entre otros cambios exige marcar como unsafe los bloques extern.'],
+['2026','Rust 1.100','El 12 de noviembre sale la versión 1.100.0, once años y medio después de la 1.0, sin romper la compatibilidad.']];
+let ts=2;
+const t7=()=>{$('t-yrs').innerHTML=T.map((t,i)=>`<button data-i="${i}" class="${i===ts?'on':''}">${t[0]}</button>`).join('');$('t-yr').textContent=T[ts][0];$('t-tt').textContent=T[ts][1];$('t-tx').textContent=T[ts][2]};
+$('t-yrs').onclick=e=>{const b=e.target.closest('button');if(b){ts=+b.dataset.i;t7()}};t7();
+
+/* 8 · ecosistema */
+const G=['Todos','Datos tabulares','Herramientas de Python','Geoespacial y ARCO','Aprendizaje automático','Fundamentos','Publicación y edición'];
+const R=[
+['Polars','pola-rs/polars',40526,1,'DataFrames con evaluación perezosa y ejecución en paralelo sobre Apache Arrow.'],
+['Apache DataFusion','apache/datafusion',9668,1,'Motor de consultas SQL extensible sobre Arrow; base de muchas bases de datos nuevas.'],
+['arrow-rs','apache/arrow-rs',3679,1,'Implementación oficial de Apache Arrow y Parquet en Rust.'],
+['delta-rs','delta-io/delta-rs',3376,1,'Tablas Delta Lake desde Python y Rust, sin la máquina virtual de Java.'],
+['uv','astral-sh/uv',92714,2,'Gestor de paquetes, entornos y versiones de Python; puede reemplazar a pip, venv y pyenv.'],
+['Ruff','astral-sh/ruff',51564,2,'Linter y formateador de Python, del mismo equipo que uv (Astral).'],
+['PyO3','PyO3/pyo3',16380,2,'Enlaces entre Rust y Python: módulos nativos de Python escritos en Rust.'],
+['maturin','PyO3/maturin',5927,2,'Compila y publica en PyPI paquetes con extensiones en Rust.'],
+['Icechunk','earth-mover/icechunk',708,3,'Motor transaccional y versionado para Zarr en la nube (Earthmover).'],
+['zarrs','zarrs/zarrs',288,3,'Zarr v2 y v3 en Rust; también acelera zarr-python como canal de códecs.'],
+['obstore','developmentseed/obstore',844,3,'Acceso rápido a S3, GCS y Azure desde Python (Development Seed).'],
+['geo (GeoRust)','georust/geo',1971,3,'Primitivas y algoritmos geoespaciales: áreas, distancias, simplificación, operaciones booleanas.'],
+['geoarrow-rs','geoarrow/geoarrow-rs',432,3,'Geometrías en formato columnar Arrow, para Rust, Python y WebAssembly.'],
+['Martin','maplibre/martin',4105,3,'Servidor de teselas vectoriales desde PostGIS, PMTiles y MBTiles (MapLibre).'],
+['Candle','huggingface/candle',21428,4,'Marco minimalista de aprendizaje automático de Hugging Face; inferencia sin Python.'],
+['Burn','tracel-ai/burn',16356,4,'Aprendizaje profundo con varios backends: CUDA, WGPU, Metal y CPU.'],
+['tokenizers','huggingface/tokenizers',11321,4,'Los tokenizadores de Hugging Face, escritos en Rust y usados desde Python.'],
+['Tokio','tokio-rs/tokio',33809,5,'Entorno de ejecución asíncrono para servicios de red.'],
+['rayon','rayon-rs/rayon',13523,5,'Paralelismo de datos: cambiar iter() por par_iter().'],
+['serde','serde-rs/serde',11028,5,'Serialización genérica: JSON, CSV, TOML, MessagePack y más.'],
+['Typst','typst/typst',57440,6,'Composición tipográfica moderna, alternativa a LaTeX; Quarto puede usarla para generar PDF.'],
+['Zed','zed-industries/zed',95787,6,'Editor de código de alto rendimiento con agentes de IA integrados.'],
+['ripgrep','BurntSushi/ripgrep',70376,6,'Búsqueda en texto; es el motor de búsqueda de VS Code.']];
+const fmtk=n=>n>=1000?(n/1000).toFixed(n>=10000?0:1).replace('.',',')+' k':String(n);
+const g8=f=>{$('g-list').innerHTML=R.filter(r=>!f||r[3]===f).sort((a,b)=>b[2]-a[2]).map(r=>`<a href="https://github.com/${r[1]}" target="_blank" rel="noopener"><b>${r[0]}<em>★ ${fmtk(r[2])}</em></b><span>${r[4]}</span><small>${G[r[3]]}</small></a>`).join('')};
+segs($('g-seg'),G,0,g8);g8(0);
+
+/* 9 · comparativa */
+const L=['C++','Go','Julia','Python','Rust'];
+const K=[
+['Memoria','Manual y RAII','Recolector','Recolector','Conteo + recolector','Propiedad (RAII verificado)'],
+['Seguridad de memoria','No garantizada','Sí','Sí','Sí','Sí, fuera de unsafe'],
+['Carreras de datos','No las impide','Detector al ejecutar (<span style="white-space:nowrap">-race</span>)','No las impide','GIL; opcional sin GIL','Impedidas al compilar'],
+['Rendimiento','Máximo','Alto','Alto, tras compilar JIT','Bajo en Python puro','Máximo'],
+['Curva de aprendizaje','Muy alta','Baja','Media','Baja','Alta'],
+['Ecosistema de datos','Bibliotecas base','Limitado','Científico sólido','El más amplio','Motores, en crecimiento'],
+['Distribución','Binario + dependencias','Binario único','Requiere entorno','Requiere entorno','Binario único o WebAssembly']];
+const U=[
+['Extensión rápida para Python',4,0,'Rust con PyO3 y maturin: el binario se publica en PyPI como cualquier paquete y el usuario no instala Rust. C++ con pybind11 o nanobind es la alternativa clásica.'],
+['Análisis exploratorio',3,2,'Python (o R) por su ecosistema y sus cuadernos. Julia si el modelo es numérico y propio. Rust no aporta en esta etapa.'],
+['Servicio de red',4,1,'Go por su simplicidad y su recolector de baja latencia. Rust cuando importan las colas de latencia, el consumo de memoria o la confiabilidad (por ejemplo, la ingesta de un sistema de alerta).'],
+['Simulación numérica propia',2,4,'Julia por la rapidez de prototipado con rendimiento alto. Rust si la simulación se distribuirá como biblioteca o servicio estable.'],
+['Herramienta de línea de comandos',4,1,'Rust o Go: un binario único sin dependencias, fácil de instalar en cualquier sistema.']];
+const k9=i=>{const u=U[i];$('k-tab').innerHTML=`<tr><th></th>${L.map((l,j)=>`<th class="${j===u[1]?'rec':j===u[2]?'alt':''}">${l}</th>`).join('')}</tr>`+K.map(r=>`<tr><td>${r[0]}</td>${r.slice(1).map((c,j)=>`<td class="${j===u[1]?'rec':''}">${c}</td>`).join('')}</tr>`).join('');$('k-note').innerHTML=u[3]};
+segs($('k-seg'),U.map(u=>u[0]),0,k9);k9(0);
+
+/* 10 · decisión */
+const D=['¿El código se ejecutará muchas veces o por mucho tiempo (producción, no un análisis puntual)?','¿El cuello de botella está en bucles que NumPy, Polars o xarray no logran vectorizar?','¿Una caída o un error silencioso tendría un costo alto (alerta temprana, servicio público)?','¿Necesitas distribuir un binario único o ejecutar en el navegador con WebAssembly?','¿El equipo puede dedicar algunas semanas a aprender el modelo de propiedad?'];
+const da=[1,1,0,0,1];
+const d10=()=>{$('d-qs').innerHTML=D.map((q,i)=>`<div class="q"><span>${q}</span><div class="seg" data-q="${i}"><button data-v="1" class="${da[i]?'on':''}">Sí</button><button data-v="0" class="${da[i]?'':'on'}">No</button></div></div>`).join('');
+const [prod,lento,critico,dist,tiempo]=da;let t,x;
+if(!prod){t='Quédate en Python o R';x='Para análisis puntuales, el tiempo de desarrollo pesa más que el de ejecución. Si algo es lento, prueba primero con Polars, DuckDB o Numba.'}
+else if(!tiempo&&(lento||critico||dist)){t='Todavía no: optimiza primero';x='Perfila el código, vectoriza y usa bibliotecas que ya están escritas en Rust o C (Polars, DuckDB). Para un servicio, Go tiene una curva mucho más corta.'}
+else if(lento&&!critico&&!dist){t='Rust como extensión de Python';x='Reescribe solo la función caliente con PyO3 y publícala con maturin. El resto del flujo sigue en Python y se puede medir la ganancia de forma aislada.'}
+else if(critico||dist){t='Rust como servicio o herramienta';x='Un binario confiable, sin recolector de basura y con los errores en el sistema de tipos. Encaja en ingesta de datos para alerta temprana, servidores de teselas, herramientas de línea de comandos y módulos de WebAssembly.'}
+else{t='Probablemente no hace falta';x='Si el código no es lento, ni crítico, ni necesita distribuirse como binario, el lenguaje actual del equipo es la mejor opción.'}
+$('d-out').innerHTML=`<b>${t}</b>${x}`};
+$('d-qs').onclick=e=>{const b=e.target.closest('button');if(!b)return;da[+b.parentNode.dataset.q]=+b.dataset.v;d10()};d10();
+
+/* 11 · ruta */
+const RT=[
+['The Rust Programming Language («el libro»)','Klabnik y Nichols. Capítulos 1 a 10: propiedad, structs, enums, errores, genéricos y traits. Gratis en doc.rust-lang.org/book.'],
+['Rustlings','Ejercicios cortos que no compilan hasta que se corrigen; entrenan la lectura de los mensajes del compilador.'],
+['Rust by Example','Referencia de consulta rápida, con un ejemplo ejecutable por concepto.'],
+['Comprehensive Rust (Google)','Curso de varios días creado por el equipo de Android; incluye concurrencia, unsafe e interoperabilidad con C++.'],
+['Un proyecto propio','Una herramienta de línea de comandos con clap y serde, o una extensión de Python con PyO3 para una función que hoy es lenta.'],
+['Programming Rust o Effective Rust','Blandy, Orendorff y Tindall (2.ª ed., 2021) para profundidad; Drysdale (2024) para buenas prácticas.'],
+['Rust for Rustaceans y Rust Atomics and Locks','Gjengset (2021) para diseño de APIs y el sistema de tipos; Bos (2023) para atómicos, orden de memoria y candados.'],
+['The Rustonomicon','Las reglas de unsafe: qué hay que garantizar a mano cuando el compilador ya no puede verificarlo.']];
+const rd=Array(RT.length).fill(false);
+const r11=()=>{$('r-list').innerHTML=RT.map((r,i)=>`<button class="${rd[i]?'done':''}" data-i="${i}" aria-pressed="${rd[i]}"><div><b>${r[0]}</b><span>${r[1]}</span></div></button>`).join('');const n=rd.filter(Boolean).length;$('r-bar').style.width=(n/RT.length*100)+'%';$('r-cnt').textContent=`${n} de ${RT.length}`};
+$('r-list').onclick=e=>{const b=e.target.closest('button');if(b){rd[+b.dataset.i]=!rd[+b.dataset.i];r11()}};r11();
+}
+</script>
+<script>{const post=()=>{try{parent.postMessage({deckHeight:document.documentElement.scrollHeight,deck:location.pathname.split('/').pop()},'*')}catch(e){}};new ResizeObserver(post).observe(document.body);window.addEventListener('load',post)}</script>
+</body>
+</html>

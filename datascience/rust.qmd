@@ -1,0 +1,340 @@
+---
+title: "Rust"
+subtitle: "Seguridad de memoria sin recolector de basura: el modelo de propiedad, la concurrencia verificada por el compilador y su lugar como motor de la ciencia de datos"
+author: "Mauricio Romero Torres"
+date: 2026-11-26
+date-modified: 2026-11-26
+lang: es
+format:
+  html:
+    page-layout: full
+    code-overflow: scroll
+resources:
+  - demos/rust-tarjetas.html
+editor: visual
+---
+
+## Por qué Rust importa
+
+Rust es un lenguaje de programación de sistemas con el rendimiento de C y C++ que, además, garantiza al compilar la seguridad de memoria y la ausencia de carreras de datos, sin recolector de basura. Esa combinación parecía imposible. Los lenguajes rápidos (C, C++) dejaban la memoria en manos del programador y aceptaban sus errores. Los seguros (Java, Go, Python) pagaban con un recolector que consume memoria y agrega pausas. Rust resuelve el dilema con un sistema de tipos que lleva la cuenta de **quién es dueño de cada valor** y **quién lo tiene prestado**, y que rechaza cualquier programa en el que esa cuenta no cuadre.
+
+Las consecuencias van más allá del gusto de los programadores. Cerca del 70 % de las vulnerabilidades a las que Microsoft asigna un CVE cada año, y una proporción similar de los errores de seguridad graves de Chromium, son errores de memoria: uso después de liberar, desbordamiento de búfer, doble liberación. En Android, donde Google empezó a escribir el código nuevo en lenguajes con seguridad de memoria (Rust, Kotlin y Java), esa proporción cayó del 76 % en 2019 al 24 % en 2024 sin reescribir el código existente. En febrero de 2024 la Oficina del Director Nacional de Ciberseguridad de la Casa Blanca recomendó migrar a ese tipo de lenguajes. Linux acepta Rust en el núcleo desde la versión 6.1 (2022), y la versión 1.100 del lenguaje salió el 12 de noviembre de 2026 sin romper la compatibilidad con la 1.0 de 2015.
+
+Para quien trabaja con datos, la razón para conocerlo es más inmediata: buena parte de las herramientas que ya usa están escritas en Rust. Polars, uv, Ruff, el núcleo de pydantic, los tokenizadores de Hugging Face, Icechunk y Typst son programas en Rust con una interfaz amable encima. Entender el lenguaje ayuda a saber por qué esas herramientas son rápidas y confiables, y cuándo vale la pena escribir la propia.
+
+## Rust en 11 tarjetas
+
+::: {.callout-note title="Cómo usarlas"}
+- **Qué son:** un archivo HTML autocontenido, sin bibliotecas externas, con el mismo sistema visual que las [gráficas HTML](graficas-html.qmd). Cada tarjeta se puede tocar, recorrer paso a paso o filtrar.
+- **Cómo navegar:** desliza de lado, usa los botones ‹ › o las flechas del teclado, o salta con los botones numerados.
+- **Qué tienen:** un recorrido por la memoria línea por línea, un cuestionario de seis fragmentos, la comparación de errores en cuatro lenguajes, un selector de Send y Sync, la evidencia sobre vulnerabilidades, la historia, el ecosistema de datos, una tabla comparativa, un árbol de decisión y una ruta de aprendizaje.
+- **Verificación:** todo el código de las tarjetas y de este artículo se compiló con Rust estable (edición 2024) el 26 de noviembre de 2026. Los que no compilan fallan con el código de error que se indica.
+:::
+
+[Abrir en pantalla completa](demos/rust-tarjetas.html){.btn .btn-outline-primary target="_blank"}
+
+```{=html}
+<iframe class="deck" id="deck-rust" src="demos/rust-tarjetas.html" title="Rust en 11 tarjetas interactivas" style="width:100%;height:900px;border:0;border-radius:12px" loading="lazy"></iframe>
+<script>
+  // Ajusta la altura del iframe a su contenido
+  window.addEventListener('message', function (e) {
+    if (!e.data || !e.data.deckHeight) return;
+    document.querySelectorAll('iframe.deck').forEach(function (f) {
+      if (f.contentWindow === e.source) f.style.height = (e.data.deckHeight + 8) + 'px';
+    });
+  });
+</script>
+```
+
+## El modelo de propiedad
+
+Todo el lenguaje se apoya en tres reglas. Cada valor tiene un dueño; solo hay un dueño a la vez; y cuando el dueño sale de su ámbito, el valor se libera. Asignar un valor a otra variable, o pasarlo a una función, **mueve** la propiedad: la variable original deja de ser utilizable y el compilador lo hace cumplir.
+
+```rust
+fn main() {
+    let a = vec![1.2, 3.4, 5.6];
+    let b = a;              // la propiedad pasa a `b`
+    println!("{:?}", a);    // error[E0382]: borrow of moved value: `a`
+}
+```
+
+En C++ la línea equivalente compila y, según el tipo, copia todo el vector o deja `a` en un estado «válido pero no especificado». En Rust no hay ambigüedad: un búfer tiene exactamente un responsable de liberarlo, de modo que la doble liberación y la fuga por olvido no se pueden expresar en código seguro. Los tipos pequeños que no poseen memoria en el montículo (enteros, flotantes, booleanos) implementan `Copy` y se copian en lugar de moverse. Las copias costosas, en cambio, siempre se escriben (`.clone()`), así que el costo queda a la vista.
+
+### Préstamos: alias o mutabilidad, nunca ambos
+
+Mover todo el tiempo sería impráctico, así que Rust permite **prestar** un valor mediante referencias. La regla central es «alias XOR mutabilidad»: puede haber muchas referencias de lectura (`&T`) o una sola de escritura (`&mut T`), pero no las dos al mismo tiempo. Esa regla elimina de un golpe una familia entera de errores. El ejemplo clásico es la invalidación de iteradores:
+
+```rust
+fn main() {
+    let mut v = vec![1, 2, 3];
+    let primero = &v[0];
+    v.push(4);              // error[E0502]: cannot borrow `v` as mutable
+                            // because it is also borrowed as immutable
+    println!("{primero}");
+}
+```
+
+`push` puede necesitar más capacidad y mover todo el vector a otra zona de memoria; `primero` quedaría apuntando a memoria liberada. En C++ ese programa compila y su comportamiento es indefinido: puede funcionar en las pruebas y fallar en producción. Rust lo rechaza antes de ejecutarlo. Desde la edición 2018 el compilador razona con **tiempos de vida no léxicos** (NLL): un préstamo termina en su último uso, no al cerrar el bloque. Si el `println!` fuera antes del `push`, el programa compilaría.
+
+### Tiempos de vida
+
+Cada referencia tiene un tiempo de vida, y el compilador debe probar que nunca supera el del dato al que apunta. Casi siempre los infiere. Solo hay que anotarlos cuando una función devuelve una referencia que depende de varias entradas y el compilador no puede adivinar de cuál:
+
+```rust
+fn mas_largo<'a>(x: &'a str, y: &'a str) -> &'a str {
+    if x.len() >= y.len() { x } else { y }
+}
+
+fn main() {
+    let a = String::from("Mocoa");
+    let r;
+    {
+        let b = String::from("Tumaco");
+        r = mas_largo(&a, &b);
+    }                       // `b` se libera aquí
+    println!("{r}");        // error[E0597]: `b` does not live long enough
+}
+```
+
+La anotación `'a` no cambia cuánto vive nada. Es un contrato: el resultado vive como mucho lo que viva la entrada más corta. Con ese contrato, el compilador detecta que `r` podría apuntar a `b` después de liberada. Si el `println!` se mueve dentro del bloque, el programa compila e imprime «Tumaco».
+
+Que estas reglas sean correctas no es una afirmación de mercadeo. El proyecto RustBelt (Jung et al., 2018) formalizó un subconjunto realista del lenguaje y demostró, con un asistente de pruebas, que el sistema de tipos garantiza la seguridad de memoria, incluso cuando bibliotecas estándar como `Arc`, `Mutex` o `Cell` usan `unsafe` por dentro.
+
+## Tipos algebraicos y errores como valores
+
+Rust no tiene `null` ni excepciones. La ausencia de un valor es `Option<T>` (`Some(x)` o `None`) y una operación que puede fallar devuelve `Result<T, E>` (`Ok(x)` o `Err(e)`). Ambos son `enum`, tipos suma en el sentido de la teoría de tipos, y `match` obliga a cubrir todas sus variantes. El operador `?` propaga el error hacia quien llamó, y con eso el manejo de errores ocupa un carácter sin quedar invisible.
+
+```rust
+#[derive(Debug)]
+enum Alerta { Verde, Amarilla, Naranja, Roja }
+
+#[derive(Debug)]
+enum ErrorLectura {
+    NoNumerico(std::num::ParseFloatError),
+    FueraDeRango(f64),
+}
+
+impl From<std::num::ParseFloatError> for ErrorLectura {
+    fn from(e: std::num::ParseFloatError) -> Self { ErrorLectura::NoNumerico(e) }
+}
+
+/// Umbrales ilustrativos de lluvia acumulada en 24 horas (mm).
+fn nivel(mm: f64) -> Alerta {
+    match mm {
+        x if x < 50.0 => Alerta::Verde,
+        x if x < 100.0 => Alerta::Amarilla,
+        x if x < 150.0 => Alerta::Naranja,
+        _ => Alerta::Roja,
+    }
+}
+
+fn leer(linea: &str) -> Result<Alerta, ErrorLectura> {
+    let mm: f64 = linea.trim().parse()?;       // `?` convierte y propaga el error
+    if !(0.0..=1000.0).contains(&mm) {
+        return Err(ErrorLectura::FueraDeRango(mm));
+    }
+    Ok(nivel(mm))
+}
+```
+
+Con las entradas `"37.5"`, `" 120 "`, `"NaN"`, `"-3"` y `"sin dato"`, el programa devuelve `Ok(Verde)`, `Ok(Naranja)`, `Err(FueraDeRango(NaN))`, `Err(FueraDeRango(-3.0))` y `Err(NoNumerico(...))`. El caso de NaN es instructivo. La cadena `"NaN"` es un `f64` válido, y si llegara a `nivel` caería en `Roja`, porque toda comparación con NaN es falsa y el `match` termina en el último brazo. El filtro de rango la detiene por la misma razón. Rust reconoce el problema en sus tipos: `f64` implementa `PartialOrd` pero no `Ord`, de modo que ordenar un vector de flotantes exige decir qué hacer con NaN (`sort_by(f64::total_cmp)`). En un sistema de alerta temprana, la diferencia entre un sensor que reporta NaN y una alerta roja no es un detalle.
+
+## Traits, genéricos y abstracciones de costo cero
+
+Los *traits* definen comportamiento compartido entre tipos, como las interfaces de otros lenguajes, pero con dos formas de despacho que el programador elige de manera explícita:
+
+```rust
+trait Amenaza {
+    fn intensidad(&self, x: f64, y: f64) -> f64;
+}
+
+// Despacho estático: el compilador genera una copia especializada por tipo
+// (monomorfización) y puede integrar la llamada en el bucle.
+fn maximo<A: Amenaza>(a: &A, puntos: &[(f64, f64)]) -> f64 {
+    puntos.iter().map(|&(x, y)| a.intensidad(x, y)).fold(f64::MIN, f64::max)
+}
+
+// Despacho dinámico: una sola función que llama a través de una tabla virtual;
+// permite mezclar sismos e inundaciones en el mismo vector.
+fn total(amenazas: &[Box<dyn Amenaza>], x: f64, y: f64) -> f64 {
+    amenazas.iter().map(|a| a.intensidad(x, y)).sum()
+}
+```
+
+La promesa de las **abstracciones de costo cero**, heredada de C++, es que lo que no se usa no se paga y que lo que se usa no podría escribirse mejor a mano. Los iteradores son el mejor ejemplo. Esta función calcula la pérdida anual esperada (PAE) integrando con trapecios la curva de excedencia de pérdidas:
+
+```rust
+/// Pérdida anual esperada por integración trapezoidal de la curva de excedencia.
+/// `curva`: pares (probabilidad anual de excedencia, pérdida), con la probabilidad
+/// en orden descendente.
+fn pae(curva: &[(f64, f64)]) -> f64 {
+    curva
+        .windows(2)
+        .map(|w| (w[0].0 - w[1].0) * (w[0].1 + w[1].1) / 2.0)
+        .sum()
+}
+```
+
+Con una curva ilustrativa para periodos de retorno de 2, 10, 50, 100 y 500 años (pérdidas de 0, 120, 480, 750 y 1400 millones), el resultado es 62,75 millones por año. El compilador convierte la cadena `windows → map → sum` en el mismo bucle que se escribiría a mano. En la práctica, el optimizador también suele eliminar las comprobaciones de límites de `w[0]` y `w[1]`, porque puede deducir que cada ventana tiene exactamente dos elementos. Como en cualquier implementación de este cálculo, la cola de la curva por fuera del intervalo de probabilidades dado queda sin integrar; un análisis real debe extrapolarla o justificar el truncamiento.
+
+## Concurrencia sin miedo
+
+Una carrera de datos ocurre cuando dos hilos acceden a la misma memoria, al menos uno escribe y no hay sincronización. Es la clase de error más difícil de reproducir. Rust la convierte en un error de tipos con dos rasgos que el compilador deduce solo:
+
+- **`Send`**: el valor puede transferirse a otro hilo.
+- **`Sync`**: el valor puede compartirse por referencia entre hilos (`&T` es `Send`).
+
+`Rc<T>`, el puntero con conteo de referencias no atómico, no es ninguna de las dos cosas. Intentar llevarlo a otro hilo no compila:
+
+```rust
+use std::rc::Rc;
+use std::thread;
+
+fn main() {
+    let datos = Rc::new(vec![1.0, 2.0, 3.0]);
+    let copia = Rc::clone(&datos);
+    let h = thread::spawn(move || copia.iter().sum::<f64>());
+    // error[E0277]: `Rc<Vec<f64>>` cannot be sent between threads safely
+    println!("{}", h.join().unwrap());
+}
+```
+
+La versión correcta usa `Arc` (conteo atómico) para compartir y `Mutex` para escribir. La guarda que devuelve `lock()` suelta el candado al salir de su ámbito, así que no se puede olvidar liberarlo. Pero el mismo mecanismo da paralelismo de datos casi gratis. Con la biblioteca [rayon](https://github.com/rayon-rs/rayon), cambiar `iter()` por `par_iter()` reparte el trabajo entre todos los núcleos, y el compilador garantiza que la función que se aplica no comparte estado mutable:
+
+```rust
+use rayon::prelude::*;
+
+struct Celda { valor_expuesto: f64, profundidad_m: f64 }
+
+/// Curva de daño ilustrativa: lineal hasta 3 m de profundidad.
+fn dano(c: &Celda) -> f64 {
+    c.valor_expuesto * (c.profundidad_m / 3.0).clamp(0.0, 1.0)
+}
+
+fn dano_total(celdas: &[Celda]) -> f64 {
+    celdas.par_iter().map(dano).sum()
+}
+```
+
+Conviene precisar el alcance de la garantía. Rust impide las **carreras de datos**, no todas las **condiciones de carrera**: dos hilos pueden seguir bloqueándose mutuamente (*deadlock*) o producir un resultado que depende del orden de ejecución, aunque cada acceso individual sea seguro. Tampoco hace determinista la suma en coma flotante: como la suma de `f64` no es asociativa, una suma paralela puede diferir de la secuencial en los últimos dígitos.
+
+La programación asíncrona (`async`/`await`, con entornos como Tokio) da concurrencia masiva de entrada y salida, del tipo de miles de conexiones de red con pocos hilos. Es también la parte más difícil del lenguaje: funciones «coloreadas», `Pin`, futuros que deben ser `Send` y un ecosistema dividido entre entornos de ejecución. Para cálculo intensivo, rayon y los hilos simples suelen bastar.
+
+## Lo que Rust no garantiza
+
+`unsafe` no apaga el verificador de préstamos. Habilita cinco operaciones que el compilador no puede verificar: desreferenciar punteros crudos, llamar funciones `unsafe` (incluidas las de C), acceder a variables estáticas mutables, implementar *traits* `unsafe` y leer campos de uniones. La práctica idiomática es encerrar esas operaciones en módulos pequeños, auditados, que exponen una interfaz segura. Así está construida la biblioteca estándar. Herramientas como Miri, un intérprete que detecta comportamiento indefinido, ayudan a auditarlos.
+
+Fuera de eso, varias garantías que a veces se le atribuyen no existen:
+
+- **Las fugas de memoria son seguras.** Un ciclo de `Rc` o `Box::leak` pierden memoria sin violar ninguna regla.
+- **El desbordamiento de enteros no es comportamiento indefinido**, pero sí puede ser un error lógico. En modo de depuración provoca un *panic*; en modo de producción da la vuelta en complemento a dos, salvo que se active `overflow-checks`. Para controlarlo de forma explícita están `checked_add`, `saturating_add` y `wrapping_add`.
+- **Un `panic` termina el hilo**, y por omisión deshace la pila llamando a los destructores. Indexar fuera de rango, `unwrap()` sobre `None` o dividir un entero entre cero son *panics*, no corrupción de memoria.
+- **Los errores lógicos siguen siendo posibles.** Un umbral mal puesto o una unidad equivocada compilan sin problema; los tipos ayudan si se usan para modelar el dominio, por ejemplo un tipo `Milimetros` distinto de `Metros`.
+
+## Herramientas
+
+Buena parte de la adopción de Rust se debe a que trae su ecosistema de trabajo desde el primer día:
+
+- **Cargo** compila, resuelve dependencias, ejecuta pruebas y referencias de rendimiento (*benchmarks*) y publica en [crates.io](https://crates.io). `Cargo.lock` fija las versiones exactas, un requisito de la ciencia reproducible que en otros lenguajes depende de herramientas aparte.
+- **rustfmt** y **Clippy** dan formato único y más de 700 reglas de calidad. **rust-analyzer** da autocompletado y navegación en [VS Code](vs-code.qmd) y otros editores.
+- **Pruebas en la documentación.** Los ejemplos de código dentro de los comentarios `///` se compilan y ejecutan con `cargo test`, así que la documentación no puede quedar desactualizada sin que una prueba falle.
+- **Ediciones** (2015, 2018, 2021, 2024). Cambian la sintaxis sin romper el código anterior: cada paquete declara su edición y paquetes de ediciones distintas se enlazan entre sí.
+- **Mensajes de error que enseñan.** Cada error tiene un código (`E0382`, `E0502`…) que `rustc --explain` desarrolla con ejemplos, y casi siempre trae una sugerencia de corrección.
+
+El costo visible está en los tiempos de compilación. La monomorfización genera mucho código y LLVM optimiza a fondo, así que un proyecto mediano puede tardar minutos en compilar desde cero. La compilación incremental y la separación en paquetes lo mitigan, pero no lo eliminan.
+
+## Rust como motor de la ciencia de datos
+
+Rust rara vez compite con Python, R o Julia en el análisis exploratorio. Su papel en la ciencia de datos es otro: ser el **motor** bajo una interfaz de Python. El patrón es siempre el mismo. Un núcleo en Rust hace el trabajo pesado en paralelo y sin recolector, se expone a Python con [PyO3](https://github.com/PyO3/pyo3), se empaqueta con [maturin](https://github.com/PyO3/maturin) y se publica en PyPI como binario precompilado, de modo que el usuario final no necesita instalar Rust.
+
+| Área | Proyectos | Qué aportan |
+|---|---|---|
+| Datos tabulares | [Polars](https://github.com/pola-rs/polars), [DataFusion](https://github.com/apache/datafusion), [arrow-rs](https://github.com/apache/arrow-rs), [delta-rs](https://github.com/delta-io/delta-rs) | Ejecución perezosa y en paralelo sobre [Apache Arrow y Parquet](bases-de-datos.qmd) |
+| Herramientas de Python | [uv](https://github.com/astral-sh/uv), [Ruff](https://github.com/astral-sh/ruff), pydantic v2 | Instalación de entornos, análisis de código y validación de datos mucho más rápidos |
+| Geoespacial y [ARCO](arco.qmd) | [Icechunk](https://github.com/earth-mover/icechunk), [zarrs](https://github.com/zarrs/zarrs), [obstore](https://github.com/developmentseed/obstore), [GeoRust](https://github.com/georust/geo), [geoarrow-rs](https://github.com/geoarrow/geoarrow-rs), [Martin](https://github.com/maplibre/martin) | Zarr transaccional en la nube, acceso a almacenamiento de objetos, geometrías columnares y servidores de teselas |
+| Aprendizaje automático | [Candle](https://github.com/huggingface/candle), [Burn](https://github.com/tracel-ai/burn), [tokenizers](https://github.com/huggingface/tokenizers) | Inferencia sin Python y tokenización en paralelo |
+| Publicación | [Typst](../cyt/escrituraypublicacionacademica/typst.qmd) | Composición tipográfica con compilación incremental casi instantánea |
+
+Una extensión mínima, con la forma declarativa de módulo de PyO3 0.30, expone a Python la función de pérdida anual esperada:
+
+```rust
+// src/lib.rs  —  Cargo.toml: crate-type = ["cdylib"], pyo3 = "0.30"
+#[pyo3::pymodule]
+mod riesgo {
+    use pyo3::prelude::*;
+
+    /// Pérdida anual esperada a partir de la curva de excedencia.
+    #[pyfunction]
+    fn pae(curva: Vec<(f64, f64)>) -> f64 {
+        curva
+            .windows(2)
+            .map(|w| (w[0].0 - w[1].0) * (w[0].1 + w[1].1) / 2.0)
+            .sum()
+    }
+}
+```
+
+```bash
+maturin develop --release
+python -c "import riesgo; print(riesgo.pae([(0.5, 0), (0.1, 120), (0.02, 480), (0.01, 750), (0.002, 1400)]))"
+# 62.75
+```
+
+Dos detalles separan un prototipo de una extensión útil. Primero, convertir una lista de Python en `Vec` copia cada elemento; para arreglos grandes se usa el paquete `numpy` de PyO3, que lee el búfer de NumPy sin copiarlo. Segundo, mientras el código en Rust calcula, puede soltar el candado global del intérprete (GIL) para que otros hilos de Python sigan trabajando. Con Python sin GIL (3.13 en adelante) el modelo de Rust encaja todavía mejor: las garantías de `Send` y `Sync` son justo las que ese Python necesita de sus extensiones.
+
+Rust también compila a **WebAssembly**, que el navegador ejecuta a velocidad casi nativa. Para las [gráficas](graficas-html.qmd) y los [mapas](mapas/index.qmd) de este sitio, eso abre la puerta a correr un modelo completo, como una curva de daño sobre miles de polígonos, en el navegador del lector, sin servidor.
+
+## Costos reales
+
+Elegir Rust tiene costos que conviene poner sobre la mesa antes de empezar:
+
+1. **La curva de aprendizaje es alta.** Las primeras semanas se pasan «peleando con el verificador de préstamos». Las estructuras con referencias cruzadas, como grafos, listas doblemente enlazadas o tipos que se refieren a sí mismos, exigen cambiar de diseño: índices en un vector, `Rc<RefCell<T>>` o bibliotecas especializadas.
+2. **Compilar es lento**, como se explicó arriba, y eso alarga el ciclo de editar y probar.
+3. **El ecosistema estadístico es pequeño.** No hay equivalentes maduros de ggplot2, statsmodels, los modelos mixtos de R o el ecosistema geoespacial de Python. Plotters existe, pero está lejos de lo que ofrecen Python y R.
+4. **El trabajo interactivo es incómodo.** Existen núcleos de Jupyter (evcxr), pero el lenguaje no está pensado para explorar celda a celda.
+5. **La interoperabilidad con C exige `unsafe`.** Usar GDAL, PROJ o NetCDF desde Rust pasa por enlaces que alguien debe mantener y auditar.
+6. **Contratar es difícil.** Hay menos programadores de Rust que de Python, y menos aún con experiencia en el dominio del riesgo.
+
+## Cuándo usarlo en gestión del riesgo y ciencia de datos
+
+La regla práctica es **medir antes de reescribir**. Si un análisis es lento, el primer paso es perfilarlo, vectorizarlo y usar bibliotecas que ya están escritas en lenguajes compilados (Polars, DuckDB, xarray con Dask). Rust entra cuando eso no alcanza o cuando el problema no es la velocidad sino la confiabilidad.
+
+| Conviene Rust | No conviene Rust |
+|---|---|
+| Una función caliente que no se puede vectorizar (recorridos de grafos, simulaciones de Monte Carlo con lógica por evento), como extensión de Python | Análisis exploratorio, modelos estadísticos y gráficas |
+| Servicios de ingesta y procesamiento para alerta temprana, donde una caída o una pausa del recolector tienen costo | Scripts de un solo uso y cuadernos de investigación |
+| Procesamiento de rásteres o fragmentos de Zarr en paralelo, en la nube | Equipos sin tiempo para aprender el modelo de propiedad |
+| Herramientas de línea de comandos que se distribuyen como un solo binario | Proyectos que dependen sobre todo de bibliotecas de R o Python sin equivalente en Rust |
+| Modelos que deben correr en el navegador (WebAssembly) | Prototipos que cambiarán de forma cada semana |
+
+La tarjeta 10 del mazo ofrece un árbol de decisión con estas mismas preguntas.
+
+## Para aprender
+
+- **[The Rust Programming Language](https://doc.rust-lang.org/book/)** (Klabnik y Nichols), «el libro», gratuito y mantenido por el proyecto.
+- **[Rustlings](https://github.com/rust-lang/rustlings)**, ejercicios que no compilan hasta que se corrigen.
+- **[Rust by Example](https://doc.rust-lang.org/rust-by-example/)**, para consulta rápida.
+- **[Comprehensive Rust](https://google.github.io/comprehensive-rust/)**, el curso del equipo de Android de Google.
+- **[The Rustonomicon](https://doc.rust-lang.org/nomicon/)**, cuando haga falta `unsafe`.
+- **[Rust Playground](https://play.rust-lang.org/)**, para compilar y compartir fragmentos sin instalar nada. Con él se verificaron los ejemplos de este artículo.
+
+## Referencias
+
+- Blandy, J., Orendorff, J. y Tindall, L. F. S. (2021). *Programming Rust* (2.ª ed.). O'Reilly.
+- Bos, M. (2023). *Rust atomics and locks: Low-level concurrency in practice*. O'Reilly.
+- Drysdale, D. (2024). *Effective Rust*. O'Reilly.
+- Gjengset, J. (2021). *Rust for Rustaceans: Idiomatic programming for experienced developers*. No Starch Press.
+- Jung, R., Jourdan, J.-H., Krebbers, R. y Dreyer, D. (2018). RustBelt: Securing the foundations of the Rust programming language. *Proceedings of the ACM on Programming Languages, 2*(POPL), artículo 66. <https://doi.org/10.1145/3158154>
+- Klabnik, S. y Nichols, C. (2023). *The Rust programming language* (2.ª ed.). No Starch Press.
+- Microsoft Security Response Center. (2019, 16 de julio). *A proactive approach to more secure code*. <https://msrc.microsoft.com/blog/2019/07/a-proactive-approach-to-more-secure-code/>
+- Office of the National Cyber Director. (2024). *Back to the building blocks: A path toward secure and measurable software*. The White House.
+- Perkel, J. M. (2020). Why scientists are turning to Rust. *Nature, 588*, 185–186. <https://doi.org/10.1038/d41586-020-03382-2>
+- The Chromium Projects. (s. f.). *Memory safety*. <https://www.chromium.org/Home/chromium-security/memory-safety/>
+- Vander Stoep, J. y Rebert, A. (2024, 25 de septiembre). *Eliminating memory safety vulnerabilities at the source*. Google Security Blog. <https://security.googleblog.com/2024/09/eliminating-memory-safety-vulnerabilities-Android.html>
+
+## Ver también
+
+- [Gráficas HTML](graficas-html.qmd)
+- [ARCO: datos listos para el análisis y optimizados para la nube](arco.qmd)
+- [Bases de datos y formatos modernos](bases-de-datos.qmd)
+- [Typst](../cyt/escrituraypublicacionacademica/typst.qmd)

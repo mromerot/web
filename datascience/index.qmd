@@ -203,6 +203,16 @@ Atajos y recursos de ayuda para trabajar con Quarto.
 
 ::: mrw-card
 ::: mrw-card-header
+[Rust](rust.qmd)
+:::
+
+::: mrw-card-body
+Lenguaje con seguridad de memoria sin recolector de basura: propiedad y préstamos, concurrencia verificada, Rust como motor de Polars, uv e Icechunk, y cuándo usarlo. Con 11 tarjetas interactivas.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
 [VS Code](vs-code.qmd)
 :::
 

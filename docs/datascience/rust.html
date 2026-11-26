@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mauricio Romero Torres">
+
+<title>Rust – Inicio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c0268bb2cd26ea8ad2ddef1ccaf3bc3a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-4910f9121cc0cf878839b371e47b8836.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
+</script>
+<!-- Google Site Verification -->
+<!-- Reemplaza XXXXX con tu código de verificación de Google Search Console -->
+<!-- <meta name="google-site-verification" content="XXXXX" /> -->
+
+<!-- Meta tags adicionales para SEO -->
+<meta name="author" content="Mauricio Romero Torres">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@mauricioromerot">
+
+<!-- Schema.org markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mauricio Romero Torres",
+  "jobTitle": "Gestor de ciencia y tecnología",
+  "url": "https://mromerot.github.io/web/",
+  "sameAs": [
+    "https://x.com/mauricioromerot",
+    "https://www.linkedin.com/in/mauricio-romero-torres-1b33b95/",
+    "https://scholar.google.com/citations?user=n484vskAAAAJ"
+  ]
+}
+</script>
+
+
+<meta property="og:title" content="Rust – Inicio">
+<meta property="og:description" content="Seguridad de memoria sin recolector de basura: el modelo de propiedad, la concurrencia verificada por el compilador y su lugar como motor de la ciencia de datos">
+<meta property="og:site_name" content="Inicio">
+<meta name="twitter:title" content="Rust – Inicio">
+<meta name="twitter:description" content="Seguridad de memoria sin recolector de basura: el modelo de propiedad, la concurrencia verificada por el compilador y su lugar como motor de la ciencia de datos">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datascience/index.html">Ciencia de datos</a></li><li class="breadcrumb-item"><a href="../datascience/rust.html">Rust</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Inicio</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/amazonas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amazonas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/ambientales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas ambientales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/ambientales/erosioncostera.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Erosión costera</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/ambientales/incendiosforestales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Incendios forestales</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/biologicos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas biológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/biologicos/covid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">COVID-19</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/extraterrestre/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/extraterrestre/amenazasextraterrestres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas extraterrestres</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/geologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas geológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/falladeterreno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Falla de terreno</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/riesgosismico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgo sísmico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/sismicidad-colombia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sismicidad de Colombia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/tsunami.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tsunami</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/geologicas/volcanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Volcanes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/hidrol-meteorologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas hidrológicas y meteorológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/elnino.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">El Niño / La Niña</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/huracanes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Huracanes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/inundaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/inundaciones-repentinas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundaciones repentinas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/hidrol-meteorologicas/olasdecalor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Olas de calor</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/sociales/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas sociales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sociales/migracion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Migración</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/tecnologicas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/tecnologicas/amenazastecnol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Amenazas tecnológicas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../grd/cienciaytecnologia/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/cienciaytecnologia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/estado-ciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estado de la ciencia 2024</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/hoja-de-ruta-ct.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hoja de ruta de ciencia y tecnología</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cienciaytecnologia/marco-sendai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Marco de Sendai</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/ciudades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciudades</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/conocimientodelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conocimiento del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">Cursos, redes y recursos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/cursos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cursos en GRD</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/plataformas-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plataformas y redes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/repositorios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repositorios FAIR</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/educacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/gestiondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del riesgo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/conocimiento-indicadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Indicadores de riesgo nacionales y mundiales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/manejodedesastres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manejo de desastres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/reducciondelriesgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reducción del riesgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sidro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SIDRo (Los Rosales)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sincelejo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sincelejo (EVA)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/sat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sistemas de alerta temprana</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/teoria.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teoría de riesgos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../grd/glosario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Terminología</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../gcc/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gcc/estres-termico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estrés térmico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gcc/gestion-cambio-climatico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del cambio climático</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../gestiondeproyectos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/skills-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Competencias clave en la gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/conpes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CONPES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/dofa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DOFA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/estrategia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estrategia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../gestiondeproyectos/financiacion/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Financiación</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/financiacion/fondo-verde-clima.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fondo Verde para el Clima</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/gestionproyectosciencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de proyectos de CTeI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/gestiontecnologiainnovacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión de tecnología e innovación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/gestion-conocimiento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gestión del conocimiento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/impacto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Impacto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/innovacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Innovación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/liderazgo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Liderazgo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/Linea-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Línea base</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/mapa-actores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa de actores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/metodologias-pm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metodologías de gestión de proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/pestel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PESTEL</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/riesgos-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Riesgos en proyectos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/sostenibilidad-proyectos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sostenibilidad de proyectos de CTeI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gestiondeproyectos/swot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SWOT</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../cyt/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia y tecnología</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/cienciareproduc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia reproducible</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/transdisciplina.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia transdisciplinar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/github-innovacion-grd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Código abierto, GitHub e innovación en GRD</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/desarrollo-tecnologico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Desarrollo tecnológico e innovación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../cyt/escrituraypublicacionacademica/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/escrituraypublicacionacademica/escrituraypublicacionacademica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escritura y publicación académica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/escrituraypublicacionacademica/parrafos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Párrafos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/escrituraypublicacionacademica/typst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Typst</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/interfaz-cps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interfaz ciencia-política-sociedad</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/modelo-medicion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modelo nacional de medición</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/trl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nivel de Madurez Tecnológica (TRL)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cyt/transferencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transferencia de conocimiento y tecnologías</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../educacion/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Educación</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../educacion/docenciaeducacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Docencia y educación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../educacion/ova/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Objetos virtuales de aprendizaje (OVA)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ecolyconserv/ecologiayconservacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ecología y conservación marina</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datascience/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/arco.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ARCO</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/bases-de-datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bases de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/cienciadedatos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciencia de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/claude.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/claude-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude Skills (Slides)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/d3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/d3-experiment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Experimento con D3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GitHub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/google-colab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Google Colab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/graficas-html.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gráficas HTML</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/graficas-python-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gráficas Python y R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/hugging-face.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hugging Face</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/ilustraciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ilustraciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/ia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inteligencia artificial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/jupyter-notebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter Notebook</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../datascience/mapas/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_nri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índice de Riesgo (NRI)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_observable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (Observable / TopoJSON)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/mapas/mapa_colombia_pmtiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa Interactivo (PMTiles)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/markdown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Markdown</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/myst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Myst</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/rust.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Rust</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../datascience/vs-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math-stats/math-stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matemáticas y estadística</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../math-stats/R/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R: minicurso</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/00-fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 0. Fundamentos de R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/01-programacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 1. Programación: flujo, bucles y funciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/02-datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 2. Manejo de datos con tidyverse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/03-visualizacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 3. Visualización con ggplot2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/04-estadistica-basica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 4. Estadística básica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/05-modelos-lineales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 5. Regresión lineal y ANOVA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/06-modelos-mixtos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 6. Modelos mixtos y medidas repetidas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/07-gam-series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 7. GAM y series de tiempo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/08-redes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 8. Análisis de redes con igraph</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/09-espacial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 9. Análisis espacial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math-stats/R/10-aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Módulo 10. Aplicaciones y proyectos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../vidalaboral/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vidalaboral/cafe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Café</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vidalaboral/herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Herramientas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vidalaboral/vidalaboral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vida laboral</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenidos</h2>
+   
+  <ul class="collapse">
+  <li><a href="#por-qué-rust-importa" id="toc-por-qué-rust-importa" class="nav-link active" data-scroll-target="#por-qué-rust-importa">Por qué Rust importa</a></li>
+  <li><a href="#rust-en-11-tarjetas" id="toc-rust-en-11-tarjetas" class="nav-link" data-scroll-target="#rust-en-11-tarjetas">Rust en 11 tarjetas</a></li>
+  <li><a href="#el-modelo-de-propiedad" id="toc-el-modelo-de-propiedad" class="nav-link" data-scroll-target="#el-modelo-de-propiedad">El modelo de propiedad</a></li>
+  <li><a href="#tipos-algebraicos-y-errores-como-valores" id="toc-tipos-algebraicos-y-errores-como-valores" class="nav-link" data-scroll-target="#tipos-algebraicos-y-errores-como-valores">Tipos algebraicos y errores como valores</a></li>
+  <li><a href="#traits-genéricos-y-abstracciones-de-costo-cero" id="toc-traits-genéricos-y-abstracciones-de-costo-cero" class="nav-link" data-scroll-target="#traits-genéricos-y-abstracciones-de-costo-cero">Traits, genéricos y abstracciones de costo cero</a></li>
+  <li><a href="#concurrencia-sin-miedo" id="toc-concurrencia-sin-miedo" class="nav-link" data-scroll-target="#concurrencia-sin-miedo">Concurrencia sin miedo</a></li>
+  <li><a href="#lo-que-rust-no-garantiza" id="toc-lo-que-rust-no-garantiza" class="nav-link" data-scroll-target="#lo-que-rust-no-garantiza">Lo que Rust no garantiza</a></li>
+  <li><a href="#herramientas" id="toc-herramientas" class="nav-link" data-scroll-target="#herramientas">Herramientas</a></li>
+  <li><a href="#rust-como-motor-de-la-ciencia-de-datos" id="toc-rust-como-motor-de-la-ciencia-de-datos" class="nav-link" data-scroll-target="#rust-como-motor-de-la-ciencia-de-datos">Rust como motor de la ciencia de datos</a></li>
+  <li><a href="#costos-reales" id="toc-costos-reales" class="nav-link" data-scroll-target="#costos-reales">Costos reales</a></li>
+  <li><a href="#cuándo-usarlo-en-gestión-del-riesgo-y-ciencia-de-datos" id="toc-cuándo-usarlo-en-gestión-del-riesgo-y-ciencia-de-datos" class="nav-link" data-scroll-target="#cuándo-usarlo-en-gestión-del-riesgo-y-ciencia-de-datos">Cuándo usarlo en gestión del riesgo y ciencia de datos</a></li>
+  <li><a href="#para-aprender" id="toc-para-aprender" class="nav-link" data-scroll-target="#para-aprender">Para aprender</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
+  <li><a href="#ver-también" id="toc-ver-también" class="nav-link" data-scroll-target="#ver-también">Ver también</a></li>
+  </ul>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Informar sobre problema</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../datascience/index.html">Ciencia de datos</a></li><li class="breadcrumb-item"><a href="../datascience/rust.html">Rust</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Rust</h1>
+<p class="subtitle lead">Seguridad de memoria sin recolector de basura: el modelo de propiedad, la concurrencia verificada por el compilador y su lugar como motor de la ciencia de datos</p>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mauricio Romero Torres </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">26 de noviembre de 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de última modificación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">26 de noviembre de 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="por-qué-rust-importa" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-rust-importa">Por qué Rust importa</h2>
+<p>Rust es un lenguaje de programación de sistemas con el rendimiento de C y C++ que, además, garantiza al compilar la seguridad de memoria y la ausencia de carreras de datos, sin recolector de basura. Esa combinación parecía imposible. Los lenguajes rápidos (C, C++) dejaban la memoria en manos del programador y aceptaban sus errores. Los seguros (Java, Go, Python) pagaban con un recolector que consume memoria y agrega pausas. Rust resuelve el dilema con un sistema de tipos que lleva la cuenta de <strong>quién es dueño de cada valor</strong> y <strong>quién lo tiene prestado</strong>, y que rechaza cualquier programa en el que esa cuenta no cuadre.</p>
+<p>Las consecuencias van más allá del gusto de los programadores. Cerca del 70 % de las vulnerabilidades a las que Microsoft asigna un CVE cada año, y una proporción similar de los errores de seguridad graves de Chromium, son errores de memoria: uso después de liberar, desbordamiento de búfer, doble liberación. En Android, donde Google empezó a escribir el código nuevo en lenguajes con seguridad de memoria (Rust, Kotlin y Java), esa proporción cayó del 76 % en 2019 al 24 % en 2024 sin reescribir el código existente. En febrero de 2024 la Oficina del Director Nacional de Ciberseguridad de la Casa Blanca recomendó migrar a ese tipo de lenguajes. Linux acepta Rust en el núcleo desde la versión 6.1 (2022), y la versión 1.100 del lenguaje salió el 12 de noviembre de 2026 sin romper la compatibilidad con la 1.0 de 2015.</p>
+<p>Para quien trabaja con datos, la razón para conocerlo es más inmediata: buena parte de las herramientas que ya usa están escritas en Rust. Polars, uv, Ruff, el núcleo de pydantic, los tokenizadores de Hugging Face, Icechunk y Typst son programas en Rust con una interfaz amable encima. Entender el lenguaje ayuda a saber por qué esas herramientas son rápidas y confiables, y cuándo vale la pena escribir la propia.</p>
+</section>
+<section id="rust-en-11-tarjetas" class="level2">
+<h2 class="anchored" data-anchor-id="rust-en-11-tarjetas">Rust en 11 tarjetas</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Cómo usarlas">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Cómo usarlas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Qué son:</strong> un archivo HTML autocontenido, sin bibliotecas externas, con el mismo sistema visual que las <a href="../datascience/graficas-html.html">gráficas HTML</a>. Cada tarjeta se puede tocar, recorrer paso a paso o filtrar.</li>
+<li><strong>Cómo navegar:</strong> desliza de lado, usa los botones ‹ › o las flechas del teclado, o salta con los botones numerados.</li>
+<li><strong>Qué tienen:</strong> un recorrido por la memoria línea por línea, un cuestionario de seis fragmentos, la comparación de errores en cuatro lenguajes, un selector de Send y Sync, la evidencia sobre vulnerabilidades, la historia, el ecosistema de datos, una tabla comparativa, un árbol de decisión y una ruta de aprendizaje.</li>
+<li><strong>Verificación:</strong> todo el código de las tarjetas y de este artículo se compiló con Rust estable (edición 2024) el 26 de noviembre de 2026. Los que no compilan fallan con el código de error que se indica.</li>
+</ul>
+</div>
+</div>
+<p><a href="demos/rust-tarjetas.html" class="btn btn-outline-primary" target="_blank">Abrir en pantalla completa</a></p>
+<iframe class="deck" id="deck-rust" src="demos/rust-tarjetas.html" title="Rust en 11 tarjetas interactivas" style="width:100%;height:900px;border:0;border-radius:12px" loading="lazy"></iframe>
+<script>
+  // Ajusta la altura del iframe a su contenido
+  window.addEventListener('message', function (e) {
+    if (!e.data || !e.data.deckHeight) return;
+    document.querySelectorAll('iframe.deck').forEach(function (f) {
+      if (f.contentWindow === e.source) f.style.height = (e.data.deckHeight + 8) + 'px';
+    });
+  });
+</script>
+</section>
+<section id="el-modelo-de-propiedad" class="level2">
+<h2 class="anchored" data-anchor-id="el-modelo-de-propiedad">El modelo de propiedad</h2>
+<p>Todo el lenguaje se apoya en tres reglas. Cada valor tiene un dueño; solo hay un dueño a la vez; y cuando el dueño sale de su ámbito, el valor se libera. Asignar un valor a otra variable, o pasarlo a una función, <strong>mueve</strong> la propiedad: la variable original deja de ser utilizable y el compilador lo hace cumplir.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> a <span class="op">=</span> <span class="pp">vec!</span>[<span class="dv">1.2</span><span class="op">,</span> <span class="dv">3.4</span><span class="op">,</span> <span class="dv">5.6</span>]<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> b <span class="op">=</span> a<span class="op">;</span>              <span class="co">// la propiedad pasa a `b`</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="pp">println!</span>(<span class="st">"{:?}"</span><span class="op">,</span> a)<span class="op">;</span>    <span class="co">// error[E0382]: borrow of moved value: `a`</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>En C++ la línea equivalente compila y, según el tipo, copia todo el vector o deja <code>a</code> en un estado «válido pero no especificado». En Rust no hay ambigüedad: un búfer tiene exactamente un responsable de liberarlo, de modo que la doble liberación y la fuga por olvido no se pueden expresar en código seguro. Los tipos pequeños que no poseen memoria en el montículo (enteros, flotantes, booleanos) implementan <code>Copy</code> y se copian en lugar de moverse. Las copias costosas, en cambio, siempre se escriben (<code>.clone()</code>), así que el costo queda a la vista.</p>
+<section id="préstamos-alias-o-mutabilidad-nunca-ambos" class="level3">
+<h3 class="anchored" data-anchor-id="préstamos-alias-o-mutabilidad-nunca-ambos">Préstamos: alias o mutabilidad, nunca ambos</h3>
+<p>Mover todo el tiempo sería impráctico, así que Rust permite <strong>prestar</strong> un valor mediante referencias. La regla central es «alias XOR mutabilidad»: puede haber muchas referencias de lectura (<code>&amp;T</code>) o una sola de escritura (<code>&amp;mut T</code>), pero no las dos al mismo tiempo. Esa regla elimina de un golpe una familia entera de errores. El ejemplo clásico es la invalidación de iteradores:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> v <span class="op">=</span> <span class="pp">vec!</span>[<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span>]<span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> primero <span class="op">=</span> <span class="op">&amp;</span>v[<span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    v<span class="op">.</span>push(<span class="dv">4</span>)<span class="op">;</span>              <span class="co">// error[E0502]: cannot borrow `v` as mutable</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                            <span class="co">// because it is also borrowed as immutable</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="pp">println!</span>(<span class="st">"{primero}"</span>)<span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>push</code> puede necesitar más capacidad y mover todo el vector a otra zona de memoria; <code>primero</code> quedaría apuntando a memoria liberada. En C++ ese programa compila y su comportamiento es indefinido: puede funcionar en las pruebas y fallar en producción. Rust lo rechaza antes de ejecutarlo. Desde la edición 2018 el compilador razona con <strong>tiempos de vida no léxicos</strong> (NLL): un préstamo termina en su último uso, no al cerrar el bloque. Si el <code>println!</code> fuera antes del <code>push</code>, el programa compilaría.</p>
+</section>
+<section id="tiempos-de-vida" class="level3">
+<h3 class="anchored" data-anchor-id="tiempos-de-vida">Tiempos de vida</h3>
+<p>Cada referencia tiene un tiempo de vida, y el compilador debe probar que nunca supera el del dato al que apunta. Casi siempre los infiere. Solo hay que anotarlos cuando una función devuelve una referencia que depende de varias entradas y el compilador no puede adivinar de cuál:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> mas_largo<span class="op">&lt;</span><span class="ot">'a</span><span class="op">&gt;</span>(x<span class="op">:</span> <span class="op">&amp;</span><span class="ot">'a</span> <span class="dt">str</span><span class="op">,</span> y<span class="op">:</span> <span class="op">&amp;</span><span class="ot">'a</span> <span class="dt">str</span>) <span class="op">-&gt;</span> <span class="op">&amp;</span><span class="ot">'a</span> <span class="dt">str</span> <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x<span class="op">.</span>len() <span class="op">&gt;=</span> y<span class="op">.</span>len() <span class="op">{</span> x <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span> y <span class="op">}</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">{</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> a <span class="op">=</span> <span class="dt">String</span><span class="pp">::</span>from(<span class="st">"Mocoa"</span>)<span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> r<span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> b <span class="op">=</span> <span class="dt">String</span><span class="pp">::</span>from(<span class="st">"Tumaco"</span>)<span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        r <span class="op">=</span> mas_largo(<span class="op">&amp;</span>a<span class="op">,</span> <span class="op">&amp;</span>b)<span class="op">;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span>                       <span class="co">// `b` se libera aquí</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="pp">println!</span>(<span class="st">"{r}"</span>)<span class="op">;</span>        <span class="co">// error[E0597]: `b` does not live long enough</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La anotación <code>'a</code> no cambia cuánto vive nada. Es un contrato: el resultado vive como mucho lo que viva la entrada más corta. Con ese contrato, el compilador detecta que <code>r</code> podría apuntar a <code>b</code> después de liberada. Si el <code>println!</code> se mueve dentro del bloque, el programa compila e imprime «Tumaco».</p>
+<p>Que estas reglas sean correctas no es una afirmación de mercadeo. El proyecto RustBelt (Jung et al., 2018) formalizó un subconjunto realista del lenguaje y demostró, con un asistente de pruebas, que el sistema de tipos garantiza la seguridad de memoria, incluso cuando bibliotecas estándar como <code>Arc</code>, <code>Mutex</code> o <code>Cell</code> usan <code>unsafe</code> por dentro.</p>
+</section>
+</section>
+<section id="tipos-algebraicos-y-errores-como-valores" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-algebraicos-y-errores-como-valores">Tipos algebraicos y errores como valores</h2>
+<p>Rust no tiene <code>null</code> ni excepciones. La ausencia de un valor es <code>Option&lt;T&gt;</code> (<code>Some(x)</code> o <code>None</code>) y una operación que puede fallar devuelve <code>Result&lt;T, E&gt;</code> (<code>Ok(x)</code> o <code>Err(e)</code>). Ambos son <code>enum</code>, tipos suma en el sentido de la teoría de tipos, y <code>match</code> obliga a cubrir todas sus variantes. El operador <code>?</code> propaga el error hacia quien llamó, y con eso el manejo de errores ocupa un carácter sin quedar invisible.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span>derive<span class="at">(</span><span class="bu">Debug</span><span class="at">)]</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">enum</span> Alerta <span class="op">{</span> Verde<span class="op">,</span> Amarilla<span class="op">,</span> Naranja<span class="op">,</span> Roja <span class="op">}</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span>derive<span class="at">(</span><span class="bu">Debug</span><span class="at">)]</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">enum</span> ErrorLectura <span class="op">{</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    NoNumerico(<span class="pp">std::num::</span>ParseFloatError)<span class="op">,</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    FueraDeRango(<span class="dt">f64</span>)<span class="op">,</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="kw">impl</span> <span class="bu">From</span><span class="op">&lt;</span><span class="pp">std::num::</span>ParseFloatError<span class="op">&gt;</span> <span class="cf">for</span> ErrorLectura <span class="op">{</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">fn</span> from(e<span class="op">:</span> <span class="pp">std::num::</span>ParseFloatError) <span class="op">-&gt;</span> <span class="dt">Self</span> <span class="op">{</span> <span class="pp">ErrorLectura::</span>NoNumerico(e) <span class="op">}</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">/// Umbrales ilustrativos de lluvia acumulada en 24 horas (mm).</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> nivel(mm<span class="op">:</span> <span class="dt">f64</span>) <span class="op">-&gt;</span> Alerta <span class="op">{</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">match</span> mm <span class="op">{</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        x <span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">50.0</span> <span class="op">=&gt;</span> <span class="pp">Alerta::</span>Verde<span class="op">,</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        x <span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">100.0</span> <span class="op">=&gt;</span> <span class="pp">Alerta::</span>Amarilla<span class="op">,</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>        x <span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">150.0</span> <span class="op">=&gt;</span> <span class="pp">Alerta::</span>Naranja<span class="op">,</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        _ <span class="op">=&gt;</span> <span class="pp">Alerta::</span>Roja<span class="op">,</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> leer(linea<span class="op">:</span> <span class="op">&amp;</span><span class="dt">str</span>) <span class="op">-&gt;</span> <span class="dt">Result</span><span class="op">&lt;</span>Alerta<span class="op">,</span> ErrorLectura<span class="op">&gt;</span> <span class="op">{</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> mm<span class="op">:</span> <span class="dt">f64</span> <span class="op">=</span> linea<span class="op">.</span>trim()<span class="op">.</span>parse()<span class="op">?;</span>       <span class="co">// `?` convierte y propaga el error</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">!</span>(<span class="dv">0.0</span><span class="op">..=</span><span class="dv">1000.0</span>)<span class="op">.</span>contains(<span class="op">&amp;</span>mm) <span class="op">{</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="cn">Err</span>(<span class="pp">ErrorLectura::</span>FueraDeRango(mm))<span class="op">;</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    <span class="cn">Ok</span>(nivel(mm))</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Con las entradas <code>"37.5"</code>, <code>" 120 "</code>, <code>"NaN"</code>, <code>"-3"</code> y <code>"sin dato"</code>, el programa devuelve <code>Ok(Verde)</code>, <code>Ok(Naranja)</code>, <code>Err(FueraDeRango(NaN))</code>, <code>Err(FueraDeRango(-3.0))</code> y <code>Err(NoNumerico(...))</code>. El caso de NaN es instructivo. La cadena <code>"NaN"</code> es un <code>f64</code> válido, y si llegara a <code>nivel</code> caería en <code>Roja</code>, porque toda comparación con NaN es falsa y el <code>match</code> termina en el último brazo. El filtro de rango la detiene por la misma razón. Rust reconoce el problema en sus tipos: <code>f64</code> implementa <code>PartialOrd</code> pero no <code>Ord</code>, de modo que ordenar un vector de flotantes exige decir qué hacer con NaN (<code>sort_by(f64::total_cmp)</code>). En un sistema de alerta temprana, la diferencia entre un sensor que reporta NaN y una alerta roja no es un detalle.</p>
+</section>
+<section id="traits-genéricos-y-abstracciones-de-costo-cero" class="level2">
+<h2 class="anchored" data-anchor-id="traits-genéricos-y-abstracciones-de-costo-cero">Traits, genéricos y abstracciones de costo cero</h2>
+<p>Los <em>traits</em> definen comportamiento compartido entre tipos, como las interfaces de otros lenguajes, pero con dos formas de despacho que el programador elige de manera explícita:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">trait</span> Amenaza <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">fn</span> intensidad(<span class="op">&amp;</span><span class="kw">self</span><span class="op">,</span> x<span class="op">:</span> <span class="dt">f64</span><span class="op">,</span> y<span class="op">:</span> <span class="dt">f64</span>) <span class="op">-&gt;</span> <span class="dt">f64</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">// Despacho estático: el compilador genera una copia especializada por tipo</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">// (monomorfización) y puede integrar la llamada en el bucle.</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> maximo<span class="op">&lt;</span>A<span class="op">:</span> Amenaza<span class="op">&gt;</span>(a<span class="op">:</span> <span class="op">&amp;</span>A<span class="op">,</span> puntos<span class="op">:</span> <span class="op">&amp;</span>[(<span class="dt">f64</span><span class="op">,</span> <span class="dt">f64</span>)]) <span class="op">-&gt;</span> <span class="dt">f64</span> <span class="op">{</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    puntos<span class="op">.</span>iter()<span class="op">.</span>map(<span class="op">|&amp;</span>(x<span class="op">,</span> y)<span class="op">|</span> a<span class="op">.</span>intensidad(x<span class="op">,</span> y))<span class="op">.</span>fold(<span class="dt">f64</span><span class="pp">::</span><span class="cn">MIN</span><span class="op">,</span> <span class="dt">f64</span><span class="pp">::</span>max)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">// Despacho dinámico: una sola función que llama a través de una tabla virtual;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co">// permite mezclar sismos e inundaciones en el mismo vector.</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> total(amenazas<span class="op">:</span> <span class="op">&amp;</span>[<span class="dt">Box</span><span class="op">&lt;</span><span class="kw">dyn</span> Amenaza<span class="op">&gt;</span>]<span class="op">,</span> x<span class="op">:</span> <span class="dt">f64</span><span class="op">,</span> y<span class="op">:</span> <span class="dt">f64</span>) <span class="op">-&gt;</span> <span class="dt">f64</span> <span class="op">{</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    amenazas<span class="op">.</span>iter()<span class="op">.</span>map(<span class="op">|</span>a<span class="op">|</span> a<span class="op">.</span>intensidad(x<span class="op">,</span> y))<span class="op">.</span>sum()</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La promesa de las <strong>abstracciones de costo cero</strong>, heredada de C++, es que lo que no se usa no se paga y que lo que se usa no podría escribirse mejor a mano. Los iteradores son el mejor ejemplo. Esta función calcula la pérdida anual esperada (PAE) integrando con trapecios la curva de excedencia de pérdidas:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">/// Pérdida anual esperada por integración trapezoidal de la curva de excedencia.</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">/// `curva`: pares (probabilidad anual de excedencia, pérdida), con la probabilidad</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">/// en orden descendente.</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> pae(curva<span class="op">:</span> <span class="op">&amp;</span>[(<span class="dt">f64</span><span class="op">,</span> <span class="dt">f64</span>)]) <span class="op">-&gt;</span> <span class="dt">f64</span> <span class="op">{</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    curva</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span>windows(<span class="dv">2</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span>map(<span class="op">|</span>w<span class="op">|</span> (w[<span class="dv">0</span>]<span class="op">.</span><span class="dv">0</span> <span class="op">-</span> w[<span class="dv">1</span>]<span class="op">.</span><span class="dv">0</span>) <span class="op">*</span> (w[<span class="dv">0</span>]<span class="op">.</span><span class="dv">1</span> <span class="op">+</span> w[<span class="dv">1</span>]<span class="op">.</span><span class="dv">1</span>) <span class="op">/</span> <span class="dv">2.0</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span>sum()</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Con una curva ilustrativa para periodos de retorno de 2, 10, 50, 100 y 500 años (pérdidas de 0, 120, 480, 750 y 1400 millones), el resultado es 62,75 millones por año. El compilador convierte la cadena <code>windows → map → sum</code> en el mismo bucle que se escribiría a mano. En la práctica, el optimizador también suele eliminar las comprobaciones de límites de <code>w[0]</code> y <code>w[1]</code>, porque puede deducir que cada ventana tiene exactamente dos elementos. Como en cualquier implementación de este cálculo, la cola de la curva por fuera del intervalo de probabilidades dado queda sin integrar; un análisis real debe extrapolarla o justificar el truncamiento.</p>
+</section>
+<section id="concurrencia-sin-miedo" class="level2">
+<h2 class="anchored" data-anchor-id="concurrencia-sin-miedo">Concurrencia sin miedo</h2>
+<p>Una carrera de datos ocurre cuando dos hilos acceden a la misma memoria, al menos uno escribe y no hay sincronización. Es la clase de error más difícil de reproducir. Rust la convierte en un error de tipos con dos rasgos que el compilador deduce solo:</p>
+<ul>
+<li><strong><code>Send</code></strong>: el valor puede transferirse a otro hilo.</li>
+<li><strong><code>Sync</code></strong>: el valor puede compartirse por referencia entre hilos (<code>&amp;T</code> es <code>Send</code>).</li>
+</ul>
+<p><code>Rc&lt;T&gt;</code>, el puntero con conteo de referencias no atómico, no es ninguna de las dos cosas. Intentar llevarlo a otro hilo no compila:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">std::rc::</span>Rc<span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">std::</span>thread<span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">{</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> datos <span class="op">=</span> <span class="pp">Rc::</span>new(<span class="pp">vec!</span>[<span class="dv">1.0</span><span class="op">,</span> <span class="dv">2.0</span><span class="op">,</span> <span class="dv">3.0</span>])<span class="op">;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> copia <span class="op">=</span> <span class="pp">Rc::</span>clone(<span class="op">&amp;</span>datos)<span class="op">;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> h <span class="op">=</span> <span class="pp">thread::</span>spawn(<span class="kw">move</span> <span class="op">||</span> copia<span class="op">.</span>iter()<span class="op">.</span><span class="pp">sum::</span><span class="op">&lt;</span><span class="dt">f64</span><span class="op">&gt;</span>())<span class="op">;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">// error[E0277]: `Rc&lt;Vec&lt;f64&gt;&gt;` cannot be sent between threads safely</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="pp">println!</span>(<span class="st">"{}"</span><span class="op">,</span> h<span class="op">.</span>join()<span class="op">.</span>unwrap())<span class="op">;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La versión correcta usa <code>Arc</code> (conteo atómico) para compartir y <code>Mutex</code> para escribir. La guarda que devuelve <code>lock()</code> suelta el candado al salir de su ámbito, así que no se puede olvidar liberarlo. Pero el mismo mecanismo da paralelismo de datos casi gratis. Con la biblioteca <a href="https://github.com/rayon-rs/rayon">rayon</a>, cambiar <code>iter()</code> por <code>par_iter()</code> reparte el trabajo entre todos los núcleos, y el compilador garantiza que la función que se aplica no comparte estado mutable:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">rayon::prelude::</span><span class="op">*;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">struct</span> Celda <span class="op">{</span> valor_expuesto<span class="op">:</span> <span class="dt">f64</span><span class="op">,</span> profundidad_m<span class="op">:</span> <span class="dt">f64</span> <span class="op">}</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">/// Curva de daño ilustrativa: lineal hasta 3 m de profundidad.</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> dano(c<span class="op">:</span> <span class="op">&amp;</span>Celda) <span class="op">-&gt;</span> <span class="dt">f64</span> <span class="op">{</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    c<span class="op">.</span>valor_expuesto <span class="op">*</span> (c<span class="op">.</span>profundidad_m <span class="op">/</span> <span class="dv">3.0</span>)<span class="op">.</span>clamp(<span class="dv">0.0</span><span class="op">,</span> <span class="dv">1.0</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> dano_total(celdas<span class="op">:</span> <span class="op">&amp;</span>[Celda]) <span class="op">-&gt;</span> <span class="dt">f64</span> <span class="op">{</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    celdas<span class="op">.</span>par_iter()<span class="op">.</span>map(dano)<span class="op">.</span>sum()</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Conviene precisar el alcance de la garantía. Rust impide las <strong>carreras de datos</strong>, no todas las <strong>condiciones de carrera</strong>: dos hilos pueden seguir bloqueándose mutuamente (<em>deadlock</em>) o producir un resultado que depende del orden de ejecución, aunque cada acceso individual sea seguro. Tampoco hace determinista la suma en coma flotante: como la suma de <code>f64</code> no es asociativa, una suma paralela puede diferir de la secuencial en los últimos dígitos.</p>
+<p>La programación asíncrona (<code>async</code>/<code>await</code>, con entornos como Tokio) da concurrencia masiva de entrada y salida, del tipo de miles de conexiones de red con pocos hilos. Es también la parte más difícil del lenguaje: funciones «coloreadas», <code>Pin</code>, futuros que deben ser <code>Send</code> y un ecosistema dividido entre entornos de ejecución. Para cálculo intensivo, rayon y los hilos simples suelen bastar.</p>
+</section>
+<section id="lo-que-rust-no-garantiza" class="level2">
+<h2 class="anchored" data-anchor-id="lo-que-rust-no-garantiza">Lo que Rust no garantiza</h2>
+<p><code>unsafe</code> no apaga el verificador de préstamos. Habilita cinco operaciones que el compilador no puede verificar: desreferenciar punteros crudos, llamar funciones <code>unsafe</code> (incluidas las de C), acceder a variables estáticas mutables, implementar <em>traits</em> <code>unsafe</code> y leer campos de uniones. La práctica idiomática es encerrar esas operaciones en módulos pequeños, auditados, que exponen una interfaz segura. Así está construida la biblioteca estándar. Herramientas como Miri, un intérprete que detecta comportamiento indefinido, ayudan a auditarlos.</p>
+<p>Fuera de eso, varias garantías que a veces se le atribuyen no existen:</p>
+<ul>
+<li><strong>Las fugas de memoria son seguras.</strong> Un ciclo de <code>Rc</code> o <code>Box::leak</code> pierden memoria sin violar ninguna regla.</li>
+<li><strong>El desbordamiento de enteros no es comportamiento indefinido</strong>, pero sí puede ser un error lógico. En modo de depuración provoca un <em>panic</em>; en modo de producción da la vuelta en complemento a dos, salvo que se active <code>overflow-checks</code>. Para controlarlo de forma explícita están <code>checked_add</code>, <code>saturating_add</code> y <code>wrapping_add</code>.</li>
+<li><strong>Un <code>panic</code> termina el hilo</strong>, y por omisión deshace la pila llamando a los destructores. Indexar fuera de rango, <code>unwrap()</code> sobre <code>None</code> o dividir un entero entre cero son <em>panics</em>, no corrupción de memoria.</li>
+<li><strong>Los errores lógicos siguen siendo posibles.</strong> Un umbral mal puesto o una unidad equivocada compilan sin problema; los tipos ayudan si se usan para modelar el dominio, por ejemplo un tipo <code>Milimetros</code> distinto de <code>Metros</code>.</li>
+</ul>
+</section>
+<section id="herramientas" class="level2">
+<h2 class="anchored" data-anchor-id="herramientas">Herramientas</h2>
+<p>Buena parte de la adopción de Rust se debe a que trae su ecosistema de trabajo desde el primer día:</p>
+<ul>
+<li><strong>Cargo</strong> compila, resuelve dependencias, ejecuta pruebas y referencias de rendimiento (<em>benchmarks</em>) y publica en <a href="https://crates.io">crates.io</a>. <code>Cargo.lock</code> fija las versiones exactas, un requisito de la ciencia reproducible que en otros lenguajes depende de herramientas aparte.</li>
+<li><strong>rustfmt</strong> y <strong>Clippy</strong> dan formato único y más de 700 reglas de calidad. <strong>rust-analyzer</strong> da autocompletado y navegación en <a href="../datascience/vs-code.html">VS Code</a> y otros editores.</li>
+<li><strong>Pruebas en la documentación.</strong> Los ejemplos de código dentro de los comentarios <code>///</code> se compilan y ejecutan con <code>cargo test</code>, así que la documentación no puede quedar desactualizada sin que una prueba falle.</li>
+<li><strong>Ediciones</strong> (2015, 2018, 2021, 2024). Cambian la sintaxis sin romper el código anterior: cada paquete declara su edición y paquetes de ediciones distintas se enlazan entre sí.</li>
+<li><strong>Mensajes de error que enseñan.</strong> Cada error tiene un código (<code>E0382</code>, <code>E0502</code>…) que <code>rustc --explain</code> desarrolla con ejemplos, y casi siempre trae una sugerencia de corrección.</li>
+</ul>
+<p>El costo visible está en los tiempos de compilación. La monomorfización genera mucho código y LLVM optimiza a fondo, así que un proyecto mediano puede tardar minutos en compilar desde cero. La compilación incremental y la separación en paquetes lo mitigan, pero no lo eliminan.</p>
+</section>
+<section id="rust-como-motor-de-la-ciencia-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="rust-como-motor-de-la-ciencia-de-datos">Rust como motor de la ciencia de datos</h2>
+<p>Rust rara vez compite con Python, R o Julia en el análisis exploratorio. Su papel en la ciencia de datos es otro: ser el <strong>motor</strong> bajo una interfaz de Python. El patrón es siempre el mismo. Un núcleo en Rust hace el trabajo pesado en paralelo y sin recolector, se expone a Python con <a href="https://github.com/PyO3/pyo3">PyO3</a>, se empaqueta con <a href="https://github.com/PyO3/maturin">maturin</a> y se publica en PyPI como binario precompilado, de modo que el usuario final no necesita instalar Rust.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Área</th>
+<th>Proyectos</th>
+<th>Qué aportan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Datos tabulares</td>
+<td><a href="https://github.com/pola-rs/polars">Polars</a>, <a href="https://github.com/apache/datafusion">DataFusion</a>, <a href="https://github.com/apache/arrow-rs">arrow-rs</a>, <a href="https://github.com/delta-io/delta-rs">delta-rs</a></td>
+<td>Ejecución perezosa y en paralelo sobre <a href="../datascience/bases-de-datos.html">Apache Arrow y Parquet</a></td>
+</tr>
+<tr class="even">
+<td>Herramientas de Python</td>
+<td><a href="https://github.com/astral-sh/uv">uv</a>, <a href="https://github.com/astral-sh/ruff">Ruff</a>, pydantic v2</td>
+<td>Instalación de entornos, análisis de código y validación de datos mucho más rápidos</td>
+</tr>
+<tr class="odd">
+<td>Geoespacial y <a href="../datascience/arco.html">ARCO</a></td>
+<td><a href="https://github.com/earth-mover/icechunk">Icechunk</a>, <a href="https://github.com/zarrs/zarrs">zarrs</a>, <a href="https://github.com/developmentseed/obstore">obstore</a>, <a href="https://github.com/georust/geo">GeoRust</a>, <a href="https://github.com/geoarrow/geoarrow-rs">geoarrow-rs</a>, <a href="https://github.com/maplibre/martin">Martin</a></td>
+<td>Zarr transaccional en la nube, acceso a almacenamiento de objetos, geometrías columnares y servidores de teselas</td>
+</tr>
+<tr class="even">
+<td>Aprendizaje automático</td>
+<td><a href="https://github.com/huggingface/candle">Candle</a>, <a href="https://github.com/tracel-ai/burn">Burn</a>, <a href="https://github.com/huggingface/tokenizers">tokenizers</a></td>
+<td>Inferencia sin Python y tokenización en paralelo</td>
+</tr>
+<tr class="odd">
+<td>Publicación</td>
+<td><a href="../cyt/escrituraypublicacionacademica/typst.html">Typst</a></td>
+<td>Composición tipográfica con compilación incremental casi instantánea</td>
+</tr>
+</tbody>
+</table>
+<p>Una extensión mínima, con la forma declarativa de módulo de PyO3 0.30, expone a Python la función de pérdida anual esperada:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">// src/lib.rs  —  Cargo.toml: crate-type = ["cdylib"], pyo3 = "0.30"</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span><span class="pp">pyo3::</span>pymodule<span class="at">]</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">mod</span> riesgo <span class="op">{</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">use</span> <span class="pp">pyo3::prelude::</span><span class="op">*;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">/// Pérdida anual esperada a partir de la curva de excedencia.</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">#[</span>pyfunction<span class="at">]</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">fn</span> pae(curva<span class="op">:</span> <span class="dt">Vec</span><span class="op">&lt;</span>(<span class="dt">f64</span><span class="op">,</span> <span class="dt">f64</span>)<span class="op">&gt;</span>) <span class="op">-&gt;</span> <span class="dt">f64</span> <span class="op">{</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        curva</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span>windows(<span class="dv">2</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span>map(<span class="op">|</span>w<span class="op">|</span> (w[<span class="dv">0</span>]<span class="op">.</span><span class="dv">0</span> <span class="op">-</span> w[<span class="dv">1</span>]<span class="op">.</span><span class="dv">0</span>) <span class="op">*</span> (w[<span class="dv">0</span>]<span class="op">.</span><span class="dv">1</span> <span class="op">+</span> w[<span class="dv">1</span>]<span class="op">.</span><span class="dv">1</span>) <span class="op">/</span> <span class="dv">2.0</span>)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span>sum()</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">maturin</span> develop <span class="at">--release</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-c</span> <span class="st">"import riesgo; print(riesgo.pae([(0.5, 0), (0.1, 120), (0.02, 480), (0.01, 750), (0.002, 1400)]))"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 62.75</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Dos detalles separan un prototipo de una extensión útil. Primero, convertir una lista de Python en <code>Vec</code> copia cada elemento; para arreglos grandes se usa el paquete <code>numpy</code> de PyO3, que lee el búfer de NumPy sin copiarlo. Segundo, mientras el código en Rust calcula, puede soltar el candado global del intérprete (GIL) para que otros hilos de Python sigan trabajando. Con Python sin GIL (3.13 en adelante) el modelo de Rust encaja todavía mejor: las garantías de <code>Send</code> y <code>Sync</code> son justo las que ese Python necesita de sus extensiones.</p>
+<p>Rust también compila a <strong>WebAssembly</strong>, que el navegador ejecuta a velocidad casi nativa. Para las <a href="../datascience/graficas-html.html">gráficas</a> y los <a href="../datascience/mapas/index.html">mapas</a> de este sitio, eso abre la puerta a correr un modelo completo, como una curva de daño sobre miles de polígonos, en el navegador del lector, sin servidor.</p>
+</section>
+<section id="costos-reales" class="level2">
+<h2 class="anchored" data-anchor-id="costos-reales">Costos reales</h2>
+<p>Elegir Rust tiene costos que conviene poner sobre la mesa antes de empezar:</p>
+<ol type="1">
+<li><strong>La curva de aprendizaje es alta.</strong> Las primeras semanas se pasan «peleando con el verificador de préstamos». Las estructuras con referencias cruzadas, como grafos, listas doblemente enlazadas o tipos que se refieren a sí mismos, exigen cambiar de diseño: índices en un vector, <code>Rc&lt;RefCell&lt;T&gt;&gt;</code> o bibliotecas especializadas.</li>
+<li><strong>Compilar es lento</strong>, como se explicó arriba, y eso alarga el ciclo de editar y probar.</li>
+<li><strong>El ecosistema estadístico es pequeño.</strong> No hay equivalentes maduros de ggplot2, statsmodels, los modelos mixtos de R o el ecosistema geoespacial de Python. Plotters existe, pero está lejos de lo que ofrecen Python y R.</li>
+<li><strong>El trabajo interactivo es incómodo.</strong> Existen núcleos de Jupyter (evcxr), pero el lenguaje no está pensado para explorar celda a celda.</li>
+<li><strong>La interoperabilidad con C exige <code>unsafe</code>.</strong> Usar GDAL, PROJ o NetCDF desde Rust pasa por enlaces que alguien debe mantener y auditar.</li>
+<li><strong>Contratar es difícil.</strong> Hay menos programadores de Rust que de Python, y menos aún con experiencia en el dominio del riesgo.</li>
+</ol>
+</section>
+<section id="cuándo-usarlo-en-gestión-del-riesgo-y-ciencia-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="cuándo-usarlo-en-gestión-del-riesgo-y-ciencia-de-datos">Cuándo usarlo en gestión del riesgo y ciencia de datos</h2>
+<p>La regla práctica es <strong>medir antes de reescribir</strong>. Si un análisis es lento, el primer paso es perfilarlo, vectorizarlo y usar bibliotecas que ya están escritas en lenguajes compilados (Polars, DuckDB, xarray con Dask). Rust entra cuando eso no alcanza o cuando el problema no es la velocidad sino la confiabilidad.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Conviene Rust</th>
+<th>No conviene Rust</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Una función caliente que no se puede vectorizar (recorridos de grafos, simulaciones de Monte Carlo con lógica por evento), como extensión de Python</td>
+<td>Análisis exploratorio, modelos estadísticos y gráficas</td>
+</tr>
+<tr class="even">
+<td>Servicios de ingesta y procesamiento para alerta temprana, donde una caída o una pausa del recolector tienen costo</td>
+<td>Scripts de un solo uso y cuadernos de investigación</td>
+</tr>
+<tr class="odd">
+<td>Procesamiento de rásteres o fragmentos de Zarr en paralelo, en la nube</td>
+<td>Equipos sin tiempo para aprender el modelo de propiedad</td>
+</tr>
+<tr class="even">
+<td>Herramientas de línea de comandos que se distribuyen como un solo binario</td>
+<td>Proyectos que dependen sobre todo de bibliotecas de R o Python sin equivalente en Rust</td>
+</tr>
+<tr class="odd">
+<td>Modelos que deben correr en el navegador (WebAssembly)</td>
+<td>Prototipos que cambiarán de forma cada semana</td>
+</tr>
+</tbody>
+</table>
+<p>La tarjeta 10 del mazo ofrece un árbol de decisión con estas mismas preguntas.</p>
+</section>
+<section id="para-aprender" class="level2">
+<h2 class="anchored" data-anchor-id="para-aprender">Para aprender</h2>
+<ul>
+<li><strong><a href="https://doc.rust-lang.org/book/">The Rust Programming Language</a></strong> (Klabnik y Nichols), «el libro», gratuito y mantenido por el proyecto.</li>
+<li><strong><a href="https://github.com/rust-lang/rustlings">Rustlings</a></strong>, ejercicios que no compilan hasta que se corrigen.</li>
+<li><strong><a href="https://doc.rust-lang.org/rust-by-example/">Rust by Example</a></strong>, para consulta rápida.</li>
+<li><strong><a href="https://google.github.io/comprehensive-rust/">Comprehensive Rust</a></strong>, el curso del equipo de Android de Google.</li>
+<li><strong><a href="https://doc.rust-lang.org/nomicon/">The Rustonomicon</a></strong>, cuando haga falta <code>unsafe</code>.</li>
+<li><strong><a href="https://play.rust-lang.org/">Rust Playground</a></strong>, para compilar y compartir fragmentos sin instalar nada. Con él se verificaron los ejemplos de este artículo.</li>
+</ul>
+</section>
+<section id="referencias" class="level2">
+<h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
+<ul>
+<li>Blandy, J., Orendorff, J. y Tindall, L. F. S. (2021). <em>Programming Rust</em> (2.ª ed.). O’Reilly.</li>
+<li>Bos, M. (2023). <em>Rust atomics and locks: Low-level concurrency in practice</em>. O’Reilly.</li>
+<li>Drysdale, D. (2024). <em>Effective Rust</em>. O’Reilly.</li>
+<li>Gjengset, J. (2021). <em>Rust for Rustaceans: Idiomatic programming for experienced developers</em>. No Starch Press.</li>
+<li>Jung, R., Jourdan, J.-H., Krebbers, R. y Dreyer, D. (2018). RustBelt: Securing the foundations of the Rust programming language. <em>Proceedings of the ACM on Programming Languages, 2</em>(POPL), artículo 66. <a href="https://doi.org/10.1145/3158154" class="uri">https://doi.org/10.1145/3158154</a></li>
+<li>Klabnik, S. y Nichols, C. (2023). <em>The Rust programming language</em> (2.ª ed.). No Starch Press.</li>
+<li>Microsoft Security Response Center. (2019, 16 de julio). <em>A proactive approach to more secure code</em>. <a href="https://msrc.microsoft.com/blog/2019/07/a-proactive-approach-to-more-secure-code/" class="uri">https://msrc.microsoft.com/blog/2019/07/a-proactive-approach-to-more-secure-code/</a></li>
+<li>Office of the National Cyber Director. (2024). <em>Back to the building blocks: A path toward secure and measurable software</em>. The White House.</li>
+<li>Perkel, J. M. (2020). Why scientists are turning to Rust. <em>Nature, 588</em>, 185–186. <a href="https://doi.org/10.1038/d41586-020-03382-2" class="uri">https://doi.org/10.1038/d41586-020-03382-2</a></li>
+<li>The Chromium Projects. (s. f.). <em>Memory safety</em>. <a href="https://www.chromium.org/Home/chromium-security/memory-safety/" class="uri">https://www.chromium.org/Home/chromium-security/memory-safety/</a></li>
+<li>Vander Stoep, J. y Rebert, A. (2024, 25 de septiembre). <em>Eliminating memory safety vulnerabilities at the source</em>. Google Security Blog. <a href="https://security.googleblog.com/2024/09/eliminating-memory-safety-vulnerabilities-Android.html" class="uri">https://security.googleblog.com/2024/09/eliminating-memory-safety-vulnerabilities-Android.html</a></li>
+</ul>
+</section>
+<section id="ver-también" class="level2">
+<h2 class="anchored" data-anchor-id="ver-también">Ver también</h2>
+<ul>
+<li><a href="../datascience/graficas-html.html">Gráficas HTML</a></li>
+<li><a href="../datascience/arco.html">ARCO: datos listos para el análisis y optimizados para la nube</a></li>
+<li><a href="../datascience/bases-de-datos.html">Bases de datos y formatos modernos</a></li>
+<li><a href="../cyt/escrituraypublicacionacademica/typst.html">Typst</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mromerot\.github\.io\/web\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Made with ❤️ and Quarto</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mromerot/web/issues" class="toc-action"><i class="bi bi-github"></i>Informar sobre problema</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
