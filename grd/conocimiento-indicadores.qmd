@@ -21,7 +21,7 @@ editor: visual
 
 Atlas del Riesgo de Colombia: Revelando los Desastres Latentes. [*Link*](https://sni.gestiondelriesgo.gov.co/atlas-riesgo)
 
-![Atlas del Riesgo de Colombia](images/Atlas_riesgo_Col2019.png){width="300"}
+![Atlas del Riesgo de Colombia](images/Atlas_riesgo_Col2019.webp){width="300"}
 
 ## Índice Municipal del Riesgo de Desastres Ajustado por Capacidades 2019
 
@@ -45,7 +45,7 @@ Colombia: National Disaster Preparedness Baseline Assessment - A data-driven too
 
 Marco Estratégico de Gestión Integral del Riesgo de Desastres (MEGIR). [*Link*](https://portal.gestiondelriesgo.gov.co/marcoestrategico)
 
-![MEGIR](images/megir.jpg{width="300"}
+![MEGIR](images/megir.webp){width="300"}
 
 :::
 
@@ -320,7 +320,7 @@ Banco Mundial. Think hazard. Perfil de Colombia. [*Link*](https://thinkhazard.or
 
 - World Risk Index. [*Link*](https://data.humdata.org/dataset/worldriskindex?). [*Link*](https://www.ireus.uni-stuttgart.de/en/International/WorldRiskIndex/)*.*
 
-![](images/WorldRiskINdex.png){fig-align="left" width="400"}
+![](images/WorldRiskINdex.webp){fig-align="left" width="400"}
 
 ## The World Risk report
 
@@ -362,11 +362,11 @@ The Climate Risk Index (CRI) ranks countries by the human and economic toll of e
 ::: panel-tabset
 ## Data sets
 
-[![\[Global risk data sets Making better use of global risk data and analytics\](https://www.preventionweb.net/understanding-disaster-risk/disaster-losses-and-statistics/global-risk-data-sets)](images/datasets.png){width="250"}](https://www.preventionweb.net/understanding-disaster-risk/disaster-losses-and-statistics/global-risk-data-sets)
+[![\[Global risk data sets Making better use of global risk data and analytics\](https://www.preventionweb.net/understanding-disaster-risk/disaster-losses-and-statistics/global-risk-data-sets)](images/datasets.webp){width="250"}](https://www.preventionweb.net/understanding-disaster-risk/disaster-losses-and-statistics/global-risk-data-sets)
 
 ## Flood observatory
 
-[![\[Space-based Measurement, Mapping, and Modeling of Surface Water For Research, Humanitarian, and Water Resources Applications\](https://floodobservatory.colorado.edu/index.html)](images/floodobserv.png){width="250"}](https://floodobservatory.colorado.edu/index.html)
+[![\[Space-based Measurement, Mapping, and Modeling of Surface Water For Research, Humanitarian, and Water Resources Applications\](https://floodobservatory.colorado.edu/index.html)](images/floodobserv.webp){width="250"}](https://floodobservatory.colorado.edu/index.html)
 :::
 
 # Indicadores latinoamericanos
@@ -402,7 +402,7 @@ The Climate Risk Index (CRI) ranks countries by the human and economic toll of e
 
 [Global Assessment Report on Disaster Risk Reduction (GAR)](https://www.undrr.org/gar)
 
-[![https://www.undrr.org/gar](images/GAR.png){width="300"}](https://www.undrr.org/gar)
+[![https://www.undrr.org/gar](images/GAR.webp){width="300"}](https://www.undrr.org/gar)
 
 ## WMO
 :::

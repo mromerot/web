@@ -272,7 +272,7 @@ Para consultas espaciales frecuentes y multiusuario, la opción clásica es **Po
 
 ### Un ejemplo local: el peso de un mapa de Colombia
 
-Los mapas interactivos de esta sección sirven como caso práctico. Los mismos límites administrativos de Colombia ocupan tamaños muy distintos según el formato (valores aproximados de los archivos de [Mapas](mapas/index.qmd)):
+Los límites administrativos de Colombia sirven como caso práctico: ocupan tamaños muy distintos según el formato (valores aproximados):
 
 | Archivo | Formato | Tamaño aproximado |
 |---|---|---|
@@ -283,7 +283,7 @@ Los mapas interactivos de esta sección sirven como caso práctico. Los mismos l
 | Colombia (detalle completo) | TopoJSON | 63 MB |
 | Colombia (simplificado) | TopoJSON | 1,1 MB |
 
-Dos lecciones se desprenden de la tabla. Primera, **simplificar la geometría** (reducir vértices) y **usar topología** reduce el tamaño en órdenes de magnitud. Segunda, un archivo PMTiles pesa menos y, sobre todo, **el navegador solo descarga las teselas de la zona visible**, de modo que el peso del archivo deja de ser el peso de la descarga. Véanse las versiones [PMTiles](mapas/mapa_colombia_pmtiles.qmd) y [TopoJSON](mapas/mapa_colombia_observable.qmd).
+Dos lecciones se desprenden de la tabla. Primera, **simplificar la geometría** (reducir vértices) y **usar topología** reduce el tamaño en órdenes de magnitud. Segunda, un archivo PMTiles pesa menos y, sobre todo, **el navegador solo descarga las teselas de la zona visible**, de modo que el peso del archivo deja de ser el peso de la descarga.
 
 ::: {.callout-note}
 La comparación no es exactamente equivalente: un PMTiles contiene varios niveles de zoom ya preparados, mientras que el GeoJSON tiene una sola geometría. Aun así, ilustra por qué la web moderna ya no consume GeoJSON gigantes.
@@ -577,6 +577,5 @@ Elegir un buen formato es parte de hacer **datos FAIR** (localizables, accesible
 ### Dentro de este sitio
 
 - [Herramientas](herramientas.qmd): datos virtualizados y formato ARCO (videos y lecturas).
-- [Mapas](mapas/index.qmd): mapas interactivos con TopoJSON y PMTiles.
 - [Gráficas en Python y R](graficas-python-r.qmd): visualización de datos.
 - [Hugging Face](hugging-face.qmd): conjuntos de datos para aprendizaje automático.

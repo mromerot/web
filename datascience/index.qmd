@@ -6,7 +6,7 @@ editor: visual
 
 ## Ciencia de datos
 
-Esta sección reúne recursos de ciencia de datos: herramientas de trabajo (Quarto, Markdown, Github, VS Code, Google Colab, Jupyter), visualización de datos y mapas interactivos, inteligencia artificial y modelos de lenguaje.
+Esta sección reúne recursos de ciencia de datos: herramientas de trabajo (Quarto, Markdown, Github, VS Code, Google Colab, Jupyter), visualización de datos, inteligencia artificial y modelos de lenguaje.
 
 :::::: mrw-cards-grid
 ::: mrw-card
@@ -71,21 +71,11 @@ D3, Observable y JavaScript para visualización de datos en la web.
 
 ::: mrw-card
 ::: mrw-card-header
-[Experimento con D3](d3-experiment.qmd)
-:::
-
-::: mrw-card-body
-Ejercicios prácticos con D3.js en Observable.
-:::
-:::
-
-::: mrw-card
-::: mrw-card-header
 [Github](github.qmd)
 :::
 
 ::: mrw-card-body
-![](images/git-commands.png){.mrw-card-img}
+![](images/git-commands.webp){.mrw-card-img}
 
 Git y GitHub desde cero: conceptos clave, infografía del flujo de trabajo (staging, commit, push, pull requests) y una chuleta de comandos por nivel de dificultad.
 :::
@@ -168,16 +158,6 @@ Recursos de inteligencia artificial para el trabajo diario.
 
 ::: mrw-card-body
 Introducción al uso de Jupyter Notebook para ciencia de datos.
-:::
-:::
-
-::: mrw-card
-::: mrw-card-header
-[Mapas](mapas/index.qmd)
-:::
-
-::: mrw-card-body
-Mapas interactivos de Colombia con distintas tecnologías (Observable/TopoJSON, PMTiles, Tiles) y el Índice de Riesgo Nacional (NRI).
 :::
 :::
 

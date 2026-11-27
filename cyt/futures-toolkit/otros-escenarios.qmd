@@ -1,0 +1,66 @@
+---
+title: "Otros enfoques para construir escenarios"
+subtitle: "Futures Toolkit (GO-Science, 2024). Traducción no oficial al español"
+lang: es
+format:
+  html:
+    toc: true
+editor: visual
+---
+
+La matriz clásica de 2 × 2 que se describe en la caja de herramientas es solo una de varias formas de crear futuros posibles y plausibles. Aquí hay dos métodos alternativos: los arquetipos de escenarios y el análisis morfológico.
+
+### Arquetipos de escenarios
+
+En lugar de explorar incertidumbres críticas como en la [matriz de escenarios de 2 × 2](escenarios.qmd), este enfoque usa cuatro "arquetipos" de escenarios estándar, cada uno con ganadores y perdedores. Los arquetipos tienden a los extremos; tendrá que desarrollar descripciones de ellos para su proyecto particular mediante talleres, identificando en cada uno tanto las oportunidades como las amenazas:
+
+1. **"Crecimiento continuo":** la continuación del rumbo habitual, de lo que vemos ocurrir hoy a nuestro alrededor, prolongado hacia el futuro.
+2. **"Declive y colapso":** un futuro en el que muchos de nuestros supuestos sobre cómo funciona el mundo dejan de ser ciertos. Por lo general, toma los temores presentes en la sociedad de hoy y los desarrolla. El crecimiento se convierte en recesión y luego en depresión; los problemas ambientales se vuelven desastrosos; la alta tecnología nos lleva a una nueva edad oscura.
+3. **"Sociedad disciplinada":** un futuro en el que los comportamientos y las condiciones se adaptan a crecientes límites internos o ambientales. Los sistemas políticos y económicos jerárquicos promueven el Estado de derecho.
+4. **"Transformación":** factores tecnológicos, empresariales o sociales nuevos cambian las reglas del juego (por lo general, para bien).
+
+Si usa este ejercicio, es importante recorrer todos los futuros descritos. Considere en cada uno:
+
+- ¿Quién o qué "ganaría" o "perdería"?
+- ¿Cómo podría tener éxito y disfrutar de la vida en cada uno?
+- ¿Qué hacen las personas?
+- ¿A qué tendría que estar atento? ¿Qué preocupaciones tienen las personas?
+- ¿Qué tendría que mitigar? ¿A qué tendría que adaptarse? ¿Qué tendría que evitar?
+- ¿Qué problemas de hoy han desaparecido?
+- ¿Cómo llegaría a este futuro desde hoy?
+
+El [Banco de recursos](https://www.gov.uk/government/publications/futures-toolkit-resources-for-government-officials) incluye una plantilla para este ejercicio.
+
+**Referencia**
+
+Los arquetipos de escenarios fueron desarrollados por el Dr. Jim Dator al analizar un abanico de imágenes y escenarios del futuro.
+
+Dator, Jim. (2009). [Alternative futures at the Manoa School](https://www.researchgate.net/publication/228380947_Alternative_futures_at_the_Manoa_School/citation/download). *Journal of Futures Studies*, 14.
+
+### Análisis morfológico
+
+El "análisis morfológico" es un enfoque sistemático para explorar la compatibilidad y la convergencia de distintos estados finales.
+
+A partir del trabajo de [Escaneo del horizonte](escaneo-horizonte.qmd) y de [Mapeo de impulsores](mapeo-impulsores.qmd), realice un ejercicio de ejes de incertidumbre como se describe en la herramienta de [escenarios con matriz de 2 × 2](escenarios.qmd). Debería terminar con un conjunto de incertidumbres críticas que describan dos estados finales posibles, extremos pero plausibles, en el horizonte temporal con el que trabaja:
+
+![Imagen que ilustra los ejes de incertidumbre con tres recuadros, rotulados "Incertidumbre número 1", "Incertidumbre número 2" e "Incertidumbre número 3". De cada recuadro sale una flecha a cada lado, que apunta a "Estado final A en 2030" a la izquierda y a "Estado final B en 2030" a la derecha.](images/Image_Pg_110.svg)
+
+En lugar de cruzar dos de estas incertidumbres críticas entre sí, puede generar un conjunto de escenarios más rico confrontando cada desenlace con todos los demás, usando una cuadrícula como la siguiente. Esto le permite descartar combinaciones de desenlaces porque sencillamente no ocurrirían juntos ("No"), e identificar las que tienen los impactos mutuos más fuertes, dinámicos o interesantes ("Sí"). Estas últimas son las que luego desarrollaría como un conjunto de escenarios. (Alternativamente, podría calificar la fuerza de las relaciones en una escala de +2 a -2).
+
+Luego las desarrollaría de forma muy parecida a como se hace en las otras herramientas de escenarios de esta caja.
+
+|                          | Inc. 1: A | Inc. 1: B | Inc. 2: A | Inc. 2: B |
+|--------------------------|---------|---------|---------|---------|
+| Incertidumbre 1: desenlace A |         | No      |         | Sí     |
+| Incertidumbre 1: desenlace B | No      |         |         |         |
+| Incertidumbre 2: desenlace A |         | Sí     |         | No      |
+| Incertidumbre 2: desenlace B |         |         | No      |         |
+| Incertidumbre n: n          |         |         |         |         |
+
+**Referencia**
+
+Una referencia útil sobre el análisis morfológico y su uso en los estudios de futuros es:
+
+Ritchey, Tom (2009, revisado en 2015). [*Futures Studies using General Morphological Analysis*](http://www.swemorph.com/pdf/futures.pdf), adaptado de un artículo para el Millennium Project: *Futures Research Methodology Series*, versión 3.0.
+
+**El análisis morfológico de escenarios se beneficia de una facilitación experta, porque es más complejo.**

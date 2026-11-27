@@ -40,11 +40,11 @@ bibliography: references.bib
 
 -   Servicio Geológico Colombiano. Sistema de información de movimientos en masa - [SIMMA](https://simma.sgc.gov.co./#/)
 
-[![](images/SIMMA.png "Sistema de información de movimientos en masa - SIMMA"){width="500"}](https://simma.sgc.gov.co./#/public/basic/)
+[![](../images/SIMMA.webp "Sistema de información de movimientos en masa - SIMMA"){width="500"}](https://simma.sgc.gov.co./#/public/basic/)
 
 Geohazards. UNAL Medellín. [*Link*](https://geohazards.com.co/visor-geohazard.html)
 
-[![](images/Geohazards.png){width="500"}](https://geohazards.com.co/visor-geohazard.html)
+[![](../images/Geohazards.webp){width="500"}](https://geohazards.com.co/visor-geohazard.html)
 
 ## Artículos científicos
 
@@ -106,7 +106,7 @@ Comunicación del riesgo por movimientos en masa
 
 Clasificación de movimiento en masa y su distribución en terrenos geológicos de Colombia
 
-![](images/Clasif-mem-SCG.png){width="200"}
+![](../images/Clasif-mem-SCG.webp){width="200"}
 
 Clasificación de movimiento en masa y su distribución en terrenos geológicos de Colombia. Juan Montero Olarte. <https://doi.org/10.32685/9789585978218>
 
@@ -146,7 +146,7 @@ Clasificación de movimiento en masa y su distribución en terrenos geológicos 
     ::: callout-important
     ## An Increasing Trend of Landslides as a Consequence of the Global Change
 
-    ![An Increasing Trend of Landslides as a Consequence of the Global Change](images/paste-2.png){width="500"}
+    ![An Increasing Trend of Landslides as a Consequence of the Global Change](../images/paste-2.png){width="500"}
     :::
 
 ## **Revistas científicas**

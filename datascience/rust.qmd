@@ -282,7 +282,7 @@ python -c "import riesgo; print(riesgo.pae([(0.5, 0), (0.1, 120), (0.02, 480), (
 
 Dos detalles separan un prototipo de una extensión útil. Primero, convertir una lista de Python en `Vec` copia cada elemento; para arreglos grandes se usa el paquete `numpy` de PyO3, que lee el búfer de NumPy sin copiarlo. Segundo, mientras el código en Rust calcula, puede soltar el candado global del intérprete (GIL) para que otros hilos de Python sigan trabajando. Con Python sin GIL (3.13 en adelante) el modelo de Rust encaja todavía mejor: las garantías de `Send` y `Sync` son justo las que ese Python necesita de sus extensiones.
 
-Rust también compila a **WebAssembly**, que el navegador ejecuta a velocidad casi nativa. Para las [gráficas](graficas-html.qmd) y los [mapas](mapas/index.qmd) de este sitio, eso abre la puerta a correr un modelo completo, como una curva de daño sobre miles de polígonos, en el navegador del lector, sin servidor.
+Rust también compila a **WebAssembly**, que el navegador ejecuta a velocidad casi nativa. Para las [gráficas](graficas-html.qmd) de este sitio y para los mapas web, eso abre la puerta a correr un modelo completo, como una curva de daño sobre miles de polígonos, en el navegador del lector, sin servidor.
 
 ## Costos reales
 

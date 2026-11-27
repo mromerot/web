@@ -33,7 +33,7 @@ Estos repositorios marcan el estado del arte de la visualización en la web, des
 6. **[Observable Plot](https://github.com/observablehq/plot)** (5400 ★, ISC). Una gramática concisa de marcas y transformaciones, de los creadores de D3, ideal para explorar datos con pocas líneas.
 7. **[Vega-Lite](https://github.com/vega/vega-lite)** (5600 ★, BSD-3). Gráficas descritas en JSON; es la base de Altair en Python y facilita que una IA genere especificaciones válidas.
 8. **[deck.gl](https://github.com/visgl/deck.gl)** (15 000 ★, MIT). Capas en WebGL para millones de puntos geográficos: trayectorias, mallas hexagonales y 3D.
-9. **[MapLibre GL JS](https://github.com/maplibre/maplibre-gl-js)** (12 000 ★). Mapas vectoriales abiertos con teselas y PMTiles; es la herramienta de los [mapas interactivos](mapas/index.qmd) de este sitio.
+9. **[MapLibre GL JS](https://github.com/maplibre/maplibre-gl-js)** (12 000 ★). Mapas vectoriales abiertos con teselas y PMTiles.
 10. **[Anthropic Skills](https://github.com/anthropics/skills)** (201 000 ★). Colección de *skills* para agentes de IA. *frontend-design* produce interfaces con diseño cuidado y *web-artifacts-builder* arma páginas HTML complejas con React, Tailwind y shadcn/ui. La licencia varía según la *skill*.
 
 ## Buenas prácticas para generarlas

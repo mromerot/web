@@ -1,0 +1,115 @@
+---
+title: "Bases de datos con IA"
+subtitle: "Qué ofrecen hoy las principales bases de datos de información científica en búsqueda con inteligencia artificial, API, servidores MCP y modelos propios, y cuánto cuestan"
+author: "Mauricio Romero Torres"
+date: 2026-11-27
+date-modified: 2026-11-27
+lang: es
+format:
+  html:
+    toc: true
+    toc-depth: 2
+editor: visual
+---
+
+::: {.callout-tip title="En resumen"}
+- **Casi todas las grandes bases de datos ya tienen un asistente de IA, pero casi siempre es un complemento pagado** de la suscripción institucional: Scopus AI y LeapSpace (Elsevier), Web of Science Research Assistant y ProQuest Research Assistant (Clarivate), Ovid AI (Wolters Kluwer).
+- **El cambio de 2026 es el MCP** (*Model Context Protocol*), el estándar que permite conectar un asistente como Claude, ChatGPT o Copilot directamente a una base de datos. Ya tienen servidor MCP **oficial** OpenAlex (gratuito), Semantic Scholar/Asta (gratuito, uso no comercial), Dimensions (incluido para quien ya paga su API) y Clarivate con Nexus Connect (por convenio con la biblioteca).
+- **Las opciones abiertas son las más útiles para trabajar con agentes de IA**: OpenAlex y Semantic Scholar ofrecen API gratuita, búsqueda semántica y MCP oficial. Crossref, ROR, zbMATH Open, BASE y SciELO tienen API gratuita, pero no IA propia.
+- **Muy pocas tienen un modelo de IA propio.** Semantic Scholar (Ai2) es la excepción clara, con modelos abiertos como TLDR y SPECTER2. Google Scholar usa Gemini, de la misma empresa. El resto usa modelos comerciales de terceros o solo *embeddings* para la búsqueda por significado.
+- **Las bases latinoamericanas (SciELO, Redalyc, Latindex, Dialnet) no tienen todavía búsqueda con IA ni MCP.** Su contenido sí llega a los asistentes de forma indirecta, porque OpenAlex, Crossref y Google Scholar lo indexan.
+:::
+
+## Para qué sirve esta tabla
+
+La página [Escritura y publicación académica](escrituraypublicacionacademica/escrituraypublicacionacademica.qmd#dónde-está-la-información-científica) lista las principales bases de datos de artículos, libros y datos científicos. Esta entrada las revisa con una pregunta distinta: **¿qué tan preparadas están para trabajar con inteligencia artificial?** La respuesta importa porque hoy buena parte de la búsqueda bibliográfica ya no se hace escribiendo en un buscador, sino pidiéndole a un asistente que consulte las fuentes, filtre y resuma.
+
+Cada base se evalúa con cuatro criterios:
+
+| Criterio | Qué significa |
+|---|---|
+| **Búsqueda con IA propia** | La plataforma tiene, en su propia interfaz, un asistente que entiende preguntas en lenguaje natural, busca por significado o resume resultados. |
+| **API y costo** | Existe una interfaz de programación para hacer consultas automáticas (scripts, cuadernos, agentes), y bajo qué condiciones de acceso y precio. |
+| **MCP** | Existe un servidor *Model Context Protocol* que permite a un asistente de IA (Claude, ChatGPT, Copilot, Gemini) consultar la base directamente. Se distingue entre **oficial** (publicado por el dueño de la base) y **comunitario** (hecho por terceros sobre la API). |
+| **Modelo propio** | La organización entrenó o publica su propio modelo de IA, en lugar de usar solo un modelo comercial de terceros. |
+
+## Bases de datos mundiales por suscripción
+
+| Base | Búsqueda con IA propia | API y costo | MCP | Modelo propio |
+|---|---|---|---|---|
+| **Scopus** (Elsevier) | **Sí, pagada.** Scopus AI resume la literatura y sugiere conceptos; desde 2025, LeapSpace integra Scopus y el texto completo de ScienceDirect en un espacio de trabajo con IA. Ambos son complementos de la suscripción, con precio por cotización. | **Sí.** Cualquiera puede pedir una clave en dev.elsevier.com; es gratuita para uso no comercial, pero la mayoría de los datos solo se ven desde la red de una institución suscrita. El uso comercial requiere licencia. | **Solo comunitario.** Hay varios servidores sobre la API de Scopus (p. ej. `scopus-mcp`); Elsevier no publica uno oficial. | No. Usa modelos comerciales de terceros sobre su contenido. |
+| **Web of Science** (Clarivate) | **Sí, por suscripción.** Web of Science Research Assistant responde preguntas en lenguaje natural sobre la Colección Principal. La versión extendida viene con Web of Science Research Intelligence. | **Sí.** Starter API (metadatos básicos), Expanded API, Lite API y Researcher API en developer.clarivate.com, según la suscripción de la institución; no hay acceso gratuito general. | **Oficial, institucional.** Clarivate Nexus Connect (abril de 2026) conecta ChatGPT Edu, Copilot, Gemini y Claude for Education con los recursos de la biblioteca. Se activa por convenio con la institución. | No. |
+| **ProQuest** (Clarivate) | **Sí, incluida.** ProQuest Research Assistant resume documentos, sugiere temas y permite "conversar" con un texto completo; está en ProQuest Central y en Dissertations & Theses. | **Limitada.** El acceso masivo es por TDM Studio, que es pagado. | **Oficial, institucional**, por Nexus Connect (ver Web of Science). | No. |
+| **Ovid** (Wolters Kluwer) | **Parcial.** Ovid AI Article Summary (beta desde 2025, en revistas LWW) y un asistente en Ovid Discovery que responde con base en los registros seleccionados. | No pública. | No identificado. | No. |
+| **ASTM Compass** | No identificada. Es una base de normas técnicas, no de artículos. | Solo para suscriptores institucionales. | No identificado. | No. |
+| **Ulrichsweb** | No. Es un directorio de revistas. | Solo para suscriptores. | No identificado. | No. |
+
+## Bases de datos mundiales abiertas o con versión gratuita
+
+| Base | Búsqueda con IA propia | API y costo | MCP | Modelo propio |
+|---|---|---|---|---|
+| **OpenAlex** | **Sí, gratuita.** Búsqueda semántica con *embeddings* (encuentra trabajos por significado, útil con preguntas de un párrafo). | **Sí.** Todos los datos son abiertos (CC0). Desde febrero de 2026 la API pide clave: la gratuita da USD 1 diario (unas 1.000 consultas de lista; las consultas por DOI o ID son casi gratis). Hay pago por uso y planes anuales de USD 5.000 (Member), 10.000 (Member+) y desde 20.000 (Partner). Sin clave, todo un mismo IP comparte USD 0,10 diarios. | **Oficial y gratuito.** Conector de OpenAlex en el directorio de conectores de Claude; el de ChatGPT está anunciado. También hay servidores comunitarios (algunos cobran por llamada en Apify). | Parcial: modelos propios de clasificación temática y de afiliaciones, no un modelo generativo. |
+| **Dimensions** (Digital Science) | **Parcial.** Dimensions AI Assistant (beta limitada). La versión gratuita web permite buscar y exportar hasta 500 registros. | **Sí, pagada.** La Analytics API es por licencia institucional; es gratuita para investigación cienciométrica no comercial (programa SRAD, con solicitud). La Metrics API (citas por DOI) es gratuita para uso no comercial y no pide clave. | **Oficial** (agosto de 2026): Dimensions Analytics MCP (publicaciones, proyectos, patentes, ensayos clínicos, datos y documentos de política) y Dimensions Semantic Search MCP. Incluidos sin costo adicional para quien ya tiene la API. | No identificado. |
+| **Google Scholar** | **Sí, gratuita y experimental.** Scholar Labs (noviembre de 2025) descompone una pregunta compleja, busca cada aspecto y explica por qué cada artículo es pertinente. Requiere iniciar sesión. | **No.** Google no ofrece API; extraer resultados automáticamente va contra sus condiciones. | No oficial. | Sí, de la misma empresa: usa Gemini. |
+| **Semantic Scholar** (Ai2) | **Sí, gratuita.** Resúmenes TLDR de una línea, recomendaciones por similitud y Asta, el agente de investigación de Ai2. | **Sí, gratuita.** Sin clave, 100 consultas cada 5 minutos compartidas; con clave gratuita, 1 consulta por segundo (ampliable con revisión). | **Oficial y gratuito:** Asta Scientific Corpus Tool (más de 225 millones de artículos con citas y autores). Licencia solo para uso académico no comercial. También hay servidores comunitarios. | **Sí.** Modelos abiertos propios: TLDR (resúmenes), SPECTER2 (*embeddings* de artículos) y la familia de modelos abiertos de Ai2. |
+| **The Lens** | No identificada. | **Sí.** Scholarly API y Patent API: gratuitas para uso no comercial previa solicitud (prueba de 14 días y luego plan según uso); el uso comercial se cotiza. Sin cuenta, la API responde "Missing/Incorrect Authorization Header". | No identificado. | No. |
+| **BASE** (Bielefeld) | No. | **Sí, gratuita** para uso no comercial, previa solicitud (registra el IP del usuario). | No identificado. | No. |
+| **Crossref** (DOI) | No. | **Sí, gratuita y sin clave.** Se recomienda enviar un correo de contacto para entrar al "polite pool". | Solo comunitario. | No. |
+| **ROR** (identificadores de organizaciones) | No. Es un registro de instituciones; reemplazó a GRID en 2021. | **Sí, gratuita.** | No identificado. | No. |
+| **zbMATH Open** | No. | **Sí, gratuita** (REST y OAI-PMH; datos CC-BY-SA). | No identificado. | No. |
+| **Google Dataset Search** | No. | No. | No. | No. |
+| **1findr** (1science) | No. | No. | No. | No. Sin actividad visible desde la compra de 1science por Elsevier en 2018. |
+| **DataSearch** (Elsevier) | — | — | — | — Fuera de servicio: el sitio no responde. |
+
+## Bases de datos latinoamericanas
+
+| Base | Búsqueda con IA propia | API y costo | MCP | Modelo propio |
+|---|---|---|---|---|
+| **SciELO** | No identificada. | **Sí, gratuita** (ArticleMeta API y OAI-PMH). | No identificado. | No. |
+| **Redalyc** | No identificada. | Recolección por OAI-PMH, gratuita. | No identificado. | No. |
+| **Latindex** | No. Es un directorio y catálogo de revistas. | No pública. | No identificado. | No. |
+| **Dialnet** | No identificada. | Recolección por OAI-PMH, gratuita. Dialnet Plus es la versión institucional. | No identificado. | No. |
+
+## Libros
+
+| Base | Búsqueda con IA propia | API y costo | MCP | Modelo propio |
+|---|---|---|---|---|
+| **Google Books** | No. | **Sí, gratuita** con clave de Google. | No oficial. | No. |
+| **WorldCat** (OCLC) | No identificada. | **Sí, institucional.** WorldCat Search API v2 exige suscripción de catalogación y de WorldCat Discovery. | Solo comunitario (requiere la clave WSKey de la institución). | No. |
+
+No se incluyen Amazon Books ni las bases de videos académicos de la página original, porque no son bases de datos de información científica en sentido estricto.
+
+## Qué conviene usar según la tarea
+
+- **Explorar un tema con un asistente de IA, sin pagar:** OpenAlex (conector oficial en Claude) y Semantic Scholar (Asta MCP). Google Scholar Labs sirve para explorar en el navegador, pero no se puede automatizar.
+- **Hacer vigilancia o bibliometría reproducible** (por país, institución, tema): la API de OpenAlex con clave gratuita. Para métricas de citación de una lista de DOI, la Metrics API de Dimensions.
+- **Patentes y su relación con artículos:** The Lens, con clave gratuita para uso no comercial.
+- **Cuando la institución está suscrita:** Scopus y Web of Science siguen siendo la referencia para evaluaciones formales (Minciencias, rankings). Conviene preguntar a la biblioteca si tiene Scopus AI, Research Assistant o Nexus Connect activos.
+- **Literatura latinoamericana:** buscar directamente en SciELO, Redalyc y Dialnet, y complementar con OpenAlex, que indexa buena parte de su contenido a través de Crossref.
+
+::: {.callout-note title="Método y vigencia"}
+La información se verificó el 27 de noviembre de 2026 en las páginas oficiales, notas de prensa y documentación técnica de cada proveedor, y con pruebas directas a las API (OpenAlex, Dimensions, Lens, Crossref, ROR, zbMATH y SciELO). "No identificado" quiere decir que no se encontró evidencia pública, no que se haya confirmado que no existe. Los precios de los complementos de IA de Elsevier, Clarivate y Wolters Kluwer no son públicos: se negocian con cada institución. Este campo cambia cada pocos meses, así que conviene revisar la tabla al menos una vez al año.
+:::
+
+## Fuentes
+
+- Allen Institute for AI. *Asta MCP*. <https://allenai.org/asta/resources/mcp>
+- Clarivate. (2026, 28 de abril). *Clarivate introduces Nexus Connect*. <https://clarivate.com/news/clarivate-introduces-nexus-connect/>
+- Clarivate. *Web of Science Research Assistant*. <https://clarivate.com/academia-government/scientific-and-academic-research/research-discovery-and-referencing/web-of-science/web-of-science-research-assistant/>
+- Clarivate. *Clarivate MCP Server*. <https://developer.clarivate.com/apis/sunflower-mcp>
+- Digital Science. (2026). *Digital Science connects AI agents to world-leading research data with new Dimensions MCP servers*. <https://www.digital-science.com/press-releases/ai-agents-research-data-dimensions-mcp-servers/>
+- Digital Science. *Scientometric Researcher Access to Data (SRAD)*. <https://www.digital-science.com/srad/>
+- Dimensions. *Metrics API*. <https://www.dimensions.ai/products/all-products/metrics-api>
+- Elsevier. *Elsevier Developer Portal*. <https://dev.elsevier.com>
+- Elsevier. *Elsevier launches LeapSpace, an AI-assisted workspace to accelerate research and discovery*. <https://www.elsevier.com/about/press-releases/elsevier-launches-leapspace-an-ai-assisted-workspace-to-accelerate-research-and-discovery>
+- Google. (2025, 18 de noviembre). *Google Scholar Labs*. <https://blog.google/products-and-platforms/products/education/google-scholar-labs/>
+- Lens. *Lens API Documentation*. <https://docs.api.lens.org/>
+- OCLC. *WorldCat Search API*. <https://www.oclc.org/developer/api/oclc-apis/worldcat-search-api.en.html>
+- OpenAlex. *Pricing overview*. <https://help.openalex.org/access/pricing/>
+- OpenAlex. *AI agent connector*. <https://help.openalex.org/access/connector/>
+- OpenAlex. *Semantic Search*. <https://help.openalex.org/api/semantic-search/>
+- ProQuest. *ProQuest Academic AI*. <https://about.proquest.com/en/company/proquest-academic-ai/>
+- Semantic Scholar. *Semantic Scholar API*. <https://www.semanticscholar.org/product/api>
+- Tay, A. (2025). *Scholar Labs early review: Google Scholar finally enters the AI era*. <https://aarontay.substack.com/p/scholar-labs-early-review-google>
+- Wolters Kluwer. (2025, 27 de agosto). *Wolters Kluwer gives medical researchers a productivity boost with Ovid AI Article Summary*. <https://www.wolterskluwer.com/en-sg/news/wolters-kluwer-gives-medical-researchers-a-productivity-boost-with-ovid-ai-article-summary>
+- zbMATH Open. *API terms and conditions*. <https://api.zbmath.org/static/terms-and-conditions.html>

@@ -2,12 +2,6 @@
 project:
   type: website
   output-dir: docs
-  resources:
-    - datascience/mapas/data/topojson.min.js
-    - datascience/mapas/data/maplibre-gl.js
-    - datascience/mapas/data/maplibre-gl.css
-    - datascience/mapas/data/pmtiles.js
-    - datascience/mapas/data/colombia.pmtiles
 
 website:
   title: "Inicio"
@@ -180,6 +174,8 @@ website:
       - section: "Ciencia y tecnología"
         href: cyt/index.qmd
         contents:
+          - text: "Bases de datos con IA"
+            href: cyt/bases-datos-ia.qmd
           - text: "Ciencia reproducible"
             href: cyt/cienciareproduc.qmd
           - text: "Ciencia transdisciplinar"
@@ -197,12 +193,55 @@ website:
                 href: cyt/escrituraypublicacionacademica/parrafos.qmd
               - text: "Typst"
                 href: cyt/escrituraypublicacionacademica/typst.qmd
+          - section: "Futures toolkit"
+            href: cyt/futures-toolkit/index.qmd
+            contents:
+              - text: "Futures Toolkit (inicio)"
+                href: cyt/futures-toolkit/index.qmd
+              - text: "Herramientas y rutas de un vistazo"
+                href: cyt/futures-toolkit/herramientas-y-rutas.qmd
+              - text: "Las siete rutas"
+                href: cyt/futures-toolkit/rutas.qmd
+              - text: "Delphi"
+                href: cyt/futures-toolkit/delphi.qmd
+              - text: "Siete preguntas"
+                href: cyt/futures-toolkit/siete-preguntas.qmd
+              - text: "Escaneo del horizonte"
+                href: cyt/futures-toolkit/escaneo-horizonte.qmd
+              - text: "Tres horizontes"
+                href: cyt/futures-toolkit/tres-horizontes.qmd
+              - text: "Mapeo de impulsores"
+                href: cyt/futures-toolkit/mapeo-impulsores.qmd
+              - text: "FODA"
+                href: cyt/futures-toolkit/foda.qmd
+              - text: "Escenarios"
+                href: cyt/futures-toolkit/escenarios.qmd
+              - text: "Construcción de visión"
+                href: cyt/futures-toolkit/vision.qmd
+              - text: "Ruedas del futuro"
+                href: cyt/futures-toolkit/ruedas-futuro.qmd
+              - text: "Pruebas de estrés de políticas"
+                href: cyt/futures-toolkit/pruebas-estres.qmd
+              - text: "Hojas de ruta"
+                href: cyt/futures-toolkit/hojas-ruta.qmd
+              - text: "Retroproyección (backcasting)"
+                href: cyt/futures-toolkit/backcasting.qmd
+              - text: "Ampliar la participación"
+                href: cyt/futures-toolkit/participacion.qmd
+              - text: "Futuros experienciales"
+                href: cyt/futures-toolkit/futuros-experienciales.qmd
+              - text: "Otros enfoques de escenarios"
+                href: cyt/futures-toolkit/otros-escenarios.qmd
+              - text: "Glosario"
+                href: cyt/futures-toolkit/glosario.qmd
           - text: "Interfaz ciencia-política-sociedad"
             href: cyt/interfaz-cps.qmd
           - text: "Modelo nacional de medición"
             href: cyt/modelo-medicion.qmd
           - text: "Nivel de Madurez Tecnológica (TRL)"
             href: cyt/trl.qmd
+          - text: "Prospectiva de CTeI"
+            href: cyt/prospectiva-ctei.qmd
           - text: "Transferencia de conocimiento y tecnologías"
             href: cyt/transferencia.qmd
       # aqui viene la seccion de educacion
@@ -228,12 +267,8 @@ website:
             href: datascience/cienciadedatos.qmd
           - text: "Claude"
             href: datascience/claude.qmd
-          - text: "Claude Skills (Slides)"
-            href: datascience/claude-slides.qmd
           - text: "D3"
             href: datascience/d3.qmd
-          - text: "Experimento con D3"
-            href: datascience/d3-experiment.qmd
           - text: "GitHub"
             href: datascience/github.qmd
           - text: "Google Colab"
@@ -254,15 +289,6 @@ website:
             href: datascience/ia.qmd
           - text: "Jupyter Notebook"
             href: datascience/jupyter-notebook.ipynb
-          - section: "Mapas"
-            href: datascience/mapas/index.qmd
-            contents:
-              - text: "Índice de Riesgo (NRI)"
-                href: datascience/mapas/mapa_colombia_nri.qmd
-              - text: "Mapa Interactivo (Observable / TopoJSON)"
-                href: datascience/mapas/mapa_colombia_observable.qmd
-              - text: "Mapa Interactivo (PMTiles)"
-                href: datascience/mapas/mapa_colombia_pmtiles.qmd
           - text: "Markdown"
             href: datascience/markdown.md
           - text: "Myst"

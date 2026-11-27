@@ -1,0 +1,111 @@
+---
+title: "Las herramientas y las rutas de un vistazo"
+subtitle: "Futures Toolkit (GO-Science, 2024). Traducción no oficial al español"
+lang: es
+format:
+  html:
+    toc: true
+editor: visual
+---
+
+## Las herramientas de futuros de un vistazo
+
+**¿QUÉ está cambiando?**
+
+**[Delphi](delphi.qmd)**
+
+Una herramienta de preguntas estructuradas que se usa para recoger la opinión de un panel de expertos en la materia mediante varias rondas de cuestionarios.
+
+**[Siete preguntas](siete-preguntas.qmd)**
+
+Una técnica de entrevista estructurada para recoger las percepciones estratégicas de un abanico de actores internos y externos.
+
+**[Escaneo del horizonte](escaneo-horizonte.qmd)**
+
+La recopilación sistemática de percepciones sobre tendencias emergentes y señales débiles de cambio para identificar posibles amenazas, riesgos y oportunidades.
+
+**[Tres horizontes](tres-horizontes.qmd)**
+
+Le ayuda a explorar tanto el presente y sus limitaciones como distintos futuros posibles.
+
+**[Mapeo de impulsores](mapeo-impulsores.qmd)**
+
+Registra las tendencias y ordena en un mapa lo encontrado para ver cuáles son las más importantes de abordar.
+
+**¿Y QUÉ significa para nuestros futuros?**
+
+**[Análisis FODA](foda.qmd)**
+
+Identifica las fortalezas, oportunidades, debilidades y amenazas pertinentes de una política, un tema o un acontecimiento.
+
+**[Escenarios](escenarios.qmd)**
+
+Relatos convincentes sobre un abanico de futuros posibles distintos, que ayudan a las personas a entender cómo se sentiría vivir en ellos y qué significarán para usted, sus actores y su política o estrategia.
+
+**[Construcción de visión](vision.qmd)**
+
+Puede usarse para crear una visión común y positiva del futuro, un conjunto de objetivos comunes para un proyecto, y para describir cómo sería el futuro si se lograran esos objetivos.
+
+**[Ruedas del futuro](ruedas-futuro.qmd)**
+
+Un método de lluvia de ideas estructurada que le ayuda a identificar y mapear conexiones, causalidades e impactos.
+
+**¿Y AHORA QUÉ hacemos?**
+
+**[Pruebas de estrés de políticas](pruebas-estres.qmd)**
+
+Un método para poner a prueba opciones de política, estrategia o proyecto frente a un conjunto de escenarios, tendencias o acontecimientos futuros, y ver qué tan bien resisten ante un abanico de condiciones externas posibles.
+
+**[Hojas de ruta](hojas-ruta.qmd)**
+
+Representaciones estructuradas de las etapas que conducen a una meta estratégica o a un futuro preferido.
+
+**[Retroproyección (*backcasting*)](backcasting.qmd)**
+
+Una herramienta para determinar los pasos que deben darse para llegar a un futuro preferido. Es una forma de superar el "sesgo del presente" en nuestra manera de planificar.
+
+## Las rutas de un vistazo
+
+Las siete [rutas](rutas.qmd) sugieren formas de combinar las herramientas para distintos propósitos, aunque no son prescriptivas.
+
+Son:
+
+1. Construir inteligencia de futuros al delimitar un reto futuro.
+2. Crear una visión compartida del éxito futuro.
+3. Poner a prueba opciones de política con escenarios de futuros cuando hay poco tiempo.
+4. Poner a prueba opciones de política con escenarios de futuros.
+5. Explorar las dinámicas de cambio para entender formas alternativas en que podría desarrollarse la política.
+6. Identificar vacíos en su conocimiento sobre lo que será importante en el futuro, para priorizar áreas de indagación adicional.
+7. Proceso de futuros riguroso para informar retos estratégicos de política.
+
+Las herramientas que componen cada ruta se presentan en la siguiente tabla.
+
+| Las siete rutas | Grupo de herramientas: ¿QUÉ está cambiando? | Grupo de herramientas: ¿Y QUÉ significa para nuestros futuros? | Grupo de herramientas: ¿Y AHORA QUÉ hacemos? |
+|----|----|----|----|
+| 1\. Construir inteligencia de futuros | a\. Delphi |   |   |
+|   | b\. Siete preguntas / documento de temas |   |   |
+|   | c\. Escaneo del horizonte |   |   |
+| 2\. Crear una visión compartida | a\. Delphi | a\. Escenarios |   |
+|   | b\. Escaneo del horizonte | b\. Construcción de visión |   |
+|   | c\. Mapa de impulsores |   |   |
+| 3\. Poner a prueba opciones de política con poco tiempo |   | a\. Ruedas del futuro | a\. Pruebas de políticas |
+|   |   | b\. FODA |   |
+| 4\. Poner a prueba opciones de política | a\. Siete preguntas / documento de temas | a\. Escenarios | a\. Pruebas de políticas |
+|   | b\. Escaneo del horizonte | b\. Ruedas del futuro |   |
+|   | c\. Mapa de impulsores |   |   |
+| 5\. Explorar las dinámicas de cambio | a\. Siete preguntas / documento de temas | a\. Escenarios | a\. Hoja de ruta |
+|   | b\. Escaneo del horizonte | b\. FODA |   |
+|   | c\. Mapa de impulsores |   |   |
+|   | d\. Tres horizontes |   |   |
+| 6\. Identificar vacíos para indagación futura | a\. Delphi |   |   |
+|   | b\. Siete preguntas / documento de temas |   |   |
+|   | c\. Escaneo del horizonte |   |   |
+|   | d\. Mapa de impulsores |   |   |
+|   | e\. Tres horizontes |   |   |
+| 7\. Proceso de futuros riguroso para informar retos estratégicos de política | a\. Delphi | a\. Escenarios | a\. Pruebas de políticas |
+|   | b\. Siete preguntas / documento de temas |   | b\. Retroproyección |
+|   | c\. Escaneo del horizonte |   | c\. Hoja de ruta |
+|   | d\. Mapa de impulsores |   |   |
+|   | e\. Tres horizontes |   |   |
+
+: Herramientas que componen cada una de las siete rutas.

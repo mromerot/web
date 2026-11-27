@@ -182,7 +182,7 @@ censo = pd.read_csv("https://raw.githubusercontent.com/mromerot/web/main/datasci
 
 Se ejecutó el cuaderno en un subcuadro de unas 7 ha de Los Rosales, donde el censo SIGAU registra 222 árboles. El mapa superpone las copas detectadas (puntuación ≥ 0,2) y los árboles del censo:
 
-![Copas detectadas por DeepForest y árboles del censo SIGAU sobre una imagen de Los Rosales](img/hf-mapa-arboles.png){fig-alt="Mapa de un subcuadro de Los Rosales con círculos naranjas para las copas detectadas y puntos azules para los árboles del censo; los azules siguen sobre todo las calles"}
+![Copas detectadas por DeepForest y árboles del censo SIGAU sobre una imagen de Los Rosales](img/hf-mapa-arboles.webp){fig-alt="Mapa de un subcuadro de Los Rosales con círculos naranjas para las copas detectadas y puntos azules para los árboles del censo; los azules siguen sobre todo las calles"}
 
 La segunda figura muestra la variable clave, el número de árboles contados, según el umbral de confianza:
 

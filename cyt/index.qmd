@@ -11,6 +11,16 @@ Esta sección reúne recursos sobre la práctica de la ciencia: la escritura y p
 :::::: mrw-cards-grid
 ::: mrw-card
 ::: mrw-card-header
+[Bases de datos con IA](bases-datos-ia.qmd)
+:::
+
+::: mrw-card-body
+Qué ofrecen Scopus, Web of Science, OpenAlex, Dimensions, Semantic Scholar, Lens, SciELO y otras bases de datos científicas en búsqueda con IA, API, servidores MCP y modelos propios, y cuánto cuestan.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
 [Ciencia reproducible](cienciareproduc.qmd)
 :::
 
@@ -61,6 +71,16 @@ El proceso de escritura científica y su publicación: desde la construcción de
 
 ::: mrw-card
 ::: mrw-card-header
+[Futures toolkit](futures-toolkit/index.qmd)
+:::
+
+::: mrw-card-body
+Traducción al español, para fines personales y académicos, de *The Futures Toolkit* del Gobierno británico (GO-Science, 2024): doce herramientas de pensamiento de futuros y siete rutas para combinarlas.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
 [Interfaz ciencia-política-sociedad](interfaz-cps.qmd)
 :::
 
@@ -86,6 +106,16 @@ Cómo reconoce y clasifica Minciencias a los grupos de investigación y a los in
 
 ::: mrw-card-body
 Qué es la escala TRL, cómo la usan la NASA y Minciencias, qué escalas la complementan (CRL, BRL, SRL) y cómo asignar un nivel con evidencia, con un autodiagnóstico interactivo.
+:::
+:::
+
+::: mrw-card
+::: mrw-card-header
+[Prospectiva de CTeI](prospectiva-ctei.qmd)
+:::
+
+::: mrw-card-body
+Quiénes hacen prospectiva de ciencia, tecnología e innovación en el mundo: 25 organizaciones que financian ciencia y orientan esa financiación con ejercicios de prospectiva.
 :::
 :::
 

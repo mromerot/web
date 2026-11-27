@@ -4,7 +4,7 @@ format: html
 editor: visual
 ---
 
-![Comandos de Git más usados, organizados por etapa del flujo de trabajo: configuración, control de cambios, ramas y colaboración con el remoto.](images/git-commands.png)
+![Comandos de Git más usados, organizados por etapa del flujo de trabajo: configuración, control de cambios, ramas y colaboración con el remoto.](images/git-commands.webp)
 
 {{< video "https://youtu.be/pBy1zgt0XPc" >}} Qué es GitHub?
 

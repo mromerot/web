@@ -342,7 +342,7 @@ $$
 
 ### README de proyecto
 
-```markdown
+````markdown
 # Nombre del Proyecto
 
 ## Descripción
@@ -364,7 +364,7 @@ Por favor lee [CONTRIBUTING.md](CONTRIBUTING.md) para detalles.
 
 ## Licencia
 Este proyecto está bajo la Licencia MIT - ver [LICENSE.md](LICENSE.md)
-```
+````
 
 ### Documentación de API
 

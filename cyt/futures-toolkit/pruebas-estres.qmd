@@ -1,0 +1,132 @@
+---
+title: "Pruebas de estrés de políticas"
+subtitle: "Futures Toolkit (GO-Science, 2024). Traducción no oficial al español"
+lang: es
+format:
+  html:
+    toc: true
+editor: visual
+---
+
+Las pruebas de estrés de políticas (también llamadas "túnel de viento", *wind tunnelling*) son un método para poner a prueba opciones de política, estrategia o proyecto frente a un conjunto de escenarios, tendencias o acontecimientos futuros, y ver qué tan bien resisten ante un abanico de condiciones externas posibles.
+
+### Úsela para…
+
+- Identificar si una política es robusta en un abanico de futuros posibles o si tendría que modificarse si cambian las condiciones.
+- Explorar cómo podría modificarse una política para que funcione en futuros distintos, o para hacerla más robusta frente a un abanico de futuros distintos.
+
+### Obtendrá…
+
+- Un conjunto de planes de contingencia adaptados a distintas condiciones externas.
+- Retroalimentación sobre cómo podría verse afectado en distintos escenarios un plan de política, estrategia o proyecto, nuevo o existente, y sobre cómo podría tener que modificarse para asegurar su éxito en un abanico de condiciones futuras, lo que conduce a una política, estrategia o proyecto más resiliente.
+
+### Tenga cuidado con…
+
+El reto de facilitación será evitar el pensamiento de grupo o la actitud defensiva en torno a las opciones de política favoritas.
+
+### A quién involucrar
+
+Personas responsables del área de política o de estrategia. Los participantes no necesitan haber desarrollado los escenarios directamente, pero sí conocerlos.
+
+### Número de participantes
+
+Hasta 16, en dos grupos de 8. Con un grupo más grande se vuelve difícil construir consenso.
+
+### Tiempo que toma
+
+Puede hacerse en 1,5 a 2 horas.
+
+### Cómo incluir más perspectivas
+
+Considere incluir en su taller a personas de fuera de su equipo, especialmente a quienes tienen una relación más amplia con la política propuesta.
+
+### El enfoque
+
+Las pruebas de estrés de políticas se usan para ver qué tan bien resiste una política ante un abanico de condiciones. Puede usarlas para poner a prueba una idea de política existente (en cuyo caso el ejercicio prueba si es lo bastante robusta para dar resultados en un abanico de condiciones futuras) o como parte del proceso de desarrollar nuevas opciones de política.
+
+Los grupos revisan la política o las opciones de política frente a las distintas condiciones de cada uno de los escenarios (o tendencias o acontecimientos). En cada caso, deciden qué tan bien funcionaría esa opción y cómo podría tener que adaptarse. Las opciones de política que funcionan bien en todos los escenarios podrían llevarse adelante; las que no funcionan en ningún escenario deben revisarse. Las que funcionan bien en algunos escenarios pero no en otros podrían tratarse como planes de contingencia que se adoptarían en las circunstancias apropiadas, o modificarse para hacerlas más robustas.
+
+![Cuatro rectángulos altos y estrechos, uno al lado del otro, rotulados "Escenario naranja", "Escenario azul", "Escenario verde" y "Escenario amarillo", atravesados por tres líneas horizontales rotuladas "Opción de política 1, 2, 3", que conducen a un recuadro a la derecha con las implicaciones (éxito, fracaso, condicionado al escenario) y los planes de acción (hacer ahora, rechazar, y seguir los acontecimientos futuros y planificar contingencias).](images/Image_Pg_81.svg)
+
+#### Hay cuatro pasos:
+
+#### Paso 1
+
+Presentar los escenarios (no es necesario si los desarrolló el grupo).
+
+#### Paso 2
+
+Presentar o crear las opciones de política que se consideran.
+
+#### Paso 3
+
+Poner a prueba las políticas frente a todos los escenarios.
+
+#### Paso 4
+
+Revisar los hallazgos y discutir las implicaciones.
+
+### Paso 1: Presente los escenarios
+
+(Tiempo estimado para completar este ejercicio: 20 minutos).
+
+Presente los escenarios, a menos que el grupo ya los conozca, con una breve presentación que explique:
+
+- cómo se desarrolló este conjunto particular de escenarios;
+- la matriz de escenarios;
+- la estructura general de cada escenario y algunas de las preguntas estratégicas que plantea cada uno.
+
+::: {.callout-tip appearance="simple"}
+Elabore un folleto de una página por escenario que muestre la matriz de escenarios y presente en viñetas las características principales del escenario.
+:::
+
+### Paso 2: Presente la opción de política que se pondrá a prueba
+
+(Tiempo estimado para completar este ejercicio: 10 minutos).
+
+Recuerde a los participantes del taller la pregunta de alcance y presente las opciones de política específicas que se pondrán a prueba. Compruebe que los participantes entienden con claridad la política y sus objetivos. Si es apropiado, pídales que propongan nuevas opciones de política que parezcan beneficiosas en uno o más escenarios.
+
+### Paso 3: Ponga a prueba las opciones de política frente al conjunto de escenarios
+
+(Tiempo estimado para completar este ejercicio: 60 minutos).
+
+Divida a los participantes en grupos, uno por escenario. Entregue a cada grupo el folleto del escenario correspondiente y la política, o el conjunto completo de opciones de política que se pondrán a prueba.
+
+Invite a cada grupo a poner a prueba cada opción de política frente a su escenario. Deben:
+
+- imaginar que el mundo es como se describe en el escenario;
+- decidir si, para ese mundo, cada política es:
+   - robusta;
+   - redundante;
+   - necesitada de modificación;
+- estar preparados para explicar por qué tomaron su decisión.
+
+::: {.callout-tip appearance="simple"}
+Recuerde a los grupos que trabajen con la lógica de su escenario: no cambien el escenario para que la política u opción funcione mejor.
+:::
+
+### Paso 4: Revise los hallazgos y discuta las implicaciones
+
+(Tiempo estimado para completar este ejercicio: 30 minutos).
+
+Facilite esta discusión elaborando una tabla que liste las opciones de política en las filas y los escenarios en las columnas. Recoja la retroalimentación de cada grupo y regístrela toda en la tabla antes de analizar los resultados. La tabla podría verse así:
+
+| Opción de política estratégica | Escenario 1 | Escenario 2 | Escenario 3 | Escenario 4 |
+|-------------------------|------------|------------|------------|------------|
+| Opción de política 1         | Robusta     | Modificar     | Robusta     | Robusta     |
+| Opción de política 2         | Modificar     | Modificar     | Redundante  | Robusta     |
+| Opción de política 3         | Modificar     | Robusta     | Robusta     | Modificar     |
+
+### Siguientes pasos
+
+Use la reflexión sobre los impactos de los futuros posibles para desarrollar iniciativas de política o estratégicas y hacerlas más robustas.
+
+Tenga en cuenta que un solo taller de pruebas de estrés de políticas es un proceso aproximado. Una política compleja y sus planes de contingencia asociados pueden necesitar varias iteraciones para dar resultados confiables. El valor viene de pensar las consecuencias de un futuro incierto y de hacerse la pregunta "¿Y si ocurre este futuro?".
+
+### Estudio de caso
+
+GO-Science facilitó un taller de pruebas de estrés de políticas para la Environment Agency (agencia ambiental) y el Department for Environment, Food and Rural Affairs (Defra, ministerio de ambiente, alimentación y asuntos rurales). El taller usó los 4 escenarios desarrollados en el [informe de prospectiva *Wireless 2030* de GO-Science](https://www.gov.uk/government/publications/wireless-2030/wireless-2030) en un ejercicio de pruebas de estrés para ayudar a explorar formas de hacer más resiliente ante el cambio futuro el monitoreo ambiental (por ejemplo, el monitoreo de datos en tiempo real mediante sensores en red).
+
+Este trabajo y el informe *Wireless 2030* se discuten en una [entrada del blog](https://foresightprojects.blog.gov.uk/2023/05/24/demand-for-wireless-connectivity-addressing-a-complex-and-uncertain-future/) de GO-Science.
+
+**Los recursos para esta herramienta están en el [Banco de recursos](https://www.gov.uk/government/publications/futures-toolkit-resources-for-government-officials). Los estudios de caso están en el [Banco de estudios de caso](https://www.gov.uk/government/publications/futures-tools-and-methods-case-studies).**
